@@ -944,11 +944,7 @@ default = no
 		search_filters = { FOCUS_FILTER_STABILITY}
 
 		completion_reward = {
-			diplomatic_relation = {
-				country = ZAP
-				relation = guarantee
-				active = no
-			}
+			end_puppet = ZAP
 			add_stability = 0.05
 		}
 	}
@@ -1034,6 +1030,12 @@ default = no
 		completion_reward = {
 			203 = { add_core_of = SOV }
 			226 = { add_core_of = SOV }
+			802 = { add_core_of = SOV }
+			259 = { add_core_of = SOV }
+			1028 = { add_core_of = SOV }
+			792 = { add_core_of = SOV }
+			225 = { add_core_of = SOV }
+			193 = { add_core_of = SOV }
 		}
 	}
 
@@ -1098,12 +1100,13 @@ default = no
 		}
 
 		completion_reward = {
-			ZAP = {
-				transfer_state = 792
-				transfer_state = 259
-				transfer_state = 193
+			SOV = { add_opinion_modifier = { target = ZAP modifier = large_increase } }
+			ZAP = { add_opinion_modifier = { target = SOV modifier = large_increase } }
+			diplomatic_relation = {
+				country = ZAP
+				relation = non_aggression_pact
+				active = yes
 			}
-			puppet = ZAP
 		}
 	}
 
@@ -1119,7 +1122,15 @@ default = no
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
 		completion_reward = {
-			remove_ideas = RUS_russians_fleeing_serfdom
+			if = {
+				limit = {
+					has_idea = RUS_russians_fleeing_serfdom
+				}
+				remove_ideas = RUS_russians_fleeing_serfdom
+			}
+			else = {
+				add_stability = 0.05
+			}
 		}
 	}
 
@@ -2474,7 +2485,7 @@ default = no
 	focus = {
 		id = RUS_great_reforms_domestic_reform
 		icon =  GFX_goal_generic_neutrality_focus
-		x = 15
+		x = 24
 		y = 1
 		cost = 10
 		prerequisite = { focus = RUS_great_reforms_of_Peter }
@@ -3063,8 +3074,15 @@ default = no
 				ideology = aristocracy
 				popularity = 0.10
 			}
-			remove_ideas = RUS_russians_fleeing_serfdom
-			add_stability = 0.05
+			if = {
+				limit = {
+					has_idae = RUS_russians_fleeing_serfdom
+				}
+				remove_ideas = RUS_russians_fleeing_serfdom
+			}
+			else = {
+				add_stability = 0.05
+			}	
 		}
 	}
 

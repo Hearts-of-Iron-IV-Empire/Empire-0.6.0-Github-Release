@@ -497,6 +497,7 @@ RUS_abandon_poland_desc:0 ""
 RUS_keep_support_poland:0 "Continue supporting Poland"
 RUS_keep_support_poland_desc:0 ""
 RUS_divert_south:0 "Divert South"
+RUS_peasant_draft:0 "Peasant Draft"
 
 
 # Decisions for Peter I:

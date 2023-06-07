@@ -84,9 +84,9 @@ bookmarks = {
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = neutrality	
 			ideas = {
-			    RUS_boyar_duma
+			    RUS_russians_fleeing_serfdom
 				russian_orthodox_church
-				RUS_outdated_military
+				RUS_streltsy_purge_5
 			}
 			focuses = {
 				RUS_icon_of_christ_pancreator

@@ -213,9 +213,8 @@ set_popularities = {
 }
 
 add_ideas = {
-	RUS_boyar_duma
     russian_orthodox_church
-	RUS_outdated_military
+	RUS_streltsy_purge_5
 	RUS_serfdom
 	POL_influence_over_poland_3
 	great_turkish_war
