@@ -1,0 +1,18 @@
+
+state={
+	id=660
+	name="STATE_660"
+	manpower = 1136921
+	
+	state_category = pastoral
+	resources={
+		rubber=3 # was: 4
+	}
+	impassable = yes
+history={
+	owner = UNC
+	}
+	provinces={
+		1974 3165 5084 8078 11108 12719 12830 11012
+	}
+}

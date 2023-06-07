@@ -1,0 +1,34 @@
+state={
+	id=391
+	name="STATE_391"
+	resources={
+		steel=8.000
+	}
+
+	history={
+		buildings = {
+			infrastructure = 1
+
+		}
+		owner = QUE
+		add_core_of = QUE
+		add_core_of = LOU
+		1765.1.1 = {
+			owner = LOU
+			add_core_of = LOU
+			controller = LOU
+
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+
+	provinces={
+		1866 1867 4664 4807 6752 7536 9880 10719 12577 12693 
+	}
+	manpower=256
+	buildings_max_level_factor=1.000
+	state_category=city
+}

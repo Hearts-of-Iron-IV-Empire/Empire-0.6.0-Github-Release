@@ -1,0 +1,58 @@
+﻿capital = 52
+
+oob = "BAV_1699"
+set_country_flag = HRE_imperial_subject
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+	interwar_antitank = 1
+	motorised_infantry = 1
+}
+
+give_military_access = AUS
+give_military_access = IFC
+give_guarantee = IFC
+
+1715.1.1 = {
+	remove_ideas = BAV_joseph_ferdinand
+}
+
+1730.1.1 = {
+	recruit_character = BAV_Karl_Albrecht_VII # Country Leader
+	promote_character = BAV_Karl_Albrecht_VII
+	retire_character = BAV_Maximilian_II_Emanuel # Dead
+}
+add_ideas = {
+	catholic
+	BAV_joseph_ferdinand
+	PRS_status_elector
+}
+
+set_convoys = 0
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 12
+	communism = 1
+	neutrality = 54
+	aristocracy = 28
+}
+recruit_character = BAV_Maximilian_II_Emanuel # Country Leader, Field Marshal
+recruit_character = BAV_Alessandro_Maffei # General Comments left by Leander: his actual name was "Alessandro Ferdinando Francesco Marchese di Maffei" but that is just to long, # his portraits was a 2824x3536 so one of the few portraits with a VERY high resolution. fun fact his portrait was so big I had to download it.
+recruit_character = BAV_Johann_Baptist_von_Arco

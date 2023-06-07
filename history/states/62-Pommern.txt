@@ -1,0 +1,35 @@
+state={
+	id = 62 #Svenska Pommern
+	name = "STATE_62" #Svenska Pommern
+    manpower = 41145
+	state_category = town
+	
+	history={
+		owner = SWE
+		add_claim_by = PRS
+		buildings = {
+			infrastructure = 3
+			fuel_silo = 1
+			9388 = {
+			    coastal_bunker = 3
+				naval_base = 5
+
+			}
+			6282 = {
+				naval_base = 3
+
+			}
+		}
+		victory_points = {
+			9388 10
+		}
+		1720.1.21 = {
+            owner = PRS
+            #set_state_name = PRS_STATE_62 #Preusen-Pommern
+        }
+	}
+
+	provinces = { 349 3340 6282 9388 }
+	
+	local_supplies = 0.2
+}

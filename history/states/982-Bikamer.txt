@@ -1,0 +1,28 @@
+state={
+	id=982
+	name="STATE_982"
+	provinces={
+		1565 4748 7998 12041 12664 12844 12868 12876 
+	}
+	history={
+		owner = RAJ
+		add_core_of = BIK
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			12876 10 
+		}
+		1707.6.8 = {
+			owner = BIK
+			add_core_of = BIK
+		}
+		1740.1.1 = {
+			owner = MAR
+		}
+	}
+	manpower=648751
+	buildings_max_level_factor=1.000
+	state_category=city
+}

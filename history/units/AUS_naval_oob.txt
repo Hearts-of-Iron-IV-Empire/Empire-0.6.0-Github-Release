@@ -1,0 +1,24 @@
+units = {
+
+	##### NAVAL UNITS #####
+	fleet = {
+		name = "Austrian Royal Navy"			
+		naval_base = 11564 # Rijeka
+		task_force = {				
+			name = "Kaiserliche Flotte"
+			location = 11564 # Rijeka	
+			ship = { name = "Der Kaiser" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Kürfürsten Class" } } }			
+			ship = { name = "Seemann" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = AUS version_name = "Kürfürsten Class" } } }
+		}
+		task_force = { 
+			name = "Marine-Flotte"
+			location = 11564 # Rijeka
+			ship = { name = "Edelweiss" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }
+			ship = { name = "Gottes Thron" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }
+			ship = { name = "Jungfrau" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }
+			ship = { name = "Schlesien" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }
+			ship = { name = "Böhmisches Bestes" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }
+			ship = { name = "Gefahr von Linz" definition = submarine equipment = { ship_hull_submarine_2 = { amount = 1 owner = AUS version_name = "Vienna Class" } } }				
+		}
+	}
+}

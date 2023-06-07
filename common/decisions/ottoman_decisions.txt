@@ -1,0 +1,376 @@
+TUR_janissar_revolt_category = {
+	TUR_edirne_event = {
+
+		icon = generic_civil_support
+
+		available = {
+			OR = {
+				NOT = { 
+					has_idea = TUR_janissary_loyalty_5 
+					aristocracy > 0.50
+				}
+				has_stability > 0.75
+				has_government = aristocracy
+				has_global_flag = TUR_edirne_event_triggered
+				has_civil_war = yes
+			}
+		}
+
+		days_mission_timeout = 150
+
+		activation = {
+			OR = {
+				has_idea = TUR_janissary_loyalty_5
+				aristocracy > 0.50
+			}
+			has_stability < 0.75
+ 
+			#NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
+
+			NOT = { has_government = aristocracy } # Government has a genuine commitment to reform
+
+			has_civil_war = no
+			
+		}
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			set_global_flag = TUR_edirne_event_triggered
+			country_event = {
+				id = ottomans.10
+			}
+		}
+	}
+
+	TUR_edirne_event_dummy = {
+
+		icon = generic_civil_support
+
+		available = {
+			OR= {
+				has_idea = TUR_janissary_loyalty_5
+				aristocracy > 0.50
+			}
+
+			has_stability < 0.75
+
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+
+			has_civil_war = no
+			
+			NOT = { has_government = aristocracy } 
+		}
+
+		days_remove = 150
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		visible = {
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+			OR = {
+				has_stability > 0.75
+				aristocracy < 0.50
+				has_idea = TUR_janissary_loyalty_4
+				has_idea = TUR_janissary_loyalty_3
+				has_idea = TUR_janissary_loyalty_2
+				has_idea = TUR_janissary_loyalty_1
+			}
+			has_civil_war = no
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		#remove_effect = {
+		#	set_global_flag = flag_second_mexican_civil_war
+		#	country_event = {
+		#		id = mexico.28
+		#	}
+		#}
+	}
+
+	TUR_pay_off_janissaries = {
+
+		icon = coins
+		cost = 75
+		fire_only_once = no
+		days_re_enable = 150
+		days_remove = 50
+
+		available = {
+			OR = {
+				aristocracy < 0.60
+				has_stability > 0.50
+			}
+		}
+
+		visible = {
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+			OR = {
+				has_idea = TUR_janissary_loyalty_5
+				has_idea = TUR_janissary_loyalty_4
+				has_idea = TUR_janissary_loyalty_3
+				has_idea = TUR_janissary_loyalty_2
+				has_idea = TUR_janissary_loyalty_1
+			}
+			OR = {
+				has_stability > 0.75
+				aristocracy < 0.50
+			}
+			has_civil_war = no
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+
+		complete_effect = {
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			}
+			TUR_increase_loyalty = yes 
+		}
+	}
+
+	TUR_decrease_janissary_support = {
+
+		cost = 120
+		fire_only_once = no
+		days_re_enable = 150
+		days_remove = 50
+
+		available = {
+			OR = {
+				aristocracy > 0.20
+				has_stability > 0.50
+			}
+		}
+
+		visible = {
+
+			NOT = { has_global_flag = TUR_edirne_event_triggered }
+			has_civil_war = no
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+		}
+		
+		complete_effect = {
+			add_popularity = {
+				ideology = aristocracy
+				popularity = -0.1
+			}
+		}
+	}
+}
+
+political_actions = {
+	TUR_negotiate_austrian_surrender = {
+
+		icon = generic_decisison
+
+		cost = 25
+
+		visible = {
+			has_war_with = AUS
+			original_tag = TUR
+			has_country_flag = ottomansussybaka
+		}
+
+		available = {
+			AUS = { surrender_progress > 0.60 }
+			has_country_flag = ottomansussybaka
+		}	
+
+		complete_effect = {
+			AUS = {
+				country_event = {
+					id = austria.71
+				}
+			}
+		}	
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+TUR_negotiating_peace = {
+	TUR_negotiating_peace_mission = {
+		activation = {
+			always = no
+		}
+		icon = mission_icon
+		days_mission_timeout = 90
+		timeout_effect = {
+			country_event = {
+				id = ottomans.19
+			}
+			if = {
+				limit = {
+					has_country_flag = polish_claims1
+				}
+				transfer_state = 202
+			}
+			else_if = {
+				limit = {
+					has_country_flag = polish_claims2
+				}
+				transfer_state = 202
+				transfer_state = 1033
+			}
+			else_if = {
+				limit = {
+					has_country_flag = polish_claims3
+				}
+				transfer_state = 202
+				transfer_state = 1032
+				transfer_state = 1033
+			}
+			if = {
+				limit = {
+					has_country_flag = russian_claims1
+				}
+				transfer_state = 218
+			}
+			if = {
+				limit = {
+					has_country_flag = demanded_russian_war_reps
+				}
+				add_timed_idea = {
+					idea = war_reparations_receiver_1
+					days = 150
+				}
+				SOV = {
+					add_timed_idea = {
+						idea = war_reparations_payer
+						days = 150
+					}
+				}
+			}
+		}
+	}
+	TUR_demand_kiev = { # Demand Kiev
+
+		icon = infiltrate_state
+
+		fire_only_once = yes
+		
+		cost = 25
+
+		visible = {
+			has_country_flag = tur_negotiating_peace
+		}
+
+		available = {
+			POL = { surrender_progress > 0.10 }
+		}
+
+		complete_effect = { 
+			set_country_flag = polish_claims1
+			add_state_claim = 202
+		}
+	}
+	TUR_demand_right_bank_ukraine = { # Demand Right Bank Ukraine
+
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		cost = 25
+
+		visible = {
+			has_country_flag = tur_negotiating_peace
+		}
+
+		available = {
+			POL = { surrender_progress > 0.15 }
+		}
+
+		complete_effect = {
+			set_country_flag = polish_claims2
+			clr_country_flag = polish_claims1
+			add_state_claim = 1033
+		}
+	}
+	TUR_demand_kamaniche = { # Demand Kamaniche
+
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		cost = 25
+
+		visible = {
+			has_country_flag = tur_negotiating_peace
+		}
+
+		available = {
+			POL = { surrender_progress > 0.25 }
+		}
+
+		complete_effect = {
+			set_country_flag = polish_claims3
+			clr_country_flag = polish_claims2
+			add_state_claim = 1032
+		}
+	}
+	TUR_demand_azov = {
+
+		icon = infiltrate_state
+
+		fire_only_once = yes
+
+		cost = 25
+
+		visible = {
+			has_country_flag = tur_negotiating_peace
+		}
+
+		available = {
+			SOV = { surrender_progress > 0.30 }
+		}
+
+		complete_effect = {
+			set_country_flag = russian_claims1
+			add_state_claim = 218
+		}
+	}
+	TUR_demand_war_reps_from_russia = {
+
+		icon = coins
+
+		fire_only_once = yes
+
+		cost = 50
+
+		visible = {
+			has_country_flag = tur_negotiating_peace
+		}
+
+		available = {
+			SOV = { surrender_progress > 0.25 }
+		}
+
+		complete_effect = {
+			set_country_flag = demanded_russian_war_reps
+		}
+	}
+}

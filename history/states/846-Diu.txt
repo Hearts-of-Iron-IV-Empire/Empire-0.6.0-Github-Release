@@ -1,0 +1,31 @@
+state={
+	id=846
+	name="STATE_846"
+	provinces={
+		4090 
+	}
+
+	resources={
+		rubber=8
+	}
+
+	history={
+		victory_points = {
+			4090 1 
+		}
+
+		buildings = {
+			infrastructure = 2
+			4090 = {
+				naval_base = 2
+			}
+		}
+		owner = POR
+		add_core_of = RAJ
+	}
+
+	manpower=12452
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+
+}

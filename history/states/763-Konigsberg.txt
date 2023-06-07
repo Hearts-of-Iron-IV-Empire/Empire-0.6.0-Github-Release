@@ -1,0 +1,33 @@
+state={
+	id=763
+	name="STATE_763"
+	manpower = 340234
+	state_category = city
+
+	resources={
+		steel = 5
+	}
+
+	history={
+		owner = PRS
+		add_core_of = PRS
+		add_claim_by = POL
+		victory_points = {
+			6332 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			6332 = {
+				bunker = 1
+			}
+			6332 = {
+				naval_base = 5
+			}
+		}
+	}
+
+	provinces={
+		281 348 395 3384 6332 11265
+	}
+}

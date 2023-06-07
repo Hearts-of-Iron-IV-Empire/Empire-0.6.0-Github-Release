@@ -1,0 +1,20 @@
+state={
+	id=722
+	name="STATE_722"
+	manpower = 2371
+
+	state_category = pastoral
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = DEN
+		add_core_of = NOR
+	}
+	
+	provinces={
+		22 64 76 103 128 2995 3016 3040 3069 3097 6015 6061 6092 9042 9064 9089 9128 9191 11034 11063 11077 11104 11169
+	}
+}

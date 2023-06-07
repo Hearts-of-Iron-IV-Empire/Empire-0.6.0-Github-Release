@@ -1,0 +1,38 @@
+
+state={
+	id=141
+	name="STATE_141" # Svealand
+	manpower = 333181
+	state_category = large_city
+	
+	resources={
+		steel=20 # 
+		chromium=8 # 
+	}
+
+	history={
+		owner = SWE
+		victory_points = {
+			6050 30 
+		}
+		victory_points = {
+			11163 3 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 3
+			dockyard = 1
+			6050 = {
+				naval_base = 5
+				coastal_bunker = 3
+			}
+
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		161 3182 6050 6127 6209 9109 9149 11082 11163 11188 11278 13097 13098 
+	}
+}

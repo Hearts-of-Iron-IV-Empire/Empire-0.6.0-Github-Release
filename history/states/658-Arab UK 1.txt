@@ -1,0 +1,19 @@
+state={
+	id=658
+	name="STATE_658"
+
+	history={
+		owner = OMA
+		add_core_of = OMA
+		add_core_of = UAE
+
+	}
+
+	provinces={
+		2018 2059 5049 
+	}
+	manpower=34200
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

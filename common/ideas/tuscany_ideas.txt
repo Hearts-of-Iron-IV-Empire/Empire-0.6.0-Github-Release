@@ -1,0 +1,31 @@
+ideas = {
+	country = {
+		TUS_stagnating_economy = {
+
+			picture = usa_great_depression_3
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_cost = 15
+				consumer_goods_factor = 0.8
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				conscription_factor = -0.8
+				join_faction_tension = 0.20
+				local_resources_factor = -0.5
+				mobilization_laws_cost_factor = 1
+				economy_cost_factor = 1
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+			}
+		}
+	}
+}

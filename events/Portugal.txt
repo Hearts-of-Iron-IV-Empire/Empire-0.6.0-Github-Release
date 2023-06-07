@@ -1,0 +1,563 @@
+add_namespace = portugal
+
+country_event = {
+	id = portugal.1
+	title = "Determining our European Strategy"
+	desc = portugal.1.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We must keep the English close!"
+		reverse_add_opinion_modifier = {
+		    target = ENG
+		    modifier = medium_increase
+		}
+		add_stability = 0.05
+	}
+
+	option = {
+		name = "We must increase relations with Spain!"
+		reverse_add_opinion_modifier = {
+		    target = SPR
+		    modifier = medium_increase
+		}
+		add_political_power = 100
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = "We should appease Louis XIV!"
+		reverse_add_opinion_modifier = {
+		    target = FRA
+		    modifier = medium_increase
+		}
+		add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.08
+			}
+	}
+
+	option = {
+		name = "We must reprise our ties with Savoy!"
+		reverse_add_opinion_modifier = {
+		    target = ITA
+		    modifier = medium_increase
+		}
+		add_political_power = 50
+	    add_stability = 0.02
+	}
+}
+
+country_event = {
+	id = portugal.2
+	title = "Portugal Seeks Non-Aggression Pact"
+	desc = portugal.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will gladly keep the peace!"
+		ai_chance = {
+			base = 40
+		}
+		diplomatic_relation = {
+		    country = POR
+		    relation = non_aggression_pact
+		    active = yes
+		}
+		POR = {
+			country_event = portugal.3
+		}
+	}
+
+	option = {
+		name = "We can make no such commitments."
+		POR = {
+			country_event = portugal.4
+		}
+	}
+}
+
+country_event = {
+	id = portugal.3
+	title = "[FROM.GetCountry] Accepts Non-Aggression Treaty"
+	desc = portugal.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We have bought some time."
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = portugal.4
+	title = "[FROM.GetCountry] refuses!"
+	desc = portugal.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "They must be planning something!"
+	}
+}
+
+country_event = {
+	id = portugal.5
+	title = "A summary of Pedro II's Reign"
+	desc = portugal.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Onwards, to the future!"
+		add_country_leader_trait = the_pacific
+	}
+}
+
+# Support king of Spain
+
+news_event = {
+	id = portugal.6
+	title = "Portugal Announces Support For [SPR.GetLeader]"
+	picture = GFX_news_event_anouncement
+	desc = portugal.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Will their involvement change anything?"
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+	option = {
+		name = "The Portuguese are a good people!"
+		trigger = {
+			original_tag = SPR
+		}
+	}
+}
+
+# Support enemy of Spain (Habs)
+
+news_event = {
+	id = portugal.7
+	title = "Portugal Announces Support For Archduke Charles"
+	picture = GFX_news_event_anouncement
+	desc = portugal.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A major diplomatic incident!"
+		trigger = {
+			NOT = { original_tag = SPR }
+			NOT = { original_tag = FRA }
+		}
+	}
+	option = {
+		name = "How dare they oppose the Bourbons!"
+		trigger = {
+			original_tag = FRA
+			original_tag = SPR
+		}
+	}
+}
+
+#support enemy of Spain (Fra)
+
+news_event = {
+	id = portugal.8
+	title = "Portugal Announces Support For Philip of Anjou"
+	picture = GFX_news_event_anouncement
+	desc = portugal.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A major diplomatic incident!"
+		trigger = {
+			NOT = { original_tag = SPR }
+			NOT = { original_tag = AUS }
+		}
+	}
+	option = {
+		name = "How dare they oppose the Habsburgs!"
+		trigger = {
+			original_tag = AUS
+			original_tag = SPR
+		}
+	}
+}
+
+country_event = {
+	id = portugal.9
+	title = "Spain Lodges A Diplomatic Protest"
+	desc = portugal.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh no, we are so afraid."
+		add_political_power = -10
+	}
+}
+
+country_event = {
+	id = portugal.10
+	title = "Spain Issues Embargo"
+	desc = portugal.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A blow to our economy."
+	}
+}
+
+country_event = {
+	id = portugal.11
+	title = "Spain Prepares For War"
+	desc = portugal.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let them come!"
+	}
+}
+
+country_event = {
+	id = portugal.12
+	title = "The Portuguese Insult"
+	desc = portugal.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall issue a diplomatic protest!"
+		POR = { country_event = portugal.9 }
+	}
+	option = {
+		name = "We must embargo them over this issue!"
+		add_opinion_modifier = { target = POR modifier = embargo }
+		add_opinion_modifier = { target = POR modifier = sanctions_relations } 
+		POR = { country_event = portugal.10 }
+	}
+	option = {
+		name = "We must answer with war!"
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = POR
+		}
+		POR = { country_event = portugal.11 }
+	}
+}
+
+country_event = {
+	id = portugal.13
+	title = "Portugal Proposes Unification"
+	desc = portugal.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let us unite Iberia!"
+		custom_effect_tooltip = ARA_will_die
+		POR = { country_event = portugal.14 }
+	}
+	option = {
+		name = "We agree, if we may keep our autonomy."
+		POR = { 
+			set_autonomy = {
+			    target = ARA
+			    autonomy_state = autonomy_puppet
+			}
+		}
+		POR = { country_event = portugal.15 }
+	}
+	option = {
+		name = "No, we are a sovereign state."
+		POR = { country_event = portugal.16 }
+	}
+}
+
+country_event = {
+	id = portugal.14
+	title = "Aragon accepts unification"
+	desc = portugal.14.d
+	picture = GFX_report_event_aragon
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hurray!"
+		annex_country = { target = ARA transfer_troops = yes }
+	}
+}
+
+country_event = {
+	id = portugal.15
+	title = "Aragon becomes vassal"
+	desc = portugal.15.d
+	picture = GFX_report_event_aragon
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We will treat them with respect!"
+	}
+}
+
+country_event = {
+	id = portugal.16
+	title = "Aragon refuses"
+	desc = portugal.16.d
+	picture = GFX_report_event_aragon
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let's see how long they will last on their own!"
+		every_state = {
+			limit = { is_core_of = ARA }
+			add_claim_by = POR
+		}
+	}
+}
+
+country_event = {
+	id = portugal.17
+	title = "The New Policy?"
+	desc = portugal.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Focus on colonial affairs, but keep England as a defensive ally."
+		ai_chance = { base = 80 }
+		custom_effect_tooltip = POR_eng_ally
+		set_country_flag = POR_eng_ally
+		custom_effect_tooltip = resume_colonial_affairs
+		clr_country_flag = involved_in_european_affairs
+	}
+
+	option = {
+		name = "Focus on colonial affairs, but keep France as a defensive ally."
+		custom_effect_tooltip = POR_fra_ally
+		set_country_flag = POR_fra_ally
+		custom_effect_tooltip = resume_colonial_affairs
+		clr_country_flag = involved_in_european_affairs
+	}
+
+	option = {
+		name = "Focus on colonial affairs, but align Spain."
+		trigger = { SPR = { is_faction_leader = yes } }
+		SPR = { country_event = generic.2 }
+		custom_effect_tooltip = resume_colonial_affairs
+		clr_country_flag = involved_in_european_affairs
+		
+	}
+
+	option = {
+		name = "Focus on colonial affairs and abandon Europe."
+		add_political_power = 100
+		custom_effect_tooltip = resume_colonial_affairs
+		clr_country_flag = involved_in_european_affairs
+	}
+}
+
+country_event = {
+	id = portugal.18
+	title = "The Kongo Civil War"
+	desc = portugal.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We must support the Catholics in the heartlands."
+		COG = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 500
+			    producer = POR
+			}
+			add_opinion_modifier  = {
+			    target = POR
+			    modifier = huge_increase
+			}
+		}
+		add_war_support = 0.02
+		army_experience = 10
+	}
+
+	option = {
+		name = "We must support the Catholics in Angola."
+		ANG = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 500
+			    producer = POR
+			}
+			add_opinion_modifier  = {
+			    target = POR
+			    modifier = huge_increase
+			}
+		}
+		add_war_support = 0.02
+		army_experience = 10
+	}
+
+	option = {
+		name = "The Traditionalists of Dembo Ambuila are right."	
+		UGA = {
+			add_equipment_to_stockpile = {
+			    type = infantry_equipment
+			    amount = 500
+			    producer = POR
+			}
+			add_opinion_modifier  = {
+			    target = POR
+			    modifier = huge_increase
+			}
+		}
+		add_war_support = 0.02
+		army_experience = 10
+	}
+}
+
+country_event = {
+	id = portugal.19
+	title = "Portugal Asserts Its Dominance"
+	desc = portugal.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "So be it."
+		POR = {
+			set_autonomy = {
+			    target = COG
+			    autonomy_state = autonomy_viceroyalty
+			}
+		}	
+	}
+
+	option = {
+		name = "No! We will fight back!"
+		declare_war_on = {
+		    target = POR
+		    type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = portugal.20
+	title = "Portugal Offers Protection"
+	desc = portugal.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Agreed"
+		POR = {
+			set_autonomy = {
+			    target = YEM
+			    autonomy_state = autonomy_puppet
+			}
+		}	
+	}
+
+	option = {
+		name = "No"
+		POR = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ROOT
+			}
+		}
+	}
+}
+
+country_event = {
+	id = portugal.21
+	title = "Illness of The King"
+	desc = portugal.21.d
+
+	fire_only_once = yes
+
+	trigger = {
+		date > 1703.03.03
+		original_tag = POR
+		has_country_leader = {
+		    name = "Pedro II"
+		    ruling_only = yes
+		}
+	}
+
+	option = {
+		name = "It's not that bad, really."	
+		add_country_leader_trait = drowsy
+	}
+}
+
+country_event = {
+	id = portugal.22
+	title = "Near Death's Door..."
+	desc = portugal.22.d
+
+	is_triggered_only = yes
+	trigger = {
+		original_tag = POR
+		date > 1706.11.01
+		has_country_leader = {
+		    name = "Pedro II"
+		    ruling_only = yes
+		}
+	}
+
+	option = {
+		name = "Let us pray for our Lord's mercy."	
+		swap_ruler_traits = { remove = drowsy add = very_ill }
+		hidden_effect = {
+			country_event = {
+				id = portugal.23
+				days = 10
+				random = 30
+				random_days = 10
+			}
+		}
+	}
+}
+
+
+country_event = {
+	id = portugal.23
+	title = "Death of Pedro II"
+	desc = portugal.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "He is with the angels now."	
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "João V"
+			picture = "Portugal_Leader.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				#
+			}
+		}
+		add_stability = -0.01
+	}
+}

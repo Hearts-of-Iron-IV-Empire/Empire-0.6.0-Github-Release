@@ -1,0 +1,19 @@
+ideas = {
+	country = {
+		BAV_joseph_ferdinand = {
+
+			picture = joseph_ferdinand
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.3
+			}
+		}
+	}
+}

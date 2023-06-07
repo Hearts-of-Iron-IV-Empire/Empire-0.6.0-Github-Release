@@ -1,0 +1,37 @@
+﻿capital = 430
+
+oob = "PAK_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 5
+
+add_ideas = {
+	hinduism
+}
+
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 23
+	fascism = 1
+	communism = 1
+	neutrality = 35
+	aristocracy = 40
+}
+
+create_country_leader = {
+	name = "Husam ud-Daula"
+	desc = ""
+	picture = "gfx/leaders/India/Indian_ruler_2.dds"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

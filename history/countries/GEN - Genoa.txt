@@ -1,0 +1,61 @@
+﻿capital = 796
+
+oob = "GEN_1936"
+
+set_research_slots = 3
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+}
+
+set_convoys = 0
+
+add_ideas = {
+	catholic
+}
+
+1798.1.1 = {
+	set_politics = {
+		ruling_party = communism
+		last_election = "1795.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 30
+		fascism = 2
+		communism = 55
+		neutrality = 3
+		aristocracy = 10
+	}
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1698.1.1"
+	election_frequency = 24
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 67
+	fascism = 12
+	communism = 1
+	aristocracy = 20
+}
+
+create_country_leader = {
+	name = "Girolamo De Mari"
+	desc = "POLITICS_MUSTAFA_KEMAL_ATATÜRK_DESC"
+	picture = "Girolamo_De_Mari.dds"
+	expire = "1938.11.10"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}

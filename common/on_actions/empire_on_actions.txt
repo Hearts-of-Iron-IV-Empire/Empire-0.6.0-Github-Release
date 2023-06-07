@@ -1,0 +1,253 @@
+on_actions  = {
+	on_startup = {
+		effect = {
+			every_country = { 
+				if = {
+					limit = { is_ai = no }
+					country_event = { 
+						id = mod.0 
+					}
+				}
+			}
+			every_country = {
+				if = {
+					limit = {
+						NOT = {
+							has_game_rule = {
+								rule = allow_force_limit
+								option = FORCE_LIMIT_OFF
+							}
+						}
+					}
+				}
+				unit_limit_by_industry = yes
+			}
+			if = {
+				limit = {
+					date > 1717.1.1
+				}
+				#SPR = { country_event = spain.81 }
+				SWE = { country_event = sweden.44 }
+			}
+			if = {
+				limit = {
+					date > 1812.1.1
+				}
+				FRA = {
+					create_faction = "Continental System"
+					add_to_faction = PRS
+					add_to_faction = BAV
+					add_to_faction = MUN
+					add_to_faction = WUR
+					add_to_faction = POL
+					add_to_faction = DEN
+					add_to_faction = AUS
+					add_to_faction = IFC
+					add_to_faction = HES
+					add_to_faction = SAX
+					add_to_faction = MEK
+				}
+			}
+			# Polish resource rights prussia
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				PRS = {
+					give_resource_rights = { receiver = POL state = 5 }
+					give_resource_rights = { receiver = POL state = 763 }
+				}
+			}
+			# Russian resource rights poland
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				POL = {
+					give_resource_rights = { receiver = SOV state = 206 }
+					give_resource_rights = { receiver = SOV state = 194 }
+					give_resource_rights = { receiver = SOV state = 241 }
+					give_resource_rights = { receiver = SOV state = 933 }
+					give_resource_rights = { receiver = SOV state = 202 }
+					give_resource_rights = { receiver = SOV state = 201 }
+					give_resource_rights = { receiver = SOV state = 199 }
+				}
+			}
+			# Making states non-colonisable
+			273 = { # Libyan Desert
+				set_state_flag = cannot_be_colonised
+			}
+			280 = { # Mato Grosso
+				set_state_flag = cannot_be_colonised
+			}
+			292 = { # Nejd
+				set_state_flag = cannot_be_colonised
+			}
+			487 = { # Santa Cruz
+				set_state_flag = cannot_be_colonised
+			}
+			495 = { # Amazonas
+				set_state_flag = cannot_be_colonised
+			}
+			504 = { # Iguacu
+				set_state_flag = cannot_be_colonised
+			}
+			514 = { # Sahara Desert
+				set_state_flag = cannot_be_colonised
+			}
+			656 = { # Bani Khalid
+				set_state_flag = cannot_be_colonised
+			}
+			678 = { # Rub al Khali
+				set_state_flag = cannot_be_colonised
+			}
+			688 = { # Chaco Boreal
+				set_state_flag = cannot_be_colonised
+			}
+			765 = { # Qatar
+				set_state_flag = cannot_be_colonised
+			}
+			767 = { # Darfur
+				set_state_flag = cannot_be_colonised
+			}
+			775 = { # Wadai
+				set_state_flag = cannot_be_colonised
+			}
+			782 = { # Tombouctou
+				set_state_flag = cannot_be_colonised
+			}
+			786 = { # Mauritanian Desert
+				set_state_flag = cannot_be_colonised
+			}
+			929 = { # Horn of Africa
+				set_state_flag = cannot_be_colonised
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = RAJ
+					has_war_with = PER
+					FROM = { tag = PER }
+					FROM.FROM = {
+						state = 411
+					}
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.13
+					}
+				}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = RAJ
+					has_war_with = ENG
+					FROM = { tag = ENG }
+					FROM.FROM = {
+						state = 961
+					}
+				}
+				ENG = {
+					country_event = {
+						id = mughal.23
+					}
+				}
+			}
+		}
+	}
+	on_state_control_changed = {
+		effect = {
+			if = {
+				limit = {
+					tag = RAJ
+					has_war_with = CHI
+					FROM = { tag = CHI }
+					FROM.FROM = {
+						state = 608
+					}
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.35
+					}
+				}
+			}
+		}
+	}
+	#on_state_control_changed = {
+		#effect = {
+		#	if = {
+		#		limit = {
+		#			original_tag = RAJ
+		#			has_war_with = MAR
+		#			#MAR = {
+		#			#	surrender_progress > 0.8
+		#			#}
+		#			FROM = { tag = MAR }
+		#			FROM.FROM = {
+		#				state = 960
+		#			}
+		#		}
+		#		RAJ = {
+		#			country_event = {
+		#				id = mughal.65
+		#			}
+		#		}
+		#		FROM.FROM = {
+        #            set_resistance = 20
+        #          damage_building = {
+        #                type = infrastructure
+        #                damage = 1
+        #            }
+        #        }
+		#	}
+		#}
+	#}
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					country_exists = CHI
+					CHI = {
+						is_subject = no
+						is_puppet = no
+						NOT = {
+							has_country_flag = defeated_by_mughals
+						}
+					}
+					original_tag = RAJ
+					FROM = { tag = BRM }
+				}
+				CHI = {
+					country_event = {
+						id = mughal.43
+						days = 10
+					} 
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = RAJ }
+					ROOT = { tag = MAR }
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.65
+					}
+				}
+			}
+		}
+	}
+}
+

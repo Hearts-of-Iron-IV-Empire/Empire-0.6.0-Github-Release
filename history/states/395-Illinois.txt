@@ -1,0 +1,36 @@
+
+state={
+	id=395
+	name="STATE_395"
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		buildings = {
+			infrastructure = 1
+			7831 = {
+				bunker = 1
+
+			}
+		}
+		add_core_of = LOU
+		victory_points = {
+			7831 1 
+		}
+		1789.1.1 = {
+			remove_core_of = QUE
+			remove_core_of = LOU
+			owner = IRO
+			add_core_of = IRO
+			add_claim_by = USA
+		}
+	}
+	
+
+	provinces={
+		720 954 1527 1604 1655 4508 4590 6737 7611 7626 7831 9450 9682 10339 10393 10457 10461 11589 12305 12312 12365 12368 12497 12697 
+	}
+	manpower=140
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

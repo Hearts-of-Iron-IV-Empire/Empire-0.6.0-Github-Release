@@ -1,0 +1,850 @@
+technologies = {
+	electronic_mechanical_engineering = {
+		# AGE OF DISCOVERY
+
+		# small boost to research speed
+		research_speed_factor = 0.04
+
+		path = {
+			leads_to_tech = mechanical_computing 
+			research_cost_coeff = 1
+		}
+		path = { 
+			leads_to_tech = navigation
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1
+		start_year = 1699
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 3
+				date > "1700.1.1"
+			}
+		}
+		
+		categories = {
+			electronics
+		}
+	}
+
+	navigation = {
+		
+		research_cost = 2.5
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+
+		allow_branch = {
+			has_dlc = "Man the Guns"
+		}
+
+		start_year = 1699
+
+		enable_equipment_modules = { 
+			ship_fire_control_system_1
+		}
+		
+		ai_will_do = {
+			factor = 0.75
+			modifier = {
+				num_of_naval_factories > 1
+				factor = 3
+			}
+		}
+		
+		categories = {
+			electronics
+			naval_equipment
+		}
+	}
+	
+	mechanical_computing = {
+	# Age of Absolutism
+
+		# small boost to research speed
+		research_speed_factor = 0.04
+		
+		path = {
+			leads_to_tech = computing_machine 
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = court_and_country 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1650
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+		}
+	}
+
+	court_and_country = {
+	#absolutism
+
+		# political power gain
+		political_power_factor = 0.05
+		
+		research_cost = 2.5
+		start_year = 1700
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 4 }
+		}
+
+		enable_building = {
+			building = courthouse
+			level = 1
+		}
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+		}
+	}
+	
+	computing_machine = {
+	# Age of Enlightenment
+
+		# small boost to research speed
+		research_speed_factor = 0.05
+		
+		path = {
+			leads_to_tech = improved_computing_machine 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = free_thought 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_encryption 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = basic_decryption 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+		start_year = 1702
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 6
+			
+			modifier = {
+				factor = 3
+				date > "1701.1.6"
+			}
+			
+		}
+		
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+	free_thought = {
+	# Freedom of Thought
+
+		# small boost to political power gain
+		political_power_factor = 0.05
+		
+		research_cost = 2.5
+		start_year = 1703
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 8 }
+		}
+
+		enable_building = {
+			building = university
+			level = 1
+		}
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+		}
+	}
+	
+	improved_computing_machine = {
+	# Revolutionary Age
+
+		# small boost to research speed
+		research_speed_factor = 0.08
+		
+		path = {
+			leads_to_tech = advanced_computing_machine 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = improved_encryption 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = improved_decryption 
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = rights_of_man 
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 2.5
+		start_year = 1704
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 3
+			
+			modifier = {
+				factor = 3
+				date > "1703.1.6"
+			}
+			
+			modifier = {
+				factor = 3
+				date > "1941.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				tag = GER
+			}
+		}
+		
+		categories = {
+			electronics
+			encryption_tech
+			decryption_tech
+			computing_tech
+		}
+	}
+
+	rights_of_man = {
+	 # Rights of Man
+
+		# small boost to research speed
+		stability_factor = 0.10
+		political_power_factor = 0.05
+
+		research_cost = 2.5
+		start_year = 1705
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		ai_will_do = {
+			factor = 7
+		}
+		
+		categories = {
+			electronics
+			computing_tech
+		}
+	}
+
+	basic_encryption = {
+
+		allow_branch = {
+			always = no
+		}
+
+		# encryption 1
+		encryption = 1
+		
+		research_cost = 1
+		start_year = 1701
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1.75
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
+		}
+		
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+	
+	improved_encryption = {
+
+		allow_branch = {
+			always = no
+		}
+
+		# encryption 2
+		encryption = 1
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 1
+		start_year = 1703
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1.75
+			modifier = {
+				has_war = yes
+				factor = 3
+			}
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
+		}
+		
+		categories = {
+			electronics
+			encryption_tech
+		}
+	}
+	
+	basic_decryption = {
+
+		allow_branch = {
+			always = no
+		}
+
+		# decryption 1
+		decryption = 1
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 1.5
+		start_year = 1701
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
+		}
+		
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+	
+	improved_decryption = {
+
+		allow_branch = {
+			always = no
+		}
+
+		# decryption 2
+		decryption = 1
+		allow_branch = {
+			NOT = { has_dlc = "La Resistance" }
+		}
+		research_cost = 1.5
+		start_year = 1703
+		
+		folder = {
+			name = electronics_folder
+			position = { x = 4 y = 10 }
+		}
+		
+		ai_will_do = {
+			factor = 1.5
+			modifier = {
+				num_of_military_factories < 50
+				factor = 1.5 # not a major
+			}
+			modifier = {
+				factor = 3
+
+				tag = GER
+			}
+			modifier = {
+				factor = 3
+
+				tag = SOV
+			}
+		}
+		
+		categories = {
+			electronics
+			decryption_tech
+		}
+	}
+
+ # COLONIALISM # 
+
+	american_colonisation = {
+		
+		on_research_complete = {
+			set_country_flag = colonise_america_unlock
+			custom_effect_tooltip = colonise_america_unlock
+		}
+		path = {
+			leads_to_tech = coastal_colonisation_of_africa
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = asian_trade_companies
+			research_cost_coeff = 1
+		}
+		
+		path = {
+			leads_to_tech = increase_colonial_quality
+			research_cost_coeff = 1
+		}	
+		path = {
+			leads_to_tech = more_colonies
+			research_cost_coeff = 1
+		}	
+		
+		research_cost = 2
+		start_year = 1492
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		allow_branch = {
+			
+		}
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = { has_country_flag = ai_want_colonise
+						original_tag = ENG
+						original_tag = FRA
+						original_tag = HOL
+						original_tag = SPR
+					}
+				}
+			}
+		}
+	}
+	coastal_colonisation_of_africa = {
+
+		on_research_complete = {
+			set_country_flag = coastal_colonisation_of_africa
+			custom_effect_tooltip = colonise_africa_unlock
+		}
+		
+		research_cost = 2
+		start_year = 1652
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 2 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_flag = asian_trade_companies
+						OR = { 
+							has_country_flag = ai_want_colonise
+							original_tag = ENG
+							original_tag = FRA
+							original_tag = HOL
+							original_tag = SPR 
+						}
+					}
+				}
+			}
+			
+		}
+	}
+	asian_trade_companies = {
+		
+		on_research_complete = {
+			set_country_flag = asian_trade_companies
+			custom_effect_tooltip = asian_trade_companies_unlock
+		}
+		
+		
+		research_cost = 2
+		start_year = 1652
+
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 2 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {				
+					OR = {
+						has_country_flag = ai_want_colonise 
+						original_tag = ENG 
+						original_tag = FRA
+						original_tag = HOL
+						original_tag = SPR
+					}
+				}
+			}
+		}
+	}
+	increase_colonial_quality = {
+
+		on_research_complete = {
+			custom_effect_tooltip = increase_colonial_quality_tooltip
+		}
+		path = {
+			leads_to_tech = increase_colonial_quality2
+			research_cost_coeff = 1
+		}	
+		
+		research_cost = 1.5
+		start_year = 1699
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 4 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_flag = coastal_colonisation_of_africa
+						OR = {
+							has_country_flag = ai_want_colonise
+							original_tag = ENG
+							original_tag = FRA
+							original_tag = HOL
+							original_tag = SPR 
+						}
+					}
+				}
+			}
+		}
+	}
+	increase_colonial_quality2 = {
+		
+		on_research_complete = {
+			custom_effect_tooltip = increase_colonial_quality2_tooltip
+		}
+		path = {
+			leads_to_tech = increase_colonial_quality3
+			research_cost_coeff = 1
+		}	
+		
+		research_cost = 1.5
+		start_year = 1703
+
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = {
+						OR = { 
+							has_country_flag = ai_want_colonise
+							original_tag = ENG
+							original_tag = FRA
+							original_tag = HOL
+							original_tag = SPR 
+						}
+					}
+					date < 1703.01.01
+				}
+			}
+		}
+	}
+
+	increase_colonial_quality3 = {
+	
+		on_research_complete = {	
+			custom_effect_tooltip = increase_colonial_quality3_tooltip
+		}
+		
+		research_cost = 1.5
+		start_year = 1705
+		folder = {
+			name = electronics_folder
+			position = { x = 2 y = 8 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				OR = {
+					NOT = {
+						OR = { 
+							has_country_flag = ai_want_colonise
+							original_tag = ENG
+							original_tag = FRA
+							original_tag = HOL
+							original_tag = SPR 
+						}
+					}
+					date < 1705.01.01
+				}
+			}
+		}
+		enable_building = {
+			building = colonial_settlement
+			level = 1
+		}
+	}
+
+	more_colonies = {
+	
+		on_research_complete = {
+			set_variable = {
+				colonise_time = 100
+			}
+			custom_effect_tooltip = more_colonies_tooltip
+		}
+		path = {
+			leads_to_tech = more_colonies2
+			research_cost_coeff = 1
+		}	
+		
+		research_cost = 1.5
+		start_year = 1699
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 4 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				NOT = {
+					OR = {
+						has_country_flag = coastal_colonisation_of_africa
+						OR = {
+							has_country_flag = ai_want_colonise
+							original_tag = ENG
+							original_tag = FRA
+							original_tag = HOL
+							original_tag = SPR 
+						}
+					}
+				}
+			}
+		}
+	}
+	more_colonies2 = {
+
+		on_research_complete = {
+			set_variable = {
+				colonise_time = 75
+			}
+			custom_effect_tooltip = more_colonies2_tooltip
+		}
+		path = {
+			leads_to_tech = more_colonies3
+			research_cost_coeff = 1
+		}	
+		
+		research_cost = 1.5
+		start_year = 1703
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 6 }
+		}
+		
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1703.01.01
+				NOT = {
+					OR = {
+						has_country_flag = ai_want_colonise
+						original_tag = ENG
+						original_tag = FRA
+						original_tag = HOL
+						original_tag = SPR 
+					}
+				}
+			}
+		}
+	}
+	more_colonies3 = {
+	
+		on_research_complete = {
+			set_variable = {
+				colonise_time = 25
+			}
+			custom_effect_tooltip = more_colonies3_tooltip
+		}
+		
+		research_cost = 1.5
+		start_year = 1705
+		folder = {
+			name = electronics_folder
+			position = { x = -2 y = 8 }
+		}
+	
+		categories = {
+			colonial_tech
+		}
+		
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 0
+				date < 1705.01.01
+				NOT = {
+					OR = { 
+						has_country_flag = ai_want_colonise
+						original_tag = ENG
+						original_tag = FRA
+						original_tag = HOL
+						original_tag = SPR 
+					}	
+				}
+			}
+		}
+	}
+}
+

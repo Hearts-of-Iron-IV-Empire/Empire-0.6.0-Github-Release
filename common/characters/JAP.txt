@@ -1,0 +1,38 @@
+characters = {
+    JAP_Tokugawa_Tsunayoshi = {
+        name = "Tokugawa Tsunayoshi"
+        portraits = {
+            civilian = {
+                large = "GFX_Tokugawa"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    JAP_Tokugawa_Mitsusada = {
+        name = "Tokugawa Mitsusada"
+        portraits = {
+            civilian = {
+                large = "GFX_Tokugawa_Mitsusada"
+            }
+        }
+        country_leader = {
+            ideology = nobility
+            traits = {}
+        }
+    }
+    JAP_Emperor_Go_Komyo = {
+        name = "Emperor Go Komyo"
+        portraits = {
+            civilian = {
+                large = "GFX_Emperor_Go_Komyo"
+            }
+        }
+        country_leader = {
+            ideology = rexism
+            traits = {}
+        }
+    }
+}

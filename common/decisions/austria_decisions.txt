@@ -1,0 +1,148 @@
+AUS_reform_the_empire = {
+    AUS_invest_in_FROM = {
+        available = {
+			has_completed_focus = AUS_call_for_reichsreform
+			num_of_civilian_factories_available_for_projects > 1
+		}
+        visible = {
+			has_completed_focus = AUS_call_for_reichsreform
+		}
+        target_trigger = {
+            FROM = {
+                exists = yes
+                not = { has_war_with = ROOT }
+                has_country_flag = HRE_imperial_subject
+            }
+        }
+       cost = 0
+		is_good = yes
+		fire_only_once = no
+		days_remove = 70
+		days_re_enable = 140
+        war_with_target_on_remove = yes
+
+       remove_effect = {
+			FROM = { country_event = austria.18 }
+			FROM = {
+				add_opinion_modifier = {
+			    target = AUS
+			    modifier = large_increase
+				}
+			}
+		}
+    }  
+
+    AUS_stabilize_FROM = {
+        available = {
+			has_completed_focus = AUS_call_for_reichsreform
+			political_power_daily > 0
+			has_political_power > 0
+		}
+		visible = {
+			has_completed_focus = AUS_call_for_reichsreform
+		}
+        target_trigger = {
+            FROM = {
+                exists = yes
+                not = { has_war_with = ROOT }
+                has_country_flag = HRE_imperial_subject
+            }
+        }
+       	is_good = yes
+		fire_only_once = no
+		days_remove = 70
+		days_re_enable = 140
+
+		modifier = {
+			political_power_gain = -0.2
+		}
+
+		remove_effect = {
+			FROM = { country_event = austria.19 }
+			FROM = {
+				add_opinion_modifier = {
+			    target = AUS
+			    modifier = large_increase
+				}
+			}
+		}
+    }   
+}
+
+AUS_intervention_mandate = {
+    AUS_intervene_against_FROM = {
+        available = {
+        }
+        visible = {
+            has_completed_focus = AUS_ewiger_landfriede
+            not = { has_wargoal_against = FROM }
+            not = { has_war_with = FROM }
+            FROM = {
+                exists = yes
+                not = { is_subject_of = ROOT }
+            }
+        }
+        target_trigger = {
+            FROM = {
+                exists = yes
+                not = { has_war_with = ROOT }
+                NOT = { 
+                    is_subject_of = ROOT
+                }
+                
+                any_country = { 
+                    has_country_flag = HRE_imperial_subject 
+                    has_defensive_war_with = FROM
+                }
+                has_country_flag = HRE_imperial_subject
+            }
+        }
+        cost = 50
+        days_remove = 35
+        war_with_target_on_remove = yes
+        ai_will_do = {
+            factor = 1
+            modifier = {
+                has_war = yes
+                factor = 0
+            }
+        }
+        remove_effect = {
+            create_wargoal = {
+                type = puppet_wargoal_focus
+                target = FROM
+            }
+        }
+    }    
+}
+
+political_actions = {
+	AUS_negotiate_turkish_surrender = {
+
+		icon = generic_decisison
+
+		days_re_enable = 60 
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_war_with = TUR
+			original_tag = AUS
+            has_country_flag = ottomansussybaka
+		}
+
+		available = {
+			TUR = { surrender_progress > 0.60 }
+			is_faction_leader = yes
+			has_country_flag = ottomansussybakaa
+		}	
+
+		complete_effect = {
+			TUR = { country_event = austria.70 }
+		}	
+	}
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=42
+	name="STATE_42"
+	resources={
+		steel=59.000
+		aluminium=14.000
+	}
+
+	history={
+		owner = RPA
+		victory_points = {
+			11531 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 3
+
+		}
+		add_core_of = RPA
+		1798.1.1 = {
+			owner = FRA
+		}
+	}
+
+	provinces={
+		563 3558 11531 11547 
+	}
+	manpower=1527739
+	buildings_max_level_factor=1.000
+	state_category=city
+}

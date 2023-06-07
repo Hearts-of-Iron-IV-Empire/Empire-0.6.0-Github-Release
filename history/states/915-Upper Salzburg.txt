@@ -1,0 +1,29 @@
+state={
+	id=915
+	name="STATE_915"
+
+	history={
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+		}
+		add_core_of = AUS
+		victory_points = {
+			11612 3
+		}
+		victory_points = {
+			3673 3
+		}
+		1812.1.1 = {
+			owner = AUS
+			add_core_of = AUS
+		}
+	}
+
+	provinces={
+		671 3673 6673 11612
+	}
+	manpower=134236
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

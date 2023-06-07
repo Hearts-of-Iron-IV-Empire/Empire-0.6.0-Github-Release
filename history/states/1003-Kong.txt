@@ -1,0 +1,23 @@
+state={
+	id=1003
+	name="STATE_1003"
+	provinces={
+		4957 5070 8008 8065 
+
+	}
+	history = {
+		owner = GNA
+		victory_points = { 4957 5 }
+		victory_points = { 8065 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			
+		}
+	}
+	
+	manpower=89478
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

@@ -1,0 +1,351 @@
+bookmarks = {
+	bookmark = {
+		name = "GATHERING_STORM_NAME"
+		desc = "EMPIRE_DAWN_OF_THE_EIGHTEENTH_CENTURY_DESC"
+		date = 1699.1.1.12
+		picture = "GFX_select_date_1699"
+		default_country = "FRA"
+		default = yes
+		
+		"FRA"={
+			history = "FRA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				FRA_edict_of_fontainebleu
+				FRA_birthplace_of_absolutism
+				FRA_religious_unrest
+			}
+			focuses = {
+				FRA_stoke_up_sentiments_in_ireland
+				FRA_natural_borders
+				FRA_banish_all_huguenots
+			}
+		}
+
+		"SPR"={
+			history = "SPR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				maria_anna
+				disfunctional_economy
+				SPR_bygone_military_glory
+			}
+			focuses = {
+				SPR_strenghten_the_council_of_the_indies
+				SPR_employ_inquisition
+				SPR_reassert_habsburg_dominance
+			}
+		}
+
+		"ENG"={
+			history = "ENG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				ENG_legacy
+				ENG_Irish_opposition
+			}
+			focuses = {
+				eng_proclaim_great_britain
+				eng_restore_the_old_pretender
+				eng_cromwellian_restoration
+			}
+		}
+		
+		"AUS"={
+			history = "GER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				holy_roman_emperor
+				civil_unrest_hungary3
+				great_turkish_war
+			}
+			focuses = {
+				AUS_treaty_of_karlowitz
+				AUS_bourbon_spain
+				AUS_dual_monarchy
+			}
+		}
+
+		"SWE"={
+			history = "SWE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				SWE_perceived_encirclement
+			}
+			focuses = {
+				SWE_carolus_rex
+				SWE_legacy_of_gustavus_adolphus
+				SWE_revolutionary_constitution
+			}	
+		}
+
+		"SOV"={
+			
+			history = "SOV_GATHERING_STORM_DESC"
+			ideology = neutrality	
+			ideas = {
+			    RUS_boyar_duma
+				russian_orthodox_church
+				RUS_outdated_military
+			}
+			focuses = {
+				RUS_icon_of_christ_pancreator
+				RUS_crush_sweden
+				RUS_colonize_alaska
+			}
+		}
+
+		"HOL"={
+			history = "HOL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				HOL_inflation_2
+				HOL_absence_of_the_stadtholder
+				HOL_protected_by_the_barrier
+			}
+			focuses = {
+				hol_man_the_barrier_forts
+				hol_strike_a_deal_for_the_low_countries
+				hol_anglo_dutch_union
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		#### Minor Nations ####
+		
+		"RAJ"={
+			minor = yes
+			history = "MUG_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				MUG_depleted_army
+				MUG_imperial_administration
+				MUG_jizya_imposed
+			}
+			focuses = {
+				MUG_rebuild_places_of_worship
+				MUG_continue_oppression
+				MUG_sikh_warriors
+			}
+		}
+		
+		"TUR"={
+			minor = yes
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				TUR_sick_man_of_europe_1
+				TUR_janissary_loyalty_3
+			}
+			focuses = {
+				TUR_dawn_of_the_tulip_period
+				TUR_proclaim_islamic_state
+				TUR_reinforce_devshirme
+			}
+		}
+
+		"POL"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				POL_liberum_veto
+				POL_sejm
+				POL_dominance_of_nobles
+			}	
+			focuses = {
+				POL_depose_august
+				POL_visegrad_empire
+				POL_the_tenth_crusade
+			}	
+		}
+
+		"PRS"={
+			minor = yes
+			history = "PRS_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				POL_influence_over_poland_1
+			}
+			focuses = {
+				PRS_greater_prussia
+				PRS_demand_emden
+				PRS_proclaim_kingdom_of_germany
+			}
+		}
+
+		"DEN"={
+			minor = yes
+			history = "DEN_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				DEN_cattle_crisis
+				SOUND_TOLL
+			}
+			focuses = {
+				DEN_look_towards_russia
+				DEN_restoration_of_the_danelaw
+				DEN_renovate_copenhagen
+			}
+		}
+
+		"POR"={
+			minor = yes
+			history = "POR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				POR_portuguese_resilience
+				POR_portuguese_non_involvement_idea
+			}
+			focuses = {
+				POR_reign_of_peter_the_pacific
+				POR_unification_of_ibera
+				POR_challenge_the_ottomans
+			}
+		}
+
+		"JAP"={
+			minor = yes
+			history = "JAP_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				samurai_japan
+				han_system
+				japanese_catholics
+			}
+			focuses = {
+				JAP_review_the_military
+				JAP_review_the_navy
+				JAP_imperial_restoration
+			}
+		}
+
+		"KOR"={
+			minor = yes
+			history = "KOR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				KOR_ulbyeong_famine
+				KOR_factionalism_within_the_court
+				KOR_endemic_regional_corruption
+			}
+			focuses = {
+				KOR_purge_the_southerner_faction
+				KOR_we_have_had_enough_of_purges
+				KOR_beginnings_of_peasant_rebellion
+			}
+		}
+
+		"MAR"={
+			minor = yes
+			history = "MAR_GATHERING_STORM"
+			ideology = neutrality
+			ideas = {
+				MAR_maratha_army
+				MAR_traitors_everywhere
+				MAR_avenge_sambhaji
+			}
+			focuses = {
+				MAR_legacy_of_shivaji
+				MAR_continue_the_fight
+			}
+		}
+
+		"USA"={
+			minor = yes
+			history = "USA_GATHERING_STORM"
+			ideology = neutrality
+			ideas = {
+				USA_largely_male_population
+				colonial_immigration
+			}
+			focuses = {
+				USA_queen_annes_war
+				USA_east_of_the_mississipi
+				USA_plantation_economies
+			}
+		}
+
+		"BAV"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+			ideas = {
+				BAV_joseph_ferdinand
+				PRS_status_elector
+			}
+			focuses = {
+				GER_cuius_regio_eius_religio
+				GER_join_austria
+				GER_join_france
+			}
+		}
+
+		"ITA"={
+			minor = yes
+			history = "ITA_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				SAV_fallout_of_plague
+				SAV_economic_depression
+			}
+			focuses = {
+				SAV_the_italian_plague
+				SAV_march_on_rome
+				SAV_the_reforms_of_amadeus
+			}
+		}
+
+		"PER"={
+			minor = yes
+			history = "PER_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				PER_qizilbas_troops_1
+				PER_mulabasi_govern
+				PER_oppressive_shias_2
+			}
+			focuses = {
+				PER_we_need_a_new_shah
+				PER_veteran_qizilbas
+				PER_turkic_empires_league
+			}
+		}
+
+		"VNC"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+		}
+
+		"PAP"={
+			minor = yes
+			history = ""
+			ideology = neutrality
+		}
+		
+        "ZAP"={
+			minor = yes
+			history = "ZAP_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				RUS_influx_of_russian_refugees
+				ZAP_decentralized_cossack_army
+			}
+			focuses = {
+				ZAP_proclaim_cossack_hetmanate
+				ZAP_side_with_right_bank_cossacks
+				ZAP_switch_capital_to_poltava
+			}
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

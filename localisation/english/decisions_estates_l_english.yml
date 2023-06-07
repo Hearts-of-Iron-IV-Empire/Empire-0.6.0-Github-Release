@@ -1,0 +1,83 @@
+﻿l_english:
+ burghers_estate:0 "Burghers Interactions"
+ burghers_estate_desc:0 "This estate represents the urban population of your country such as Artisans, Merchants or others that reside inside city walls. Their traditional responsibility is to work to keep the economy going and in order to do so efficiently they expect to be granted special rights and privileges for themselves and the cities they represent."
+
+ nobility_estate:0 "Nobility Interactions"
+ nobility_estate_desc:0 "This estate represents the families of landed aristocrats in your country. Their privileges are guaranteed by old traditions and most have originally been won through performing great services to the state. Their traditional responsibility is to fight and protect the realm against outside dangers as well as help the ruler keep the peace."
+ 
+ clergy_estate:0 "Clergy Interactions"
+ clergy_estate_desc:0 "This estate represents the educated priests of your state religion. They have a long tradition of serving in the administration of your country and their traditional responsibility is to care for the spiritual well-being of it and your people. Over the centuries they have acquired both land properties and privileges from former rulers as well as pious individuals."
+ 
+ raise_additional_levies:0 "§RNobility§! - Raise additional Levies"
+ raise_additional_levies_desc:0 "We can never have enough manpower, and thus whe should raise more troops."
+
+ censorship:0 "§YClergy§! - Religious Censorship"
+ censorship_desc:0 "The church has always been a vital ally in keeping the masses in check. Whilst this causes stability, it also grants the clergy significant power over the people."
+ 
+ appoint_new_officers:0 "§RNobility§! - Appoint new officers"
+ appoint_new_officers_desc:0 "The nobility always has a steady supply of men to become officers in the army. While they might not always be able, there is a good chance that they can be trained into good officers."
+ 
+ exercise_the_army:0 "§GRuler§! - Exercise the Army"
+ exercise_the_army_desc:0 "Exercising the army would allow us to garner some military experience, a useful decision but costly."
+ 
+ seek_support_for_war:0 "§RNobility§! - Seek War Support"
+ seek_support_for_war_desc:0 "The Nobility still wield significant power when it comes to military affairs. Their support for war is absolutely vital."
+ 
+ lobby_war_effort:0 "§CThird Estate§! - Lobby with Merchants"
+ lobby_war_effort_desc:0 "If we are to expand our manufacturing, we will need the support of powerful burgher families."
+ 
+ appoint_new_admirals:0 "§CThird Estate§! - Appoint naval officers"
+ appoint_new_admirals_desc:0 "For sure, we could learn a thing or two from our ever growing merchant class when it comes to sailing."
+ 
+ appoint_ministers:0 "§YClergy§! - Appoint Ministers"
+ appoint_ministers_desc:0 "The clergymen make excellent ministers. We should befriend them, so we can employ them for a cheaper price."
+
+ estate_interactions:0 "Estate Interactions"
+ estate_interactions_desc:0 "Estates are factions within the nation that influence domestic politics. Depending on their influence, they will be available for various interactions. The current estates influencing our country are:\n\n§C[ROOT.GetDemocraticParty]§! - influence: [?party_popularity@democratic|%G0]\n\n§Y[ROOT.GetFascistParty]§! - influence: [?party_popularity@fascism|%G0]\n\n§RNobility§! - influence: [?party_popularity@aristocracy|%G0]\n\nThe current influence of our ruling house is [?party_popularity@neutrality|%G0], representing the amount of absolutism we have. The higher the absolutism, the more political power we shall receive."
+ royal_decrees:0 "Royal Decrees"
+ royal_decrees_desc:0 "The absolutist state is not ruled by various factions like the estates, but is instead dominated by the iron fist of the monarch who rules through Royal Decree. While the monarch's power is more or less absolute, he must still pay attention not to anger his subjects. Should the monarch's power drop below 50%, he will be left powerless and will be forced to summon the Estates General, re-enabeling the estates.\n\nThe current power of the monarch is: [?party_popularity@neutrality|%G0]."
+ strenghten_absolutism:0 "§GRuler§! - Strenghten Absolutism"
+ acquire_supply_wagons:0 "§GRuler§! - Acquire Supply Wagons"
+ build_roads:0 "§GRuler§! - Focus on building Roads"
+ build_roads_desc:0 "We should focus on building roads and connecting our supply hubs together."
+ send_the_men_to_manufactories:0 "§GRuler§! - Send the men to Manufactories"
+ send_the_men_to_manufactories_desc:0 "Sending more men into manufactories might be an unpopular move but it will boost our production."
+ cave_to_the_estates:0 "§GRuler§! - Empower The Estates"
+ dismiss_the_estates:0 "§GRuler§! - Dismiss The Estates"
+ summon_the_estates:0 "§GRoyal Decree§! - Summon The Estates"
+ royal_decree_war_support:0 "§GRoyal Decree§! - War Support"
+ war_building_slot:0 "§GRoyal Decree§! - Confiscation Of Land"
+ lower_tax_burdens:0 "§GRoyal Decree§! - Peasant Relief"
+ lower_tax_burdens_desc:0 "Life in general is quite hard for the common folk and peasantry. Lowering taxes will result in fewer income in the short term, but a more stable nation in the long term."
+ confiscate_livestock:0 "§GRoyal Decree§! - Confiscate Lifestock"
+ centralization_decree:0 "§GRoyal Decree§! - Centralization Decree"
+
+ attract_investors:0 "§CThird Estate§! - Attract Investors"
+ usage_of_church_lands:0 "§YClergy§! - Usage of Church Lands"
+ ship_construction_effort:0 "§CThird Estate§! - Ship Building Effort"
+ national_crisis:0 "National Crisises"
+ national_crisis_desc:0 "A national crisis is a disaster which may hit your nation when the requirements are met. Preventing it should be on the top of the political agenda."
+ peasant_revolt_dummy:0 "Peasant Revolt"
+ peasant_revolt:0 "Peasant Revolt"
+ aristocratic_coup_dummy:0 "Aristocratic Coup"
+ aristocratic_coup:0 "Aristocratic Coup"
+ burgher_coup_dummy:0 "Plutocratic Coup"
+ burgher_coup:0 "Plutocratic Coup"
+ clergy_dominance_dummy:0 "Clergy Dominance"
+ clergy_dominance:0 "Clergy Dominance"
+
+ estate.1.d:0 "[ROOT.GetLeader] has made an announcement that henceforth the estates of [ROOT.GetCountry] will no longer be consulted as an official part of the governance of the nation. Instead, [ROOT.GetCountry] will be lead by the stroke of a pen of [ROOT.GetLeader]. Indeed [ROOT.GetCountry] has now truly become an absolute monarchy, where not parliaments of estates but royal decrees rule the country."
+ estate.2.d:0 "Although the estates had been dismissed for a while now, [ROOT.GetLeader] was forced to come to terms with his declining royal power and was forced to once again summon the institution for the good the nation. Whilst the king remains a powerful figure, the re-establishment of the estates as a political force makes the absolute monarchy shake to its core."
+
+ absolute_state_decisions_tt:0 "Disables §YEstate Interactions§! decisions.\nEnables §YRoyal Decree§! decisions."
+ estates_back_decisions_tt:0 "Disables §YRoyal Decree§! decisions.\nEnables §YEstate Interactions§! decisions."
+ POPUP_MINOR_EVENTS:0 "Minor Popup"
+
+ close_clergy:0 "Close §YClergy§! Decisions"
+ open_clergy:0 "Open §YClergy§! Decisions"
+ close_nobility:0 "Close §RNobility§! Decisions"
+ open_nobility:0 "Open §RNobility§! Decisions"
+ close_third_estate:0 "Close §CThird Estate§! Decisions"
+ open_third_estate:0 "Open §CThird Estate§! Decisions"
+ close_ruler:0 "Colse §GRuler§! Decisions"
+ open_ruler:0 "Open §GRuler§! Decisions"

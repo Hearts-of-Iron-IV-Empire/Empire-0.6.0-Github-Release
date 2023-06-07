@@ -1,0 +1,30 @@
+state={
+	id=815
+	name="STATE_815"
+	provinces={
+		1646 4444 4449 4540 4569 4625 12346 
+	}
+	history={
+		owner = QUE
+		add_core_of = LOU
+		add_core_of = QUE
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = {
+			4569 10 
+		}
+		1765.1.1 = {
+			owner = LOU
+			add_core_of = LOU
+			controller = LOU
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+	manpower=154
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

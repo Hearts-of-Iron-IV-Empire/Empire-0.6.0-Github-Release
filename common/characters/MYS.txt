@@ -1,0 +1,14 @@
+characters = {
+    MYS_Chikka_Devaraja = {
+        name = "Chikka Devaraja"
+        portraits = {
+            civilian = {
+                large = "GFX_Chikka_Devaraja"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

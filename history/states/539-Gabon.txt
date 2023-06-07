@@ -1,0 +1,18 @@
+
+state={
+	id=539
+	name="STATE_539"
+
+	history={
+		owner = UNC
+
+	}
+	impassable = yes
+
+	provinces={
+		2192 3109 5139 6008 10948 
+	}
+	manpower=140556
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

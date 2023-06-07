@@ -1,0 +1,14 @@
+state={
+	id=833
+	name="STATE_833"
+	provinces={
+		8161 8176 10981 11005 12349 12982 
+	}
+	history={
+		owner = UNC
+
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

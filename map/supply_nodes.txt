@@ -1,0 +1,207 @@
+1 117 
+1 121 
+1 156 # Falun
+1 181 # Jama
+1 271 # Norwich
+1 310 # Dyneburg
+1 321 # Rostock
+1 391 # Amsterdam
+1 425 # Braunschweig
+1 449
+1 476 # Vinnytsia
+1 514 # Dresden
+1 516 # Brussels
+1 521 # Vosges
+1 525 
+1 538 # Thüringen
+1 564 # Kassel
+1 587 # Köln
+1 589 # Mainz
+1 619 # Novi Sad
+1 688 # Salzburg
+1 690 # Brasov
+1 692 # Munich
+1 705 # Crimea
+1 707 # Salzburg
+1 819 # Naples
+1 853 # Apache
+1 913 # Cherokee Nation
+1 937 # Cetinje 
+1 949 
+1 1086 
+1 1092 # Hiroshima
+1 1145 # Algiers
+1 1149 # Tripoli
+1 1182 # Edo
+1 1330 # Yangoon
+1 1359 # Bijapur
+1 1450 # Tarki
+1 1459 # Tashkent
+1 1464 # Vientiane
+1 1587 # Chickasaw
+1 1793 # Navajo
+1 1896 # Tabriz
+1 1965 # Mexico 
+1 2026 # Isfahan
+1 2086 # Shahjahanabad
+1 2097 
+1 2152 # Asunción
+1 3140 # Tikhvin 
+1 3211 # Gravehenge
+1 3320 
+1 3335 
+1 3369 # Bristol
+1 3529 
+1 3544 # Warsaw
+1 3569 
+1 3672 # Grozny
+1 3690 # Ulm
+1 3702 # Onondoga
+1 3707 # Chisinau 
+1 3734 # Krasnodar
+1 3765 # Random spot in Crimea
+1 3776 # Mantua
+1 3780 # Milan
+1 3816 
+1 3938 
+1 3992 
+1 4075 # Hanoi
+1 4111 
+1 4482 # Johor Bahru
+1 4516 # Patna
+1 4557 # Mandla
+1 4565 # Choctaw
+1 4594 # Central Creek
+1 4619 
+1 4709 # Urumqi
+1 4971 # Ajmer
+1 4984 # Jodhpur
+1 5033 # Lhasa
+1 5037 # Mecca
+1 5086 # Agra
+1 6050 # Stockholm
+1 6103 # London
+1 6137 # Osterbotten hub
+1 6218 # Luneberg
+1 6245 
+1 6279
+1 6287 # Copenhagen
+1 6296 
+1 6332 # Königsberg 
+1 6338 
+1 6377 # Hannover
+1 6380 # Moscow
+1 6389 # Kiel
+1 6444 # Wiesbaden
+1 6487 # Bernburg
+1 6488 # Frankfurt
+1 6508 # Baturyn
+1 6521 # Berlin
+1 6554 
+1 6557 # Równe
+1 6568 # Heidelberg
+1 6613 
+1 6682 # Arad
+1 6712 
+1 6732 # Boston
+1 6766 
+1 6780 # Turin
+1 6788 # Genoa
+1 6790 # Parma 
+1 6889 # Ragusa
+1 6902 # Badajoz
+1 6983 # Banja Luka
+1 6999 
+1 7011 
+1 7072 # Kyoto
+1 7097 
+1 7100 # Meknes 
+1 7101 
+1 7125 # Hanseong
+1 7183 # Sevilla
+1 7376 # Phnom Penh
+1 7381 # Batavia
+1 7408 # Bangkok
+1 7436 # Gingee
+1 7597 # Kyzyl Orda
+1 8010 # Punakha
+1 8011 # Bangalore
+1 8013 # Kalat
+1 8087 # Darul Jihad 
+1 9262 # Liepaja
+1 9269 # York
+1 9340 
+1 9347 # Hamburg
+1 9392 # Edinburgh
+1 9427 
+1 9503 
+1 9517 # Stuttgart
+1 9522 # Aachen
+1 9557 # Rothenburg
+1 9570 
+1 9571 # Random spot in Crimea
+1 9575 # Trier
+1 9606 # Timisoara
+1 9617 # Bucharest
+1 9620 # Berne
+1 9660 
+1 9666 # Augsburg
+1 9674 # Adyche
+1 9716 # Iasi
+1 9737 # Bordeaux
+1 9752 # Modena
+1 9764 # Barcelona 
+1 9833 # Constantinople
+1 9843 # Peking
+1 9904 # Rome
+1 9907 # Florence
+1 9950 # Nagasaki
+1 10125 # Nagoya
+1 10254 # Nassau
+1 10265 # Manila
+1 10311 # Aurangabad
+1 10444 # Sapporo 
+1 10493 # Rönneburg
+1 10737 
+1 10760 # Muscat
+1 10840 # Sana'a
+1 10887 # Lahore
+1 10946 # Sao Salvador
+1 11114 # Karlstad
+1 11202 # Pleskov
+1 11225 
+1 11234 # Velikiye Luki
+1 11305 # Lübeck
+1 11388 # Münster
+1 11412
+1 11417 # Würzburg
+1 11437 # Dnipropetrovsk
+1 11467 
+1 11479 
+1 11483 # Lille
+1 11506 
+1 11519 # Liège
+1 11542 
+1 11544 # Nuremberg
+1 11581 # Zagreb
+1 11584 # Venice
+1 11586 
+1 11659 # Debrecen
+1 11666 # Vienna
+1 11696 # Stavropol
+1 11747 
+1 11771 
+1 11805 # Lisbon
+1 11825 # Valladolid
+1 11899 # Sarajevo
+1 11932 # Naha
+1 11969 # Tunis
+1 12003 # Valleta
+1 12149 # Québec
+1 12247 # Tiruchirapalli
+1 12295 # Satara
+1 12320 # Yerevan
+1 12324 # Khiva
+1 12473 
+1 12535 # Moson Kahni
+1 12997 # Lima

@@ -1,0 +1,688 @@
+RUS_treaty_of_constantinople_decision_category = {
+		#RUS_crimean_campaign = {
+
+		#icon = generic_prepare_civil_war
+
+		#activation = {
+			#has_completed_focus = RUS_the_crimean_offensive
+		#}
+
+		#available = {
+			#hidden_trigger = { always = no }
+		#}
+
+		#visible = {
+			#has_completed_focus = RUS_the_crimean_offensive
+			#has_war_with = TUR
+			#tag = SOV
+		#}
+ 
+		#days_re_enable = 14
+
+		#days_remove = 5
+
+		#days_mission_timeout = 15
+		#fire_only_once = yes
+
+		#complete_effect = {
+						
+		#}		
+
+		#cancel_effect = {
+		
+		#}
+
+		#timeout_effect = {
+			#if = {
+				#limit = {
+				    #CRI = {
+						#has_capitulated = yes
+					#}
+				#}
+				#set_country_flag = RUS_krimna
+			#}
+			#else = {
+				#add_war_support = -0.05
+				#add_political_power = -75
+				#add_stability = -0.05
+			#}			
+		#}
+
+		#ai_will_do = {
+			#factor = 500
+		#}
+	#}
+	RUS_signature_of_the_treaty_of_constantinople = {
+
+		allowed = { 
+		    tag = SOV 
+	    }
+
+		icon = POL_looming_peasants_strike
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 310
+		days_remove = 5
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			OR = {
+				has_country_flag = RUS_treaty_of_constantinople_signed
+                has_country_flag = RUS_turkiyealt			
+			}	
+		}
+		
+		activation = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_war_with = TUR
+			}
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_war_with = TUR
+			}	
+			has_completed_focus = RUS_continue_the_truce 
+		}
+		
+		cancel_effect = {
+		
+		}
+
+		timeout_effect = {
+			TUR = {
+				country_event = russia_new.7 
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	RUS_recognition_of_azov = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_continue_the_truce
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_azov
+				has_war_with = TUR
+			}
+		}
+ 
+		days_re_enable = 14
+
+		days_remove = 5
+
+		cost = 25
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.1
+			}			
+		}		
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	#TODO SHOULD MAKE AN IDEA WHICH MAKES THAT RUSSIA DOES NOT HAVE TO PAY ANNUAL TRIBUTE TO CRIMEA (TODO FOR FUTURE)
+	RUS_demand_demilitarization_of_kherson = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_continue_the_truce
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+				has_war_with = TUR
+			}
+		}
+ 
+		days_re_enable = 14
+
+		days_remove = 5
+
+		cost = 25
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.4
+			}			
+		}		
+
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	RUS_quickly_affirm_peace_treaty = {
+		icon = generic_prepare_civil_war
+ 
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			original_tag = SOV
+			has_completed_focus = RUS_continue_the_truce
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_war_with = TUR
+			}
+		}
+ 
+		days_re_enable = 14
+
+		days_remove = 5
+
+		cost = 25
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}			
+			set_country_flag = RUS_abandoned_claim_on_kaffa_1
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_demand_recognition_of_matrika = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_continue_the_truce
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_ownership_of_matrika
+				has_war_with = TUR
+				has_country_flag = RUS_abandoned_claim_on_kaffa_1				
+			}
+		}
+ 
+		days_re_enable = 60
+
+		days_remove = 5
+
+		cost = 50
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.5
+			}			
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_quickly_affirm_peace_treaty_1 = {
+		icon = generic_prepare_civil_war
+  
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			has_country_flag = RUS_demand_recognition_of_matrika
+			original_tag = SOV
+			has_completed_focus = RUS_continue_the_truce
+		}
+
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}
+			}
+			not = {
+				has_war_with = TUR
+				has_completed_focus = RUS_defy_the_tsar
+			}
+		}
+ 
+		days_re_enable = 14
+
+		days_remove = 5
+
+		cost = 25
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}
+			set_country_flag = RUS_abandoned_claim_on_kaffa_1	
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_quickly_affirm_peace_treaty_2 = {
+		icon = generic_prepare_civil_war
+  
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			has_country_flag = RUS_ottoman_accepts_ownership_of_matrika
+			has_completed_focus = RUS_continue_the_truce
+			original_tag = SOV
+		}
+
+		visible = {
+		    OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}
+			}
+			not = {
+				has_war_with = TUR
+				has_completed_focus = RUS_defy_the_tsar
+			}
+		}
+ 
+		days_re_enable = 14
+
+		days_remove = 5
+
+		cost = 25
+
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}
+			set_country_flag = RUS_abandoned_claim_on_kaffa_2		
+		}		
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+}
+RUS_army_reform = {
+	RUS_army_reform = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 25
+			has_completed_focus = RUS_reorganise_military_structure
+		}
+
+		
+
+		cost = 0
+		ai_will_do = {
+			factor = 500
+		}
+		days_remove = 90
+
+		visible = {
+			OR = {
+				has_idea = RUS_streltsy_purge_1
+				has_idea = RUS_streltsy_purge_2
+				has_idea = RUS_streltsy_purge_3
+				has_idea = RUS_streltsy_purge_4
+				has_idea = RUS_streltsy_purge_5
+			}
+		}
+		remove_effect = {
+			RUS_lower_purge_effects = yes
+		}
+		complete_effect = {
+			army_experience = -25				
+		}		
+	}
+}
+
+#nobility_estate = {
+#	RUS_challenge_swedish_supremacy = {
+#
+#		icon = generic_prepare_civil_war
+#
+#		available = {
+#			OR = {
+#				has_war_with = SWE
+#				neutrality > 0.50
+#			}
+#		}	
+#
+#		activation = {
+#			original_tag = SOV
+#		}
+#
+#		days_mission_timeout = 365
+#
+#		timeout_effect = {
+#			add_popularity = {
+#			    ideology = aristocracy
+#			    popularity = 0.2
+#			}
+#			add_stability = -0.2
+##			add_war_support = -0.2
+#		}	
+#	}
+#}
+
+political_actions = {
+	RUS_negotiate_swedish_surrender = {
+
+		icon = generic_decisison
+
+		days_re_enable = 60 
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_war_with = SWE
+			original_tag = SOV
+			NOT = { SWE = { has_country_flag = SWE_defeated_by_russia }}
+		}
+
+		available = {
+			SWE = { surrender_progress > 0.50 }
+			is_faction_leader = yes
+		}	
+
+		complete_effect = {
+			country_event = sweden.1
+		}	
+	}
+}
+
+political_actions = {
+	RUS_negotiate_polish_surrender = {
+
+		icon = generic_decisison
+
+		days_re_enable = 60 
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		visible = {
+			has_war_with = POL
+			original_tag = SOV
+			NOT = { POL = { has_country_flag = POL_defeated_by_russia }}
+		}
+
+		available = {
+			POL = { surrender_progress > 0.25 }
+			is_faction_leader = yes
+		}	
+
+		complete_effect = {
+			country_event = poland.42
+		}	
+	}
+}
+
+RUS_great_northern_war = { 
+
+	RUS_narva_campaign_decision = {
+
+		allowed = { tag = SOV }
+
+		icon = generic_prepare_civil_war 
+
+		available = {
+			hidden_trigger = { always = no }
+		}
+
+		days_mission_timeout = 10
+		days_remove = 5
+		is_good = no
+		fire_only_once = yes
+
+		cancel_trigger = {
+			NOT = {
+				has_war_with = SWE
+			}
+		}
+		
+		activation = {
+			has_completed_focus = RUS_narva_campaign
+		}
+
+		visible = {
+			has_completed_focus = RUS_narva_campaign			
+			has_war_with = SWE			
+		}
+		
+		cancel_effect = {
+		
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = RUS_narva_campaign_decision_tooltip
+			if = {
+				limit = {	
+					controls_province = 4640			
+				}
+				unlock_national_focus = RUS_victory_at_narvaa
+			}
+            else = {
+				unlock_national_focus = RUS_defeat_at_narva
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	RUS_ingermenland_campaign_decision = {
+
+		icon = hol_draw_up_staff_plans
+
+		allowed = {
+			original_tag = SOV
+		}
+
+		available = {
+			NOT = { has_full_control_of_state = 195 }
+			date > 1702.10.1
+			has_full_control_of_state = 244
+		}
+
+		highlight_states = {
+ 			highlight_state_targets = { state = 195 } 
+ 			highlight_color_before_active = 3
+			highlight_color_while_active = 2
+		}
+
+		cost = 0
+
+		fire_only_once = yes
+
+		days_remove = 14
+
+		modifier = {
+			
+		}
+
+		visible = {
+			original_tag = SOV
+			date > 1702.8.1
+		}
+
+		complete_effect = {
+			195 = {
+				SOV = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+		}
+
+		remove_effect = {
+			195 = {
+				SOV = {
+					remove_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 10
+		}
+	}
+
+	RUS_scorched_earth_novgorod = {
+		icon = generic_scorched_earth
+
+		available = {
+			has_completed_focus = RUS_scorched_earth_tactics
+			tag = SOV
+		}
+
+		days_remove = 60
+
+		highlight_states = {
+		   highlight_state_targets = { state = 263 } 
+		   highlight_color_before_active = 3
+		   highlight_color_while_active = 2
+	    }
+
+		cost = 15
+		fire_only_once = yes
+
+		visible = {
+			tag = SOV
+			has_war_with = SWE
+			has_completed_focus = RUS_scorched_earth_tactics
+		}
+
+		complete_effect = {
+			263 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			244 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			209 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+
+		remove_effect = {
+			add_stability = -0.125
+			263 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			244 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			209 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				NOT = {
+					263 = { is_controlled_by = SOV }
+					controls_province = 117
+				}
+				factor = 10
+			}
+		}
+	}
+}

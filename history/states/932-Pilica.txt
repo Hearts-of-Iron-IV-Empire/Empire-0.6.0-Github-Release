@@ -1,0 +1,25 @@
+state={
+	id=932
+	name="STATE_932"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = POL
+		1798.1.1 = {
+			owner = PRS
+		}
+		1812.1.1 = {
+			owner = POL
+		}
+	}
+
+	provinces={
+		3586 
+	}
+	manpower=34895
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

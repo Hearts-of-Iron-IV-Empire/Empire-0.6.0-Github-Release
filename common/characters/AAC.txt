@@ -1,0 +1,14 @@
+characters = {
+    AAC_City_Council = {
+        name = "Aachener City Council"
+        portraits = {
+            civilian = {
+                large = "GFX_AAC_City_Council"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+}

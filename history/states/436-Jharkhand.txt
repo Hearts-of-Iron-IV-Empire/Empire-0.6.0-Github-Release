@@ -1,0 +1,29 @@
+state={
+	id=436
+	name="STATE_436"
+	resources={
+		chromium=4.000
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 2
+		}
+		1730.5.1 = {
+			owner = MAR
+			controller = MAR
+			add_core_of = MAR
+
+		}
+
+	}
+
+	provinces={
+		4245 5019 7430 7619 10030 10511 10872 12781 13332 13333 13334 13335 13336 13337 
+	}
+	manpower=7123100
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

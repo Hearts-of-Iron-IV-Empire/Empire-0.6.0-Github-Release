@@ -1,0 +1,34 @@
+
+state={
+	id=241
+	name="STATE_241"
+
+	resources={
+		oil=12
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			9288 10 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		1772.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+		}
+	}
+
+	provinces={
+		223 289 3278 3378 6233 6344 6354 9247 9288 9289 9342 9371 9396 11230 11271 11325 11355 11383 
+	}
+	manpower=183422
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

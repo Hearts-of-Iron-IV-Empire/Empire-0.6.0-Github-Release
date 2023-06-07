@@ -1,0 +1,26 @@
+add_namespace = scotland
+
+# Death of William III
+country_event = {
+	id = scotland.1
+	title = scotland.1.t
+	desc = scotland.1.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "The King is dead, long live the queen!"
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Queen Anne"
+			picture = "Anne_leader.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {	
+				inexperienced_monarch
+			}
+		}
+	}
+}

@@ -1,0 +1,507 @@
+focus_tree = { 
+	id = Korea_focus
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 0
+			tag = KOR
+		}
+	}
+
+	default = no
+	
+	#continuous_focus_position = { x = 50 y = 1000 }
+	
+	focus = {
+		id = KOR_last_years_of_the_ulbyeong_famine
+		icon = GFX_shivaji_focus
+		x = 15
+		y = 0
+	
+		available = {
+		
+		}
+		bypass = {
+		
+		}   
+
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 120
+		}
+		
+		ai_will_do = { factor = 10 } 
+		
+	}
+	focus = {
+		id = KOR_protect_the_people
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_last_years_of_the_ulbyeong_famine }
+		relative_position_id = KOR_last_years_of_the_ulbyeong_famine
+	
+		available = {
+		
+		}
+		bypass = {
+		
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			country_event = { id = korea.1 }
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_boost_the_national_morale
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_protect_the_people }
+		relative_position_id = KOR_protect_the_people
+	
+		available = {
+		}
+
+		bypass = {
+		
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			country_event = { id = korea.2 }
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_dealing_with_taxes
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_boost_the_national_morale }
+		relative_position_id = KOR_boost_the_national_morale
+	
+		available = {
+		
+		}
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = {
+			country_event = { id = korea.3 }
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	
+	# King Sukjong's Branch
+	
+	focus = {
+		id = KOR_continuation_of_king_sukjongs_reign
+		icon = GFX_shivaji_focus
+		x = -1
+		y = 1
+		prerequisite = { focus = KOR_dealing_with_taxes }
+		mutually_exclusive = { focus = KOR_beginnings_of_peasant_rebellion }
+		relative_position_id = KOR_dealing_with_taxes
+	
+		available = {
+		
+		}
+		bypass = { 
+		
+		}
+
+		cost = 10
+
+		completion_reward = { 
+		    add_political_power = 50
+		    add_stability = 0.05
+			if = { #Hirohito fix #thanks hirohito
+				limit = {
+					KOR_Sukjong = {
+						is_country_leader = yes
+						has_trait = KOR_vulnerable_king
+					} 
+				}
+				remove_trait = {
+					character = KOR_Sukjong
+					ideology = despotism
+					trait = KOR_vulnerable_king
+				} 
+			}
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+	focus = {
+		id = KOR_queen_inhyeons_death
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_continuation_of_king_sukjongs_reign }
+		relative_position_id = KOR_continuation_of_king_sukjongs_reign
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 8
+		
+		completion_reward = { 
+		    country_event = { id = korea.4 }
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_purge_the_southerner_faction
+		icon = GFX_shivaji_focus
+		x = -1
+		y = 1
+		prerequisite = { focus = KOR_queen_inhyeons_death }
+		mutually_exclusive = { focus = KOR_we_have_had_enough_of_purges }
+		relative_position_id = KOR_queen_inhyeons_death
+	
+		available = {
+		    always = no
+		}
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = { 
+            add_manpower = -500
+			add_stability = 0.05
+			remove_ideas = KOR_ulbyeong_famine
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+	focus = {
+		id = KOR_focus_on_domestic_issues
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_purge_the_southerner_faction }
+		relative_position_id = KOR_purge_the_southerner_faction
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+
+		completion_reward = { 
+            add_political_power = 120
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_rehabilitate_the_unfortunate_losers_of_our_history
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 2
+		prerequisite = { focus = KOR_focus_on_domestic_issues }
+		relative_position_id = KOR_purge_the_southerner_faction
+	
+		available = {
+		
+		} 
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+
+		completion_reward = { 
+            add_political_power = -60
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.15
+		    }
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_commemorate_the_past_ming_emperors
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 3
+		prerequisite = { focus = KOR_rehabilitate_the_unfortunate_losers_of_our_history }
+		relative_position_id = KOR_purge_the_southerner_faction
+	
+		available = {
+		
+		} 
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+
+		completion_reward = { 
+            add_political_power = -60
+			#TODO he is asking for +0.2 daily stability for 365 days
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_the_hermit_kingdom
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 4
+		prerequisite = { focus = KOR_commemorate_the_past_ming_emperors }
+		relative_position_id = KOR_purge_the_southerner_faction
+	
+		available = {
+		
+		} 
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+
+		completion_reward = { 
+			add_political_power = 100
+            add_stability = 0.20
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_we_have_had_enough_of_purges
+		icon = GFX_shivaji_focus
+		x = 1
+		y = 1
+		prerequisite = { focus = KOR_queen_inhyeons_death }
+		mutually_exclusive = { focus = KOR_purge_the_southerner_faction }
+		relative_position_id = KOR_queen_inhyeons_death
+	
+		available = {
+		    always = no 
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 5
+		
+		completion_reward = { 
+		    add_stability = 0.05
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+
+	focus = {
+		id = KOR_reform_the_country
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 1
+		prerequisite = { focus = KOR_we_have_had_enough_of_purges }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 5
+		
+		completion_reward = { 
+		    add_political_power = 60
+			add_country_leader_trait = KOR_passionate_reformer #Hirohito, you sure this working?
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_war_against_corruption
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 2
+		prerequisite = { focus = KOR_reform_the_country }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = { 
+		    add_political_power = -60
+			remove_ideas = KOR_endemic_regional_corruption
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_major_tax_reforms
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 3
+		prerequisite = { focus = KOR_war_against_corruption }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = { 
+		    add_political_power = -60
+			remove_ideas = KOR_inefficiency_of_current_tax_system
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_prepare_for_war
+		icon = GFX_shivaji_focus
+		x = 0
+		y = 4
+		prerequisite = { focus = KOR_major_tax_reforms }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = { 
+		    add_stability = 0.20
+			add_war_support = 0.10
+			#he is asking for +2 recruitable population
+			remove_ideas = KOR_factionalism_within_the_court
+		}
+		
+		ai_will_do = { factor = 10 }
+	}
+	focus = {
+		id = KOR_avenge_the_imjin_war 
+		icon = GFX_shivaji_focus
+		x = -1
+		y = 5
+		prerequisite = { focus = KOR_prepare_for_war }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 8
+		
+		completion_reward = { 
+		    create_wargoal = {
+            type = annex_everything
+            target = JAP
+            }
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+	focus = {
+		id = KOR_avenge_the_byeongja_war
+		icon = GFX_shivaji_focus
+		x = 1
+		y = 5
+		prerequisite = { focus = KOR_prepare_for_war }
+		relative_position_id = KOR_we_have_had_enough_of_purges
+	
+		available = {
+		}
+
+		bypass = { 
+		
+		}
+
+		cost = 8
+		
+		completion_reward = { 
+		    create_wargoal = { #PLACEHOLDER
+            type = annex_everything
+            target = CHI
+            }
+			#TODO SHOULD MAKE AND REPLACE WAR GOAL WIH WAR BORDER CONFLICT MECHANIC AS H9043 DISCUSSED IN #UPLOAD-YOUR-OWN-FOCUS-TREE (later)
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+	
+	#Peasant Rebellion Branch
+	
+	focus = {
+		id = KOR_beginnings_of_peasant_rebellion
+		icon = GFX_shivaji_focus
+		x = 1
+		y = 1
+		prerequisite = { focus = KOR_dealing_with_taxes }
+		mutually_exclusive = { focus = KOR_continuation_of_king_sukjongs_reign }
+		relative_position_id = KOR_dealing_with_taxes
+	
+		available = {
+		
+		}
+		bypass = { 
+		
+		}
+
+		cost = 10
+		
+		completion_reward = { 
+		    add_political_power = 120
+		    add_stability = -0.02
+		}
+		
+		ai_will_do = { factor = 5 }
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=939
+	name="STATE_939"
+
+	resources = {
+		steel=16
+	}
+
+	history={
+		owner = RCG
+		add_core_of = RCG
+		victory_points = {
+			12975 3 
+		}
+		buildings = {
+			infrastructure = 1
+			12975 = {
+				naval_base = 2
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		8207 12975 13210 
+	}
+	manpower=215784
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

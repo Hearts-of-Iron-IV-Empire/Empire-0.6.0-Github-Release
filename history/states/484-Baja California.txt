@@ -1,0 +1,24 @@
+
+state={
+	id=484
+	name="STATE_484"
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+		}
+		1733.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+		}
+	}
+
+	provinces={
+		1562 1892 1904 7517 7964 7986 8119 9814 11757 12374 12461 12736 12859 13215 13216 
+	}
+	manpower=10884
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

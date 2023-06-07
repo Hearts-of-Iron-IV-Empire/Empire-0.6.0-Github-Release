@@ -1,0 +1,18 @@
+
+state={
+	id=295
+	name="STATE_295"
+
+	history={
+		owner = UNC
+		#owner = TZN
+
+	}
+
+	provinces={
+		1516 1968 4515 7548 8054 9986 12677 12795 
+	}
+	manpower=3156436
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

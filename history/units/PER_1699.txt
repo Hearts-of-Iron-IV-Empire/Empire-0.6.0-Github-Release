@@ -1,0 +1,375 @@
+﻿# Infantry armed with muskets, conflicting sources on Wikipedia but basically the Iranians either did or did not have a significant number of foot-muskeeteers, so will be making a balanced mix of cav and inf (armed with muskets) in the Safavid army.
+division_template = {
+	name = "Qızılbaş Piyadasi"			
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Qorçu Piyadasi"			# Royal Bodyguards
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Qulamlar"			# Slaves, low priority and poorly equipped
+
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+		irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+		irregular_infantry = { x = 1 y = 2 }
+	}
+
+	priority = 0
+}
+division_template = {
+	name = "Qızılbaş Süvarisi"		# Cavalry
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+
+	priority = 2
+}
+
+units = {
+	##### Western Command #####
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Isfahan
+		name = "Qorçu Piyadasi"
+		location = 2026
+		division_template = "Qorçu Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = { # Tabriz
+		name = "Qızılbaş Süvarisi"
+		location = 1896
+		division_template = "Qızılbaş Süvarisi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = { # Tabriz
+		name = "Qızılbaş Süvarisi"
+		location = 1896
+		division_template = "Qızılbaş Süvarisi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = { # Tabriz
+		name = "Qızılbaş Süvarisi"
+		location = 1896
+		division_template = "Qızılbaş Süvarisi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.9
+	}
+	division = { # Yerevan
+		name = "Qızılbaş Piyadasi"
+		location = 12320
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Yerevan
+		name = "Qızılbaş Piyadasi"
+		location = 12320
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Yerevan
+		name = "Qızılbaş Piyadasi"
+		location = 12320
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Baku
+		name = "Qızılbaş Piyadasi"
+		location = 7661
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Baku
+		name = "Qızılbaş Piyadasi"
+		location = 7661
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Baku
+		name = "Qızılbaş Piyadasi"
+		location = 7661
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Azerbaijan
+		name = "Qızılbaş Piyadasi"
+		location = 1610
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Azerbaijan
+		name = "Qızılbaş Piyadasi"
+		location = 1610
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Azerbaijan
+		name = "Qızılbaş Piyadasi"
+		location = 12309
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Azerbaijan
+		name = "Qızılbaş Piyadasi"
+		location = 12309
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Ahvaz
+		name = "Qızılbaş Piyadasi"
+		location = 7953
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Ahvaz
+		name = "Qızılbaş Piyadasi"
+		location = 7953
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Near Ahvaz
+		name = "Qızılbaş Piyadasi"
+		location = 5005
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kurdistan
+		name = "Qızılbaş Piyadasi"
+		location = 5098
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kurdistan
+		name = "Qızılbaş Piyadasi"
+		location = 829
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kurdistan
+		name = "Qızılbaş Piyadasi"
+		location = 10774
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Tehran
+		name = "Qulamlar"
+		location = 10837
+		division_template = "Qulamlar"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+	division = { # Tehran
+		name = "Qulamlar"
+		location = 10837
+		division_template = "Qulamlar"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+	division = { # Tehran
+		name = "Qulamlar"
+		location = 10837
+		division_template = "Qulamlar"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+	
+
+	##### Eastern Command #####
+	division = { # Ashgabat
+		name = "Qızılbaş Piyadasi"
+		location = 12333
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Ashgabat
+		name = "Qızılbaş Piyadasi"
+		location = 12333
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Ashgabat
+		name = "Qızılbaş Piyadasi"
+		location = 12333
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Bamyan
+		name = "Qızılbaş Piyadasi"
+		location = 5064
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Bamyan
+		name = "Qızılbaş Piyadasi"
+		location = 5064
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Near Bamyan
+		name = "Qızılbaş Piyadasi"
+		location = 7984
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kalat
+		name = "Qızılbaş Piyadasi"
+		location = 8013
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kalat
+		name = "Qızılbaş Piyadasi"
+		location = 8013
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Kalat
+		name = "Qızılbaş Piyadasi"
+		location = 8013
+		division_template = "Qızılbaş Piyadasi"		
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.8
+	}
+	division = { # Merv
+		name = "Qulamlar"
+		location = 4482
+		division_template = "Qulamlar"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+	division = { # Merv
+		name = "Qulamlar"
+		location = 4482
+		division_template = "Qulamlar"		
+		start_experience_factor = 0.05
+		start_equipment_factor = 0.4
+	}
+}
+
+
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "PER"
+		}
+		requested_factories = 2
+		progress = 0.31
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = basic_cavalry_equipment
+			creator = "PER"
+		}
+		requested_factories = 1
+		progress = 0.31
+		efficiency = 100
+	}
+}

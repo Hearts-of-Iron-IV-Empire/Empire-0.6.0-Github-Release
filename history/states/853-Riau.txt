@@ -1,0 +1,35 @@
+state={
+	id=853
+	name="STATE_853"
+	provinces={
+		1277 7327 7463 10209 10225 12168 12181 12184 12302 12343 
+	}
+
+	resources={
+		rubber=10
+		steel=5
+		tungsten=10
+	}
+
+	history = {
+		owner = MAL
+		add_core_of = MAL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+			7463 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			7463 1
+		}
+		victory_points = {
+			12181 3
+		}
+	}
+	manpower=84849
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

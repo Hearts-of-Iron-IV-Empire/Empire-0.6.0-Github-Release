@@ -1,0 +1,25 @@
+state={
+	id=898
+	name="STATE_898"
+	provinces={
+		708 9666 11638 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = AUG
+		add_core_of = AUG
+		victory_points = {
+			9666 3 
+		}
+		1812.1.1 = {
+			owner = BAV
+			add_core_of = BAV
+		}
+	}
+	manpower=80874
+	buildings_max_level_factor=1.000
+	state_category=city
+}

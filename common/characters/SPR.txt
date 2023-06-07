@@ -1,0 +1,148 @@
+characters = {
+    SPR_Philip_V = { # Bourbon Candidate
+        name = "Philip V"
+        portraits = {
+            civilian = {
+                large = "GFX_Philip_V"
+            }
+        }
+        country_leader = {
+            expire = 1764.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SPR_Charles_I = { # Habuburg Candiate
+        name = "Charles I"
+        portraits = {
+            civilian = {
+                large = "GFX_Charles_Habsburg"
+            }
+        }
+        country_leader = {
+            expire = "1965.1.1"
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SPR_Regency = { 
+        name = "Regency"
+        portraits = {
+            civilian = {
+                large = "GFX_Regency"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SPR_Carlos_II = { # Starting country leader
+        name = "Carlos II"
+        portraits = {
+            civilian = {
+                large = "GFX_Carlos_II"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = { el_hechizado }
+            desc = "CARLOS_II_DESC"
+        }
+    }
+    SPR_Carlos_III = {
+        name = "Carlos III"
+        portraits = {
+            civilian = {
+                large = "GFX_Carlos_III"
+            }
+        }
+        country_leader = {
+            expire = "1965.1.1"
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SPR_Jean_de_Bette = {
+        name = "Jean de Bette"
+        portraits = {
+            army = {
+                large = "GFX_Jean_De_Bette"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    SPR_José_de_Albornoz = {
+        name = "José de Albornoz"
+        portraits = {
+            army = {
+                large = "GFX_Jose_De_Albornoz"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    SPR_Antonio_Gaztañeta = {
+        name = "Antonio Gaztañeta"
+        portraits = {
+            army = {
+                large = "GFX_Antonio_Gaztaneta"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+    SPR_Francisco_de_Velasco = {
+        name = "Francisco de Velasco"
+        portraits = {
+            army = {
+                large = "GFX_Francisco_De_Velasco"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    SPR_Francisco_Antonio_de_Agurto = {
+        name = "Francisco Antonio de Agurto"
+        portraits = {
+            army = {
+                large = "GFX_Francisco_Antonio_de_Agurto"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+}

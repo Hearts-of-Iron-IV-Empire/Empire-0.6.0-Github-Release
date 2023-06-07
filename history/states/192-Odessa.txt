@@ -1,0 +1,32 @@
+
+state={
+	id=192
+	name="STATE_192"
+	manpower = 269986
+	
+	state_category = city
+
+	history={
+		owner = TUR
+		victory_points = {
+			11670 10 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11670 ={
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+		add_core_of = TUR
+		add_core_of = UKR
+		1789.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		741 754 3575 3738 3757 9698 9714 11670 11703 
+	}
+}

@@ -1,0 +1,28 @@
+state={
+	id=1026
+	name="STATE_1026"
+
+	history={
+		owner = PER
+		add_core_of = PER
+		add_extra_state_shared_building_slots = 5
+		victory_points = {
+			4482 5
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		1718.1.1 = {
+			owner = KYR
+			controller = KYR
+		}
+	}
+
+	provinces={
+		4482 4958 5003 7491 7560 10357 10742 
+	}
+	manpower=202523
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

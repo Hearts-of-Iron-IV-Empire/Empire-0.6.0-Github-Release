@@ -1,0 +1,382 @@
+add_namespace = persia
+add_namespace = qizilbash
+
+## Title
+#country_event = {
+#	id = persia.1
+#	title = persia.1.t
+#	desc = persia.1.d
+#	picture = GFX_news_event_001
+#	trigger = {
+#	}
+#	mean_time_to_happen = {
+#	}
+#	show_major = {
+#	}
+#
+#	hidden = yes
+#	minor_flavor = yes
+#	fire_only_once = yes
+#	is_triggered_only = yes
+#	timeout_days = 20
+#
+#
+#	option = {
+#		name = qizilbash.1.a
+#		ai_chance = {
+#		}
+#		trigger = {
+#		}
+#		immediate = {
+#		}
+#	}
+#
+#}
+
+# Choose Service Type
+country_event = {
+	id = qizilbash.1
+	title = qizilbash.1.t
+	desc = qizilbash.1.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	# Modern
+	option = {
+		name = qizilbash.1.a 
+		ai_chance = {
+		}
+		hidden_effect = {
+			remove_ideas = PER_qizilbas_troops_1
+			remove_ideas = PER_qizilbas_troops_2
+			remove_ideas = PER_qizilbas_troops_3
+			remove_ideas = PER_qizilbas_troops_4
+		}
+		add_ideas = PER_qizilbas_troops_4
+	}
+
+	# High
+	option = {
+		name = qizilbash.1.b 
+		ai_chance = {
+		}
+		hidden_effect = {
+			remove_ideas = PER_qizilbas_troops_1
+			remove_ideas = PER_qizilbas_troops_2
+			remove_ideas = PER_qizilbas_troops_4
+		}
+		add_ideas = PER_qizilbas_troops_3
+	}
+
+	# Average
+	option = {
+		name = qizilbash.1.c 
+		ai_chance = {
+		}
+		hidden_effect = {
+			remove_ideas = PER_qizilbas_troops_1
+			remove_ideas = PER_qizilbas_troops_3
+			remove_ideas = PER_qizilbas_troops_4
+		}
+		add_ideas = PER_qizilbas_troops_2
+	}
+
+	# Low
+	option = {
+		name = qizilbash.1.e
+		ai_chance = {
+		}
+		hidden_effect = {
+			remove_ideas = PER_qizilbas_troops_2
+			remove_ideas = PER_qizilbas_troops_3
+			remove_ideas = PER_qizilbas_troops_4
+		}
+		add_ideas = PER_qizilbas_troops_1
+	}
+
+	# Don't Change
+	#option = {
+	#	name = qizilbash.1.f
+	#	trigger = {
+	#		always = yes
+	#	}
+	#	ai_chance = {
+	#	}
+	#}
+
+}
+#country_event = {
+#	id = qizilbash.2
+#	title = qizilbash.2.t
+#	desc = qizilbash.2.d
+#	picture = GFX_report_event_treaty
+#
+#	fire_only_once = yes
+#	is_triggered_only = yes
+#
+#	# High
+#	option = {
+#		name = qizilbash.2.a 
+#		ai_chance = {
+#		}
+#	}
+#
+#	# Average
+#	option = {
+#		name = qizilbash.2.b 
+#		ai_chance = {
+#		}
+#	}
+#
+#	# Low
+#	option = {
+#		name = qizilbash.2.c 
+#		ai_chance = {
+#		}
+#	}
+#
+#}
+
+## Bitter News
+news_event = {
+	id = persia.1
+	title = persia.1.t
+	desc = persia.1.d
+	picture = GFX_news_event_empire_startup2
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.1.a 
+		ai_chance = {
+		}
+		complete_national_focus = PER_the_death_of_Mulabasi
+	}
+}
+## Turkic Empires League
+country_event = {
+	id = persia.2
+	title = persia.2.t
+	desc = persia.2.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.2.a 
+		ai_chance = {
+			factor = 100
+		}
+
+		effect_tooltip = {
+			PER = {
+				create_faction = PER_turkic_empires_league
+				add_to_faction = TUR
+			}
+		}
+		hidden_effect = {
+			PER = {
+				country_event = {
+					id = persia.3
+					days = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = persia.2.b
+		ai_chance = {
+			factor = 0
+		}
+		hidden_effect = {
+			PER = {
+				country_event = {
+					id = persia.4
+					days = 2
+				}
+			}
+		}
+	}
+}
+# Turkic Empires League # Accept
+country_event = {
+	id = persia.3
+	title = persia.3.t
+	desc = persia.3.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.3.a 
+
+		PER = {
+			create_faction = PER_turkic_empires_league
+			add_to_faction = TUR
+		}
+	}
+}
+# Turkic Empires League # Refuse
+country_event = {
+	id = persia.4
+	title = persia.4.t
+	desc = persia.4.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.4.a 
+	}
+}
+## Demand from Safavids
+country_event = {
+	id = persia.5
+	title = persia.5.t
+	desc = persia.5.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.5.a 
+		ai_chance = {
+			factor = 50
+			modifier = {
+				OR = {
+					strength_ratio = {
+						tag = PER
+						ratio > 1.5
+					}
+					AND = {
+						TUR = { has_war = yes }
+						strength_ratio = {
+							tag = PER
+							ratio > 0.5
+						}
+					}
+				}
+				factor = 100
+			}
+		}
+		effect_tooltip = {
+			PER = {
+				transfer_state = 675
+				transfer_state = 291
+				transfer_state = 676
+				transfer_state = 352
+				add_state_core = 675
+				add_state_core = 676
+				add_state_core = 267
+				add_state_core = 352
+			}
+		}
+		diplomatic_relation = {
+			country = PER
+			relation = non_aggression_pact
+			active = yes
+		}
+		hidden_effect = {
+			PER = {
+				country_event = {
+					id = persia.6
+					days = 2
+				}
+			}
+		}
+	}
+	option = {
+		name = persia.5.b
+		ai_chance = {
+			factor = 50
+			modifier = {
+				OR = {
+					strength_ratio = {
+						tag = PER
+						ratio > 1.5
+					}
+					AND = {
+						TUR = { has_war = yes }
+						strength_ratio = {
+							tag = PER
+							ratio > 0.5
+						}
+					}
+				}
+				factor = 0
+			}
+		}
+		effect_tooltip = {
+			PER = {
+				add_state_claim = 675
+				add_state_claim = 676
+				add_state_claim = 267
+				add_state_claim = 352
+				create_wargoal = {
+					target = TUR
+					type = take_claimed_state
+				}
+			}
+		}
+		hidden_effect = {
+			PER = {
+				country_event = {
+					id = persia.7
+					days = 2
+				}
+			}
+		}
+	}
+}
+# Demand from Safavids # Accept
+country_event = {
+	id = persia.6
+	title = persia.6.t
+	desc = persia.6.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.6.a 
+		transfer_state = 675
+		transfer_state = 291
+		transfer_state = 676
+		transfer_state = 352
+		add_state_core = 675
+		add_state_core = 676
+		add_state_core = 267
+		add_state_core = 352
+	}
+}
+# Demand from Safavids # Refuse
+country_event = {
+	id = persia.7
+	title = persia.7.t
+	desc = persia.7.d
+	picture = GFX_report_event_treaty
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = persia.7.a 
+		add_state_claim = 675
+		add_state_claim = 676
+		add_state_claim = 267
+		add_state_claim = 352
+		create_wargoal = {
+			target = TUR
+			type = take_claimed_state
+		}
+	}
+}
+

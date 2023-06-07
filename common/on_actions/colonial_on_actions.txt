@@ -1,0 +1,93 @@
+on_actions  = {
+	on_startup = {
+		effect = {
+			UNC = {
+				every_owned_state = {
+					set_state_flag = colonial_state
+				}
+			}
+			every_state = {
+				limit = {
+					OR = {
+						is_on_continent = north_america
+						is_on_continent = south_america
+						is_on_continent = australia
+					}
+				}
+				set_state_flag = colonial_state
+			}
+			800 = {
+				set_state_flag = colonial_state
+			}
+			798 = {
+				set_state_flag = colonial_state
+			}
+			878 = {
+				set_state_flag = colonial_state
+			}
+			799 = {
+				set_state_flag = colonial_state
+			}	
+			681 = {
+				set_state_flag = colonial_state
+			}
+			271 = {
+				set_state_flag = colonial_state
+			}
+			543 = {
+				set_state_flag = colonial_state
+			}
+			559 = {
+				set_state_flag = colonial_state
+			}
+			801 = {
+				set_state_flag = colonial_state
+			}
+
+			every_country = {
+				set_variable = {
+					colonise_time = 150
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = HOL
+						tag = SPR
+						is_subject_of = ENG
+						is_subject_of = FRA
+						is_subject_of = HOL
+						is_subject_of = SPR
+					}
+				}
+				add_tech_bonus = {
+					name = great_colonial_power
+					bonus = 1
+					uses = 1
+					category = colonial_tech
+				}
+			}
+		}
+	}
+	on_weekly = {
+		effect = {
+			every_owned_state = {
+				limit = {
+					check_variable = { colonial_settlement > 0 }
+				}
+				set_temp_variable = {
+					increase_pop_colonial_settlement = state_population 
+				}
+				multiply_temp_variable = {
+					increase_pop_colonial_settlement = colonial_settlement_level	 
+				}
+				divide_temp_variable = {
+					increase_pop_colonial_settlement = 100	 
+				}
+				add_manpower = increase_pop_colonial_settlement
+			}
+		}
+	}
+}

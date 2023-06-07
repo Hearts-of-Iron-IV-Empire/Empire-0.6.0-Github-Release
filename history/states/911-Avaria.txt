@@ -1,0 +1,19 @@
+state = {
+    id = 911 #Avaria
+    name = STATE_911
+    manpower = 100000
+    state_category = rural
+    
+    history = {
+        owner = AVA
+        add_core_of = AVA
+        buildings = {
+            infrastructure = 1
+        }
+    }
+    
+    provinces = { 1455 6689 7554 9645 }
+    
+    local_supplies = 0.25
+}
+

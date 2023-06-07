@@ -1,0 +1,110 @@
+ideas = {
+	country = {
+		hunter_gatherer_society = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				global_building_slots = -10
+				conscription = 0.05
+				consumer_goods_factor = -0.8
+			}
+		}
+
+		tribal_centralization_0 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				production_speed_buildings_factor = -0.40 
+				recruitable_population_factor = -0.30
+				political_power_factor = -0.40
+				stability_factor = 0.30
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		tribal_centralization_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				production_speed_buildings_factor = -0.30
+				recruitable_population_factor = -0.20
+				political_power_factor = -0.30
+				stability_factor = 0.20
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		tribal_centralization_2 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				production_speed_buildings_factor = -0.20
+				recruitable_population_factor = -0.10
+				political_power_factor = -0.20
+				stability_factor = 0.10
+			}
+		}
+
+		tribal_centralization_3 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				political_power_factor = -0.10
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		tribal_centralization_4 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = prc_low_popular_support2
+			
+			modifier = {
+				recruitable_population_factor = 0.15
+				political_power_factor = 0.10
+				consumer_goods_factor = 0.10
+			}
+		}
+	}
+}

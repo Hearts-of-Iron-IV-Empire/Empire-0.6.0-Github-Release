@@ -1,0 +1,14 @@
+characters = {
+    KOL_Nyima_Namgyal = {
+        name = "Nyima Namgyal"
+        portraits = {
+            civilian = {
+                large = "GFX_Asian_Leader_19"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

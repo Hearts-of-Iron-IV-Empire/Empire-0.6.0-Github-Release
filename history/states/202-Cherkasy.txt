@@ -1,0 +1,33 @@
+state = {
+    id = 202
+    name = STATE_202
+    manpower = 25000
+    state_category = town
+    
+    resources = {
+        oil = 10
+        aluminium = 5
+    }
+    
+    history = {
+        owner = POL
+        add_core_of = POL
+		add_core_of = ZAP
+        buildings = {
+            infrastructure = 2
+            industrial_complex = 1
+            fuel_silo = 1
+            11454 = {
+                bunker = 2
+            }
+        }
+        victory_points = { 11454 15 }
+        1798.7.22 = {
+            owner = SOV
+        }
+    }
+    
+    provinces = { 488 504 3494 6497 9465 11438 11454 }
+    
+    local_supplies = 8
+}

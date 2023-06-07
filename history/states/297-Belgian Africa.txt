@@ -1,0 +1,17 @@
+
+state={
+	id=297
+	name="STATE_297"
+	provinces={
+		8244 
+	}
+	history={
+	owner = UNC
+	}
+
+	impassable = yes
+	
+	manpower=185000
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

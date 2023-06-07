@@ -1,0 +1,30 @@
+
+state={
+	id=207
+	name="STATE_207"
+
+	history={
+		owner = POL
+		victory_points = {
+			11241 5 
+		}
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		1772.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+		}
+	}
+
+	provinces={
+		3313 3331 9241 11220 11241 11290 11353 
+	}
+	manpower=142433
+	buildings_max_level_factor=1.000
+	state_category=town
+}

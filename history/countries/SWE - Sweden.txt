@@ -1,0 +1,354 @@
+﻿capital = 141	
+
+oob = "SWE_1699"
+set_naval_oob = "SWE_1699_naval"
+
+set_research_slots = 3
+set_stability = 0.31
+set_war_support = 0.49
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	transport = 1
+	motorised_infantry = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+	}
+}
+
+1712.8.1 = {
+	oob = "SWE_1718"
+	add_manpower = -100000
+	remove_ideas = SWE_perceived_encirclement
+
+	add_stability = 0.20
+
+	complete_national_focus = SWE_strenghten_legitimacy
+	complete_national_focus = SWE_all_parties_must_end
+	complete_national_focus = swedish_politics_1
+	complete_national_focus = SWE_military_might
+	complete_national_focus = swedish_politics_2
+	complete_national_focus = swedish_politics_3
+	complete_national_focus = swedish_politics_4
+	complete_national_focus = swedish_politics_5
+	complete_national_focus = swedish_industry_1
+	complete_national_focus = swedish_industry_2
+	complete_national_focus = SWE_steel_mines
+	complete_national_focus = swedish_industry_4
+	complete_national_focus = swedish_industry_5
+	complete_national_focus = SWE_total_war_armament
+	complete_national_focus = swedish_infrastructure
+	complete_national_focus = swedish_industry_6
+	complete_national_focus = swedish_industry_7
+	complete_national_focus = swedish_army_1
+	complete_national_focus = swedish_army_3
+	complete_national_focus = swedish_army_4
+	complete_national_focus = swedish_army_6
+	complete_national_focus = swedish_army_8
+	complete_national_focus = SWE_military_academy
+	complete_national_focus = swedish_army_10
+	complete_national_focus = SWE_carolus_rex
+	complete_national_focus = swedish_politics_7
+	complete_national_focus = SWE_home_defence
+	unlock_national_focus = swedish_politics_13
+	unlock_national_focus = swedish_politics_8
+	unlock_national_focus = SWE_dethrone_august
+	unlock_national_focus = swedish_politics_10
+	unlock_national_focus = SWE_secure_narva
+	unlock_national_focus = swedish_politics_11
+	unlock_national_focus = swedish_politics_12
+	unlock_national_focus = SWE_request_ottoman_intervention
+	unlock_national_focus = swedish_politics_14
+	unlock_national_focus = SWE_cossack_alliance
+	unlock_national_focus = SWE_strike_at_denmark
+	set_province_controller = 11081
+	set_province_controller = 158
+	set_province_controller = 120
+	set_province_controller = 82
+	set_province_controller = 11041
+}
+
+1730.1.1 = {
+	recruit_character = SWE_Frederick_I
+	promote_character = SWE_Frederick_I
+	retire_character = SWE_Charles_XII
+	dismantle_faction = yes
+	diplomatic_relation = { country = SOV relation = war_relation active = no }
+	diplomatic_relation = { country = DEN relation = war_relation active = no }
+	diplomatic_relation = { country = POL relation = war_relation active = no }
+}
+
+SWE = {
+	add_opinion_modifier = { target = POL modifier = Rivalry }
+	add_opinion_modifier = { target = SOV modifier = Rivalry }
+	add_opinion_modifier = { target = DEN modifier = Rivalry }
+}
+
+create_faction = "Swedish Sphere"
+add_to_faction = SHL
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1932.9.18"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 12
+	neutrality = 32
+	communism = 0
+	fascism = 22
+	aristocracy = 34
+}
+
+set_convoys = 25
+
+add_ideas = {
+	SWE_perceived_encirclement
+	
+	# Laws and Religion
+	extensive_conscription
+	protestant
+	kingdom
+}
+
+recruit_character = SWE_Charles_XII # Country Leader, Field Marshal
+recruit_character = SWE_Carl_Gustav_Rehnskiöld # General
+recruit_character = SWE_Magnus_Stenbock # General
+recruit_character = SWE_Adam_Ludwig_Lewenhaupt # General
+recruit_character = SWE_Georg_Hendrik_Lybecker # General
+
+
+### VARIANTS ###
+# 1936 Start #
+create_equipment_variant = {
+	name = "Draken Class"
+	type = submarine_1
+	upgrades = {
+		ship_reliability_upgrade = 1
+		sub_engine_upgrade = 1
+		sub_stealth_upgrade = 1
+		sub_torpedo_upgrade = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Hajen Class"					# represents Hajen and Bävern classes	
+		type = ship_hull_submarine_1
+		name_group = SWE_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Valen Class"				
+		type = ship_hull_submarine_1
+		name_group = SWE_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+		obsolete = yes
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Örnen Class"					# torpedo boats		
+		type = ship_hull_light_1
+		name_group = SWE_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Ehrensköld Class"				# represents Ehrensköld	and Klas Horn classes
+		type = ship_hull_light_1
+		name_group = SWE_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Clas Fleming Class"				# minelayer		
+		type = ship_hull_light_1
+		name_group = SWE_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Göteborg Class"	
+		type = ship_hull_light_2
+		name_group = SWE_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_mine_layer_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Cruisers #
+	create_equipment_variant = {
+		name = "Fylgia Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SWE_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = empty
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Äran Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SWE_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Oscar II Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SWE_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Sverige Class"				
+		type = ship_hull_cruiser_coastal_defense_ship
+		name_group = SWE_CA_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+	}
+	create_equipment_variant = {
+		name = "Gotland Class"
+		type = ship_hull_cruiser_2
+		name_group = SWE_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = empty
+			front_1_custom_slot = empty
+			mid_1_custom_slot = ship_airplane_launcher_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+}

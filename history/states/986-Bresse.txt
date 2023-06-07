@@ -1,0 +1,19 @@
+state={
+	id=986
+	name="STATE_986"
+	provinces={
+		641 3650 6639 6668 9590 
+	}
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = FRA
+		add_core_of = OCC
+	}
+	manpower=320487
+	buildings_max_level_factor=1.000
+	state_category= town 
+}

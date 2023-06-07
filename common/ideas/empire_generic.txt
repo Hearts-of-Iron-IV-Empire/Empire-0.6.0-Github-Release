@@ -1,0 +1,164 @@
+ideas = {
+	country = {
+		war_reparations_receiver_1 = {
+
+			picture = cash_flow_positive
+
+			name = war_reparations_receiver
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		war_reparations_receiver_2 = {
+
+			picture = taxes
+
+			name = war_reparations_receiver
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		war_reparations_receiver_3 = {
+
+			picture = cash_flow_positive
+
+			name = war_reparations_receiver
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+		war_reparations_receiver_4 = {
+
+			picture = cash_flow_positive
+
+			name = war_reparations_receiver
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.30
+			}
+		}
+		war_reparations_payer = {
+
+			picture = cash_flow_negative
+
+			name = war_reparations_payer
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		war_reparations_payer_2 = {
+
+			picture = cash_flow_negative
+
+			name = war_reparations_payer
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		war_reparations_payer_3 = {
+
+			picture = cash_flow_negative
+
+			name = war_reparations_payer
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+		}
+		war_reparations_payer_4 = {
+
+			picture = cash_flow_negative
+
+			name = war_reparations_payer
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.30
+			}
+		}
+	}
+}

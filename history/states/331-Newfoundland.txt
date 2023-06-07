@@ -1,0 +1,32 @@
+
+state={
+	id=331
+	name="STATE_331"
+	manpower = 4300
+	
+	state_category = pastoral
+
+	history={
+		owner = QUE
+		buildings = {
+			infrastructure = 2
+			12680 = {
+				naval_base = 1
+			}
+		}
+		add_claim_by = ENG
+		add_core_of = QUE
+		victory_points = {
+			12680 3 
+		}
+		1713.5.1 = {
+			owner = ENG
+			controller = ENG
+			add_core_of = ENG
+		}
+	}
+
+	provinces={
+		7758 7788 12505 12680 12698 
+	}
+}

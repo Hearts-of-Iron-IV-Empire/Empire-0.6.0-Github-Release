@@ -1,0 +1,2504 @@
+focus_tree = {
+	id = savoy-focus
+	continuous_focus_position = { x = 0 y = 2000 } 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = ITA
+		}
+	}
+
+
+	#Addressing the issues
+	focus = {
+		id = SAV_addressing_the_issues
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 14
+		y = 0
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	#Casa Savoia
+	focus = {
+		id = SAV_casa_savoia
+		icon = GFX_goal_savoie
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = SAV_addressing_the_issues  }
+		relative_position_id = SAV_addressing_the_issues
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+		}
+		
+	}
+
+	#Past the Alps
+	focus = {
+		id = SAV_past_the_alps
+		icon = GFX_focus_beyond_the_alps
+		x = -5
+		y = 1
+		cost = 5
+		prerequisite = { focus = SAV_casa_savoia  }
+		relative_position_id = SAV_casa_savoia
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	#Rapprochement with the French
+	focus = {
+		id = SAV_rapprochement_with_the_french
+		icon = GFX_goal_bourbon
+		x = 3
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_past_the_alps  }
+		mutually_exclusive = { focus = SAV_contact_the_english  focus = SAV_open_talks_with_the_portuguese  }
+		relative_position_id = SAV_past_the_alps
+
+		bypass = {
+			is_in_faction_with = FRA
+		}
+		
+		ai_will_do = {
+			base = 40
+		}
+
+		completion_reward = {
+			FRA = { country_event = generic.2 }
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = SAV_treaty_of_london_exchange
+		icon = GFX_goal_generic_improve_relations
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_rapprochement_with_the_french  }
+		mutually_exclusive = { focus = SAV_annouce_the_claim_to_milan }
+		relative_position_id = SAV_rapprochement_with_the_french
+		available = {
+			OR = {
+				FRA = { 
+					owns_state = 157
+					owns_state = 117
+					owns_state = 156
+					owns_state = 115
+				}
+				TSC = { is_subject_of = FRA }
+			}
+		}
+		completion_reward = {
+			FRA = { country_event = savoy.1 }
+			custom_effect_tooltip = SAV_will_lose_nice_and_savoy_tt
+		}
+	}
+
+	focus = {
+		id = SAV_milan_agreement
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 1
+		y = 2
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_rapprochement_with_the_french  }
+		relative_position_id = SAV_rapprochement_with_the_french
+		mutually_exclusive = { focus = SAV_stab_the_french_in_the_back }
+		available = {
+			OR = {
+				OR = {
+					LOM = { is_subject_of = FRA }
+					FRA = { owns_state = 159 }
+				}
+				SPR = { is_in_faction_with = FRA }
+				SPR = { has_war_with = FRA }
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					OR = { 
+						LOM = { is_subject_of = FRA }
+						FRA = { owns_state = 159 }
+					}
+				}
+				FRA = { country_event =  savoy.18 }
+			}
+			if = {
+				limit = {
+					OR = { 
+						LOM = { is_subject_of = SPR }
+						SPR = { owns_state = 159 }
+					}
+					SPR = { is_in_faction_with = FRA }
+				}
+				SPR = { country_event =  savoy.18 }
+			}
+			if = {
+				limit = {
+					OR = { 
+						LOM = { is_subject_of = SPR }
+						SPR = { owns_state = 159 }
+					}
+					SPR = { has_war_with = FRA }
+				}
+				custom_effect_tooltip = SAV_bigger_odds_getting_milan
+			}
+		}
+	}
+
+	#Contact the English
+	focus = {
+		id = SAV_contact_the_english
+		icon = GFX_focus_ger_revive_kaiserreich
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_past_the_alps  }
+		mutually_exclusive = { focus = SAV_rapprochement_with_the_french  focus = SAV_open_talks_with_the_portuguese  }
+		relative_position_id = SAV_past_the_alps
+
+		ai_will_do = {
+			base = 20
+		}
+
+		available = {
+			NOT = { is_in_faction_with = FRA }
+		}
+		completion_reward = { 
+			AUS = { country_event = savoy.11}
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = SAV_annouce_the_claim_to_milan
+		icon = GFX_goal_generic_political_pressure
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_contact_the_english focus = SAV_rapprochement_with_the_french  }
+		mutually_exclusive = { focus = SAV_treaty_of_london_exchange }
+		relative_position_id = SAV_contact_the_english
+		completion_reward = {
+			FRA = {
+				country_event = savoy.4
+			}
+			ENG = {
+				country_event = savoy.4
+			}
+			AUS = {
+				country_event = savoy.4
+			}	
+		}
+	}
+
+	focus = {
+		id = SAV_stab_the_french_in_the_back
+		icon = GFX_goal_generic_attack_allies
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		mutually_exclusive = { focus = SAV_milan_agreement }
+		prerequisite = { focus = SAV_annouce_the_claim_to_milan }
+		relative_position_id = SAV_annouce_the_claim_to_milan
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				date > 1702.1.1
+				factor = 10
+			}
+			modifier = {
+				date > 1703.1.1
+				factor = 10
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = no
+					NOT = { has_war_with = ENG }
+				}
+				ENG = {
+					country_event = generic.2
+				}
+			}
+			else = {
+				ENG = { country_event = savoy.15 }
+			}
+			
+		}
+	}
+
+	focus = {
+		id = SAV_join_habsburg_alliance
+		icon = GFX_goal_flag_austria
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = SAV_contact_the_english }
+		relative_position_id = SAV_contact_the_english
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		
+		available = { 
+			AUS = { is_faction_leader = yes }
+		}
+
+		completion_reward = {
+			AUS = { country_event = generic.2 }
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = SAV_demand_control_over_sicily_and_naples
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_join_habsburg_alliance }
+		prerequisite = { focus = SAV_annouce_the_claim_to_milan }
+		relative_position_id = SAV_join_habsburg_alliance
+		completion_reward = {
+			SPR = {
+				country_event = {
+					id = savoy.6
+					days = 2
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_if_you_cant_beat_em
+		icon = GFX_goal_generic_forceful_treaty
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_demand_control_over_sicily_and_naples }
+		mutually_exclusive = { focus = SAV_resist_the_french }
+		relative_position_id = SAV_demand_control_over_sicily_and_naples
+		available = {
+			has_war_with = FRA
+		}
+		completion_reward = {
+			FRA = { country_event = savoy.21 }
+		}
+	}
+
+	focus = {
+		id = SAV_resist_the_french
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_demand_control_over_sicily_and_naples focus = SAV_stab_the_french_in_the_back }
+		mutually_exclusive = { focus = SAV_if_you_cant_beat_em }
+		relative_position_id = SAV_demand_control_over_sicily_and_naples
+		available = {
+			has_war_with = FRA
+		}
+		completion_reward = {
+			add_ideas = SAV_savoyard_resistance
+		}
+	}
+
+	focus = {
+		id = SAV_a_new_kingdom_rises
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 3
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_demand_control_over_sicily_and_naples focus = SAV_stab_the_french_in_the_back focus = SAV_milan_agreement focus = SAV_treaty_of_london_exchange}
+		relative_position_id = SAV_demand_control_over_sicily_and_naples
+		available = {
+			OR = {
+				AND = {
+					owns_state = 157
+					owns_state = 117
+					owns_state = 156
+				}
+				owns_state = 115
+				owns_state = 114
+			}
+		}
+		completion_reward = {
+			add_ideas = kingdom
+		}
+	}
+
+	#Open talks with the Portuguese
+	focus = {
+		id = SAV_open_talks_with_the_portuguese
+		icon = GFX_focus_por_the_fifth_empire
+		x = -3
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_past_the_alps  }
+		mutually_exclusive = { focus = SAV_contact_the_english  focus = SAV_rapprochement_with_the_french  }
+		relative_position_id = SAV_past_the_alps
+
+		ai_will_do = {
+			base = 1
+		}
+
+		completion_reward = {
+			ITA = {
+				add_opinion_modifier = {
+				    target = POR
+				    modifier = large_increase
+				}
+			}
+			POR = {
+				add_opinion_modifier = {
+				    target = ITA
+				    modifier = large_increase
+				}
+			}
+		}
+	}
+
+	#The Royal Marriage
+	focus = {
+		id = SAV_the_royal_marriage
+		icon = GFX_focus_generic_royal_wedding
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_open_talks_with_the_portuguese  }
+		relative_position_id = SAV_open_talks_with_the_portuguese
+		completion_reward = {
+			POR = { country_event = savoy.33 }
+		}
+	}
+
+	#Secure an alliance
+	focus = {
+		id = SAV_secure_an_alliance
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_the_royal_marriage  }
+		relative_position_id = SAV_the_royal_marriage
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = duchy
+				}
+				POR = { country_event = savoy.36 }
+				custom_effect_tooltip = SAV_por_has_higher_rank
+			}
+			if = {
+				limit = {
+					OR = {
+						has_idea = kingdom
+						has_idea = empire
+					}			
+				}
+				create_faction = "Savoyard-Portuguese Alliance"
+				POR = { country_event = generic.2 }
+			}
+		}
+	}
+
+	#Demand Spanish Italy
+	focus = {
+		id = SAV_demand_spanish_italy
+		icon = GFX_goal_generic_political_pressure
+		x = 6
+		y = 6
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		bypass = {
+			AND = {
+				TSC = {
+					NOT = { is_subject_of = SPR }
+				}
+				LOM = {
+					NOT = { is_subject_of = SPR }
+				}
+				NOT = { SPR = { owns_state = 114 }}
+				NOT = { SPR = { owns_state = 115 }}
+			}
+			
+		}
+		prerequisite = { focus = SAV_secure_an_alliance  }
+		completion_reward = {
+			SPR= {country_event = savoy.39}
+		}
+	}
+
+	#Flog the Dead horse
+	focus = {
+		id = SAV_flog_the_dead_horse
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_demand_spanish_italy  }
+		relative_position_id = SAV_demand_spanish_italy
+		completion_reward = {
+			create_wargoal = {
+				target = SPR
+				type = annex_everything
+			}
+		}
+	}
+
+	#Propose Unification
+	focus = {
+		id = SAV_propose_unification
+		icon = GFX_goal_anschluss
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_demand_spanish_italy  }
+		relative_position_id = SAV_demand_spanish_italy
+		completion_reward = {
+			POR = { country_event = savoy.42 }
+		}
+	}
+
+	#Focus on Italy
+	focus = {
+		id = SAV_focus_on_italy
+		icon = GFX_focus_on_italy
+		x = 19
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_idea = kingdom
+		}
+		prerequisite = { focus = SAV_casa_savoia  }
+		completion_reward = {
+			add_war_support = 0.15
+		}
+	}
+
+	#Expand our borders
+	focus = {
+		id = SAV_expand_our_borders
+		icon = GFX_goal_generic_political_pressure
+		x = -2
+		y = 1
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_italy  }
+		mutually_exclusive = { focus = SAV_strength_in_numbers  }
+		relative_position_id = SAV_focus_on_italy
+		completion_reward = {
+			add_war_support = 0.1
+		}
+	}
+
+	#Recover our economy
+	focus = {
+		id = SAV_recover_our_economy
+		icon = GFX_goal_generic_construction2
+		x = 2
+		y = 1
+		cost = 5
+		prerequisite = { focus = SAV_addressing_the_issues  }
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+			swap_ideas = {
+				remove_idea = SAV_economic_depression
+				add_idea = SAV_economic_depression_2
+			}
+		}
+	}
+
+	#Continue Emmanuel Philibert's Plan
+	focus = {
+		id = SAV_continue_emmanuel_philiberts_plan
+		icon = GFX_focus_generic_monarchy_1
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_recover_our_economy  }
+		relative_position_id = SAV_recover_our_economy
+		mutually_exclusive = { focus = SAV_appeal_to_the_lower_classes  }
+		completion_reward = {
+			add_political_power = 80
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.10
+			}
+		}
+	}
+
+	#Reintroduce the Salt Tax
+	focus = {
+		id = SAV_reintroduce_the_salt_tax
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SAV_continue_emmanuel_philiberts_plan  }
+		relative_position_id = SAV_continue_emmanuel_philiberts_plan
+		available = {
+			has_stability  > 0.35
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			add_stability = -0.10
+			add_offsite_building = { type = industrial_complex level = 2 }
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_2			
+				add_idea = SAV_economic_depression_3
+			}
+		}
+	}
+
+	#Keep pressing the lower classes
+	focus = {
+		id = SAV_keep_pressing_the_lower_classes
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_stability  > 0.35
+		}
+		prerequisite = { focus = SAV_reintroduce_the_salt_tax  }
+		relative_position_id = SAV_reintroduce_the_salt_tax
+		completion_reward = {
+			add_stability = -0.05
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_3			
+				add_idea = SAV_economic_depression_4
+			}
+			add_popularity = {
+			    ideology = communism
+			    popularity = -0.05
+			}
+		}
+	}
+
+	#One last tax expedition
+	focus = {
+		id = SAV_one_last_tax_expedition
+		icon = GFX_goal_generic_political_pressure
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		available = {
+			has_stability  > 0.35
+		}
+		prerequisite = { focus = SAV_keep_pressing_the_lower_classes  }
+		relative_position_id = SAV_keep_pressing_the_lower_classes
+		completion_reward = {
+			add_stability = -0.10
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_4			
+				add_idea = SAV_economic_depression_5
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Appeal to the lower classes
+	focus = {
+		id = SAV_appeal_to_the_lower_classes
+		icon = GFX_goal_generic_national_unity
+		x = 2
+		y = 2
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_recover_our_economy  }
+		mutually_exclusive = { focus = SAV_continue_emmanuel_philiberts_plan  }
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = communism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	#The Perequazione
+	focus = {
+		id = SAV_the_perequazione
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 2
+		y = 3
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_appeal_to_the_lower_classes  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_2			
+				add_idea = SAV_economic_depression_3
+			}
+			add_ideas = SAV_perequazione
+		}
+	}
+
+	#Begin the land survey
+	focus = {
+		id = SAV_begin_the_land_survey
+		icon = GFX_goal_generic_position_armies
+		x = 2
+		y = 4
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_the_perequazione  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_3			
+				add_idea = SAV_economic_depression_4
+			}
+			158 = { add_extra_state_shared_building_slots = 2 }
+			923 = { add_extra_state_shared_building_slots = 1 }
+			735 = { add_extra_state_shared_building_slots = 1 }
+		}
+	}
+
+	#Increase the tax on Nobles
+	focus = {
+		id = SAV_increase_the_tax_on_nobles
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 2
+		y = 5
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_begin_the_land_survey  }
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAV_economic_depression_4			
+				add_idea = SAV_economic_depression_5
+			}
+			add_popularity = {
+			    ideology = aristocracy
+			    popularity = -0.05
+			}
+		}
+	}
+
+	#Back to the Golden days
+	focus = {
+		id = SAV_back_to_the_golden_days
+		icon = GFX_focus_generic_support_the_left_right
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = SAV_one_last_tax_expedition focus = SAV_increase_the_tax_on_nobles  }
+		prerequisite = { focus = SAV_recover_from_the_trauma  }
+		relative_position_id = SAV_increase_the_tax_on_nobles
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		completion_reward = {
+			remove_ideas = SAV_economic_depression_5
+		}
+	}
+
+	#Build up our army
+	focus = {
+		id = SAV_build_up_our_army
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = SAV_back_to_the_golden_days  }
+		relative_position_id = SAV_back_to_the_golden_days
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Build more barracks
+	focus = {
+		id = SAV_build_more_barracks
+		icon = GFX_focus_generic_military_mission
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SAV_build_up_our_army  }
+		relative_position_id = SAV_build_up_our_army
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = concription_centre
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Continue the army buildup
+	focus = {
+		id = SAV_continue_the_army_buildup
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SAV_build_more_barracks  }
+		relative_position_id = SAV_build_more_barracks
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Reconstruct our civilian industry
+	focus = {
+		id = SAV_reconstruct_our_civilian_industry
+		icon = GFX_focus_generic_industry_2
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SAV_back_to_the_golden_days  }
+		relative_position_id = SAV_back_to_the_golden_days
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	#Restart the exports
+	focus = {
+		id = SAV_restart_the_exports
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SAV_reconstruct_our_civilian_industry  }
+		relative_position_id = SAV_reconstruct_our_civilian_industry
+		completion_reward = {
+			add_ideas = export_focus
+			add_stability = 0.10
+		}
+
+	}
+
+	#Revive The Fabric Industry
+	focus = {
+		id = SAV_revive_the_fabric_industry
+		icon = GFX_focus_textile
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+		prerequisite = { focus = SAV_restart_the_exports  }
+		relative_position_id = SAV_restart_the_exports
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+			    type = rubber
+			    amount = 15
+			    state = 158
+			}
+		}
+	}
+
+	#The Italian Plague
+	focus = {
+		id = SAV_the_italian_plague
+		icon = GFX_focus_plague
+		x = 2
+		y = 1
+		cost = 8
+		relative_position_id = SAV_recover_our_economy
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_recover_our_economy  }
+		completion_reward = {
+			add_ideas = SAV_sanitary_provisions
+		}
+	}
+
+	#Hand out food
+	focus = {
+		id = SAV_hand_out_food
+		icon = GFX_focus_generic_concessions
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAV_the_italian_plague
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_the_italian_plague  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = SAV_food_distribution
+				days = 180
+			}
+		}
+	}
+
+	#Create propaganda leaflets
+	focus = {
+		id = SAV_create_propaganda_leaflets
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = SAV_hand_out_food
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		prerequisite = { focus = SAV_hand_out_food  }
+		completion_reward = {
+			add_timed_idea = {
+				idea = SAV_morale_propaganda
+				days = 180
+			}	
+		}
+	}
+
+	#Recover from the Trauma
+	focus = {
+		id = SAV_recover_from_the_trauma
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SAV_create_propaganda_leaflets  }
+		relative_position_id = SAV_create_propaganda_leaflets
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+		}
+		
+		completion_reward = {
+			remove_ideas = SAV_fallout_of_plague
+		}
+	}
+
+	#Strength in numbers
+	focus = {
+		id = SAV_strength_in_numbers
+		icon = GFX_focus_generic_little_entente
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_italy  }
+		mutually_exclusive = { focus = SAV_expand_our_borders  }
+		relative_position_id = SAV_focus_on_italy
+		completion_reward = {
+			create_faction = "Italian Alliance"
+			add_political_power = 100
+		}
+	}
+
+	#Send diplomatic missions
+	focus = {
+		id = SAV_send_diplomatic_missions
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_strength_in_numbers  }
+		relative_position_id = SAV_strength_in_numbers
+		completion_reward = {
+			add_ideas = SAV_savoyard_diplomatic_corps
+		}
+	}
+
+	#Focus on the North
+	focus = {
+		id = SAV_focus_on_the_north
+		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_send_diplomatic_missions  }
+		relative_position_id = SAV_send_diplomatic_missions
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+			    target = GEN
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = LOM
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = VNC
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = PRM
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = MTU
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = MOD
+			    modifier = established_embassy
+			}
+		}
+	}
+
+	#Focus on central Italy
+	focus = {
+		id = SAV_focus_on_central_italy
+		icon = GFX_target_italy
+		x = 4
+		y = 1
+		cost = 8
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_send_diplomatic_missions  }
+		relative_position_id = SAV_send_diplomatic_missions
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+			    target = TUS
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = PAP
+			    modifier = established_embassy
+			}
+			reverse_add_opinion_modifier = {
+			    target = TSC
+			    modifier = established_embassy
+			}
+		}
+	}
+
+	#Befriend Genoa
+	focus = {
+		id = SAV_befriend_genoa
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_the_north  }
+		relative_position_id = SAV_focus_on_the_north
+		bypass = {
+			OR = {
+				GEN = { is_subject = yes }
+				NOT = {
+					country_exists = GEN
+				}
+			}
+		}
+		completion_reward = {
+			GEN = { country_event = generic.5 }
+		}
+	}
+
+	#Befriend the City states
+	focus = {
+		id = SAV_befriend_the_city_states
+		icon = GFX_goal_generic_alliance
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_the_north  }
+		relative_position_id = SAV_focus_on_the_north
+		completion_reward = {
+			MTU = { country_event = generic.5 }
+			MOD = { country_event = generic.5 }
+			PRM = { country_event = generic.5 }
+		}
+	}
+
+	#Ally the Northern States
+	focus = {
+		id = SAV_ally_the_northern_states
+		icon = GFX_focus_invasion_of_venice
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_befriend_the_city_states  }
+		prerequisite = { focus = SAV_befriend_genoa }
+		relative_position_id = SAV_befriend_genoa
+		bypass = {
+			OR = {
+				VNC = { is_subject = yes }
+				NOT = {
+					country_exists = VNC
+				}
+			}
+		}
+		completion_reward = {
+			VNC = { country_event = generic.5 }
+		}
+	}
+
+	#Befriend the Pope
+	focus = {
+		id = SAV_befriend_the_pope
+		icon = GFX_goal_papal_states_flag
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_central_italy  }
+		relative_position_id = SAV_focus_on_central_italy
+		bypass = {
+			OR = {
+				PAP = { is_subject = yes }
+				NOT = {
+					country_exists = PAP
+				}
+			}
+		}
+		completion_reward = {
+			PAP = { country_event = generic.5 }
+		}
+	}
+
+		#Befriend the Medici
+	focus = {
+		id = SAV_befriend_the_medici
+		icon = GFX_goal_generic_major_alliance
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_central_italy  }
+		relative_position_id = SAV_focus_on_central_italy
+		bypass = {
+			OR = {
+				TUS = { is_subject = yes }
+				NOT = {
+					country_exists = TUS
+				}
+			}
+		}
+		completion_reward = {
+			TUS = { country_event = generic.5 }
+		}
+	}
+
+	#Ally Central Italy
+	focus = {
+		id = SAV_ally_central_italy
+		icon = GFX_goal_naples
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_befriend_the_medici  }
+		prerequisite = { focus = SAV_befriend_the_pope }
+		relative_position_id = SAV_befriend_the_medici
+		bypass = {
+			OR = {
+				TSC = { is_subject = yes }
+				NOT = {
+					country_exists = TSC
+				}
+			}
+		}
+		completion_reward = {
+			TSC = { country_event = generic.5 }
+		}
+	}
+
+	#Focus on Spain
+	focus = {
+		id = SAV_focus_on_spain
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
+		prerequisite = { focus = SAV_ally_central_italy  focus = SAV_ally_the_northern_states  }
+		relative_position_id = SAV_ally_the_northern_states 
+		bypass = {
+			SPR = {
+				NOT = { owns_state = 114 }
+				NOT = { owns_state = 159 }
+				NOT = { owns_state = 157 }
+				NOT = { owns_state = 117 }
+				NOT = { owns_state = 156 }
+				NOT = { owns_state = 115 }
+			}
+			NOT = { LOM = { is_subject_of = SPR }}
+			NOT = { TSC = { is_subject_of = SPR }}
+		}
+		completion_reward = {
+			add_ideas = SAV_driving_out_the_spanish
+			every_country = {
+				limit = { 
+					is_in_faction_with = ROOT
+				} 
+				add_ideas = SAV_driving_out_the_spanish
+			}
+		}
+	}
+
+	#Start the war of liberation
+	focus = {
+		id = SAV_start_the_war_of_liberation
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_focus_on_spain }
+		relative_position_id = SAV_focus_on_spain
+		completion_reward = {
+			if = {
+				limit = {
+					LOM = { is_subject = yes}
+				}
+				create_wargoal = {
+				    type = annex_everything
+				    target = LOM
+				}
+			}
+			if = {
+				limit = {
+					TSC = { is_subject = yes}
+				}
+				create_wargoal = {
+				    type = annex_everything
+				    target = TSC
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_declare_libertion_of_italy
+		icon = GFX_goal_generic_demand_territory
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_start_the_war_of_liberation }
+		relative_position_id = SAV_start_the_war_of_liberation
+		available = {
+			controls_state = 157
+			controls_state = 117
+			controls_state = 156
+			controls_state = 159
+			controls_state = 115
+			is_faction_leader = yes
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_war_with = AUS
+				}
+				white_peace = AUS
+			}
+			if = {
+				limit = {
+					has_war_with = FRA
+				}
+				white_peace = FRA
+			}
+			if = {
+				limit = {
+					has_war_with = SPR
+				}
+				white_peace = SPR
+			}
+			transfer_state = 157
+			transfer_state = 117
+			transfer_state = 156
+			transfer_state = 115
+			transfer_state = 159
+			every_other_country = {
+			  	limit = {
+			    	is_in_faction_with = ROOT
+			  	}
+			  	ITA = {
+			  		set_autonomy = {
+					    target = PREV
+					    autonomy_state = autonomy_puppet
+					}
+				}
+			}
+		}
+	}
+
+	#Use our Money
+	focus = {
+		id = SAV_use_our_money
+		icon = GFX_focus_mex_privatisation
+		x = 1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_expand_our_borders  }
+		relative_position_id = SAV_expand_our_borders
+		available = {
+			num_of_civilian_factories_available_for_projects > 15
+		}
+		completion_reward = {
+			add_political_power = 60
+		}
+	}
+
+	#Offer a price
+	focus = {
+		id = SAV_offer_a_price
+		icon = GFX_focus_generic_concessions
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_use_our_money  }
+		relative_position_id = SAV_use_our_money
+		available = {
+			num_of_civilian_factories_available_for_projects > 15
+		}
+		completion_reward = {
+			country_event = savoy.24
+		}
+	}
+
+	#Invest in the Northern States
+	focus = {
+		id = SAV_invest_in_the_northern_states
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_offer_a_price  }
+		relative_position_id = SAV_offer_a_price
+		available = {
+			num_of_civilian_factories_available_for_projects > 15
+		}
+		completion_reward = {
+			MOD = { add_offsite_building = { type = industrial_complex level = 1 }  }
+			PRM = { add_offsite_building = { type = industrial_complex level = 1 }  }
+			MTU = { add_offsite_building = { type = industrial_complex level = 1 }  }
+			ITA = {
+				add_timed_idea = {
+				    idea = SAV_modest_payment
+				    days = 365
+				}
+			}
+			reverse_add_opinion_modifier = {
+			    target = MOD
+			    modifier = large_increase
+			}
+			reverse_add_opinion_modifier = {
+			    target = PRM
+			    modifier = large_increase
+			}
+			reverse_add_opinion_modifier = {
+			    target = MTU
+			    modifier = large_increase
+			}
+		}
+	}
+
+	#Buy the Northern lands
+	focus = {
+		id = SAV_buy_the_northern_lands
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_invest_in_the_northern_states  }
+		relative_position_id = SAV_invest_in_the_northern_states
+		available = {
+			num_of_civilian_factories_available_for_projects > 15
+			MOD =  {
+				has_opinion = {
+				    target = ROOT
+				    value > 99
+				}
+			}
+			PRM =  {
+				has_opinion = {
+				    target = ROOT
+				    value > 99
+				}
+			}
+			MTU =  {
+				has_opinion = {
+				    target = ROOT
+				    value > 99
+				}
+			}
+		}
+		completion_reward = {
+			set_autonomy = {
+			    target = MOD
+			    autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+			    target = PRM
+			    autonomy_state = autonomy_puppet
+			}
+			set_autonomy = {
+			    target = MTU
+			    autonomy_state = autonomy_puppet
+			}
+		}
+	}
+
+
+	#Fund Neapolitan rebel groups
+	focus = {
+		id = SAV_fund_neapolitan_rebel_groups
+		icon = GFX_focus_prc_infiltration
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_buy_the_northern_lands  }
+		relative_position_id = SAV_buy_the_northern_lands
+		available = {
+			num_of_civilian_factories_available_for_projects > 15
+		}
+		completion_reward = {
+			ITA = {
+				add_timed_idea = {
+				    idea = SAV_large_payment
+				    days = 365
+				}
+			}
+			TSC = { country_event = savoy.30 }
+		}
+	}
+
+	#Launch the Coup
+	focus = {
+		id = SAV_launch_the_coup
+		icon = GFX_goal_generic_dangerous_deal
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_fund_neapolitan_rebel_groups  }
+		relative_position_id = SAV_fund_neapolitan_rebel_groups
+		completion_reward = {
+			random_list = {
+				50 = {
+					country_event = savoy.31
+					TSC = {
+						country_event = savoy.31
+					}
+				}
+				50 = {
+					country_event = savoy.32
+					TSC = {
+						country_event = savoy.32
+					}
+				}
+			}
+			custom_effect_tooltip = SAV_can_lead_to_war
+		}
+
+	}
+
+	#Use our Military
+	focus = {
+		id = SAV_use_our_military
+		icon = GFX_soldiers_marching
+		x = -1
+		y = 1
+		cost = 5
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_expand_our_borders  }
+		relative_position_id = SAV_expand_our_borders
+		available = {
+			has_army_manpower = { size > 50000 }
+		}
+		completion_reward = {
+			add_war_support = 0.05
+			add_ideas = agressive_foreign_policy
+		}
+	}
+
+	#Strike at the Merchants
+	focus = {
+		id = SAV_strike_at_the_merchants
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_use_our_military  }
+		relative_position_id = SAV_use_our_military
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = GEN
+			}
+		}
+	}
+
+	#Move on the Medici
+	focus = {
+		id = SAV_move_on_the_medici
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_strike_at_the_merchants  }
+		relative_position_id = SAV_strike_at_the_merchants
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = TUS
+			}
+		}
+	}
+
+	#Surprise attack on Milan
+	focus = {
+		id = SAV_surprise_attack_on_milan
+		icon = GFX_goal_generic_major_war
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_move_on_the_medici  }
+		relative_position_id = SAV_move_on_the_medici
+		completion_reward = {
+			start_border_war = {
+			    change_state_after_war = yes
+			    attacker = {
+			        state = 158
+			        num_provinces = 4
+			    }
+							
+			    defender = {
+			        state = 159
+			        num_provinces = 4
+			    }
+			}
+		}
+	}
+
+
+	#March on Rome
+	focus = {
+		id = SAV_march_on_rome
+		icon = GFX_focus_seize_rome
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_surprise_attack_on_milan  }
+		relative_position_id = SAV_surprise_attack_on_milan
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = PAP
+			}
+		}
+	}
+
+	#Seize the North
+	focus = {
+		id = SAV_seize_the_north
+		icon = GFX_goal_generic_territory_or_war
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_surprise_attack_on_milan  }
+		relative_position_id = SAV_surprise_attack_on_milan
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = MOD
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = MTU
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = PRM
+			}
+		}
+	}
+
+	#Move on La Serenissima
+	focus = {
+		id = SAV_move_on_la_serenissima
+		icon = GFX_venice
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_seize_the_north  }
+		relative_position_id = SAV_seize_the_north
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = VNC
+			}
+		}
+	}
+
+	#Second Italo-Spanish war
+	focus = {
+		id = SAV_second_italospanish_war
+		icon = GFX_spain
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_march_on_rome  }
+		relative_position_id = SAV_march_on_rome
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = SPR
+			}
+		}
+	}
+
+	#Complete the Risorgimento
+	focus = {
+		id = SAV_complete_the_risorgimento
+		icon = GFX_focus_generic_italy_first
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_move_on_la_serenissima  focus = SAV_second_italospanish_war  focus = SAV_launch_the_coup}
+		relative_position_id = SAV_move_on_la_serenissima
+
+		available = {
+			controls_state = 157
+			controls_state = 117
+			controls_state = 156
+			controls_state = 159
+			controls_state = 115
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_war_with = AUS
+				}
+				white_peace = AUS
+			}
+			if = {
+				limit = {
+					has_war_with = FRA
+				}
+				white_peace = FRA
+			}
+			if = {
+				limit = {
+					has_war_with = SPR
+				}
+				white_peace = SPR
+			}
+			transfer_state = 157
+			transfer_state = 117
+			transfer_state = 156
+			transfer_state = 115
+			transfer_state = 159
+		}
+	}
+
+	#Proclaim Italy Unified
+	focus = {
+		id = SAV_proclaim_italy_unified
+		icon = GFX_goal_generic_propaganda
+		x = 3
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_complete_the_risorgimento focus = SAV_declare_libertion_of_italy }
+		relative_position_id = SAV_complete_the_risorgimento
+		completion_reward = {
+			set_cosmetic_tag =  ITA_unified
+			add_state_core = 1
+			add_state_core = 2
+			add_state_core = 114
+			add_state_core = 115
+			add_state_core = 117
+			add_state_core = 156
+			add_state_core = 157
+			add_state_core = 159
+			add_state_core = 160
+			add_state_core = 161
+			add_state_core = 162
+			add_state_core = 788
+			add_state_core = 789
+			add_state_core = 795
+			add_state_core = 796
+			add_state_core = 966
+			add_state_core = 967
+			set_capital = {
+				state = 2
+			}
+			every_other_country = {
+			  	limit = {
+			    	is_subject_of = ROOT
+			  	}
+			  	ITA = {
+			  		annex_country = {
+					    target = PREV
+					    transfer_troops = yes
+					}
+				}
+			}
+		}
+	}
+
+	#The Savoyard Army
+	focus = {
+		id = SAV_the_savoyard_army
+		icon = GFX_goal_focus_on_italy
+		x = 28
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
+		prerequisite = { focus = SAV_addressing_the_issues  }
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			army_experience = 10
+		}
+	}
+
+	#The Reforms of Amadeus
+	focus = {
+		id = SAV_the_reforms_of_amadeus
+		icon = GFX_reforms_of_amadeus
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_the_savoyard_army  }
+		relative_position_id = SAV_the_savoyard_army
+		completion_reward = {
+			add_ideas = SAV_military_reforms
+		}
+	}
+
+	focus = {
+		id = SAV_kickstart_a_navy
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = SAV_the_reforms_of_amadeus  }
+		relative_position_id = SAV_the_reforms_of_amadeus
+
+		available = {
+			OR = {
+				owns_state = 114 
+				owns_state = 115 
+			}
+		}
+		completion_reward = {
+			IF = {
+				limit = {
+					owns_state = 114
+				}
+				114 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+			IF = {
+				limit = {
+					owns_state = 114
+				}
+				115 = {
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_acquire_naval_licenses
+		icon = GFX_goal_generic_amphibious_assault
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = SAV_kickstart_a_navy  }
+		relative_position_id = SAV_kickstart_a_navy
+
+		available = {
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = naval_equipment
+				bonus = 1.0
+				uses = 3
+				category = naval_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_merchant_navy
+		icon = GFX_goal_generic_build_navy
+		mutually_exclusive = { focus = SAV_fleet_in_being }
+		prerequisite = { focus = SAV_acquire_naval_licenses }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = SAV_acquire_naval_licenses
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_fleet_in_being
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		mutually_exclusive = { focus = SAV_merchant_navy }
+		prerequisite = { focus = SAV_acquire_naval_licenses }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = SAV_acquire_naval_licenses
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_privateering_effort
+		icon = GFX_pirate_deal
+		prerequisite = { focus = SAV_merchant_navy }
+		x = -1
+		y = 1
+		relative_position_id = SAV_merchant_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_frigate_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = SAV_fleet_in_being focus = SAV_merchant_navy }
+		x = -1
+		y = 1
+		relative_position_id = SAV_fleet_in_being
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_destroyer_effort
+		icon = GFX_Imperial_Warship_Generic1
+		prerequisite = { focus = SAV_privateering_effort focus = SAV_frigate_effort }
+		x = 1
+		y = 1
+		relative_position_id = SAV_privateering_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = SAV_fleet_in_being }
+		x = 1
+		y = 1
+		relative_position_id = SAV_fleet_in_being
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_battlecruiser_effort
+		icon = GFX_Imperial_Warship_Generic
+		prerequisite = { focus = SAV_battleship_effort focus = SAV_frigate_effort }
+		x = -1
+		y = 1
+		relative_position_id = SAV_battleship_effort
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+
+	#Improve the Recruitment Process
+	focus = {
+		id = SAV_improve_the_recruitment_process
+		icon = GFX_focus_generic_manpower
+		x = -2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_the_reforms_of_amadeus  }
+		relative_position_id = SAV_the_reforms_of_amadeus
+		available = {
+			has_idea = SAV_military_reforms
+		}
+		completion_reward = {
+			add_ideas = SAV_improved_conscription
+		}
+	}
+
+	focus = {
+		id = SAV_equipment_standardization
+		icon = GFX_Tsar_Cannon
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		available = {
+			has_idea = SAV_military_reforms
+		}
+		prerequisite = { focus = SAV_improve_the_recruitment_process  }
+		relative_position_id = SAV_improve_the_recruitment_process
+
+		completion_reward = {
+			add_ideas = standardized_equipment
+		}
+	}
+
+	focus = {
+		id = SAV_military_academy
+		icon = GFX_focus_generic_military_academy
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_improve_the_recruitment_process  }
+		prerequisite = { focus = SAV_better_equipment  }
+		relative_position_id = SAV_improve_the_recruitment_process
+
+		available = {
+			has_idea = SAV_military_reforms
+		}
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = SAV_finish_the_reforms
+		icon = GFX_focus_generic_treaty
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_the_reforms_of_amadeus  }
+		relative_position_id = SAV_the_reforms_of_amadeus
+
+		available = {
+			has_idea = SAV_military_reforms
+		}
+
+		completion_reward = {
+			remove_ideas = SAV_military_reforms
+		}
+	}
+
+	#Better Equipment
+	focus = {
+		id = SAV_better_equipment
+		icon = GFX_tanegashima
+		x = 2
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+		prerequisite = { focus = SAV_the_reforms_of_amadeus  }
+		relative_position_id = SAV_the_reforms_of_amadeus
+
+		available = {
+			has_idea = SAV_military_reforms
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 0.75
+				uses = 2
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_renewed_doctrines
+		icon = GFX_review_military_doctrines_focus
+		x = 0
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SAV_better_equipment  }
+		relative_position_id = SAV_better_equipment
+
+		available = {
+			has_idea = SAV_military_reforms
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_the_alps_will_shield_us
+		icon = GFX_focus_beyond_the_alps
+		x = -3
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SAV_renewed_doctrines  }
+		prerequisite = { focus = SAV_military_academy  }
+		prerequisite = { focus = SAV_equipment_standardization  }
+		relative_position_id = SAV_renewed_doctrines
+
+		available = {
+			has_idea = SAV_military_reforms
+		}
+		completion_reward = {
+			add_tech_bonus = {
+				name = mountaineers_tech
+				bonus = 1.0
+				uses = 1
+				category = mountaineers_tech
+			}
+			add_ideas = SAV_alpine_defense
+		}
+	}
+
+	focus = {
+		id = SAV_veterans_of_the_nine_years_war
+		icon = GFX_soldier_icon
+		x = -1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SAV_renewed_doctrines  }
+		prerequisite = { focus = SAV_military_academy  }
+		prerequisite = { focus = SAV_equipment_standardization  }
+		relative_position_id = SAV_renewed_doctrines
+		available = {
+			has_idea = SAV_military_reforms
+		}
+
+		completion_reward = {
+			division_template = {
+			    name = "Nine Years War Veterans"
+			    is_locked = yes
+			    priority = 2
+			    regiments = {
+			        infantry = { x = 0 y = 0 }
+			        infantry = { x = 0 y = 1 }
+			        infantry = { x = 0 y = 2 }
+			        infantry = { x = 0 y = 3 }
+			        infantry = { x = 0 y = 4 }
+			        infantry = { x = 1 y = 0 }
+			        infantry = { x = 1 y = 1 }
+			        artillery_brigade = { x = 1 y = 2 }
+			        artillery_brigade = { x = 1 y = 3 }
+			    }
+			    support = { 
+			        artillery = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 }
+					engineer = { x = 0 y = 2 }
+			    } 
+			}
+		    158 = {
+				create_unit = {
+					division = "name = \"Veterans Of The Nine Years War\" division_template = \"Nine Years War Veterans\" start_experience_factor = 1" 
+					owner = ITA
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = SAV_military_renewal
+		icon = GFX_goal_generic_air_doctrine
+		x = 1
+		y = 1
+		cost = 10
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
+		prerequisite = { focus = SAV_veterans_of_the_nine_years_war  }
+		prerequisite = { focus = SAV_the_alps_will_shield_us  }
+		relative_position_id = SAV_the_alps_will_shield_us
+		available = {
+			has_idea = SAV_military_reforms
+		}
+		completion_reward = {
+			if = {
+				limit = {
+					has_idea = SAV_military_reforms
+				}
+				remove_ideas = SAV_military_reforms
+			}
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 3
+				category = land_doctrine
+			}
+		}
+	}
+}

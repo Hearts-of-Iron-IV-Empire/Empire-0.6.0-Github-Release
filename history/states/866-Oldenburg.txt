@@ -1,0 +1,32 @@
+state={
+	id=866
+	name="STATE_866"
+	provinces={
+		241 309 
+	}
+
+	history={
+		owner = DEN
+		victory_points = {
+			241 5 
+		}
+		victory_points = {
+			309 5 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			dockyard = 1
+			241 = {
+				naval_base = 5
+			}
+		}
+		add_core_of = HRE
+		1812.1.1 = {
+			owner = FRA
+		}
+	}
+	manpower=388475
+	buildings_max_level_factor=1.000
+	state_category=town
+}

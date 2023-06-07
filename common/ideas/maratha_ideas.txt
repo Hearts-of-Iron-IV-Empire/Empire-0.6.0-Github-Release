@@ -1,0 +1,81 @@
+ideas = {
+	country = {
+		MAR_avenge_sambhaji = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = SPR_masters_of_our_own_fate
+
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+				surrender_limit = 0.7
+			}
+		}
+		MAR_traitors_everywhere = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_spy_political
+
+			modifier = {
+				political_power_gain = -0.1
+				army_org_factor = -0.03
+				consumer_goods_factor = 0.1
+			}
+		}
+		MAR_traitors_everywhere_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_spy_coup
+
+			modifier = {
+				political_power_gain = -0.15
+				army_org_factor = -0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+		MAR_maratha_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = maratha_soldier
+
+			modifier = {
+				army_org_factor = -0.05
+				army_attack_factor = 0.05
+				army_speed_factor = 0.1
+				supply_consumption_factor = -0.05
+			}
+		}
+		MAR_continue_the_fight = {
+			picture = maratha_resistance
+	       	targeted_modifier = {
+				tag = RAJ
+				attack_bonus_against = 0.15
+				defense_bonus_against = 0.15
+			}
+	  	}
+	}
+}

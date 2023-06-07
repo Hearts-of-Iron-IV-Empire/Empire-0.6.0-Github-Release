@@ -1,0 +1,25 @@
+
+state={
+	id=892
+	name="STATE_892"
+
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+		owner = BSG
+		add_core_of = BSG
+		1812.1.1 = {
+			owner = MUN
+			add_core_of = MUN
+		}
+	}
+
+	provinces={
+		425 3500 3561 11402 
+	}
+	manpower=351795
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,77 @@
+﻿capital = 6
+
+oob = "Imperial_army"
+
+set_research_slots = 3
+set_stability = 0.8
+set_war_support = 0.3 #we see what you are doing there Adolf
+
+add_ideas = {
+	disarmed_nation
+	catholic
+	closure_of_the_scheldt
+	barrier_treaty
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	trench_warfare = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_cavalry = 1
+	interwar_antitank = 1
+}
+
+set_politics = {
+	ruling_party = neutrality
+}
+
+set_popularities = {
+	democratic = 20
+	fascism = 23
+	communism = 6
+	neutrality = 35 
+	aristocracy = 16
+}
+
+set_convoys = 80
+set_stability = 0.75
+
+1730.8.1 = {
+	create_country_leader = {
+		name = "Maria Elisabeth"
+		picture = "maria_elizabeth.dds"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+1714.8.1 = {
+	create_country_leader = {
+		name = "Eugene Of Savoy"
+		picture = "eugene_of_savoy.dds"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+	set_cosmetic_tag = BEL_AUS
+}
+
+create_country_leader = {
+	name = "Maximilian II Emanuel"
+	desc = "POLITICS_HUBERT_PIERLOT_DESC"
+	picture = "Bavaria_Leader.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

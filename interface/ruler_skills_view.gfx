@@ -1,0 +1,6 @@
+spriteTypes = {	
+	SpriteType = { 
+		name = "GFX_pol_ruler_skills_bg"
+		texturefile = "gfx/interface/pol_ruler_skills_bg.dds"
+	}
+}

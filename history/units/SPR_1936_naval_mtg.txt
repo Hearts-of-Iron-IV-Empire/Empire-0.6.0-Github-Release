@@ -1,0 +1,150 @@
+﻿units= {
+
+	##### NAVAL UNITS #####
+
+	#SPAIN
+
+	fleet = {
+		name = "Base Naval El Ferrol"
+		naval_base = 1048  # Ferrol/Coruna
+		task_force = {
+			name = "Flota real"
+			location = 1048  # Ferrol/Coruna
+			ship = { name = "San Francisco" pride_of_the_fleet = yes definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Nuestra Señora del Rosario" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Santa Maria de Tezanos y Las Animas" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Sagrario" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Santo Cristo de San Roman" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Nuestra Señora de la Almudena y San Cayetano" definition = battleship equipment = { ship_hull_heavy_1 = { amount = 1 owner = SPR version_name = "Ship of the Line Class" } } }
+			ship = { name = "Libertad" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SPR version_name = "Man-of-War Class" } } }
+			ship = { name = "Almirante Cervera" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SPR version_name = "Frigate Class" } } }
+			ship = { name = "Miguel de Cervantes" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SPR version_name = "Frigate Class" } } }
+			# Flotilla de Destructores de El Ferrol
+			ship = { name = "Alsedo" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Velasco" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Madrid" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Catalunia" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Alicante" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "San Salvador" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cádiz"
+		naval_base = 1048  #Cádiz
+		task_force = {
+			name = "Escuadrón de Cádiz"
+			location = 1048  #Cádiz
+			ship = { name = "Isabella e Fernando" definition = light_cruiser equipment = { ship_hull_cruiser_2 = { amount = 1 owner = SPR version_name = "Man-of-War Class" } } }
+			ship = { name = "Méndez Núñez" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SPR version_name = "Frigate Class" } } }
+			ship = { name = "El Venganza de 1588" definition = light_cruiser equipment = { ship_hull_cruiser_1 = { amount = 1 owner = SPR version_name = "Frigate Class" } } }
+		}
+		task_force = {
+			name = "Grupo de Cádiz"
+			location = 1048  #Cádiz
+			# S103 Flotilla
+			ship = { name = "Privateer 1" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 2" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 3" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 4" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 5" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 6" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 7" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 8" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 9" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 10" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 11" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 12" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 13" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 14" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 15" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+		}
+	}
+		
+	fleet = {
+		name = "Base Naval Cartagena"
+		naval_base = 10024  #Cartagena/Murcia
+		task_force = {
+			name = "Escuadrón de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			ship = { name = "Almirante Miranda" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			# Flotilla de Destructores n.1
+			ship = { name = "Almirante Ferrándiz" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Sánchez Barcáiztegui" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Alcalá Galiano" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Almirante Valdés" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			# Flotilla de Destructores n.2
+			ship = { name = "Churucca" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "José Luis Díez" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Lepanto" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Almirante Antequera" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+		}
+		task_force = {
+			name = "Grupo de Cartagena"
+			location = 10024  #Cartagena/Murcia
+			# S101 Flotilla
+			ship = { name = "Privateer 16" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 17" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 18" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 19" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 20" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 21" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 22" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 23" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Base Port of Spain"
+		naval_base = 3284  #Trinidad
+		task_force = {
+			name = "Flota del Caribe"
+			location = 3284  #Cartagena/Murcia
+			ship = { name = "El Mutador" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 1" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 2" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 3" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 4" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			# Flotilla de Destructores n.2
+			ship = { name = "Corvette 5" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 6" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 7" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 8" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+		}
+		task_force = {
+			name = "Corsarios de Trinidad"
+			location = 3284  #Cartagena/Murcia
+			# S101 Flotilla
+			ship = { name = "Privateer 24" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 25" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 26" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 27" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 28" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 29" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 30" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 31" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 32" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 33" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 34" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 35" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 36" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 37" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 38" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 39" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 40" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+			ship = { name = "Privateer 41" definition = submarine equipment = { ship_hull_submarine_1 = { amount = 1 owner = SPR version_name = "Privateering Class" } } }
+		}
+	}
+
+	fleet = {
+		name = "Base Port Manilla"
+		naval_base = 10265  #Trinidad
+		task_force = {
+			name = "Flota del Filipinas"
+			location = 10265  #Cartagena/Murcia
+			ship = { name = "Corvette 9" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 10" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+			ship = { name = "Corvette 11" definition = destroyer equipment = { ship_hull_light_1 = { amount = 1 owner = SPR version_name = "Corvette Class" } } }
+		}
+	}
+} 

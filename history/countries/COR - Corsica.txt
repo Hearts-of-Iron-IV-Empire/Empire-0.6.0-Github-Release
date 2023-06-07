@@ -1,0 +1,69 @@
+﻿capital = 1
+
+#oob = ""
+
+set_research_slots = 3
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	gwtank = 1
+	basic_light_tank = 1
+	improved_light_tank = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = yes
+}
+set_popularities = {
+	democratic = 53
+	fascism = 20
+	communism = 2
+	neutrality = 25
+}
+
+create_country_leader = {
+	name = "Yann-Morvan Gefflot"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_1.dds"
+	expire = "1965.1.1"
+	ideology = stalinism
+}
+
+create_country_leader = {
+	name = "Morvan Marchal"
+	picture = "gfx//leaders//Europe//portrait_europe_generic_2.dds"
+	expire = "1965.1.1"
+	ideology = socialism
+}
+
+create_country_leader = {
+	name = "Olier Mordrel"
+	picture = "gfx//leaders//Europe//Portrait_Europe_Generic_6.dds"
+	expire = "1965.1.1"
+	ideology = nazism
+}
+
+create_country_leader = {
+	name = "Maurice Duhamel"
+	picture = "gfx//leaders//Europe//portrait_europe_generic_4.dds"
+	expire = "1965.1.1"
+	ideology = centrism
+}
+
+create_country_leader = {
+	name = "Maurice Duhamel"
+	picture = "gfx//leaders//Europe//portrait_europe_generic_4.dds"
+	expire = "1965.1.1"
+	ideology = nobility
+}

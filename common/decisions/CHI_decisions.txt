@@ -1,0 +1,45 @@
+economy_decisions = {
+	CHI_forced_loans = {
+
+		icon = ger_mefo_bills
+
+		available = {
+			has_hyper_inflation = yes
+		}
+
+		cost = 100
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				OR = {
+					has_idea = CHI_hyper_inflation_none
+					has_idea = CHI_hyper_inflation_1
+				}
+				factor = 0
+			}
+			modifier = {
+				has_idea = CHI_hyper_inflation_3
+				factor = 2
+			}
+			modifier = {
+				has_idea = CHI_hyper_inflation_4
+				factor = 5
+			}
+			modifier = {
+				has_idea = CHI_hyper_inflation_5
+				factor = 10
+			}
+		}
+
+		visible = {
+			has_idea = CHI_hyper_inflation_1
+		}
+
+		days_re_enable = 90
+
+		complete_effect = {
+			add_stability = -0.03
+			add_war_support = -0.03
+		}		
+	}
+}

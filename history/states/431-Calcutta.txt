@@ -1,0 +1,40 @@
+state={
+	id=431
+	name="STATE_431"
+	resources={
+		steel=13.000
+		tungsten=11.000
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = BAN
+		add_extra_state_shared_building_slots = 5
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			dockyard = 1
+		}
+		victory_points = {
+			1609 15 
+		}
+		1707.5.1 = {
+			owner = BAN
+			controller = BAN
+			add_core_of = BAN
+		}
+		1773.1.1 = {
+			owner = EIC
+			controller = EIC
+			remove_core_of = EIC
+
+		}
+	}
+	provinces={
+		1159 1609 2843 4162 4204 7078 7124 7593 9935 10035 10077 11911 12050 
+	}
+	manpower=9278100
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

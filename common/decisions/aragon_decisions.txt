@@ -1,0 +1,20 @@
+political_actions = {
+	ARA_decision_join_grand_alliance ={
+		available = {
+			has_war_with = SPR
+			ENG = { has_war_with = SPR }
+		}
+		visible = {
+			original_tag = ARA
+		}
+		ai_will_do = {
+			factor = 80
+		}
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {	
+			ENG = { country_event = generic.2 }
+		}
+	}
+}

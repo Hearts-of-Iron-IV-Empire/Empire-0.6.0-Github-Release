@@ -1,0 +1,36 @@
+state={
+	id=322
+	name="STATE_322"
+	resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = TIB
+		add_extra_state_shared_building_slots = 5
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = TIB
+		1716.5.1 = {
+			owner = SIK
+			controller = SIK
+			add_core_of = SIK
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+
+		}
+	}
+
+	provinces={
+		2010 2093 4994 5011 7926 8068 10755 10918 
+	}
+	manpower=402000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

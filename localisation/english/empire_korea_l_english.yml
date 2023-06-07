@@ -1,0 +1,109 @@
+﻿l_english:
+ 
+ # Bookmarks:
+ KOR_GATHERING_STORM_DESC:0 "The Kingdom of Great Joseon, or the Hermit Kingdom, has a rich cultural history and a long history of struggling against foreign occupation. First by the Mongols, and then by the Manchus. However, it seems that Korean independence is secure for now, although danger always lurks around the corner. The kingdom is a vassal state of the Qing, and the Manchus might wish to reconsider their current stance on Korea. Furthermore, to the South lies Japan, and many Japanese still hold dreams of Korean conquest and remember the Imjin war, where Korea was almost conquered by Japan..."
+
+ # Focuses:
+ Korea_focus:0 "Great Joseon Focus Tree"
+ KOR_last_years_of_the_ulbyeong_famine:0 "Last Years of the Ulbyeong Famine"
+ KOR_last_years_of_the_ulbyeong_famine_desc:0 "Last Years of the Ulbyeong Famine"
+ KOR_protect_the_people:0 "Protect the People"
+ KOR_protect_the_people_desc:0 "Protect the People"
+ KOR_boost_the_national_morale:0 "Boost the National Morale"
+ KOR_boost_the_national_morale_desc:0 "Boost the National Morale"
+ KOR_dealing_with_taxes:0 "Dealing with Taxes"
+ KOR_dealing_with_taxes_desc:0 "Dealing with Taxes"
+ KOR_continuation_of_king_sukjongs_reign:0 "Continuation of King Sukjong's Reign"
+ KOR_continuation_of_king_sukjongs_reign_desc:0 "Continuation of King Sukjong's Reign"
+ KOR_queen_inhyeons_death:0 "Death of Queen Inhyeon"
+ KOR_queen_inhyeons_death_desc:0 "Queen Inhyeon's Death"
+ KOR_purge_the_southerner_faction:0 "Purge the Southerner Faction"
+ KOR_purge_the_southerner_faction_desc:0 "Purge the Southerner Faction"
+ KOR_focus_on_domestic_issues:0 "Focus on Domestic Issues"
+ KOR_focus_on_domestic_issues_desc:0 "Keep our Focus on Mundane Domestic Issues"
+ KOR_rehabilitate_the_unfortunate_losers_of_our_history:0 "Rehabilitate the Unfortunate Losers of Our History"
+ KOR_rehabilitate_the_unfortunate_losers_of_our_history_desc:0 "Rehabilitate the Unfortunate Losers of Our History"
+ KOR_commemorate_the_past_ming_emperors:0 "Commemorate the Past Ming Emperors"
+ KOR_commemorate_the_past_ming_emperors_desc:0 "Commemorate the Past Ming Emperors"
+ KOR_the_hermit_kingdom:0 "The Hermit Kingdom"
+ KOR_the_hermit_kingdom_desc:0 "Peaceful and Stable Rule of Hermit Kingdom"
+ KOR_we_have_had_enough_of_purges:0 "We have had Enough of Purges..."
+ KOR_we_have_had_enough_of_purges_desc:0 "We have had Enough of Purges..."
+ KOR_reform_the_country:0 "Reform the Country"
+ KOR_reform_the_country_desc:0 "Reform the Country"
+ KOR_war_against_corruption:0 "War against Corruption"
+ KOR_war_against_corruption_desc:0 "War Against Corruption"
+ KOR_major_tax_reforms:0 "Major Tax Reforms"
+ KOR_major_tax_reforms_desc:0 "Major Tax Reforms"
+ KOR_prepare_for_war:0 "Prepare for War"
+ KOR_prepare_for_war_desc:0 "Prepare for War"
+ KOR_avenge_the_imjin_war:0 "Avenge the Imjin War"
+ KOR_avenge_the_imjin_war_desc:0 "Avenge the Imjin War"
+ KOR_avenge_the_byeongja_war:0 "Avenge the Byeongja War"
+ KOR_avenge_the_byeongja_war_desc:0 "Avenge the Byeongja War"
+ KOR_beginnings_of_peasant_rebellion:0 "Beginnings of Peasant Rebellion"
+ KOR_beginnings_of_peasant_rebellion_desc:0 "Beginnings of Peasent Rebellion"
+ 
+ # Decisions:
+ 
+ 
+ # Ideas:
+ KOR_ulbyeong_famine:0 "Ulbyeong Famine"
+ KOR_ulbyeong_famine_desc:0 "The recent Ulbyeong famine has devasted the country, and along with the Kyungshin famine in 1670, a large portion of our population have perished. The legitimacy of the Joseon Dynasty is in question, and something must be done to alleviate the situation."
+ KOR_path_of_neo_confucianism:0 "Path of Neo-Confucianism"
+ KOR_path_of_neo_confucianism_desc:0 "Neo-Confucianism is widely practiced within the Korean court."
+ KOR_factionalism_within_the_court:0 "Factionalism within the Court"
+ KOR_factionalism_within_the_court_desc:0 "Factions exist everywhere within the court, and each one is vying for power."
+ KOR_righteous_army:0 "Righteous Army"
+ KOR_endemic_regional_corruption:0 "Endemic Regional Corruption"
+ KOR_endemic_regional_corruption_desc:0 "Corruption is extremely high across the country, and something must be done if we wish to have a clean bureaucracy."
+ KOR_inefficiency_of_current_tax_system:0 "Inefficiency of Current Tax System"
+ KOR_inefficiency_of_current_tax_system_desc:0 "The current tax system is outdated and inefficient, which is heavily impacting the revenue we gain from taxes."
+ KOR_buddhist_warrior_monks:0 "Buddhist Warrior Monks"
+ KOR_extensive_trade_with_qing:0 "Extensive Trade with Qing"
+ KOR_extensive_trade_with_qing_desc:0 "The Qing are our only neighbours by land, and as such we have an extensive trading network with them."
+
+ # Traits:
+ KOR_vulnerable_king:0 "Vulnerable King"
+ KOR_passionate_reformer:0 "Passionate Reformer"
+
+ # Events:
+ korea.1.t:0 "Providing Food"
+ korea.1.d:0 "The entire country is suffering from the effects of the Ulbyeong famine. We will have to decide whether to distribute food or not, to alleviate the suffering of the peasants."
+ korea.1.a:0 "Buy food from Qing and provide substantial food aid til May."
+ korea.1.b:0 "Provide some spare food in January, but refrain from giving further aid."
+ korea.1.c:0 "We don't have anything left to provide."
+ korea.2.t:0 "The Matter of National Rituals"
+ korea.2.d:0 "The Matter of National Rituals"
+ korea.2.a:0 "Hold multiple rituals for rain and memorial rites for the dead. Also, release petty criminals to pray for the Sky's blessings."
+ korea.2.b:0 "Needless actions."
+ korea.3.t:0 "The Issues with Taxation"
+ korea.3.d:0 "The Matter of Taxation Issues"
+ korea.3.a:0 "Enact the Tax cuts."
+ korea.3.b:0 "Roll back the Tax cuts."
+ korea.4.t:0 "Rumors of Madam Jang's Misbehavior towards the Queen"
+ korea.4.d:0 "Rumors of Madam Jang's Misbehavior towards the Queen"
+ korea.4.a:0 "Conclude that the rumors are true and Madam Jang should be executed!"
+ korea.4.b:0 "Conclude that this is no more than just a rumor."
+
+ # Flags
+ KOR_fascism:0 "Taebong Kingdom"
+ KOR_fascism_DEF:0 "The Taebong Kingdom"
+ KOR_democratic:0 "Great Joseon" #TODO
+ KOR_democratic_DEF:0 "The Great Joseon" #TODO
+ KOR_communism:0 "Jang Kingdom"
+ KOR_communism_DEF:0 "The Jang Kindom"
+ KOR_neutrality:0 "Great Joseon"
+ KOR_neutrality_DEF:0 "The Great Joseon"
+ KOR_fascism_ADJ:0 "Taebong"
+ KOR_democratic_ADJ:0 "Joseon" #TODO
+ KOR_communism_ADJ:0 "Jangeon"
+ KOR_neutrality_ADJ:0 "Joseon"
+ # Flags:
+ 
+
+ # Tooltips:
+
+ # Opinion Modifiers:
+ KOR_likes_china:0 "Likes China"
+ 

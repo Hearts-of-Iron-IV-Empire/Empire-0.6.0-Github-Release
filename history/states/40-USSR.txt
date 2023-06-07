@@ -1,0 +1,33 @@
+
+state={
+	id=40
+	name="STATE_40" # Barnaul
+	manpower = 1107451
+	
+	state_category = large_town
+
+	history={
+		owner = KAZ
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		add_core_of = KAZ
+		1711.5.1 = {
+			owner = SOV
+			controller = SOV
+		}
+		1740.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+		}
+		victory_points = {
+			1794 1
+		}
+	}
+
+	provinces={
+		1297 1779 1794 1797 4803 7680 10537 10546 11410 12515 12528 12613 
+	}
+}

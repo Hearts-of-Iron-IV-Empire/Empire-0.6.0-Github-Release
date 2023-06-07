@@ -1,0 +1,319 @@
+add_namespace = ottomans
+
+# Sweden requests intervention against russia
+
+country_event = {
+	id = ottomans.2
+	title = ottomans.2.t
+	desc = ottomans.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Surely, they will be a walkover."
+		SWE = {
+			country_event = {
+				id = ottomans.3
+				days = 5
+			}
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = ROOT
+		}
+		add_war_support = 0.05
+	}
+	option = { 
+		name = "Intriguing request, but we need more time!"
+		SWE = {
+			country_event = {
+				id = ottomans.4
+				days = 5
+			}
+		}
+		add_ai_strategy = {
+			type = declare_war
+			id = "SOV"
+			value = 100
+		}
+		add_war_support = 0.05
+	}
+	option = { 
+		name = "We will not break our previous treaties!"
+		SWE = {
+			country_event = {
+				id = ottomans.5
+				days = 5
+			}
+		}
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = ottomans.3
+	title = ottomans.3.t
+	desc = ottomans.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "A toast to our new friends!"
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = ottomans.4
+	title = ottomans.4.t
+	desc = ottomans.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Let's hope they don't take too long!"
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = ottomans.5
+	title = ottomans.5.t
+	desc = ottomans.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { 
+		name = "Damn them!"
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = ottomans.10
+	title = ottomans.10.t
+	desc = ottomans.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Join the rebellion
+		name = ottomans.10.a
+		set_politics = {
+			ruling_party = aristocracy
+		}
+		delete_unit_template_and_units = {
+		    division_template = "Janissar Tümeni"
+		}
+		start_civil_war = {
+		    size = 0.5
+		    ideology = neutrality
+		    capital = 341
+		    add_ideas = TUR_engulved_in_civil_war
+		    load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+		}
+	}
+	option = { # Stand with old order
+		name = ottomans.10.b
+		delete_unit_template_and_units = {
+		    division_template = "Janissar Tümeni"
+		}
+		start_civil_war = {
+			size = 0.5
+			ideology = aristocracy
+			capital = 184
+			states = { 879 184 211 212 48 231 354 }
+			set_cosmetic_tag = TUR_jan
+			add_ideas = TUR_engulved_in_civil_war
+			load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+		}
+		TUR = {
+			create_country_leader = {
+				name = "Mustafa II"
+				picture = "gfx/leaders/TUR/Mustafa_II.dds"
+				ideology = despotism
+			}
+		}
+	}
+}
+
+#Ottomans demand morea
+
+country_event = {
+	id = ottomans.11
+	title = ottomans.11.t
+	desc = ottomans.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.11.a
+		TUR = {
+			country_event = {
+				id = ottomans.12
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = ottomans.11.b
+		TUR = {
+			country_event = {
+				id = ottomans.13
+				days = 5
+			}
+		}
+	}
+}
+#NOPE VENICE
+country_event = {
+	id = ottomans.12
+	title = ottomans.12.t
+	desc = ottomans.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.12.a
+		add_state_claim = 186
+		create_wargoal = {
+		    type = annex_everything
+		    target = VNC
+		}
+	}
+}
+#YES VENICE
+country_event = {
+	id = ottomans.13
+	title = ottomans.13.t
+	desc = ottomans.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.13.a
+		transfer_state = 186
+	}
+}
+#OTTOMANS SEND EQUIPMENT TO SWEDEN
+country_event = {
+	id = ottomans.14
+	title = ottomans.14.t
+	desc = ottomans.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.14.a
+	}
+}
+
+#georgian uprising
+
+country_event = {
+	id = ottomans.15
+	title = ottomans.15.t
+	desc = ottomans.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.15.a
+		add_timed_idea = {
+		    idea = TUR_janissary_payments
+		    days = 180
+		}
+	}
+
+	option = {
+		name = ottomans.15.b
+		TUR_decrease_loyalty = yes 
+	}
+}
+
+country_event = {
+	id = ottomans.16
+	title = ottomans.16.t
+	desc = ottomans.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.16.a
+		add_timed_idea = {
+		    idea = TUR_janissary_payments
+		    days = 180
+		}
+		TUR_increase_loyalty = yes
+	}
+
+	option = {
+		name = ottomans.16.b
+		TUR_decrease_loyalty = yes 
+		add_popularity = {
+		    ideology = aristocracy
+		    popularity = -0.05
+		} 
+	}
+}
+
+#remove revolt name
+
+country_event = {
+	id = ottomans.17
+	title = ottomans.17.t
+	desc = ottomans.17.d
+
+	fire_only_once = yes
+		trigger = {
+			original_tag = TUR
+			has_cosmetic_tag = TUR_jan
+			has_civil_war = no
+		}
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = ottomans.17.a
+		set_cosmetic_tag = TUR
+	}
+}
+
+# Poland and Russia want to peace out
+country_event = {
+	id = ottomans.18
+	title = ottomans.18.t
+	desc = ottomans.18.d
+	
+	fire_only_once = yes
+
+	option = {
+		name = ottomans.18.a
+		unlock_decision_category_tooltip = TUR_negotiating_peace
+		set_country_flag = tur_negotiating_peace
+		activate_mission = TUR_negotiating_peace_mission
+	}
+}
+
+# Treaty of Podolia
+country_event = {
+	id = ottomans.19
+	title = ottomans.19.t
+	desc = ottomans.19.d
+
+	picture = GFX_report_event_treaty
+	
+	fire_only_once = yes
+
+	option = {
+		name = ottomans.19.a
+		add_stability = 0.07
+		add_war_support = 0.07
+		add_political_power = 60
+	}
+}

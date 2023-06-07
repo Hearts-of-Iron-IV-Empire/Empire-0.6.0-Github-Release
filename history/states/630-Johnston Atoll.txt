@@ -1,0 +1,15 @@
+state=
+{
+	id=630
+	name="STATE_630"
+	manpower = 1
+	state_category = tiny_island
+
+	history={
+	owner = UNC
+	}
+	
+	provinces={
+		13051 	
+	}
+}

@@ -1,0 +1,1778 @@
+focus_tree = { 
+	id = saxony_focus
+
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 0
+			tag = SAX
+		}
+	}
+	continuous_focus_position = { x = 500 y = 2000 }
+
+	default = no	
+
+### AUGUST	
+	focus = {
+		id = SAX_organise_the_court
+		icon = GFX_focus_generic_monarchy_1
+		x = 17
+		y = 0
+		cost = 11
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = SAX_ruler_august
+		icon = GFX_focus_august
+		x = 8
+		y = 1
+		cost = 2
+
+		available = {
+			POL = {
+				has_completed_focus = POL_restructure_poland
+			}
+		}
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_organise_the_court }
+		mutually_exclusive = { focus = SAX_betrayed }
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.12
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = SAX_construct_goldener_reiter
+		icon = GFX_focus_goldener_reiter
+		x = 3
+		y = 4
+		cost = 10
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_expand_the_court }
+		completion_reward = {
+			65 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = SAX_limit_nobles_power
+		icon = GFX_focus_usa_voter_registration_act
+		x = 5
+		y = 2
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_ruler_august }
+
+
+		completion_reward = {
+			add_popularity = {
+				ideology = aristocracy
+				popularity = -0.13
+			}
+		}
+	}
+	focus = {
+		id = SAX_expand_the_court
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 5
+		y = 3
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_limit_nobles_power }
+
+
+		completion_reward = {
+			add_stability = 0.09
+			add_country_leader_trait = great_architect
+
+		}
+	}
+	focus = {
+		id = SAX_attract_people
+		icon = GFX_OTT_Tithe
+		x = 5
+		y = 4
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_expand_the_court }
+
+
+		completion_reward = {
+			add_timed_idea = {
+				idea = SAX_population_boom
+				days = 365
+			}
+		}
+	}
+	focus = {
+		id = SAX_expand_the_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		x = 4
+		y = 5
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_attract_people }
+
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}
+			884 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+				}
+			}	
+		}
+	}
+	focus = {
+		id = SAX_dont_forget_the_weapons
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 6
+		y = 5
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_attract_people }
+
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = SAX_develop_the_mines
+		icon = GFX_focus_generic_steel
+		x = 7
+		y = 2
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_ruler_august }
+
+
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 20
+				state = 65
+			}
+			add_resource = {
+				type = oil
+				amount = 5
+				state = 884
+			}
+		}
+	}
+	focus = {
+		id = SAX_produce_gold
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 7
+		y = 3
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_develop_the_mines }
+
+
+		completion_reward = {
+			country_event = saxony.1
+		}
+	}
+	focus = {
+		id = SAX_construct_meissner_porzelanfabrik
+		icon = GFX_focus_generic_industry_3
+		x = 7
+		y = 4
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_produce_gold }
+
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = SAX_spend_money_on_research
+		icon = GFX_focus_research
+		x = 8
+		y = 5
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_construct_meissner_porzelanfabrik }
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SAX_proclaim_a_golden_century
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = 6
+		y = 6
+		cost = 10
+
+		available = {
+
+		}
+
+		available_if_capitulated = yes
+	
+		prerequisite = { focus = SAX_spend_money_on_research }
+		prerequisite = { focus = SAX_dont_forget_the_weapons }
+		prerequisite = { focus = SAX_expand_the_infrastructure }
+
+		completion_reward = {
+			add_ideas = SAX_golden_century
+		}
+	}
+### GREAT NORTHERN WAR
+	focus = {
+		id = SAX_the_northern_war
+		icon = GFX_sweden_flag
+		x = 11
+		y = 2
+		cost = 1
+
+		available = {
+			has_war_with = SWE
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_ruler_august }
+
+
+		completion_reward = {
+			add_war_support = 0.15
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = SAX_mobilize_man
+		icon = GFX_focus_generic_little_entente
+		x = 9
+		y = 3
+		cost = 10
+
+		available = {
+			has_war_with = SWE
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_the_northern_war }
+
+
+		completion_reward = {
+			add_manpower = 15000
+		}
+	}
+	focus = {
+		id = SAX_hire_swiss_mercenaries
+		icon = GFX_focus_swiss_mercenaries
+		x = 9
+		y = 4
+		cost = 10
+
+		available = {
+			has_war_with = SWE
+		}
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_mobilize_man }
+
+
+		completion_reward = {
+			add_timed_idea = { idea = SAX_recent_payments days = 100 }
+			load_oob = SWI_1699
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = SAX_buy
+		icon = GFX_goal_tripartite_pact
+		x = 13
+		y = 3
+		cost = 3
+
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_the_northern_war }
+
+
+		completion_reward = {
+			add_political_power = 10
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = SAX_guns_from_russia
+		icon = GFX_focus_rus_guns
+		x = 11
+		y = 4
+		cost = 10
+
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_buy }
+		mutually_exclusive = { focus = SAX_horses_from_poland }
+		mutually_exclusive = { focus = SAX_artillery_from_venice }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = SOV
+			}
+			add_opinion_modifier = { target = SOV modifier = small_increase }
+		}
+	}
+	focus = {
+		id = SAX_horses_from_poland
+		icon = GFX_focus_pol_polish_king
+		x = 13
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_buy }
+		mutually_exclusive = { focus = SAX_artillery_from_venice }
+		mutually_exclusive = { focus = SAX_guns_from_russia }
+
+		completion_reward = {
+#			add_equipment_to_stockpile = {
+#				type = cavalry
+#				amount = 500
+#				producer = POL
+#			}
+			add_opinion_modifier = { target = POL modifier = small_increase }
+
+		}
+	}
+	focus = {
+		id = SAX_artillery_from_venice
+		icon = GFX_venice
+		x = 15
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_buy }
+		mutually_exclusive = { focus = SAX_horses_from_poland }
+		mutually_exclusive = { focus = SAX_guns_from_russia }
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = artillery_equipment_1
+				amount = 800
+				producer = VNC
+			}
+			add_opinion_modifier = { target = VNC modifier = small_increase }
+
+		}
+	}
+### Betrayed	
+	focus = {
+		id = SAX_betrayed
+		icon = GFX_focus_rom_abdicate
+		x = 26
+		y = 1
+		cost = 2
+
+		available = {
+			POL = {
+				has_completed_focus = POL_depose_august
+			}
+		}
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_organise_the_court }
+		mutually_exclusive = { focus = SAX_ruler_august }
+	
+		completion_reward = {
+			add_stability = -0.35
+			remove_ideas = SAX_polish_leash_dog
+			country_event = saxony.2
+			end_puppet = SAX
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+### AUGUST
+	focus = {
+		id = SAX_ruler_Jakob_Heinrich #he was the leader of the saxon army
+		icon = GFX_focus_Jacob_Heinrich	#when august is deposed he is already in saxony and has the army on his side so he starts a coup aggainst him
+		x = 18
+		y = 3
+		cost = 1
+
+		available = {
+			always = no
+		}
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_betrayed }
+	
+		completion_reward = {
+			set_party_name = { 
+				ideology = aristocracy
+				long_name = "House of Flemming" 
+				name = "house of flemming"
+			}
+			set_politics = {
+				ruling_party = aristocracy
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+			}
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.25
+			}
+			news_event = mod.29
+		}
+	}
+	focus = {
+		id = SAX_earn_legitimacy
+		icon = GFX_focus_generic_monarchy_2
+		x = 17
+		y = 4
+		cost = 10
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_ruler_Jakob_Heinrich }
+	
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = SAX_low_legitimacy
+				add_idea = SAX_medium_legitimacy
+			}
+		}
+	}
+	focus = {
+		id = SAX_spent_money_for_support
+		icon = GFX_money
+		x = 19
+		y = 4
+		cost = 5
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_ruler_Jakob_Heinrich }
+	
+		completion_reward = {
+			add_timed_idea = { idea = SAX_recent_payments days = 100 }
+		}
+	}
+	focus = {
+		id = SAX_bribe_the_court
+		icon = GFX_goal_generic_military_deal
+		x = 18
+		y = 5
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_earn_legitimacy }
+		prerequisite = {focus = SAX_spent_money_for_support }
+		completion_reward = {
+			add_political_power = -100
+			remove_ideas = SAX_medium_legitimacy
+		}
+	}
+	focus = {
+		id = SAX_position_secured
+		icon = GFX_goal_generic_military_sphere
+		x = 18
+		y = 6
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_bribe_the_court }
+		completion_reward = {
+			add_stability = 0.2
+		}
+	}
+	focus = {
+		id = SAX_focus_on_research
+		icon = GFX_focus_research
+		x = 16
+		y = 9
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_build_a_weapon_factory }
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = SAX_build_a_weapon_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 16
+		y = 8
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_focus_resources }
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = SAX_expand_saxony
+		icon = GFX_focus_SAX_expand
+		x = 14
+		y = 7
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_position_secured }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ANH }
+			create_wargoal = { type = annex_everything target = THU }
+		}
+	}
+	focus = {
+		id = SAX_expand_it_even_more
+		icon = GFX_focus_SAX_expand_more
+		x = 14
+		y = 8
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_expand_saxony }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = BSG }
+		}
+	}
+	focus = {
+		id = SAX_focus_resources
+		icon = GFX_goal_generic_construction2
+		x = 16
+		y = 7
+		cost = 10
+
+
+
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_position_secured }
+		completion_reward = {
+			add_resource = {
+				type = steel
+				amount = 15
+				state = 65
+			}
+			add_resource = {
+				type = oil
+				amount = 10
+				state = 884
+			}
+		}
+	}
+	focus = {
+		id = SAX_befriend_prussia
+		icon = GFX_focus_crown_of_prussia
+		x = 18
+		y = 7
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_position_secured }
+		mutually_exclusive = { focus = SAX_rival_prussia }
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = huge_increase }
+			give_military_access = PRS
+		}
+	}
+	focus = {
+		id = SAX_hire_prussian_adivsors
+		icon = GFX_goal_generic_major_alliance
+		x = 18
+		y = 8
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_befriend_prussia }
+		completion_reward = {
+			add_ideas = SAX_PRU_advisors
+		}
+	}
+	focus = {
+		id = SAX_and_buy_some_weapons
+		icon = GFX_focus_generic_diplomatic_treaty
+		x = 18
+		y = 9
+		cost = 7
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_hire_prussian_adivsors }
+		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2500
+				producer = PRS
+			}
+
+		}
+	}
+	focus = {
+		id = SAX_ask_for_a_gurantee
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = 18
+		y = 10
+		cost = 7
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_and_buy_some_weapons }
+		completion_reward = {
+			PRS = { give_guarantee = SAX }
+		}
+	}
+	focus = {
+		id = SAX_strike_at_the_emperor
+		icon = GFX_defender_of_the_faith
+		x = 18
+		y = 11
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_ask_for_a_gurantee }
+
+		completion_reward = {
+			set_rule = {
+				can_create_factions = yes
+			}
+			declare_war_on = {
+				target = AUS
+			}
+			PRS = {
+				declare_war_on = {
+					target = AUS
+				}
+			}
+		}
+	}
+### ANGER PRUSSIA
+	focus = {
+		id = SAX_rival_prussia
+		icon = GFX_goal_rival_PRS
+		x = 22
+		y = 7
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_position_secured }
+		mutually_exclusive = { focus = SAX_befriend_prussia }
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = large_decrease }
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	focus = {
+		id = SAX_block_their_diplomats
+		icon = GFX_goal_generic_political_pressure
+		x = 21
+		y = 8
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_rival_prussia }
+		completion_reward = {
+			add_opinion_modifier = { target = PRS modifier = large_decrease }
+			add_stability = -0.07
+		}
+	}	
+	focus = {
+		id = SAX_claim_their_land
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 23
+		y = 8
+		cost = 10
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_rival_prussia }
+		completion_reward = {
+			add_state_claim = 64
+			add_state_claim = 68
+			add_state_claim = 63
+		}
+	}
+	focus = {
+		id = SAX_look_for_enemies_of_prussia
+		icon = GFX_goal_continuous_increase_nu
+		x = 22
+		y = 9
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_block_their_diplomats }
+		prerequisite = { focus = SAX_claim_their_land }
+		completion_reward = {
+			add_opinion_modifier = { target = ENG modifier = medium_increase }
+			add_opinion_modifier = { target = FRA modifier = medium_increase }
+			add_opinion_modifier = { target = SWE modifier = medium_increase }
+
+		}
+	}
+	focus = {
+		id = SAX_join_the_swedish_sphere
+		icon = GFX_sweden_flag
+		x = 20
+		y = 10
+		cost = 5
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_look_for_enemies_of_prussia }
+		mutually_exclusive = { focus = SAX_join_the_grand_alliance }
+		mutually_exclusive = { focus = SAX_join_the_bourbon_sphere }
+		completion_reward = {
+			SWE = { country_event = generic.2 }
+		}
+	}
+	focus = {
+		id = SAX_join_the_grand_alliance
+		icon = GFX_focus_eng_faction
+		x = 22
+		y = 10
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_look_for_enemies_of_prussia }
+		mutually_exclusive = { focus = SAX_join_the_swedish_sphere }
+		mutually_exclusive = { focus = SAX_join_the_bourbon_sphere }
+		completion_reward = {
+			ENG = { country_event = generic.2 }
+		}
+	}
+	focus = {
+		id = SAX_join_the_bourbon_sphere
+		icon = GFX_france_kingdom
+		x = 24
+		y = 10
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_look_for_enemies_of_prussia }
+		mutually_exclusive = { focus = SAX_join_the_swedish_sphere }
+		mutually_exclusive = { focus = SAX_join_the_grand_alliance }
+		completion_reward = {
+			FRA = { country_event = generic.2 }
+		}
+	}
+	focus = {
+		id = SAX_strike_at_prussia
+		icon = GFX_focus_destroy_prussia
+		x = 22
+		y = 11
+		cost = 5
+
+
+		
+		available_if_capitulated = yes
+
+		prerequisite = { focus = SAX_join_the_swedish_sphere focus = SAX_join_the_grand_alliance focus = SAX_join_the_bourbon_sphere }
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = PRS }			
+		}
+	}
+
+### PRUSSIA
+focus = {
+	id = SAX_PRU_marches_in
+	icon = GFX_focus_crown_of_prussia
+	x = 26
+	y = 3
+	cost = 5
+
+	available = {
+		always = no
+	}
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_betrayed }
+	completion_reward = {
+		PRS = { puppet = SAX }
+		create_country_leader = {
+			name = "Frederick I von Hohenzollern"
+			desc = ""
+			picture = "frederick_hohenzollern.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {	
+			}
+		}
+		set_party_name = { 
+			ideology = neutrality
+			long_name = "House of Hohenzollern" 
+			name = "house of hohenzollern"
+		}
+		set_politics = {
+			ruling_party = neutrality
+				elections_allowed = no
+				last_election = "1935.12.17"
+				election_frequency = 48
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.30
+		}
+		news_event = mod.30
+	}
+
+}
+focus = {
+	id = SAX_station_troops_here
+	icon = GFX_focus_ger_return_of_the_kaiser
+	x = 25
+	y = 5
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_PRU_marches_in }
+	completion_reward = {
+		add_stability = -0.06
+		add_war_support = 0.04
+	}
+}
+focus = {
+	id = SAX_hire_saxon_volunteers
+	icon = GFX_focus_generic_little_entente
+	x = 24
+	y = 6
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_station_troops_here }
+	completion_reward = {
+		PRS = { add_manpower = 20000 }
+		add_manpower = -20000
+	}
+}
+focus = {
+	id = SAX_militarize_the_land
+	icon = GFX_focus_generic_military_mission
+	x = 24
+	y = 7
+	cost = 10
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_hire_saxon_volunteers }
+	completion_reward = {
+		65 = {
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+}
+focus = {
+	id = SAX_connect_the_roads
+	icon = GFX_goal_generic_construct_infrastructure
+	x = 26
+	y = 6
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_station_troops_here }
+	completion_reward = {
+		884 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+			}
+		}
+		65 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+			}
+		}
+	}
+}
+focus = {
+	id = SAX_search_for_resources
+	icon = GFX_goal_generic_construction2
+	x = 26
+	y = 7
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_connect_the_roads }
+	completion_reward = {
+		add_resource = {
+			type = steel
+			amount = 17
+			state = 65
+		}
+		add_resource = {
+			type = oil
+			amount = 4
+			state = 884
+		}
+	}
+}
+focus = {
+	id = SAX_fill_the_papers_for_unification
+	icon = GFX_focus_hol_the_foundations_of_defense
+	x = 25
+	y = 8
+	cost = 11
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_search_for_resources }
+	prerequisite = { focus = SAX_militarize_the_land }
+	completion_reward = {
+		PRS = { 
+			add_state_core = 65
+			add_state_core = 884
+			add_state_core = 973
+			add_state_core = 974
+			add_state_core = 975
+		}
+	}
+}
+focus = {
+	id = SAX_unite_with_Prussia
+	icon = GFX_focus_SAX_PRS_union
+	x = 27
+	y = 9
+	cost = 7
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_fill_the_papers_for_unification }
+	prerequisite = { focus = SAX_unite_with_the_people focus = SAX_resistance_no_more }
+	completion_reward = {
+		PRS = { annex_country = { target = SAX}
+		}
+		news_event = mod.28
+	}
+}
+### AUSTRIA
+focus = {
+	id = SAX_AUS_marches_in
+	icon = GFX_field_gun
+	x = 34
+	y = 3
+	cost = 5
+
+	available = {
+		always = no
+	}
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_betrayed }
+	completion_reward = {
+		add_stability = 0.2
+		AUS = { puppet = SAX }
+		create_country_leader = {
+			name = "Leopold I"
+			desc = ""
+			picture = "leopold_I.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {			
+			}
+		}
+		set_party_name = { 
+			ideology = neutrality
+			long_name = "House of Habsburg" 
+			name = "house of Habsburg"
+		}
+		set_politics = {
+			ruling_party = neutrality
+				elections_allowed = no
+				last_election = "1935.12.17"
+				election_frequency = 48
+		}
+		add_popularity = {
+			ideology = neutrality
+			popularity = 0.3
+		}
+		add_ideas = SAX_high_resistance #event
+		news_event = mod.31
+	}
+}
+focus = {
+	id = SAX_bring_the_court_under_control
+	icon = GFX_focus_spr_masters_of_our_own_fate
+	x = 34
+	y = 5
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_AUS_marches_in }
+	completion_reward = {
+		add_stability = 0.1
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+focus = {
+	id = SAX_take_their_stuff
+	icon = GFX_focus_spr_class_war
+	x = 35
+	y = 6
+	cost = 12
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_bring_the_court_under_control }
+	completion_reward = {
+		add_stability = -0.08
+		swap_ideas = {
+			remove_idea = SAX_high_developed_region
+			add_idea = SAX_medium_developed_region
+		}
+		65 = {
+			remove_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		AUS = {
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+focus = {
+	id = SAX_take_skilled_workers
+	icon = GFX_focus_generic_military_academy
+	x = 33
+	y = 6
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_bring_the_court_under_control }
+	completion_reward = {
+		country_event = saxony.3
+		add_stability = -0.15
+		AUS = { add_manpower = 50000 }
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+focus = {
+	id = SAX_convert_them
+	icon = GFX_no_protestants
+	x = 34
+	y = 7
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_take_skilled_workers }
+	prerequisite = { focus = SAX_take_their_stuff }
+	completion_reward = {
+		swap_ideas = {
+		    remove_idea = protestant
+		    add_idea = catholic 
+		}
+		add_stability = -0.35
+		country_event = saxony.4
+	}
+	ai_will_do = {
+		factor = 100
+	}
+}
+focus = {
+	id = SAX_Leopold_is_your_king
+	icon = GFX_focus_rom_royal_dictatorship
+	x = 33
+	y = 9
+	cost = 5
+
+
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_convert_them }
+	prerequisite = { focus = SAX_unite_with_the_people focus = SAX_resistance_no_more }
+	completion_reward = {
+		add_political_power = 50
+		add_stability = 0.05
+		country_event = saxony.6
+	}
+}
+focus = {
+	id = SAX_saxony_pacified
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = 31
+	y = 10
+	cost = 5
+
+	available = {
+		NOT = {
+		owns_state = 975
+		}
+	}
+	
+	available_if_capitulated = yes
+
+	prerequisite = { focus = SAX_Leopold_is_your_king }
+	completion_reward = {
+			delete_unit_template_and_units = { division_template = "Sächsische Revoultionshorde" }
+		add_stability = 0.3
+	}
+}
+### SAXON RESISTANCE
+focus = {
+	id = SAX_ally_with_locals
+	icon = GFX_goal_generic_national_unity
+	x = 29
+	y = 5
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	mutually_exclusive = { focus = SAX_attack_the_resistance	}
+	prerequisite = { focus = SAX_PRU_marches_in  focus = SAX_AUS_marches_in }
+	completion_reward = {
+		add_manpower = 1300
+	}
+	ai_will_do = {
+		modifier = {
+			factor = 100
+			has_completed_focus = SAX_PRU_marches_in
+		}
+	}
+}
+focus = {
+	id = SAX_repair_the_houses
+	icon = GFX_goal_continuous_repairments
+	x = 29
+	y = 6
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_ally_with_locals }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SAX_high_resistance
+			add_idea = SAX_medium_resistance
+		}
+	}
+
+}
+focus = {
+	id = SAX_make_them_gifts
+	icon = GFX_goal_generic_intelligence_exchange
+	x = 29
+	y = 7
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_repair_the_houses }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SAX_medium_resistance
+			add_idea = SAX_low_resistance
+		}
+	}
+
+}
+focus = {
+	id = SAX_unite_with_the_people
+	icon = GFX_goal_generic_national_unity
+	x = 29
+	y = 8
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_make_them_gifts }
+	completion_reward = {
+		remove_ideas = SAX_low_resistance
+	}
+
+}
+focus = {
+	id = SAX_attack_the_resistance
+	icon = GFX_goal_continuous_suppression
+	x = 31
+	y = 5
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	mutually_exclusive = { focus = SAX_ally_with_locals	}
+	prerequisite = { focus = SAX_PRU_marches_in  focus = SAX_AUS_marches_in }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SAX_high_resistance
+			add_idea = SAX_medium_resistance
+		}
+		add_stability = -0.1
+	}
+	ai_will_do = {
+		modifier = {
+			factor = 100
+			has_completed_focus = SAX_AUS_marches_in
+		}
+	}
+}
+focus = {
+	id = SAX_hire_spies
+	icon = GFX_goal_generic_dangerous_deal
+	x = 31
+	y = 6
+	cost = 5
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_attack_the_resistance }
+	completion_reward = {
+		add_stability = 0.1
+		add_political_power = -20
+		add_decryption = {
+			target = SAX
+			amount = 10
+		}
+	}
+}
+focus = {
+	id = SAX_hunt_them_down
+	icon = GFX_focus_spr_crush_the_revolution
+	x = 31
+	y = 7
+	cost = 5
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_hire_spies }
+	completion_reward = {
+		swap_ideas = {
+			remove_idea = SAX_medium_resistance
+			add_idea = SAX_low_resistance
+		}
+	}
+}
+focus = {
+	id = SAX_resistance_no_more
+	icon = GFX_focus_eng_move_to_secure_the_dominions
+	x = 31
+	y = 8
+	cost = 10
+
+
+	
+	available_if_capitulated = yes
+	prerequisite = { focus = SAX_hunt_them_down }
+	completion_reward = {
+		remove_ideas = SAX_low_resistance
+	}
+}
+### ARMY FOCUS
+	focus = {
+		id = SAX_army
+		icon = GFX_goal_generic_allies_build_infantry
+		x = 40
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+		available = {
+			OR = {
+			has_completed_focus = SAX_ruler_august
+			has_completed_focus = SAX_position_secured
+			has_completed_focus = SAX_Leopold_is_your_king
+			has_war_with = AUS
+			has_war_with = SWE
+			}
+		}
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SAX_reseach_in_weapons
+		icon = GFX_focus_focus_fra_maquis
+		x = 37
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_army }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = SAX_organise_the_lines
+		icon = GFX_focus_chi_army_reform
+		x = 40
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_army }
+		bypass = {
+			has_completed_focus = SAX_rival_prussia
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+	focus = {
+		id = SAX_defensive_army
+		icon = GFX_goal_generic_position_armies
+		x = 39
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_organise_the_lines }
+		mutually_exclusive = { focus = SAX_offensive_army }
+
+		completion_reward = {
+			add_ideas = SAX_defensive_army
+		}
+	}
+	focus = {
+		id = SAX_offensive_army
+		icon = GFX_goal_generic_small_arms
+		x = 41
+		y = 2
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_organise_the_lines }
+		mutually_exclusive = { focus = SAX_defensive_army }
+
+		completion_reward = {
+			add_ideas = SAX_offensive_army
+		}
+	}
+	focus = {
+		id = SAX_force_recruitment
+		icon = GFX_focus_prc_infiltration
+		x = 40
+		y = 3
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_defensive_army focus = SAX_offensive_army }
+
+		completion_reward = {
+			add_manpower = 4130
+			add_stability = -0.09
+		}
+	}
+	focus = {
+		id = SAX_research_in_artillery
+		icon = GFX_goal_generic_army_artillery
+		x = 43
+		y = 1
+		cost = 7
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_army }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = artillery_equipment_1
+				bonus = 1.0
+				uses = 1
+				category = artillery
+			}
+		}
+	}
+
+### Revolution succeeds
+	focus = {
+		id = SAX_revolution_succeeds
+		icon = GFX_focus_por_workers_of_iberia
+		x = 37
+		y = 10
+		cost = 10
+
+		available = {
+			owns_state = 975
+			NOT = { has_war_with = AUS }
+		}
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_Leopold_is_your_king }
+		
+		completion_reward = {
+			delete_unit_template_and_units = { division_template = "Sächsische Revoultionshorde" }
+			add_timed_idea = {
+				idea = SAX_AUS_war_reparations 
+				days = 365 
+			}
+			AUS = { 
+				add_timed_idea = {
+					idea = AUS_SAX_war_reparations 
+					days = 365 
+				}
+			}
+			add_stability = 0.45
+		}
+	}
+	focus = {
+		id = SAX_reorganise_the_leadership
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 37
+		y = 11
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_revolution_succeeds }
+
+		completion_reward = {
+			country_event = saxony.5
+			create_country_leader = {
+				name = "Saxon Peoples Council"
+				desc = ""
+				picture = "saxon_people_leader.dds"
+				expire = "1965.1.1"
+				ideology = anarchist_communism
+				traits = {	
+				}
+			}
+		}
+	}
+# Revolution Politics
+	focus = {
+		id = SAX_support_the_trapped_people
+		icon = GFX_focus_spr_crush_the_revolution
+		x = 35
+		y = 12
+		cost = 8
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_reorganise_the_leadership }
+
+		completion_reward = {
+			ANH = { 
+				add_popularity = {
+					ideology = communism
+					popularity = 0.20
+				}
+			}
+			BSG = { 
+				add_popularity = {
+					ideology = communism
+					popularity = 0.10
+				}
+			}
+			THU = { 
+				add_popularity = {
+					ideology = communism
+					popularity = 0.10
+				}
+			}
+			AUS = { 
+				add_popularity = {
+					ideology = communism
+					popularity = 0.15
+				}
+			}
+			PRS = { 
+				add_popularity = {
+					ideology = communism
+					popularity = 0.08
+				}
+			}
+		}
+	}
+	focus = {
+		id = SAX_rescue_our_neightbours
+		icon = GFX_goal_generic_war_with_comintern 
+		x = 35
+		y = 13
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_support_the_trapped_people }
+
+		completion_reward = {
+			create_wargoal = { type = annex_everything target = ANH }
+			create_wargoal = { type = annex_everything target = BSG }
+			create_wargoal = { type = annex_everything target = THU }
+
+		}
+	}
+	focus = {
+		id = SAX_liberate_as_many_as_we_can
+		icon = GFX_focus_spr_anarchism_knows_no_borders
+		x = 35
+		y = 14
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_rescue_our_neightbours }
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = neutrality
+					NOT = { is_in_faction_with = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						target = PREV
+						type = puppet_wargoal_focus
+						expire = 0
+					}
+				}
+			}
+		}
+	}
+# Revolution Economy
+	focus = {
+		id = SAX_land_for_everyone
+		icon = GFX_goal_generic_neutrality_focus
+		x = 39
+		y = 12
+		cost = 10
+
+		available_if_capitulated = yes
+		prerequisite = { focus = SAX_reorganise_the_leadership }
+
+		completion_reward = {
+			add_ideas = SAX_land_reform
+			country_event = saxony.10
+		
+		}
+	}
+
+	focus = {
+		id = SAX_weapons_for_the_revolution
+		icon = GFX_goal_generic_small_arms
+		x = 39
+		y = 13
+		cost = 7
+
+		available_if_capitulated = yes
+		prerequisite = {focus = SAX_land_for_everyone }
+
+		completion_reward = {
+			65 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			973 = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			
+		}
+	}
+}

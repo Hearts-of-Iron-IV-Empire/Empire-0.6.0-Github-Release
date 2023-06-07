@@ -1,0 +1,14 @@
+characters = {
+    CRE_Tahlonteeskee = {
+        name = "Tahlonteeskee"
+        portraits = {
+            civilian = {
+                large = "GFX_generic_north_american_leader_14"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

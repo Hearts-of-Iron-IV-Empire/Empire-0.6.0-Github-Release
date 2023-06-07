@@ -1,0 +1,429 @@
+﻿division_template = {
+	name = "Ahadis"
+	priority = 2
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Banduqchis"			
+	priority = 0
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+        irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+        irregular_infantry = { x = 2 y = 0 }
+		irregular_infantry = { x = 2 y = 1 }
+	}
+}
+division_template = {
+	name = "Sowars"
+	priority = 2 
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+	}
+}
+
+
+####### OOB #######
+units = {
+	############################
+	##### Northern Command #####
+	############################
+	
+	division= {	# "Shahjahanbad"
+		name = "Emperor's Guards"
+		location = 2086
+		division_template = "Ahadis"
+		start_experience_factor = 0.3
+	}
+	division= {	# "Shahjahanbad"
+		name = "Emperor's Guards"
+		location = 2086
+		division_template = "Ahadis"
+		start_experience_factor = 0.3
+	}
+	division= {	# "Shahjahanbad"
+		name = "Emperor's Guards"
+		location = 2086
+		division_template = "Ahadis"
+		start_experience_factor = 0.3
+	}
+	
+	############################
+	##### Southern Command #####
+	############################
+
+	##### Maratha Front #####
+
+	division= {	# "Near Satara"
+		name = "Banduqchis"
+		location = 12295
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Satara"
+		name = "Banduqchis"
+		location = 12295
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Satara"
+		name = "Banduqchis"
+		location = 12295
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 7250
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 7250
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 7250
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 10210
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 10210
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 10210
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 13289
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 13289
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 13289
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 1412
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 1412
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Panhala"
+		name = "Banduqchis"
+		location = 1412
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Aurangabad"
+		name = "Banduqchis"
+		location = 13297
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.6
+	}
+	division= {	# "Near Aurangabad"
+		name = "Banduqchis"
+		location = 13297
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.6
+	}
+	division= {	# "Near Aurangabad"
+		name = "Banduqchis"
+		location = 13297
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.6
+	}
+	division= {	# "Pune"
+		name = "Banduqchis"
+		location = 13299
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Pune"
+		name = "Banduqchis"
+		location = 13299
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Pune"
+		name = "Banduqchis"
+		location = 13299
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 12142
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 12142
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 4072
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 4072
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Near Surat"
+		name = "Sowars"
+		location = 7150
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Near Surat"
+		name = "Sowars"
+		location = 7150
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+
+	##### End of Maratha Front #####
+
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 8087
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Hyderabad"
+		name = "Sowars"
+		location = 8087
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Aurangabad"
+		name = "Sowars"
+		location = 10019
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Aurangabad"
+		name = "Sowars"
+		location = 10019
+		division_template = "Sowars"
+		start_experience_factor = 0.8
+	}
+	division= {	# "Gingee"
+		name = "Banduqchis"
+		location = 7436
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Gingee"
+		name = "Banduqchis"
+		location = 7436
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Gingee"
+		name = "Banduqchis"
+		location = 7436
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Gingee"
+		name = "Banduqchis"
+		location = 7436
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 1344
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 1344
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 4420
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 4420
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 1268
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Near Gingee"
+		name = "Banduqchis"
+		location = 1268
+		division_template = "Banduqchis"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Masulipatam"
+		name = "Banduqchis"
+		location = 4321
+		division_template = "Banduqchis"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+	division= {	# "Masulipatam"
+		name = "Banduqchis"
+		location = 1228
+		division_template = "Banduqchis"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+	division= {	# "Masulipatam"
+		name = "Banduqchis"
+		location = 10897
+		division_template = "Banduqchis"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.4
+	}
+}
+
+##### Starting Production #####
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "RAJ"
+		}
+		requested_factories = 7
+		progress = 0.12
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = basic_cavalry_equipment
+			creator = "RAJ"
+		}
+		requested_factories = 3
+		progress = 0.12
+		efficiency = 100
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 3000
+		producer = RAJ
+	}
+	add_equipment_to_stockpile = {
+		type = basic_cavalry_equipment
+		amount = 1200
+	}
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 600
+		producer = RAJ
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 600
+		producer = RAJ
+	}
+}

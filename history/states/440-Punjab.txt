@@ -1,0 +1,25 @@
+
+state={
+	id=440
+	name="STATE_440"
+
+	history={
+		victory_points = {
+			10887 20 
+		}
+		owner = RAJ
+		buildings = {
+			infrastructure = 3
+
+		}
+
+	}
+
+	provinces={
+		1129 2076 4979 7106 8022 8106 9084 10173 10887 12005 12708 12754 12822 13347 
+	}
+	manpower=6665000
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

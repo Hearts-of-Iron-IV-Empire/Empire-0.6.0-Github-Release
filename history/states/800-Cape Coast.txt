@@ -1,0 +1,24 @@
+state={
+	id=800
+	name="STATE_800"
+	provinces={
+		10862 12742 
+	}
+
+	history={
+		owner = HOL
+		buildings = {
+			infrastructure = 1
+			12742 = {
+				naval_base = 1
+			}
+			10862 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	manpower=4201
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=364
+	name="STATE_364"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			7202 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = USA
+		victory_points = {
+			7202 1 
+		}
+		1760.1.1 = {
+			add_manpower = 85000
+
+		}
+
+	}
+
+	provinces={
+		1547 7202 10047 11927 
+	}
+	manpower=4600
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

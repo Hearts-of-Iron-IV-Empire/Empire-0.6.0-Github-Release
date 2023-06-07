@@ -1,0 +1,27 @@
+state={
+	id=928
+	name="STATE_928"
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 1
+			12883 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = TUR
+		add_core_of = SAU
+		victory_points = {
+			12883 3
+		}
+
+	}
+	provinces={
+		12883 
+	}
+	manpower=16845
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

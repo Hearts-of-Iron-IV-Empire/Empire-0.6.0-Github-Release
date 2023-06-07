@@ -1,0 +1,90 @@
+characters = {
+    MUG_Aurangzeb = {
+        name = "Aurangzeb"
+        portraits = {
+            civilian = {
+                large = "GFX_Aurangzeb"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = { integral_leader }
+            desc = AURANGZEB_DESC
+        }
+    }
+    MUG_Asaf_Jah_I = {
+        name = "Asaf Jah I"
+        portraits = {
+            army = {
+                large = "GFX_Asaf_Jah_I"
+            }
+        }
+        field_marshal = {
+            skill = 3
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    MUG_Ajit_Singh = {
+        name = "Ajit Singh"
+        portraits = {
+            army = {
+                large = "GFX_Ajit_Singh"
+            }
+        }
+        corps_commander = {
+            skill = 4
+            attack_skill = 4
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    MUG_Daud_Khan = {
+        name = "Daud Khan"
+        portraits = {
+            army = {
+                large = "GFX_Daud_Khan"
+            }
+        }
+        corps_commander = {
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    MUG_Kam_Baksh = {
+        name = "Kam Baksh"
+        portraits = {
+            army = {
+                large = "GFX_Kam_Baksh"
+            }
+        }
+        corps_commander = {
+            skill = 4
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+    MUG_Zulfiqar_Khan = {
+        name = "Zulfiqar Khan"
+        portraits = {
+            army = {
+                large = "GFX_Zulfiqar_Khan"
+            }
+        }
+        corps_commander = {
+            skill = 2
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+}

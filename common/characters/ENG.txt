@@ -1,0 +1,237 @@
+characters = {
+    ENG_William_III = {
+        name = "William III"
+        portraits = {
+            civilian = {
+                large = "GFX_William_III"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = nobility
+            traits = {
+            }
+        }
+    }
+    ENG_Queen_Anne = {
+        name = "Queen Anne"
+        portraits = {
+            civilian = {
+                large = "GFX_Queen_Anne"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {	
+                inexperienced_monarch
+            }
+        }
+    }
+    ENG_George_I = {
+        name = "George I"
+        portraits = {
+            civilian = {
+                large = "GFX_George_I"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    ENG_George_II = {
+        name = "George II"
+        portraits = {
+            civilian = {
+                large = "GFX_George_II"
+            }
+        }
+        country_leader = {
+            expire = 1764.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    ENG_George_III = {
+        name = "George III"
+        portraits = {
+            civilian = {
+                large = "GFX_George_III"
+            }
+        }
+        country_leader = {
+            expire = 1820.6.11
+            ideology = despotism
+            traits = {
+            }
+        }
+    }
+    ENG_John_Campbell = {
+        name = "John Campbell"
+        portraits = {
+            army = {
+                large = "GFX_John_Campbell"
+            }
+        }
+        field_marshal = {
+            traits = { logistics_wizard offensive_doctrine organizer }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+        } 
+    }
+    ENG_William_Cadogan = {
+        name = "William Cadogan"
+        portraits = {
+            army = {
+                large = "GFX_William_Cadogan"
+            }
+        }
+        corps_commander = {
+            traits = { inflexible_strategist career_officer }
+            skill = 5
+            attack_skill = 3
+            defense_skill = 5
+            planning_skill = 3
+            logistics_skill = 5
+        } 
+    }
+    ENG_John_Cutts = {
+        name = "John Cutts"
+        portraits = {
+            army = {
+                large = "GFX_John_Cutts"
+            }
+        }
+        corps_commander = {
+            traits = { inflexible_strategist armor_officer politically_connected  }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        } 
+    }
+    ENG_William_Evans = {
+        name = "William Evans"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Europe_Generic_land_1"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 1
+            planning_skill = 4
+            logistics_skill = 4
+        } 
+    }
+    ENG_William_Kerr = {
+        name = "William Kerr"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Europe_Generic_land_2"
+            }
+        }
+        corps_commander = {
+            traits = { trickster war_hero }
+            skill = 5
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 5
+        } 
+    }
+    ENG_John_Churchill = {
+        name = "John Churchill"
+        portraits = {
+            army = {
+                large = "GFX_John_Churchill"
+            }
+        }
+        corps_commander = {
+            traits = { ENG_whig_sympathiser }
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 4
+            logistics_skill = 3
+        } 
+    }
+    ENG_George_Hamilton = {
+        name = "George Hamilton"
+        portraits = {
+            army = {
+                large = "GFX_George_Hamilton"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+        } 
+    }
+    ENG_James_Butler = {
+        name = "James Butler"
+        portraits = {
+            army = {
+                large = "GFX_James_Butler"
+            }
+        }
+        corps_commander = {
+            traits = { career_officer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+        } 
+    }
+    ENG_James_Mordaunt = {
+        name = "James Mordaunt"
+        portraits = {
+            army = {
+                large = "GFX_James_Mordaunt"
+            }
+        }
+        corps_commander = {
+            traits = { politically_connected }
+            skill = 5
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 5
+        } 
+    }
+    ENG_John_Richard_Webb = {
+        name = "John Richard Webb"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Europe_Generic_land_3"
+            }
+        }
+        corps_commander = {
+            traits = { old_guard }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        } 
+    }
+}

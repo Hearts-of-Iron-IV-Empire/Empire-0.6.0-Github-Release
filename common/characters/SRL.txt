@@ -1,0 +1,14 @@
+characters = {
+    SRL_Vimaladharmasurya_II = {
+        name = "Vimaladharmasurya II"
+        portraits = {
+            civilian = {
+                large = "GFX_King_Vimaladharmasuriya_I" # No portrait for original ruler so I'm using this one instead
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

@@ -1,0 +1,21 @@
+# Scripted GUI Pie Chart example by Yard1
+# Feel free to use in your mods, but give credits to Yard1 (both in code, with comments; and on your download page)
+
+# This is just an example of how to update the pie chart, it does not need to be an on_action
+on_actions = {
+	on_daily = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = { has_active_mission = colonise_state }							
+				}					
+				set_temp_variable = { temp1 = Root.colonise_time }
+				subtract_from_temp_variable = { temp1 = Root.days_mission_timeout@colonise_state }
+				multiply_temp_variable = { temp1 = 100 }					
+				divide_temp_variable = { temp1 = Root.colonise_time }
+				round_variable = temp1
+				set_variable = { your_mom = temp1 }
+			}
+		}
+	}
+}

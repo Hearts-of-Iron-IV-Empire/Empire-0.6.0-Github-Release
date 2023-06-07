@@ -1,0 +1,13 @@
+state={
+	id=951
+	name="STATE_951"
+	history={
+		owner = UNC
+	}
+	provinces={
+		1833 4584 7576 
+	}
+	manpower=75847
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,380 @@
+estate_interactions = {
+	icon = generic_propaganda
+	visible = {
+	}
+
+	priority = 10
+}
+
+royal_decrees = {
+	icon = generic_propaganda
+	visible = {
+
+	}
+}
+
+SPR_war_of_the_quadruple_alliance = {
+	icon = generic_political_actions
+}
+
+propaganda_efforts = {
+	icon = generic_propaganda
+
+	visible = {
+
+	}
+}
+
+POL_foreign_influence = {
+	allowed = {
+		OR = {
+			original_tag = POL
+			original_tag = SOV
+			original_tag = AUS
+			original_tag = SWE
+			original_tag = PRS
+		}
+	}
+}
+
+FRA_religious_troubles = {
+	allowed = {
+		original_tag = FRA
+	}
+}
+
+TUR_janissar_revolt_category = {
+	allowed = {
+		original_tag = TUR
+	}
+
+	picture = GFX_decision_cat_generic_ottoman_empire
+}
+
+USA_moving_the_frontier = {
+	icon = decision_category_border_conflicts
+	visible = {
+		original_tag = USA
+	}
+}
+
+USA_civil_war_preparation = {
+	icon = decision_category_infiltration
+	visible = {
+		original_tag = USA
+		#has_completed_focus = hol_prepare_the_water_lines
+	}
+}
+
+HOL_prepare_the_inundation_lines = {
+
+	icon = hol_prepare_the_inundation_lines
+	
+	allowed = {
+		original_tag = HOL
+	}
+
+	visible = {
+		has_completed_focus = hol_prepare_the_water_lines
+	}
+}
+
+treaty_of_vienna = {
+	allowed = {
+	}
+}
+
+treaty_of_fontainebleu = {
+	allowed = {
+	}
+}
+
+treaty_of_versailles = {
+	allowed = {
+	}
+}
+
+treaty_of_utrecht = {
+	allowed = {
+	}
+}
+
+SPR_colonial_management = {
+
+	icon = generic_economy
+
+	allowed = {
+		original_tag = SPR
+	}
+}
+
+RUS_great_northern_war = {
+	allowed = {
+		original_tag = SOV
+	}
+}
+
+PRS_expansion = {
+
+	icon = border_war
+
+	allowed = {
+		original_tag = PRS
+	}
+}
+
+PRS_TEU_expansion = {
+
+	icon = border_war
+
+	allowed = {
+		original_tag = PRS
+	}
+}
+
+integrate_state = {
+	icon = generic_political_power
+	
+	visible = { }
+}
+
+AUS_reform_the_empire = {
+	icon = generic_political_power
+	picture = GFX_decision_cat_generic_hre
+	allowed = {
+		original_tag = AUS
+	}
+}
+
+AUS_intervention_mandate = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+SWE_cossack_aid = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+HOL_forced_loans = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+RUS_army_reform = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+SWE_ottoman_aid = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+Spanish_crisis = {
+	icon = generic_prepare_civil_war
+
+	visible = {
+		tag = SPR
+		tag = HOL
+		tag = ENG
+		tag = AUS
+		tag = FRA
+	}
+}
+
+RUS_great_patriotic_war = {
+	icon = generic_prepare_civil_war
+
+	visible = {}
+}
+
+national_crisis = {
+	icon = power_struggle
+
+	allowed = {
+	}
+}
+
+nobility_estate = {
+	icon = nobility
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+
+burghers_estate = {
+	icon = burghers
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+
+patriarchy_interactions = {
+	icon = patriarchy
+
+	allowed = {
+	 	has_idea = orthodox
+	}
+}
+
+clergy_estate = {
+	icon = clergy
+
+	allowed = {
+		has_government = neutrality
+		NOT = { has_idea = orthodox }
+	}
+}
+
+colonisation = {
+	icon = generic_prepare_civil_war
+
+	allowed = {
+		has_government = neutrality
+	}
+}
+
+holy_roman_empire = {
+	icon = generic_political_power
+
+	allowed = {
+		original_tag = AUS
+	}
+}
+
+mughal_maratha_war = {
+	icon = power_struggle
+
+	picture = GFX_decision_mughal_maratha_war
+
+	allowed = {
+		OR = {
+			original_tag = MAR
+			original_tag = RAJ
+		}
+	}
+}
+
+mughal_qing_war = {
+	icon = power_struggle
+
+	picture = GFX_decision_mughal_qing_war
+	
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+defeat_the_mughals = {
+	icon = generic_prepare_civil_war
+
+	picture = GFX_decision_mughal_maratha_war
+
+}
+
+MUG_expansion = {
+
+	icon = border_war
+
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+MUG_per_expansion = {
+
+	icon = border_war
+
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+MUG_tribal_raids = {
+
+	icon = eng_move_to_secure_the_dominions
+	
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+MUG_suppress_marathas = {
+
+	icon = border_conflicts
+	
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+information_panel = {
+	
+	priority = -100
+	
+	allowed = {
+		always = yes
+	}
+}
+
+MUG_dealing_with_the_zamindars = {
+
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+MUG_foreign_influence = {
+	allowed = {
+		OR = {	
+			original_tag = RAJ
+			original_tag = ENG
+			original_tag = HOL
+			original_tag = POR
+			original_tag = FRA
+		}
+	}
+}
+
+MUG_economic_decisions = {
+	allowed = {
+		original_tag = RAJ
+	}
+}
+
+TUR_negotiating_peace = {
+	allowed = {
+		original_tag = TUR
+	}
+}
+
+PER_qizilbas_corps_category = {
+	scripted_gui = PER_qizilbash_corps_decision_ui
+	allowed = {
+		OR = {
+			has_idea = PER_qizilbas_troops_1
+			has_idea = PER_qizilbas_troops_2
+			has_idea = PER_qizilbas_troops_3
+			has_idea = PER_qizilbas_troops_4
+		}
+	}
+	visible_when_empty = yes
+	priority = 2
+}
+
+#Russian Decision Category
+
+RUS_treaty_of_constantinople_decision_category = {
+	icon = generic_civil_support
+	allowed = {
+		original_tag = SOV
+	}
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=818
+	name="STATE_818"
+
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			3732 1 
+		}
+		1760.1.1 = {
+			add_manpower = 45000
+
+		}
+
+	}
+
+	provinces={
+		1338 1619 3732 6719 7462 10318 12202 12459 
+	}
+	manpower=3807
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

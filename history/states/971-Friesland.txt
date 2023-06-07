@@ -1,0 +1,34 @@
+state={
+	id=971
+	name="STATE_971"
+	history={
+		owner = HOL
+		add_core_of = HOL
+		add_core_of = FRI
+		victory_points = {
+			9335 3 
+		}
+		victory_points = {
+			6336 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			6336 = {
+				naval_base = 3
+
+			}
+
+		}
+		1812.1.1 = {
+			owner = FRA
+		}
+
+	}
+	provinces={
+		6336 9309 9335 11318 
+	}
+	manpower=200000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

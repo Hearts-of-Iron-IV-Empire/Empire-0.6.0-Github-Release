@@ -1,0 +1,80 @@
+ideas = {
+
+	country = {
+		add_production_efficiency = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 100
+			}
+		}
+		decrease_production_efficiency = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+			
+			allowed_civil_war = {
+				always = yes
+			}
+						
+			modifier = {
+				production_factory_efficiency_gain_factor = -100
+			}
+		}
+	}
+
+
+	###### Needed for modifiers to work
+	chief_economic_advisor = {
+		
+		test_fellow = {
+			allowed = {
+				always = no
+			}
+
+			picture = POR_legacy_of_henry_the_navigator
+
+			modifier = {
+				industrial_capacity_dockyard = 100
+			}
+		}
+	}
+
+	chief_diplomatic_advisor = {
+		
+		test_fellow_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = POR_legacy_of_henry_the_navigator
+
+			modifier = {
+				industrial_capacity_dockyard = 100
+			}
+		}
+	}
+
+	spymaster = {
+		
+		test_fellow_3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_disjointed_gov
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.111
+			}
+		}
+	}
+}

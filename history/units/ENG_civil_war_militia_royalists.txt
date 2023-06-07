@@ -1,0 +1,161 @@
+division_template = {
+	name = "Royalist Militia"
+	is_locked = yes
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+	}
+}
+
+units = {
+	#cornwall
+
+	division= {
+		location = 540
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 540
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 540
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Wales
+
+	division= {
+		location = 253
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 253
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 253
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#York
+
+	division= {
+		location = 9269
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 9269
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 9269
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Lancashire
+
+	division= {
+		location = 3205
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 3205
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 3205
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Cumbria
+
+	division= {
+		location = 351
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 351
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 351
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Northern Ireland
+
+	division= {
+		location = 385
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	division= {
+		location = 385
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	division= {
+		location = 385
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Dublin
+
+	division= {
+		location = 11293
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 11293
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		location = 11293
+		division_template = "Royalist Militia"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+}

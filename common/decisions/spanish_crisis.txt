@@ -1,0 +1,43 @@
+#Spanish_crisis = {
+#    diplomatic_talks = {
+#        icon = generic_civil_support
+#        allowed = {
+#        }
+#        available = {
+#            NOT = {has_idea = Spanish_crisis}
+#        }
+#        days_mission_timeout = 5
+#        fire_only_once = no
+#        is_good = yes
+#       activation = {
+#            has_idea = Spanish_crisis
+#            tag = ROOT
+#        }
+#        timeout_effect = {
+#            random_list = {
+#                60 = {}
+#                
+#                15 = {
+#                    country_event = {
+#                       id = crisis.1
+#                        days = 1
+#                    }
+#                }
+#                15 = {
+#                    country_event = {
+#                        id = crisis.2
+#                        days = 1
+#                    }
+#                }
+#                10 = {
+#                    country_event = {
+#                        id = crisis.3
+#                        days = 1
+#                    }
+#                }
+#            }
+#        }
+#        complete_effect = {
+#        }
+#    }
+#}

@@ -1,0 +1,97 @@
+bookmarks = {
+	bookmark = {
+		name = "War Of The Quadruple Alliance"
+		desc = "WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+		date = 1718.8.1.12
+		picture = GFX_select_date_1718
+		default_country = "SPR"
+		default = no
+
+		"SPR"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				superiour_firepower
+				SPR_recent_reform
+				SPR_bygone_military_glory_2
+			}
+			focuses = {
+
+			}
+		}
+		"FRA"={
+			history = "FRA_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				FRA_edict_of_fontainebleu
+				FRA_elaborate_court_life
+				FRA_birthplace_of_absolutism
+			}
+			focuses = {
+			}
+		}
+		"ENG"={
+			history = "ENG_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				ENG_strenghtened_church_of_england
+				ENG_idea_catholics_suppressed
+				ENG_strenghten_parliament
+			}
+			focuses = {
+			}
+		}
+		"AUS"={
+			history = "AUS_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				holy_roman_emperor
+				centre_of_learning
+				AUS_improved_construction
+			}
+			focuses = {
+			}
+		}
+		"SWE"={
+			history = "SWE_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				SWE_on_the_defensive
+				SWE_allotmentsystem
+				SWE_compulsory_service
+			}
+			focuses = {
+			}	
+		}
+		"SOV"={
+			history = "RUS_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality	
+			ideas = {
+				RUS_rich_in_resources
+				RUS_war_taxes
+				russia_mass_mobilization
+			}
+			focuses = {
+			}
+		}
+
+		"PRS"={
+			history = "PRS_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+				POL_influence_over_poland_1
+			}
+			focuses = {	
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

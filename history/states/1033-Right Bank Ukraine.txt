@@ -1,0 +1,26 @@
+state={
+	id=1033
+	name="STATE_1033"
+	resources={
+		aluminium=7.000
+	}
+
+	history={
+		owner = POL
+		add_core_of = POL
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 3
+		}
+		1798.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		9533 11514 11464 550 11490 
+	}
+	manpower=158917
+	buildings_max_level_factor=1.000
+	state_category=town
+}

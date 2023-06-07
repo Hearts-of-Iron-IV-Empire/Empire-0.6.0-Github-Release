@@ -1,0 +1,188 @@
+totemist_interactions = {
+	totem_of_war = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_peace = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_conquest = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_prosperity = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_fertility = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_resistance = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_strenght = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_wisdom = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_knowlegde = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_friendship = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+
+	totem_of_revenge = {
+
+		available = {
+			has_air_experience > 50
+		}
+
+		visible = {
+			has_idea = totemism
+		}
+
+		icon = totem
+
+		complete_effect = {	
+
+		}
+	}
+}

@@ -1,0 +1,672 @@
+﻿###########################
+# English Events
+###########################
+
+add_namespace = england
+
+# Support Denmark?
+
+country_event = {
+	id = england.1
+	title = england.1.t
+	desc = england.1.d
+	picture = GFX_report_event_generic_army
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = england.1.a
+		hidden_effect =  {	
+		}
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 2000
+		    target = DEN
+		}
+		add_opinion_modifier = {
+		    target = DEN
+		    modifier = small_increase
+		}
+		add_opinion_modifier = {
+		    target = SWE
+		    modifier = small_decrease
+		}
+	}
+	option = {
+		name = england.1.b
+		hidden_effect =  {	
+		}
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 10000
+		    target = DEN
+		}
+		add_opinion_modifier = {
+		    target = DEN
+		    modifier = medium_increase
+		}
+		add_opinion_modifier = {
+		    target = SWE
+		    modifier = medium_decrease
+		}
+	}
+	option = {
+		name = england.1.c
+	}
+}
+
+country_event = {
+	id = england.2
+	title = england.2.t
+	desc = england.2.d
+	picture = GFX_report_event_generic_army
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+    	days = 1
+	}
+
+	option = {
+		name = england.2.a
+		hidden_effect =  {	
+		}
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 2000
+		    target = SWE
+		}
+		add_opinion_modifier = {
+		    target = SWE
+		    modifier = small_increase
+		}
+		add_opinion_modifier = {
+		    target = DEN
+		    modifier = small_decrease
+		}
+	}
+	option = {
+		name = england.2.b
+		hidden_effect =  {	
+		}
+		send_equipment = {
+		    equipment = infantry_equipment
+		    amount = 10000
+		    target = SWE
+		}
+		add_opinion_modifier = {
+		    target = SWE
+		    modifier = medium_increase
+		}
+		add_opinion_modifier = {
+		    target = DEN
+		    modifier = medium_decrease
+		}
+	}
+	option = {
+		name = england.2.c
+	}
+}
+
+# Queen Anne's Ascention
+country_event = {
+	id = england.3
+	title = england.3.t
+	desc = england.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	mean_time_to_happen = {
+    	days = 1
+	}
+
+	option = {
+		name = england.3.a
+		if = {
+			limit = {
+				has_country_leader = {
+					character = ENG_William_III
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			add_stability = -0.05
+			promote_character = ENG_Queen_Anne
+		}
+		hidden_effect = {
+			FRA = {
+				country_event = france.1
+			}
+			HOL = {
+				country_event = holland.1
+			}
+			SCO = {
+				country_event = scotland.1
+			}		
+		}
+	}
+}
+
+country_event = {
+	id = england.4
+	title = england.4.t
+	desc = england.4.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Outrageous."
+	}
+}
+
+#################################
+# RETURN OF JACOBITES
+#################################
+
+country_event = {
+	id = england.5
+	title = england.5.t
+	desc = england.5.d
+
+	fire_only_once = yes
+
+	trigger = {
+		AND = {
+			date > 1704.1.1	
+			tag = ENG
+			has_idea = ENG_legacy
+			}
+	}
+
+	option = {
+
+		name = soviet.28.a
+		if = {
+			limit = { has_idea = ENG_legacy }
+			remove_ideas = ENG_legacy
+		}
+
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "James III"
+			picture = "the_old_pretender.dds"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				unpopular_monarch
+			}
+		}
+		set_capital = { state = 130 }
+		start_civil_war = {
+			ideology = aristocracy
+			size = 0.30
+			capital = 126
+			states = { 126 127 338 123 125 129 128 129 125 129 132 119 }
+		}
+	}
+}
+
+###
+# Treaty of London
+###
+
+country_event = {
+	id = england.6
+	title = england.6.t
+	desc = england.6.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = england.6.a
+		add_threat = 5
+		add_political_power = -100
+	}
+	option = {
+		name = england.6.b
+		country_event = england.7
+	}
+}
+
+country_event = {
+	id = england.7
+	title = england.7.t
+	desc = england.7.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = england.7.a
+		add_threat = -2
+		add_political_power = 10
+	}
+}
+
+country_event = {
+	id = england.8
+	title = england.8.t
+	desc = england.8.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = england.8.a
+		create_country_leader = {
+			name = "George Churchill"
+			picture = "George_Churchill.dds"
+			expire = "1965.1.1"
+			ideology = conservatism
+			traits = {
+				nationalist_symbol
+			}
+		}
+	}
+	option = {
+		name = england.8.b
+		create_country_leader = {
+			name = "Stephen Fox"
+			picture = "Stephen_Fox.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				captain_of_industry
+			}
+		}
+	}
+	option = {
+		name = england.8.c
+		create_country_leader = {
+			name = "Robert Walpole"
+			picture = "Robert_Walpole.dds"
+			expire = "1965.1.1"
+			ideology = liberalism
+			traits = {
+				imperial_connections
+			}
+		}
+	}
+	option = {
+		name = england.8.e
+		create_country_leader = {
+			name = "John Aislabie"
+			picture = "John_Aislabie.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				social_reformer
+			}
+		}
+	}
+}
+
+country_event = {
+	id = england.9
+	title = england.9.t
+	desc = england.9.d
+
+	fire_only_once = yes
+
+	trigger = {
+		has_civil_war = yes
+		has_completed_focus = eng_go_with_radical_republicans
+	}
+
+	option = {
+		name = england.9.a
+		load_oob = ENG_civil_war_militia_republicans
+		set_country_flag = ENG_civil_war
+	}
+}
+
+country_event = {
+	id = england.10
+	title = england.10.t
+	desc = england.10.d
+	picture = GFX_report_event_soviet_purge_politicians
+
+	fire_only_once = yes
+
+	trigger = {
+		has_civil_war = no
+		has_country_flag = ENG_civil_war
+	}
+
+	option = {
+		name = england.10.a
+		delete_units = {
+		    division_template = "Republican Militia"
+		    disband = yes
+		}
+	}
+}
+
+#SEND SAVOY DEAL
+
+country_event = {
+	id = england.11
+	title = england.11.t
+	desc = england.11.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name =england.11.a
+		add_political_power = 25
+		ENG = { 
+			country_event = {
+				id = england.13
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 15
+		}
+	}
+	option = {
+		name = england.11.b
+		ENG = { 
+			country_event = {
+				id = england.12
+				hours = 1
+			}
+		}
+		add_political_power = -50
+		white_peace = ENG
+		leave_faction = yes
+		ai_chance = {
+			factor = 85
+		}
+	}
+}
+
+#SAVOY accept
+
+country_event = {
+	id = england.12
+	title = england.12.t
+	desc = england.12.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = england.12.a
+		ENG = { add_to_faction = ITA }
+	}
+}
+
+#SAVOY REFUSE
+
+country_event = {
+	id = england.13
+	title = england.13.t
+	desc = england.13.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = england.13.a
+	}
+}
+
+#Long parliament
+
+country_event = {
+	id = england.14
+	title = england.14.t
+	desc = england.14.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = england.14.a
+	}
+}
+
+#debating intervention
+
+country_event = {
+	id = england.15
+	title = england.15.t
+	desc = england.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We must strive to execute the treaty of London!"
+		add_war_support = 0.15
+		add_political_power = 75
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = persue_balance_of_power
+	}
+
+	option = {
+		name = "No matter what, France is always the enemy!"
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 10
+		}
+		set_country_flag = strict_anti_french_stance
+	}
+}
+
+#england proposes cooperation pact
+
+country_event = {
+	id = england.16
+	title = england.16.t
+	desc = england.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We must stand united in enforcing the treaty of London."
+		ENG = {
+			country_event = {
+				id = england.17
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = {
+		name = "No, they cannot be trusted."
+		ai_chance = {
+			factor = 20
+		}
+		ENG = {
+			country_event = {
+				id = england.18
+				days = 2
+			}
+		}
+	}
+}
+
+#french agree
+
+country_event = {
+	id = england.17
+	title = england.17.t
+	desc = england.17.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "For the good of Europe!"
+		dismantle_faction = yes
+		FRA = { add_to_faction = ENG }	
+		FRA = { set_faction_name = "Anglo-French Anti-Habsburg Hegemony" }
+	}
+}
+
+#french refuse
+
+country_event = {
+	id = england.18
+	title = england.18.t
+	desc = england.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "They better not come whining later about it!"
+	}
+}
+
+# invitation to the quadruple alliance
+
+country_event = {
+	id = england.19
+	title = "The Formation of the Quadruple Alliance"
+	desc = england.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Maintaining peace is a just cause."
+		if = {
+			limit = {
+				ROOT = { is_faction_leader = yes }
+			}
+			dismantle_faction = yes
+		}
+		else_if = {
+			limit = {
+				ROOT = { is_in_faction = yes }
+			}
+			leave_faction = yes
+		}
+		FROM = { add_to_faction = ROOT }
+		ai_chance = {
+			base = 800
+		}
+	}
+
+	option = {
+		name = "No, we have ambitions of our own."
+		if = {
+			limit = {
+				ROOT = { is_in_faction_with  = FROM }
+			}
+			leave_faction = yes
+		}
+	}
+}
+
+# jacobite rebellion supported by Spain
+
+country_event = {
+	id = england.20
+	title = "Major Jacobite Uprising In Aberdeenshire!"
+	desc = england.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Say what?!"
+		create_dynamic_country = {
+			original_tag = ENG
+			set_cosmetic_tag = JACOBITES
+			transfer_state = 136
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				set_popularities = {
+					aristocracy = 45
+					neutrality = 40
+					fascism = 5
+					communism = 5
+					democratic = 5
+				}
+				create_country_leader = {
+					name = "James III"
+					picture = "the_old_pretender.dds"
+					expire = "1965.1.1"
+					ideology = despotism
+				}
+				division_template = {
+					name = "Jacobite Supporters"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { PREV = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Jacobite Supporters\" division_template = \"Jacobite Supporters\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Jacobite Supporters\" division_template = \"Jacobite Supporters\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Jacobite Supporters\" division_template = \"Jacobite Supporters\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Jacobite Supporters\" division_template = \"Jacobite Supporters\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+				}
+			}
+			every_country = {
+		    	limit = { # some sanity checks
+		            original_tag = ENG
+		        }
+		        PREV = {
+		        	declare_war_on = { # declare war on
+		                target = PREV # previous scope (random neighbor)
+		                type = civil_war # standard wargoal
+		            }
+		        }
+		    }
+		}
+		
+	}
+}

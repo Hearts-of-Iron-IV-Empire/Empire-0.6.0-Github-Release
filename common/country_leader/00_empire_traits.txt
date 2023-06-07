@@ -1,0 +1,597 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+@experience_gain_low = 0.03
+@experience_gain_medium = 0.06
+@experience_gain_high = 0.08
+
+@chief_experience_gain_low = 0.20
+@chief_experience_gain_medium = 0.30
+@chief_experience_gain_high = 0.40
+
+leader_traits = {
+	carolus_rex = {
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		army_core_attack_factor = 0.15
+	}
+	popular_ruler = {
+		random = no
+		stability_factor = 0.15
+		political_power_gain = 0.10
+	}
+	king_of_the_palaces = {
+		random = no
+		consumer_goods_factor = 0.1
+	}
+	PER_napoleon_of_persia = {
+		random = no
+		stability_factor = 0.2
+		war_support_factor = 0.1
+		political_advisor_cost_factor = -0.25
+		economy_cost_factor = -0.25
+		trade_laws_cost_factor = -0.25
+		mobilization_laws_cost_factor = -0.25
+		neutrality_drift = 0.05
+		political_power_factor = 0.1
+		generate_wargoal_tension = -0.5
+	}
+	PER_inattentive_shah = {
+		random = no
+		political_power_factor = -0.1
+		stability_factor = -0.05
+	}
+	KOR_passionate_reformer = {
+		random = no
+		political_power_gain = 0.05
+	}
+	KOR_vulnerable_king = {
+		random = no
+		political_power_gain = -0.05
+	} 
+	great_restorer = {
+		random = no
+		political_power_gain = 0.05
+	}
+	emperor_and_shogun = {
+		random = no
+		war_support_factor = 0.15
+	}
+	inu_kubo = {
+		random = no
+		political_power_gain = -0.05
+	}
+	freemason = {
+		random = no
+		political_power_cost = 0.5
+	}
+	board_in_disarray = {
+		random = no
+		political_power_cost = 0.5
+	}
+	the_emperor = {
+		random = no
+		political_power_factor = 0.15
+		army_attack_factor = 0.15
+		army_defence_factor = 0.15
+	}
+	emperor_of_india = {
+		random = no
+		political_power_factor = 0.15
+		army_attack_factor = 0.10
+		army_defence_factor = 0.10
+	}
+	integral_leader = {
+		random = no
+		political_power_factor = 0.15
+		stability_factor = 0.05
+	}
+	portuguese_sun_king = {
+		random = no
+		neutrality_drift = 0.05
+		political_power_factor = 0.25
+	}
+	the_magnanimous = {
+		random = no
+		research_speed_factor = 0.05
+	}
+	very_ill = {
+		random = no
+		neutrality_drift = -0.10
+		political_power_factor = -0.20
+		stability_weekly = -0.001
+	}
+	drowsy = {
+		random = no
+		neutrality_drift = -0.01
+		political_power_factor = -0.10
+	}
+	the_pacific = {
+		random = no
+		war_stability_factor = -0.1
+		stability_factor = 0.05
+		political_power_factor = 0.05
+	}
+	rightful_monarch = {
+		random = no
+		political_power_factor = 0.05
+		stability_factor = 0.10
+	}
+	roy_soleil = {
+		random = no
+		political_power_factor = 0.25
+		ai_badass_factor = 0.5
+		ai_focus_aggressive_factor = 0.5
+	}
+	rapidly_deteriorating_health = {
+		random = no
+		political_power_factor = -0.33
+		stability_weekly = -0.01
+	}
+	competent_statesman = {
+		random = no
+		political_power_factor = 0.15
+	}
+	civil_administrator = {
+		random = no
+		political_power_factor = 0.10
+		consumer_goods_factor = -0.10
+	}
+	absent_monarch = {
+		random = no
+		political_power_factor = -0.15
+	}
+	prince_of_orange = {
+		random = no
+		political_power_gain = 0.05
+		stability_factor = 0.10
+	}
+	el_hechizado = {
+		random = no
+		political_power_gain = -0.5
+		stability_factor = -0.20
+	}
+	likes_sweden = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "SWE"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	likes_russia = {
+		random = no
+		ai_strategy = {
+			type = befriend
+			id = "SOV"			
+			value = 200
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	cardinal_in_administration = {
+		random = yes
+		sprite = 13
+		political_power_factor = 0.20
+		fascism_drift = 0.01
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	disputed_reign = {
+		random = no
+		sprite = 13
+		stability_factor = -0.10
+		custom_modifier_tooltip = disputed_reign_tt
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	court_jew = {
+		random = no
+		sprite = 13
+		consumer_goods_factor = 0.05
+		political_power_gain = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	technology_thief = {
+		random = no
+		sprite = 13
+		research_speed_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	master_decryptor = {
+		random = no
+		sprite = 13
+		decryption_factor = 0.02
+		encryption_factor = 0.005
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	master_encryptor = {
+		random = no
+		sprite = 13
+		encryption_factor = 0.02
+		decryption_factor = 0.005
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}	
+	war_propagandist = {
+		random = no
+		sprite = 13
+		war_support_factor = 0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	coercive_diplomat = {
+		random = no
+		sprite = 13
+		justify_war_goal_time = -0.25
+		generate_wargoal_tension = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	protectionist = {
+		random = no
+		sprite = 13
+		local_resources_factor = 0.20
+		min_export = -0.10
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	corrupt_treasurer = {
+		random = no
+		sprite = 13
+		political_power_gain = 0.15
+		consumer_goods_factor = 0.03
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	head_of_intelligence = {
+		random = no
+		sprite = 15
+		operative_slot = 1
+		agency_upgrade_time = -0.15
+	}
+	mastermind_code_cracker = {
+		random = no
+		sprite = 15
+		decryption_power = 15
+	}
+	military_governor = {
+		random = no
+		sprite = 13
+		political_power_gain = -0.10
+		resistance_target = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	puppet_master = {
+		random = no
+		sprite = 13
+		subjects_autonomy_gain = -0.5
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	independence_advocate = {
+		random = no
+		sprite = 13
+		autonomy_gain = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	republican_reformer = {
+		random = no
+		# Boosts Unaligned
+		sprite = 13
+		democratic_drift = 0.05
+		consumer_goods_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	theocratic_reformer = {
+		random = no
+		# Boosts Unaligned
+		sprite = 13
+		fascism_drift = 0.05
+		political_power_gain = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	absolutist_reformer = {
+		random = no
+		# Boosts Unaligned
+		sprite = 13
+		neutrality_drift = 0.05
+		political_power_gain = -0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	aristocratic_reformer = {
+		random = no
+		# Boosts Aristocracy
+		sprite = 13
+		aristocracy_drift = 0.01
+		weekly_manpower = 250
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	revolutionairy = {
+		random = no
+		sprite = 13
+		communism_drift = 0.10
+		stability_weekly = -0.001
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	rump_parliament = {
+		random = no
+		trade_laws_cost_factor = 0.25
+		mobilization_laws_cost_factor = 0.25
+		economy_cost_factor = 0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	long_parliament = {
+		random = no
+		political_power_factor = -0.5
+		trade_laws_cost_factor = 1
+		mobilization_laws_cost_factor = 1
+		economy_cost_factor = 1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	divine_right = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		justify_war_goal_time = -0.25
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	old_pretender = {
+		random = no
+		political_power_factor = -0.3
+		stability_factor = -0.2
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	the_great = {
+		random = no
+		stability_factor = 0.2
+		political_power_gain = 0.3
+	}
+	sickly_monarch = {
+		random = no
+		political_power_gain = -1.0
+		stability_factor = -0.50
+	}
+
+	
+#ai_focus_defense_factor
+#ai_focus_aggressive_factor
+#ai_focus_production_factor
+#ai_focus_military_advancements_factor
+#ai_focus_peaceful_factor
+#ai_focus_naval_factor
+#ai_focus_naval_air_factor
+#ai_focus_aviation_factor 
+
+	### IDEA TRAITS ###
+	
+	# drift is a percent applied weekly
+	
+	
+	backroom_backstabber = {
+		sprite = 13
+		political_power_factor = 0.05
+		drift_defence_factor = 0.15
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	quartermaster_general = {
+		sprite = 10
+		random = yes
+		production_speed_naval_base_factor = 0.15	
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+
+	enlightened_thinker = {
+		sprite = 14
+		random = yes
+		research_speed_factor = 0.08	
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### BRITISH TRADE UNION MINISTER TRAITS ###
+
+	propaganda_bungler = {
+		sprite = 13
+		war_support_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	silent_mule = {
+		random = yes
+		sprite = 13
+		political_power_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	compassionate_commoner = {
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	smooth_talking_con_man = {
+		random = yes
+		sprite = 13
+		trade_opinion_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	ideological_groupie = {
+		random = yes
+		sprite = 13
+		opinion_gain_monthly_same_ideology_factor = 0.05
+		
+		ai_will_do = {
+			factor = 0.2
+		}
+	}
+	
+	fortification_armchair_general = {
+		sprite = 10
+		random = yes
+		production_speed_bunker_factor = 0.1
+		production_speed_coastal_bunker_factor = 0.1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	war_profiteer = {
+		sprite = 10
+		random = yes
+		production_speed_arms_factory_factor = 0.05
+		production_speed_dockyard_factor = 0.05
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	lieutenant_of_industry = {
+		sprite = 10
+		random = yes
+		production_speed_industrial_complex_factor = 0.05
+		production_speed_infrastructure_factor = 0.05
+		production_speed_synthetic_refinery_factor = 0.05
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	finance_graduate = {
+		sprite = 10
+		random = yes
+		consumer_goods_factor = -0.02
+		
+		ai_will_do = {
+			factor = 2
+		}
+	}
+	
+	armaments_aficionado = {
+		sprite = 10
+		random = yes
+		conversion_cost_civ_to_mil_factor= -0.1
+		# civ_to_mil_industry_conversion_rate = -1
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	### END BRITISH TRADE UNION MINISTER TRAITS ###
+	
+	### Military Minister Traits
+	
+	# 1 is worst, 3 is best
+	
+	USA_commander_in_chief = {
+		random = no
+		army_core_attack_factor = 0.15
+		army_core_defence_factor = 0.15
+		experience_gain_army = @chief_experience_gain_high
+		command_cap = @tier3
+
+		sprite = 9
+	}
+
+	army_recruiter_1 = {  # 0.2% more recruitable pop
+		sprite = 6
+		conscription = 0.002
+		#experience_gain_army = @experience_gain_medium
+
+		command_cap = @tier2
+
+		ai_will_do = {
+			factor = 6
+		}
+	}
+}

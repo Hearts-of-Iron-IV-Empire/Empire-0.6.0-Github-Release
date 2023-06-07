@@ -1,0 +1,315 @@
+characters = {
+    FRA_Louis_XIV = {
+        name = "Louis XIV"
+        portraits = {
+            civilian = {
+                large = "GFX_Louis_XIV"
+            }
+        }
+        country_leader = {
+            #expire = 1714.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    FRA_Louis_XV_Child = {
+        name = "Louis XV Child"
+        portraits = {
+            civilian = {
+                large = "GFX_Louis_XV_Child"
+            }
+        }
+        country_leader = {
+            #expire = 1729.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    FRA_Louis_XV = {
+        name = "Louis XV"
+        portraits = {
+            civilian = {
+                large = "GFX_Louis_XV"
+            }
+        }
+        country_leader = {
+           #expire = 1797.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    FRA_Louis_XVI = {
+        name = "Louis XVI"
+        portraits = {
+            civilian = {
+                large = "GFX_Louis_XVI"
+            }
+        }
+        country_leader = {
+           #expire = 1797.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    FRA_Napoleon = {
+        name = "Napoleon Bonaparte"
+        portraits = {
+            civilian = {
+                large = "GFX_Napoleon_leader"
+            }
+            army = {
+                large = "GFX_Napoleon_army"
+            }
+        }
+        country_leader = {
+            #expire = 1816.1.1
+            ideology = despotism
+            traits = { integral_leader }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 4
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+    FRA_Directory = {
+        name = "Le Directoire"
+        portraits = {
+            civilian = {
+                large = "GFX_Directory"
+            }
+        }
+        country_leader = {
+            #expire = 1800.1.1
+            ideology = conservatism
+            traits = {}
+        }
+    }
+    FRA_Louis_de_France = {
+        name = "Louis de France"
+        portraits = {
+            army = {
+                large = "GFX_Louis_De_France"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    FRA_Christian_Louis_de_Montmorency = {
+        name = "Christian-Louis de Montmorency"
+        portraits = {
+            army = {
+                large = "GFX_Christian_Louis_De_Montmorency"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    FRA_Henri_de_Massue = {
+        name = "Henri de Massue"
+        portraits = {
+            army = {
+                large = "GFX_Henri_De_Massue"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    FRA_Louis_Antoine_de_Pardaillan = {
+        name = "Louis Antoine de Pardaillan"
+        portraits = {
+            army = {
+                large = "GFX_Louis_Antoin_De_Pardaillan"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    FRA_Anne_Jules_de_Noailles = {
+        name = "Anne-Jules de Noailles"
+        portraits = {
+            army = {
+                large = "GFX_Anne_Jules_De_Noailles"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    FRA_Claude_François_Bidal_Asfeld = {
+        name = "Claude François Bidal d'Asfeld"
+        portraits = {
+            army = {
+                large = "GFX_Claude_Francois_Bidal_D'asfeld"
+            }  
+        }
+       corps_commander = {
+            traits = {}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    FRA_Claude_Louis_Hector_de_Villars = {
+        name = "Claude Louis Hector de Villars"
+        portraits = {
+            army = {
+                large = "GFX_Claude_Louis_Hector_De_Villars"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    FRA_François_de_Neufville = {
+        name = "François de Neufville"
+        portraits = {
+            army = {
+                large = "GFX_Francois_De_Neufville"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    FRA_Henri_d_Harcourt = {
+        name = "Henri d'Harcourt"
+        portraits = {
+            army = {
+                large = "GFX_Henri_D'Harchourt"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    FRA_Jacques_Bazin_de_Bezons = {
+        name = "Jacques Bazin de Bezons"
+        portraits = {
+            army = {
+                large = "GFX_Jacques_Bazin_De_Bezons"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    FRA_James_Fitz_de_Berwick = {
+        name = "James Fitz de Berwick"
+        portraits = {
+            army = {
+                large = "GFX_James_Fitz_De_Berwick"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    FRA_Louis_François_de_Boufflers = {
+        name = "Louis François de Boufflers"
+        portraits = {
+            army = {
+                large = "GFX_Louis_Francois_De_Boufflers"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 3
+            logistics_skill = 1
+        }
+    }
+    FRA_Louis_Joseph_de_Vendôme = {
+        name = "Louis Joseph de Vendôme"
+        portraits = {
+            army = {
+                large = "GFX_Louis_Joseph_De_Vendome"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 5
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    FRA_Renné_de_Froulay = {
+        name = "Renné de Froulay"
+        portraits = {
+            army = {
+                large = "GFX_Renne_De_Froulay"
+            }
+        }
+       corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+}

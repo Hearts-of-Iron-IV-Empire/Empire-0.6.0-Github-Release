@@ -1,0 +1,560 @@
+ideas = {
+	country = {
+		holy_roman_emperor = {
+
+			picture = ger_revive_the_kaiserreich
+
+			name = holy_roman_emperor
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.3
+				conscription = 0.02
+			}
+		}
+
+		imperial_strassenbau = {
+
+			picture = ast_all_in
+
+			name = imperial_strassenbau
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_infrastructure_factor = 0.10
+			}
+		}
+
+		great_turkish_war = {
+
+			picture = great_turkish_war
+
+			name = great_turkish_war
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.30
+				stability_weekly = -0.01
+				war_support_weekly = -0.01
+				mobilization_laws_cost_factor = 0.25
+				army_attack_factor = -0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+		great_turkish_war_2 = {
+
+			picture = great_turkish_war
+
+			name = great_turkish_war
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_factor = 0.40
+				stability_weekly = -0.015
+				war_support_weekly = -0.015
+				mobilization_laws_cost_factor = 0.50
+				consumer_goods_factor = 0.15
+				army_org_factor = -0.05
+				army_attack_factor = -0.15
+				army_defence_factor = 0.15
+			}
+		}
+
+		civil_unrest_hungary1 = {
+
+			picture = chi_war_of_resistance
+
+			name = civil_unrest_hungary
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.10
+				political_power_factor = -0.10
+				conscription_factor = -0.11
+			}
+		}
+
+		civil_unrest_hungary2 = {
+
+			picture = chi_war_of_resistance2
+
+			name = civil_unrest_hungary
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.15
+				conscription_factor = -0.22
+			}
+		}
+
+		civil_unrest_hungary3 = {
+
+			picture = chi_war_of_resistance3
+
+			name = civil_unrest_hungary
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.20
+				political_power_factor = -0.25
+				conscription_factor = -0.33
+			}
+		}
+
+		centre_of_learning = {
+
+			picture = jap_supremacy_of_technology
+
+			name = centre_of_learning
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+         
+		AUS_imperial_army = {
+
+			picture = generic_war_preparation
+
+			name = AUS_imperial_army
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.05
+			}
+		}
+
+		AUS_imperial_army_2 = {
+
+			picture = generic_war_preparation
+
+			name = AUS_imperial_army
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_core_defence_factor = 0.05
+				army_org_factor = 0.05
+			}
+		}
+
+		military_research_funding = {
+
+			picture = generic_research_bonus
+
+			name = military_research_funding
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.07
+				industrial_capacity_factory = 0.10		
+			}
+		}
+
+		lowered_burden_peasants = {
+
+			picture = generic_goods_red_bonus
+
+			name = lowered_burden_peasants
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		temporary_tax_reform = {
+
+			picture = generic_goods_red_bonus
+
+			name = temporary_tax_reform
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+			}
+		}
+
+		mobilizing_the_country = {
+
+			picture = generic_war_preparation
+
+			name = mobilizing_the_country
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.5
+				production_speed_arms_factory_factor = 0.2
+			}
+		}
+
+		no_hungarians_drafted = {
+
+			picture = generic_army_problems
+
+			name = no_hungarians_drafted
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = -0.25
+			}
+		}
+
+		high_soldier_wages = {
+
+			picture = chi_hyper_inflation2
+
+			name = high_soldier_wages
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		hungarian_noble_council = {
+
+			picture = Hungarian_Monarchy
+
+			name = hungarian_noble_council
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = 0.10
+				compliance_gain = 0.15
+			}
+		}
+
+		hungarian_noble_council_2 = {
+
+			picture = Hungarian_Monarchy
+
+			name = hungarian_noble_council
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.20
+				stability_factor = 0.15
+				compliance_gain = 0.3
+			}
+		}
+
+		AUS_suppressing_hungary = {
+
+			picture = Hungarian_Monarchy
+
+			name = AUS_suppressing_hungary
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.25
+			}
+		}
+
+		AUS_stabilizing_hungary = {
+
+			picture = Hungarian_Monarchy
+
+			name = AUS_stabilizing_hungary
+		
+			allowed = {
+				always = no
+			}
+
+			available = {
+				NOT = { has_country_flag = failed_negotiations }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				compliance_gain = 0.1
+			}
+		}
+
+		AUS_improved_construction = {
+
+			picture = generic_production_bonus
+
+			name = AUS_improved_construction
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		AUS_instituted_reichsregiment = {
+
+			picture = generic_pp_unity_bonus
+
+			name = AUS_instituted_reichsregiment
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+
+		AUS_instituted_reichsregiment_prince = {
+
+			picture = generic_pp_unity_bonus
+
+			name = AUS_instituted_reichsregiment
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		AUS_reformed_hofgericht = {
+
+			picture = generic_political_support
+
+			name = AUS_reformed_hofgericht
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}
+
+		AUS_reformed_hofgericht_prince = {
+
+			picture = generic_political_support
+
+			name = AUS_reformed_hofgericht
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+			}
+		}
+
+		AUS_enacted_gemeiner_pfennig = {
+
+			picture = spr_relocate_the_gold_reserves
+
+			name = AUS_enacted_gemeiner_pfennig
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		AUS_enacted_gemeiner_pfennig_prince = {
+
+			picture = SPR_relocate_the_gold_reserves
+
+			name = AUS_enacted_gemeiner_pfennig
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+			}
+		}		
+
+		AUS_imperial_research_circles_idea = {
+
+			picture = generic_research_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+		
+		AUS_german_corporations = {
+
+			picture = taxes
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+
+		AUS_SAX_war_reparations = {
+			picture = generic_economic_increase
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.3
+			}
+		}
+
+	}
+}

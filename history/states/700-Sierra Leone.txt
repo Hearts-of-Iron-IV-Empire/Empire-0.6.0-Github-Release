@@ -1,0 +1,17 @@
+
+state={
+	id=700
+	name="STATE_700"
+
+	history={
+		owner = SIE
+
+	}
+
+	provinces={
+		1909 2038 
+	}
+	manpower=1768500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

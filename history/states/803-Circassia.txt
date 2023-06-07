@@ -1,0 +1,27 @@
+
+state={
+	id=803
+	name="STATE_803"
+
+	history={
+		owner = CIR
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = CIR
+		victory_points = {
+			9674 5 
+		}
+
+	}
+
+	provinces={
+		717 719 735 3698 3717 3720 3760 6692 6721 6736 6738 9663 9674 9691 9694 9696 11647 11664 11681 
+	}
+	manpower=128451
+	buildings_max_level_factor=1.000
+	state_category=city
+}

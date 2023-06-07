@@ -1,0 +1,27 @@
+
+state={
+	id=452
+	name="STATE_452"
+
+	history={
+		owner = TUR
+		add_core_of = TUR
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = EGY
+		victory_points = {
+			11967 1 
+		}
+
+	}
+
+	provinces={
+		1060 5078 7079 7148 9989 10061 11910 11967 12033 12091 
+	}
+	manpower=13556
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

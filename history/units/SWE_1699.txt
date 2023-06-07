@@ -1,0 +1,473 @@
+﻿division_template = {
+	name = "Arméfördelning"			# Infantry Division - Planned formation for mobilization of divisions, 1937-1940
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # Regiment of 155mm howitzers, 105mm arty
+		engineer = { x = 0 y = 1 }   
+		recon = { x = 0 y = 2 }      # Recon consisted of ACs, motorcycle inf, cavalry
+	}
+}
+division_template = {
+	name = "Kavalleribrigaden"  	# Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry  = { x = 0 y = 1 }
+		cavalry  = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon consisted of ACs, motorcycle inf, cavalry
+	}
+}
+
+division_template = {
+	name = "Militärområde"			# Garrison Force
+	# For reserve and independent regiments, lower experience and equipment
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+	priority = 0
+}
+
+units = {
+	######## LAND UNITS ########
+
+# LAND ARMY
+
+	division = { # "I. Arméfördelning"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11160 # Kristianstad
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "Södra Militärområde"
+		location = 11160 # Kristianstad
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+
+	division = {
+		name =Arméfördelning
+		location = 11160
+		division_template = Arméfördelning
+		start_experience_factor = 0.3
+	}
+	division = {
+		name =Arméfördelning
+		location = 11160
+		division_template = Arméfördelning
+		start_experience_factor = 0.3
+	}
+	division = {
+		name =Arméfördelning
+		location = 11160
+		division_template = Arméfördelning
+		start_experience_factor = 0.3
+	}
+	division = {
+		name =Arméfördelning
+		location = 11160
+		division_template = Arméfördelning
+		start_experience_factor = 0.3
+	}
+
+	# Northern Military District
+	division = { # "VI. Arméfördelning"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 6
+		}
+		location = 11148 # Osterund
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Norra Militärområde"
+		location = 11148 # Osterund
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	# Western Military District
+	division = { # "III. Arméfördelning"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 3375 # Skövde
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "Västra Militärområde"
+		location = 3375 # Skovde
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	# Eastern Military District
+	division = { # "IV. Arméfördelning"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 6050 #Stockholm
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 171
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 69
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 147
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 9138
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 6345
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 6345
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 9340
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 9340
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 11222
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3298
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3298
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3151
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3151
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3151
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 7
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 6137
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 11156
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 181 # Jama
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 11068
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 79
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "rméfördelning"
+		location = 4640
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3152
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 3152
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 11105
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 11222
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 10323
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Arméfördelning"
+		location = 10323
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 6050 #Stockholm
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 6050 #Stockholm
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 11186 # Near Jama
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 11186 # Near Jama
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 104 # Near Jama
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Kavalleribrigaden"
+		location = 9138 #Stockholm
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+		division = {
+		name = "Kavalleribrigaden"
+		location = 171 #Stockholm
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+		division = {
+		name = "Kavalleribrigaden"
+		location = 11380 #Stockholm
+		division_template = "Kavalleribrigaden"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+
+	division = {
+		name = "Östra Militärområde"
+		location = 6050 #Stockholm
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	# Upper Northern Military District
+	division = { # "V. Arméfördelning"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 5
+		}
+		location = 9186 # Boden
+		division_template = "Arméfördelning"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Övre Norrland Militärområde"
+		location = 9186 # Boden
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+
+	division = {
+		name = "Gotlands Militärområde"
+		location = 408 # Gotland
+		division_template = "Militärområde"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "SWE"
+		}
+		requested_factories = 10
+		progress = 0.77
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "SWE"
+		}
+		requested_factories = 5
+		progress = 0.21
+		efficiency = 100
+	}
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 1000
+		producer = SWE
+	}
+	add_equipment_to_stockpile = {
+		type = basic_cavalry_equipment
+		amount = 500
+		producer = SWE
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 300
+		producer = SWE
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 200
+		producer = SWE
+	}	
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 100
+		producer = SWE
+	}
+}

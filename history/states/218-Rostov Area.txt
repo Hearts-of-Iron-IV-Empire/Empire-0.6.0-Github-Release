@@ -1,0 +1,40 @@
+
+state={
+	id=218
+	name="STATE_218" # Azov
+
+	history={
+		owner = SOV
+		add_core_of = TUR
+		victory_points = {
+			9417 10 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			9417 = {
+				bunker = 4
+			}
+			9417 = {
+				naval_base = 4
+			}
+		}
+		1711.5.1 = {
+			owner = CRI
+			controller = CRI
+		}
+		1740.1.1 = {
+			owner = CRI
+			controller = CRI
+		}
+		1789.1.1 = {
+			owner = SOV
+		}
+	}
+	provinces={
+		9417 
+	}
+	manpower=301076
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,14 @@
+characters = {
+    ACH_Syarif_Hasyim_Jamaluddin = {
+        name = "Syarif Hasyim Jamaluddin"
+        portraits = {
+            civilian = {
+                large = "GFX_Asian_Leader_17"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

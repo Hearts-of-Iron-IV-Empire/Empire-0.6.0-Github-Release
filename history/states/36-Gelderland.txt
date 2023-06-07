@@ -1,0 +1,31 @@
+
+state={
+	id=36
+	name="STATE_36"
+
+	history={
+		owner = HOL
+		add_core_of = HOL
+		victory_points = {
+			6241 5 
+		}
+		victory_points = {
+			9363 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+
+		1812.1.1 = {
+			owner = FRA
+		}
+	}
+
+	provinces={
+		6241 6286 9363 9403 11456 
+	}
+	manpower=440000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,277 @@
+﻿capital = 10
+
+oob = "POL_1699"
+
+set_research_slots = 3
+
+give_guarantee = ZAP
+
+set_stability = 0.40
+set_war_support = 0.40
+
+1714.8.1 = {
+
+	complete_national_focus = POL_restructure_poland
+	unlock_national_focus = POL_question_of_absolutism
+	unlock_national_focus = POL_question_of_noble_privileges
+	unlock_national_focus = POL_settle_succession_question
+	unlock_national_focus = POL_motion_of_moderate_modernization
+	unlock_national_focus = POL_compromise
+	complete_national_focus = POL_denounce_absolutism_before_parliament
+	unlock_national_focus = POL_cooperate_with_nobles
+	complete_national_focus = POL_foreign_support
+	unlock_national_focus = POL_burgher_counterweight
+	complete_national_focus = POL_comfirm_augustus_election
+	unlock_national_focus = POL_represent_all_estates
+	unlock_national_focus = POL_end_paralysis
+	complete_national_focus = POL_found_order_of_the_white_eagle
+	unlock_national_focus = POL_foreign_affairs
+	unlock_national_focus = POL_seek_russian_support
+	unlock_national_focus = POL_enforce_peace_with_russian_troops
+	unlock_national_focus = POL_treaty_of_prebrazhnskoya
+	unlock_national_focus = POL_claims_in_the_baltic
+	unlock_national_focus = POL_attack_sweden_test
+	unlock_national_focus = POL_saxon_ties
+	unlock_national_focus = POL_cooperate_with_prussia
+	unlock_national_focus = POL_deploy_saxons
+	unlock_national_focus = POL_develop_saxon_countryside
+	unlock_national_focus = POL_build_up_dresden
+	unlock_national_focus = POL_relocate_government_to_dresden
+	unlock_national_focus = POL_seek_austrian_support
+	unlock_national_focus = POL_support_charles
+	unlock_national_focus = POL_condemn_kurucs
+	unlock_national_focus = POL_attract_hungarian_migration
+	complete_national_focus = POL_economic_modernization_effort
+	complete_national_focus = POL_rural_economy
+	complete_national_focus = POL_develop_central_poland
+	complete_national_focus = POL_build_up_central_poland
+	complete_national_focus = POL_develop_galicia
+	complete_national_focus = POL_build_up_galicia
+	complete_national_focus = POL_develop_ruthenia
+	complete_national_focus = POL_build_up_ruthenia
+	complete_national_focus = POL_develop_lithuania
+	complete_national_focus = POL_build_up_lithuania
+	complete_national_focus = POL_krakow_research_centre
+	complete_national_focus = POL_military_economy
+	unlock_national_focus = POL_war_measures
+	complete_national_focus = POL_military_conversion
+	complete_national_focus = POL_build_up_military_industry
+
+	remove_ideas = {
+		POL_dominance_of_nobles
+	}
+
+	declare_war_on = {
+	    target = SWE
+	    type = take_state_focus
+	    generator = { 12 }
+	}
+
+	remove_ideas = great_turkish_war
+}
+
+1730.1.1 = {
+	recruit_character = POL_Stanislaw_I
+	promote_character = POL_Stanislaw_I
+	retire_character = POL_Frederick_Augustus # Dead
+	diplomatic_relation = { country = SWE relation = war_relation active = no }
+	set_party_name = { 
+	    ideology = neutrality 
+	    name = "House Leszczyński"
+	    long_name = "House of Leszczyński"
+	}
+
+	oob =  "POL_stanislaw_1733"
+
+	create_faction = "Stanislaus I supporters"
+	add_to_faction = FRA
+	add_to_faction = SPR
+	add_to_faction = PRM
+	add_to_faction = ITA
+
+	create_dynamic_country = {
+		original_tag = POL	
+		set_cosmetic_tag = augustus_iii_poland
+		transfer_state = 931
+		transfer_state = 97
+		transfer_state = 10
+
+		recruit_character = POL_Augustus_III
+		
+		set_politics = {
+			ruling_party = neutrality
+		}
+
+		set_popularities = {
+			aristocracy = 45
+			neutrality = 40
+			fascism = 5
+			communism = 5
+			democratic = 5
+		}
+
+		load_oob = "POL_augustus_iii_1733"
+
+		every_other_country = {
+			limit = {
+				original_tag = POL
+				country_exists = POL
+				NOT = {
+					has_war_with = SOV
+				}
+				NOT = {
+					has_war_with = AUS
+				}
+				NOT = {
+					has_war_with = PRS
+				}
+				NOT = {
+					has_war_with = LOR
+				}
+				NOT = {
+					has_war_with = SAX
+				}
+			}
+			declare_war_on = {
+				target = POL
+				type = civil_war
+			}
+			create_faction = "Augustus III Supporters"
+			add_to_faction = SOV
+			add_to_faction = AUS
+			add_to_faction = SAX
+			add_to_faction = PRS
+			add_to_faction = LOR
+			set_autonomy = {
+				target = SAX
+				autonomy_state = autonomy_dominion
+			}
+		}
+	}
+}
+
+1740.1.1 = {
+	diplomatic_relation = { country = SAX relation = war_relation active = no }
+	recruit_character = POL_Augustus_III
+	promote_character = POL_Augustus_III
+	retire_character = POL_Stanislaw_I
+	dismantle_faction = yes
+	transfer_state = 931
+	transfer_state = 97
+	transfer_state = 10
+}
+
+1753.1.1 = {
+	recruit_character = POL_Stanislaw_II
+	promote_character = POL_Stanislaw_II
+	retire_character = POL_Augustus_III # Dead
+}
+
+1812.1.1 = {
+	transfer_state = 10
+	transfer_state = 97
+	transfer_state = 931
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_mountaineers = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+	early_destroyer = 1
+	early_submarine = 1
+	motorised_infantry = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_submarine = 1	
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+set_convoys = 20
+
+diplomatic_relation = {
+	country = LAT
+	relation = puppet
+}
+
+diplomatic_relation = {
+	country = SAX
+	relation = puppet
+}
+
+POL = {
+	add_opinion_modifier = { target = SWE modifier = Rivalry }
+	add_opinion_modifier = { target = TUR modifier = Rivalry }
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.9.8"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 1
+	fascism = 8
+	communism = 1
+	neutrality = 12
+	aristocracy = 78
+}
+
+add_ideas = {
+	POL_liberum_veto
+	POL_dominance_of_nobles
+	POL_sejm
+	POL_rural_society
+	POL_conscription_crisis
+	POL_foreign_meddling_4
+
+	# Laws and Religion
+	catholic
+	limited_exports
+	limited_conscription
+	kingdom
+	great_turkish_war
+	partial_economic_mobilisation
+}
+
+recruit_character = POL_Frederick_Augustus # Country Leader, Field Marshal
+recruit_character = POL_Stanisław_Leszczyński # Country Leader, Nobility
+recruit_character = POL_Adam_Mikołaj_Sieniawski # Field Marshal
+recruit_character = POL_Stanisław_Chomętowski # General
+recruit_character = POL_Michał_Serwacy_Wiśniowiecki # General
+recruit_character = POL_Hieronim_Augustyn_Lubomirski # General
+recruit_character = POL_Grzegorz_Antoni_Ogiński # General
+recruit_character = POL_Berend_Lehmann # Advisor
+activate_advisor = berend_lehmann
+
+set_variable = {
+	crack_down_on_influence_foreign_cost = 50
+}
+set_variable = {
+	crack_down_on_influence_foreign_time = 100
+}

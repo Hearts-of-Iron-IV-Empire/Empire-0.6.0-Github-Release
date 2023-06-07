@@ -1,0 +1,26 @@
+state={
+	id=979
+	name="STATE_979"
+	provinces={
+		1510 1538 4513 7497 7574 9946 10060 10358 10428 11924 11978 12480
+	}
+	history={
+		owner = UNC
+		#victory_points = {
+		#	11924 15
+		#}
+		#victory_points = {
+		#	7574 10
+		#}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		1740.1.1 = {
+			owner = MAR
+		}
+	}
+	manpower=2151871
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

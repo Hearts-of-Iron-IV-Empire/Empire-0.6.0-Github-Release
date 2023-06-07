@@ -1,0 +1,94 @@
+﻿capital = 411
+
+oob = "PER_1699"
+
+set_research_slots = 3
+set_stability = 0.6
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	basic_cavalry = 1
+	gw_artillery = 1
+	transport = 1
+	electronic_mechanical_engineering = 1
+}
+
+add_ideas = {
+	# Laws and Religion
+	shiite
+	empire
+	low_economic_mobilisation
+	#
+	PER_qizilbas_troops_1
+	PER_mulabasi_govern
+	PER_oppressive_shias_2
+	PER_corrupt_army_and_court
+}
+
+set_convoys = 10
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1699.01.01"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 50
+	aristocracy = 17
+	communism = 5
+	democratic = 3
+	fascism = 25
+}
+
+recruit_character = PER_Sultan_Huseyn # Country Leader, Field Marshal
+recruit_character = PER_Sultan_Abbas # Alt Leader, Field Marshal
+recruit_character = PER_Shahnevaz_Khan_II # General
+recruit_character = PER_Keykhosrov # General
+recruit_character = PER_Mansur_Khan # General
+recruit_character = PER_Safiqulu_Khan # General
+
+
+1718.1.1 = {
+	recruit_character = PER_Thamasp_II # General
+	recruit_character = PER_Nader_Shah
+	load_focus_tree = generic_focus
+	remove_ideas = {
+		PER_mulabasi_govern
+		PER_corrupt_army_and_court
+	}
+}
+
+1733.1.1 = {
+	promote_character = PER_Nader_Shah
+	set_cosmetic_tag = PER_afsharids
+	set_party_name = {
+		ideology = neutrality
+		long_name = afsharid_dynasty
+		name = afsharid_dynasty
+	}
+	load_focus_tree = generic_focus
+	remove_ideas = {
+		PER_mulabasi_govern
+		PER_oppressive_shias_2
+		PER_corrupt_army_and_court
+	}
+}
+
+1795.1.1 = {
+	set_cosmetic_tag = PER_qajars
+	load_focus_tree = generic_focus
+	remove_ideas = {
+		PER_qizilbas_troops_1
+		PER_mulabasi_govern
+		PER_oppressive_shias_2
+		PER_corrupt_army_and_court
+	}
+}

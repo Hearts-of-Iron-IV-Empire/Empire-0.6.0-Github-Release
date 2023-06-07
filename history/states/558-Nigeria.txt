@@ -1,0 +1,28 @@
+
+state={
+	id=558
+	name="STATE_558"
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = NGA
+		victory_points = { 4972 10 }
+		victory_points = { 1969 5 }
+		victory_points = { 1891 5 }
+		victory_points = { 8109 1 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		1891 1932 1969 4938 4972 5028 8109 10820 
+	}
+	manpower=2757000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,16 @@
+state={
+	id=998
+	name="STATE_998"
+	provinces={
+		1615 4650 4756 10449 
+	}
+	history={
+		owner = CHO
+		1765.1.1 = {
+			owner = FLO
+		}
+	}
+	manpower=4254
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

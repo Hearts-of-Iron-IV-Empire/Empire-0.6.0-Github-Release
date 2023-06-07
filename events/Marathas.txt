@@ -1,0 +1,90 @@
+﻿##########################
+#     Maratha Events     #
+##########################
+
+add_namespace = maratha
+
+# Death of Rajaram
+country_event = {
+	id = maratha.1
+	title = maratha.1.t
+	desc = maratha.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # RIP
+		name = maratha.1.a
+		if = {
+			limit = {
+				has_country_leader = {
+					character = MAR_Chhatrapati_Rajaram
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			add_stability = -0.1
+			promote_character = MAR_Tarabai
+			add_corps_commander_role = {
+				character = MAR_Tarabai
+				skill = 3
+				attack_skill = 4
+				defense_skill = 3
+				planning_skill = 3
+				logistics_skill = 4
+			}
+		}
+	}
+}
+
+# Ask for Aid
+country_event = {
+	id = maratha.2
+	title = maratha.2.t
+	desc = maratha.2.d
+
+	is_triggered_only = yes
+	
+	option = { # Accepted
+		name = maratha.2.a
+		ai_chance = { factor = 90 }
+		MAR = { add_political_power = 30 }
+		create_faction = "The Southern Kingdoms"
+		MAR = { add_to_faction = MYS }
+	}
+	
+	option = { # Didn't accept
+		name = maratha.3.a
+		ai_chance = { factor = 10 }
+		MAR = { add_political_power = -30 }
+	}
+}
+
+ # Ask for aid
+
+country_event = {
+	id = maratha.3
+	title = maratha.2.t
+	desc = maratha.2.d
+	
+	is_triggered_only = yes
+	
+	option = { # Accepted
+		name = maratha.2.a
+		ai_chance = { factor = 90 }
+		MAR = { add_political_power = 30 }
+		MAR = { add_to_faction = MDR }
+	}
+	
+	option = { # Didn't accept
+		name = maratha.3.a
+		ai_chance = { factor = 10 }
+		MAR = { add_political_power = -30 }
+	}
+}
+

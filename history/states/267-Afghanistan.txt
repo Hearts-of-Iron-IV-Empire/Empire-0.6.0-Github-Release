@@ -1,0 +1,52 @@
+state={
+	id=267
+	name="STATE_267"
+	resources={
+		tungsten=3.000
+	}
+
+	history={
+		owner = RAJ
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			5082 10 
+		}
+		victory_points = {
+			10737 20 
+		}
+		victory_points = {
+			12763 3 
+		}
+		add_core_of = RAJ
+		add_core_of = AFG
+		1730.1.1 = {
+			owner = AFG
+			controller = AFG
+
+		}
+		1739.1.1 = {
+			owner = PER
+			controller = PER
+
+		}
+		1745.1.1 = {
+			owner = AFG
+			controller = AFG
+
+		}
+
+	}
+
+	provinces={
+		1978 4998 5082 7916 10417 10737 10852 12717 12763 12769 12831 13349 13350 13351 13352 
+	}
+	manpower=1837140
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

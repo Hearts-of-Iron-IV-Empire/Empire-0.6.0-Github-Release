@@ -1,0 +1,29 @@
+state={
+	id=137
+	name="STATE_137"
+
+	history={
+		owner = CRI
+		add_core_of = CRI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			705 = {
+				naval_base = 3
+			}
+		}
+		victory_points = { # Bakhchysarai
+			705 50
+		}
+		1789.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		705 757 3722 6724 9677 9718 11649 
+	}
+	manpower=131607
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

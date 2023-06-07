@@ -1,0 +1,2924 @@
+focus_tree = {
+	id = thirteen_colonies_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 100
+			tag = USA
+		}
+	}
+	
+	default = no
+
+####
+# GENERIC CONTENT (FOR EVERY START DATE)
+####
+
+focus = {
+	id = USA_central_governance
+	icon = GFX_goal_generic_demand_territory
+	x = 0
+	y = 0
+	cost = 10
+	mutually_exclusive = { focus = USA_autonomous_colonies }
+
+	completion_reward = {
+		add_ideas = USA_central_government
+	}
+	ai_will_do = { 
+		factor = 100
+	}
+}
+
+focus = {
+	id = USA_autonomous_colonies
+	icon = GFX_focus_generic_self_management
+	x = 2
+	y = 0
+	cost = 10
+	mutually_exclusive = { focus = USA_central_governance }
+
+	completion_reward = {
+		add_ideas = USA_autonomous_colonies
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_prioritize_pennsylvania
+	icon = GFX_shift_capital_to_pennsylvania
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_central_governance focus = USA_autonomous_colonies }
+	mutually_exclusive = { focus = USA_prioritize_massachusetts focus = USA_prioritize_virginia}
+	relative_position_id = USA_central_governance
+
+	completion_reward = { 
+		set_capital = {
+		  state = 360 
+		  remember_old_capital = no
+		}
+		add_stability = 0.10
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_company_investment_scheme
+	icon = GFX_goal_generic_intelligence_exchange
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_prioritize_pennsylvania }
+	relative_position_id = USA_prioritize_pennsylvania
+
+	completion_reward = { 
+		add_offsite_building = { type = industrial_complex level = 2 }
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_prioritize_massachusetts
+	icon = GFX_shift_capital_to_massachusetts
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_central_governance focus = USA_autonomous_colonies }
+	mutually_exclusive = { focus = USA_prioritize_pennsylvania focus = USA_prioritize_virginia }
+	relative_position_id = USA_central_governance
+
+	completion_reward = { 
+		set_capital = {
+		  state = 357
+		  remember_old_capital = no
+		}
+		add_war_support = 0.10
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_purtian_refugees
+	icon = GFX_focus_mex_soldaderas
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_prioritize_massachusetts }
+	relative_position_id = USA_prioritize_massachusetts
+
+	completion_reward = { 
+		add_ideas = USA_purtian_refugee_influx
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_prioritize_virginia
+	icon = GFX_shift_capital_to_virginia
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_central_governance focus = USA_autonomous_colonies }
+	relative_position_id = USA_central_governance
+	mutually_exclusive = { focus = USA_prioritize_pennsylvania focus = USA_prioritize_massachusetts }
+
+	completion_reward = { 
+		set_capital = {
+		  state = 362 
+		  remember_old_capital = no
+		}
+		add_political_power = 120
+		add_autonomy_score = {
+	    	value = -100
+	    	localization = "Crown Colony Focus"
+		}	
+	}
+	ai_will_do = { 
+		factor = 100
+	}
+}
+
+focus = {
+	id = USA_crown_colony_investment
+	icon = GFX_england_flag_2
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_prioritize_virginia }
+	relative_position_id = USA_prioritize_virginia
+
+	completion_reward = {
+		add_autonomy_score = {
+	    	value = -100
+	    	localization = "Crown Colony Investment"
+		}
+		362 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_forge_our_own_path
+	icon = GFX_goal_tfv_sever_ties_with_uk
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_company_investment_scheme focus = USA_crown_colony_investment focus = USA_purtian_refugees }
+	relative_position_id = USA_company_investment_scheme
+	mutually_exclusive = { focus = USA_loyal_to_the_crown }
+
+	completion_reward = { 
+		add_ideas = USA_partition_from_the_crown
+	}
+	ai_will_do = { 
+		factor = 0
+	}
+}
+
+focus = {
+	id = USA_loyal_to_the_crown
+	icon = GFX_goal_tfv_strengthen_commonwealth_ties
+	x = -5
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_company_investment_scheme focus = USA_crown_colony_investment focus = USA_purtian_refugees }
+	relative_position_id = USA_company_investment_scheme
+	mutually_exclusive = { focus = USA_forge_our_own_path }
+
+	completion_reward = { 
+		add_stability = 0.10
+	}
+	ai_will_do = { 
+		factor = 1000
+	}
+}
+
+focus = {
+	id = USA_queen_annes_war
+	icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+	x = -3
+	y = 1
+	cost = 6
+	prerequisite = { focus = USA_loyal_to_the_crown }
+	relative_position_id = USA_loyal_to_the_crown
+
+	available = {
+		has_war = yes 
+	}
+
+	completion_reward = { 
+		add_war_support = 0.10
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_english_armaments
+	icon = GFX_tanegashima
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_loyal_to_the_crown }
+	relative_position_id = USA_loyal_to_the_crown
+
+	completion_reward = { 
+		add_equipment_to_stockpile = {
+		    type = infantry_equipment
+		    amount = 2500
+		    producer = ENG
+		}
+		add_equipment_to_stockpile = {
+		    type = artillery_equipment
+		    amount = 100
+		    producer = ENG
+		}
+		add_equipment_to_stockpile = {
+		    type = basic_cavalry_equipment
+		    amount = 50
+		    producer = ENG
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_lay_claim_to_nova_scotia
+	icon = GFX_nova_scotia
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_queen_annes_war }
+	relative_position_id = USA_queen_annes_war
+
+	bypass = {
+		owns_state = 464
+	}
+
+	completion_reward = { 
+		add_state_claim = 464
+		custom_effect_tooltip = nova_scotia_claim_tt
+		set_country_flag = USA_nova_scotia_claim
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_lay_claim_to_newfoundland
+	icon = GFX_newfoundland
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_lay_claim_to_nova_scotia }
+	relative_position_id = USA_lay_claim_to_nova_scotia
+
+	bypass = {
+		owns_state = 331
+	}
+
+	completion_reward = { 
+		add_state_claim = 331
+		custom_effect_tooltip = newfoundland_claim_tt
+		set_country_flag = USA_newfoundland_claim
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_english_regulars
+	icon = GFX_british_soldier
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_english_armaments }
+	prerequisite = { focus = USA_queen_annes_war }
+	relative_position_id = USA_english_armaments
+
+	completion_reward = { 
+		division_template = {
+			name = "British Regular Combat Regiment"
+			priority = 2
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 2 y = 0 }
+				artillery_brigade = { x = 2 y = 1 }
+				artillery_brigade = { x = 2 y = 2 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 } 
+			}
+		}
+		357 = {
+			create_unit = {
+				division = "name = \"British Regular Combat Regiment\" division_template = \"British Regular Combat Regiment\" start_experience_factor = 0.3" 
+				owner = USA
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_set_up_manufacturies_in_new_england
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_english_regulars }
+	relative_position_id = USA_english_regulars
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				is_in_home_area = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				is_in_home_area = yes
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_indentured_servants
+	icon = GFX_indentured_servitude
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_loyal_to_the_crown }
+	relative_position_id = USA_loyal_to_the_crown
+
+	completion_reward = { 
+		add_ideas = USA_indentured_servants
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_native_forced_labor
+	icon = GFX_focus_CZE_german_puppet
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_indentured_servants }
+	relative_position_id = USA_indentured_servants
+
+	completion_reward = {
+		add_stability = -0.1
+		swap_ideas = {
+			remove_idea = USA_indentured_servants
+			add_idea = USA_forced_labour
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_triangle_trade
+	icon = GFX_focus_triangle_trade
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_native_forced_labor }
+	relative_position_id = USA_native_forced_labor
+
+	completion_reward = { 
+		add_ideas = SPR_triangle_trade_idea
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_attract_subjects_of_the_crown
+	icon = GFX_england_flag
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_loyal_to_the_crown }
+	relative_position_id = USA_loyal_to_the_crown
+
+	completion_reward = { 
+		add_ideas = english_migration
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_invite_the_scots
+	icon = GFX_scottish_flag
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_attract_subjects_of_the_crown }
+	relative_position_id = USA_attract_subjects_of_the_crown
+
+	completion_reward = { 
+		add_ideas = scottish_migration
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_and_the_irish_too
+	icon = GFX_goal_generic_national_unity
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_invite_the_scots }
+	relative_position_id = USA_invite_the_scots
+
+	completion_reward = { 
+		add_ideas = irish_migration
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_request_self_governance
+	icon = GFX_focus_generic_concessions 
+	x = 0
+	y = 1
+	cost = 10
+	mutually_exclusive = { focus = USA_part_of_england_for_now }
+	prerequisite = { focus = USA_and_the_irish_too }
+	prerequisite = { focus = USA_triangle_trade }
+	prerequisite = { focus = USA_set_up_manufacturies_in_new_england }
+	prerequisite = { focus = USA_lay_claim_to_newfoundland }
+	relative_position_id = USA_and_the_irish_too
+
+	completion_reward = {
+		if = {
+			limit = {
+				is_subject_of = ENG
+			}
+			ENG = {
+				set_autonomy = {
+					target = USA
+					autonomy_state = autonomy_dominion
+				}
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_part_of_england_for_now
+	icon = GFX_focus_CZE_german_puppet
+	x = -2
+	y = 1
+	cost = 10
+	mutually_exclusive = { focus = USA_request_self_governance }
+	prerequisite = { focus = USA_and_the_irish_too }
+	prerequisite = { focus = USA_triangle_trade }
+	prerequisite = { focus = USA_set_up_manufacturies_in_new_england }
+	prerequisite = { focus = USA_lay_claim_to_newfoundland }
+	relative_position_id = USA_and_the_irish_too
+
+	completion_reward = {
+		add_autonomy_score = {
+	    	value = -500
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_develop_the_colonies
+	icon = GFX_focus_generic_industry_3
+	x = 12
+	y = 0
+	cost = 10
+
+	completion_reward = { 
+		add_political_power = 100
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_new_england_focus
+	icon = GFX_focus_generic_industry_1
+	x = -6
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_develop_the_colonies }
+	relative_position_id = USA_develop_the_colonies
+
+	completion_reward = { 
+		custom_effect_tooltip = unlock_development_new_england_tt
+		357 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_middle_colonies
+	icon = GFX_focus_generic_industry_1
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_develop_the_colonies }
+	relative_position_id = USA_develop_the_colonies
+
+	completion_reward = { 
+		custom_effect_tooltip = unlock_development_middle_colonies_tt
+		360 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_self_sufficiency
+	icon = GFX_focus_generic_concessions
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_the_middle_colonies }
+	prerequisite = { focus = USA_new_england_focus }
+	relative_position_id = USA_the_middle_colonies
+
+	completion_reward = { 
+		add_ideas = USA_self_sufficiency
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_fortify_the_border
+	icon = GFX_build_fort
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_self_sufficiency }
+	prerequisite = { focus = USA_the_frontier }
+	relative_position_id = USA_self_sufficiency
+
+	completion_reward = { 
+		360 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 702
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 3850
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 894
+			}
+		}
+		362 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 10412
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				instant_build = yes
+				province = 3952
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_claim_maine
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_self_sufficiency }
+	prerequisite = { focus = USA_the_frontier }
+	relative_position_id = USA_self_sufficiency
+
+	completion_reward = { 
+		add_state_claim = 1007
+		custom_effect_tooltip = USA_unlock_border_conflicts
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_clashes_with_the_iroquois
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_fortify_the_border }
+	relative_position_id = USA_fortify_the_border
+
+	completion_reward = {
+		add_state_claim = 817
+		add_state_claim = 862
+		custom_effect_tooltip = USA_unlock_border_conflicts
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_found_yale_university
+	icon = GFX_focus_research
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_self_sufficiency }
+	prerequisite = { focus = USA_the_frontier }
+	relative_position_id = USA_self_sufficiency
+
+	completion_reward = {
+		add_research_slot = 1 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_chesapeake_bay
+	icon = GFX_focus_generic_industry_1
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_develop_the_colonies }
+	relative_position_id = USA_develop_the_colonies
+
+	completion_reward = { 
+		custom_effect_tooltip = unlock_development_chesapeake_bay_tt
+		362 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_south
+	icon = GFX_focus_generic_industry_1
+	x = 6
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_develop_the_colonies }
+	relative_position_id = USA_develop_the_colonies
+
+	completion_reward = { 
+		custom_effect_tooltip = unlock_development_the_south_tt
+		364 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_plantation_economies
+	icon = GFX_goal_grain
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_the_south }
+	prerequisite = { focus = USA_chesapeake_bay }
+	relative_position_id = USA_the_south
+
+	completion_reward = { 
+		361 = {
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		362 = {
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		363 = {
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		364 = {
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+		if = {
+			limit = {
+				USA = { owns_state = 1000 }
+			}
+			add_dynamic_modifier = { modifier = slave_state }
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_frontier
+	icon = GFX_focus_spa_the_war_of_vengeance
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = USA_the_south }
+	prerequisite = { focus = USA_chesapeake_bay }
+	prerequisite = { focus = USA_the_middle_colonies }
+	prerequisite = { focus = USA_new_england_focus }
+	relative_position_id = USA_develop_the_colonies
+
+	completion_reward = { 
+		army_experience = 25
+		add_political_power = 50
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_expand_up_to_blue_ridge
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_the_frontier }
+	prerequisite = { focus = USA_plantation_economies }
+	relative_position_id = USA_plantation_economies
+
+	completion_reward = { 
+		add_state_claim = 997
+		custom_effect_tooltip = USA_unlock_border_conflicts
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_expand_the_carolinas
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_the_frontier }
+	prerequisite = { focus = USA_plantation_economies }
+	relative_position_id = USA_plantation_economies
+
+	completion_reward = { 
+		add_state_claim = 996
+		add_state_claim = 995
+		custom_effect_tooltip = USA_unlock_border_conflicts
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_lay_claim_to_georgia
+	icon = GFX_focus_generic_provoke_border_clashes
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_the_frontier }
+	prerequisite = { focus = USA_plantation_economies }
+	relative_position_id = USA_plantation_economies
+
+	completion_reward = { 
+		add_state_claim = 1000
+		add_state_claim = 1001
+		custom_effect_tooltip = USA_unlock_border_conflicts
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_east_of_the_mississipi
+	icon = GFX_focus_beyond_the_alps
+	x = 0
+	y = 2
+	cost = 10
+	prerequisite = { focus = USA_lay_claim_to_georgia }
+	prerequisite = { focus = USA_expand_the_carolinas }
+	prerequisite = { focus = USA_expand_up_to_blue_ridge }
+	prerequisite = { focus = USA_found_yale_university }
+	prerequisite = { focus = USA_claim_maine }
+	prerequisite = { focus = USA_fortify_the_border }
+	relative_position_id = USA_the_frontier
+
+	available = { is_subject = no }
+
+	completion_reward = {
+		add_war_support = 0.15
+		add_stability = 0.1
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_expand_eastwards
+	icon = GFX_focus_generic_annex_country_2
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_east_of_the_mississipi }
+	relative_position_id = USA_east_of_the_mississipi
+
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = CHR
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CRE
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_finish_them_off
+	icon = GFX_goal_generic_major_war
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_east_of_the_mississipi }
+	relative_position_id = USA_east_of_the_mississipi
+
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = CHO
+		}
+		create_wargoal = {
+			type = annex_everything
+			target = CHK
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_crush_the_iroquois
+	icon = GFX_focus_crush_the_iroquois
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_east_of_the_mississipi }
+	relative_position_id = USA_east_of_the_mississipi
+
+	completion_reward = {
+		create_wargoal = {
+			type = annex_everything
+			target = IRO
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_louisiana_purchase
+	icon = GFX_louisiana
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_crush_the_iroquois }
+	prerequisite = { focus = USA_finish_them_off }
+	prerequisite = { focus = USA_expand_eastwards }
+	relative_position_id = USA_expand_eastwards
+
+	available = {
+		999 = {
+			is_owned_by = USA
+		}
+		998 = {
+			is_owned_by = USA
+		}
+		812 = {
+			is_owned_by = USA
+		}
+		822 = {
+			is_owned_by = USA
+		}
+		823 = {
+			is_owned_by = USA
+		}
+		865 = {
+			is_owned_by = USA
+		}
+		863 = {
+			is_owned_by = USA
+		}
+		864 = {
+			is_owned_by = USA
+		}
+		862 = {
+			is_owned_by = USA
+		}
+		369 = {
+			is_owned_by = USA
+		}
+		367 = {
+			is_owned_by = USA
+		}
+	}
+
+	completion_reward = {
+		FRA = { 
+			country_event = usa.31 
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_prepare_insurrection
+	icon = GFX_goal_generic_military_deal
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_forge_our_own_path }
+	relative_position_id = USA_forge_our_own_path
+
+	completion_reward = { 
+		add_war_support = 0.10
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_claim_our_independence
+	icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_prepare_insurrection }
+	relative_position_id = USA_prepare_insurrection
+
+	completion_reward = { 
+		ENG = { 
+			country_event = usa.8 
+			set_autonomy = {
+			    target = USA
+			    autonomy_state = autonomy_free
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+######
+#HISTORICAL 1773 START DATE CONTENT
+######
+focus = {
+	id = USA_boston_tea_party
+	icon = GFX_Boston_Tea_Party
+	x = 24
+	y = 0
+	cost = 1
+
+	available = {
+		date > 1773.12.1
+	}
+
+	completion_reward = {
+		country_event = usa.3
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_comitees_of_correspondence
+	icon = GFX_sons_of_liberty
+	x = -2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_boston_tea_party }
+	relative_position_id = USA_boston_tea_party
+
+	completion_reward = { 
+		add_ideas = USA_commitees_of_correspondence
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_intolerable_acts
+	icon = GFX_intolerable_acts
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_boston_tea_party }
+	relative_position_id = USA_boston_tea_party
+
+	available = {
+		ENG = {
+			has_completed_focus = ENG_boston_port_act
+			has_completed_focus = ENG_massachusettes_government_act
+			has_completed_focus = ENG_impartial_administration_of_justice_act
+			has_completed_focus = ENG_quartering_act
+		}
+	}
+
+	completion_reward = { 
+		add_popularity = {
+		    ideology = communism
+		    popularity = 0.10
+		}
+		add_popularity = {
+		    ideology = democratic
+		    popularity = 0.10
+		}
+		add_war_support = 0.15
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_sons_of_liberty
+	icon = GFX_focus_prc_infiltration
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_boston_tea_party }
+	relative_position_id = USA_boston_tea_party
+
+	completion_reward = { 
+		add_popularity = {
+		    ideology = communism
+		    popularity = 0.05
+		}
+		add_popularity = {
+		    ideology = democratic
+		    popularity = 0.05
+		}
+
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_form_the_first_continental_congress
+	icon = GFX_focus_generic_improve_the_administration
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_sons_of_liberty }
+	prerequisite = { focus = USA_the_intolerable_acts }
+	prerequisite = { focus = USA_comitees_of_correspondence }
+	relative_position_id = USA_sons_of_liberty
+
+	completion_reward = { 
+		create_country_leader = {
+			name = "Continental Congress"
+			desc = ""
+			picture = "continental_congress.dds"
+			expire = "1775.9.1"
+			ideology = liberalism
+		}
+		add_popularity = {
+		    ideology = democratic
+		    popularity = 0.10
+		}
+		set_capital = {
+		  state = 360 
+		  remember_old_capital = no
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_arm_militias
+	icon = GFX_guns_icon
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_form_the_first_continental_congress }
+	relative_position_id = USA_form_the_first_continental_congress
+
+	completion_reward = { 
+		custom_effect_tooltip = USA_militia_decisions
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_raid_arsenals
+	icon = GFX_tanegashima 
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_arm_militias }
+	relative_position_id = USA_arm_militias
+
+	completion_reward = { 
+		custom_effect_tooltip = USA_raid_stockpiles_decisions
+		custom_effect_tooltip = USA_only_available_under_britain
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_militia_arsenals
+	icon = GFX_goal_generic_construct_mil_factory
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_arm_militias }
+	relative_position_id = USA_arm_militias
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_continental_association_boycott
+	icon = GFX_goal_generic_trade
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_form_the_first_continental_congress }
+	relative_position_id = USA_form_the_first_continental_congress
+
+	completion_reward = {
+		ENG = {
+			add_opinion_modifier = { target = USA modifier = embargo }
+			add_opinion_modifier = { target = USA modifier = sanctions_relations } 
+		} 
+		add_ideas =  USA_continental_association_boycott
+		add_political_power = 120
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_petition_to_the_king
+	icon = GFX_goal_draft_constitution
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_association_boycott }
+	relative_position_id = USA_continental_association_boycott
+
+	completion_reward = { 
+		add_political_power = 120
+		add_stability = 0.05
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_lexington_and_concord
+	icon = GFX_focus_AST_never_gallipoli
+	x = 1
+	y = 1
+	cost = 1
+	prerequisite = { focus = USA_petition_to_the_king }
+	prerequisite = { focus = USA_raid_arsenals }
+	relative_position_id = USA_raid_arsenals
+
+	available = {
+		always = no
+	}
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_liberty_or_death
+	icon = GFX_goal_support_democracy
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_association_boycott }
+	relative_position_id = USA_continental_association_boycott
+
+	completion_reward = { 
+		add_ideas = USA_liberty_or_death
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_second_continental_congress
+	icon = GFX_form_continetal_congress
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_lexington_and_concord }
+	relative_position_id = USA_lexington_and_concord
+
+	completion_reward = { 
+		set_cosmetic_tag = USA_1776
+		add_political_power = 100
+		remove_ideas = {
+			USA_murder_act
+			USA_massachussetts_govt_act
+			USA_quartering_act
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_commitee_of_secret_correspondence
+	icon = GFX_goal_tripartite_pact
+	x = 3
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_second_continental_congress }
+	relative_position_id = USA_second_continental_congress
+
+	completion_reward = { 
+		add_ideas = USA_commitee_of_secret_correspondence
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_french_military_supplies
+	icon = GFX_goal_generic_small_arms
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_commitee_of_secret_correspondence }
+	relative_position_id = USA_commitee_of_secret_correspondence
+
+	completion_reward = { 
+		FRA = {
+			country_event = {
+				id = usa.15
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_french_monetary_support
+	icon = GFX_goal_bourbon
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_french_military_supplies }
+	relative_position_id = USA_french_military_supplies
+
+	completion_reward = { 
+		FRA = {
+			country_event = {
+				id = usa.19
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_treaty_of_amity_and_commerce
+	icon = GFX_goal_generic_positive_trade_relations
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_french_monetary_support }
+	relative_position_id = USA_french_monetary_support
+
+	completion_reward = { 
+		FRA = {
+			remove_opinion_modifier = {
+			    target = USA
+			    modifier = unrecognized_nation
+			}
+		}
+		reverse_add_opinion_modifier = {
+		    target = FRA
+		    modifier = huge_increase
+		}
+		custom_effect_tooltip = USA_trade_with_france
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_franco_american_treaty
+	icon = GFX_goal_generic_alliance
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_treaty_of_amity_and_commerce }
+	prerequisite = { focus = USA_commitee_of_foreign_affairs }
+	relative_position_id = USA_treaty_of_amity_and_commerce
+
+	completion_reward = { 
+		create_faction = "United States Alliance"
+		FRA = { country_event = generic.5 }
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_invite_the_spanish
+	icon = GFX_goal_generic_major_alliance
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_franco_american_treaty }
+	relative_position_id = USA_franco_american_treaty
+
+	completion_reward = { 
+		SPR = { country_event = generic.5 }
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_spanish_military_supplies
+	icon = GFX_goal_generic_small_arms
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_commitee_of_secret_correspondence }
+	relative_position_id = USA_commitee_of_secret_correspondence
+
+	completion_reward = { 
+		SPR = {
+			country_event = {
+				id = usa.15
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_spanish_monetary_support
+	icon = GFX_focus_spa_supremacy_of_the_communion
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_spanish_military_supplies }
+	relative_position_id = USA_spanish_military_supplies
+
+	completion_reward = { 
+		SPR = {
+			country_event = {
+				id = usa.19
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_dutch_military_supplies
+	icon = GFX_goal_generic_small_arms
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_commitee_of_secret_correspondence }
+	relative_position_id = USA_commitee_of_secret_correspondence
+
+	completion_reward = { 
+		HOL = {
+			country_event = {
+				id = usa.15
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_dutch_monetary_support
+	icon = GFX_focus_hol_oranje_boven
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_dutch_military_supplies }
+	relative_position_id = USA_dutch_military_supplies
+
+	completion_reward = { 
+		HOL = {
+			country_event = {
+				id = usa.19
+				days = 30
+			}
+		}
+		custom_effect_tooltip = USA_envoys_take_time
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_commitee_of_foreign_affairs
+	icon = GFX_focus_eng_concessions_to_the_trade_unions
+	x = -2
+	y = 3
+	cost = 5
+	prerequisite = { focus = USA_french_monetary_support focus = USA_spanish_monetary_support focus = USA_dutch_monetary_support}
+	prerequisite = { focus = USA_declartion_of_independence }
+	relative_position_id = USA_commitee_of_secret_correspondence
+
+	completion_reward = { 
+		swap_ideas = {
+			remove_idea = USA_commitee_of_secret_correspondence
+			add_idea = USA_commitee_of_foreign_affairs_idea
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_commitee_of_the_five
+	icon = GFX_focus_commitee_of_the_five
+	x = -3
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_second_continental_congress }
+	relative_position_id = USA_second_continental_congress
+
+	completion_reward = { 	
+		add_advisor_role = {
+			character = USA_benjamin_franklin
+			activate = no
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = USA_benjamin_franklin
+				traits = {
+					enlightened_thinker
+				}
+			}
+		}
+		add_advisor_role = {
+			character = USA_John_Adams_advisor
+			activate = no
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = USA_John_Adams_advisor
+				traits = {
+					silent_workhorse
+				}
+			}
+		}
+		add_advisor_role = {
+			character = USA_robert_livingston
+			activate = no
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = USA_robert_livingston
+				traits = {
+					popular_figurehead
+				}
+			}
+		}
+		add_advisor_role = {
+			character = USA_roger_sherman
+			activate = no
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = USA_roger_sherman
+				traits = {
+					economist
+				}
+			}
+		}
+		add_advisor_role = {
+			character = USA_thomas_jefferson_advisor
+			activate = no
+			advisor = {
+				slot = political_advisor
+				cost = 50
+				idea_token = USA_thomas_jefferson_advisor
+				traits = {
+					financial_expert
+				}
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_declaration_of_the_causes_and_necessity_of_taking_up_arms
+	icon = GFX_goal_generic_propaganda
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_commitee_of_the_five }
+	relative_position_id = USA_commitee_of_the_five
+
+	completion_reward = {
+		add_war_support = 0.10
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_common_sense
+	icon = GFX_focus_generic_treaty
+	x = 2
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_declaration_of_the_causes_and_necessity_of_taking_up_arms }
+	relative_position_id = USA_declaration_of_the_causes_and_necessity_of_taking_up_arms
+
+	completion_reward = { 
+		country_event = usa.24
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_shift_the_capital
+	icon = GFX_focus_generic_treaty
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_common_sense }
+	relative_position_id = USA_common_sense
+
+	available = {
+		NOT = { has_war = yes }
+	}
+
+	completion_reward = {
+		set_province_name = {
+			id = 3957
+			name = WASHINGTON_DC
+		}
+		set_capital = {
+			state = 361
+			remember_old_capital = no
+		}
+		add_victory_points = {
+			province = 3957
+			value = 10
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_declartion_of_independence
+	icon = GFX_focus_eng_decolonization
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_declaration_of_the_causes_and_necessity_of_taking_up_arms }
+	relative_position_id = USA_declaration_of_the_causes_and_necessity_of_taking_up_arms
+
+	completion_reward = { 
+		set_cosmetic_tag = USA_independent
+		add_political_power = 150
+		news_event = usa.25
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_draft_a_constitution
+	icon = GFX_goal_draft_constitution
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_declartion_of_independence }
+	relative_position_id = USA_declartion_of_independence
+
+	completion_reward = { 
+		add_timed_idea = {
+			idea = USA_drafting_the_constitution
+			days = 365
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_articles_of_confederation
+	icon = GFX_focus_articles_USA
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_draft_a_constitution }
+	relative_position_id = USA_draft_a_constitution
+
+	available = {
+		NOT = { has_idea = USA_drafting_the_constitution }
+	}
+
+	completion_reward = { 
+		country_event = usa.27
+		create_country_leader = {
+			name = "Confederation Congress"
+			desc = ""
+			traits = { }
+			picture = "confederation_congress.dds"
+			expire = "1775.9.1"
+			ideology = liberalism
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_treaty_of_paris
+	icon = GFX_peace
+	x = 3
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_articles_of_confederation }
+	prerequisite = { focus = USA_franco_american_treaty }
+	relative_position_id = USA_articles_of_confederation
+
+	available = {
+		ENG = { casualties > 8500 }
+		USA = { surrender_progress < 0.05}
+		date > 1781.1.1
+		ENG = { NOT = { has_idea = USA_refused_negotiations }}
+	}
+	
+	select_effect = {
+		ENG = { 
+			country_event =  {
+				id = usa.26 
+				days = 10
+			}
+		}
+	}
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_uncertain_future_of_america
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_treaty_of_paris }
+	relative_position_id = USA_treaty_of_paris
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_take_our_new_lands
+	icon = GFX_goal_generic_more_territorial_claims
+	x = 1
+	y = 1
+	cost = 10
+	prerequisite = { focus = USA_treaty_of_paris }
+	relative_position_id = USA_treaty_of_paris
+
+	bypass = {
+		NOT = {
+			country_exists = IRO
+			country_exists = CHR
+			country_exists = CRE
+			country_exists = CHO
+			country_exists = CHK
+		}
+	}
+
+	completion_reward = { 
+		create_wargoal = {
+		    type = annex_everything
+		    target = IRO
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = CHR
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = CRE
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = CHO
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = CHK
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_society_of_cincinnati
+	icon = GFX
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_the_uncertain_future_of_america }
+	prerequisite = { focus = USA_take_our_new_lands }
+	relative_position_id = USA_the_uncertain_future_of_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_deal_with_the_pennsylvania_mutiny
+	icon = GFX
+	x = 3
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_the_uncertain_future_of_america }
+	prerequisite = { focus = USA_take_our_new_lands }
+	relative_position_id = USA_the_uncertain_future_of_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_question_of_the_loyalists
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_the_uncertain_future_of_america }
+	prerequisite = { focus = USA_take_our_new_lands }
+	relative_position_id = USA_the_uncertain_future_of_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_washington_retires
+	icon = GFX
+	x = -1
+	y = 2
+	cost = 5
+	mutually_exclusive = { focus = USA_washington_secures_power }
+	prerequisite = { focus = USA_the_question_of_the_loyalists focus = USA_deal_with_the_pennsylvania_mutiny focus = USA_society_of_cincinnati }
+	relative_position_id = USA_the_uncertain_future_of_america
+
+	completion_reward = { 
+		country_event = usa.28
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_issue_demobilization_of_the_army
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_washington_retires }
+	relative_position_id = USA_washington_retires
+
+	completion_reward = { 
+		country_event = usa.28
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_washington_secures_power
+	icon = GFX
+	x = 3
+	y = 2
+	cost = 5
+	mutually_exclusive = { focus = USA_washington_retires }
+	prerequisite = { focus = USA_the_question_of_the_loyalists focus = USA_deal_with_the_pennsylvania_mutiny focus = USA_society_of_cincinnati }
+	relative_position_id = USA_the_uncertain_future_of_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_continental_navy
+	icon = GFX_goal_generic_construct_naval_dockyard
+	x = 8
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_second_continental_congress }
+	relative_position_id = USA_second_continental_congress
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_commission_war_ships
+	icon = GFX_goal_generic_navy_battleship
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_navy }
+	relative_position_id = USA_continental_navy
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_trade_interdiction
+	icon = GFX_goal_generic_trade
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_navy }
+	relative_position_id = USA_continental_navy
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_blockade_runners
+	icon = GFX_goal_generic_occupy_states_coastal
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_trade_interdiction focus = USA_commission_war_ships }
+	relative_position_id = USA_trade_interdiction
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_merchant_navy
+	icon = GFX_goal_generic_build_navy
+	prerequisite = { focus = USA_blockade_runners }
+	mutually_exclusive = { focus = USA_fleet_in_being }
+	x = -1
+	y = 1
+	relative_position_id = USA_blockade_runners
+	cost = 10
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		navy_experience = 25
+		add_tech_bonus = {
+			name = sub_op_bonus
+			bonus = 1.0
+			uses = 2
+			technology = convoy_interdiction_ti
+			technology = unrestricted_submarine_warfare
+			technology = wolfpacks
+			technology = advanced_submarine_warfare
+			technology = combined_operations_raiding
+		}
+	}
+}
+
+focus = {
+	id = USA_fleet_in_being
+	icon = GFX_goal_generic_navy_doctrines_tactics
+	prerequisite = { focus = USA_blockade_runners }
+	mutually_exclusive = { focus = USA_merchant_navy }
+	x = 1
+	y = 1
+	relative_position_id = USA_blockade_runners
+	cost = 10
+
+	available_if_capitulated = yes
+
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			all_owned_state = {
+				OR = {
+					is_coastal = no
+					dockyard < 1
+				}
+			}
+		}
+	}
+
+	completion_reward = {
+		navy_experience = 25
+		add_tech_bonus = {
+			name = fleet_in_being_bonus
+			bonus = 1.0
+			uses = 2
+			category = fleet_in_being_tree
+		}
+	}
+}
+
+focus = {
+	id = USA_continental_army
+	icon = GFX_continental_army
+	x = -8
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_second_continental_congress }
+	relative_position_id = USA_second_continental_congress
+
+	completion_reward = { 
+		country_lock_all_division_template = no
+		army_experience = 15
+		set_division_template_lock = {
+		    division_template = "Minutemen Militia"
+		    is_locked = no
+		}
+		set_division_template_lock = {
+		    division_template = "American Regulars"
+		    is_locked = no
+		}
+		division_template = {
+   		    name = "American Regulars"
+		    is_locked = no
+		    priority = 2
+		    regiments = {
+		        infantry = { x = 0 y = 0 }
+		        infantry = { x = 0 y = 1 }
+		        infantry = { x = 0 y = 2 }
+		        infantry = { x = 0 y = 3 }
+		        infantry = { x = 0 y = 4 }
+		        infantry = { x = 1 y = 0 }
+		        infantry = { x = 1 y = 1 }
+		        infantry = { x = 1 y = 2 }
+		        infantry = { x = 1 y = 3 }
+		        infantry = { x = 1 y = 4 }
+		    }
+		    support = { 
+		        artillery = { x = 0 y = 0 }
+		    } 
+		}
+		create_corps_commander = {
+			name = "Benjamin Lincoln"
+			picture = "benjamin_lincoln.dds"
+			traits = { }
+			skill = 2
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Benedict Arnold"
+			picture = "benedict_arnold.dds"
+			traits = { }
+			skill = 3
+			attack_skill = 2
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "George Rogers Clark"
+			picture = "george_rogers_clarke.dds"
+			traits = { ranger }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Horatio Gates"
+			picture = "horatio_gates.dds"
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		create_corps_commander = {
+			name = "Nathaniel Greene"
+			picture = "nathaniel_greene.dds"
+			traits = {  }
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_get_artillery
+	icon = GFX_field_gun
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_army }
+	relative_position_id = USA_continental_army
+
+	completion_reward = { 
+		create_corps_commander = {
+			name = "Henry Knox"
+			picture = "henry_knox.dds"
+			traits = { bearer_of_artillery }
+			skill = 2
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 2
+			logistics_skill = 1
+		}
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 2
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_canon_foundries
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_get_artillery }
+	relative_position_id = USA_get_artillery
+
+	completion_reward = {
+		random_owned_controlled_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+				OR = {
+					is_in_home_area = yes
+					NOT = {
+						owner = {
+							any_owned_state = {
+								free_building_slots = {
+									building = arms_factory
+									size > 1
+									include_locked = yes
+								}
+								is_in_home_area = yes
+							}
+						}
+					}
+				}
+			}
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		add_resource = {
+		    type = tungsten
+		    amount = 8
+		    state = 362
+		}
+		add_resource = {
+		    type = steel
+		    amount = 12
+		    state = 358
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_appoint_commander_in_chief
+	icon = GFX_make_george_washington_commander
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_army }
+	relative_position_id = USA_continental_army
+
+	completion_reward = {
+		add_advisor_role = {
+			character = USA_George_Washington_1699
+			activate = yes
+			advisor = {
+				slot = army_chief
+				cost = 50
+				idea_token = USA_George_Washington_1699
+				traits = {
+					USA_commander_in_chief
+				}
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_commitee_of_safety
+	icon = GFX_goal_generic_intelligence_exchange
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_continental_army }
+	relative_position_id = USA_continental_army
+
+	completion_reward = { 
+		add_ideas = USA_commitee_of_safety
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_culper_network
+	icon = GFX_the_culper_network
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_commitee_of_safety }
+	relative_position_id = USA_appoint_commander_in_chief
+
+	bypass = {
+		has_intelligence_agency = yes
+	}
+
+	completion_reward = { 
+		create_intelligence_agency = yes
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_board_of_war_and_ordnance
+	icon = GFX_focus_generic_military_academy
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_appoint_commander_in_chief }
+	relative_position_id = USA_appoint_commander_in_chief
+
+	completion_reward = { 
+		add_ideas = USA_board_of_war_and_ordnance_idea
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_prussian_advisors
+	icon = GFX_review_military_doctrines_focus
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_board_of_war_and_ordnance }
+	prerequisite = { focus = USA_canon_foundries }
+	prerequisite = { focus = USA_the_culper_network }
+	relative_position_id = USA_board_of_war_and_ordnance
+
+	completion_reward = {
+		add_advisor_role = {
+			character = USA_friedrich_wilhelm_von_steuben
+			activate = yes
+			advisor = {
+				slot = high_command
+				cost = 50
+				idea_token = USA_George_Washington_1699
+				traits = {
+					army_infantry_3
+				}
+			}
+		}
+		add_corps_commander_role = {
+			character = USA_friedrich_wilhelm_von_steuben
+			traits = { bearer_of_artillery }
+			skill = 4
+			attack_skill = 3
+			defense_skill = 2
+			planning_skill = 4
+			logistics_skill = 4
+		}	
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_oversee_training_drills
+	icon = GFX_soldiers_marching
+	x = -2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_prussian_advisors }
+	relative_position_id = USA_prussian_advisors
+
+	completion_reward = { 
+		add_ideas = military_drill
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_morale_improvement
+	icon = GFX_goal_generic_political_pressure
+	x = 2
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_prussian_advisors }
+	relative_position_id = USA_prussian_advisors
+
+	completion_reward = { 
+		add_ideas = USA_bolstered_army_morale
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_military_doctrine_effort
+	icon = GFX_goal_generic_army_doctrines
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_prussian_advisors }
+	relative_position_id = USA_prussian_advisors
+
+	completion_reward = {
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_infantry_improvement
+	icon = GFX_soldier_icon
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_oversee_training_drills focus = USA_military_doctrine_effort focus = USA_morale_improvement }
+	relative_position_id = USA_oversee_training_drills
+
+	completion_reward = {
+		add_tech_bonus = {
+			name = infantry_artillery_bonus
+			bonus = 1.0
+			uses = 1
+			category = infantry_weapons
+			category = artillery
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_cavalry_corps
+	icon = GFX_goal_generic_cavalry
+	x = 3
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_oversee_training_drills focus = USA_military_doctrine_effort focus = USA_morale_improvement }
+	relative_position_id = USA_oversee_training_drills
+
+	completion_reward = { 
+		add_equipment_to_stockpile = {
+		    type = basic_cavalry_equipment
+		    amount = 160
+		    producer = USA
+		}
+		362 = {
+			add_resource = {
+			    type = aluminium
+			    amount = 10
+			}
+		}
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_minute_men
+	icon = GFX_minutemen
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_militia_arsenals focus = USA_raid_arsenals }
+	relative_position_id = USA_militia_arsenals
+
+	completion_reward = { 
+		add_ideas = USA_minutemen
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_enemy_of_our_enemy
+	icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
+	prerequisite = { focus = USA_claim_our_independence }
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = USA_claim_our_independence
+
+	completion_reward = { 
+		FRA = { country_event = generic.2 }
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_a_new_constitution
+	icon = GFX_focus_hol_the_foundations_of_defense
+	prerequisite = { focus = USA_the_enemy_of_our_enemy }
+	x = 0
+	y = 1
+	cost = 5
+	relative_position_id = USA_the_enemy_of_our_enemy
+
+	completion_reward = { 
+		add_political_power = 100
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_john_withrops_america
+	icon = GFX
+	x = 5
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_a_new_constitution }
+	mutually_exclusive = { focus = USA_kingdom_of_america }
+	mutually_exclusive = { focus = USA_william_penns_america }
+	relative_position_id = USA_a_new_constitution
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_city_upon_a_hill
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_john_withrops_america }
+	relative_position_id = USA_john_withrops_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_promote_purtian_values
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_city_upon_a_hill }
+	relative_position_id = USA_city_upon_a_hill
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_remember_the_mayflower
+	icon = GFX
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_john_withrops_america }
+	relative_position_id = USA_john_withrops_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_god_bless_america
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_remember_the_mayflower }
+	relative_position_id = USA_remember_the_mayflower
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_convert_the_natives
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_god_bless_america }
+	prerequisite = { focus = USA_promote_purtian_values }
+	relative_position_id = USA_god_bless_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_william_penns_america
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_a_new_constitution }
+	mutually_exclusive = { focus = USA_kingdom_of_america }
+	mutually_exclusive = { focus = USA_john_withrops_america }
+	relative_position_id = USA_a_new_constitution
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_native_representation_act
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_william_penns_america }
+	relative_position_id = USA_william_penns_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_assimilate_the_natives
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_native_representation_act }
+	relative_position_id = USA_native_representation_act
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_quaker_values
+	icon = GFX
+	x = 1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_william_penns_america }
+	relative_position_id = USA_william_penns_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_religious_tolerance
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_quaker_values }
+	relative_position_id = USA_quaker_values
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_kingdom_of_america
+	icon = GFX
+	x = -5
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_a_new_constitution focus = USA_request_self_governance}
+	mutually_exclusive = { focus = USA_william_penns_america }
+	mutually_exclusive = { focus = USA_john_withrops_america }
+	relative_position_id = USA_a_new_constitution
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_the_coronation
+	icon = GFX
+	x = 0
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_kingdom_of_america}
+	relative_position_id = USA_kingdom_of_america
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+
+focus = {
+	id = USA_indian_removal_act
+	icon = GFX
+	x = -1
+	y = 1
+	cost = 5
+	prerequisite = { focus = USA_the_coronation}
+	relative_position_id = USA_the_coronation
+
+	completion_reward = { 
+	}
+	ai_will_do = { 
+		factor = 1
+	}
+}
+}

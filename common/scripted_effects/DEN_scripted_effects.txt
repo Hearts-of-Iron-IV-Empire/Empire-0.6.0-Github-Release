@@ -1,0 +1,41 @@
+DEN_lower_army_ineffectiveness = {
+	if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_1 }
+		remove_ideas = DEN_outmanoeuvred_by_sweden_1
+	}
+	else_if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_2 }
+		swap_ideas = {
+			remove_idea = DEN_outmanoeuvred_by_sweden_2
+			add_idea = DEN_outmanoeuvred_by_sweden_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_3 }
+		swap_ideas = {
+			remove_idea = DEN_outmanoeuvred_by_sweden_3
+			add_idea = DEN_outmanoeuvred_by_sweden_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_4 }
+		swap_ideas = {
+			remove_idea = DEN_outmanoeuvred_by_sweden_4
+			add_idea = DEN_outmanoeuvred_by_sweden_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_5 }
+		swap_ideas = {
+			remove_idea = DEN_outmanoeuvred_by_sweden_5
+			add_idea = DEN_outmanoeuvred_by_sweden_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = DEN_outmanoeuvred_by_sweden_6 }
+		swap_ideas = {
+			remove_idea = DEN_outmanoeuvred_by_sweden_6
+			add_idea = DEN_outmanoeuvred_by_sweden_5
+		}
+	}
+}

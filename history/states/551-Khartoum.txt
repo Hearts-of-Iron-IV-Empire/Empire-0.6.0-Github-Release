@@ -1,0 +1,34 @@
+
+state={
+	id=551
+	name="STATE_551"
+
+	history={
+		owner = SUD
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = SUD
+		victory_points = {
+			12806 1 
+		}
+		victory_points = {
+			12881 3 
+		}
+		victory_points = {
+			4963 5 
+		}
+		victory_points = {
+			2046 10 
+		}
+
+	}
+
+	provinces={
+		1977 2046 2088 4961 4963 7925 7989 10743 10784 10900 10902 12725 12796 12806 12826 12836 12862 12881 
+	}
+	manpower=199350
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

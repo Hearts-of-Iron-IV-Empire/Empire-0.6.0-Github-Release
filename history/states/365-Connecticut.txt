@@ -1,0 +1,30 @@
+
+state={
+	id=365
+	name="STATE_365"
+
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			6909 2 
+		}
+		victory_points = {
+			9847 1 
+		}
+		1760.1.1 = {
+			add_manpower=175000
+		}
+	}
+
+	provinces={
+		6909 9832 9847 9850 
+	}
+	manpower=25970
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

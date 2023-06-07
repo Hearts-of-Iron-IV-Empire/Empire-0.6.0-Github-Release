@@ -1,0 +1,397 @@
+﻿division_template = {
+	name = "Regular Regiment"
+	priority = 2
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 0 y = 3 }
+		infantry = { x = 0 y = 4 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 1 y = 3 }
+		infantry = { x = 1 y = 4 }
+	}
+
+	support = {
+        engineer = { x = 0 y = 0 }
+        artillery = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Conscript Regiment"
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+}
+
+division_template = {
+	name = "Frontiersmen"
+	priority = 0
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Reiter Regiment"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 0 y = 3 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+		cavalry = { x = 1 y = 3 }
+	}
+
+	support = {
+	    artillery = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Cossack Regiment"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 0 y = 2 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+	}
+	support = {
+	    recon = { x = 0 y = 0 }
+	}
+}
+
+units = {
+
+##### MOSCOW ####
+
+	division= {
+		name = "Regular Regiment"
+		location = 6380
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 6380
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 6380
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+## NOVGOROD
+
+	division= {
+		name = "Conscript Regiment"
+		location = 117
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 117
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Reiter Regiment"
+		location = 117
+		division_template = "Reiter Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+##VOLKHOV
+
+	division= {
+		name = "Regular Regiment"
+		location = 9197
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 9197
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+##PSKOV 11202
+
+	division= {
+		name = "Regular Regiment"
+		location = 11202
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 11202
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Reiter Regiment"
+		location = 11202
+		division_template = "Reiter Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 11202
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+#LUKI
+
+	division= {
+		name = "Regular Regiment"
+		location = 11234
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 11234
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 11234
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 11234
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Border Ottomans
+
+	division= {
+		name = "Regular Regiment"
+		location = 11405
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 11422
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 486
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 3466
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 3466
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 6474
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 6493
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 9430
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 9430
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 11418
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.5
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 11403
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 11403
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 11715
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 3573
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 737
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 568
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 3417
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 3417
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+	#Rostov 9417
+
+	division= {
+		name = "Regular Regiment"
+		location = 9417
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 9417
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Cossack Regiment"
+		location = 9417
+		division_template = "Cossack Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.6
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 3777
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Conscript Regiment"
+		location = 3777
+		division_template = "Conscript Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+
+### FRONTIERSMEN
+
+	division= {
+		name = "Frontiersmen"
+		location = 9292
+		division_template = "Frontiersmen"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.4
+	}
+}
+
+#Stockpiles 
+instant_effect = {	
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 200
+		producer = SOV
+	}
+}

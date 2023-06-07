@@ -1,0 +1,798 @@
+﻿###########################
+# French Events
+###########################
+
+add_namespace = france
+
+country_event = {
+	id = france.1
+	title = france.1.t
+	desc = france.1.d
+
+	hidden = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.1.a
+		add_threat = 10
+
+		hidden_effect = {
+			ENG = {
+				country_event = england.4
+			}
+		}
+	}
+}
+
+#Hugenot Rebels - factory sabotaged
+country_event = {
+	id = france.2
+	title = france.2.t
+	desc = france.2.d
+	#picture = GFX
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.2.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = arms_factory
+				damage = 0.6
+			}
+		}
+		add_stability = -0.01
+	}
+}
+
+#Hugenot Rebels - civilian factory sabotaged
+country_event = {
+	id = france.3
+	title = france.3.t
+	desc = france.3.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.3.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = industrial_complex
+				damage = 0.6
+			}
+		}
+		add_stability = -0.01
+	}
+}
+
+#Hugenot Rebels - bridge blown
+country_event = {
+	id = france.4
+	title = france.4.t
+	desc = france.4.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.4.a #okay
+		random_owned_state = {
+			limit = {
+				is_fully_controlled_by = ROOT
+				arms_factory > 0
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 1
+			}
+		}
+		add_stability = -0.01
+	}
+}
+
+#economic integration
+
+country_event = {
+	id = france.5
+	title = france.5.t
+	desc = france.5.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.5.a
+		FRA = {
+			set_autonomy = {
+			    target = SPR
+			    autonomy_state = autonomy_dominion
+			}
+		}
+		FRA = {
+			country_event = {
+				id = france.6
+				days = 5
+			}
+		}
+		random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+	option = {
+		name = france.5.b
+		FRA = {
+			country_event = {
+				id = france.7
+				days = 5
+			}
+		}
+	}
+}
+
+#economic integration yes
+
+country_event = {
+	id = france.6
+	title = france.6.t
+	desc = france.6.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.6.a
+	}
+}
+
+#economic integration no
+
+country_event = {
+	id = france.7
+	title = france.7.t
+	desc = france.7.d
+	picture = GFX_report_event_generic_train
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.7.a
+	}
+}
+
+#Scotland offer deal
+
+country_event = {
+	id = france.8
+	title = france.8.t
+	desc = france.8.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.8.b
+		FRA = { country_event = france.10 }
+		add_political_power = 25
+		FRA = { 
+			country_event = {
+				id = france.10
+				days = 2
+			}
+		}
+		ai_chance = {
+			factor = 85
+		}
+	}
+	option = {
+		name = france.8.a
+		FRA = { 
+			country_event = {
+				id = france.9
+				days = 2
+			}
+		}
+		add_political_power = -300
+		white_peace = FRA
+		ENG = { end_puppet = SCO }
+		leave_faction = yes
+		ai_chance = {
+			factor = 15
+		}
+	}
+}
+
+#Scotland accept
+
+country_event = {
+	id = france.9
+	title = france.9.t
+	desc = france.9.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Great"
+		FRA = { add_to_faction = SCO }
+	}
+}
+
+#Scotland Refuse
+
+country_event = {
+	id = france.10
+	title = france.10.t
+	desc = france.10.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = france.10.a
+	}
+}
+
+country_event = {
+	id = france.11
+	title = france.11.t
+	desc = france.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.11.a
+		FRA = {
+			country_event = {
+				id = france.12
+				days = 5
+			}
+		}
+	}
+	option = {
+		name = france.11.b
+		FRA = {
+			country_event = {
+				id = france.13
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = france.12
+	title = france.12.t
+	desc = france.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.12.a
+		transfer_state = 1
+	}
+}
+
+country_event = {
+	id = france.13
+	title = france.13.t
+	desc = france.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.13.a
+		add_state_claim = 1
+	}
+}
+
+country_event = {
+	id = france.14
+	title = france.14.t
+	desc = france.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = france.14.a
+		165 = {
+			add_core_of = ARA
+		}
+		166 = {
+			add_core_of = ARA
+		}
+		177 = {
+			add_core_of = ARA
+		}
+		167 = {
+			add_core_of = ARA
+		}
+
+		ARA = { 
+		transfer_state = 165
+		transfer_state = 167
+		transfer_state = 177
+		transfer_state = 166
+		}
+
+		puppet = ARA
+	}
+	option = {
+		name = france.14.b
+	}
+}
+
+country_event = {
+	id = france.15
+	title = "Jacobite Troops Slip Past Blockade"
+	desc = france.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "On this hill I will build my church."
+		set_province_controller = 9383
+		division_template = {
+			name = "Jacobite Force"
+			priority = 2
+			is_locked = yes
+			regiments = {
+				infantry = { x = 0 y = 0 }
+				infantry = { x = 0 y = 1 }
+				infantry = { x = 0 y = 2 }
+				infantry = { x = 0 y = 3 }
+				infantry = { x = 0 y = 4 }
+				infantry = { x = 1 y = 0 }
+				infantry = { x = 1 y = 1 }
+				infantry = { x = 1 y = 2 }
+				infantry = { x = 1 y = 3 }
+				infantry = { x = 1 y = 4 }
+			}
+			support = {
+				artillery = { x = 0 y = 0 }
+				recon = { x = 0 y = 1 } 
+			}
+		}
+		121 = {
+			create_unit = {
+				division = "name = \"1st Jacobite Expeditionary Force\" division_template = \"Jacobite Force\" start_experience_factor = 0.2 prioritize_location = 9383" 
+				owner = FRA
+			}
+			create_unit = {
+				division = "name = \"2nd Jacobite Expeditionary Force\" division_template = \"Jacobite Force\" start_experience_factor = 0.2 prioritize_location = 9383" 
+				owner = FRA
+			}
+		}
+	}
+}
+
+country_event = {
+	id = france.16
+	title = "Jacobite Troops Intercepted!"
+	desc = france.16.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "At least most of them made it back..."
+		add_manpower = 3289
+	}
+}
+
+country_event = {
+	id = france.17
+	title = "Fall of Edinburgh"
+	desc = france.17.d
+
+	fire_only_once = yes
+	trigger = {
+		original_tag = FRA
+		controls_province = 9392
+		has_completed_focus = FRA_the_landing_at_firth_of_forth
+		NOT = { has_completed_focus = FRA_anglo_french_treaty  }
+	}
+
+	option = {
+		name = "From Here James Stuart will restore his kingdom!"
+		create_dynamic_country = {
+			original_tag = ENG	
+			set_cosmetic_tag = JACOBITES
+			transfer_state = 121
+
+			create_country_leader = {
+				name = "James III"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "the_old_pretender.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					old_pretender
+				}
+			}
+
+			hidden_effect = {
+				PREV.PREV = {
+					declare_war_on = {
+					    target = ENG
+					    type = civil_war
+					}
+					if = {
+						limit = {
+							 country_exists = SCO
+						}
+						declare_war_on = {
+						    target = SCO
+						    type = civil_war
+						}
+					}
+				}
+				set_politics = {
+					ruling_party = neutrality
+				}
+				set_popularities = {
+					aristocracy = 45
+					neutrality = 40
+					fascism = 5
+					communism = 5
+					democratic = 5
+				}
+				division_template = {
+					name = "Jacobite Force"
+					priority = 2
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 0 y = 3 }
+						infantry = { x = 0 y = 4 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+						infantry = { x = 1 y = 3 }
+						infantry = { x = 1 y = 4 }
+					}
+					support = {
+						artillery = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 } 
+					}
+				}
+
+				division_template = {
+					name = "Jacobite Rebels"
+					priority = 2
+					is_locked = yes
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+					}
+				}
+
+				FRA = { add_to_faction = PREV }
+				
+				
+				121 = {
+					create_unit = {
+						division = "name = \"1st Jacobite Expeditionary Force\" division_template = \"Jacobite Force\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"2nd Jacobite Expeditionary Force\" division_template = \"Jacobite Force\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 9237
+
+				133 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				133 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 6046
+
+				120 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				120 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 11055
+
+				136 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				136 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 9285
+
+				131 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				131 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 3463
+
+				123 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				123 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 6384
+
+				132 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				132 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				132 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+
+				set_province_controller = 11303
+
+				113 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				113 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				113 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				113 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+				113 = {
+					create_unit = {
+						division = "name = \"Jacobite Rebels\" division_template = \"Jacobite Rebels\" start_experience_factor = 0.2" 
+						owner = PREV
+					}
+				}
+			}
+		}
+
+	}
+
+	option = {
+		name = "Actually, we have other plans."
+	}
+}
+
+country_event = {
+	id = france.18
+	title = "Kingdom Of France Offers Vassalization"
+	desc = france.18.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "I pledge myself to thee my liege..."
+		FRA = {
+			country_event = {
+				id = france.19
+				days = 1
+			}
+		}
+		effect_tooltip = {
+			FRA = { 
+				set_autonomy = {
+				    target = LOR
+				    autonomy_state = autonomy_puppet
+				}
+			}
+		}
+	}
+
+	option = {
+		name = "Proposterous idea!"
+		FRA = {
+			country_event = {
+				id = france.20
+				days = 1
+			}
+		}
+	}
+}	
+
+country_event = {
+	id = france.19
+	title = "Lorraine Accepts"
+	desc = france.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome Into The Realm"
+		FRA = { 
+			set_autonomy = {
+			    target = LOR
+			    autonomy_state = autonomy_puppet
+			}
+		}
+	}
+}	
+
+country_event = {
+	id = france.20
+	title = "Lorraine Refuses"
+	desc = france.19.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Unfortunate."
+	}
+}	
+
+country_event = {
+	id = france.21
+	title = "Swapping Lorraine For Milan?"
+	desc = france.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Finally, a way out of this hellhole!"
+		LOM = { change_tag_from = ROOT }
+		effect_tooltip = {
+			FRA = { 
+				annex_country = {
+				    target = LOR
+				    transfer_troops = no
+				}
+			}
+		}
+		FRA = {
+			country_event = {
+				id = france.22
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = "My allegiance is to the people of Lorraine."
+		FRA = {
+			country_event = {
+				id = france.23
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = france.22
+	title = "Lorraine Accepts"
+	desc = france.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very Good"
+		annex_country = {
+		    target = LOR
+		    transfer_troops = no
+		}
+		set_autonomy = {
+		    target = LOM
+		    autonomy_state = autonomy_free
+		}
+	}
+}	
+
+country_event = {
+	id = france.23
+	title = "Lorraine Refuses"
+	desc = france.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = ":("
+	}
+}
+
+country_event = {
+	id = france.24
+	title = "Storming La Bastille!"
+	desc = france.24.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Send out the troops"
+        add_stability = -0.05
+	}
+}

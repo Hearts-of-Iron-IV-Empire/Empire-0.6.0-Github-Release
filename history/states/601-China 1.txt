@@ -1,0 +1,38 @@
+state={
+	id=601
+	name="STATE_601"
+	resources={
+		oil=2.000
+	}
+
+	history={
+		owner = TIB
+		add_core_of = CHI
+		add_core_of = TIB
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			10856 1
+		}
+		1716.5.1 = {
+			owner = SIK
+			controller = SIK
+			add_core_of = SIK
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+
+		}
+	}
+
+	provinces={
+		4407 5018 5080 5102 8041 8059 10741 10856 
+	}
+	manpower=68200
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

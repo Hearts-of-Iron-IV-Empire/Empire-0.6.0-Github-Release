@@ -1,0 +1,30 @@
+
+state={
+	id=795
+	name="Brescia"
+
+	history={
+		owner = VNC
+		add_core_of = VNC
+		add_claim_by = LOM
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			11568 5 
+		}
+		1798.1.1 = {
+			owner = LOM
+			add_core_of = LOM
+		}
+	}
+
+	provinces={
+		969 11568 11587 
+	}
+	manpower=320000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

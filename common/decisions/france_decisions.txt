@@ -1,0 +1,308 @@
+FRA_religious_troubles = {
+	FRA_hugenot_raid = {
+
+		icon = generic_civil_support
+
+		available = {
+			NOT = { has_idea = FRA_religious_unrest }
+		}
+
+		days_mission_timeout = 70
+
+		activation = {
+			has_idea = FRA_religious_unrest
+		}
+
+		visible = {
+			
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = france.2
+				}
+				25 = {
+					country_event = france.3
+				}
+				25 = {
+					country_event = france.4
+				}
+				25 = {
+					
+				}
+			}
+		}
+	}
+
+	FRA_hunt_down_huguenots_centre_sud = {
+
+		icon = generic_oppression
+
+		available = {
+			has_completed_focus = FRA_address_religious_turmoil
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = FRA_centre_sud_rebels
+			divisions_in_state = {
+				state = 33
+				size > 5
+			}
+		}
+
+		cost = 25
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 33
+			}
+		}
+		visible = {
+			has_country_flag = FRA_centre_sud_rebels
+			has_completed_focus = FRA_address_religious_turmoil
+		}
+		is_good = yes
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 33
+					size < 6
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = FRA_hunt_down_centre_sud_rebels_tt
+			activate_mission = FRA_maintain_control_centre_sud
+		}
+	}
+
+	FRA_maintain_control_centre_sud = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 180
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 33	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 33
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = FRA_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = FRA_centre_sud_rebels
+			if = {
+				limit = {
+					NOT = { has_country_flag = FRA_limousin_rebels }
+					NOT = { has_country_flag = FRA_auvergne_rebels }
+				}
+				remove_ideas = FRA_religious_unrest
+			}
+		}
+	}
+
+	FRA_hunt_down_huguenots_limousin = {
+
+		icon = generic_oppression
+
+		available = {
+			has_completed_focus = FRA_address_religious_turmoil
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = FRA_limousin_rebels 
+			divisions_in_state = {
+				state = 25	
+				size > 5
+			}
+		}
+
+		cost = 25
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 25
+			}
+		}
+		visible = {
+			has_country_flag = FRA_limousin_rebels 
+			has_completed_focus = FRA_address_religious_turmoil
+		}
+		is_good = yes
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 25
+					size < 6
+				}
+			}
+		}
+
+		complete_effect = {
+			custom_effect_tooltip = FRA_hunt_down_huguenots_limousin_tt
+			activate_mission = FRA_maintain_control_limousin
+		}
+	}
+
+	FRA_maintain_control_limousin = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 180
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 25	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 25
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = FRA_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = FRA_limousin_rebels
+			if = {
+				limit = {
+					NOT = { has_country_flag = FRA_centre_sud_rebels }
+					NOT = { has_country_flag = FRA_auvergne_rebels }
+				}
+				remove_ideas = FRA_religious_unrest
+			}
+		}
+	}
+
+	FRA_hunt_down_huguenots_auvergne = {
+
+		icon = generic_oppression
+
+		available = {
+			has_completed_focus = FRA_address_religious_turmoil
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = FRA_auvergne_rebels
+			divisions_in_state = {
+				state = 26	
+				size > 5
+			}
+		}
+
+		cost = 25
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+			}
+		}
+		visible = {
+			has_country_flag = FRA_auvergne_rebels
+			has_completed_focus = FRA_address_religious_turmoil
+		}
+		is_good = yes
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 26
+					size < 6
+				}
+			}
+		}
+		complete_effect = {
+			custom_effect_tooltip = FRA_hunt_down_auvergne_rebels_tt
+			activate_mission = FRA_maintain_control_auvergne
+		}
+	}
+
+	FRA_maintain_control_auvergne = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 180
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 26	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 26
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = FRA_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = FRA_auvergne_rebels
+			if = {
+				limit = {
+					NOT = { has_country_flag = FRA_centre_sud_rebels }
+					NOT = { has_country_flag = FRA_limousin_rebels }
+				}
+				remove_ideas = FRA_religious_unrest
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=55
+	name="STATE_55"
+
+	history={
+		owner = HES
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			3524 3 
+		}
+		add_core_of = HES
+
+	}
+
+	provinces={
+		3397 3524 6549 11445 
+	}
+	manpower=287575
+	buildings_max_level_factor=1.000
+	state_category=city
+}

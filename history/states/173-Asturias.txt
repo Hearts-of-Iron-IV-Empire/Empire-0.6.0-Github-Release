@@ -1,0 +1,41 @@
+
+state={
+	id=173
+	name="STATE_173" # Granada
+	manpower = 597847
+	
+	state_category = city
+	
+	resources={
+		steel=8 # was: 12
+	}
+
+	history={
+		owner = SPR
+		victory_points = {
+			9979 15
+		}
+		victory_points = {
+			747 10
+		}
+		victory_points = {
+			1176 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			9979 = {
+				naval_base = 2
+			}
+			747 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SPR
+		add_core_of = ADU
+	}
+
+	provinces={
+		747 1176 4065 7068 7153 7196 9979 10009 10063 11956 12038 
+	}
+}

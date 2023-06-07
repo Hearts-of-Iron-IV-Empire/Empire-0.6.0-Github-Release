@@ -1,0 +1,20 @@
+
+state={
+	id=841
+	name="STATE_841"
+
+	history={
+		owner = UNC
+		1773.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+		}
+	}
+
+	provinces={
+		823 4727 10387 10483 11795 12303 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=897
+	name="STATE_897"
+
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+
+		}
+		victory_points = {
+			6934 1 
+		}
+		victory_points = {
+			9655 1 
+		}
+		owner = AUS
+		add_core_of = AUS
+		1812.1.1 = {
+			owner = WUR
+			add_core_of = WUR
+		}
+
+	}
+
+	provinces={
+		3679 6934 9655 13126 
+	}
+	manpower=156078
+	buildings_max_level_factor=1.000
+	state_category=city
+}

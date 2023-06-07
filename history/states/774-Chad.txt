@@ -1,0 +1,26 @@
+state={
+	id=774
+	name="STATE_774"
+
+	history={
+		owner = CHA
+		add_extra_state_shared_building_slots = 10
+		victory_points = {
+			4997 5 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		2081 3123 4897 4997 7963 9152 10780 13138 
+	}
+	manpower=14424
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

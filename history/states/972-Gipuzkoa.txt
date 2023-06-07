@@ -1,0 +1,19 @@
+state={
+	id=972
+	name="STATE_972"
+	provinces={
+		6756 
+	}
+	history={
+		owner = SPR
+		add_claim_by = NAV
+		buildings = {
+			infrastructure = 2
+		}
+		add_core_of = SPR
+
+	}
+	manpower=54078
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

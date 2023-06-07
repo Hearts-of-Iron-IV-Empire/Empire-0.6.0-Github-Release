@@ -1,0 +1,257 @@
+# Adjacency rules determine if an army, navy or trade can pass through the adjacency (e.g. a canal or strait).
+#
+# If two countries at war control provinces in the adjacency it is considered contested.
+# The optional triggers is_enemy, is_friend and is_neutral are evaluated in order and if one evaluates to true the corresponding rule is used.
+# If is_enemy and is_friend evaluates to false the neutral rule is used. In this case the is_neutral trigger will not be evaluated at all.
+# If is_friend and is_neutral evaluates to false the enemy rule is used.
+# If is_enemy and is_neutral evaluates to false the friend rule is used.
+# If any adjacency province controller is at war with the country the enemy rule is used, unless is_enemy evaluates to false, then the neutral rule is used.
+# If any adjacency province controller is an ally of is giving military access to the country the friend rule is used, unless is_friend evaluates to false, then the neutral rule is used.
+# Otherwise the neutral rule is used, unless is_neutral evaluates to false, then the enemy rule is used.
+#
+# The 'name' property is how you refer to the rule in adjacencies.csv
+
+#Gibraltar Strait
+adjacency_rule =
+{
+	name = "GIBRALTAR_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 4135 9945 }
+	
+	icon = 5407	
+	offset = { -31.0 0.0 -2.0 }
+}
+
+#Øresund - (Østersøen <-> Kattegat/Skagerak/Nordsøen)
+adjacency_rule =
+{
+	name = "DANISH_BELTS_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 6287 3277 3325 3260 394 }
+	
+	icon = 2455
+	offset = { -26 0 -13 }
+}
+
+#Marmara Strait
+adjacency_rule =
+{
+	name = "BOSPHORUS_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 9833 11829 }
+
+	is_disabled = {
+		has_country_flag = BOSPHORUS_STRAIT_BLOCKED_FOR_COUNTRY
+		tooltip = bosporus_strait_blocked_tt
+	}
+	
+	icon = 9833
+	offset = { -2 0 -9 }
+}
+
+#The Dardanelles
+adjacency_rule =
+{
+	name = "DARDANELLES_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = yes
+	}
+	
+	required_provinces = { 849 6864 }
+	
+	icon = 849
+	offset = { 3 0 -5 } 
+}
+
+#Strait of Hormuz
+adjacency_rule =
+{
+	name = "HORMUZ_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = no
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 10904 7982 4959 }
+		
+	icon = 10904
+	offset = { 2 0 12 }
+}
+
+#Kerch Strait
+adjacency_rule =
+{
+	name = "KERCH_STRAIT"
+
+	contested =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	enemy =
+	{
+		army = no
+		navy = no
+		submarine = yes
+		trade = no
+	}
+	friend =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	neutral =
+	{
+		army = yes
+		navy = yes
+		submarine = yes
+		trade = yes
+	}
+	
+	required_provinces = { 6741 9680 }
+	
+	icon = 8282	
+	offset = { 2.0 0.0 -30.0 }
+}

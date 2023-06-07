@@ -1,0 +1,35 @@
+
+state={
+	id=360
+	name="STATE_360"
+	resources={
+		steel=4
+	}
+
+	history={
+		owner = USA
+		add_core_of = USA
+		buildings = {
+			infrastructure = 1
+			6845 = {
+				naval_base = 5
+
+			}
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6845 20 
+		}
+		1760.1.1 = {
+			add_manpower=310000
+		}
+	}
+
+	provinces={
+		822 3824 6845 6869
+	}
+	manpower=15950
+	buildings_max_level_factor=1.000
+	state_category=town 
+}

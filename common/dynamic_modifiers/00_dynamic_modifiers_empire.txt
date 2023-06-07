@@ -1,0 +1,97 @@
+party_popularity_dynamic_modifier = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	political_power_gain = ROOT.party_popularity@ruling_party
+}
+
+catholic_curia_power_gain = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+	experience_gain_air = ROOT.opinion@PAP
+}
+
+GNW_planned_offensive = { # 0.6.5 Buster! - Glow Berries Replying to Kodexu about Swedish Focus Tree Rework, 7:20 PM EST 2023-03-30 in #Tester-Channel
+    icon = GFX_idea_chi_war_of_resistance2
+
+	army_attack_factor = 0.9
+	army_speed_factor = 0.75
+	ground_attack_factor = 0.75
+	local_org_regain = 0.5			
+}
+
+GNW_scorched_earth = { 
+    icon = GFX_idea_chi_war_of_resistance2
+	
+	out_of_supply_factor = 0.5
+	attrition = 0.5
+	army_attack_factor = -0.25
+	army_defence_factor = -0.25
+	army_speed_factor = -0.30
+	ground_attack_factor = -0.50
+	local_org_regain = -0.5
+}
+
+slave_state = {
+	icon = GFX_idea_bul_tobacco_exports
+	
+	local_manpower = -0.3
+	local_resources = 0.25
+	state_production_speed_buildings_factor = 0.15
+}
+
+decentralized_state = {
+	icon = GFX_idea_chi_war_of_resistance2
+	
+	local_manpower = -0.3
+	local_resources = -0.30
+	state_production_speed_buildings_factor = -0.15
+}
+
+VNC_conflict_with_genoa_dynamic_modifier = {
+	
+	enable = { always = yes }
+	stability_factor = VNC_dm_stability_factor # 0
+	war_support_factor = VNC_dm_war_support_factor # 0.05
+	offence = VNC_dm_offence # 0 Balanced military policy
+	defence = VNC_dm_defence # 0 Balanced military policy
+	army_attack_factor = VNC_dm_army_attack_factor # 0 Land military policy
+	army_defence_factor = VNC_dm_army_defence_factor # 0 Land military policy
+	naval_damage_factor = VNC_dm_naval_damage_factor # 0 Navy military policy
+	naval_defense_factor = VNC_dm_naval_defense_factor # 0 Navy military policy 
+	trade_opinion_factor = VNC_dm_trade_opinion_factor # 0.05
+}
+
+ruler_skills_dynamic_modifier = {
+	enable = { always = yes }
+	remove_trigger = { always = no }
+
+
+	political_power_factor = ROOT.diplomacy_skill_effect
+	trade_opinion_factor = ROOT.diplomacy_skill_effect
+	training_time_army_factor = ROOT.militate_skill_effect_negative
+	#org_loss_when_moving = ROOT.militate_skill_effect_negative
+	army_morale_factor = ROOT.militate_skill_effect
+	production_speed_buildings_factor = ROOT.management_skill_effect
+	industrial_capacity_factory = ROOT.management_skill_effect
+	#stability_factor = ROOT.management_skill_effect
+}
+
+EMPIRE_unit_limit_penalties = {
+	enable = {
+		num_divisions > num_controlled_factories
+	}
+	remove_trigger = {
+		NOT = {
+			num_divisions > num_controlled_factories 
+		}
+	}
+	army_attack_factor = -0.2 #Negative Modifiers
+    army_core_attack_factor = -0.1 #Negative Modifiers
+	army_attack_speed_factor = -0.3 #Negative Modifiers
+	army_defence_factor = -0.2 #Negative Modifiers
+	army_core_defence_factor = -0.1 #Negative Modifiers
+	army_speed_factor = -0.3 #Negative Modifiers
+	army_strength_factor = -0.2 #Negative Modifiers
+}

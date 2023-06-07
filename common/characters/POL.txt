@@ -1,0 +1,185 @@
+characters = {
+    POL_Frederick_Augustus = {
+        name = "Frederick Augustus"
+        portraits = {
+            civilian = {
+                large = "GFX_Frederick_Augustus"
+            }
+            army = {
+                large = "GFX_Frederick_Augustus"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = { disputed_reign }
+            desc = POLITICS_FREDERICK_AUGUSTUS_DESC
+        }
+        field_marshal = {
+            traits = { defensive_doctrine }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    POL_Stanislaw_I = {
+        name = "Stanislaw I"
+        portraits = {
+            civilian = {
+                large = "GFX_Stanislaw"
+            }
+        }
+        country_leader = {
+            expire = 1739.1.1
+            ideology = despotism
+            traits = { likes_sweden	}
+        }
+    }
+    POL_Stanislaw_II = {
+        name = "Stanislaw II"
+        portraits = {
+            civilian = {
+                large = "GFX_Stanislaw_II"
+            }
+        }
+        country_leader = {
+            expire = "1965.1.1"
+            ideology = despotism
+            traits = { }
+        }
+    }
+    POL_Augustus_III = {
+        name = "Augustus III"
+        portraits = {
+            civilian = {
+                large = "GFX_Augustus_III"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = { }
+        }
+    }
+    POL_Stanisław_Leszczyński = {
+        name = "Stanisław Leszczyński"
+        portraits = {
+            civilian = {
+                large = "GFX_Stanislaw"
+            }
+        }
+        country_leader = {
+            ideology = nobility
+            traits = { }
+        }
+    }
+    POL_Adam_Mikołaj_Sieniawski = {
+        name = "Adam Mikołaj Sieniawski"
+        portraits = {
+            army = {
+                large = "GFX_Adam_Sieniawski"
+            }
+        }
+        field_marshal = {
+            traits = { thorough_planner }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    POL_Stanisław_Chomętowski = {
+        name = "Stanisław Chomętowski"
+        portraits = {
+            army = {
+                large = "GFX_Stanislaw_Chometowski"
+            }
+        }
+        corps_commander = {
+            traits = { armor_officer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    POL_Michał_Serwacy_Wiśniowiecki = {
+        name = "Michał Serwacy Wiśniowiecki"
+        portraits = {
+            army = {
+                large = "GFX_Michał_Serwacy_Wiśniowiecki"
+            }
+        }
+        corps_commander = {
+            traits = {  }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    POL_Hieronim_Augustyn_Lubomirski = {
+        name = "Hieronim Augustyn Lubomirski"
+        portraits = {
+            army = {
+                large = "GFX_Hieronim_Augustyn"
+            }
+        }
+        corps_commander = {
+            traits = { trickster }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    POL_Grzegorz_Antoni_Ogiński = {
+        name = "Grzegorz Antoni Ogiński"
+        portraits = {
+            army = {
+                large = "GFX_Grzegorz_Antoni"
+            }
+        }
+        corps_commander = {
+            traits = { trickster }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+    POL_Berend_Lehmann = {
+        name = "Berend Lehmann"
+        portraits = {
+            army = {
+                small = "GFX_idea_polish_nobleman"
+            }
+        }
+        advisor = {
+            slot = chief_economic_advisor            
+            idea_token = berend_lehmann
+            cost = 0
+            allowed = {
+                original_tag = POL
+            }
+            traits = { court_jew }
+            available = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_country_leader = {
+                            character = POL_Augustus_III
+                            ruling_only = yes
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

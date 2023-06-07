@@ -1,0 +1,31 @@
+state = {
+    id = 162
+    name = STATE_162
+    manpower = 750000
+    state_category = city
+    
+    history = {
+        owner = TUS
+        add_core_of = TUS
+        buildings = {
+            infrastructure = 2
+            industrial_complex = 1
+            dockyard = 2
+            11833 = {
+                naval_base = 1
+            }
+        }
+        victory_points = { 9907 20 }
+        victory_points = { 11833 10 }
+		victory_points = { 6946 5 }
+		victory_points = { 910 10 }
+		victory_points = { 9879 3 }
+        1812.1.1 = {
+            owner = FRA
+        }
+    }
+    
+    provinces = { 910 1616 6875 6946 9750 9879 9907 11833 11889 }
+    
+    local_supplies = 5
+}

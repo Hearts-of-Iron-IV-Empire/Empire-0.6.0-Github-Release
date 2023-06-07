@@ -1,0 +1,33 @@
+state={
+	id=4
+	name="STATE_4"
+	manpower = 659598
+	resources={
+		oil=1 # was: 2
+	}
+	
+	state_category = metropolis
+	
+	history={
+		owner = AUS
+		victory_points = {
+			11666 50 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 2
+		}
+		add_core_of = AUS
+
+		1938.3.12 = {
+			owner = GER
+			controller = GER
+			add_core_of = GER
+		}
+	}
+
+	provinces={
+		704 3718 6552 6723 6739 9527 9661 11651 11666 
+	}
+}

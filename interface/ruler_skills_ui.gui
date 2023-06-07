@@ -1,0 +1,122 @@
+guiTypes = {
+	containerWindowType = {
+		name = "ruler_skills_ui_window"
+		position = { x = 0 y = 0 }
+		size = { width=100 height= 100 }
+		clipping = no
+
+		iconType = {
+			name = "Ruler_Skills_Background"		
+			spriteType ="GFX_pol_ruler_skills_bg"
+			scale = 0.95
+			position = { x = 22 y = 304 }
+			pdx_tooltip = ruler_stats_popup
+		}
+		
+		containerWindowType = {
+			name = "ruler_stats"
+			position = { x = 0 y = 0 }
+			
+			instantTextboxType = {
+				name = "ruler_stats_title"
+				position = { x = 0 y = 308 }
+				font = "hoi_16mbs" #hoi_18mbs
+				format = center
+				text = "Ruler Stats"
+				maxWidth = 190
+				alwaystransparent = yes
+			}
+			
+			containerWindowType = {
+				name = "diplomacy_skill"
+				position = { x = 0 y = 0 }
+			iconType = {
+				name ="diplomacy_skill_icon"
+				spriteType = "GFX_air_experience"
+				position = { x = 47 y = 330 }
+				scale = 1.4 
+			}
+			ButtonType = {
+				name ="diplomacy_skill_icon_levelup_button"
+				spriteType = "GFX_air_experience"
+				position = { x = 47 y = 330 }
+				scale = 1.4 
+			}
+			ButtonType = {
+				name ="diplomacy_skill_increase_button"
+				spriteType = "GFX_increase_texticon"
+				scale = 0.8
+				position = { x = 64 y = 326 }
+			}	
+			instantTextboxType = {
+				name = "diplomacy_skill_level"
+				position = { x = -39 y = 350 }
+				font = "hoi_16mbs" #hoi_18mbs
+				format = center
+				text = "diplomacy_skill_level_text"
+				maxWidth = 190
+				alwaystransparent = yes
+			} 
+			}
+			containerWindowType = {
+				name = "militate_skill"
+				position = { x = 0 y = 0 }
+			iconType = {
+				name ="militate_skill_icon"
+				spriteType = "GFX_in_combat"
+				position = { x = 87 y = 330 }
+			}
+			ButtonType = {
+				name ="militate_skill_icon_levelup_button"
+				spriteType = "GFX_in_combat"
+				position = { x = 87 y = 330 }
+			}
+			ButtonType = {
+				name ="militate_skill_increase_button"
+				spriteType = "GFX_increase_texticon"
+				scale = 0.8
+				position = { x = 102 y = 326 }
+			}			
+			instantTextboxType = {
+				name = "militate_skill_level"
+				position = { x = 0 y = 350 }
+				font = "hoi_16mbs" #hoi_18mbs
+				format = center
+				text = "militate_skill_level_text"
+				maxWidth = 190
+				alwaystransparent = yes
+			}
+			}
+			containerWindowType = {
+				name = "management_skill"
+				position = { x = 0 y = 0 }
+			iconType = {
+				name ="management_skill_icon"
+				quadTextureSprite = "GFX_pol_idea"
+				position = { x = 124 y = 330 }
+			}
+			ButtonType = {
+				name ="management_skill_icon_levelup_button"
+				quadTextureSprite = "GFX_pol_idea"
+				position = { x = 124 y = 330 }
+			}
+			ButtonType = {
+				name ="management_skill_increase_button"
+				spriteType = "GFX_increase_texticon"
+				scale = 0.8
+				position = { x = 137 y = 326 }
+			}
+			instantTextboxType = {
+				name = "management_skill_level"
+				position = { x = 38 y = 350 }
+				font = "hoi_16mbs" #hoi_18mbs
+				format = center
+				text = "management_skill_level_text"
+				maxWidth = 190
+				alwaystransparent = yes
+			}
+			}
+		}
+	
+	}
+}

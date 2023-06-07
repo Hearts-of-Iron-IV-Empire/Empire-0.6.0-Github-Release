@@ -1,0 +1,24 @@
+state={
+	id=1016
+	name="STATE_1016"
+
+
+	history={
+		owner = TSC
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = TSC
+		victory_points = {
+			13252 1
+		}
+	}
+
+	provinces={
+		13252 13253
+	}
+	manpower=13056
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

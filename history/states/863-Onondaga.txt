@@ -1,0 +1,29 @@
+
+state={
+	id=863
+	name="STATE_863"
+
+	history={
+		owner = IRO
+		add_core_of = IRO
+		buildings = {
+			infrastructure = 1
+
+		}
+		1789.1.1 = {
+			remove_core_of = IRO
+			owner = USA
+			add_core_of = USA
+		}
+		victory_points = {
+			3702 5
+		}
+	}
+
+	provinces={
+		3702 3747 11650 
+	}
+	manpower=2507
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

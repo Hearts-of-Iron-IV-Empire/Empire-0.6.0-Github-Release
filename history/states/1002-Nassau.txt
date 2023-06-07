@@ -1,0 +1,26 @@
+state={
+	id=1002
+	name="STATE_1002"
+	provinces={
+		6444 9486 9547 
+	}
+
+	history={
+		owner = NAS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6444 5 
+		}
+		add_core_of = NAS
+
+	}
+
+	manpower=208017
+	buildings_max_level_factor=1.000
+	state_category=city
+}

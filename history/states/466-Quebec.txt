@@ -1,0 +1,27 @@
+
+state={
+	id=466
+	name="STATE_466"
+	
+	history={
+		owner = QUE
+		buildings = {
+			infrastructure = 1
+			4769 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = QUE
+		victory_points = {
+			4769 5 
+		}
+
+	}
+
+	provinces={
+		983 1341 1356 1657 1764 3208 3911 4419 4666 4769 6740 7435 7683 7807 7810 7875 7893 10249 10534 10700 10715 11902 12205 12223 12276 12600 13160 13162 13164 
+	}
+	manpower=5807
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

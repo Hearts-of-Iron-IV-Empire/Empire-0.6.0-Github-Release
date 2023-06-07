@@ -1,0 +1,22 @@
+state={
+	id=889
+	name="STATE_889"
+	provinces={
+		589 3574 6594 11560 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = MAI
+		add_core_of = MAI
+		1812.1.1 = {
+			owner = IFC
+			add_core_of = IFC
+		}
+	}
+	manpower=95783
+	buildings_max_level_factor=1.000
+	state_category=town
+}

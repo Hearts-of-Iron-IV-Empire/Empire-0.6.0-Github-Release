@@ -1,0 +1,28 @@
+
+state={
+	id=914
+	name="STATE_914"
+
+	history={
+		owner = SAL
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			688 10 
+		}
+		add_core_of = SAL
+		1812.1.1 = {
+			owner = BAV
+			add_core_of = BAV
+		}
+	}
+
+	provinces={
+		668 688 3674 3675 
+	}
+	manpower=208350
+	buildings_max_level_factor=1.000
+	state_category=town
+}

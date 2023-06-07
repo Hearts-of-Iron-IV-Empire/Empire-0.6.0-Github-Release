@@ -1,0 +1,17 @@
+state={
+	id=958
+	name="STATE_958"
+	provinces={
+		1213 4219 7344 10229 10287 12258 
+	}
+	history={
+		owner = SRL
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+	}
+	state_category = rural
+	manpower=650148
+	buildings_max_level_factor=1.000
+}

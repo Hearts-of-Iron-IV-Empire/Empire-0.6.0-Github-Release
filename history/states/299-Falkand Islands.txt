@@ -1,0 +1,13 @@
+state= {
+	id=299
+	name="STATE_299"
+	manpower=2463
+	
+	state_category = enclave
+	history={
+	owner = UNC
+	}
+	
+	impassable = yes
+	provinces= { 12960 }
+}

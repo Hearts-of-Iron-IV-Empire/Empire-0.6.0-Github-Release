@@ -1,0 +1,35 @@
+
+state={
+	id=965
+	name="STATE_965"
+
+	history={
+		owner = RAJ
+		add_claim_by = RAJ
+		add_core_of = CAA
+		add_core_of = MDR
+		add_core_of = MAR
+		add_claim_by = MYS
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			7436 = {
+				bunker = 5
+			}
+		}
+		victory_points = {
+			7436 10 
+		}
+		1707.6.8 = {
+			owner = CAA
+			add_core_of = CAA
+		}
+	}
+
+	provinces={
+		1268 4416 4420 7436 10246
+	}
+	manpower=3234587
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,180 @@
+political_actions = {
+	POR_invoke_alliance_of_1373 = {
+		available = {
+			has_defensive_war = yes
+		}
+		visible = {
+			has_country_flag = POR_eng_ally
+		}
+		ai_will_do = {
+			factor = 80
+		}
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {	
+			ENG = { country_event = generic.2 }
+		}
+	}
+	POR_join_forces_with_france ={
+		available = {
+			has_defensive_war = yes
+		}
+		visible = {
+			has_country_flag = POR_fra_ally
+		}
+		ai_will_do = {
+			factor = 80
+		}
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {	
+			FRA = { country_event = generic.2 }
+		}
+	}
+}
+treaty_of_utrecht = {
+	the_portuguese_demand = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+			is_faction_leader = yes
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			POR = { is_in_faction_with = AUS }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.14					
+		}	
+	}
+}
+treaty_of_versailles = {
+	the_portuguese_demand_fr = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+			is_faction_leader = yes
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			POR = { is_in_faction_with = FRA }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.14					
+		}	
+	}
+}
+
+treaty_of_fontainebleu = {
+	the_portuguese_demand_fr_contre_habs = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = habsburg_alliance_defeated_flag
+			is_faction_leader = yes
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			POR = { is_in_faction_with = FRA }
+			has_global_flag = habsburg_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.14					
+		}	
+	}
+}
+
+treaty_of_vienna = {
+	the_portuguese_demand_habs = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = bourbon_alliance_defeated_flag
+			is_faction_leader = yes
+			POR = { is_in_faction_with = AUS }
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			POR = { is_in_faction_with = AUS }
+			has_global_flag = bourbon_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.14					
+		}	
+	}
+}
+
+defeat_the_mughals = {
+	defeat_the_mughals_por = {
+		activation = {
+			has_completed_focus = POR_eyes_on_the_mughals
+		}
+		available = {
+			controls_state = 439
+			has_war_with = RAJ
+		}
+		icon = mission_icon
+		days_mission_timeout = 365
+		timeout_effect = {
+			add_political_power = -100
+			add_stability = -0.15
+			add_war_support = -0.15
+			white_peace = RAJ
+			846 = {
+				transfer_state_to = RAJ
+			}
+			321 = {
+				transfer_state_to = RAJ
+			}
+			963 = {
+				transfer_state_to = RAJ
+			}
+		}
+	}
+}

@@ -1,0 +1,22 @@
+state={
+	id=935
+	name="STATE_935"
+	provinces={
+		3307 6412 
+	}
+	history={
+		owner = SWE
+		victory_points = {
+			6412 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SWE
+		add_claim_by = DEN
+	}
+	manpower=125132
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

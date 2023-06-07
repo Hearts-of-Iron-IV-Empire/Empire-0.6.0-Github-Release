@@ -1,0 +1,83 @@
+bookmarks = {
+	bookmark = {
+		name = "War Of The Second Coalition"
+		desc = "EMPIRE_GATHERING_STORM_DESC"
+		date = 1798.8.1.12
+		picture = "GFX_select_date_1798"
+		default_country = "FRA"
+		default = no
+
+		"FRA"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"ENG"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"USA"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SPR"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"AUS"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SOV"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"PRS"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

@@ -1,0 +1,249 @@
+POL_decrease_meddling = {
+	if = {
+		limit = { has_idea = POL_foreign_meddling_1 }
+		remove_ideas = POL_foreign_meddling_1
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_2 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_2
+			add_idea = POL_foreign_meddling_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_3 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_3
+			add_idea = POL_foreign_meddling_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_4 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_4
+			add_idea = POL_foreign_meddling_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_5 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_5
+			add_idea = POL_foreign_meddling_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_6 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_6
+			add_idea = POL_foreign_meddling_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_7 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_7
+			add_idea = POL_foreign_meddling_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_8 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_8
+			add_idea = POL_foreign_meddling_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_9 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_9
+			add_idea = POL_foreign_meddling_8
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_10 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_10
+			add_idea = POL_foreign_meddling_9
+		}
+	}
+}
+
+POL_increase_meddling = {
+	if = {
+		limit = { has_idea = POL_foreign_meddling_9 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_9
+			add_idea = POL_foreign_meddling_10
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_8 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_8
+			add_idea = POL_foreign_meddling_9
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_7 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_7
+			add_idea = POL_foreign_meddling_8
+		}		
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_6 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_6
+			add_idea = POL_foreign_meddling_7
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_5 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_5
+			add_idea = POL_foreign_meddling_6
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_4 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_4
+			add_idea = POL_foreign_meddling_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_3 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_3
+			add_idea = POL_foreign_meddling_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_2 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_2
+			add_idea = POL_foreign_meddling_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_foreign_meddling_1 }
+		swap_ideas = {
+			remove_idea = POL_foreign_meddling_1
+			add_idea = POL_foreign_meddling_2
+		}
+	}
+	else_if = {
+		limit = { 
+			NOT = {
+				OR = {
+					has_idea = POL_foreign_meddling_1 
+					has_idea = POL_foreign_meddling_2 
+					has_idea = POL_foreign_meddling_3 
+					has_idea = POL_foreign_meddling_4 
+					has_idea = POL_foreign_meddling_5 
+					has_idea = POL_foreign_meddling_6 
+					has_idea = POL_foreign_meddling_7
+					has_idea = POL_foreign_meddling_8 
+					has_idea = POL_foreign_meddling_9 
+					has_idea = POL_foreign_meddling_10 
+				}
+			}
+		}
+		add_ideas = POL_foreign_meddling_1
+	}
+}
+
+POL_increase_foreign_influence = {
+	if = {
+		limit = { 
+			NOT = {
+				OR = {
+					has_idea = POL_influence_over_poland_1 
+					has_idea = POL_influence_over_poland_2 
+					has_idea = POL_influence_over_poland_3 
+					has_idea = POL_influence_over_poland_4 
+					has_idea = POL_influence_over_poland_5 
+					has_idea = POL_influence_over_poland_6 
+				}
+			}
+		}
+		add_ideas = POL_influence_over_poland_1
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_1 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_1
+			add_idea = POL_influence_over_poland_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_2 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_2
+			add_idea = POL_influence_over_poland_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_3 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_3
+			add_idea = POL_influence_over_poland_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_4 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_4
+			add_idea = POL_influence_over_poland_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_5 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_5
+			add_idea = POL_influence_over_poland_6
+		}
+	}
+}
+
+POL_decrease_foreign_influence = {
+	if = {
+		limit = { has_idea = POL_influence_over_poland_6 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_6
+			add_idea = POL_influence_over_poland_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_5 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_5
+			add_idea = POL_influence_over_poland_4
+		}		
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_4 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_4
+			add_idea = POL_influence_over_poland_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_3 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_3
+			add_idea = POL_influence_over_poland_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_2 }
+		swap_ideas = {
+			remove_idea = POL_influence_over_poland_2
+			add_idea = POL_influence_over_poland_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = POL_influence_over_poland_1 }
+		remove_ideas = POL_influence_over_poland_1
+	}
+}

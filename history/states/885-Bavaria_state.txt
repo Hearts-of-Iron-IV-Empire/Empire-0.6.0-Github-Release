@@ -1,0 +1,21 @@
+state={
+	id=885
+	name="STATE_885"
+	provinces={
+		561 6540 9545 
+	}
+	history={
+		owner = BAV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = BAV
+		victory_points = {
+			6540 3 
+		}
+	}
+	manpower=56079
+	buildings_max_level_factor=1.000
+	state_category = town
+}

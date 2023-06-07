@@ -1,0 +1,115 @@
+﻿division_template = {
+	name = "Slave Rebels"			# Infantry Division - Planned formation for mobilization of divisions, 1937-1940
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	##### Northern states #####
+	# Northern Military District
+	division = { # "Slave Rebels"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 12459 # Philadelphia
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 11738 # Philadelphia
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 11738 # Philadelphia
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 10081 # NYC
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "Rebel Infantry"
+		location = 10081 # NYC
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "Rebel Infantry"
+		location = 891 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "Rebel Infantry"
+		location = 891 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "Rebel Infantry"
+		location = 7202 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "Rebel Infantry"
+		location = 7202 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 7202 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 7202 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 7202 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 4991 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "Rebel Infantry"
+		location = 4991 # Capital
+		division_template = "Slave Rebels"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+}

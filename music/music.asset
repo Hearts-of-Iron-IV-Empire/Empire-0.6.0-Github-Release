@@ -1,0 +1,328 @@
+# MAIN THEME
+music = {
+	name = "maintheme"
+	file = "maintheme.ogg"
+	volume = 0.65
+}
+
+# General Peace:
+music = {
+	name = "French Anthem"
+	file = "French_anthem_496-1791.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche du Royal Soissonais"
+	file = "Marche_du_Royal_Soissonais.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche des Combattants"
+	file = "Marche_Des_Combattants_-_Jean_Baptiste_Lully.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hymne de la monarchie Francaise"
+	file = "Hymne_De_La_Monarchie_Francaise_version_de_Tchaikovsky_19e_siecle.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche pour la ceremonie des Turcs"
+	file = "Royaume_de_France_1643-1792_Musique_de_la_Court_de_Louis_XIV_Marche_pour_la_ceremonie_des_Tur.ogg"
+	volume = 0.80
+}
+music = {
+	name = "Marche Royale de France"
+	file = "Marche_militaire_francaise_de_lancien_regime_-_Marche_Royale_de_France.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Danse de village"
+	file = "Marche_militaire_francaise_de_lancien_regime_-_Danse_de_village.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Merck Toch Hoe Sterck"
+	file = "Dutch-Patriotic-song-Merck-toch-hoe-sterck-_Bergen-op-zoom_.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Inno Nasionale Veneto: Anthem of the Republic of Venice"
+	file = "anthem_of_venice.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Royal Anthem of Spain: Marcha Real"
+	file = "marcha_real.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Rule Britannia!"
+	file = "rule_britannia.ogg"
+	volume = 0.65
+}
+music = {
+	name = "I Vow to Thee, My Country"
+	file = "i_vow_to_thee.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hymn Of The Holy Roman Empire"
+	file = "HRE_hymn.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Missa Et Ecce Terrae Motus Gloria"
+	file = "missa_et_ecce_terrae_motus_gloria.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Unser Liebe Fraue, Song Of The Landsknechts"
+	file = "Unser-Liebe-Fraue-Song-of-The-Landsknechts.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Imn Nassional Ëd Piemont: Hymn of Piedmont"
+	file = "Anthem-of-Piedmont-Imn-nassional-ëd-Piemont-Hymne-du-Piémont.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Imperial Fanfare"
+	file = "Holy-Roman-Empire-Imperial-fanfares-_15th-century_.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The Wilhelmus: Hymn of the Netherlands"
+	file = "National-Anthem-of-The-Netherlands.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hino Da Carta: Hymn of Portugal"
+	file = "Kingdom-of-Portugal-_18261910_-National-Anthem-Hino-da-Carta-_Remake_.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Brandenburg Concerto No.3"
+	file = "brandenburg-concerto-no-3-allegro-adagio.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Lucio Silla Overture"
+	file = "lucio-silla.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Sarabande"
+	file = "sarabande.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Polish Lithunian Commonwealth Music"
+	file = "PLC_Music.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ottoman Empire Imperial Anthem"
+	file = "Ottoman-Empire-Imperial-Anthem-mecidiye-marsi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "The British Grenadiers March"
+	file = "The_British_Grenadiers_March.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Aziziye Marsi"
+	file = "aziziye_marsi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Carolus Rex Marsj"
+	file = "carolus_rex_marsj.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Preussens Gloria"
+	file = "preussens_gloria.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Eine Kleine Nachtmusik"
+	file = "eine_kleine_nachtmusik.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Symphony No. 7 in A-major"
+	file = "Symphony-no-7-in-A-major-op-92-II-allegretto.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Fridericus Rex Grenadiermarsch"
+	file = "Fridericus_Rex_Grenadiermarsch.ogg"
+	volume = 0.65
+}
+music = {
+	name = "La Marseillaise"
+	file = "La_Marseillaise.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ceddin Deden"
+	file = "Ottoman_Empire_military_march_Ceddin_Deden.ogg"
+	volume = 0.70
+}
+music = {
+	name = "March of the Templars"
+	file = "March_of_the_Templars.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Hymn De Los Tercios"
+	file = "los-tercios-guerriers-soldats-de-lempire.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Sharpe's Theme"
+	file = "sharpes-theme.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Sonate à 6 Doi Violini"
+	file = "sonata-a-6-doi-violini-e-quattro-tromboni.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ana Hasreti"
+	file = "ana-hasreti.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Desert Scorpion"
+	file = "desert_scorpion.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Minuetto"
+	file = "luigi-boccherini-minuetto-classical.ogg"
+	volume = 0.65
+}
+music = {
+	name = "God Save the Tsar"
+	file = "God_Save_the_Tsar.ogg"
+	volume = 0.65
+}
+music = {
+	name = "March of the Preobrazhensky Regiment"
+	file = "March_of_the_Preobrazhensky_Regiment.ogg"
+	volume = 0.65
+}
+music = {
+	name = "March of the Izmaylovsky Regiment"
+	file = "March_of_the_Izmaylovsky_Regiment.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Tchaikovsky's 1812 Overture"
+	file = "Tchaikovsky_1812_Overture.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche Slave"
+	file = "Tchaikovsky_Marche_Slave.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Valse Sentimentale"
+	file = "Tchaikovsky_Valse_Sentimentale.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Tsarist March"
+	file = "Tsarist_March.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Dies Irae"
+	file = "dies-irae.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Geuzenlied"
+	file = "geuzenlied.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Devil's Trill Sonata"
+	file = "tartini-violin-sonata-in-g-minor-devils-trill-sonata.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Jääkärimarssi"
+	file = "jääkärimarssi.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Adagio Allegro 2"
+	file = "adagio-allegro-2-adagio.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Concerto No.8 in G minor"
+	file = "concerto-no-8-in-g-minor.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Chaconne in G minor"
+	file = "chaconne-in-g-minor.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Concerto for Two Violins in D minor"
+	file = "concerto-for-two-violins-in-d-minor.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Im Ganzen Vaterland"
+	file = "im-ganzen-vaterland.ogg"
+	volume = 0.65
+}
+music = {
+	name = "On the hills of Manchuria"
+	file = "on-the-hills-of-manchuria.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Tanburi Buyuk Osman Bey"
+	file = "tanburi-buyuk-osman-bey.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Marche Ottomane Manuscrit: Cantemir 209"
+	file = "marche-ottomane-manuscrit-cantemir-209.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Nocturne in C Sharp Minor"
+	file = "nocturne-in-c-sharp-minor.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Grand Valse Brilliante"
+	file = "grand_valse_brilliante.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Ballade no.1 in G minor Op.23"
+	file = "ballade-no-1-in-g-minor-op-23.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Waltz of the Flowers"
+	file = "waltz-of-the-flowers.ogg"
+	volume = 0.65
+}
+music = {
+	name = "Pas De Deux"
+	file = "pas-de-deux.ogg"
+	volume = 0.65
+}

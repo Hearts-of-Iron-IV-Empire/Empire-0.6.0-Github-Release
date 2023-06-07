@@ -1,0 +1,18 @@
+
+state={
+	id=773
+	name="STATE_773"
+
+	history={
+		owner = UNC
+	}
+
+	impassable = yes
+
+	provinces={
+		1992 1993 2080 4889 5036 5054 6039 7978 8034 9137 10831 11194 13211 
+	}
+	manpower=2945782
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

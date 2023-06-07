@@ -1,0 +1,27 @@
+state={
+	id=199
+	name="STATE_199"
+	resources={
+		oil=52.000
+	}
+
+	history={
+		owner = POL
+		add_core_of = POL
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		1798.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		3511 6435 6509 6520 11543 
+	}
+	manpower=162011
+	buildings_max_level_factor=1.000
+	state_category=town
+}

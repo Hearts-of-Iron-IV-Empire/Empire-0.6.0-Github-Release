@@ -1,0 +1,20 @@
+state={
+	id=948
+	name="STATE_948"
+	resources = {
+		steel =8
+	}
+	history={
+		owner = UNC
+		1798.1.1 = {
+			owner = EIC
+			add_core_of = EIC
+		}
+	}
+	provinces={
+		4696 4822 12547 12692 
+	}
+	manpower=2187
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

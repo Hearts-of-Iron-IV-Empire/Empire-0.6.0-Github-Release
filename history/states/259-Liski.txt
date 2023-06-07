@@ -1,0 +1,29 @@
+
+state={
+	id=259
+	name="STATE_259"
+
+	history={
+		victory_points = {
+			11504 3
+		}
+		owner = ZAP
+		add_core_of = ZAP
+		buildings = {
+			infrastructure = 1
+
+		}
+		1711.5.1 = {
+			owner = SOV
+			controller = SOV
+		}
+	}
+
+	provinces={
+		511 559 6495 6507 6578 9413 9479 11504 
+	}
+	manpower=242584
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

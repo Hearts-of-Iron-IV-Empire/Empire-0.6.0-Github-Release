@@ -1,0 +1,178 @@
+ideas = {
+	country = {	
+		POR_economic_boom_idea = {
+			picture = generic_production_bonus
+
+			modifier = {
+				global_building_slots_factor = 0.10
+				industrial_capacity_factory = 0.15
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		POR_legacy_of_henry_the_navigator = {
+			picture = generic_coastal_navy
+
+			modifier = {
+				naval_speed_factor = 0.1
+				navy_max_range_factor = 0.25
+			}
+		}
+		POR_correias_legacy = {
+			picture = generic_naval_manufacturer_1
+
+			modifier = {
+				naval_hit_chance = 0.1
+				naval_invasion_penalty = -0.1
+				naval_invasion_capacity = 5
+			}
+		}
+		POR_portuguese_infiltration = {
+			picture = generic_spy_political
+
+			modifier = {
+				stability_weekly = -0.001
+			}
+			targeted_modifier = {
+				tag = POR
+				attack_bonus_against = -0.15
+				defense_bonus_against = -0.15
+			}
+		}
+		BRA_clergical_administration = {
+			picture = MEX_church_power_5
+			name = BRA_clergical_administration
+
+			modifier = {
+				stability_factor = 0.10
+				fascism_drift = 0.01
+				land_reinforce_rate = 0.05
+			}
+		}
+		BRA_secular_administration = {
+			picture = MEX_church_power_2
+			name = BRA_secular_administration
+
+			modifier = {
+				industrial_capacity_factory = 0.1
+				political_power_factor = 0.15
+			}
+		}
+		POR_brazilian_riches_3 = {
+			picture = SPR_relocate_the_gold_reserves
+			name = POR_brazilian_riches
+
+			modifier = {
+				consumer_goods_factor = -0.20
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		POR_brazilian_riches_2 = {
+			picture = SPR_relocate_the_gold_reserves
+			name = POR_brazilian_riches
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		POR_brazilian_riches = {
+			picture = SPR_relocate_the_gold_reserves
+			name = POR_brazilian_riches
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		POR_noble_advisors = {
+			picture = generic_intel_bonus
+
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.1
+				military_leader_cost_factor = -0.15
+
+			}
+		}
+		POR_meritocracy = {
+			picture = generic_political_support
+
+			modifier = {
+				political_power_factor = 0.15
+				political_advisor_cost_factor = -0.1
+				hidden_modifier = {
+					chief_economic_advisor_cost_factor = -0.10
+					chief_diplomatic_advisor_cost_factor = -0.10
+					spymaster_cost_factor = -0.10
+					navy_chief_cost_factor = -0.10
+					army_chief_cost_factor = -0.10
+				}
+			}
+		}
+		POR_fortification_projects = {
+			picture = generic_fortify_the_borders
+
+			modifier = {
+				production_speed_bunker_factor = 0.20
+				production_speed_coastal_bunker_factor = 0.20
+			}
+		}
+		POR_portuguese_non_involvement_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_neutrality_drift_bonus
+			cancel = { has_defensive_war = yes }
+
+			modifier = {
+				ai_join_ally_desire_factor = -1000
+				ai_call_ally_desire_factor = -1000
+				war_support_factor = -0.4
+				stability_factor = 0.1
+			}
+		}
+		POR_portuguese_non_involvement_idea_2 = {
+			allowed = {
+				always = no
+			}
+
+			name = POR_portuguese_non_involvement_idea
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			cancel = { has_defensive_war = yes }
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				ai_join_ally_desire_factor = -1000
+				ai_call_ally_desire_factor = -1000
+				war_support_factor = -0.25
+				stability_factor = 0.15
+				enemy_declare_war_tension = 2
+			}
+		}
+		POR_portuguese_resilience = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = por_the_fifth_empire
+
+			modifier = {
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
+			}
+		}
+	}
+}

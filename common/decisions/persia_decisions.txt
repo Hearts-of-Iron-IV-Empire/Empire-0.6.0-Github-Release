@@ -1,0 +1,47 @@
+PER_qizilbas_corps_category = {
+	PER_change_service_type = {
+
+		icon = generic
+		custom_cost_text = [10CP]
+		custom_cost_trigger = { always = yes }
+		days_re_enable = 60
+
+		available = {
+			hidden_trigger = { NOT = { command_power < 10 } }
+		}
+		complete_effect = {
+			country_event = qizilbash.1
+			hidden_effect = { add_command_power = -10 }
+		}
+	}
+	PER_change_security_type_against_pirates = {
+
+		icon = generic
+		custom_cost_text = [10CP]
+		custom_cost_trigger = { always = yes }
+		days_re_enable = 60 
+
+		available = {
+			hidden_trigger = { NOT = { command_power < 10 } }
+		}		
+		complete_effect = {
+			#country_event = qizilbash.2
+			hidden_effect = { add_command_power = -10 }
+		}
+	}
+	PER_change_internal_security_type = {
+
+		icon = generic
+		custom_cost_text = [10CP]
+		custom_cost_trigger = { always = yes }
+		days_re_enable = 60
+
+		available = {
+			hidden_trigger = { NOT = { command_power < 10 } }
+		}		
+		complete_effect = {
+			#country_event = qizilbash.3
+			hidden_effect = { add_command_power = -10 }
+		}
+	}
+}

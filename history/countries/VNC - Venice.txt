@@ -1,0 +1,79 @@
+﻿capital = 160
+
+oob = "VNC_1699"
+
+set_research_slots = 3
+
+1700.03.03 = {
+	remove_ideas = great_turkish_war
+
+	promote_character = VNC_Alvise_II_Mocenigo
+	retire_character = VNC_Nicolò_Cassana
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	transport = 1
+	basic_cavalry = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 900
+
+add_ideas = {
+	great_turkish_war
+	VNC_reliance_on_mercenaries
+	venetian_industry
+
+	# Laws and Religion
+	limited_conscription
+	export_focus
+	catholic
+	partial_economic_mobilisation
+}
+
+VNC = {
+	add_opinion_modifier = { target = TUR modifier = Rivalry }
+	add_opinion_modifier = { target = GEN modifier = Rivalry }
+	add_opinion_modifier = { target = PAP modifier = Rivalry }
+}
+
+recruit_character = VNC_Nicolò_Cassana # 1694 - 1700
+recruit_character = VNC_Alvise_II_Mocenigo # 1700 - 1709
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 63
+	fascism = 18
+	communism = 1
+	aristocracy = 18
+}

@@ -1,0 +1,29 @@
+state={
+	id=905
+	name="STATE_905"
+
+	history={
+		owner = VNC
+		add_core_of = MNT
+		add_core_of = VNC
+		victory_points = {
+			9821 1 
+		}
+		buildings = {
+			infrastructure = 1
+			9821 = {
+				naval_base = 1
+			}
+		}
+		1798.1.1 = {
+			owner = TUR
+		}
+	}
+
+	provinces={
+		9821
+	}
+	manpower=20000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

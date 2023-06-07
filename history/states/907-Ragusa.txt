@@ -1,0 +1,33 @@
+
+state={
+	id=907
+	name="STATE_907"
+
+	history={
+		owner = CRO
+		victory_points = {
+			6889 5 
+		}
+		buildings = {
+			infrastructure = 2
+			6889 = {
+				naval_base = 1
+			}
+
+		}
+		add_claim_by = VNC
+		add_core_of = CRO
+		add_claim_by = TUR
+		1798.1.1 = {
+			owner = TUR
+		}
+
+	}
+
+	provinces={
+		6889 
+	}
+	manpower=124500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

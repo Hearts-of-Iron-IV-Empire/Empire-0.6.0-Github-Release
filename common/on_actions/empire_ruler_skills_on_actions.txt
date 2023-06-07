@@ -1,0 +1,653 @@
+on_actions  = {
+	on_startup = {
+		effect = {
+			# Ruler Skills setup
+			for_each_scope_loop = {
+				array = countries
+				if = {
+					limit = {
+						NOT = { tag = UNC }
+					}
+					add_dynamic_modifier = { modifier = ruler_skills_dynamic_modifier }
+				}
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						tag = UNC
+					}
+				}
+				set_variable = {
+					var = life_experience
+					value = 0
+				}
+			}
+			every_country = {
+				limit = {
+					OR = {
+						NOT = {
+							tag = RAJ tag = SOV tag = AUS tag = PRU tag = TUR tag = SWE tag = ENG tag = PER tag = FRA tag = JAP tag = SPA
+						}
+					}
+				}
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 1
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 1
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 1
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.01
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.01
+				}
+			}
+			RAJ = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 1
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 4
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 3
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.04
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.04
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.03
+				}
+			}
+			SOV = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 3
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 5
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 4
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.03
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.05
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.05
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.04
+				}
+			}
+			AUS = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 4
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 2
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 2
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.04
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.02
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.02
+				}
+			}
+			PRU = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 2
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 1
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 2
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.01
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.02
+				}
+			}
+			TUR = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 3
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 3
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 2
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.03
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.03
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.03
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.02
+				}
+			}
+			SWE = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 1
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 6
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 4
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.06
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.06
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.04
+				}
+			}
+			ENG = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 5
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 2
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 3
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.05
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.02
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.03
+				}
+			}
+			PER = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 2
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 1
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 2
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.01
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.02
+				}
+			}
+			FRA = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 2
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 2
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 2
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.02
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.02
+				}
+			}
+			JAP = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 1
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 1
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 3
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.01
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.03
+				}
+			}
+			SPA = {
+				set_variable = {
+					var = diplomacy_skill_display_on_stats # Diplomacy Skill
+					value = 2
+				}
+				set_variable = {
+					var = militate_skill_display_on_stats # Militate Skill
+					value = 1
+				}
+				set_variable = {
+					var = management_skill_display_on_stats # Management Skill
+					value = 1
+				}				
+				set_variable = {
+					var = diplomacy_skill_effect # Diplomacy Skill
+					value = 0.02
+				}
+				set_variable = {
+					var = militate_skill_effect # Militate Skill
+					value = 0.01
+				}
+				set_variable = {
+					var = militate_skill_effect_negative # Militate Skill
+					value = -0.01
+				}
+				set_variable = {
+					var = management_skill_effect # Management Skill
+					value = 0.01
+				}				
+			}
+		}
+	}
+
+	on_weekly = {
+		effect = {
+			every_country = {
+			 	limit = {
+			 		NOT = { tag = UNC }
+					check_variable = { life_experience < 499.999 }
+			 	}
+				add_to_variable = {
+					var = life_experience
+					value = 0.006
+				}	
+			}
+		}
+	}
+
+	on_declare_war = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = 10
+					}
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	on_create_faction = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 10
+					}
+				}
+			}
+		}
+	}
+	on_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = 10
+					}
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	on_leave_faction = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				add_to_variable = {
+					var = life_experience
+					value = 10
+				}
+			}
+		}
+	}
+	on_offer_join_faction = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	on_wargoal_expire = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = -20
+					}
+				}
+			}
+		}
+	}
+	on_civil_war_end = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = 10
+					}
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 5
+					}
+				}
+			}
+		}
+	}
+	on_send_volunteers = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = 10
+					}
+				}
+			}
+		}
+	}
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+					FROM = {
+						is_major = no
+					}
+					ROOT = {
+						is_major = yes
+					}
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 25
+					}
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = -25
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				FROM = {
+					add_to_variable = {
+						var = life_experience
+						value = 5
+					}
+				}
+				ROOT = {
+					add_to_variable = {
+						var = life_experience
+						value = -5
+					}
+				}
+			}
+		}
+	}
+	on_ruling_party_change = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				set_variable = {
+					var = life_experience
+					value = 0
+				}
+				set_1DS = yes
+				set_1WS = yes
+				set_1MS = yes
+			}
+		}
+	}
+	on_coup_succeeded = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				set_variable = {
+					var = life_experience
+					value = 0
+				}
+				set_1DS = yes
+				set_1WS = yes
+				set_1MS = yes
+			}
+		}
+	}
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					NOT = { tag = UNC }
+				    check_variable = { life_experience < 499.999 }
+				}
+				set_variable = {
+					var = life_experience
+					value = 0
+				}
+				set_1DS = yes
+				set_1WS = yes
+				set_1MS = yes
+			}
+		}
+	}
+
+}
+

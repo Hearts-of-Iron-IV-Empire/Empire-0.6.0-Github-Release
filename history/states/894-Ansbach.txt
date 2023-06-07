@@ -1,0 +1,28 @@
+state={
+	id=894
+	name="STATE_894"
+	provinces={
+		9557 9572 11529 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = ANS
+		add_core_of = ANS
+		victory_points = {
+			11529 1
+		}
+		victory_points = {
+			9557 3
+		}
+		1812.1.1 = {
+			owner = BAV
+			add_core_of = BAV
+		}
+	}
+	manpower=67987
+	buildings_max_level_factor=1.000
+	state_category=town
+}

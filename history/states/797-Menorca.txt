@@ -1,0 +1,30 @@
+state={
+	id=797
+	name="STATE_797"
+	provinces={
+		9845 
+	}
+
+	history = {
+
+		buildings = {
+			infrastructure = 3
+			9845 = {
+				naval_base = 3
+			}
+		}
+		owner = SPR
+		add_core_of = SPR
+		add_core_of = ARA
+		1707.5.1 = {
+			owner = ENG
+			controller = ENG
+			add_core_of = SPR
+		}
+
+	}
+
+	manpower=34213
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

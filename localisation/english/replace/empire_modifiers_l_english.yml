@@ -1,0 +1,13 @@
+﻿l_english:
+ modifier_production_speed_rail_way_factor:0 "§YRoad§! Construction Speed"
+ modifier_production_speed_supply_node_factor:0 "§YSupply Node§! Construction Speed"
+ MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR:0 "Max Manufactories in a State"
+ MODIFIER_GLOBAL_BUILDING_SLOTS_FACTOR_DESC:1 "Modifies number of shared building slots in all States."
+ MODIFIER_GLOBAL_BUILDING_SLOTS:0 "Max manufactories in a State"
+ MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR:0 "Max manufactories in State"
+ MODIFIER_LOCAL_BUILDING_SLOTS_FACTOR_DESC:1 "Modifies number of shared building slots in the State."
+ MODIFIER_LOCAL_BUILDING_SLOTS:0 "Max manufactories in State"
+ chief_economic_advisor_cost_factor:0 "Chief Economic Advisor Cost"
+ chief_diplomatic_advisor_cost_factor:0 "Chief Diplomatic Advisor Cost"
+ spymaster_cost_factor:0 "Spymaster Cost"
+ 

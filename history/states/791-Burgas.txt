@@ -1,0 +1,30 @@
+state={
+	id=791
+	name="Burgas"
+	history={
+		owner = TUR
+		victory_points = {
+			657 3 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 0
+			657 = {
+				naval_base = 8
+				}
+			687 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = TUR
+		add_core_of = ROM
+		add_core_of = BUL
+	}
+	provinces={
+		657 687 3076 9635 
+	}
+	manpower=530000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,28 @@
+state={
+	id=981
+	name="STATE_981"
+	provinces={
+		10710 10847 10866 12718 
+	}
+	history={
+		owner = RAJ
+		add_core_of = JAS
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			10866 5 
+		}
+		1707.6.8 = {
+			owner = JAS
+			add_core_of = JAS
+		}
+		1740.1.1 = {
+			owner = MAR
+		}
+	}
+	manpower=548716
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,198 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "colonising_gui"
+		position = { x= -416 y=-15%%}
+		show_position = { x= 6 y =-15%% }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 150	
+		size = { width=550 height=150 }
+		margin = { top = -300 bottom = -5 }
+		#hide_sound = menu_close_window
+		show_sound = menu_open_window
+		scale = 0.84
+
+		#background = {
+		#	name = "Background"		
+		#	quadTextureSprite ="GFX_tiled_plain_bg"
+		#}
+		
+		containerWindowType = {
+			name ="colonization_background_tile"
+			position = { x=0 y=42 }
+			size = { width=550 height=-5 }
+			verticalScrollbar = "right_vertical_slider"
+			margin = { top = 13 bottom = 13 }
+			
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window2_1b_border"
+			}
+
+			background = {
+				name = "Background"		
+				quadTextureSprite ="GFX_tiled_generic_overlay_bg1"
+			}
+			
+			#gridboxType = {
+			#	name = "research_slots_grid"
+			#	position = { x = 15 y=10 }
+			#	size = { width = -20 height = 100%% }
+			#	slotsize = { width = 500 height = 100 }
+			#	#format = "UPPER_LEFT"
+			#}
+		}	
+		
+		containerWindowType = {
+			name = "research_win_top"
+			position = { x = 13 y = 56 }
+			size = { width = 100% height = 80% }
+
+			background = {
+				name = "Background"
+				spriteType ="GFX_colonization_top_win"
+			}	
+			
+			#iconType = {
+			#	name = "focus_bonuses_bg"
+			#	position = { x = 263 y = 14 }
+			#	spriteType = "GFX_win_header_short_right"
+			#}
+			#
+			#iconType = {
+			#	name = "focus_bonuses"
+			#	position = { x = 288 y = 14 }
+			#	spriteType = "GFX_idea_hol_gateway_to_europe"
+			#	scale = 0.35
+			#}
+			#iconType = {
+			#	name = "research_speed_icon"
+			#	position = { x = 440 y = 16 }
+			#	spriteType = "GFX_MODIFIER_PLANNING_SPEED"
+			#	scale = 0.95
+			#}
+			#instantTextboxType = {
+			#	name = "research_speed_value"
+			#	position = { x = 454 y = 16 }
+			#	textureFile = ""
+			#	font = "hoi_18mbs"
+			#	borderSize = {x = 0 y = 0}
+			#	text = "10%"
+			#	maxWidth = 50
+			#	maxHeight = 20
+			#	format = right
+			#}
+				
+			instantTextboxType = {
+				name = "colonization_title"
+				position = { x = 310 y = 40 }
+				textureFile = ""
+				font = "hoi_36header"
+				borderSize = {x = 0 y = 0}
+				text = "COLONIZATION"
+				maxWidth = 240
+				maxHeight = 20
+				#format = left	
+			}
+			
+			#gridboxType = {
+			#	name = "research_groups_grid"
+			#	position = { x = 328 y = 5 }
+			#	size = { width = 192 height = 128 }
+			#	slotsize = { width = 64 height = 64 }
+			#	format = "RIGHT"
+			#	max_slots_horizontal = 1
+			#	max_slots_vertical = 3
+			#}			
+
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=50 y=147}
+			font = "hoi_30header"
+			text = "[This.GetName]"
+			maxWidth = 340
+			maxHeight = 23
+			#format = left
+		}
+	
+		containerWindowType = {
+			name = "research_slot_entry"
+			position = { x = 18 y = 181 }
+			size = { width = 100% height = 80% }
+			#format = left
+		
+			buttonType = {
+				name = "colonise_state" 
+				position = {x=0 y=0}
+				shortcut = "ctrl+c"
+				spriteType = "GFX_research_line_bg"
+				pdx_tooltip = "COLONISE_STATE_TOOLTIP"
+			}
+			
+			iconType = {
+				name = "technology"
+				position = { x=252 y=49 }
+				spriteType = "GFX_idea_eng_steady_as_she_goes"
+				centerposition = yes
+				alwaystransparent = yes
+				scale = 1.0
+			}
+	
+			#background = {
+			#	name = "Background"
+			#	quadTextureSprite ="GFX_research_line_bg"
+			#	#clicksound = click_default
+			#	alwaystransparent = yes
+			#}
+
+			iconType = {
+				name = "empty_research_slot_glow_1"
+				position = { x=12 y=10 }
+				spriteType = "GFX_empty_research_slot_glow"
+				alwaystransparent = yes
+			}
+			
+			instantTextboxType = {
+				name = "title"
+				position = { x = 57 y = 12 }
+				textureFile = ""
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 400
+				maxHeight = 30
+				#format = left
+			}
+			
+			instantTextboxType = {
+				name = "timer_text_1"
+				position = { x = 35 y = 57 }
+				textureFile = ""
+				text = "[?Root.days_mission_timeout@colonise_state|Y0.]  day(s)"
+				font = "hoi_18mbs"
+				borderSize = {x = 0 y = 0}
+				maxWidth = 400
+				maxHeight = 22
+				format = right
+				alwaystransparent = yes
+			}
+
+			iconType = {
+				name = "research_progressbar_frame_icon"
+				spriteType = "GFX_research_progressbar_frame"
+				position = { x=62 y=79 }
+				alwaystransparent = yes
+			}		
+			
+			iconType = {
+				name = "research_progressbar1"
+				spriteType = "Gfx_research_progressbar"
+				position = { x=65 y=81 }
+				alwaystransparent = yes
+			}
+		}
+		# NEXT Y = 277
+	}
+}

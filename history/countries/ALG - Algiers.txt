@@ -1,0 +1,34 @@
+﻿capital = 459
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+add_ideas = {
+	sunni
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 10
+	fascism = 5
+	communism = 5
+	neutrality = 40
+	aristocracy = 40
+}
+
+create_country_leader = {
+	name = "Umar Pasha"
+	desc = ""
+	picture = "gfx/leaders/Muslim/portrait_muslim_leader_4.dds"
+	ideology = despotism
+}

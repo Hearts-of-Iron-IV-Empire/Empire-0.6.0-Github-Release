@@ -1,0 +1,28 @@
+state={
+	id=105
+	name="STATE_105"
+	resources={
+		chromium=20.000
+		aluminium=70.000
+	}
+
+	history={
+		owner = MNT
+		add_core_of = MNT
+		victory_points = {
+			937 20
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		937 11858 
+	}
+	manpower=215500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

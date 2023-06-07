@@ -1,0 +1,36 @@
+
+state={
+	id=166
+	name="STATE_166"
+	manpower = 398467
+	
+	
+	state_category = town
+	
+	resources={
+		steel=15 # was: 24
+	}
+
+	history={
+		owner = SPR
+		victory_points = {
+			3816 15
+		}
+		victory_points = {
+			9840 1
+		}
+		victory_points = {
+			7213 1
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = SPR
+		add_core_of = ARA
+	}
+
+	provinces={
+		813 948 3816 6878 6901 7213 9812 9840 9842 11838 11737
+	}
+}

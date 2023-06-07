@@ -1,0 +1,22 @@
+
+state={
+	id=838
+	name="STATE_838"
+
+	history={
+		owner = APA
+		1733.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+		}
+
+	}
+
+	provinces={
+		853 3834 4796 7747 7920 8115 10783 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

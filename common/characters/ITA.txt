@@ -1,0 +1,38 @@
+characters = {
+    ITA_Charles_Emmanuel_III = {
+        name = "Charles Emmanuel III"
+        portraits = {
+            civilian = {
+                large = "GFX_Charles_Emmanuel_III"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    ITA_Vittorio_Amedeo_II = {
+        name = "Vittorio Amedeo II"
+        portraits = {
+            civilian = {
+                large = "GFX_Vittorio_Amedeo_II"
+            }
+            army = {
+                large = "GFX_Vittorio_Amedeo_II"
+            }
+        }
+        country_leader = {
+            expire = 1731.1.1
+            ideology = despotism
+            traits = {}
+        }
+        field_marshal = {
+            traits = { defensive_doctrine old_guard politically_connected inflexible_strategist }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+}

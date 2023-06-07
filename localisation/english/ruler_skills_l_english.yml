@@ -1,0 +1,53 @@
+﻿l_english:
+Get.life_experience:0 "[?life_experience|0]"
+life_experience_tooltip:0 "§YLife Experience§!\n\nCurrent amount: §Y[?life_experience|0.2]§!\n\nWeekly Gain: §Y0.88§!\n\nExperience is capped at §Y500§!.\n--------------\n§YLife Experience§! is used to improve ruler skills which you can gain more experience from §YCapitulating a country§!, §YDecisions§!, §YDeclaring war§!, §YNational Focuses§!, §YCreating/Joining/Leaving Faction§! and §YSending/Receiving Volunteers§!."
+ruler_skills_dynamic_modifier:0 "Ruler Stats"
+diplomacy_skill_level_text_for_popup:0 "[?diplomacy_skill_display_on_stats]"
+militate_skill_level_text_for_popup:0 "[?militate_skill_display_on_stats]"
+management_skill_level_text_for_popup:0 "[?management_skill_display_on_stats]"
+#
+#\n - Political Power Gain: §G+diplomacy_skill_level_text_for_popup%§!\n - #Trade deal opinion factor: §Y+diplomacy_skill_level_text_for_popup%§!
+#\n - Division Recovery Rate: §G+militate_skill_level_text_for_popup%§!\n - #Division training time: §Y-militate_skill_level_text_for_popup%§!\n - Org Loss #when Moving: §G-militate_skill_level_text_for_popup%§!
+#\n - Construction Speed: §G+management_skill_level_text_for_popup%§!\n - #Factory Output: §G+management_skill_level_text_for_popup%§!\n - Stability: §G#+management_skill_level_text_for_popup%§!\n\n
+#
+add_1DS:0 "Add £GFX_air_experience  Diplomacy Skill: §G+1§!."
+add_2DS:0 "Add £GFX_air_experience  Diplomacy Skill: §G+2§!."
+add_3DS:0 "Add £GFX_air_experience  Diplomacy Skill: §G+3§!."
+add_4DS:0 "Add £GFX_air_experience  Diplomacy Skill: §G+4§!."
+add_5DS:0 "Add £GFX_air_experience  Diplomacy Skill: §G+5§!."
+#
+add_1WS:0 "Add £GFX_in_combat  Military Skill: §G+1§!."
+add_2WS:0 "Add £GFX_in_combat  Military Skill: §G+2§!."
+add_3WS:0 "Add £GFX_in_combat  Military Skill: §G+3§!."
+add_4WS:0 "Add £GFX_in_combat  Military Skill: §G+4§!."
+add_5WS:0 "Add £GFX_in_combat  Military Skill: §G+5§!."
+#
+add_1MS:0 "Add £GFX_pol_idea  Management Skill: §G+1§!."
+add_2MS:0 "Add £GFX_pol_idea  Management Skill: §G+2§!."
+add_3MS:0 "Add £GFX_pol_idea  Management Skill: §G+3§!."
+add_4MS:0 "Add £GFX_pol_idea  Management Skill: §G+4§!."
+add_5MS:0 "Add £GFX_pol_idea  Management Skill: §G+5§!."
+#
+decrease_1DS:0 "Decrease £GFX_air_experience  Diplomacy Skill: §R-1§!."
+decrease_2DS:0 "Decrease £GFX_air_experience  Diplomacy Skill: §R-2§!."
+decrease_3DS:0 "Decrease £GFX_air_experience  Diplomacy Skill: §R-3§!."
+decrease_4DS:0 "Decrease £GFX_air_experience  Diplomacy Skill: §R-4§!."
+decrease_5DS:0 "Decrease £GFX_air_experience  Diplomacy Skill: §R-5§!."
+#
+decrease_1WS:0 "Decrease £GFX_in_combat  Military Skill: §R-1§!."
+decrease_2WS:0 "Decrease £GFX_in_combat  Military Skill: §R-2§!."
+decrease_3WS:0 "Decrease £GFX_in_combat  Military Skill: §R-3§!."
+decrease_4WS:0 "Decrease £GFX_in_combat  Military Skill: §R-4§!."
+decrease_5WS:0 "Decrease £GFX_in_combat  Military Skill: §R-5§!."
+#
+decrease_1MS:0 "Decrease £GFX_pol_idea  Management Skill: §R-1§!."
+decrease_2MS:0 "Decrease £GFX_pol_idea  Management Skill: §R-2§!."
+decrease_3MS:0 "Decrease £GFX_pol_idea  Management Skill: §R-3§!."
+decrease_4MS:0 "Decrease £GFX_pol_idea  Management Skill: §R-4§!."
+decrease_5MS:0 "Decrease £GFX_pol_idea  Management Skill: §R-5§!."
+#
+diplomacy_skill_level_text:0 "§4[?diplomacy_skill_display_on_stats]§!"
+militate_skill_level_text:0 "§R[?militate_skill_display_on_stats]§!"
+management_skill_level_text:0 "§Y[?management_skill_display_on_stats]§!"
+#
+ruler_stats_popup:0 "§YRuler Stats§!\n - Political Power Gain: §G+[?diplomacy_skill_display_on_stats]%§!\n - Trade deal opinion factor: §Y+[?diplomacy_skill_display_on_stats]%§!\n - Division Recovery Rate: §G+[?militate_skill_display_on_stats]%§!\n - Division training time: §Y-[?militate_skill_display_on_stats]%§!\n - Construction Speed: §G+[?management_skill_display_on_stats]%§!\n - Factory Output: §G+[?management_skill_display_on_stats]%§!\n\n§YFrom Every £GFX_air_experience  Diplomacy Skill§!\n - Political Power Gain: §G+1%§!\n - Trade deal opinion factor: §Y+1%§!\n\n§YFrom Every £GFX_in_combat  Military Skill§!\n - Division Recovery Rate: §G+1%§!\n - Division training time: §Y-1%§!\n\n§YFrom Every £GFX_pol_idea  Management Skill§!\n - Construction Speed: §G+1%§!\n - Factory Output: §G+1%§!\n\n\n£GFX_organization_texticon  Skills can be obtained from Focus Tree and Decisions or giving 100 £GFX_life_experience ."

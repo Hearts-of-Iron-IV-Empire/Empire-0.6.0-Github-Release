@@ -1,0 +1,21 @@
+
+state={
+	id=487
+	name="STATE_487"
+	manpower = 33450
+	impassable = yes
+	
+	state_category = pastoral
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		2160 5188 8211 8240 10924 10982 10996 12902 12916 12917 12973 
+	}
+	
+}

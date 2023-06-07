@@ -1,0 +1,46 @@
+set_country_flag = HRE_imperial_subject
+
+set_research_slots = 3
+capital = 899
+load_oob = Imperial_army
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+}
+
+add_ideas = {
+	protestant
+	GER_imperial_free_city
+}
+
+give_military_access = AUS
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 35
+	fascism = 15
+	communism = 10
+	neutrality = 20
+	aristocracy = 20
+}
+
+create_country_leader = {
+	name = "Lubeck City Council"
+	picture = "Lubeck_city_council.dds"
+	expire = "1965.1.1"
+	ideology = liberalism
+	traits = {
+		#
+	}
+}

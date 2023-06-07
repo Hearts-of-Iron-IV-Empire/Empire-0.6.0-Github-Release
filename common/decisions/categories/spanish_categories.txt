@@ -1,0 +1,146 @@
+dynastic_influence_in_the_spanish_court_hol = {
+	
+	icon = power_struggle
+
+	allowed = {
+		original_tag = SPR
+	}
+
+	picture = GFX_decision_cat_spanish_crisis
+	priority = {
+		base = 10
+	}
+	
+	custom_icon = {
+		tag = AUS
+		value = eng_gateway_to_europe_icon_value
+		desc = eng_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = AUS
+		}
+	}
+	
+	custom_icon = {
+		tag = FRA
+		value = ger_gateway_to_europe_icon_value
+		desc = ger_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = FRA
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		NOT = { SPR = { has_completed_focus = SPR_bourbon_full } }
+		NOT = { SPR = { has_completed_focus = SPR_partition } }
+		NOT = { SPR = { has_completed_focus = SPR_habsburg_full } }
+		NOT = { SPR = { has_war_with = AUS } }
+		NOT = { SPR = { has_war_with = FRA } }
+		SPR = {
+			exists = yes
+			is_subject = no
+		}
+		NOT = { BAV = { has_idea = BAV_joseph_ferdinand } }
+	}
+}
+
+dynastic_influence_in_the_spanish_court_ger = {
+	
+	icon = power_struggle
+
+	allowed = {
+		original_tag = FRA
+	}
+
+	picture = GFX_decision_cat_spanish_crisis
+	priority = {
+		base = 10
+	}
+	
+	custom_icon = {
+		tag = AUS
+		value = eng_gateway_to_europe_icon_value
+		desc = eng_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = AUS
+		}
+	}
+	
+	custom_icon = {
+		tag = FRA
+		value = ger_gateway_to_europe_icon_value
+		desc = ger_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = FRA
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		NOT = { SPR = { has_completed_focus = SPR_bourbon_full } }
+		NOT = { SPR = { has_completed_focus = SPR_partition } }
+		NOT = { SPR = { has_completed_focus = SPR_habsburg_full } }
+		NOT = { SPR = { has_war_with = AUS } }
+		NOT = { SPR = { has_war_with = FRA } }
+		SPR = {
+			exists = yes
+			is_subject = no
+		}
+		NOT = { BAV = { has_idea = BAV_joseph_ferdinand } }
+	}
+}
+
+dynastic_influence_in_the_spanish_court_eng = {
+	
+	icon = power_struggle
+
+	allowed = {
+		original_tag = AUS
+	}
+
+	picture = GFX_decision_cat_spanish_crisis
+	priority = {
+		base = 10
+	}
+	
+	custom_icon = {
+		tag = AUS
+		value = eng_gateway_to_europe_icon_value
+		desc = eng_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = AUS
+		}
+	}
+	
+	custom_icon = {
+		tag = FRA
+		value = ger_gateway_to_europe_icon_value
+		desc = ger_gateway_to_europe_full_influence_breakdown
+
+		visible = {
+			country_exists = FRA
+		}
+	}
+
+	visible_when_empty = yes
+
+	visible = {
+		NOT = { SPR = { has_completed_focus = SPR_bourbon_full } }
+		NOT = { SPR = { has_completed_focus = SPR_partition } }
+		NOT = { SPR = { has_completed_focus = SPR_habsburg_full } }
+		NOT = { SPR = { has_war_with = AUS } }
+		NOT = { SPR = { has_war_with = FRA } }
+		SPR = {
+			exists = yes
+			is_subject = no
+		}
+		NOT = { BAV = { has_idea = BAV_joseph_ferdinand } }
+	}
+}

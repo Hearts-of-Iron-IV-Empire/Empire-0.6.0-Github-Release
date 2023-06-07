@@ -1,0 +1,14 @@
+characters = {
+    SCO_William_III = {
+        name = "William III"
+        portraits = {
+            civilian = {
+                large = "GFX_William_III"
+            }
+        }
+         country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

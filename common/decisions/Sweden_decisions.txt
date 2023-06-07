@@ -1,0 +1,284 @@
+political_actions = {
+	SWE_arange_an_accident_for_frederick = {
+
+		icon = generic_prepare_civil_war
+	
+		available = {
+			tag = SWE
+			DEN = {
+				has_country_leader = {
+				    name = "Frederick IV"
+				    ruling_only = yes
+				}
+			}
+			has_completed_focus = SWE_the_royal_marriage
+			has_idea = SWE_royal_marriage
+		}
+
+		days_remove = 70
+
+		modifier = {
+			political_power_gain = -0.15
+		}
+
+		visible = {
+			has_completed_focus = SWE_the_royal_marriage
+			has_idea = SWE_royal_marriage
+		}
+		
+		remove_effect = {
+			SWE = { country_event = denmark.2 }
+			DEN = { country_event = denmark.2 }
+			hidden_effect = {
+				news_event = { id = mod.21 days = 1 }
+			}
+		}
+		cost = 150
+	}
+}
+
+SWE_cossack_aid = {
+	SWE_Cossack_equipment = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		has_completed_focus = swedish_politics_14
+		}
+		visible = {
+		has_completed_focus = swedish_politics_14
+		}
+
+		complete_effect = {	
+			ZAP = { country_event = cossack.1 } 
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+	}
+
+	SWE_Cossack_manpower = {
+
+			icon = generic_prepare_civil_war
+
+			available = {
+			has_completed_focus = swedish_politics_14
+			}
+			visible = {
+			has_completed_focus = swedish_politics_14
+			}
+
+			ai_will_do = {
+				factor = 10
+			}
+
+			complete_effect = {	
+				ZAP = { country_event = cossack.2 }	
+			}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+	}
+
+	SWE_Cossack_volonteers = {
+
+			icon = generic_prepare_civil_war
+
+			available = {
+			has_completed_focus = swedish_politics_14
+			}
+			visible = {
+			has_completed_focus = swedish_politics_14
+			}
+
+			ai_will_do = {
+			factor = 10
+			}
+
+			complete_effect = {	
+				ZAP = { country_event = cossack.3 }
+			}
+
+		cost = 50
+		fire_only_once = yes
+	}
+
+	SWE_Cossack_support = {
+
+			icon = generic_prepare_civil_war
+
+			available = {
+			has_completed_focus = swedish_politics_14
+			}
+			visible = {
+			has_completed_focus = swedish_politics_14
+			}
+
+			ai_will_do = {
+			factor = 10
+			}	
+
+			complete_effect = {	
+				reverse_add_opinion_modifier = {
+				    target = ZAP
+				    modifier = huge_increase
+				}
+			}
+
+		cost = 25
+		fire_only_once = yes
+	}
+
+	SWE_Cossack_border_conflict = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		has_completed_focus = swedish_politics_14
+		}
+		visible = {
+		has_completed_focus = swedish_politics_14
+		}
+
+		complete_effect = {	
+			ZAP = { country_event = cossack.4 }
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		cost = 50
+		fire_only_once = yes
+	}
+}
+
+SWE_ottoman_aid = {
+
+	SWE_ottoman_equipment = {
+
+			icon = generic_prepare_civil_war
+
+			available = {
+			has_completed_focus = swedish_politics_12
+			}
+			visible = {
+			has_completed_focus = swedish_politics_12
+			}
+
+			fixed_random_seed = no
+
+			days_remove = 10
+		    remove_effect = {
+		        random_list = {
+					30 = {
+					}
+					40 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 100
+						    producer = TUR
+						}
+					}
+					20 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 250
+						    producer = TUR
+						}
+					}
+					10 = {
+						add_equipment_to_stockpile = {
+						    type = infantry_equipment
+						    amount = 1000
+						    producer = TUR
+						}
+					}
+				}
+		    }
+
+			ai_will_do = {
+			factor = 10
+		}
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+	}
+
+	SWE_ottoman_manpower = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		has_completed_focus = swedish_politics_12
+		}
+		visible = {
+		has_completed_focus = swedish_politics_12
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		fixed_random_seed = no
+
+		days_remove = 10
+	    remove_effect = {
+	        random_list = {
+				30 = {
+					add_manpower = 0
+				}
+				40 = {
+					add_manpower = 1250
+				}
+				20 = {
+					air_experience = 2500
+				}
+				10 = {
+					air_experience = 5000
+				}
+			}
+	    }
+
+		cost = 25
+		days_re_enable = 60
+		fire_only_once = no
+	}
+
+	SWE_ottoman_volunteers = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_completed_focus = swedish_politics_12
+		}
+		visible = {
+			has_completed_focus = swedish_politics_12
+		}
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		complete_effect = {	
+			TUR = {
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "SWE"
+					value = 1000
+				}
+			}
+		}
+
+	cost = 25
+	days_re_enable = 60
+	fire_only_once = no
+	}
+}

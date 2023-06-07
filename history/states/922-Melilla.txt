@@ -1,0 +1,27 @@
+
+state={
+	id=922
+	name="STATE_922"
+
+	history={
+		owner = SPR
+		add_core_of = ALG
+		buildings = {
+			infrastructure = 1
+			7132 = {
+				naval_base = 6
+
+			}
+		}
+		victory_points = {
+			7132 5 
+		}
+	}
+
+	provinces={
+		7132 
+	}
+	manpower=13157
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

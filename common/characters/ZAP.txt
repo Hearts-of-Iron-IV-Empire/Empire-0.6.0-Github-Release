@@ -1,0 +1,120 @@
+characters = { 
+    ############# Country Leaders #############
+    ZAP_Ivan_Mazepa = { #Default Leader for Zaporozhia
+        name = "Ivan Mazepa" 
+        portraits = {
+            civilian = {
+                large = "GFX_zapo_leader"
+            }
+            army = {
+                large = "GFX_zapo_leader"
+            }
+        }
+        country_leader = {
+            expire = 1735.1.1
+            ideology = conservatism
+            traits = {
+                cossack_leader
+            }
+            desc = ZAPO_LEADER_DESC #TODO
+        }
+        field_marshal = { 
+            traits = { old_guard }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+	
+    ZAP_pylyp_orlyk = { #Pro-Swedish Leader for Zaporozhia
+        name = "Pylyp Orlyk" 
+        portraits = {
+            civilian = {
+                large = "GFX_Pylyp_Orlyk"
+            }
+            army = {
+                large = "GFX_Pylyp_Orlyk"
+            }
+        }
+        country_leader = {
+            expire = 1735.1.1
+            ideology = conservatism
+            traits = {
+                cossack_leader
+            }
+            desc = ZAPO_LEADER_DESC #TODO
+        }
+        field_marshal = { 
+            traits = { old_guard }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+
+    ZAP_Ivan_Skoropadsky = { #Pro-Russian Leader for Zaporozhia
+        name = "Ivan Skoropadsky" 
+        portraits = {
+            civilian = {
+                large = "GFX_Ivan_Skoropadsky"
+            }
+            army = {
+                large = "GFX_Ivan_Skoropadsky"
+            }
+        }
+        country_leader = {
+            expire = 1750.1.1
+            ideology = despotism
+            traits = {
+                cossack_leader
+            }
+            desc = ZAPO_LEADER_DESC #TODO
+        }
+        field_marshal = { 
+            traits = { old_guard }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    
+    ############# Field Marshals and Generals #############
+    #SOV_Aleksandr_Menshikov = {
+      #  name = "Aleksandr Menshikov"
+       # portraits = {
+          #  army = {
+          #      large = "GFX_Menshikov"
+          #  }
+       # }
+        #field_marshal = { 
+            #traits = { offensive_doctrine brilliant_strategist career_officer infantry_officer trait_reckless }
+            #skill = 4
+            #attack_skill = 3
+            #defense_skill = 4
+           # planning_skill = 4
+           # logistics_skill = 2
+        #}
+    #}
+    #SOV_Fyodor_Apraksin = {
+        #name = "Fyodor Apraksin"
+        #portraits = {
+           # army = {
+                #large = "GFX_Fyodor_Apraksin"
+            #}
+       # }
+        #corps_commander = { 
+            #traits = { winter_specialist armor_officer media_personality war_hero }
+            #skill = 5
+            #attack_skill = 5
+           # defense_skill = 2
+            #planning_skill = 4
+            #logistics_skill = 5
+        #}
+    #}
+}

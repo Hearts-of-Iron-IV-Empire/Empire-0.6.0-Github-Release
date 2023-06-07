@@ -1,0 +1,163 @@
+﻿capital = 439
+
+oob = "MUG_1699"
+
+set_research_slots = 3
+
+set_stability = 0.5
+set_war_support = 0.8
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	transport = 1
+	basic_cavalry = 1
+	motorised_infantry = 1
+}
+
+set_convoys = 50
+
+declare_war_on = {
+	target = MAR
+	type = annex_everything
+}
+
+add_ideas = {
+	MUG_depleted_army
+	MUG_jizya_imposed
+	MUG_imperial_administration
+	MUG_orthodox_support_high
+	MUG_high_court_spending
+	MUG_zamindari_system
+
+	# Laws and Religion
+	limited_conscription
+	partial_economic_mobilisation
+	sunni
+	empire
+}
+
+recruit_character = MUG_Aurangzeb # Country Leader, 1618 - 1707
+recruit_character = MUG_Asaf_Jah_I
+recruit_character = MUG_Ajit_Singh 
+recruit_character = MUG_Daud_Khan
+recruit_character = MUG_Kam_Baksh
+recruit_character = MUG_Zulfiqar_Khan
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1699.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 50
+	aristocracy = 40
+	fascism = 5
+	communism = 0
+	democratic = 5
+}
+
+# Resistance
+424 = { # Madras
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+427 = { # Deccan Suba
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+429 = { # Ahmadnagar
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+430 = { # East Bengal
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+431 = { # West Bengal
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+433 = { # Rajasthan
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+435 = { # Bihar
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+442 = { # Barbakabad
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+962 = { # Bijapur
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+965 = { # Arcot
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+976 = { # Golconda
+	start_resistance = yes
+	set_compliance = 20
+	set_resistance = 20
+	set_garrison_strength = 1.0
+}
+978 = { # Orissa
+	start_resistance = yes
+	set_compliance = 80
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+981 = { # Jaisalmer
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+982 = { # Bikamer
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+983 = { # Jodhpur
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}
+984 = { # Jaipur
+	start_resistance = yes
+	set_compliance = 60
+	set_resistance = 0
+	set_garrison_strength = 1.0
+}

@@ -1,0 +1,410 @@
+ideas = {
+	country = {
+		GER_imperial_free_city = {
+
+			picture = free_city
+
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				any_owned_state = {
+				    is_capital = no
+				}
+			}
+			
+			modifier = {
+				local_building_slots_factor = 0.5
+				production_speed_buildings_factor = 0.1
+				political_power_gain = 0.25
+			}
+		}
+		GER_militarizing_estates = {
+
+			picture = generic_production_bonus
+
+			name = GER_militarizing_estates
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+			}
+		}
+
+		GER_dispatched_mercenaries = {
+
+			picture = generic_manpower_bonus
+
+			name = GER_dispatched_mercenaries
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = -0.005 
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GER_deployed_mercenaries = {
+
+			picture =chi_army_corruption3
+
+			name = GER_deployed_mercenaries
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.02 
+			}
+		}
+
+		GER_spiritual_administration = {
+
+			picture = por_camisas_azuis
+
+			name = GER_spiritual_administration
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.05
+				political_advisor_cost_factor = -0.25
+			}
+		}
+
+		GER_fransiscan_austherity = {
+
+			picture = hol_aloof_neutrality
+
+			name = GER_fransiscan_austherity
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				economy_cost_factor = 0.25
+			}
+		}
+		GER_rationalism_idea = {
+
+			picture = generic_research_bonuss
+
+			name = GER_rationalism
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		GER_defender_of_the_faith = {
+
+			picture = generic_production_bonus
+
+			name = FRA_defender_of_the_faith
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+
+		GER_expanded_noble_privileges = {
+
+			picture = ast_abandon_the_westminster_system
+
+			name = GER_expanded_noble_privileges
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.1
+				conscription = 0.05
+			}
+		}
+
+		GER_estates_general = {
+
+			picture = generic_pp_unity_bonus
+
+			name = GER_estates_general
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = 0.10
+				fascism_drift = 0.01
+				democratic_drift = 0.01
+				aristocracy_drift = 0.01
+			}
+		}
+		GER_parliamentarism = {
+
+			picture = generic_pp_unity_bonus
+
+			name = GER_parliamentarism
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = -0.15
+				stability_weekly = 0.005
+			}
+		}
+		GER_noble_council = {
+
+			picture = generic_disjointed_gov
+
+			name = GER_noble_council
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				war_support_weekly = 0.005
+				aristocracy_drift = 0.01
+			}
+		}
+		GER_curtailed_noble_privileges = {
+
+			picture = generic_army_war_college
+
+			name = GER_curtailed_noble_privileges
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		GER_republicanism = {
+
+			picture = generic_democratic_drift_bonus
+
+			name = GER_republicanism
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				democratic_drift = 0.10
+			}
+		}
+
+		GER_tithe = {
+
+			picture = SPR_appropriate_church_riches
+
+			name = GER_tithe
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		GER_religious_justification = {
+
+			picture = SPA_crusade_against_democracy
+
+			name = GER_religious_justification
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.25
+			}
+		}
+
+		GER_expelling_heretics = {
+
+			picture = officers_purged
+
+			name = GER_expelling_heretics
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = -50
+				stability_weekly = 0.005
+			}
+		}
+		GER_trade_republic = {
+
+			picture = republic
+
+			name = GER_trade_republic
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.25
+			}
+		}	
+
+		GER_trade_revenue = {
+
+			picture = FRA_market_dynamism
+
+			name = GER_trade_revenue
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}	
+		GER_political_dynasties = {
+
+			picture = generic_victors_of_ww1
+
+			name = GER_political_dynasties
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}	
+
+		GER_poor_relief = {
+
+			picture = raj_risk_of_famine
+
+			name = GER_poor_relief
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.002
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		GER_divided_church_and_state = {
+
+			picture = neutrality_idea
+
+			name = GER_divided_church_and_state
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.10
+			}
+		}
+
+		GER_calvinist_work_ethos = {
+
+			picture = generic_production_bonus
+
+			name = GER_calvinist_work_ethos
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+	}
+}

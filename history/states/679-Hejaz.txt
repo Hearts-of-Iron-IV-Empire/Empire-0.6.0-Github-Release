@@ -1,0 +1,22 @@
+
+state={
+	id=679
+	name="STATE_679"
+
+	history={
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+
+		}
+
+	}
+
+	provinces={
+		1033 2027 2095 8092 10835 11976 12101 12455 
+	}
+	manpower=283220
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

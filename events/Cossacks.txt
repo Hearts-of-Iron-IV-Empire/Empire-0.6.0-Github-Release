@@ -1,0 +1,175 @@
+﻿add_namespace = cossack
+
+
+#ASK EQUIPMENT
+
+country_event = {
+	id = cossack.1
+	title = cossack.1.t
+	desc = cossack.1.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = ZAP
+	}
+
+	mean_time_to_happen = {
+    	days = 1
+	}
+
+	option = {
+		name = cossack.1.a
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 1000
+			    target = SWE
+			}
+		SWE = { country_event = cossack.5 } 
+	}
+	option = {
+		name = cossack.1.b
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 3000
+			    target = SWE
+			}
+		SWE = { country_event = cossack.5 } 
+	}
+	option = {
+		name = cossack.1.c
+		SWE = { country_event = cossack.6 } 
+	}
+}
+
+#SEND MEN
+
+country_event = {
+	id = cossack.2
+	title = cossack.2.t
+	desc = cossack.2.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = ZAP
+	}
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = cossack.2.a
+		SWE = { country_event = cossack.5 } 
+		add_manpower = -1000
+		SWE = { add_manpower = 1000 }
+	}
+	option = {
+		name = cossack.2.b
+		SWE = { country_event = cossack.6 } 
+	}
+}
+
+#SEND REGIMENT
+
+country_event = {
+	id = cossack.3
+	title = cossack.3.t
+	desc = cossack.3.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = ZAP
+	}
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = cossack.3.a
+		SWE = { country_event = cossack.5 } 
+		add_manpower = -5000
+		SWE = { load_oob = ZAP_volunteers }
+	}
+	option = {
+		name = cossack.3.b
+		SWE = { country_event = cossack.6 } 
+	}
+}
+
+#START BORDER CONFLICT
+
+
+country_event = {
+	id = cossack.4
+	title = cossack.4.t
+	desc = cossack.4.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = ZAP
+	}
+
+	mean_time_to_happen = {
+    	days = 1
+	}
+
+	option = {
+		name = cossack.4.a
+		SWE = { country_event = cossack.5 } 
+		start_border_war = {
+		    change_state_after_war = yes
+		    attacker = {
+		        state = 226
+		        num_provinces = 2
+		    }
+						
+		    defender = {
+		        state = 802
+		        num_provinces = 2
+		    }
+		}
+	}
+	option = {
+		name = cossack.4.b
+		SWE = { country_event = cossack.6 } 
+	}
+}
+
+country_event = {
+	id = cossack.5
+	title = cossack.5.t
+	desc = cossack.5.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = SWE
+	}
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = cossack.5.a 
+	}
+}
+
+country_event = {
+	id = cossack.6
+	title = cossack.6.t
+	desc = cossack.6.d
+
+	is_triggered_only = yes
+	trigger = {
+		tag = SWE
+	}
+
+	mean_time_to_happen = {
+    days = 1
+		}
+
+	option = {
+		name = cossack.6.a 
+	}
+}

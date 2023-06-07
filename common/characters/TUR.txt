@@ -1,0 +1,159 @@
+characters = {
+    TUR_Mustafa_II = {
+        name = "Mustafa II"
+        portraits = {
+            army = {
+                large = "GFX_Mustafa_II"
+            }
+            civilian = {
+                large = "GFX_Mustafa_II"
+            }
+        }
+        country_leader = {
+            expire = 1717.1.1
+            ideology = despotism
+            traits = {}
+        }
+        field_marshal = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    TUR_Ahmed_III = {
+        name = "Ahmed III"
+        portraits = {
+            civilian = {
+                large = "GFX_Ahmed_III"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = {}
+        }
+        field_marshal = {
+            traits = {}
+            skill = 1
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    TUR_Ahmed_III_nobility = { # Different start dates ;-;
+        name = "Ahmed III"
+        portraits = {
+            civilian = {
+                large = "GFX_Ahmed_III"
+            }
+        }
+        country_leader = {
+            ideology = nobility
+            traits = {}
+        }
+        field_marshal = {
+            traits = {}
+            skill = 1
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    TUR_Mahmud_I = {
+        name = "Mahmud I"
+        portraits = {
+            civilian = {
+                large = "GFX_Mahmud_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    TUR_Amcazade_Köprülü_Hüseyin_Pasha = {
+        name = "Amcazade Köprülü Hüseyin Pasha" #TODO Make him an advisor
+        portraits = {
+            army = {
+                large = "GFX_Amcazade_Köprülü_Hüseyin_Pasha"
+            }
+        }
+        corps_commander = {
+            traits = { desert_fox }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    TUR_Nazmi_Solok = {
+        name = "Nazmi Solok"
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_general_3"
+            }
+        }
+        corps_commander = {
+            traits = { trickster }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+    TUR_Elmas_Mehmed_Pasha = {
+        name = "Elmas Mehmed Pasha"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Pasha"
+            }
+        }
+        corps_commander = {
+            traits = {  desert_fox }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    TUR_Baltac_Mehmet_Pasha = {
+        name = "Baltacı Mehmet Pasha"
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_general_2"
+            }
+        }
+        corps_commander = {
+            traits = {  hill_fighter }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    TUR_Mezzo_Morto_Hüseyin_Pasha = {
+        name = "Mezzo Morto Hüseyin Pasha"
+        portraits = {
+            army = {
+                large = "GFX_Mezzo_Morto_Hüseyin_Pasha"
+            }
+        }
+        navy_leader = {
+            traits = { bold }
+            skill = 2
+            attack_skill = 3
+            defense_skill = 1
+            maneuvering_skill = 1
+            coordination_skill = 2
+        }
+    }
+}

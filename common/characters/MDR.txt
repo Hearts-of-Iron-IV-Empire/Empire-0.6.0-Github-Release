@@ -1,0 +1,14 @@
+characters = {
+    MDR_Rani_Mangammal = {
+        name = "Rani Mangammal"
+        portraits = {
+            civilian = {
+                large = "GFX_Rani_Mangammal"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

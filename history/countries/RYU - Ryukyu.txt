@@ -1,0 +1,37 @@
+﻿capital = 526
+
+set_research_slots = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1	
+}
+
+add_ideas = {
+	pays_tribute_1
+
+	# Laws and Religion:
+	shinto
+	closed_economy
+}
+
+recruit_character = RYU_Sho_Tei
+
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 60
+	fascism = 30
+	communism = 10
+	neutrality = 0
+}
+
+
+
+

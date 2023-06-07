@@ -1,0 +1,30 @@
+
+state={
+	id=680
+	name="STATE_680"
+
+	history={
+		owner = TUR
+		victory_points = {
+			3942 1 
+		}
+		victory_points = {
+			9823 1 
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = TUR
+		add_core_of = SYR
+
+	}
+
+	provinces={
+		901 1606 1634 2013 3942 6883 7513 9823 10882 11871 12316
+	}
+	manpower=84110
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

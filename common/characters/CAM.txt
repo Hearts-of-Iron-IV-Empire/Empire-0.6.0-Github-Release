@@ -1,0 +1,14 @@
+characters = {
+    CAM_Chey_Chettha_IV = {
+        name = "Chey Chettha IV"
+        portraits = {
+            civilian = {
+                large = "GFX_Asian_Leader_18"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

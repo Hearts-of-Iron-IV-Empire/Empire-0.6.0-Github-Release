@@ -1,0 +1,166 @@
+﻿####### Division Templates #######
+division_template = { 
+	name = "Mercenari Divisione" 
+
+	regiments = { 
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	} 
+	support = { 
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 } 
+	}
+	priority = 2
+}
+
+division_template = { 
+	name = "Divisione Alpina" 
+
+	regiments = { 
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 } 
+		mountaineers = { x = 0 y = 2 } 
+		mountaineers = { x = 1 y = 0 } 
+		mountaineers = { x = 1 y = 1 } 
+		mountaineers = { x = 1 y = 2 } 
+	} 
+	support = { 
+		engineer = { x = 0 y = 0 } 
+		artillery = { x = 0 y = 1 } 
+	} 
+}
+
+division_template = { 
+	name = "Divisione Celere" 
+
+	regiments = { 
+		cavalry = { x = 0 y = 0 } 
+		cavalry = { x = 0 y = 1 } 
+		cavalry = { x = 1 y = 0 } 
+		cavalry = { x = 1 y = 1 } 
+		cavalry = { x = 3 y = 0 }												
+	} 
+}
+
+units = {
+	##### Ottoman Front #####
+	
+	division = { # Split
+		location = 3924 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = { # Split
+		location = 3924 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 11816 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 11816
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 6611 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 984 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {
+		location = 3974 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = { # Kotor (No star wars reference)
+		location = 9821 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = { # Kotor (No star wars reference)
+		location = 9821 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+
+	##### South Greece #####
+	
+	division = {   
+		location = 7096 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {   
+		location = 7096 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = {   
+		location = 7096 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = { # Corfu
+		location = 10203 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+	division = { # Patras
+		location = 7211 
+		division_template = "Mercenari Divisione"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.9
+	}
+}
+	
+##### Starting Production and Stockpiles #####
+instant_effect = {
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 5000
+		producer = AUS
+	}
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 100
+		producer = VNC
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 150
+		producer = VNC
+	}
+	add_equipment_to_stockpile = {
+		type = artillery_equipment_1
+		amount = 150
+		producer = VNC
+	}
+}

@@ -1,0 +1,51 @@
+defined_text = {
+    name = GetCORPSSERVICE
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = low_service_text
+    }
+    text = {
+        localization_key = average_service_text
+    }
+	text = {
+        localization_key = high_service_text
+    }
+	text = {
+        localization_key = modern_service_text
+    }
+}
+defined_text = {
+    name = GetDEFAgianstPirates
+    text = {
+        trigger = {
+            always = yes
+        }
+        localization_key = low_service_text
+    }
+    text = {
+        localization_key = average_service_text
+    }
+	text = {
+        localization_key = high_service_text
+    }
+}
+defined_text = {
+    name = GetInternalSecurity
+    text = {
+		trigger = {
+            always = no
+        }
+        localization_key = low_service_text
+    }
+    text = {
+		trigger = {
+            always = yes
+        }
+        localization_key = average_service_text
+    }
+	text = {
+        localization_key = high_service_text
+    }
+}

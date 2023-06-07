@@ -1,0 +1,3238 @@
+focus_tree = {
+	id = netherlands_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = HOL
+		}
+	}
+	
+	default = no
+
+#####
+
+	focus = {
+		id = hol_state_of_union
+		icon = GFX_goal_anschluss
+		x = 5
+		y = 0
+		cost = 10
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+#####
+
+	focus = {
+		id = hol_economy
+		icon = GFX_economic_stuff
+		prerequisite = { focus = hol_state_of_union }
+		x = -9
+		y = 1
+		cost = 5
+		relative_position_id = hol_state_of_union
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_balanced_budget
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_economy }
+		mutually_exclusive = { focus = hol_deficit_spending }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = -50
+		}
+
+	}
+
+	focus = {
+		id = hol_deficit_spending
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = hol_economy }
+		mutually_exclusive = { focus = hol_balanced_budget }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			add_political_power = 80
+		}
+
+	}
+
+	focus = {
+		id = hol_maintain_military_spending
+		icon = GFX_french_soldier_icon
+		prerequisite = { focus = hol_deficit_spending }
+		x = 1
+		y = 1
+		cost = 8
+		relative_position_id = hol_deficit_spending
+
+		completion_reward = {
+			HOL_increase_inflation = yes
+			add_ideas = HOL_military_spending_maintained
+		}
+
+	}
+
+	focus = {
+		id = hol_expand_road_networks
+		icon = GFX_roman_road_icon
+		prerequisite = { focus = hol_maintain_military_spending }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = hol_maintain_military_spending
+
+		completion_reward = {
+			HOL_increase_inflation = yes
+				random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = hol_expand_infrastructure
+		icon = GFX_focus_hol_the_zuiderzee_works
+		prerequisite = { focus = hol_deficit_spending focus = hol_balanced_budget }
+		x = 0
+		y = 2
+		cost = 8
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			HOL_increase_inflation = yes
+			7 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			35 = {
+				add_extra_state_shared_building_slots = 2
+			}
+			36 = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+
+	}
+
+###
+
+
+	focus = {
+		id = hol_reform_taxation
+		icon = GFX_money
+		prerequisite = { focus = hol_balanced_budget }
+		x = -1
+		y = 1
+		cost = 8
+		relative_position_id = hol_balanced_budget
+
+		completion_reward = {
+			HOL_decrease_inflation = yes 
+			add_stability = -0.05
+		}
+	}
+###
+
+	focus = {
+		id = hol_research_manufacturies
+		icon = GFX_economic_stuff
+		prerequisite = { focus = hol_expand_infrastructure }
+		x = 0
+		y = 3
+		cost = 8
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+###
+	focus = {
+		id = hol_cut_military_budget
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = hol_reform_taxation }
+		x = -2
+		y = 3
+		cost = 8
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			HOL_decrease_inflation = yes 
+			add_timed_idea = {
+			    idea = HOL_recent_military_budget_cuts
+			    days = 540
+			}
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_found_economic_commission
+		icon = GFX_focus_hol_the_foundations_of_defense
+		prerequisite = { focus = hol_research_manufacturies }
+		prerequisite = { focus = hol_cut_military_budget focus = hol_expand_road_networks }
+		x = 0
+		y = 4
+		cost = 8
+		relative_position_id = hol_economy
+
+		completion_reward = {
+			HOL_decrease_inflation = yes 
+			add_political_power = 30
+		}
+	}
+
+	focus = {
+		id = hol_institutinal_advancement
+		icon = GFX_focus_generic_the_giant_wakes
+		prerequisite = { focus = hol_found_economic_commission }
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = hol_found_economic_commission
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = secret_bonus
+				bonus = 1.0
+				uses = 2
+				category = electronics
+			}
+		}
+	}
+
+	focus = {
+		id = hol_expand_academy
+		icon = GFX_focus_research
+		prerequisite = { focus = hol_institutinal_advancement }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_institutinal_advancement
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			add_research_slot = 1
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_investment_schemes
+		icon = GFX_appeal_aragonese_loyalist
+		prerequisite = { focus = hol_found_economic_commission }
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = hol_found_economic_commission
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 }
+		}
+	}
+
+	focus = {
+		id = hol_expand_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = hol_investment_schemes }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_investment_schemes
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_expand_industry_2
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = hol_expand_industry }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_expand_industry
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			7 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = hol_expand_arms_factory
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = hol_expand_industry }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_expand_industry
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_hire_financial_experts
+		icon = GFX_focus_generic_home_defense
+		prerequisite = { focus = hol_found_economic_commission }
+		x = 0
+		y = 1
+		cost = 7
+		relative_position_id = hol_found_economic_commission
+
+		completion_reward = {
+			activate_advisor = generic_economic_reformer
+		}
+	}
+
+###
+
+	focus = {
+		id = hol_forced_loans
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = hol_hire_financial_experts }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_hire_financial_experts
+
+		completion_reward = {
+			unlock_decision_tooltip = CHI_forced_loans
+		}
+	}
+
+
+###
+
+	focus = {
+		id = hol_the_republic
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = { focus = hol_state_of_union }
+		x = 17
+		y = 1
+		cost = 5
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = hol_reform_estates_general
+		icon = GFX_states_general
+		prerequisite = { focus = hol_the_republic }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = hol_the_republic
+		mutually_exclusive = { focus = hol_solidify_orangist_support }
+
+		completion_reward = {
+			add_ideas = HOL_strenghtened_states_general
+		}
+	}
+
+	focus = {
+			id = hol_reform_strenghten_statists
+			icon = GFX_focus_generic_treaty
+			prerequisite = { focus = hol_reform_estates_general }
+			x = 0
+			y = 1
+			cost = 5
+			relative_position_id = hol_reform_estates_general
+
+			completion_reward = {
+				add_popularity = {
+				    ideology = democratic
+				    popularity = 0.10
+				}
+			}
+	}
+
+	focus = {
+		id = hol_depose_heinsius
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = hol_reform_strenghten_statists }
+		mutually_exclusive = { focus = hol_continue_the_regency focus = hol_a_new_stadtholder }
+		x = -6
+		y = 1
+		cost = 5
+		relative_position_id = hol_reform_strenghten_statists
+
+		available = {
+			has_country_flag = HOL_william_is_dead
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+			    elections_allowed = no
+			}
+		}
+	}
+
+	focus = {
+		id = hol_reconcile_france
+		icon = GFX_goal_generic_dangerous_deal
+		prerequisite = { focus = hol_depose_heinsius }
+		mutually_exclusive = { focus = hol_anti_french }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = hol_depose_heinsius
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = medium_increase }
+			FRA = {
+				country_event = {
+					id = holland.5
+					days = 3
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = hol_strike_a_deal_for_the_low_countries
+		icon = GFX_plan_de_witt
+		prerequisite = { focus = hol_reconcile_france }
+		mutually_exclusive = { focus = hol_gallia_amica_sed_non_vicina }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = hol_reconcile_france
+
+		completion_reward = {
+			FRA = { country_event = holland.8 }
+		}
+	}
+
+	focus = {
+		id = hol_support_france
+		icon = GFX_goal_fleur_de_lys
+		prerequisite = { focus = hol_strike_a_deal_for_the_low_countries focus = hol_gallia_amica_sed_non_vicina }
+		mutually_exclusive = {focus = hol_maintain_neutrality}
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = hol_strike_a_deal_for_the_low_countries
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction = yes
+				}
+				leave_faction = yes
+			}
+			FRA = { country_event = generic.2 }
+		}
+	}
+
+	focus = {
+		id = hol_maintain_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_strike_a_deal_for_the_low_countries focus = hol_gallia_amica_sed_non_vicina }
+		mutually_exclusive = {focus = hol_support_france}
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = hol_strike_a_deal_for_the_low_countries
+
+		available = {
+			is_in_faction = no 
+			has_war = no
+		}
+
+		completion_reward = {
+			add_war_support = -0.10
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = HOL_armed_neutrality
+		icon = GFX_goal_generic_small_arms
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = hol_maintain_neutrality }
+		relative_position_id = hol_maintain_neutrality
+
+		available = {
+			is_in_faction = no 
+			has_war = no
+		}
+
+		completion_reward = {
+			add_ideas = SWE_armed_neutrality
+		}
+	}
+
+	focus = {
+		id = HOL_detterence
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = HOL_armed_neutrality }
+		relative_position_id = HOL_armed_neutrality
+
+		available = {
+			is_in_faction = no 
+			has_war = no
+		}
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+	id = HOL_neutral_mediator
+	icon = GFX_peace
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = HOL_detterence }
+	relative_position_id = HOL_detterence
+
+	available = {
+		is_in_faction = no 
+		has_war = no
+	}
+
+	completion_reward = {
+		add_ideas = SWE_third_party_mediator
+	}
+}
+
+	focus = {
+		id = hol_carve_up_liege
+		icon = GFX_liege_flag
+		prerequisite = { focus = hol_maintain_neutrality focus =  hol_support_france}
+		x = -1
+		y = 2
+		cost = 10
+		relative_position_id = hol_strike_a_deal_for_the_low_countries
+
+		available = {
+			NOT =  { is_in_faction_with = LUI }
+		}
+
+		bypass = {
+			OR = {
+				NOT = { country_exists = LUI }
+				has_war_with = LUI
+				LUI = { is_puppet_of = HOL }
+			}
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = LUI
+			}
+		}
+	}
+
+	focus = {
+		id = hol_seventeen_provinces_reunited
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = hol_support_france focus = hol_maintain_neutrality focus = hol_alter_treaty_of_london  }
+		mutually_exclusive = { focus = hol_second_barrier_treaty} 
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_support_france
+
+		available = {
+			owns_state = 6
+			owns_state = 968
+			owns_state = 793
+		}
+
+		completion_reward = {
+			add_state_core = 6
+			add_state_core = 968
+			add_state_core = 793
+			if = {
+				limit = {
+					owns_state = 34
+				}
+				add_state_core = 34
+			}
+			if = {
+				limit = {
+					owns_state = 8
+				}
+				add_state_core = 8
+			}
+			custom_effect_tooltip = HOL_wallonia_will_add_cores
+		}
+	}
+
+	focus = {
+		id = hol_request_artois
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = hol_seventeen_provinces_reunited }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_seventeen_provinces_reunited
+
+		available = {
+			968 = { is_owned_and_controlled_by = HOL }
+			34 = { is_owned_and_controlled_by = HOL }
+			has_war = no
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 29
+				}
+				add_state_core = 29
+			}
+			every_other_country = { 
+				limit = { 
+					owns_state = 29
+				}
+				country_event = holland.20
+			}
+		}
+	}
+
+	focus = {
+		id = hol_reconquest_of_cleves
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = hol_seventeen_provinces_reunited }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_seventeen_provinces_reunited
+
+		available = {
+			has_war = no
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					owns_state = 900
+				}
+				add_state_core = 900
+			}
+			every_other_country = { 
+				limit = { 
+					owns_state = 900
+				}
+				country_event = holland.23
+			}
+		}
+	}
+
+	focus = {
+		id = hol_gallia_amica_sed_non_vicina
+		icon = GFX_focus_generic_diplomatic_treaty
+		prerequisite = { focus = hol_reconcile_france }
+		mutually_exclusive = { focus = hol_strike_a_deal_for_the_low_countries }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = hol_reconcile_france
+
+		available = { 
+			NOT = { is_owner_neighbor_of = FRA }
+		}
+
+		completion_reward = {
+			add_ideas = HOL_gallia_amica_sed_non_vicina
+		}
+	}
+
+	focus = {
+		id = hol_anti_french
+		icon = GFX_france_kingdom
+		prerequisite = { focus = hol_continue_the_regency focus = hol_depose_heinsius focus = hol_a_new_stadtholder}
+		mutually_exclusive = { focus = hol_reconcile_france }
+		x = 5
+		y = 1
+		cost = 5
+		relative_position_id = hol_depose_heinsius
+
+		completion_reward = {
+			add_opinion_modifier = { target = FRA modifier = medium_decrease }
+			add_ideas = HOL_anti_french_stance
+		}
+	}
+
+	focus = {
+		id = hol_prepare_for_war
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = hol_anti_french }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = hol_anti_french
+
+		completion_reward = {
+			add_war_support = .2
+		}
+	}
+
+	focus = {
+		id = hol_alter_treaty_of_london
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = hol_prepare_for_war }
+		mutually_exclusive = { focus = hol_accept_status_quo }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = hol_prepare_for_war
+
+		completion_reward = {
+			custom_effect_tooltip = alter_treaty
+		}
+	}
+
+	focus = {
+		id = hol_accept_status_quo
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_prepare_for_war }
+		mutually_exclusive = { focus = hol_alter_treaty_of_london }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = hol_prepare_for_war
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 120
+		}
+	}
+
+	#focus = {
+	#	id = hol_anglo_batavian_condominium
+	#	icon = GFX
+	#	prerequisite = { focus = hol_alter_treaty_of_london focus = #hol_accept_status_quo }
+	#	x = 1
+	#	y = 1
+	#	cost = 10
+	#	relative_position_id = hol_alter_treaty_of_london
+	#
+	#	completion_reward = {
+	#	}
+	#}
+
+	focus = {
+		id = hol_second_barrier_treaty
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = hol_accept_status_quo focus = hol_alter_treaty_of_london }
+		mutually_exclusive = { focus = hol_seventeen_provinces_reunited} 
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_accept_status_quo
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = {
+					is_owned_by = BEL
+				}
+				set_demilitarized_zone = yes
+			}
+			swap_ideas = {
+				remove_idea = HOL_protected_by_the_barrier
+				add_idea = HOL_second_barrier_treaty
+			}
+		}
+	}
+
+	focus = {
+		id = hol_shut_down_ostend_company
+		icon = GFX_goal_generic_trade
+		prerequisite = { focus = hol_second_barrier_treaty }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_second_barrier_treaty
+
+		completion_reward = {
+			add_political_power = 120
+			custom_effect_tooltip = HOL_austria_no_colony
+		}
+	}
+
+
+
+##
+
+	
+
+	focus = {
+		id = hol_solidify_orangist_support
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = hol_the_republic }
+		mutually_exclusive = { focus = hol_reform_estates_general }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = hol_the_republic
+
+		completion_reward = {
+			add_stability = .1
+		}
+	}
+
+	focus = {
+		id = hol_return_of_orange
+		icon = GFX_return_of_the_orange
+		prerequisite = { focus = hol_solidify_orangist_support }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = hol_solidify_orangist_support
+
+		bypass = {
+			has_country_flag = HOL_william_is_dead
+		}
+
+		completion_reward = {
+			ENG = {
+				country_event = holland.2
+			}
+		}
+	}
+
+	focus = {
+		id = hol_continue_the_regency
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_return_of_orange focus = hol_reform_strenghten_statists }
+		mutually_exclusive = { focus = hol_depose_heinsius focus = hol_a_new_stadtholder }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = hol_return_of_orange
+
+		available = {
+			has_country_flag = HOL_william_is_dead
+		}
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = aristocracy
+			}
+			create_country_leader = {
+				name = "Anthonie Heinsius"
+				desc = ""
+				picture = "anthonie_heinsius.dds"
+				expire = "1720.3.8"
+				ideology = nobility
+				traits = {
+					competent_statesman
+				}
+			}
+			add_popularity = {
+			    ideology = aristocracy
+			    popularity = 0.35
+			}
+		}
+	}
+
+	focus = {
+		id = hol_reform_into_a_true_republic
+		icon = GFX_states_general
+		prerequisite = { focus = hol_depose_heinsius}
+		x = -4
+		y = 1
+		cost = 10
+		relative_position_id = hol_depose_heinsius
+
+
+		completion_reward = {
+			set_politics = {
+				ruling_party = democratic
+			}
+			add_ideas = GER_republicanism
+		}
+	}
+
+	focus = {
+		id = hol_parliamentarism
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		prerequisite = { focus = hol_reform_into_a_true_republic}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_reform_into_a_true_republic
+
+		available = {
+			democratic < 0.5
+		}
+		completion_reward = {
+			add_ideas = parliamentarism
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = hol_legislative_assembly
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = hol_reform_into_a_true_republic}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_reform_into_a_true_republic
+
+		available = {
+			democratic < 0.5
+		}
+
+		completion_reward = {
+			add_ideas = legislative_assembly
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = hol_power_to_the_admirals
+		icon = GFX_goal_generic_amphibious_assault
+		prerequisite = { focus = hol_legislative_assembly}
+		prerequisite = { focus = hol_parliamentarism}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_legislative_assembly
+
+
+		completion_reward = {
+			add_ideas = HOL_admirals_in_power
+			if = {
+				limit = {
+					has_idea = HOL_traders_in_power
+				}
+				remove_ideas = HOL_traders_in_power
+			}
+			if = {
+				limit = {
+					has_idea = HOL_craftsmen_in_power
+				}
+				remove_ideas = HOL_craftsmen_in_power
+			}
+		}
+	}
+
+	focus = {
+		id = hol_refit_the_fleet
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = hol_power_to_the_admirals}
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = hol_power_to_the_admirals
+
+		available = {
+			has_idea = HOL_admirals_in_power
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}	
+			HOL_increase_inflation = yes 
+		}			
+	}
+
+	focus = {
+		id = hol_power_to_the_merchants
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = hol_legislative_assembly}
+		prerequisite = { focus = hol_parliamentarism}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_legislative_assembly
+
+
+		completion_reward = {
+			add_ideas = free_trade
+			add_ideas = HOL_traders_in_power
+			if = {
+				limit = {
+					has_idea = HOL_admirals_in_power
+				}
+				remove_ideas = HOL_admirals_in_power
+			}
+			if = {
+				limit = {
+					has_idea = HOL_craftsmen_in_power
+				}
+				remove_ideas = HOL_craftsmen_in_power
+			}
+		}
+	}
+
+	focus = {
+		id = hol_expand_the_trade_fleet
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = hol_power_to_the_merchants}
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = hol_power_to_the_merchants
+		available = {
+			has_idea = HOL_traders_in_power
+		}
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+			    type = convoy
+			    amount = 30
+			    producer = HOL
+			}
+			add_resource = {
+			    type = tungsten
+			    amount = 8
+			    state = 964
+			}
+			add_resource = {
+			    type = chromium
+			    amount = 4
+			    state = 422
+			}
+			add_resource = {
+			    type = steel
+			    amount = 8
+			    state = 681
+			}
+		}
+	}
+
+	focus = {
+		id = hol_power_to_the_craftsmen
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = hol_legislative_assembly}
+		prerequisite = { focus = hol_parliamentarism}
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = hol_legislative_assembly
+
+
+		completion_reward = {
+			add_ideas = {
+				HOL_craftsmen_in_power
+			}
+			if = {
+				limit = {
+					has_idea = HOL_admirals_in_power
+				}
+				remove_ideas = HOL_admirals_in_power
+			}
+			if = {
+				limit = {
+					has_idea = HOL_traders_in_power
+				}
+				remove_ideas = HOL_traders_in_power
+			}
+		}
+	}
+
+	focus = {
+		id = hol_invest_in_the_textile_sector
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_power_to_the_craftsmen}
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = hol_power_to_the_craftsmen
+
+		available = {
+			has_idea = HOL_craftsmen_in_power
+		}
+
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+			    type = rubber
+			    amount = 8
+			    state = 7
+			}
+		}
+	}
+
+	focus = {
+		id = hol_allow_to_freemasons
+		icon = GFX_goal_tfv_generic_tech_sharing
+		prerequisite = { focus = hol_power_to_the_craftsmen focus = hol_power_to_the_merchants}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_power_to_the_craftsmen
+
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = hol_freeshooter_guilds
+		icon = GFX_focus_focus_fra_maquis
+		prerequisite = { focus = hol_power_to_the_merchants focus = hol_power_to_the_admirals}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_power_to_the_merchants
+
+
+		completion_reward = {
+			add_ideas = HOL_free_shooters
+		}
+	}
+
+	focus = {
+		id = hol_promote_republican_values
+		icon = GFX_goal_generic_propaganda
+		prerequisite = { focus = hol_continue_the_regency focus = hol_depose_heinsius}
+		mutually_exclusive = { focus =  hol_install_a_dictatorship}
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_continue_the_regency
+
+
+		completion_reward = {
+			add_ideas = GER_republicanism
+		}
+	}
+
+	focus = {
+		id = hol_install_a_dictatorship
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = hol_continue_the_regency }
+		mutually_exclusive = { focus =  hol_promote_republican_values}
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = hol_continue_the_regency
+
+
+		completion_reward = {
+			add_political_power = 200
+		}
+	}
+
+	focus = {
+		id = hol_competent_statesmanship
+		icon = GFX_focus_generic_support_the_left_right
+		prerequisite = { focus = hol_continue_the_regency }
+		x = 4
+		y = 1
+		cost = 10
+		relative_position_id = hol_continue_the_regency
+
+
+		completion_reward = {
+			add_stability = 0.10
+			HOL_decrease_inflation = yes
+		}
+	}
+
+	focus = {
+		id = hol_reinforce_calvinists
+		icon = GFX_john_calvin
+		prerequisite = { focus = hol_promote_republican_values focus = hol_install_a_dictatorship focus = hol_john_william_friso }
+		mutually_exclusive = { focus = hol_religious_tolerance }
+		x = 3
+		y = 1
+		cost = 2
+		relative_position_id = hol_promote_republican_values
+
+		completion_reward = {
+			every_other_country = {
+				limit = {
+					has_idea = protestant
+				}
+				add_opinion_modifier = {
+				    target = HOL
+				    modifier = medium_increase
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = hol_eliminate_heterodoxy
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = hol_reinforce_calvinists}
+		relative_position_id = hol_reinforce_calvinists
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = HOL_consistories
+		icon = GFX_focus_por_concordat
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = hol_eliminate_heterodoxy}
+		relative_position_id = hol_eliminate_heterodoxy
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = HOL_calvinist_work_ethos
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = HOL_consistories }
+		relative_position_id = HOL_consistories
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { GER_calvinist_work_ethos }
+		}
+	}
+
+	focus = {
+		id = HOL_theocratic_principles
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = hol_eliminate_heterodoxy}
+		relative_position_id = hol_eliminate_heterodoxy
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 80
+		}
+	}
+
+	focus = {
+		id = HOL_devotion
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = HOL_theocratic_principles}
+		relative_position_id = HOL_theocratic_principles
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = HOL_defender_of_the_faith
+		icon = GFX_defender_of_the_faith
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = HOL_devotion }
+		prerequisite = { focus = HOL_calvinist_work_ethos }
+		relative_position_id = HOL_calvinist_work_ethos
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_defender_of_the_faith
+		}
+	}
+
+	focus = {
+		id = hol_religious_tolerance
+		icon = GFX_peace
+		prerequisite = { focus = hol_promote_republican_values focus = hol_install_a_dictatorship }
+		mutually_exclusive = { focus = hol_reinforce_calvinists }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_promote_republican_values
+
+
+		completion_reward = {
+			add_ideas = HOL_haven_of_tolerance
+		}
+	}
+
+
+	focus = {
+		id = hol_a_new_stadtholder
+		icon = GFX_focus_generic_monarchy_2
+		prerequisite = { focus = hol_return_of_orange }
+		mutually_exclusive = { focus = hol_continue_the_regency focus = hol_depose_heinsius }
+		x = 6
+		y = 1
+		cost = 10
+		relative_position_id = hol_return_of_orange
+
+		available = {
+			has_country_flag = HOL_william_is_dead
+		}
+
+		completion_reward = {
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -0.25
+				}				
+			}
+			add_stability = ban_ideology_var
+			custom_effect_tooltip = statist_opinions_matter
+		}
+	}
+
+	focus = {
+		id = hol_invite_the_queen
+		icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+		prerequisite = { focus = hol_a_new_stadtholder }
+		mutually_exclusive = { focus = hol_john_william_friso }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_a_new_stadtholder
+
+		completion_reward = {
+			ENG = { country_event = holland.15 }
+		}
+	}
+
+	focus = {
+		id = hol_john_william_friso
+		icon = GFX_william_friso
+		prerequisite = { focus = hol_a_new_stadtholder }
+		mutually_exclusive = { focus = hol_invite_the_queen }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_a_new_stadtholder
+
+		completion_reward = {
+			create_country_leader = {
+				name = "Johan Willem Friso"
+				picture = "william_friso.dds"
+				expire = "1711.3.8"
+				ideology = despotism
+				traits = {
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = hol_compromise_with_the_statists
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = hol_john_william_friso focus = hol_invite_the_queen }
+		mutually_exclusive = { focus = hol_the_dutch_republic_is_dead }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = hol_john_william_friso
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = democratic
+			    popularity = 0.05
+			}
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = hol_alliance_with_heinsius
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus =  hol_compromise_with_the_statists }
+		#mutually_exclusive = { focus = hol_the_dutch_republic_is_dead }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_compromise_with_the_statists
+
+		completion_reward = {
+			add_ideas = advisor_anthonie_heinsius
+		}
+	}
+
+	focus = {
+		id = hol_the_dutch_republic_is_dead
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		prerequisite = { focus = hol_john_william_friso focus = hol_invite_the_queen }
+		mutually_exclusive = { focus = hol_compromise_with_the_statists }
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = hol_john_william_friso
+
+		completion_reward = {
+			add_ideas = HOL_rise_in_monarchist_sentiment
+		}
+	}
+
+	focus = {
+		id = hol_english_ties
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = hol_invite_the_queen }
+		x = 4
+		y = 2
+		cost = 10
+		relative_position_id = hol_invite_the_queen
+
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = ENG
+			    modifier = huge_increase
+			}
+			ENG = {
+				add_opinion_modifier = {
+				    target = HOL
+				    modifier = huge_increase
+				}
+			}
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = hol_economic_integration
+		icon = GFX_focus_generic_the_giant_wakes
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = hol_english_ties }
+		relative_position_id = hol_english_ties
+
+		available = {
+			has_political_power > 100
+		}
+
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = HOL_economic_integration
+		}
+	}
+
+	focus = {
+		id = hol_military_integration
+		icon = GFX_focus_generic_little_entente
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = hol_english_ties }
+		relative_position_id = hol_english_ties
+
+		available = {
+			has_political_power > 100
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
+			}
+			army_experience = 15
+			ENG = {
+				add_doctrine_cost_reduction = {
+					name = land_doc_bonus
+					cost_reduction = 0.5
+					uses = 2
+					category = land_doctrine
+				}
+				army_experience = 15
+			}
+			add_political_power = -100
+		}
+	}
+
+	focus = {
+		id = hol_diplomatic_integration
+		icon = GFX_focus_generic_treaty
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = hol_english_ties }
+		relative_position_id = hol_english_ties
+
+		available = {
+			has_political_power > 100
+		}
+
+		completion_reward = {
+			add_political_power = -100
+			add_ideas = HOL_unification_of_embassies
+		}
+	}
+
+	focus = {
+		id = hol_anglo_dutch_union
+		icon = GFX_focus_eng_imperial_federation
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = hol_military_integration }
+		prerequisite = { focus = hol_diplomatic_integration }
+		prerequisite = {  focus = hol_economic_integration }
+		relative_position_id = hol_military_integration
+
+		available = {
+			is_subject_of = ENG
+		}
+
+		completion_reward = {
+			ENG = { change_tag_from = HOL }
+			if = {
+				limit = {
+					INS = { is_subject_of = HOL }
+				}
+				ENG = {
+					set_autonomy = {
+					    target = INS
+					    autonomy_state = autonomy_colony
+					}
+				}
+			}
+			ENG = {
+				annex_country = {
+				    target = HOL
+				    transfer_troops = yes
+				}
+				set_cosmetic_tag = ENG_anglo_dutch_union
+				if = {
+					limit = {
+						NOT = { has_completed_focus = eng_the_anglo_dutch_union }
+					}
+					unlock_national_focus = eng_the_anglo_dutch_union
+				}
+			}
+		}
+	}
+
+		
+
+	focus = {
+		id = hol_sign_a_new_constitution
+		icon = GFX_focus_generic_treaty
+		prerequisite = { focus = hol_the_dutch_republic_is_dead focus = hol_compromise_with_the_statists}
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_the_dutch_republic_is_dead
+		mutually_exclusive = { focus = hol_no_constitution }
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = hol_no_constitution
+		icon = GFX_focus_generic_monarchy_1
+		prerequisite = { focus = hol_the_dutch_republic_is_dead }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_the_dutch_republic_is_dead
+		mutually_exclusive = { focus = hol_sign_a_new_constitution }
+
+		completion_reward = {
+			add_political_power = 80
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = hol_united_provinces_united
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = { focus = hol_sign_a_new_constitution }
+		prerequisite = { focus = hol_alliance_with_heinsius }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = hol_sign_a_new_constitution
+		mutually_exclusive = { focus = hol_kingdom_of_the_netherlands }
+
+		available = {
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = hol_kingdom_of_the_netherlands
+		icon = GFX_focus_hol_united_netherlands
+		prerequisite = { focus = hol_no_constitution focus = hol_sign_a_new_constitution }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_sign_a_new_constitution
+		mutually_exclusive = { focus = hol_united_provinces_united }
+
+		available = {
+			neutrality > 0.8
+		}
+
+		completion_reward = {
+			set_party_name = { 
+			    ideology = neutrality 
+			    long_name = "House of Orange-Naussau"
+			    name = "House of Orange-Naussau"
+			}
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = -0.3
+			}
+			remove_ideas = HOL_rise_in_monarchist_sentiment
+			#implement choice: kingdom of Holland or kingdom of the Netherlands
+		}
+	}
+
+	focus = {
+		id = hol_challenge_prussia
+		icon = GFX_focus_crown_of_prussia
+		prerequisite = { focus = hol_kingdom_of_the_netherlands focus = hol_united_provinces_united}
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = hol_united_provinces_united
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = PRS
+			}
+		}
+	}
+
+	
+	
+
+
+##################
+#MILITARY BRANCES#
+##################
+
+focus = {
+	id = hol_army
+	icon = GFX_helmet_icon
+	x = 6
+	y = 1
+	cost = 5
+	prerequisite = { focus = hol_economy }
+	relative_position_id = hol_economy
+
+	completion_reward = {
+		army_experience = 15
+		add_doctrine_cost_reduction = {
+			name = land_doc_bonus
+			cost_reduction = 0.5
+			uses = 1
+			category = land_doctrine
+		}
+	}
+}
+
+###
+
+focus = {
+	id = hol_anti_french_agression
+	icon = GFX_generic_soldiers
+	prerequisite = { focus = hol_army }
+	x = -1
+	y = 1
+	cost = 8
+	relative_position_id = hol_army
+
+	completion_reward = {
+		army_experience = 10
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+	add_ideas = ideological_fanaticism_focus
+	}
+}
+
+###
+
+focus = {
+	id = hol_early_mobilisation
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = hol_army }
+	x = 2
+	y = 1
+	cost = 10
+	relative_position_id = hol_army
+
+	available = { threat > .1 }
+
+	completion_reward = {
+		HOL_increase_inflation = yes 
+		random_owned_controlled_state = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+###
+
+focus = {
+	id = hol_mobilise_armies
+	icon = GFX_soldiers_marching
+	prerequisite = { focus = hol_anti_french_agression }
+	x = -2
+	y = 2
+	cost = 10
+	relative_position_id = hol_army
+
+	completion_reward = { 
+		add_ideas = extensive_conscription
+		add_manpower = 15000
+		HOL_increase_inflation = yes
+	}
+}
+
+focus = {
+	id = hol_dutch_defensive_mentality
+	icon = GFX_defend_netherlands
+	prerequisite = { focus = hol_mobilise_armies focus = hol_deterence}
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = hol_mobilise_armies
+
+	completion_reward = { 
+		add_ideas = HOL_defensive_stance
+	}
+}
+
+focus = {
+	id = hol_prepare_the_water_lines
+	icon = GFX_focus_hol_prepare_the_inundation_lines
+	prerequisite = { focus = hol_dutch_defensive_mentality}
+	x = 0
+	y = 1
+	cost = 8
+	relative_position_id = hol_dutch_defensive_mentality
+
+	completion_reward = { 
+		add_ideas = HOL_prepare_the_water_lines
+		unlock_decision_category_tooltip = HOL_prepare_the_inundation_lines
+		custom_effect_tooltip = HOL_prepare_the_inundation_lines_tt
+	}
+}
+
+
+###
+focus = {
+	id = hol_total_mobilization
+	icon = GFX_focus_secret_rearmament
+	prerequisite = { focus = hol_early_mobilisation }
+	x = 2
+	y = 2
+	cost = 10
+	relative_position_id = hol_army
+
+	available = { threat > .2 }
+
+	completion_reward = { 
+		add_ideas = war_economy
+	}
+}
+
+###
+focus = {
+	id = hol_doctrines
+	icon = GFX_review_military_doctrines_focus
+	prerequisite = { focus = hol_mobilise_armies }
+	x = -3
+	y = 3
+	cost = 9
+	relative_position_id = hol_army
+
+	completion_reward = {
+		army_experience = 10
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+		}
+	}
+}
+
+###
+
+
+###
+
+focus = {
+	id = hol_deterence
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = hol_anti_french_agression }
+	x = 0
+	y = 2
+	cost = 10
+	relative_position_id = hol_army
+
+	completion_reward = {
+			add_ideas = deterrence
+		}
+}
+
+###
+
+focus = {
+	id = hol_man_the_barrier_forts
+	icon = GFX_fortification
+	prerequisite = { focus = hol_deterence }
+	x = 1
+	y = 3
+	cost = 10
+	relative_position_id = hol_army
+
+	completion_reward = {
+		6 = {
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 6446
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 3576 
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 6560
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 6598
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 11419
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 9574
+				instant_build = yes
+			}
+		}
+		34 = {
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 9536
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 3516
+				instant_build = yes
+			}
+		}
+
+		8 = {
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 6583
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = HOL_barrier
+	}
+}
+
+###
+
+focus = {
+	id = hol_dig_in_behind_maas
+	icon = GFX_build_fort
+	prerequisite = { focus = hol_man_the_barrier_forts }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = hol_man_the_barrier_forts
+
+	completion_reward = {
+		7 = {
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 9498
+				instant_build = yes
+			}
+		}
+		35 = {
+			add_building_construction = {
+				type = bunker
+				level = 6
+				province = 11456
+				instant_build = yes
+			}
+		}
+		custom_effect_tooltip = HOL_maes
+	}
+}
+
+#####
+# Colonial Expansion
+#####
+
+focus = {
+	id = HOL_colonial_expansion
+	icon = GFX_focus_hol_gateway_to_europe
+	prerequisite = { focus = hol_found_economic_commission }
+	prerequisite = { focus = hol_cruiser_effort }
+	x = -6
+	y = 1
+	cost = 10
+	relative_position_id = hol_found_economic_commission
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_controlled_by = ROOT
+		}
+	}
+	
+	completion_reward = {	
+		add_tech_bonus = {
+			name = sub_op_bonus
+			bonus = 1.0
+			uses = 2
+			category = colonial_tech
+		}	
+	}
+}
+
+focus = {
+		id = hol_increase_mercantilism
+		icon = GFX_focus_usa_voter_registration_act
+		prerequisite = { focus = HOL_colonial_expansion }
+		mutually_exclusive = { focus = hol_persue_free_trade }
+		x = -1
+		y = 1
+		cost = 10
+		relative_position_id = HOL_colonial_expansion
+
+		completion_reward = {
+		HOL_decrease_inflation = yes
+			add_ideas = {
+				limited_exports
+			}
+		}
+	}
+
+	focus = {
+		id = hol_persue_free_trade
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = HOL_colonial_expansion }
+		mutually_exclusive = { focus = hol_increase_mercantilism }
+		x = 1
+		y = 1
+		cost = 10
+		relative_position_id = HOL_colonial_expansion
+
+		bypass = {
+			has_idea = free_trade
+		}
+
+		completion_reward = {
+			add_ideas = {
+				free_trade
+			}
+		}
+	}
+
+focus = {
+	id = HOL_focus_on_west_indies
+	icon = GFX_goal_generic_position_armies
+	prerequisite = { focus = hol_increase_mercantilism focus = hol_persue_free_trade  }
+	x = -3
+	y = 2
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		ENG = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_west_indies } }
+		SPR = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_west_indies } }
+		POR = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_west_indies } }
+		FRA = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_west_indies } }
+		DEN = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_west_indies } }
+		every_state = {
+			limit = {
+				is_owned_by = HOL
+		    	OR = {
+		    		is_on_continent = south_america
+		    		is_on_continent = north_america
+		    	}
+			}
+	    	CRC = { transfer_state = PREV }
+	    	CRC = { add_state_core = PREV }
+	  	}
+	  	set_autonomy = {
+			target = CRC
+			autonomous_state = autonomy_colony
+		}
+		hidden_effect = {
+			CRC = {
+				set_popularities = {
+					democratic = 50
+					neutrality = 15
+					fascism = 30
+					communism = 5
+				}
+				set_politics = {
+					ruling_party = democratic
+				       elections_allowed = no
+				}
+			}
+		}
+		custom_effect_tooltip = HOL_can_not_colonize_america
+	}
+}
+
+focus = {
+	id = HOL_reclaim_new_netherland
+	icon = GFX_goal_generic_territory_or_war
+	prerequisite = { focus = HOL_focus_on_west_indies }
+	x = -1
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	available = {
+		NOT = { is_in_faction_with = ENG }
+		has_war = no
+	}
+	bypass = {
+		owns_state = 358
+		owns_state = 359
+	}
+	completion_reward = {
+		create_wargoal = {
+		    type = take_state_focus
+		    target = USA
+		    generator = { 358 359 }
+		}
+	}
+}
+
+focus = {
+	id = HOL_expand_new_amsterdam
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = HOL_reclaim_new_netherland }
+	x = -1
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	available = {
+		owns_state = 358
+		owns_state = 359
+	}
+
+	completion_reward = {
+		set_province_name = { id = 3878 name = "New Amsterdam"}
+		set_province_name = { id = 9693 name = "Fort Orange"}
+		set_province_name = { id = 6911 name = "Wiltwijk"}
+		358 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+			type = industrial_complex
+			level = 2
+			instant_build = yes
+			}
+		}
+
+	}
+}
+
+focus = {
+	id = HOL_recover_brazil
+	icon = GFX_focus_por_recover_brazil
+	prerequisite = { focus = HOL_focus_on_west_indies }
+	x = -3
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = BRA
+		}	
+	}
+}
+
+focus = {
+	id = HOL_protect_the_caribbean
+	icon = GFX_goal_generic_defence
+	prerequisite = { focus = HOL_focus_on_west_indies }
+	x = -5
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		695 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 153
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 153
+				instant_build = yes
+			}
+		}
+
+		309 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 10906
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 12828
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 10906
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = HOL_negotiate_with_pirates
+	icon = GFX_pirate_deal
+	prerequisite = { focus = HOL_protect_the_caribbean }
+	x = -5
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+	mutually_exclusive = { focus = HOL_crack_down_on_piracy }
+
+	completion_reward = {
+		ENG = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		SPR = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		POR = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		FRA = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		DEN = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		PAP = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+		AUS = { add_opinion_modifier = { target = HOL modifier = HOL_negotiated_with_pirates } }
+	}
+}
+
+focus = {
+	id = HOL_crack_down_on_piracy
+	icon = GFX_pirates
+	prerequisite = { focus = HOL_protect_the_caribbean }
+	x = -3
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+	mutually_exclusive = { focus = HOL_negotiate_with_pirates }
+
+	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = BAH	
+		}
+		ENG = { add_opinion_modifier = { target = HOL modifier = HOL_joined_war_on_piracy } }
+		SPR = { add_opinion_modifier = { target = HOL modifier = HOL_joined_war_on_piracy } }
+		POR = { add_opinion_modifier = { target = HOL modifier = HOL_joined_war_on_piracy } }
+		FRA = { add_opinion_modifier = { target = HOL modifier = HOL_joined_war_on_piracy } }
+		DEN = { add_opinion_modifier = { target = HOL modifier = HOL_joined_war_on_piracy } }
+	}
+}
+
+focus = {
+	id = HOL_focus_on_east_indies
+	icon = GFX_goal_VOC
+	prerequisite = { focus = hol_increase_mercantilism focus = hol_persue_free_trade  }
+	x = 3
+	y = 2
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		ENG = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_east_indies } }
+		SPR = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_east_indies } }
+		POR = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_east_indies } }
+		DEN = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_east_indies } }
+		OMA = { add_opinion_modifier = { target = HOL modifier = HOL_colonial_rivalry_in_east_indies } }
+	}
+}
+
+focus = {
+	id = HOL_protect_cape_colony
+	icon = GFX_goal_generic_construct_military
+	prerequisite = { focus = HOL_focus_on_east_indies }
+	x = 5
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		681 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 3
+				province = 12589
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 1
+				province = 10415
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 4
+				province = 12589
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = {
+	id = HOL_build_up_ceylon
+	icon = GFX_goal_generic_construct_military
+	prerequisite = { focus = HOL_focus_on_east_indies }
+	x = 1
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		422 = {
+			add_building_construction = {
+				type = coastal_bunker
+				level = 4
+				province = 10201
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = naval_base
+				level = 2
+				province = 10201
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 10229
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 12258
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 4219
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 7260
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = coastal_bunker
+				level = 2
+				province = 7344
+				instant_build = yes
+			}
+
+		}
+	}
+}
+
+focus = {
+	id = HOL_seize_portuguese_possessions 
+	icon = GFX_goal_generic_territory_or_war
+	prerequisite = { focus = HOL_protect_cape_colony }
+	x = 5
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		custom_effect_tooltip = always_false
+	}
+}
+
+focus = {
+	id = HOL_secure_ceylon
+	icon = GFX_goal_generic_major_war
+	prerequisite = { focus = HOL_build_up_ceylon }
+	x = 1
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = SRL
+		}
+	}
+}
+
+focus = {
+	id = HOL_indian_expansion
+	icon = GFX_goal_generic_occupy_states_ongoing_war
+	prerequisite = { focus = HOL_secure_ceylon }
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = HOL_secure_ceylon
+
+	available = {
+		422 = { is_owned_and_controlled_by = HOL }
+		958 = { is_owned_and_controlled_by = HOL }
+	}
+
+	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = MYS
+		}
+		create_wargoal = {
+			    type = annex_everything
+			    target = MDR
+		}
+		create_wargoal = {
+		    type = annex_everything
+		    target = MAR
+		}
+	}
+}
+
+focus = {
+	id = HOL_invade_the_mughal_empire
+	icon = GFX_focus_RAJ_two_nation_theory
+	prerequisite = { focus = HOL_indian_expansion }
+	x = 0
+	y = 1
+	cost = 10
+	relative_position_id = HOL_indian_expansion
+
+	available = {
+	}
+
+	completion_reward = {
+		create_wargoal = {
+		    type = annex_everything
+		    target = RAJ
+		}
+	}
+}
+
+focus = {
+	id = HOL_fund_the_company
+	icon = GFX_money
+	prerequisite = { focus = HOL_focus_on_east_indies }
+	x = 3
+	y = 3
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		INS = {
+			add_ideas = HOL_voc_funding
+		}
+		335 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		673 = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		INS = {
+			add_autonomy_ratio = {
+				value = -0.065
+			}
+		}
+
+	}
+}
+
+focus = {
+	id = HOL_expand_spice_trade
+	icon = GFX_spices
+	prerequisite = { focus = HOL_fund_the_company }
+	x = 3
+	y = 4
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		custom_effect_tooltip = hol_indonesia_tt
+	}
+}
+
+focus = {
+	id = HOL_privatize_voc
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = HOL_secure_ceylon focus = HOL_expand_spice_trade focus = HOL_seize_portuguese_possessions }
+	x = 2
+	y = 5
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+	mutually_exclusive = { focus = HOL_nationalize_voc }
+
+	completion_reward = {
+		swap_ideas = {
+		    remove_idea = HOL_voc_funding
+		    add_idea = HOL_voc_funding2 
+		}
+		custom_effect_tooltip = hol_private_voc_tt
+	}
+}
+
+focus = {
+	id = HOL_nationalize_voc
+	icon = GFX_goal_generic_demand_territory
+	prerequisite = { focus = HOL_secure_ceylon focus = HOL_expand_spice_trade focus = HOL_seize_portuguese_possessions }
+	x = 4
+	y = 5
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+	mutually_exclusive = { focus = HOL_privatize_voc }
+
+	completion_reward = {
+		custom_effect_tooltip = hol_nationalize_voc_tt
+		INS = {
+			add_ideas = {
+				HOL_voc_integration
+			}
+		}
+		HOL_increase_inflation = yes
+	}
+}
+
+focus = {
+	id = HOL_dominate_spice_trade
+	icon = GFX_spices
+	prerequisite = { focus = HOL_nationalize_voc focus = HOL_privatize_voc }
+	x = 3
+	y = 6
+	cost = 10
+	relative_position_id = HOL_colonial_expansion
+
+	completion_reward = {
+		swap_ideas = {
+		    remove_idea = HOL_spice_trade_profits
+		    add_idea = HOL_spice_trade_profits2 
+		}
+	}
+}
+
+#focus = {
+#	id = HOL_sinaasappel
+#	icon = GFX_sinaasappel
+#	prerequisite = { focus = HOL_dominate_spice_trade }
+#	x = 3
+#	y = 6
+#	cost = 10
+#	relative_position_id = HOL_colonial_expansion
+#	mutually_exclusive = { focus = HOL_privatize_voc }
+#
+#	completion_reward = {
+#	}
+#}
+
+focus = {
+	id = hol_navy
+	icon = GFX_goal_generic_construct_naval_dockyard
+	x = -6
+	y = 1
+	cost = 10
+	prerequisite = { focus = hol_economy }
+	relative_position_id = hol_economy
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_controlled_by = ROOT
+		}
+	}
+
+	complete_tooltip = {
+		navy_experience = 25
+		add_extra_state_shared_building_slots = 3
+		add_building_construction = {
+			type = dockyard
+			level = 3
+			instant_build = yes
+		}
+	}
+	
+	completion_reward = {
+		HOL_increase_inflation = yes 
+		navy_experience = 25
+		if = {
+			limit = {
+				NOT = {
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				any_owned_state = {
+					is_coastal = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_country_flag = naval_effort_built
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = naval_effort_built }
+				any_owned_state = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			set_country_flag = naval_effort_built
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = naval_effort_built }
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+		}			
+	}
+}
+	focus = {
+		id = hol_follow_the_tromp_doctrine
+		icon = GFX_focus_tromp_doctrine
+		prerequisite = { focus = hol_navy }
+		mutually_exclusive = { focus = hol_follow_the_de_ruyter_doctrine }
+		x = -2
+		y = 1
+		relative_position_id = hol_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = hol_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = hol_follow_the_tromp_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = hol_follow_the_tromp_doctrine
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = HOL_legacy_of_the_sea_beggars
+		}
+	}
+
+	focus = {
+		id = hol_follow_the_de_ruyter_doctrine
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = hol_navy }
+		mutually_exclusive = { focus = hol_follow_the_tromp_doctrine }
+		x = 2
+		y = 1
+		relative_position_id = hol_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = hol_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = hol_follow_the_de_ruyter_doctrine }
+		x = 0
+		y = 1
+		relative_position_id = hol_follow_the_de_ruyter_doctrine
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = HOL_grand_naval_strategy
+		}
+	}
+
+	focus = {
+		id = hol_submarine_effort
+		icon = GFX_pirates
+		prerequisite = { focus = hol_flexible_navy }
+		x = -1
+		y = 1
+		relative_position_id = hol_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = hol_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = hol_follow_the_tromp_doctrine focus = hol_follow_the_de_ruyter_doctrine }
+		x = 2
+		y = 1
+		relative_position_id = hol_follow_the_tromp_doctrine
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			HOL_increase_inflation = yes 
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = dockyard
+						level = 2
+						instant_build = yes
+					}
+				}
+			}	
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = hol_destroyer_effort
+		icon = GFX_Imperial_Warship_Generic1
+		prerequisite = { focus = hol_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = hol_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = dd_tech
+			}
+		}
+	}
+
+	
+	focus = {
+		id = hol_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = hol_large_navy }
+		x = 1
+		y = 1
+		relative_position_id = hol_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = hol_battlecruiser_effort
+		icon = GFX_Imperial_Warship_Generic
+		prerequisite = { focus = hol_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = hol_large_navy
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+}

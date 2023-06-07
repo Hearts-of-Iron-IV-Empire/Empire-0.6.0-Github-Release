@@ -1,0 +1,349 @@
+characters = {
+    ############# Country Leaders #############
+    AUS_Leopold_I = { # 1658 - 1705
+        name = "Leopold I"
+        portraits = {
+            civilian = {
+                large = "GFX_Leopold_I"
+            }
+            army = {
+                large = "GFX_Leopold_I"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {}
+        }
+        field_marshal = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Charles_VI = { # 1711 - 1740
+        name = "Charles VI"
+        portraits = {
+            civilian = {
+                large = "GFX_Charles_Habsburg"
+            }
+        }
+        country_leader = {
+            expire = 1739.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    AUS_Maria_Theresa = { # 1743 - 1780
+        name = "Maria Theresa"
+        portraits = {
+            civilian = {
+                large = "GFX_Maria_Theresa"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    AUS_Joseph_II = { # 1765 - 1790 (Co-ruled with Maria Theresa)
+        name = "Joseph II"
+        portraits = {
+            civilian = {
+                large = "GFX_Joseph_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    AUS_Kaiser_Franz_I = { # 1792 - 1835
+        name = "Kaiser Franz I"
+        portraits = {
+            civilian = {
+                large = "GFX_Kaiser_Franz_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    ############# Field Marshals and Generals #############
+    AUS_Eugene_of_Savoy = {
+        name = "Eugene of Savoy"
+        portraits = {
+            army = {
+                large = "GFX_Eugene_Of_Savoy"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    AUS_Karl_von_Habsburg = {
+        name = "Karl von Habsburg"
+        portraits = {
+            army = {
+                large = "GFX_Charles_Habsburg"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    AUS_Joseph_von_Habsburg = {
+        name = "Joseph von Habsburg"
+        portraits = {
+            army = {
+                large = "GFX_Joseph_I"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    AUS_Francis_Rákóczi = {
+        name = "Francis Rákóczi"
+        portraits = {
+            army = {
+                large = "GFX_HUN_leader"
+            }
+        }
+        field_marshal = {
+            traits = {}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Charles_Alexander = {
+        name = "Charles Alexander of Württemberg"
+        portraits = {
+            army = {
+                large = "GFX_Karl_Alexander"
+            }
+        }
+        corps_commander = {
+            traits = { trickster }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Charles_of_Commercy = {
+        name = "Charles of Commercy"
+        portraits = {
+            army = {
+                large = "GFX_Charles_de_Lorraine_Prince_de_Commercy"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    AUS_Jánós_Palffy = {
+        name = "Jánós Palffy"
+        portraits = {
+            army = {
+                large = "GFX_Janos_Palffy"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Wirich_Philipp_von_Daun = {
+        name = "Wirich Philipp von Daun"
+        portraits = {
+            army = {
+                large = "GFX_Wirich_Von_Daun"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    AUS_Georg_Louis_von_Hessen_Darmstadt = {
+        name = "Georg Louis von Hessen-Darmstadt"
+        portraits = {
+            army = {
+                large = "GFX_Georg_Von_Hesse_darmstadt"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    AUS_Charles_Thomas_von_Vaudémont = {
+        name = "Charles Thomas von Vaudémont"
+        portraits = {
+            army = {
+                large = "GFX_Charles_Thomas_von_Vaudémontt"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    AUS_Claudius_Florimund_de_Mercy = {
+        name = "Claudius Florimund de Mercy"
+        portraits = {
+            army = {
+                large = "GFX_Claudius_Florimund_de_Mercy"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Jean_Philippe_Eugène_de_Mérode = {
+        name = "Jean Philippe Eugène de Mérode"
+        portraits = {
+            army = {
+                large = "GFX_Jean_Philippe_Eugène_de_Mérode"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 5
+            attack_skill = 3
+            defense_skill = 5
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+    AUS_Philip_of_Hesse_Darmstadt = {
+        name = "Philip of Hesse-Darmstadt"
+        portraits = {
+            army = {
+                large = "GFX_Philip_Of_Hesse_Darmstadt"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+    AUS_Johann_Matthias_von_der_Schulenburg = {
+        name = "Johann Matthias von der Schulenburg"
+        portraits = {
+            army = {
+                large = "GFX_Joahan_Mathias_Von_Schulenberg"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    AUS_Friedrich_Heinrich_von_Seckendorff = {
+        name = "Friedrich Heinrich von Seckendorff"
+        portraits = {
+            army = {
+                large = "GFX_Friedrich_Heinrich_von_Seckendorff"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_Guido_Starhemberg = {
+        name = "Guido Starhemberg"
+        portraits = {
+            army = {
+                large = "GFX_Guido_von_Starhemberg"
+            }
+        }
+        corps_commander = {
+            traits = { trait_mountaineer }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    AUS_George_Olivier = {
+        name = "George Olivier"
+        portraits = {
+            army = {
+                large = "GFX_George_Olivier"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+}

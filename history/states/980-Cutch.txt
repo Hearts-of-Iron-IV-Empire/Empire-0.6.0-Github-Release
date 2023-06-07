@@ -1,0 +1,28 @@
+state={
+	id=980
+	name="STATE_980"
+	provinces={
+		1061 1147 1980 3456 4003 4110 10108 13326 13327 13328
+	}
+	history={
+		owner = RAJ
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			3456 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			3456 10
+		}
+		1731.1.1 = {
+			owner = SIN
+			remove_core_of = RAJ
+		}
+	}
+	manpower=89748
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,26 @@
+state={
+	id=845
+	name="STATE_845"
+
+	history={
+		owner = QUE
+		add_core_of = LOU
+		add_core_of = QUE
+		1765.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+
+	provinces={
+		805 1528 4577 5001 6968 10778 12401 12486 
+	}
+	manpower=23
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

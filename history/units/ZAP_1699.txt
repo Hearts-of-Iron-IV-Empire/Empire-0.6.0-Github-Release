@@ -1,0 +1,93 @@
+﻿division_template = {
+	name = "Zaporizhian Cossack Regiment"
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+        cavalry = { x = 0 y = 1 }
+        cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+units = {
+	division = {
+		name = "Poltava Regiment"
+		location = 11504
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Pereyaslavl Regiment"
+		location = 9543
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Myrhorod Regiment"
+		location = 6605
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Prilusky Regiment"
+		location = 6458
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Lubensky Regiment"
+		location = 3584
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Nizhyn Regiment"
+		location = 3480
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Chernihiv Regiment"
+		location = 546
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Kyiv Regiment"
+		location = 525
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Hadiach Regiment"
+		location = 463
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+	division = {
+		name = "Starodub Regiment"
+		location = 238
+		division_template = "Zaporizhian Cossack Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1.0
+		start_manpower_factor = 1.0
+	}
+}

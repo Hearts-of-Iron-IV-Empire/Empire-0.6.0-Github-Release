@@ -1,0 +1,18 @@
+state={
+	id=929
+	name="STATE_929"
+
+	history={
+		owner = UNC
+
+	}
+
+	impassable = yes
+	
+	provinces={
+		2009 4995 7912 8019 8062 10734 10775 12757 12812 
+	} 
+	manpower=1358456
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

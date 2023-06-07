@@ -1,0 +1,27 @@
+state={
+	id=1027
+	name="STATE_1027"
+	provinces={
+		7013 13258
+	}
+
+	history={
+		owner = POR
+		victory_points = {
+			13258 2 
+		}
+		victory_points = {
+			7013 1
+		}
+		buildings = {
+			infrastructure = 2
+			13258 = {
+				naval_base = 5
+			}
+		}
+	}
+
+	manpower=9400
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

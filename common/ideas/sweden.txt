@@ -1,0 +1,534 @@
+ideas = {
+	hidden_ideas = {
+	    SWE_is_op = {
+	      	#targeted_modifier = {
+			#	tag = SOV
+			#	attack_bonus_against = 1
+			#	defense_bonus_against = 1
+			#}
+	       	targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 2
+				defense_bonus_against = 2
+			}
+	  	}
+	}
+	
+	country = {
+		SWE_perceived_encirclement = { # Start idea
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.3
+				mobilization_laws_cost_factor = -0.2
+				dig_in_speed_factor = 0.15
+				army_core_defence_factor = 0.10
+			}
+		}
+		SWE_export_economy = {
+
+			picture = CAN_wartime_prices_and_trade_board
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.2
+				production_speed_buildings_factor = 0.1 
+			}
+		}
+		SWE_occupation_of_denmark = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.15
+				resistance_target = -0.15
+				compliance_gain = 0.10
+			}
+		}
+		SWE_dealing_with_occupation = {
+
+			picture = SAF_history_of_segregation
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				resistance_target = -0.15
+				compliance_gain = 0.10
+			}
+		}
+		SWE_preparing_closer_union = {
+
+			picture = HUN_treaty_of_triannon
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				subjects_autonomy_gain = -2
+			}
+		}
+		SOUND_TOLL = {
+
+			picture = taxes
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.08
+			}
+		}
+		SOUND_TOLL_2 = {
+
+			picture = taxes
+			name = SOUND_TOLL
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.12
+			}
+		}
+		SWE_allotmentsystem = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				training_time_factor = -0.25
+				conscription = 0.005
+			}
+		}
+		SWE_compulsory_service = {
+
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		SWE_carolean_army = {
+			
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_attack_factor = 0.1
+			}
+		}
+		SWE_gustavian_army = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.10
+			}
+		}
+		SWE_legacy_of_gustavus_adolphus = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_org_factor = 0.10
+				army_core_defence_factor = 0.15
+			}
+		}
+		SWE_focus_on_commonwealth = {
+			allowed = {
+				always = no
+			}
+
+			picture = CHI_wargaming_division
+
+			targeted_modifier = {
+				tag = POL
+				attack_bonus_against = 0.5
+				defense_bonus_against = 0.5
+			}
+		}
+		SWE_focus_on_Russia = {
+
+			allowed = {
+				always = no
+			}
+
+			targeted_modifier = {
+				tag = SOV
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+		SWE_march_on_moscow = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_speed_factor = 0.05
+				attrition = -0.02
+			}
+		}	
+		SWE_influencing_sejm = {
+
+			picture = TUR_etatism_bonus
+
+			allowed = {
+			 always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = -0.001
+				war_support_weekly = -0.001
+			}
+		}
+		SWE_baltic_domination = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_dockyard = 0.3
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		SWE_liquidated_royal_art_collection = {
+
+			picture = SPR_seize_the_gold_reserves
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism } }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.2 
+			}
+		}
+		SWE_confiscated_church_properties = {
+
+			picture = SPR_appropriate_church_riches
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism } }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.3
+			}
+		}
+		SWE_burgher_militias = {
+
+			picture = HUN_secret_rearmament
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism } }
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.005
+				democratic_drift = 0.01
+				army_org_factor = 0.15
+			}
+		}
+		SWE_mass_conscription_idea = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism }}
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.1
+				mobilization_speed = 0.20
+			}
+		}
+		SWE_revolutionary_constitution = {
+
+			picture = generic_victors_of_ww1
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism } }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.005
+				war_support_weekly = 0.005
+				political_power_factor = 0.3
+				communism_drift = 0.05
+			}
+		}
+		SWE_revolutionary_sentiment_export = {
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				always = no
+			}
+
+			cancel = {
+				NOT = { SWE = { has_government = communism } }
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = -0.005
+				communism_drift = 0.20
+			}
+		}
+		SWE_revolutionary_sentiment = {
+
+			picture = SPR_anarchist_society
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1#
+
+			modifier = {
+				stability_weekly = -0.005
+				communism_drift = 0.20
+			}
+		}
+		SWE_national_recovery= {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				stability_weekly = 0.002
+				war_support_weekly = -0.01
+				industry_repair_factor = 0.2
+				weekly_manpower = 500 
+			}
+		}
+		SWE_innovativeness= {
+
+			picture = JAP_supremacy_of_technology
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				research_speed_factor = 0.07
+			}
+		}
+		SWE_armed_neutrality = {
+
+			picture = AST_volunteer_defence_corps
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		SWE_third_party_mediator = {
+
+			picture = generic_neutrality_drift_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			#picture= 
+			
+			modifier = {
+				political_power_gain = 0.2
+				drift_defence_factor = 0.3
+			}
+		}
+		SWE_on_the_defensive = {
+
+			allowed = {
+			 always = no
+			}
+
+			picture = YUG_federal_defense_council
+
+			removal_cost = -1
+
+			modifier = {
+				defence = 0.1
+			}
+		}
+		SWE_partisan_resistance = {
+
+			allowed = {
+			 always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_damage_to_garrison_on_our_occupied_states = 0.15
+			}
+		}
+		SWE_last_stand = {
+
+			allowed = {
+				always = no
+			}
+
+			picture = generic_manpower_bonus
+
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.25
+			}
+		}
+		SWE_large_dowry_receiver = {
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.20
+			}
+		}
+		SWE_large_dowry = {
+			allowed = {
+				always = no
+			}
+
+			picture = SPR_seize_the_gold_reserves
+
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+		}
+
+		SWE_royal_marriage = {
+			allowed = {
+				always = no
+			}
+
+			picture = air_support_focus
+
+			removal_cost = -1
+			modifier = {
+				political_power_gain = 0.15
+			}
+		}
+	}
+}

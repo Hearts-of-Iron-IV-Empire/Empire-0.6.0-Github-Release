@@ -1,0 +1,22 @@
+state={
+	id=778
+	name="STATE_778"
+
+	history={
+		owner = VOL
+		add_extra_state_shared_building_slots = 10
+		victory_points = { 10836 10 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		2001 7950 8071 10836 12851 
+	}
+	manpower=3186184
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

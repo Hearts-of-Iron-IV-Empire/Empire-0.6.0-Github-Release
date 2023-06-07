@@ -1,0 +1,803 @@
+ideas = {
+	country = {
+		POL_conscription = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		POL_military_elan = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				war_support_factor = 0.2
+				army_morale_factor = 0.2
+				army_org_regain = 0.1
+				breakthrough_factor = 0.1
+			}
+		}
+		POL_french_support = {
+			allowed = {
+				always = no
+			}
+			cancel = { 
+				FRA = {
+					has_opinion = {
+					    target = POL
+					    value < 0
+					}
+				}
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.03
+			}
+		}
+		POL_hungarian_migration = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = SOV_scientist_defect
+
+			modifier = {
+				weekly_manpower = 800 
+			}
+
+		}
+		POL_foreign_military_advisors = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_war_preparation
+
+			modifier = {
+				experience_gain_army = 0.05
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+			research_bonus = {
+				land_doctrine = 0.10
+			}
+		}
+		POL_recent_transaction = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = the_great_depression
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		POL_deployed_saxons = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_manpower_bonus
+
+			modifier = {
+				conscription = 0.02
+				root_out_resistance_effectiveness_factor = 0.1
+			}
+		}
+		POL_rallying_behind_the_king = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = POL_rallying_behind_the_king
+
+			removal_cost = -1
+			picture = ast_abandon_the_westminster_system
+
+			cancel = { surrender_progress > 0.05 }
+
+			modifier = {
+				stability_weekly = 0.005
+				neutrality_drift = 0.05
+			}
+		}
+		
+		POL_influence_over_poland_6 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.30
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.6 
+			}
+		}
+		POL_influence_over_poland_5 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.25
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.5 
+			}
+		}
+		POL_influence_over_poland_4 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.20
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.4 
+			}
+		}
+		POL_influence_over_poland_3 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.15
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.3 
+			}
+		}
+		POL_influence_over_poland_2 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.10
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.2 
+			}
+		}
+		POL_influence_over_poland_1 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_influence_over_poland
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+			targeted_modifier = { 
+				tag = POL 
+				attack_bonus_against = 0.1 
+			}
+		}
+		POL_foreign_meddling_10 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.30
+				stability_factor = -0.30
+			}
+		}
+		POL_foreign_meddling_9 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.27
+				stability_factor = -0.27
+			}
+		}
+		POL_foreign_meddling_8 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.24
+				stability_factor = -0.24
+			}
+		}
+		POL_foreign_meddling_7 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.21
+				stability_factor = -0.21
+			}
+		}
+		POL_foreign_meddling_6 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.18
+				stability_factor = -0.18
+			}
+		}
+		POL_foreign_meddling_5 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.15
+			}
+		}
+		POL_foreign_meddling_4 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.12
+				stability_factor = -0.12
+			}
+		}
+		POL_foreign_meddling_3 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.09
+				stability_factor = -0.09
+			}
+		}
+		POL_foreign_meddling_2 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.06
+				stability_factor = -0.06
+			}
+		}
+		POL_foreign_meddling_1 = {
+			allowed = {
+				always = no
+			}
+
+			name = POL_foreign_meddling
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = -0.03
+				stability_factor = -0.03
+			}
+		}
+		POL_liberum_veto = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_disjointed_gov
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+			
+			modifier = {
+				stability_factor = -0.20
+				political_advisor_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				mobilization_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+			}
+		}
+		POL_no_more_unanimity = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_disjointed_gov
+			
+			modifier = {
+				stability_factor = -0.05
+				political_advisor_cost_factor = 0.25
+				trade_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = 0.25
+				economy_cost_factor = 0.25
+			}
+		}
+		POL_dominance_of_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+			}
+		}
+		POL_weakened_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = ROM_king_carol_ii_hedonist
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			modifier = {
+				production_speed_buildings_factor = -0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+			}
+		}
+		POL_cooperative_nobles = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+
+			modifier = {
+				production_speed_buildings_factor = 0.1
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		POL_conscription_crisis = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army_problems_polish
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			modifier = {
+				minimum_training_level = -0.1
+				mobilization_speed = -0.1	
+				army_org_factor = -0.20
+			}
+		}
+		POL_sejm = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_pp_unity_bonus
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+			modifier = {
+				political_power_factor = -0.25
+				stability_factor = 0.15
+			}
+		}
+		POL_weakened_sejm = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_factor = -0.10
+				stability_factor = 0.15
+			}
+		}
+		POL_centralization = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				neutrality_drift = 0.06
+				stability_factor = -0.05	
+			}
+		}
+		POL_burgher_counterweight_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			cancel = { neutrality < 0.1 }
+
+			picture = generic_democratic_drift_bonus
+
+			modifier = {
+				stability_factor = 0.05	
+			}
+		}
+		POL_anti_ottoman_pact_member = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = { neutrality < 0.1 }
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = raj_marginalized_muslim_community_angry
+
+			modifier = {
+				war_support_factor = 0.05	
+			}
+		}
+		POL_aligned_magnates = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_volunteer_expedition_bonus
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.5
+			}
+		} 
+		POL_compensated_nobles = {
+			allowed = {
+				always = no
+			}
+
+			picture = ROM_king_carol_ii_hedonist
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		POL_emergency_war_act = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_central_management
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			modifier = {
+				conversion_cost_civ_to_mil_factor = -0.2
+				industrial_capacity_factory = 0.10
+			}
+		}		
+		POL_rural_society = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_agrarian_society
+
+			modifier = {
+				conscription_factor = -0.5
+				line_change_production_efficiency_factor = 0.15
+				local_building_slots_factor = -0.2
+				democratic_drift = -0.01
+				aristocracy_drift = 0.01
+			}
+		}
+		POL_rural_society2 = {
+			allowed = {
+				always = no
+			}
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_agrarian_society
+
+			modifier = {
+				conscription_factor = -0.1
+				line_change_production_efficiency_factor = 0.20
+			}
+		}
+		POL_carolean_infantry = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			picture = generic_infanty_bonus
+
+			modifier = {
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+			}
+		}
+	}
+	navy_chief = {
+		jan_baert = { 
+
+			picture = trader
+
+			available = { NOT = { has_country_flag = conti_supporter_purge } }
+
+			visible = { original_tag = POL }
+			
+			traits = { navy_chief_commerce_raiding_3 }
+		}
+	}
+	chief_diplomatic_advisor = {
+		melchior_de_polignac = { 
+
+			picture = clergyman_1
+
+			available = { NOT = { has_country_flag = conti_supporter_purge } }
+
+			visible = { original_tag = POL }
+			
+			traits = { backroom_backstabber }
+		}
+	}
+	political_advisor = {
+		cardinal_radziejowski = { 
+
+			picture = clergyman_4
+
+			visible = { original_tag = POL }
+
+			available = { 
+				NOT = { 
+					has_country_flag = conti_supporter_purge 
+				}
+				NOT = { 
+					has_completed_focus = POL_expell_radziejowksi
+				}
+			}
+			
+			traits = { cardinal_in_administration }
+		}
+	}
+
+}

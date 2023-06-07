@@ -1,0 +1,25 @@
+
+state={
+	id=375
+	name="STATE_375"
+
+	history={
+		owner = UNC
+		1730.1.1 = {
+			owner = QUE
+			add_core_of = QUE
+		}
+		1765.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+		}
+	}
+
+	provinces={
+		2082 3960 5085 9829 9920 10861 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

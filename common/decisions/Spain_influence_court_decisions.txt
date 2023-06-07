@@ -1,0 +1,536 @@
+# Austrian Decisions
+
+dynastic_influence_in_the_spanish_court_eng = {
+	
+	AUS_lobby_in_spanish_court = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = AUS
+		}
+
+		available = {
+			has_government = neutrality
+			FRA = { has_government = neutrality }
+		}
+
+		targets = { SPR }
+
+		target_trigger = {
+			FROM = {
+				tag = SPR
+			}
+		}
+
+		days_remove = 20
+
+		cost = 10
+
+		fire_only_once = no 
+
+		ai_will_do = {
+			factor = 0.01
+			modifier = {
+				factor = 10
+				date > 1699.02.01
+			}
+			modifier = {
+				factor = 10
+				date > 1700.08.01
+			}
+			modifier = {
+				factor = 2
+				SPR = {
+					check_variable = { var = AUS.eng_gateway_to_europe_influence value = 20 compare = greater_than_or_equals }
+					check_variable = { var = eng_temp_trade_influence value = 10 compare = greater_than_or_equals }
+				} 
+			}
+			modifier = {
+				factor = 0
+				SPR = {
+					check_variable = { var = eng_temp_trade_influence value = 10 compare = greater_than_or_equals }
+					NOT = { check_variable = { var = AUS.eng_gateway_to_europe_influence value = 20 compare = greater_than_or_equals } }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				is_historical_focus_on = yes
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			add_to_variable = { var = eng_gateway_to_europe_influence value = 5 }
+			SPR = {
+				set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+				subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+				set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+				add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						date < 1700.11.01
+					}
+					random_list = {
+						10 = {
+							modifier = {
+								factor = 2
+								is_historical_focus_on = yes
+							}
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 50 }
+						}
+						10 = {
+							modifier = {
+								factor = 2
+								is_historical_focus_on = yes
+							}
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 55 }
+						}
+						10 = {
+							modifier = {
+								factor = 1.5
+								is_historical_focus_on = yes
+							}
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 60 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 65 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 70 }
+						}
+						10 = {
+							modifier = {
+								factor = 0.8
+								is_historical_focus_on = yes
+							}
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 75 }
+						}
+						10 = {
+							modifier = {
+								factor = 0.5
+								is_historical_focus_on = yes
+							}
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 80 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = eng_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								AND = {
+									NOT = { has_country_flag = HOL_gateway_to_europe_britain_lead_flag }
+									NOT = { has_country_flag = HOL_gateway_to_europe_germany_lead_flag }
+								}
+								has_country_flag = HOL_gateway_to_europe_germany_lead_flag
+							}
+						}
+					}
+					SPR = {
+						clr_country_flag = HOL_gateway_to_europe_germany_lead_flag
+						set_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					}
+					SPR = { country_event = { id = spain.9 } }
+					FRA = { country_event = { id = spain.9 } }
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = ger_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								AND = {
+									NOT = { has_country_flag = HOL_gateway_to_europe_britain_lead_flag }
+									NOT = { has_country_flag = HOL_gateway_to_europe_germany_lead_flag }
+								}
+								has_country_flag = HOL_gateway_to_europe_britain_lead_flag
+							}
+						}
+					}
+					SPR = {
+						clr_country_flag = HOL_gateway_to_europe_britain_lead_flag
+						set_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					}
+					SPR = { country_event = { id = spain.10 } }
+					AUS = { country_event = { id = spain.10 } }
+				}
+			}
+			custom_effect_tooltip = SPR_influence_court_decisions_tt
+			effect_tooltip = { add_political_power = SPR.gateway_to_europe_influence_pp_total }
+		}
+	}
+}
+
+# France decisions
+
+dynastic_influence_in_the_spanish_court_ger = {
+
+	FRA_lobby_in_spanish_court = {
+
+		icon = eng_trade_unions_demand
+
+		allowed = {
+			tag = FRA
+		}
+
+		available = {
+			has_government = neutrality
+			AUS = { has_government = neutrality }
+			has_completed_focus = FRA_pressure_on_spain
+		}
+
+		targets = { SPR }
+
+		target_trigger = {
+			FROM = {
+				tag = SPR
+			}
+		}
+
+		days_remove = 20
+
+		cost = 10
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+			}
+			modifier = {
+				factor = 10
+				date > 1699.02.01
+			}
+			modifier = {
+				factor = 20
+				date > 1700.04.01
+			}
+			modifier = {
+				factor = 2
+				SPR = {
+					check_variable = { var = FRA.ger_gateway_to_europe_influence value = 20 compare = greater_than_or_equals }
+					check_variable = { var = ger_temp_trade_influence value = 10 compare = greater_than_or_equals }
+				}
+			}
+			modifier = {
+				factor = 0.1
+				SPR = {
+					check_variable = { var = ger_temp_trade_influence value = 10 compare = greater_than_or_equals }
+					NOT = { check_variable = { var = FRA.ger_gateway_to_europe_influence value = 20 compare = greater_than_or_equals } }
+				}
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			add_to_variable = { var = ger_gateway_to_europe_influence value = 5 }
+			SPR = {
+				set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+				subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+				set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+				subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+				add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						date < 1700.11.01
+					}
+					random_list = {
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 50 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 55 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 60 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 65 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 70 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 75 }
+						}
+						10 = {
+							set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 80 }
+						}
+					}
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = eng_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_britain_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_germany_lead_flag
+							}
+						}
+					}
+					SPR = {
+						clr_country_flag = HOL_gateway_to_europe_germany_lead_flag
+						set_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					}
+					SPR = { country_event = { id = spain.9} }
+					FRA = { country_event = { id = spain.9 } }
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = ger_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_germany_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_britain_lead_flag
+							}
+						}
+					}
+					SPR = {
+						clr_country_flag = HOL_gateway_to_europe_britain_lead_flag
+						set_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					}
+					SPR = { country_event = { id = spain.10 } }
+					AUS = { country_event = { id = spain.10 } }
+				}
+			}
+			custom_effect_tooltip = SPR_influence_court_decisions_tt
+			effect_tooltip = { add_political_power = SPR.gateway_to_europe_influence_pp_total }
+		}
+	}
+}
+
+# Spain Decisions
+
+dynastic_influence_in_the_spanish_court_hol = {
+
+	SPR_placate_the_austrians = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			SPR = { has_country_flag = SPR_went_with_Maria }
+			SPR = { has_completed_focus = SPR_guide_the_king }
+			AUS = {
+				exists = yes
+				has_government = neutrality
+			}
+		}
+
+		targets = { AUS }
+
+		target_trigger = {
+			FROM = {
+				tag = AUS
+			}
+		}
+
+		days_remove = 10
+
+		cost = 10
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_idea = maria_anna
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			AUS = { add_to_variable = { var = eng_gateway_to_europe_influence value = 5 } }
+			set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+			subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+			set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+			subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+			add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+			hidden_effect = {
+				random_list = {
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 20 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 25 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 30 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 35 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 40 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 45 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 50 }
+					}
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = eng_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_britain_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_germany_lead_flag
+							}
+						}
+					}
+					clr_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					set_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					country_event = { id = spain.9 }
+					FRA = { country_event = { id = spain.9 } }
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = ger_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_germany_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_britain_lead_flag
+							}
+						}
+					}
+					clr_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					set_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					country_event = { id = spain.10 }
+					AUS = { country_event = { id = spain.10 } }
+				}
+			}
+		}
+	}
+
+	SPR_placate_the_french = {
+
+		icon = eng_trade_unions_support
+
+		allowed = {
+			tag = SPR
+		}
+
+		available = {
+			SPR = { has_country_flag = SPR_went_with_Cardinal }
+			SPR = { has_completed_focus = SPR_guide_the_king }
+			FRA = {
+				exists = yes
+				has_government = neutrality
+			}
+		}
+
+		targets = { FRA }
+
+		target_trigger = {
+			FROM = {
+				tag = FRA
+			}
+		}
+
+		days_remove = 10
+
+		cost = 10
+
+		fire_only_once = no
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 10
+				has_idea = cardinal_portocarrero
+			}
+			modifier = {
+				factor = 10
+				is_historical_focus_on = yes
+				date > 1700.01.01
+			}
+		}
+
+		complete_effect = {
+		}
+
+		remove_effect = {
+			FRA = { add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } }
+			set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+			subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+			set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+			subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+			add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+			hidden_effect = {
+				random_list = {
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 20 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 25 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 30 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 35 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 40 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 45 }
+					}
+					10 = {
+						set_country_flag = { flag = HOL_gateway_to_europe_ai_timer_flag value = 1 days = 50 }
+					}
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = eng_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_britain_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_germany_lead_flag
+							}
+						}
+					}
+					clr_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					set_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					country_event = { id = spain.9 }
+					FRA = { country_event = { id = spain.9 } }
+				}
+				if = {
+					limit = {
+						SPR = {
+							check_variable = { var = ger_temp_trade_influence value = 0 compare = greater_than }
+							OR = {
+								NOT = { has_country_flag = HOL_gateway_to_europe_germany_lead_flag }
+								has_country_flag = HOL_gateway_to_europe_britain_lead_flag
+							}
+						}
+					}
+					clr_country_flag = HOL_gateway_to_europe_britain_lead_flag
+					set_country_flag = HOL_gateway_to_europe_germany_lead_flag
+					country_event = { id = spain.10 }
+					AUS = { country_event = { id = spain.10 } }
+				}
+			}
+		}
+	}
+}

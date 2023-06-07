@@ -1,0 +1,16 @@
+
+state={
+	id=999
+	name="STATE_999"
+
+	history={
+		owner = CHK
+	}
+
+	provinces={
+		1587 1987 7615 10192 10586 10615 10753 10824 11717 12501 12670 
+	}
+	manpower=3501
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

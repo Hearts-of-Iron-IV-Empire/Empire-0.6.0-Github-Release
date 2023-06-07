@@ -1,0 +1,483 @@
+set_1DS = {
+	set_variable = {
+		var = diplomacy_skill_effect
+		value = 0.01
+	}
+	set_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 1
+	}
+}
+set_5DS = {
+	set_variable = {
+		var = diplomacy_skill_effect
+		value = 0.05
+	}
+	set_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 5
+	}
+}
+set_10DS = {
+	set_variable = {
+		var = diplomacy_skill_effect
+		value = 0.1
+	}
+	set_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 10
+	}
+}
+
+set_1WS = {
+	set_variable = {
+		var = militate_skill_effect
+		value = 0.01
+	}
+	set_variable = {
+		var = militate_skill_effect_negative
+		value = -0.01
+	}    
+	set_variable = {
+		var = militate_skill_display_on_stats
+		value = 1
+	}  
+}
+set_5WS = {
+	set_variable = {
+		var = militate_skill_effect
+		value = 0.05
+	}
+	set_variable = {
+		var = militate_skill_effect_negative
+		value = -0.05
+	}    
+	set_variable = {
+		var = militate_skill_display_on_stats
+		value = 5
+	}  
+}
+set_10WS = {
+	set_variable = {
+		var = militate_skill_effect
+		value = 0.1
+	}
+	set_variable = {
+		var = militate_skill_effect_negative
+		value = -0.1
+	}    
+	set_variable = {
+		var = militate_skill_display_on_stats
+		value = 10
+	}  
+}
+
+set_1MS = {
+	set_variable = {
+		var = management_skill_effect
+		value = 0.01
+	}
+	set_variable = {
+		var = management_skill_display_on_stats
+		value = 1
+	}
+}
+set_5MS = {
+	set_variable = {
+		var = management_skill_effect
+		value = 0.05
+	}
+	set_variable = {
+		var = management_skill_display_on_stats
+		value = 5
+	}
+}
+set_10MS = {
+	set_variable = {
+		var = management_skill_effect
+		value = 0.1
+	}
+	set_variable = {
+		var = management_skill_display_on_stats
+		value = 10
+	}
+}
+
+
+increase_1DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = 0.01
+		tooltip = add_1DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 1
+	}
+}
+increase_2DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = 0.02
+		tooltip = add_2DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 2
+	}
+}
+increase_3DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = 0.03
+		tooltip = add_3DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 3
+	}
+}
+increase_4DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = 0.04
+		tooltip = add_4DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 4
+	}
+}
+increase_5DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = 0.05
+		tooltip = add_5DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = 5
+	}
+}
+
+increase_1WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = 0.01
+		tooltip = add_1WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = -0.01
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = 1
+	}  
+}
+increase_2WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = 0.02
+		tooltip = add_2WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = -0.02
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = 2
+	}  
+}
+increase_3WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = 0.03
+		tooltip = add_3WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = -0.03
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = 3
+	}  
+}
+increase_4WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = 0.04
+		tooltip = add_4WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = -0.04
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = 4
+	}  
+}
+increase_5WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = 0.05
+		tooltip = add_5WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = -0.05
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = 5
+	}  
+}
+
+increase_1MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = 0.01
+		tooltip = add_1MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = 1
+	}
+}
+increase_2MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = 0.02
+		tooltip = add_2MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = 2
+	}
+}
+increase_3MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = 0.03
+		tooltip = add_3MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = 3
+	}
+}
+increase_4MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = 0.04
+		tooltip = add_4MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = 4
+	}
+}
+increase_5MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = 0.05
+		tooltip = add_5MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = 5
+	}
+}
+
+
+
+decrease_1DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = -0.01
+		tooltip = decrease_1DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = -1
+	}
+}
+decrease_2DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = -0.02
+		tooltip = decrease_2DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = -2
+	}
+}
+decrease_3DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = -0.03
+		tooltip = decrease_3DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = -3
+	}
+}
+decrease_4DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = -0.04
+		tooltip = decrease_4DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = -4
+	}
+}
+decrease_5DS = {
+	add_to_variable = {
+		var = diplomacy_skill_effect
+		value = -0.05
+		tooltip = decrease_5DS
+	}
+	add_to_variable = {
+		var = diplomacy_skill_display_on_stats
+		value = -5
+	}
+}
+
+decrease_1WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = -0.01
+		tooltip = decrease_1WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = 0.01
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = -1
+	}  
+}
+decrease_2WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = -0.02
+		tooltip = decrease_2WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = 0.02
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = -2
+	}  
+}
+decrease_3WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = -0.03
+		tooltip = decrease_3WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = 0.03
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = -3
+	}  
+}
+decrease_4WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = -0.04
+		tooltip = decrease_4WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = 0.04
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = -4
+	}  
+}
+decrease_5WS = {
+	add_to_variable = {
+		var = militate_skill_effect
+		value = -0.05
+		tooltip = decrease_5WS
+	}
+	add_to_variable = {
+		var = militate_skill_effect_negative
+		value = 0.05
+	}    
+	add_to_variable = {
+		var = militate_skill_display_on_stats
+		value = -5
+	}  
+}
+
+decrease_1MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = -0.01
+		tooltip = decrease_1MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = -1
+	}
+}
+decrease_2MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = -0.02
+		tooltip = decrease_2MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = -2
+	}
+}
+decrease_3MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = -0.03
+		tooltip = decrease_3MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = -3
+	}
+}
+decrease_4MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = -0.04
+		tooltip = decrease_4MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = -4
+	}
+}
+decrease_5MS = {
+	add_to_variable = {
+		var = management_skill_effect
+		value = -0.05
+		tooltip = decrease_5MS
+	}
+	add_to_variable = {
+		var = management_skill_display_on_stats
+		value = -5
+	}
+}

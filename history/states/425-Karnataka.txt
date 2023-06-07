@@ -1,0 +1,28 @@
+state={
+	id=425
+	name="STATE_425"
+	resources={
+		steel=13
+		tungsten=15
+	}
+
+	history={
+		owner = MYS
+		add_extra_state_shared_building_slots = 10
+		victory_points = {
+			8011 20
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 7
+			arms_factory = 3
+		}
+	}
+
+	provinces={
+		4315 8011 8067 10274 10808 12275 13305 13306
+	}
+	manpower=6348200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

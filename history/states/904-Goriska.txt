@@ -1,0 +1,25 @@
+state={
+	id=904
+	name="STATE_904"
+	
+	state_category = city
+
+	history={
+		owner = AUS
+		add_core_of = AUS
+		add_claim_by = VNC
+		victory_points = {
+			11595 10 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+
+	provinces={
+		599 11595
+	}
+	manpower=39300
+	buildings_max_level_factor=1.000
+}

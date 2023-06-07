@@ -1,0 +1,31 @@
+state={
+	id=978
+	name="STATE_978"
+	provinces={
+		1059 1101 1444 4062 4104 7220 10088 10116 12063 12462
+	}
+	history={
+		owner = RAJ
+		add_core_of = BAN
+		victory_points = {
+			4062 5
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		1717.5.1 = {
+			owner = BAN
+			controller = BAN
+			add_core_of = BAN
+		}
+		1755.5.1 = {
+			owner = MAR
+			controller = MAR
+			add_core_of = MAR
+		}
+	}
+	manpower=459745
+	buildings_max_level_factor=1.000
+	state_category=city
+}

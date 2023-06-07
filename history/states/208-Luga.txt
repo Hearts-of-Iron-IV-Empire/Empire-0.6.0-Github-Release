@@ -1,0 +1,25 @@
+state={
+	id=208
+	name="STATE_208" # Luga ##Västerbotten
+	manpower = 104181
+	
+	state_category = rural
+
+	history={
+		owner = SWE
+		victory_points = {
+			9108 1 
+		}
+		buildings = {
+			infrastructure = 2
+			9108 = {
+				naval_base = 3
+			}
+		}
+
+	}
+
+	provinces={
+		201 61 124 3100 3104 3193 6024 6083 6125 6132 6161 6165 6168 9093 9108 9143 9147 9186 9220 11067 11073 11125 11201
+	}
+}

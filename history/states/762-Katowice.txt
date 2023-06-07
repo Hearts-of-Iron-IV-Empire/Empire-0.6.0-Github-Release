@@ -1,0 +1,30 @@
+state={
+	id=762
+	name="STATE_762"
+	provinces={
+		6464 13205 
+	}
+	manpower=100000
+	resources={
+		steel=19 # was: 60
+		aluminium=7 # was: 20
+	}
+	state_category = city
+	history={
+		victory_points = {
+			6464 5
+		}
+		owner = AUS
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = AUS
+		add_core_of = SIL
+		1755.1.1 = {
+			owner = PRS
+			controller = PRS
+			add_core_of = PRS
+		}
+	}
+}

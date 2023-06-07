@@ -1,0 +1,14 @@
+characters = {
+    LAO_Setthathirath_II = {
+        name = "Setthathirath II"
+        portraits = {
+            civilian = {
+                large = "GFX_generic_south_east_asia_leader_2"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

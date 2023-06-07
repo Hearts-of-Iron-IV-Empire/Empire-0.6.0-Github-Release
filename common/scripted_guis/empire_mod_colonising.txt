@@ -1,0 +1,433 @@
+scripted_gui = {
+	
+		
+	colonising_land = {
+	
+		context_type = selected_state_context
+		
+		window_name = "colonising_gui"
+		parent_window_name = "countrystateview"
+		
+		visible = {
+			
+			AND = {
+				is_fully_controlled_by = UNC
+				FROM = {
+					OR = {
+						any_country = {
+							is_subject_of = ROOT
+							any_owned_state = {
+								any_neighbor_state = {
+									state = PREV.PREV.PREV
+								}
+							}
+						}
+						any_neighbor_state = { is_owned_by = ROOT }
+						AND = {
+							is_coastal = yes
+							ROOT = {
+								any_owned_state = { is_coastal = yes }
+							}
+						}
+					}
+				}
+			}
+
+			ROOT = {
+				OR = {
+					has_tech = american_colonisation
+				}
+			}
+
+			OR = {
+				any_neighbor_state = {
+					AND = {
+						is_owned_by = ROOT
+						is_core_of = ROOT
+					}
+				}
+				AND = {
+					IF = {
+						limit = {			
+							OR = {
+								is_on_continent = north_america
+								is_on_continent = south_america
+							}
+						}
+						ROOT = {
+							has_tech = american_colonisation
+						}
+					}
+					IF = {
+						limit = {
+							OR = {
+								is_on_continent = africa
+							}
+						}
+						ROOT = {
+							has_tech = coastal_colonisation_of_africa
+						}
+					}
+					IF = {
+						limit = {
+							OR = {
+								is_on_continent = middle_east
+								is_on_continent = asia
+								state = 669
+								state = 523
+							}
+						}
+						ROOT = {
+							has_tech = asian_trade_companies
+							NOT = { has_idea = HOL_spice_trade_profits }
+							NOT = { has_idea = HOL_spice_trade_profits2 }
+							NOT = { CRC = { is_puppet_of = ROOT } }
+						}
+					}
+					IF = {
+						limit = {
+							is_on_continent = australia
+						}
+						OR = {
+							state = 669
+							state = 523
+						}
+					}
+					NOT = {
+						has_state_flag = cannot_be_colonised
+					}
+				}
+			}			
+		}
+		effects = {
+			colonise_state_click = {
+				ROOT = {
+					set_country_flag = colonising					
+				}
+				state_event = {
+					id = colonisation.1
+					trigger_for = ROOT	
+				}
+				ROOT = {
+					set_variable = {
+						state_being_colonised = PREV
+					}
+				}
+				random_list = {
+					50 = {
+						
+				#		ROOT = {country_event = {
+				#			id = colonisation.3
+				#			days = colonise_time
+				#		#	random = 10
+				#		}}
+				#		state_event = {
+				#			id = colonisation.1
+				#			trigger_for = ROOT
+							
+							
+				#		}
+						ROOT = {
+							set_country_flag = suceeded_flag
+							clr_country_flag = failed_flag
+						}
+						modifier = {
+							factor = 0.1
+							has_state_category = wasteland
+						}
+						modifier = {
+							factor = 2
+							ROOT = {
+							has_tech = more_colonies
+							}
+						}
+						modifier = {
+							factor = 2
+							ROOT = {
+							has_tech = more_colonies2
+							}
+						}
+						modifier = {
+							factor = 2000
+							ROOT = {
+							has_tech = more_colonies3
+							}
+						}
+					}
+					50 = {
+				#		state_event = {
+				#			id = colonisation.1
+				#			trigger_for = ROOT
+				#			
+				#			
+				#		}
+				#	
+				#		ROOT = {country_event = {
+				#			id = colonisation.2
+				#			days = colonise_time
+				#		#	random = 10
+				#			
+				#		}}
+						ROOT = {
+						set_country_flag = failed_flag
+						clr_country_flag = suceeded_flag
+						}
+						modifier = {
+							factor = 2
+							is_coastal = no
+						}
+					}
+				}
+				ROOT = {
+					activate_mission = colonise_state
+					set_variable = { daysleftcolonizing = 0 }
+				}
+
+					#IF = {	
+		#				limit = {is_coastal = yes}
+		#				random_list = {
+		#					50 = {
+		#						state_event = {
+		#							id = colonisation.1
+		#							trigger_for = ROOT
+		#							days = 0
+		#						}
+		#					
+		#					}
+		#					50 = {
+		#						ROOT = {country_event = {
+		#							id = colonisation.2
+		#							days = 0
+		#							
+		#						}}
+		#					}
+		#					
+		#				}
+		#				ROOT = {add_political_power = -50}
+		#			}
+		#			IF = {	
+		#				limit = {is_coastal = no}
+		#				random_list = {
+		#					25 = {
+		#						state_event = {
+		#							id = colonisation.1
+		#							trigger_for = ROOT
+		#							days = 0
+		#						}
+		##					
+			#				}
+			#				75 = {
+			#					ROOT = {country_event = {
+			#						id = colonisation.2
+			#						days = 00
+			#						
+			#					}}
+			#				}
+			#				
+			#			}
+						IF = {
+							limit = {
+								is_coastal = no
+							}
+							ROOT = { add_political_power = -100 }
+						}
+						IF = {
+							limit = {
+								is_coastal = yes
+							}
+							ROOT = {add_political_power = -50}
+						}
+						ROOT = {
+							add_manpower = -1000
+							add_ideas = currently_colonising
+						}
+						
+			}		
+		}
+		
+		properties = {
+			research_progressbar1 = {
+				image = Gfx_research_progressbar
+				frame = ROOT.your_mom
+			}
+		}
+		triggers = {
+			
+			colonise_state_click_enabled = {
+				ROOT = {has_political_power > 50}
+				check_variable = { ROOT.manpower_k > 1 }
+				ROOT = {
+					num_of_civilian_factories_available_for_projects > 1	
+				}
+				NOT = {
+					ROOT = {
+						has_country_flag = colonising
+					}
+				}
+				
+			}
+			empty_research_slot_glow_1_visible = {
+			NOT = {
+				OR = {
+					ROOT = {
+						has_idea = currently_colonising
+					}
+					ROOT = { has_political_power < 50 }
+					check_variable = { ROOT.manpower < 1000 }
+					ROOT = {
+						num_of_civilian_factories_available_for_projects < 1	
+					}
+				}
+			}		
+		}
+	}
+    }
+	#timer_text_1_visible = {
+	#			
+	#	ROOT = {
+	#			has_idea = currently_colonising
+	#		}		
+	#	}
+#
+	#	ai_enabled = {
+	#	    ROOT = { is_ai = yes}
+	#	}
+	#	
+	#	ai_test_interval = 2400
+    #    ai_test_variance = 1
+    #   #ai_test_scopes = test_if_only_coastal 
+	#	        
+	#	ai_check = {
+	#			ROOT = {
+	#				check_variable = { ROOT.political_power > 99.99 }
+	#			}
+	#		NOT = {
+	#			ROOT = {
+	#				has_idea = currently_colonising
+	#			}
+	#		}
+	#		has_tech = american_colonisation
+	#	}
+	#	
+	#	 ai_check_scope = {
+	#		OR = {
+	#			is_coastal = yes
+	#			any_country = {
+	#				OR = {
+	#					is_subject_of = ROOT
+	#					original_tag = ROOT
+	#				}
+	#				PREV = {
+	#					any_neighbor_state = {
+	#						is_owned_by = PREV.PREV
+	#					}
+	#				}
+	#			}
+	#		}
+	#	 }
+	#	 
+	#	ai_weights = {
+	#		colonise_state_click = {
+	#			ai_will_do = {
+	#				factor = -4
+	#			    modifier = {
+	#				    ROOT = {
+	#				        has_political_power > 100
+	#				    }
+	#				    add = 5		
+	#			    }
+	#			    modifier = {
+	#				    ROOT = {
+	#				        has_political_power > 100
+	#			    	}
+	#				    any_neighbor_state = {
+	#					    any_country = {
+	#						    OR = {
+	#							    is_subject_of = ROOT
+	#							    original_tag = ROOT
+	#						    }
+	#						    PREV = {
+	#							    is_owned_by = PREV
+	#						    }
+	#				     	}
+	#				    }
+	#				    add = 5		
+	#			    } 
+	#			    modifier = {
+	#				    ROOT = {
+	#				        has_political_power > 100
+	#			    	}
+	#				    OR = {
+	#					    check_variable = {
+	#						    colonial_area = INS
+	#					    }
+	#					    check_variable = {
+	#						    colonial_area = SAF
+	#					    }
+	#					    AND = {
+	#						    ROOT = {
+	#							    original_tag = SPR
+	#						    }
+	#						    is_on_continent = south_america
+	#					    }
+	#				    }
+	#				    add = 3
+	#			    } 
+	#			}
+	#	    }
+	#	}
+
+	colonise_area = {
+	
+		context_type = selected_state_context
+		
+		window_name = "colonial_area"
+		parent_window_token = selected_state_view
+		visible = {
+			is_owned_by = UNC
+			has_variable = colonial_area
+		}
+		
+		effects = {		
+
+		}
+		triggers = {
+			
+		}	
+		properties = {
+			#claim_flag = {
+			#	image = "[colonial_area.GetFlag]"
+			#}
+		}
+	}
+	overlord_colony_gui = {
+	
+		context_type = selected_country_context
+		
+		window_name = "colony_overlord_dip_view"
+		parent_window_token = selected_country_view_diplomacy
+		visible = {
+			has_autonomy_state  = autonomy_colony
+			NOT = {
+				AND = {
+				original_tag = USA
+					OVERLORD = {
+						original_tag = ENG
+					}
+				}
+			}
+		}
+		
+		effects = {
+					
+		}
+		triggers = {
+			
+		}
+		properties = {
+			diplo_overlord_colony_flag = {
+				image = "[FROM.OVERLORD.GetFlag]"
+			}
+		}
+	}
+}

@@ -1,0 +1,31 @@
+
+state={
+	id=619
+	name="STATE_619"
+	resources={
+		aluminium=2.000
+		chromium=2.000
+	}
+
+	history={
+		owner = SIK
+		add_core_of = SIK
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+
+		}
+		1760.1.1 = {
+			owner = CHI
+			add_core_of = CHI
+		}
+	}
+
+	provinces={
+		1766 1970 2015 4828 5016 5087 7790 7949 8112 12119 
+	}
+	manpower=730700
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

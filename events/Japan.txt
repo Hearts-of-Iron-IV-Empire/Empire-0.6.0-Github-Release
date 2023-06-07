@@ -1,0 +1,330 @@
+﻿###########################
+##    Japanese Events    ##
+###########################
+
+add_namespace = japan
+
+# Save the Dogs 
+country_event = {
+	id = japan.1
+	title = japan.1.t
+	desc = japan.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # Strict Enforcement 
+		name = japan.1.a
+		add_stability = -0.1
+		add_political_power = -75
+		ai_chance = { 
+			factor = 90 
+		}
+	}
+	
+	option = { # Lenient Enforcement
+		name = japan.1.b
+		add_stability = -0.05
+		add_trait = {
+			character = JAP_Tokugawa_Tsunayoshi 
+			ideology = despotism
+			trait = inu_kubo
+		}
+		ai_chance = { 
+			factor = 10
+		}
+	}
+}
+
+# The Shogun has lost his mind!
+country_event = {
+	id = japan.2
+	title = japan.2.t
+	desc = japan.2.d
+	
+	is_triggered_only = yes
+	
+	option = { # The Imperial Restoration
+		name = japan.2.a
+		set_country_flag = JAP_imperial_restoration_flag
+		ai_chance = { 
+			factor = 5 
+		}
+	}
+	
+	option = { # Empower a new Tokugawa!
+		name = japan.2.b
+		set_country_flag = JAP_new_tokugawa_flag
+		ai_chance = { 
+			factor = 95 
+		}
+	}
+}
+
+# Japan takes Formosa
+country_event = {
+	id = japan.3
+	title = japan.3.t
+	desc = japan.3.d
+	
+	is_triggered_only = yes
+	
+	option = { # We do not like that.
+		name = japan.3.a
+		add_opinion_modifier = {
+			target = JAP
+			modifier = outraged
+		}
+	}
+}
+
+# The Emperor's Choice (Imperial Restoration)
+country_event = {
+	id = japan.4
+	title = japan.4.t
+	desc = japan.4.d
+	
+	is_triggered_only = yes
+	
+	option = { # Abolish the Shogunate
+		name = japan.4.a
+		add_trait = {
+			character = JAP_Emperor_Go_Komyo
+			ideology = rexism
+			trait = great_restorer
+		}
+		ai_chance = { 
+			factor = 50 
+		}
+	}
+	
+	option = { # Take both titles
+		name = japan.4.b
+		add_trait = {
+			character = JAP_Emperor_Go_Komyo
+			ideology = rexism
+			trait = emperor_and_shogun
+		}
+		ai_chance = { 
+			factor = 50
+		}
+	}
+}
+
+# Demand Respect from Korea
+country_event = {
+	id = japan.5
+	title = japan.5.t
+	desc = japan.5.d
+	
+	is_triggered_only = yes
+	
+	option = { # We will pay our respects
+		name = japan.5.a
+		add_political_power = -50
+		add_stability = -0.1
+		JAP = {
+			add_stability = 0.05
+			add_political_power = 50
+		}
+		ai_chance = { 
+			factor = 20 
+		}
+	}
+	
+	option = { # F you Japan
+		name = japan.5.b
+		add_stability = 0.05
+		add_political_power = 30
+		reverse_add_opinion_modifier = {
+			target = JAP 
+			modifier = JAP_offended 
+		}
+		ai_chance = { 
+			factor = 80 
+		}
+	}
+}
+
+# Make Korea a puppet once it has been taken
+country_event = {
+	id = japan.6
+	title = japan.6.t
+	desc = japan.6.d
+	
+	is_triggered_only = yes
+	
+	option = { # Make it a puppet
+		name = japan.6.a
+		ai_chance = { factor = 50 }
+		add_stability = 0.05
+		add_war_support = -0.05
+		add_political_power = -50
+	}
+	
+	option = { # Don't make it a puppet
+		name = japan.6.b
+		ai_chance = { factor = 50 }
+		add_war_support = 0.05
+	}
+}
+
+# China hears about Japan annexing Ryukyu
+country_event = {
+	id = japan.7
+	title = japan.7.t
+	desc = japan.7.d
+	
+	is_triggered_only = yes
+	
+	option = { # Demand their withdrawal
+		name = japan.7.a
+		add_political_power = 50
+		JAP = {
+			country_event = {
+				id = japan.8
+			}
+		}
+
+		ai_chance = { 
+			factor = 90 
+		}
+	}
+	
+	option = { # Ignore it
+		name = japan.7.b
+		add_political_power = -75
+		add_stability = -0.1
+
+		ai_chance = { 
+			factor = 10 
+		}
+	}
+}
+
+# China demands Japanese withdrawal
+country_event = {
+	id = japan.8
+	title = japan.8.t
+	desc = japan.8.d
+	
+	is_triggered_only = yes
+	
+	option = { # No. 
+		name = japan.8.a
+		add_political_power = 50
+		add_war_support = 0.1
+		custom_effect_tooltip = will_probably_lead_to_war_with_china
+		CHI = {
+			country_event = {
+				id = japan.9
+			}
+		}
+	}
+	
+	option = { # Fine...
+		name = japan.8.b
+		add_political_power = -50
+		add_stability = -0.1
+		release = RYU
+		CHI = {
+			add_to_faction = RYU
+			set_autonomy = {
+				target = RYU
+				autonomous_state = autonomy_tributary_state
+				freedom_level = 0.7
+			}
+			country_event = {
+				id = japan.10
+			}
+		}
+
+		ai_chance = { 
+			factor = 10 
+		}
+	}
+}
+
+# Japan refuses to withdraw from the Ryukyu Islands
+country_event = {
+	id = japan.9
+	title = japan.9.t
+	desc = japan.9.d
+	
+	is_triggered_only = yes
+	
+	option = { # I declare war. 
+		name = japan.9.a
+		add_war_support = 0.1
+		declare_war_on = {
+			target = JAP
+			type = annex_everything
+		}
+		JAP = {
+			country_event = {
+				id = japan.11
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	
+	option = { # We'll let them go for now...
+		name = japan.9.b
+		add_political_power = -50
+		add_stability = -0.1
+		JAP = {
+			country_event = {
+				id = japan.12
+			}
+		}
+		ai_chance = { 
+			factor = 10 
+		}
+	}
+}
+
+# Japan agrees to withdraw from the islands
+country_event = {
+	id = japan.10
+	title = japan.10.t
+	desc = japan.10.d
+	
+	is_triggered_only = yes
+	
+	option = { # Great!
+		name = japan.10.a
+		add_political_power = 30
+		add_stability = 0.05
+		add_war_support = 0.05
+	}
+}
+
+# The Qing declare war on Japan
+country_event = {
+	id = japan.11
+	title = japan.11.t
+	desc = japan.11.d
+	
+	is_triggered_only = yes
+	
+	option = { # Damn.
+		name = japan.11.a
+		add_war_support = 0.1
+	}
+}
+
+# The Qing de-escalate/back down
+country_event = {
+	id = japan.12
+	title = japan.12.t
+	desc = japan.12.d
+	
+	is_triggered_only = yes
+	
+	option = { # Ha.
+		name = japan.12.a
+		add_political_power = 80
+		add_stability = 0.1
+	}
+}

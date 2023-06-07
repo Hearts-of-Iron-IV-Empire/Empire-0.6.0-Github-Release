@@ -1,0 +1,225 @@
+add_namespace = papacy
+# Death of Pope
+
+country_event = {
+	id = papacy.1
+	title = papacy.1.t
+	desc = papacy.1.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = PAP
+		AND = {
+			date > 1700.9.1	
+		}
+		has_country_leader = {
+		    name = "Innocent XII"
+		    ruling_only = yes
+		}
+	}
+	mean_time_to_happen = {
+    	days = 1
+	}
+	option = {
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "College of Cardinals"
+			desc = "POLITICS_COLLEGE_OF_CARDINALS_DESC"
+			picture = "college_of_cardinals.dds"
+			ideology = falangism
+			traits = {	
+			}
+		}
+		hidden_effect = {
+			news_event = { id = mod.19 days = 1 }
+			country_event = { id = papacy.10 days = 60 }
+		}
+		
+		name = "Requiescat in pace."
+	}
+}
+
+
+# Alexander VII. # Bandino Panciatici # DIRECT FRENCH
+
+country_event = {
+	id = papacy.2
+	title = papacy.2.t
+	desc = papacy.2.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	
+		name = "Alexander VII is consacrated!"
+		ai_chance = {
+			factor = 2
+			modifier = {
+				factor = 20
+				is_historical_focus_on = no
+			}
+		}
+	
+	}
+	option = {	
+		name = "A partisan pope will only drag us into war!"
+		ai_chance = {
+			factor = 40
+		}
+		add_political_power = 50
+		country_event = papacy.3
+	}
+}
+
+# Pope Clement XI. # Neutral for now
+country_event = {
+	id = papacy.3
+	title = papacy.3.t
+	desc = papacy.3.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	
+		name = "Clement XI is the right candidate!"
+	}
+	option = {
+		name = "It's too soon to decide..."
+		add_political_power = 50
+		country_event = papacy.4
+	}
+}
+# Pope Innozenz XIII. # Austrian Path
+
+country_event = {
+	id = papacy.4
+	title = papacy.4.t
+	desc = papacy.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {	
+		name = "Wins the vote"
+	}
+	option = {	
+		name = "We cannot anger the pro-French faction."
+		add_political_power = 50
+		country_event = papacy.5
+	}
+}
+# Pope Urban IIX. # Kingdom of God
+
+country_event = {
+	id = papacy.5
+	title = papacy.5.t
+	desc = papacy.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	option = {
+		name = "But regardless of that he still gets support?"
+		add_stability = -0.15
+	}
+
+	option = {	
+		name = "Of course the Madman lost."
+		add_political_power = 50
+	}
+}
+country_event = {
+	id = papacy.10
+	title = papacy.10.t
+	desc = papacy.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		create_country_leader = {
+			name = "Clement XI"
+			desc = "POLITICS_CHARLES_DE_GAULLE_DESC"
+			picture = "Clement_XI.dds"
+			ideology = falangism
+			traits = {	
+			}
+		}
+		hidden_effect = {
+			news_event = { id = mod.20 days = 1 }
+		}
+		
+		name = "Te Deum!"
+	}
+}
+country_event = {
+	id = papacy.11
+	title = papacy.11.t
+	desc = papacy.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "If I have this claim why shouldn't I use it?"
+		TUS = {
+			country_event = tuscany.1
+		}
+	}
+	option = {
+		name = "The Pope... demanding land?!"
+	}
+}
+country_event = {
+	id = papacy.12
+	title = papacy.12.t
+	desc = papacy.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "We shall integrate them."
+		add_political_power = -75
+		annex_country = {
+			target = TUS
+		}
+		add_state_core = 162
+		ai_chance = {
+			factor = 30
+		}
+	}
+	option = {
+		name = "We will subjugate them."
+		set_autonomy = {
+			target = TUS
+			autonomous_state = autonomy_viceroyalty
+			freedom_level = 0.5
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+country_event = {
+	id = papacy.13
+	title = papacy.13.t
+	desc = papacy.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's treason then..."
+		declare_war_on = {
+			target = TUS
+		}
+		add_state_core = 162
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "Maybe this was not a very good idea..."
+		ai_chance = {
+			factor = 50
+		}
+	}
+}

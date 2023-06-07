@@ -1,0 +1,146 @@
+scripted_gui = {
+
+	ruler_skills_ui = {
+		window_name = "ruler_skills_ui_window"
+		parent_window_token = politics_tab
+
+		visible = {
+			always = yes
+		}
+
+		triggers = {
+			diplomacy_skill_icon_visible = {
+				check_variable = { life_experience < 99.99 }
+            }
+            diplomacy_skill_icon_levelup_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			diplomacy_skill_icon_levelup_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+			diplomacy_skill_increase_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			diplomacy_skill_increase_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+
+
+			militate_skill_icon_visible = {
+				check_variable = { life_experience < 99.99 }
+            }
+            militate_skill_icon_levelup_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			militate_skill_icon_levelup_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+			militate_skill_increase_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			militate_skill_increase_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+
+			management_skill_icon_visible = {
+				check_variable = { life_experience < 99.99 }
+            }
+            management_skill_icon_levelup_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			management_skill_icon_levelup_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+			management_skill_increase_button_click_enabled = {
+				check_variable = { life_experience > 99.99 }
+            }
+			management_skill_increase_button_visible = {
+				check_variable = { life_experience > 99.99 }
+            }
+        }
+
+		effects = {
+			diplomacy_skill_icon_levelup_button_click = {
+				increase_1DS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+			diplomacy_skill_increase_button_click = {
+				increase_1DS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+
+			militate_skill_icon_levelup_button_click = {
+				increase_1WS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+			militate_skill_increase_button_click = {
+				increase_1WS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+
+			management_skill_icon_levelup_button_click = {
+				increase_1MS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+			management_skill_increase_button_click = {
+				increase_1MS = yes
+				add_to_variable = {
+					var = life_experience
+					value = -100
+				}
+			}
+		}
+
+		ai_enabled = {
+            NOT = { tag = UNC }
+        }
+
+		ai_check = {
+			check_variable = { life_experience > 99.99 }
+        }
+
+		ai_weights = {
+			management_skill_icon_levelup_button_click = {
+                ai_will_do = {
+                    factor = 32  
+                }
+            }
+            diplomacy_skill_icon_levelup_button_click = {
+                ai_will_do = {
+                    factor = 34  
+                }
+            }
+			militate_skill_icon_levelup_button_click = {
+                ai_will_do = {
+                    factor = 34  
+                }
+            }
+        }
+	}
+
+	mod_top_bar = {
+		window_name = "mod_top_bar_ui_window"
+		parent_window_token = top_bar
+
+		visible = {
+			always = yes
+		}
+	}
+	
+}
+

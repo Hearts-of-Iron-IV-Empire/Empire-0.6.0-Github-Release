@@ -1,0 +1,16 @@
+
+state={
+	id=284
+	name="STATE_284" # North Island
+	manpower = 899836
+	
+	state_category = city
+	
+	history={
+	owner = UNC
+	}
+
+	provinces={
+		1746 1801 1814 4543 4615 4718 7742 7783 12604 
+	}
+}

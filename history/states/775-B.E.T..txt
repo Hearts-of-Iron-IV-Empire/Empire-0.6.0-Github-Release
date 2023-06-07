@@ -1,0 +1,17 @@
+
+state={
+	id=775
+	name="STATE_775"
+
+	history={
+		#owner = CMR
+		owner = UNC
+	}
+
+	provinces={
+		1473 1883 3181 4978 7919 
+	}
+	manpower=18744
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

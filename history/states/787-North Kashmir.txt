@@ -1,0 +1,30 @@
+state={
+	id=787
+	name="STATE_787" # Northern Kashmir
+	manpower = 715800
+	
+	state_category = rural
+
+	history = {
+		owner = SIK
+		add_core_of = SIK
+		victory_points = {
+			1910 50
+		}
+		victory_points = {
+			2084 5
+		}
+		buildings = {
+			infrastructure = 1
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+		}
+	}
+
+	provinces={
+		1910 2084 4558 10826
+	}
+}

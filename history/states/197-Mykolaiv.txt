@@ -1,0 +1,35 @@
+
+state={
+	id=197
+	name="STATE_197"
+
+	history={
+		victory_points = {
+			11683 3 
+		}
+		owner = TUR
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+
+		}
+		add_core_of = CRI
+		add_core_of = TUR
+		add_core_of = ZAP
+		1699.1.1 = {
+			SOV = {
+				set_province_controller = 11715
+			}
+		}
+		1789.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		574 3755 11546 11683 11715 
+	}
+	manpower=896311
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

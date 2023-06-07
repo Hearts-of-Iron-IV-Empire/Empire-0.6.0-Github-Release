@@ -1,0 +1,37 @@
+state={
+	id=8
+	name="STATE_8"
+	resources={
+		steel=5.000
+	}
+
+	history={
+		owner = BEL
+		add_core_of = BEL
+		set_demilitarized_zone = yes
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			6583 = {
+				bunker = 4
+
+			}
+
+		}
+		victory_points = {
+			6583 3 
+		}
+		add_core_of = LUX
+		1798.1.1 = {
+			owner = FRA
+			set_demilitarized_zone = no
+		}
+	}
+
+	provinces={
+		3488 6583 9418 11407 13237
+	}
+	manpower=125058
+	buildings_max_level_factor=1.000
+	state_category=town
+}

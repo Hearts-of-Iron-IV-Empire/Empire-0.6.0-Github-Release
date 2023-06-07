@@ -1,0 +1,12 @@
+﻿l_english:
+
+ hungary.5.t:0 "Hungary offers white peace"
+ hungary.5.d:0 "As the war is developing not necessarily to our advantage, Hungary has proposed us a peace deal. If we agree to hand over all Hungarian states, plus the kingdom of Croatia, they will promise to lay down arms and they will cease their support to France effective immediately. Whilst admitting defeat is difficult, one can does not help but see that a peace treaty is our only hope at turning around the war against France..."
+ hungary.6.t:0 "Austria Accepts Peace Terms"
+ hungary.6.d:0 "Austria has agreed to accept our terms if we promise to stop our involvement in the war completely. Once again, we have restored the borders of our once great kingdom of Hungary!"
+ hungary.7.t:0 "Austria Refuses Negotiation"
+ hungary.7.d:0 "Austria has refused to accept any sort of arrangement between our nations, choosing to perish instead of allowing our freedom. We can either try again in a few months, or simply wipe them of the map completely."
+
+ HUN_negotiate_independence:0 "Negotiate Independence"
+ HUN_negotiate_independence_desc:0 "We have bested the Austrian Empire, and now it is time for them to come to terms. We shall offer a fair deal, the return of our territories and our independence, in return for our neutrality in their war with the French."
+

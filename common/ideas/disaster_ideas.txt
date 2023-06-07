@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		idea_peasants_war = {
+
+			picture = peasants_war
+
+			name = idea_peasants_war
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = -0.25
+				conscription = -0.02
+				stability_factor = -0.20
+				industrial_capacity_factory = -0.20
+			}
+		}
+	}
+}

@@ -1,0 +1,33 @@
+
+state={
+	id=955
+	name="STATE_955"
+
+	history={
+		owner = UNC
+		add_claim_by = ENG
+		1713.1.1 = {
+			owner = ENG
+			controller = ENG
+			add_core_of = ENG
+			buildings = {
+				10176 = {
+					naval_base = 1
+				}
+				infrastructure = 1
+			}
+		}
+		1765.1.1 = {
+			owner = QUE
+			add_core_of = QUE
+			controller = QUE
+		}
+	}
+
+	provinces={
+		490 9740 10176 10621 11682 12701 13166 13196
+	}
+	manpower=234
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

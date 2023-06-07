@@ -1,0 +1,381 @@
+﻿capital = 16
+
+oob = "FRA_1699"
+set_naval_oob = "FRA_1699_naval"
+
+set_stability = 0.50
+set_war_support = .65
+
+set_research_slots = 3
+
+set_country_flag = FRA_limousin_rebels
+set_country_flag = FRA_centre_sud_rebels
+set_country_flag = FRA_auvergne_rebels
+
+1718.1.1 = {
+	recruit_character = FRA_Louis_XV_Child
+	promote_character = FRA_Louis_XV_Child
+	retire_character = FRA_Louis_XIV
+
+	set_popularities = {
+		democratic = 3
+		fascism = 15
+		communism = 2
+		neutrality = 59
+		aristocracy = 21
+	}
+
+	clr_country_flag = FRA_limousin_rebels
+	clr_country_flag = FRA_centre_sud_rebels
+	clr_country_flag = FRA_auvergne_rebels
+
+	remove_ideas = FRA_religious_unrest
+
+	unlock_national_focus = FRA_align_portugal
+	unlock_national_focus = FRA_the_english_king_in_exile
+	unlock_national_focus = FRA_support_james_iii
+	unlock_national_focus = FRA_attract_english_catholics
+	unlock_national_focus = FRA_prepare_the_great_liberation
+	unlock_national_focus = FRA_the_landing_at_firth_of_forth
+	unlock_national_focus = FRA_anglo_french_treaty
+	unlock_national_focus = FRA_stoke_up_sentiments_in_ireland
+	unlock_national_focus = FRA_align_mantua
+	unlock_national_focus = FRA_occupy_modena
+	unlock_national_focus = FRA_respect_genoa_neutrality
+	unlock_national_focus = FRA_respect_tuscany_neutrality
+	unlock_national_focus = FRA_protect_the_papal_state
+	unlock_national_focus = FRA_respect_papal_neutrality
+	unlock_national_focus = FRA_intrests_in_the_empire
+	unlock_national_focus = FRA_invite_cologne_and_liege
+	unlock_national_focus = FRA_alliance_with_brunswick
+	unlock_national_focus = FRA_allies_in_thuringia
+	unlock_national_focus = FRA_secure_trier
+	unlock_national_focus = FRA_link_up_with_bavaria
+	unlock_national_focus = FRA_march_to_vienna
+	unlock_national_focus = FRA_maintain_gallicanism_doctrine
+	complete_national_focus = FRA_storm_over_europe
+	complete_national_focus = FRA_expanding_the_bourbon_sphere
+	unlock_national_focus = FRA_align_savoy
+	complete_national_focus = FRA_befriend_switzerland
+	unlock_national_focus = FRA_occupy_lorraine
+	unlock_national_focus = FRA_ally_bavaria
+	unlock_national_focus = FRA_secret_correspondence_hungary
+	unlock_national_focus = FRA_support_hungarian_revolt
+	unlock_national_focus = FRA_scottish_deal
+	unlock_national_focus = FRA_pressure_on_spain
+	unlock_national_focus = FRA_spain_is_ours
+	unlock_national_focus = FRA_formalize_alliance
+	unlock_national_focus = FRA_march_into_the_southern_netherlands
+	unlock_national_focus = FRA_a_balance_of_power
+	unlock_national_focus = FRA_sun_king
+	unlock_national_focus = FRA_expand_versailles_court
+	unlock_national_focus = FRA_unlimited_power
+	unlock_national_focus = FRA_natural_borders
+	unlock_national_focus = FRA_address_religious_turmoil
+	unlock_national_focus = FRA_confirm_edict_of_fontainebleu
+	unlock_national_focus = FRA_banish_all_huguenots
+	unlock_national_focus = FRA_proclaim_defender_of_the_faith
+	complete_national_focus = FRA_industry_1
+	complete_national_focus = FRA_industry_technology
+	complete_national_focus = FRA_industry_civ_1
+	complete_national_focus = FRA_industry_civ_2
+	complete_national_focus = FRA_inland_infrastructure
+	complete_national_focus = FRA_civil_university
+	complete_national_focus = FRA_resource_1
+	complete_national_focus = FRA_resource_2
+	complete_national_focus = FRA_industry_mil_1
+	complete_national_focus = FRA_border_infrastructure
+	complete_national_focus = FRA_military_university
+	complete_national_focus = FRA_parisian_industry
+	complete_national_focus = FRA_prepare_fleet
+	complete_national_focus = FRA_expand_harbour
+	complete_national_focus = FRA_industry_mil_2
+	complete_national_focus = FRA_raise_military_budget
+	complete_national_focus = FRA_italian_intrests
+}
+
+1733.1.1 = {
+	recruit_character = FRA_Louis_XV
+	promote_character = FRA_Louis_XV
+	retire_character = FRA_Louis_XV_Child # Becomes man
+	if = {
+		limit = {
+			country_exists = LOR
+		}
+		declare_war_on = {
+			target = LOR
+			type = annex_everything
+		}
+	}
+	unlock_national_focus = FRA_join_the_quadruple_alliance
+}
+
+1789.1.1 = {
+	recruit_character = FRA_Louis_XVI
+	promote_character = FRA_Louis_XVI
+	retire_character = FRA_Louis_XV
+}
+
+1798.1.1 = {
+	recruit_character = FRA_Directory
+	promote_character = FRA_Directory
+	retire_character = FRA_Louis_XVI
+
+	set_politics = {
+		ruling_party = democratic
+		last_election = "1795.1.1"
+		election_frequency = 48
+		elections_allowed = no
+	}
+
+	set_popularities = {
+		democratic = 50
+		fascism = 1
+		communism = 25
+		neutrality = 1
+		aristocracy = 23
+	}
+	set_autonomy = {
+		target = GEN
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = HOL
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = LOM
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = PAP
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = SWI
+		autonomous_state = autonomy_integrated_puppet
+		freedom_level = 0.2
+	}
+	declare_war_on = {
+	    target = TUR
+	    type = annex_everything
+	}
+	set_province_controller = 4076
+	set_province_controller = 7091
+	set_province_controller = 11964
+	set_province_controller = 10005
+	set_province_controller = 7164
+	set_province_controller = 10073
+	set_province_controller = 12049
+	set_province_controller = 7011
+	set_province_controller = 4145
+	set_province_controller = 3996
+	set_province_controller = 4055
+	set_province_controller = 1068
+	set_province_controller = 7144
+	set_province_controller = 11974
+	set_province_controller = 12044
+	set_province_controller = 10031
+}
+
+1803.1.1 = {
+	recruit_character = FRA_Napoleon
+	promote_character = FRA_Napoleon
+	retire_character = FRA_Directory
+
+	set_politics = {
+		ruling_party = neutrality
+		elections_allowed = no
+	}
+
+	diplomatic_relation = { country = TUR relation = war_relation active = no }
+}
+
+1812.1.1 = {
+	declare_war_on = {
+		target = SOV
+		type = annex_everything
+	}
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	basic_light_cruiser = 1
+	early_heavy_cruiser = 1
+	basic_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	basic_battlecruiser = 1
+	transport = 1
+	american_colonisation = 1
+	asian_trade_companies = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	basic_cavalry = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+	}
+}
+
+add_ideas = {
+	FRA_edict_of_fontainebleu
+	FRA_religious_unrest
+	catholic
+	kingdom
+	limited_exports
+	FRA_birthplace_of_absolutism
+	FRA_ineffecicient_taxing
+	FRA_elaborate_court_life
+}
+
+add_opinion_modifier = { target = ENG modifier = Rivalry }
+add_opinion_modifier = { target = HOL modifier = Rivalry }
+add_opinion_modifier = { target = AUS modifier = Rivalry }
+add_opinion_modifier = { target = ENG modifier = HOL_colonial_rivalry_in_west_indies }
+
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	set_autonomy = {
+		target = QUE
+		autonomous_state = autonomy_viceroyalty
+		freedom_level = 0.2
+	}
+	else = {
+		puppet = QUE
+	}
+}
+
+set_convoys = 30
+create_faction = "Bourbon Alliance"
+
+set_country_flag = absolutist_state
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 3
+	fascism = 5
+	communism = 2
+	neutrality = 69
+	aristocracy = 21
+}
+ 
+recruit_character = FRA_Louis_XIV # Country Leader
+recruit_character = FRA_Louis_de_France # Field Marshal
+recruit_character = FRA_Christian_Louis_de_Montmorency # Field Marshal
+recruit_character = FRA_Henri_de_Massue # General
+recruit_character = FRA_Louis_Antoine_de_Pardaillan # General
+recruit_character = FRA_Anne_Jules_de_Noailles # General
+recruit_character = FRA_Claude_François_Bidal_Asfeld # General
+recruit_character = FRA_Claude_Louis_Hector_de_Villars
+recruit_character = FRA_François_de_Neufville # General
+recruit_character = FRA_Henri_d_Harcourt # General
+recruit_character = FRA_Jacques_Bazin_de_Bezons # General
+recruit_character = FRA_James_Fitz_de_Berwick # General
+recruit_character = FRA_Louis_François_de_Boufflers # General
+recruit_character = FRA_Louis_Joseph_de_Vendôme # General
+recruit_character = FRA_Renné_de_Froulay # General
+
+
+### VARIANTS ###
+# 1936 Start #
+
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "630 Series"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Redoutable Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 2
+			sub_stealth_upgrade = 2
+			sub_torpedo_upgrade = 2
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Chacal Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+		obsolete = yes
+	}
+
+	create_equipment_variant = {
+		name = "Aigle & Vauquelin Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 2
+			ship_anti_air_upgrade = 2
+		}
+	}
+
+	create_equipment_variant = {
+		name = "Bretagne Class"
+		type = battleship_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_armor_upgrade = 1
+			ship_gun_upgrade = 1
+		}
+	}

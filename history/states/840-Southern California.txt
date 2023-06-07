@@ -1,0 +1,17 @@
+state={
+	id=840
+	name="STATE_840"
+	provinces={
+		986 3784 3840 4518 6861 6881 9855 9911 11859 11876 
+	}
+	history={
+		owner = UNC
+		1773.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+		}
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

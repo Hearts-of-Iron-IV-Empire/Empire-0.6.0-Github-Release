@@ -1,0 +1,14 @@
+characters = {
+    CLG_Joseph_Clemens_of_Bavaria = {
+        name = "Joseph Clemens of Bavaria"
+        portraits = {
+            civilian = {
+                large = "GFX_Joseph_Clemens_of_Bavaria"
+            }
+        }
+        country_leader = {
+            ideology = nazism
+            traits = {}
+        }
+    }
+}

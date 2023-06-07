@@ -1,0 +1,25 @@
+
+state={
+	id=895
+	name="STATE_895"
+
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			6568  10 
+		}
+		owner = RPA
+		add_core_of = RPA
+
+	}
+
+	provinces={
+		3530 6555 6568 6581 
+	}
+	manpower=167987
+	buildings_max_level_factor=1.000
+	state_category=town
+}

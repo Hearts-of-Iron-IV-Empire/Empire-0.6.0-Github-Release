@@ -1,0 +1,23 @@
+
+state={
+	id=826
+	name="STATE_826"
+
+	history={
+		owner = MEX
+		1765.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+
+		}
+
+	}
+
+	provinces={
+		5071 8012 8033 10765 13214 
+	}
+	manpower=100
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

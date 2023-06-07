@@ -1,0 +1,32 @@
+state={
+	id=321
+	name="STATE_321"
+	manpower = 133952
+
+	resources={
+		steel=5 # was: 32
+		chromium=1 # was: 2
+		tungsten=3
+		rubber = 10
+	}
+
+	state_category = enclave
+
+	history={
+		owner = POR
+		add_core_of = RAJ
+		victory_points = {
+			1273 1 
+		}
+		buildings = {
+			infrastructure = 3
+			1273 ={
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		1273 
+	}
+}

@@ -1,0 +1,62 @@
+﻿units = {
+
+	##### NAVAL UNITS #####
+	### ROYAL NAVY ###
+	fleet = {
+		name = "Koninklijke Marine"			
+		naval_base = 3314  # Amsterdam
+		task_force = {				
+			name = "Koninklijke Vloot"			
+			location = 3314  # Amsterdam
+			ship = { name = "HrMs Hertog Hendrik" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = HOL } } }		
+			ship = { name = "HrMs Jacob van Heemskerck" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = HOL } } }		
+			ship = { name = "HrMs Van Galen" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Hertog Jan" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = HOL } } }	
+			ship = { name = "St-Michaël" definition = heavy_cruiser equipment = { heavy_cruiser_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Dolfijn" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Den Duyvel" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }	
+			ship = { name = "Paradys" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Den Koloniseerder" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "De Parel" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "St.- Jan" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Oranje" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Wilhelmus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Nassau" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Oostende" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Utrechtsche Sloep" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Toorn Gods" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Poseidon" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+			ship = { name = "Den Titanicus" definition = destroyer equipment = { destroyer_1 = { amount = 1 owner = HOL } } }
+
+		}				
+		task_force = {				
+			name = "Koninklijke Onderzeeboot Smaldeel"			
+			location = 3314  # Amsterdam
+			ship = { name = "HrMs O-9" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-10" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-11" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-12" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-13" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-14" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-15" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-16" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-17" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-18" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-19" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-20" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-21" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-22" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-23" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-24" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-25" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-26" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-27" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-28" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-29" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-30" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+			ship = { name = "HrMs O-31" definition = submarine equipment = { submarine_1 = { amount = 1 owner = HOL version_name = "K-XIV Class" } } }
+		}				
+	}
+}
+
+

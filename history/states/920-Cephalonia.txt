@@ -1,0 +1,32 @@
+state={
+	id=920
+	name="STATE_920"
+	resources={
+		chromium=1.000
+		steel=2.000
+	}
+
+	history={
+		owner = VNC
+		buildings = {
+			infrastructure = 1
+			1106 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = GRE
+		add_core_of = VNC
+		1797.1.1 = {
+			owner = TUR
+		}
+	}
+
+	provinces={
+		1106 
+	}
+	manpower=12040
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

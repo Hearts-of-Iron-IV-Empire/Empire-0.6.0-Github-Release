@@ -1,0 +1,29 @@
+political_actions = {
+	HUN_negotiate_independence = {
+
+		icon = generic_decisison
+
+		days_re_enable = 60 
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		visible = {
+			has_war_with = AUS
+			original_tag = HUN
+		}
+
+		available = {
+			AUS = { surrender_progress > 0.3 }
+			controls_state = 45
+			controls_state = 155
+		}	
+
+		complete_effect = {
+			AUS = { country_event = hungary.5}
+		}	
+	}
+}

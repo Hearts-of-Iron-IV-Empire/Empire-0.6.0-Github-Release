@@ -1,0 +1,71 @@
+capital = 960
+
+oob = "MAR_1699"
+
+set_stability = 0.7
+set_war_support = 0.8
+
+1700.03.03 = {
+	promote_character = MAR_Tarabai # Regent for Shivaji II, 1700 - 1707
+	retire_character = MAR_Chhatrapati_Rajaram
+}
+
+1707.01.01 = {
+	recruit_character = MAR_Chhatrapati_Shahu_I # 1707 - 1740
+	promote_character = MAR_Chhatrapati_Shahu_I
+	retire_character = MAR_Tarabai
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	motorised_infantry = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	transport = 1
+	basic_cavalry = 1	
+}
+
+set_convoys = 20
+
+add_ideas = {
+	hinduism
+	MAR_avenge_sambhaji
+	MAR_traitors_everywhere
+	MAR_maratha_army
+
+	#Laws
+	partial_economic_mobilisation
+	extensive_conscription
+}
+
+1750.1.1 = {
+	set_autonomy = {
+	    target = RAJ
+	    autonomy_state = autonomy_puppet
+	}
+}
+
+recruit_character = MAR_Chhatrapati_Rajaram # Country Leader
+recruit_character = MAR_Tarabai # Country Leader after Rajaram dies
+recruit_character = MAR_Dhanaji_Jadhav # Field Marshal
+recruit_character = MAR_Ramchandra_Pant # Field Marshal and Advisor
+activate_advisor = ramchandra_pant
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1935.11.14"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 70
+	aristocracy = 10
+	fascism = 20
+	communism = 0
+	democratic = 0
+}

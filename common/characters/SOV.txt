@@ -1,0 +1,252 @@
+characters = { 
+    ############# Country Leaders #############
+    SOV_Peter_I = { # 1682 - 1725
+        name = "Peter I" 
+        portraits = {
+            civilian = {
+                large = "GFX_Peter_I"
+            }
+            army = {
+                large = "GFX_Peter_I"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = {}
+            desc = PETER_I_DESC
+        }
+        field_marshal = { 
+            traits = { old_guard politically_connected inflexible_strategist }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    SOV_Anna_I = { # 1730 - 1740
+        name = "Anna I"
+        portraits = {
+            civilian = {
+                large = "GFX_Anna_I"
+            }
+        }
+        country_leader = {
+            expire = 1761.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SOV_Elizabeth_of_Russia = { # 1741 - 1762
+        name = "Elizabeth of Russia"
+        portraits = {
+            civilian = {
+                large = "GFX_Elizabeth_of_Russia"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SOV_Catherine_II = { # 1762 - 1796
+        name = "Catherine II"
+        portraits = {
+            civilian = {
+                large = "GFX_Catherine_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SOV_Paul_I = { # 1796 - 1801
+        name = "Paul I"
+        portraits = {
+            civilian = {
+                large = "GFX_Paul_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SOV_Alexander_I = { # 1801 - 1825
+        name = "Alexander I"
+        portraits = {
+            civilian = {
+                large = "GFX_Alexander_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SOV_boyar_duma = {
+		name = SOV_boyar_duma
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_white_transitionary_council"
+			}
+		}
+		country_leader = {
+			ideology = conservatism
+			expire = "1850.1.1"
+			id = -1
+			traits = {
+				#TODO
+			}
+		}
+	}
+    SOV_boyar_duma_peasentry = {
+		name = SOV_boyar_duma_peasentry
+
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_SOV_white_transitionary_council"
+			}
+		}
+		country_leader = {
+			ideology = anarchist_communism
+			expire = "1850.1.1"
+			id = -1
+			traits = {
+				#TODO
+			}
+		}
+	}
+    ############# Field Marshals and Generals #############
+    SOV_Aleksandr_Menshikov = {
+        name = "Aleksandr Menshikov"
+        portraits = {
+            army = {
+                large = "GFX_Menshikov"
+            }
+        }
+        field_marshal = { 
+            traits = { offensive_doctrine brilliant_strategist career_officer infantry_officer trait_reckless }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 4
+            logistics_skill = 2
+        }
+    }
+    SOV_Ivan_Yurievich_Trubetskoy = {
+        name = "Ivan Yurievich Trubetskoy"
+        portraits = {
+            army = {
+                large = "GFX_Ivan_Yurievich"
+            }
+        }
+        field_marshal = { 
+            traits = { }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    SOV_Fyodor_Apraksin = {
+        name = "Fyodor Apraksin"
+        portraits = {
+            army = {
+                large = "GFX_Fyodor_Apraksin"
+            }
+        }
+        corps_commander = { 
+            traits = { winter_specialist armor_officer media_personality war_hero }
+            skill = 5
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 4
+            logistics_skill = 5
+        }
+    }
+    SOV_Boris_Sheremetev = {
+        name = "Boris Sheremetev"
+        portraits = {
+            army = {
+                large = "GFX_Sheremetyev"
+            }
+        }
+        corps_commander = { 
+            traits = { armor_officer trait_cautious brilliant_strategist }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 4
+        }
+    }
+    SOV_Matvei_Zmayevich = {
+        name = "Matvei Zmayevich"
+        portraits = {
+            army = {
+                large = "GFX_Zmajevic"
+            }
+        }
+        corps_commander = { 
+            traits = { armor_officer politically_connected }
+            skill = 4
+            attack_skill = 4
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    SOV_Jacob_Bruce = {
+        name = "Jacob Bruce"
+        portraits = {
+            army = {
+                large = "GFX_Bruce"
+            }
+        }
+        corps_commander = { 
+            traits = { trait_cautious career_officer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    SOV_Anikita_Reppin = {
+        name = "Anikita Reppin"
+        portraits = {
+            army = {
+                large = "GFX_Anikita"
+            }
+        }
+        corps_commander = { 
+            traits = { infantry_officer trait_reckless }
+            skill = 3
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    SOV_Mikhail_Golitsyn = {
+        name = "Mikhail Golitsyn"
+        portraits = {
+            army = {
+                large = "GFX_Golitsyn"
+            }
+        }
+        corps_commander = { 
+            traits = { armor_officer harsh_leader politically_connected }
+            skill = 5
+            attack_skill = 4
+            defense_skill = 5
+            planning_skill = 2
+            logistics_skill = 5
+        }
+    }
+}

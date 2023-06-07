@@ -1,0 +1,36 @@
+
+state={
+	id=149
+	name="STATE_149" # Pohjanmaa
+	manpower = 111029
+	
+	state_category = town
+	
+	history={
+		owner = SWE
+		victory_points = {
+			3122 3 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			3122 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = SWE
+		add_core_of = FIN
+		1712.1.1 = {
+			owner = SWE
+			controller = SOV
+		}
+		1730.1.1 = {
+			owner = SWE
+			controller = SWE
+		}
+	}
+
+	provinces={
+		7 30 63 66 82 120 132 158 162 195 3026 3073 3115 3122 3149 3153 3172 6013 6045 6081 6087 6134 6137 6138 6179 6198 6212 9038 9106 9112 9156 9223 9233 11024 11041 11065 11079 11081 11121 11126 11132 11164 11204 
+	}
+}

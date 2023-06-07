@@ -1,0 +1,24 @@
+state={
+	id=30
+	name="STATE_30"
+	manpower = 936578
+
+	state_category = city
+	resources={
+		rubber=8
+	}
+
+	history={
+		owner = FRA		
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			dockyard = 1
+		}
+		add_core_of = FRA
+	}
+
+	provinces={
+		503 527 3495 3509 3523 9478 9867 11465 11613 11616 11463
+	}
+}

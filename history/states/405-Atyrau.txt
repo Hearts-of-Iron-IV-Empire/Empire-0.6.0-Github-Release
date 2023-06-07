@@ -1,0 +1,49 @@
+state={
+	id=405
+	name="STATE_405"
+
+	history={
+		owner = UZB
+		add_core_of = UZB
+		victory_points = { # Tashkent
+			1459 20
+		}
+		victory_points = {
+			12161 5
+		}
+		victory_points = { # Bukhara
+			1573 50
+		}
+		victory_points = {
+			7775 5
+		}
+		victory_points = { # Samarkand
+			1216 20
+		}
+		victory_points = {
+			12239 5
+		}
+		victory_points = {
+			1632 4
+		}
+		victory_points = {
+			1384 3
+		}
+		victory_points = {
+			10187 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+		}
+		add_core_of = KAZ
+	}
+
+	provinces={
+		756 1216 1384 1459 1554 1573 1623 1632 1919 4499 4542 4549 4629 7224 7501 7519 7584 7639 7682 7775 7777 7924 9605 10187 10205 10470 10488 10601 10671 10781 11687 12161 12218 12239 12248 12250 12314 12430 12581 12653 12722 12877 
+	}
+	manpower=3275820
+	buildings_max_level_factor=1.000
+	state_category=city
+}

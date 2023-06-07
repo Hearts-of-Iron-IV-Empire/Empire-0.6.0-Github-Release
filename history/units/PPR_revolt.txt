@@ -1,0 +1,185 @@
+division_template = {
+	name = "Dywizja Piechoty"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Brygada Kawalerii" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }     
+	}
+}
+
+units = {
+	
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6321
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 3230
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6401
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11515
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9546
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3586
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11430
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3497
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 562
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9521
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6580
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11399
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11466
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9544
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 290
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 347
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 400
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 3544
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 3544
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 3544
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 9508
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9274
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3320
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9295
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11342
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.3
+		}
+	}

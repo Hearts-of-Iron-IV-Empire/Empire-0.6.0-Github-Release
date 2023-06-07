@@ -1,0 +1,24 @@
+
+state={
+	id=817
+	name="STATE_817"
+
+	history={
+		owner = IRO
+		add_core_of = IRO
+		add_core_of = VER
+		buildings = {
+			infrastructure = 1
+		}
+		1760.1.1 = {
+			add_manpower=39000
+		}
+	}
+
+	provinces={
+		7629 13158
+	}
+	manpower=174
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

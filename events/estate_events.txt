@@ -1,0 +1,33 @@
+add_namespace = estate
+
+country_event = {
+	id = estate.1
+	title = "[ROOT.GetLeader] Dismisses The Estates"
+	desc = estate.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "So it shall be."
+		set_country_flag = absolutist_state
+		custom_effect_tooltip = absolute_state_decisions_tt
+	}
+}
+
+country_event = {
+	id = estate.2
+	title = "[ROOT.GetLeader] Summons The Estates"
+	desc = estate.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "So it shall be."
+		clr_country_flag = absolutist_state
+		custom_effect_tooltip = estates_back_decisions_tt
+		add_popularity = {
+			ideology = neutrality
+			popularity = -0.15
+		}
+	}
+}

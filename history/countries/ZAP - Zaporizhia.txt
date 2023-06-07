@@ -1,0 +1,40 @@
+capital = 225
+oob = "ZAP_1699"
+
+set_research_slots = 2
+set_stability = 0.6
+set_war_support = 0.7
+
+recruit_character = ZAP_Ivan_Mazepa
+recruit_character = ZAP_Ivan_Skoropadsky
+
+add_ideas = {
+    orthodox
+	duchy
+    ZAP_dreams_of_united_cossack_state
+    ZAP_moscow_articles
+    ZAP_zaporizhian_army
+    ZAP_cossack_baroque
+    ZAP_zaporizhian_sich
+}
+
+set_technology = {
+    infantry_weapons = 1
+    infantry_weapons1 = 1
+    gw_artillery = 1
+    tech_recon = 1
+    basic_cavalry = 1
+}
+
+set_popularities = {    
+    democratic = 25
+    fascism = 17
+    neutrality = 25
+    aristocracy = 33
+}
+set_politics = {
+    ruling_party = neutrality
+    last_election = "1687.8.4"
+    election_frequency = 48 
+    elections_allowed = no
+}

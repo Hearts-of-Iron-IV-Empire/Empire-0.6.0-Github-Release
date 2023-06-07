@@ -1,0 +1,52 @@
+
+set_country_flag = HRE_imperial_subject
+capital = 51
+set_research_slots = 3
+load_oob = Imperial_army
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	basic_cavalry = 1
+}
+
+add_ideas = {
+	catholic
+	PRS_status_elector
+}
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	set_autonomy = {
+		target = LUI
+		autonomous_state = autonomy_dominion
+	}
+}
+
+give_military_access = AUS
+give_military_access = IFC
+give_guarantee = IFC
+
+recruit_character = CLG_Joseph_Clemens_of_Bavaria
+
+set_politics = {
+	ruling_party = fascism
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 35
+	communism = 10
+	neutrality = 20
+	aristocracy = 20
+}

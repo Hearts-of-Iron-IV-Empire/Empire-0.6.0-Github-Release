@@ -1,0 +1,21 @@
+state = {
+	id = 406
+	name = STATE_406
+	manpower = 25000
+	state_category = rural
+
+	history = {
+		owner = KHL
+		add_core_of = KHL
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = { 3618 25 }
+		1771.10.1 = { owner = SOV }
+	}
+
+	provinces={ 464 468 477 545 615 618 3435 3459 3515 3538 3618 3622 6491 6498 6514 6523 6525 6564 6588 9453 9469 9513 9538 11457 11472 11482 11524 11578 }
+
+	local_supplies = 5
+}

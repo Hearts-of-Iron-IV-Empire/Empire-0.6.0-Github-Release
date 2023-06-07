@@ -1,0 +1,48 @@
+
+state={
+	id=428
+	name="STATE_428"
+	resources={
+		oil=3.000
+	}
+
+	history={
+		owner = RAJ
+		victory_points = {
+			1103 15 
+		}
+		victory_points = {
+			10118 5 
+		}
+		victory_points = {
+			9975 5 
+		}
+		victory_points = {
+			11952 5 
+		}
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+			9975 = {
+				naval_base = 2
+
+			}
+
+		}
+		1730.5.1 = {
+			owner = MAR
+			controller = MAR
+			add_core_of = MAR
+
+		}
+
+	}
+
+	provinces={
+		1103 1144 1190 4064 4132 7020 7165 7207 8076 9975 10118 11952 12037 12092 13262 13321 13322 13323 13324 13325 13329 
+	}
+	manpower=5590200
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,180 @@
+﻿capital = 763
+
+oob = "PRS_1699"
+set_war_support = 0.32
+set_country_flag = HRE_imperial_subject
+set_research_slots = 3
+
+give_military_access = AUS
+give_military_access = SAX
+give_military_access = IFC
+give_guarantee = IFC
+
+1714.8.1 = {
+	recruit_character = PRS_Frederick_Wilhelm_I
+	promote_character = PRS_Frederick_Wilhelm_I
+	retire_character = PRS_Hochmeister_Franz_Ludwig_von_der_pfaltz
+	retire_character = PRS_Frederick_I
+
+	add_ideas = kingdom
+	set_cosmetic_tag = PRS_KNG
+	set_capital = {
+	  state = 64 
+	  remember_old_capital = no
+	}
+	unlock_national_focus = PRS_solidifyinternalpower
+	unlock_national_focus = PRS_kurfurstentum
+	unlock_national_focus = PRS_absolutemonarchy
+	unlock_national_focus = PRS_juncker_parliament
+	unlock_national_focus = PRS_krontraktat
+	unlock_national_focus = PRS_crownking
+	unlock_national_focus = PRS_warcouncil
+	unlock_national_focus = PRS_tensionsinthewest
+	unlock_national_focus = PRS_supportaustrianclaim
+	unlock_national_focus = PRS_aidaustria
+	unlock_national_focus = PRS_aidengland
+	unlock_national_focus = PRS_aidtheunitedprovinces
+	unlock_national_focus = PRS_joingrandalliance
+	unlock_national_focus = PRS_tensionsinthenorth
+	unlock_national_focus = PRS_denouncesweden
+	unlock_national_focus = PRS_claimswedishpommerania
+	unlock_national_focus = PRS_sendultimatumtosweden
+	unlock_national_focus = PRS_prussianintervention
+	complete_national_focus = PRS_continue_berlin_works
+	complete_national_focus = PRS_industrial_expansion
+	complete_national_focus = PRS_found_hofkammergericht
+	complete_national_focus = PRS_finish_berlin_works
+	unlock_national_focus = PRS_protestant_work_ethos
+	complete_national_focus = PRS_takeinhuguenots
+
+	add_ideas = {
+		kingdom
+	}
+}
+
+1730.1.1 = {
+	declare_war_on = {
+	    target = POL
+	    type = annex_everything
+	}
+	set_major = yes
+}
+
+1740.1.1 = {
+	recruit_character = PRS_Frederick_II
+	promote_character = PRS_Frederick_II
+	retire_character = PRS_Frederick_Wilhelm_I
+	diplomatic_relation = { country = POL relation = war_relation active = no }
+	leave_faction = yes
+}
+
+1798.1.1 = {
+	transfer_state = 10
+	transfer_state = 97
+	transfer_state = 931
+}
+
+1812.1.1 = {
+	declare_war_on = {
+		target = SOV
+		type = annex_everything
+	}
+	POL = {
+		transfer_state = 10
+		transfer_state = 97
+		transfer_state = 931
+	}
+}
+
+add_ideas = {
+	protestant
+	extensive_conscription
+	POL_influence_over_poland_1
+}
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	interwar_antitank = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+}
+
+set_convoys = 100
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns"}
+	}
+	set_technology = {
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_submarine = 1
+		improved_submarine = 1
+		improved_destroyer = 1
+		basic_light_cruiser = 1
+		improved_light_cruiser = 1
+		basic_battleship = 1
+	}
+	
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+	}
+}
+
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1699.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 11
+	communism = 1
+	neutrality = 48
+	aristocracy = 35
+}
+
+recruit_character = PRS_Frederick_I # Country Leader (Despotism, Nobility), Field Marhsal
+recruit_character = PRS_Hochmeister_Franz_Ludwig_von_der_pfaltz # Country Leader (Nazism), Field Marshal
+recruit_character = PRS_Leopold_I_Anhalt_Dessau # Field Marshal
+recruit_character = PRS_Johann_von_Lehwaldt # Field Marshal
+recruit_character = PRS_Adrian_Bernhard_von_Borcke # General
+recruit_character = PRS_Alexander_von_Spaen # General
+recruit_character = PRS_Heino_Heinrich_von_Flemming # General
+recruit_character = PRS_Wilhelm_Magnus_von_Brünneck # General
+recruit_character = PRS_Alexander_von_Kleist # General
+recruit_character = PRS_Wilhelm_Dietrich_von_Buddenbrock # General
+recruit_character = PRS_Kurt_Christoph_von_Schwerin # General

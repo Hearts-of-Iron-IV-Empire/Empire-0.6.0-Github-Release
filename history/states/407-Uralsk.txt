@@ -1,0 +1,21 @@
+state={
+	id = 407
+	name = STATE_407
+    manpower = 25000
+    state_category = rural
+
+	history = {
+		owner = KHL 
+		add_core_of = KHL
+		buildings = {
+			infrastructure = 1
+		}
+		victory_points = { 11523 50 } #Pokrovskaya Sloboda 
+		1771.10.1 = { owner = SOV }
+	}
+
+	provinces = { 
+		365 410 452 470 497 499 566 3404 3406 3467 3486 3490 3503 3517 3551 6424 6430 6473 6479 6502 6541 6551 6574 6575 6601 9432 9445 9447 9473 9487 9530 9549 9577 11321 11395 11421 11458 11460 11473 11484 11523 11537 11538 }
+
+	local_supplies = 5
+}

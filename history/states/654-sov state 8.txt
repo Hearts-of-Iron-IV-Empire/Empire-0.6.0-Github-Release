@@ -1,0 +1,28 @@
+
+state={
+	id=654
+	name="STATE_654" # Gorno-Altaysk
+	manpower = 73510
+	
+	state_category = wasteland
+
+	history={
+		owner = KAZ
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = KAZ
+		1711.5.1 = {
+			owner = SOV
+			controller = SOV
+		}
+		1740.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+		}
+	}
+
+	provinces={
+		4781 4800 10531 10713 12509 
+	}
+}

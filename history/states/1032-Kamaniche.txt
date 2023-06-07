@@ -1,0 +1,26 @@
+state={
+	id=1032
+	name="STATE_1032"
+
+	history={
+		owner = POL
+		add_core_of = POL
+		add_core_of = UKR
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			3457 10
+		}
+		1798.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		462 3430 3457 6429
+	}
+	manpower=162011
+	buildings_max_level_factor=1.000
+	state_category=town
+}

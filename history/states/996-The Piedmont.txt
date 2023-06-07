@@ -1,0 +1,25 @@
+state={
+	id=996
+	name="STATE_996"
+	provinces={
+		1019 1132 7045 7083 7138 10051 10081 10096 10468 10495 11783 12054 12445 
+	}
+	history={
+		owner = CHR
+		add_core_of = CHR
+		1730.1.1 = {
+			owner = USA
+			add_core_of = USA
+			remove_core_of = CHR
+		}
+		1773.1.1 = {
+			add_manpower = 100000
+			victory_points = {
+				7138 3 
+			}
+		}
+	}
+	manpower=4987
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

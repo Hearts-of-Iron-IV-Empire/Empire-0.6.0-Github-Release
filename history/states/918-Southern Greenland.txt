@@ -1,0 +1,23 @@
+state={
+	id=918
+	name="STATE_918"
+
+	history={
+		owner = DEN
+		buildings = {
+			infrastructure = 1
+			12512 = {
+				naval_base = 1
+
+			}
+		}
+		add_core_of = DEN
+
+	}
+	provinces={
+		12512 
+	}
+	manpower=8560
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

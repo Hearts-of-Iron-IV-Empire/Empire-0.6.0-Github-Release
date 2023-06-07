@@ -1,0 +1,33 @@
+
+state={
+	id=540
+	name="STATE_540"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = ANG
+		add_core_of = ANG
+		
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			8248 = {
+				naval_base = 1
+			}
+		}
+		1712.1.1 = {
+			owner = COG
+			controller = COG
+			add_core_of = COG
+		}
+	}
+
+	provinces={
+		8248 12981 
+	}
+	manpower=195284
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

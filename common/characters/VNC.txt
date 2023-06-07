@@ -1,0 +1,26 @@
+characters = {
+    VNC_Nicolò_Cassana = { # 1694 - 1700
+        name = "Nicolò Cassana"
+        portraits = {
+            civilian = {
+                large = "GFX_Nicolò_Cassana"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+    VNC_Alvise_II_Mocenigo = { # 1700 - 1709
+        name = "Alvise II Mocenigo"
+        portraits = {
+            civilian = {
+                large = "GFX_Alvise_II_Mocenigo"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+}

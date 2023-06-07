@@ -1,0 +1,2397 @@
+###########################
+# Spanish Events
+###########################
+
+add_namespace = spain
+
+# Death of Carlos II
+country_event = {
+	id = spain.1
+	title = spain.1.t
+	desc = spain.1.d
+	picture = GFX_report_event_charles_deathbed
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		date > 1700.11.1	
+		has_country_leader = {
+		    name = "Carlos II"
+		    ruling_only = yes
+		}
+	}
+	mean_time_to_happen = {
+   		days = 1
+	}
+	option = {
+		kill_ideology_leader = neutrality
+		custom_effect_tooltip = france.20.a_tt
+		promote_character = SPR_Regency
+		set_global_flag = SPR_Carlos_is_dead
+		hidden_effect = {
+			add_threat = 10
+			news_event = { id = mod.1 days = 1 }
+		}
+		name = "R.I.P."
+		add_political_power = -100
+		add_stability = -0.10
+	}
+}
+
+# Aragonese Revolt
+
+country_event = {
+	id = spain.3
+	title = spain.3.t
+	desc = spain.3.d
+	picture = GFX_report_event_aragon
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Treasonous Bastards!"
+
+		#hidden_effect = { 
+		#	news_event = { id = mod.7 days = 1 }
+		#}
+		if = {
+			limit = {
+				167 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 167 }
+			add_state_claim = 167
+		}
+		if = {
+			limit = {
+				166 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 166 }
+			add_state_claim = 166
+		}
+		if = {
+			limit = {
+				876 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 876 }
+			add_state_claim = 876
+		}
+		if = {
+			limit = {
+				165 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 165 }
+			add_state_claim = 165
+		}
+		if = {
+			limit = {
+				115 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 115 }
+			add_state_claim = 115
+		}
+		if = {
+			limit = {
+				797 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 797 }
+			add_state_claim = 797
+		}
+		if = {
+			limit = {
+				177 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 177 }
+			add_state_claim = 177
+		}
+		if = {
+			limit = {
+				114 = { has_resistance = yes }
+			}
+			ARA = { transfer_state = 114 }
+			add_state_claim = 114
+		}
+		hidden_effect = {
+			ARA = {
+				load_oob = "ARA_revolt"
+			}
+		}
+		add_stability = -0.15
+		set_country_flag = ARA_revolt_tt
+	}
+}
+
+# Aragon declares war
+
+country_event = {
+	id = spain.4
+	title = "Outbreak Of Hostilities With Aragon"
+	desc = spain.4.d
+	picture = GFX_report_event_aragon
+
+	mean_time_to_happen = { days = 14 } 
+
+	fire_only_once = yes
+		trigger = {
+			tag = SPR
+			country_exists = ARA
+		}
+
+	option = {
+		name = "Death to traitors!"
+		declare_war_on = {
+			target = ARA
+			type = civil_war
+		}
+	}
+}
+
+# Aragon defeated
+
+country_event = {
+	id = spain.401
+	title = "Aragon Defeated!"
+	desc = spain.401.d
+	picture = GFX_report_event_aragon
+
+	mean_time_to_happen = { days = 1 } 
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		country_exists = ARA
+		ARA = { has_capitulated = yes }
+	}
+
+	option = {
+		name = "Order is restored!"
+		annex_country = {
+		    target = ARA
+		    transfer_troops = no
+		}
+	}
+}
+
+# POPE Blessing
+country_event = {
+	id = spain.5
+	title = spain.5.t
+	desc = spain.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = spain.5.a
+		SPR = { country_event = spain.7 }
+	}
+	option = {
+		name = spain.5.b
+		SPR = { country_event = spain.8 }
+	}
+}
+
+# Advisor Switch?
+
+country_event = {
+	id = spain.6
+	title = spain.6.t
+	desc = spain.6.d
+	picture = GFX_report_event_royal_court
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Stay with Maria Anna
+		name = spain.6.a
+		add_political_power = 50
+		FRA = { add_to_variable = { var = ger_gateway_to_europe_influence value = 5 } }
+		set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+		subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+		set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+		subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+		add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+		ai_chance = {
+			factor = 25
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 49
+				}
+			}
+			modifier = {
+				factor = 4000
+				ENG = { has_completed_focus = eng_go_with_the_tories }
+			}
+		}
+		set_country_flag = SPR_went_with_Maria
+	}
+	option = { # Go with the Cardinal
+		name = spain.6.b
+		swap_ideas = {
+		    remove_idea = maria_anna
+		    add_idea = cardinal_portocarrero 
+		}
+		AUS = { add_to_variable = { var = eng_gateway_to_europe_influence value = 5 } }
+		set_variable = { var = eng_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+		subtract_from_variable = { var = eng_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+		set_variable = { var = ger_temp_trade_influence value = FRA.ger_gateway_to_europe_influence }
+		subtract_from_variable = { var = ger_temp_trade_influence value = AUS.eng_gateway_to_europe_influence }
+		add_to_variable = { var = gateway_to_europe_influence_pp_total value = 10 }
+		
+		ai_chance = {
+			factor = 75
+			modifier = {
+				factor = 0.5
+				has_opinion = {
+					target = FRA
+					value < 0
+				}
+			}
+		}
+		set_country_flag = SPR_went_with_Cardinal
+	}
+}
+
+#Good news pope
+
+country_event = {
+	id = spain.7
+	title = spain.7.t
+	desc = spain.7.d
+ 	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = spain.7.a
+		add_political_power = 150
+	}
+}
+
+#Bad news pope
+
+country_event = {
+	id = spain.8
+	title = spain.8.t
+	desc = spain.8.d
+ 	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = {
+		name = spain.8.a
+		add_political_power = -50 
+	}
+}
+
+# Influence Spanish court; notification event of AUS faction leading
+
+country_event = {
+	id = spain.9
+	title = spain.9.t
+	desc = {
+		text = spain.9.d.a
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	desc = {
+		text = spain.9.d.b
+		trigger = {
+			original_tag = FRA
+		}
+	}
+	picture = GFX_report_event_royal_court
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Ok."
+		trigger = {
+			original_tag = SPR
+		}
+	}
+
+	# Ok
+	option = {
+		name = "Ok."
+		trigger = {
+			original_tag = FRA
+		}
+	}
+}
+
+# Influence Spanish court; notification event of FRA faction leading
+
+country_event = {
+	id = spain.10
+	title = spain.10.t
+	desc = {
+		text = spain.10.d.a
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	desc = {
+		text = spain.10.d.b
+		trigger = {
+			original_tag = AUS
+		}
+	}
+	picture = GFX_report_event_royal_court
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Ok."
+		trigger = {
+			original_tag = SPR
+		}
+	}
+
+	# Ok
+	option = {
+		name = "Ok."
+		trigger = {
+			original_tag = AUS
+		}
+	}
+}
+
+#large treasure fleet arrives from the indies
+
+country_event = {
+	id = spain.11
+	title = "Large treasure fleet arrives in Spain"
+	desc = spain.11.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Very Good!"
+		add_timed_idea = {
+		    idea = SPR_large_treasure
+		    days = 180
+		}
+	}
+}
+
+# Medium treasure fleet arrives from the indies
+
+country_event = {
+	id = spain.12
+	title = "Medium-sized treasure fleet arrives in Spain"
+	desc = spain.12.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Good!"
+		add_timed_idea = {
+		    idea = SPR_medium_treasure
+		    days = 180
+		}
+	}
+}
+
+#small treasure fleet arrives from the indies
+
+country_event = {
+	id = spain.13
+	title = "Small treasure fleet arrives in Spain"
+	desc = spain.13.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Is that all?"
+		add_timed_idea = {
+		    idea = SPR_small_treasure
+		    days = 180
+		}
+	}
+}
+
+#lost at sea
+
+country_event = {
+	id = spain.14
+	title = "Treasure fleet lost at sea!"
+	desc = spain.14.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "This is a disaster!"
+	}
+}
+
+#charles is dying
+
+country_event = {
+	id = spain.15
+	title = spain.15.t
+	desc = spain.15.d
+
+	picture = GFX_report_event_charles_deathbed
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		AND = {
+			date > 1700.09.01	
+		}
+		has_country_leader = {
+		    name = "Carlos II"
+		    ruling_only = yes
+		}
+	}
+	mean_time_to_happen = {
+   		days = 1
+	}
+	option = {
+		name = "It would appear the end is drawing near..."
+		add_country_leader_trait = rapidly_deteriorating_health
+	}
+}
+
+#estates of castille ratify succession
+
+country_event = {
+	id = spain.16
+	title = spain.16.t
+	desc = spain.16.d
+	picture = GFX_report_event_castille
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		OR = {
+			has_completed_focus = SPR_bourbon_full
+			has_completed_focus = SPR_bourbon_partition
+		}
+		date < 1717.1.1
+	}
+	mean_time_to_happen = {
+   		days = 15
+	}
+	option = {
+		name = "As they should!"
+		add_political_power = 80
+		add_stability = 0.05
+	}
+}
+
+#estates of aragon are divided!
+
+country_event = {
+	id = spain.17
+	title = spain.17.t
+	desc = spain.17.d
+	picture = GFX_report_event_aragon
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		OR = {
+			has_completed_focus = SPR_bourbon_full
+			has_completed_focus = SPR_bourbon_partition
+		}
+		date < 1717.1.1
+	}
+	mean_time_to_happen = {
+   		days = 30
+	}
+	option = {
+		name = "Damn them!"
+		add_political_power = -50
+		add_stability = -0.05
+		activate_mission = SPR_estates_of_majorca_announce_allegiance
+		activate_mission = SPR_estates_of_sardinia_announce_allegiance
+		activate_mission = SPR_estates_of_naples_announce_allegiance
+		activate_mission = SPR_estates_of_valencia_announce_allegiance
+		activate_mission = SPR_estates_of_aragon_announce_allegiance
+		activate_mission = SPR_estates_of_catalonia_announce_allegiance
+		activate_mission = SPR_estates_of_sicily_announce_allegiance
+	}
+}
+
+#majorca philip
+
+country_event = {
+	id = spain.18
+	title = spain.18.t
+	desc = spain.18.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Good."
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+#majorca charles
+
+country_event = {
+	id = spain.19
+	title = spain.19.t
+	desc = spain.19.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's treason then..."
+		177 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+		797 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+	}
+}
+
+#sardinia philip
+
+country_event = {
+	id = spain.20
+	title = spain.20.t
+	desc = spain.20.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Good."
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+#sardinia charles
+
+country_event = {
+	id = spain.21
+	title = spain.21.t
+	desc = spain.21.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's treason then..."
+		114 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+	}
+}
+
+#valencia philip
+
+country_event = {
+	id = spain.22
+	title = spain.22.t
+	desc = spain.22.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Good."
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+#valencia charles
+
+country_event = {
+	id = spain.23
+	title = spain.23.t
+	desc = spain.23.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "It's treason then..."
+		167 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+	}
+}
+
+#naples event
+
+country_event = {
+	id = spain.24
+	title = spain.24.t
+	desc = spain.24.d
+
+	is_triggered_only = yes
+	
+	option = {
+		ai_chance = {
+		    base = 40
+
+		    modifier = {
+		        factor = 10
+		        SPR = { has_completed_focus = SPR_envoy_to_naples } 
+		    }
+		}
+		name = "Our loyalty to the king is without question!"
+		SPR = { country_event = spain.25 }
+		add_political_power = 25
+		add_stability = 0.05
+	}
+
+	option = {
+		ai_chance = {
+		    base = 20
+		}
+		name = "We will not support this pretender!"
+		SPR = { country_event = spain.26 }
+		SPR = { end_puppet = TSC }
+		add_war_support = 0.10
+	}
+}
+
+#naples yes
+
+country_event = {
+	id = spain.25
+	title = spain.25.t
+	desc = spain.25.d
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "They made the right choice."
+		add_political_power = 20
+		add_stability = 0.01
+	}
+
+}
+#naples no
+
+country_event = {
+	id = spain.26
+	title = spain.26.t
+	desc = spain.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's treason then..."
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = TSC
+		}
+	}
+}
+
+#aragon philip
+
+country_event = {
+	id = spain.27
+	title = spain.27.t
+	desc = spain.27.d
+
+	is_triggered_only = yes
+	
+	# Ok
+	option = {
+		name = "Good."
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+#aragon charles
+
+country_event = {
+	id = spain.28
+	title = spain.28.t
+	desc = spain.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's treason then..."
+		166 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		}
+		876 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		}  
+	}
+}
+
+#catalonia philip
+
+country_event = {
+	id = spain.29
+	title = spain.29.t
+	desc = spain.29.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Their loyalty is appreciated!"
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+
+#catalonia charles
+
+country_event = {
+	id = spain.30
+	title = spain.30.t
+	desc = spain.30.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's treason then..."
+		165 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+	}
+}
+
+#sicily philip
+
+country_event = {
+	id = spain.31
+	title = spain.31.t
+	desc = spain.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Crown thanks them for their support!"
+		add_political_power = 20
+		add_stability = 0.01
+	}
+}
+
+#sicily charles
+
+country_event = {
+	id = spain.32
+	title = spain.32.t
+	desc = spain.32.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's treason then..."
+		115 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		} 
+	}
+}
+
+#castillian nobility opposes charles
+
+country_event = {
+	id = spain.33
+	title = spain.33.t
+	desc = spain.33.d
+	picture = GFX_report_event_castille
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		OR = {
+			has_completed_focus = SPR_habsburg_full
+			has_completed_focus = SPR_habsburg_partition
+		}	
+	}
+	mean_time_to_happen = {
+   		days = 15
+	}
+	option = {
+		name = "How dare they!"
+		add_stability = -0.20
+		hidden_effect = {
+			country_event = {
+				id = spain.36
+				days = 70
+			}
+		}
+	}
+}
+
+#aragon supports charles
+
+country_event = {
+	id = spain.34
+	title = spain.34.t
+	desc = spain.34.d
+	picture = GFX_report_event_aragon
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		OR = {
+			has_completed_focus = SPR_habsburg_full
+			has_completed_focus = SPR_habsburg_partition
+		}	
+	}
+	mean_time_to_happen = {
+   		days = 30
+	}
+	option = {
+		name = "Their support is most welcome!"
+		add_political_power = 50
+	}
+}
+
+#opposition forms in navarra
+
+country_event = {
+	id = spain.35
+	title = spain.35.t
+	desc = spain.35.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		OR = {
+			has_completed_focus = SPR_habsburg_full
+			has_completed_focus = SPR_habsburg_partition
+		}	
+	}
+	mean_time_to_happen = {
+   		days = 32
+	}
+	option = {
+		name = "Damn them!"
+		172 = { 
+			remove_core_of = SPR 
+			start_resistance = yes
+		}
+	}
+}
+
+#protests in madrid
+
+country_event = {
+	id = spain.36
+	title = "Protests in Madrid"
+	desc = spain.36.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "They have the right to voice discontent"
+		add_political_power = -80
+		hidden_effect = {
+			country_event = {
+				id = spain.37
+				days = 140
+			}
+		}
+	}
+
+	option = {
+		name = "Send in the army!"
+		add_manpower = -50
+		add_stability = -0.03
+		41 = {
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = spain.37
+				days = 70
+			}
+		}
+	}
+}
+
+#riots in adalusia
+
+country_event = {
+	id = spain.37
+	title = "Violent Uprising in Andalusia"
+	desc = spain.37.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "It will come to pass, eventually."
+		add_political_power = -100
+		hidden_effect = {
+			country_event = {
+				id = spain.38
+				days = 140
+			}
+		}
+		169 = {
+			damage_building = {
+			    type = industrial_complex
+			    damage = 1
+			}
+		}
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = -0.05
+		}
+	}
+
+	option = {
+		name = "Off with their heads!"
+		add_manpower = -400
+		add_stability = -0.05
+		169 = {
+			damage_building = {
+			    type = industrial_complex
+			    damage = 1
+			}
+		}
+		169 = {
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+		hidden_effect = {
+			country_event = {
+				id = spain.38
+				days = 70
+			}
+		}
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.05
+		}
+	}
+}
+
+#loyalist lynched
+
+country_event = {
+	id = spain.38
+	title = "Loyalist Nobleman Lynched in Valladolid"
+	desc = spain.38.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "He shall be remembered as a martyr!"
+		add_manpower = -1
+		add_war_support = 0.05
+		hidden_effect = {
+			country_event = {
+				id = spain.39
+				days = 70
+			}
+		}
+	}
+
+	option = {
+		name = "This will create a divide between moderates and radicals!"
+		add_manpower = -1
+		add_political_power = 50
+		hidden_effect = {
+			country_event = {
+				id = spain.39
+				days = 70
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.39
+	title = "Castillian Soldiers Deffect"
+	desc = spain.39.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "Those damned traitors!"
+		add_manpower = -30000
+		hidden_effect = {
+			country_event = {
+				id = spain.40
+				days = 70
+			}
+		}
+		add_popularity = {
+		    ideology = aristocracy
+		    popularity = 0.05
+		}
+	}
+}
+
+country_event = {
+	id = spain.40
+	title = "Sabotage in Léon!"
+	desc = spain.40.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "Death."
+		hidden_effect = {
+			country_event = {
+				id = spain.41
+				days = 70
+			}
+		}
+		add_stability = -0.05
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.03
+		}
+	}
+	option = {
+		name = "Banishment."
+		add_stability = -0.02
+		hidden_effect = {
+			country_event = {
+				id = spain.41
+				days = 140
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.41
+	title = "Formation of a pro-Bourbon army in La Mancha"
+	desc = spain.41.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "Force them to see reason!"
+		hidden_effect = {
+			country_event = {
+				id = spain.42
+				days = 5
+			}
+		}
+		add_stability = -0.05
+	}
+	option = {
+		name = "This is an act of war!"
+		add_stability = -0.10
+		country_event = {
+			id = spain.431
+			days = 1
+		}
+	}
+}
+
+country_event = {
+	id = spain.42
+	title = "Situation cools off, for now..."
+	desc = spain.42.d
+
+	fire_only_once = yes
+	is_triggered_only = yes 
+
+	option = {
+		name = "We have to prepare for the inevitable..."
+		#hidden_effect = {
+		#	country_event = {
+		#		id = spain.43
+		#		days = 140
+		#	}
+		#}
+		set_country_flag = SPR_civil_war_is_coming
+	}
+}
+
+country_event = {
+	id = spain.43
+	title = "The Castilian Civil War!"
+	desc = spain.43.d
+
+	fire_only_once = yes
+	is_triggered_only = no
+
+	mean_time_to_happen = {
+   		days = 140
+	}
+
+	trigger = {
+		has_country_flag = SPR_civil_war_is_coming
+		NOT = {
+			has_completed_focus = SPR_grant_castille_privileges
+		}
+		NOT = {
+			has_completed_focus = SPR_provoke_the_castilian_revolt
+		}
+	}
+
+	option = {
+		name = "This is an act of war!"
+		create_dynamic_country = {
+			original_tag = SPR	
+			set_cosmetic_tag = castille
+			transfer_state = 175
+			transfer_state = 871
+			transfer_state = 169
+			transfer_state = 870
+			transfer_state = 174
+			transfer_state = 873
+			transfer_state = 171
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				set_popularities = {
+					aristocracy = 45
+					neutrality = 40
+					fascism = 5
+					communism = 5
+					democratic = 5
+				}
+				division_template = {
+					name = "Castillian Noble Defectors"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { PREV = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+				}
+			}
+			every_country = {
+		    	limit = { # some sanity checks
+		            original_tag = SPR
+		        }
+		        PREV = {
+		        	declare_war_on = { # declare war on
+		                target = PREV # previous scope (random neighbor)
+		                type = civil_war # standard wargoal
+		            }
+		        }
+		    }
+		}
+		set_country_flag = Castilian_nobility_revolt
+	}
+}
+
+country_event = {
+	id = spain.431
+	title = "The Castilian Civil War!"
+	desc = spain.43.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "This is an act of war!"
+		create_dynamic_country = {
+			original_tag = SPR	
+			set_cosmetic_tag = castille
+			transfer_state = 175
+			transfer_state = 871
+			transfer_state = 169
+			transfer_state = 870
+			transfer_state = 174
+			transfer_state = 873
+			transfer_state = 171
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+				}
+				set_popularities = {
+					aristocracy = 45
+					neutrality = 40
+					fascism = 5
+					communism = 5
+					democratic = 5
+				}
+				division_template = {
+					name = "Castillian Noble Defectors"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+			
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+			
+						infantry = { x = 2 y = 0 }
+						infantry = { x = 2 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { PREV = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"Castillian Noble Defectors\" division_template = \"Castillian Noble Defectors\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+				}
+			}
+			every_country = {
+		    	limit = { # some sanity checks
+		            original_tag = SPR
+		        }
+		        PREV = {
+		        	declare_war_on = { # declare war on
+		                target = PREV # previous scope (random neighbor)
+		                type = civil_war # standard wargoal
+		            }
+		        }
+		    }
+		}
+		set_country_flag = Castilian_nobility_revolt
+	}
+}
+
+country_event = {
+	id = spain.44
+	title = "Castilian Revolt Destroyed!"
+	desc = spain.44.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = SPR
+		has_country_flag = Castilian_nobility_revolt
+		any_country_with_original_tag = {
+			original_tag_to_check = SPR
+			NOT = { tag = SPR }
+			exists = no
+		}
+		
+	}
+	mean_time_to_happen = {
+   		days = 1
+	}
+	option = {
+		name = "Order is restored!"
+		add_stability = 0.10
+		add_political_power = 100
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = 0.10
+		}
+	}
+}
+
+country_event = {
+	id = spain.45
+	title = "Spain Denounces Treaty of Utrecht"
+	desc = spain.45.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They are going down a path we cannot follow!"
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			remove_from_faction = SPR
+			SPR = { country_event = spain.47 }
+		}
+		else_if = {
+			limit = {
+				SPR =  { is_faction_leader = yes }
+			}
+			leave_faction = yes
+			SPR = { country_event = spain.47 }
+		}
+	}
+}
+
+country_event = {
+	id = spain.46
+	title = "Spain Denounces Treaty of London"
+	desc = spain.46.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They are going down a path we cannot follow!"
+		if = {
+			limit = {
+				is_faction_leader = yes
+			}
+			remove_from_faction = SPR
+			SPR = { country_event = spain.47 }
+		}
+		else_if = {
+			limit = {
+				SPR =  { is_faction_leader = yes }
+			}
+			leave_faction = yes
+			SPR = { country_event = spain.47 }
+		}
+	}
+}
+
+# FROM kicks us
+
+country_event = {
+	id = spain.47
+	title = "[FROM.GetName] abandons our cause!"
+	desc = spain.47.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Curse them!"
+		reverse_add_opinion_modifier = {
+		    target = FROM
+		    modifier = faction_traitor
+		}
+		FROM = {
+			reverse_add_opinion_modifier = {
+		    target = ROOT
+		    modifier = faction_traitor
+			}
+		}	
+	}
+}
+
+news_event = {
+	id = spain.48
+	title = "Spain Announces Her Ambitions"
+	desc = spain.48.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "All shall tremble before us!"
+		trigger = {
+			original_tag = SPR
+		}
+	}
+	option = {
+		name = "A concern for peace and stability in the world..."
+		trigger = {
+			NOT = { original_tag = SPR }
+		}
+	}
+}
+
+country_event = {
+	id = spain.49
+	title = "Spain Seizes Sardinia"
+	desc = spain.49.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Soon our empire will be reunited!"
+		transfer_state = 114
+	}
+}
+
+country_event = {
+	id = spain.50
+	title = "Spain Seizes Sardinia"
+	desc = spain.50.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We must issue a protest!"
+		SPR = {
+			country_event = {
+				id = spain.51
+				days = 2
+			}
+		}
+		add_political_power = -10
+	}
+
+	option = {
+		name = "It's a rightful Spanish claim."
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = spain.51
+	title = "[FROM.GetName] issues a diplomatic protest!"
+	desc = spain.51.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Their words will not stop us!"
+		add_political_power = -20
+	}
+}
+
+country_event = {
+	id = spain.52
+	title = "Spain demands the return of Gibraltar"
+	desc = spain.51.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They will have to come and get it!"
+		add_war_support = 0.05
+		SPR = {
+			country_event = {
+				id = spain.53
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "It is not worth another European war."
+		SPR = { transfer_state = 114 }
+		SPR = {
+			country_event = {
+				id = spain.54
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.53
+	title = "[FROM.GetName] refuses."
+	desc = spain.53.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They know the consequences."
+		create_wargoal = {
+		    type = take_state_focus
+		    generator = { 114 }
+		    target = ENG
+		}
+	}
+}
+
+country_event = {
+	id = spain.54
+	title = "[FROM.GetName] returns Gibraltar."
+	desc = spain.54.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We welcome them back!"
+		set_truce = {
+		    target = ENG
+		    days = 180
+		}
+	}
+}
+
+country_event = {
+	id = spain.55
+	title = "James Stuart's response."
+	desc = spain.55.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Together we will establish a new world order!"
+		ENG = {
+			country_event = {
+				id = spain.56
+				days = 5
+			}
+		}
+		add_ideas = SPR_pact_with_james_stuart
+	}
+}
+
+country_event = {
+	id = spain.56
+	title = "The Old Pretender plans his return."
+	desc = spain.56.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "This is worrysome!"
+		add_stability = -0.10
+	}
+}
+
+#assassin strikes at louis xiv
+
+country_event = {
+	id = spain.57
+	title = "The tragic death of Louis XIV"
+	desc = spain.57.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "The whole of France is in mourning."
+		add_stability = -0.10
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Louis XV"
+			picture = "louis_de_france.dds"
+			ideology = despotism
+			traits = {
+			}
+		}
+		trigger = {
+		 	original_tag = FRA
+		}
+	}
+
+	option = {
+		name = "We shall express our most sincere condoleances!"
+		trigger = {
+		 	original_tag = SPR
+		}
+	}
+}
+
+country_event = {
+	id = spain.58
+	title = "Spanish Plot Uncovered!"
+	desc = spain.58.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They shall pay for this!"
+		add_war_support = 0.10
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = SPR
+		}
+	}
+}
+
+country_event = {
+	id = spain.59
+	title = "Our Spy Discovered!"
+	desc = spain.59.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "This is a disaster."
+	}
+}
+
+country_event = {
+	id = spain.60
+	title = "Mission Failure"
+	desc = spain.60.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Perhaps we should let nature run it's course."
+	}
+	option = {
+		name = "If at first you don't succeed..."
+		if = {
+			limit = {
+				NOT = { has_done_agency_upgrade = upgrade_suicide_pills }
+				NOT = { has_done_agency_upgrade = upgrade_commando_training }
+			}
+			random_list = {
+				33 = {
+					country_event = spain.57
+					FRA = {
+						country_event = spain.57
+					}
+				}
+				33 = {
+					country_event = spain.59
+					FRA = {
+						country_event = spain.58
+					}
+				}
+				33 = {
+					country_event = spain.60
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				has_done_agency_upgrade = upgrade_suicide_pills
+				NOT = { has_done_agency_upgrade = upgrade_commando_training }
+			}
+			random_list = {
+				40 = {
+					country_event = spain.57
+					FRA = {
+						country_event = spain.57
+					}
+				}
+				20 = {
+					country_event = spain.59
+					FRA = {
+						country_event = spain.58
+					}
+				}
+				40 = {
+					country_event = spain.60
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				NOT = { has_done_agency_upgrade = upgrade_suicide_pills }
+				has_done_agency_upgrade = upgrade_commando_training 
+			}
+			random_list = {
+				50 = {
+					country_event = spain.57
+					FRA = {
+						country_event = spain.57
+					}
+				}
+				30 = {
+					country_event = spain.59
+					FRA = {
+						country_event = spain.58
+					}
+				}
+				20 = {
+					country_event = spain.60
+				}
+			}
+		}
+
+		if = {
+			limit = {
+				has_done_agency_upgrade = upgrade_suicide_pills
+				has_done_agency_upgrade = upgrade_commando_training 
+			}
+			random_list = {
+				50 = {
+					country_event = spain.57
+					FRA = {
+						country_event = spain.57
+					}
+				}
+				20 = {
+					country_event = spain.59
+					FRA = {
+						country_event = spain.58
+					}
+				}
+				30 = {
+					country_event = spain.60
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.61
+	title = "Philip of Spain Presses for the Abdication of King [FRA.GetLeader]"
+	desc = spain.61.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "He is right! This will stabilize our Realms!"
+		retire_country_leader = yes 
+		promote_character = SPR_Philip_V
+		SPR = {
+			set_autonomy = {
+				target = FRA
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+		}	
+		SPR = {
+			set_autonomy = {
+				target = QUE
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.2
+			}
+		}
+	}
+
+	option = {
+		name = "How dare he suggest such a thing!"
+	}
+}
+
+country_event = {
+	id = spain.62
+	title = "The Sale of The Southern Netherlands"
+	desc = spain.62.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "It is the Austrians' birthright."
+		trigger = {
+			country_exists = AUS
+			AUS = { is_subject = no }
+			AUS = { NOT = { has_country_flag = refused_to_buy_netherlands }}
+		}
+		AUS = {
+			country_event = {
+				id = spain.63
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "The Dutch seem the logical candidate here."
+		trigger = {
+			country_exists = HOL
+			HOL = { is_subject = no }
+			HOL = { NOT = { has_country_flag = refused_to_buy_netherlands }}
+		}
+		HOL = {
+			country_event = {
+				id = spain.63
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "The Wittelsbachs have the most recent ties with the area."
+		trigger = {
+			country_exists = BAV
+			BAV = { is_subject = no }
+			BAV = { NOT = { has_country_flag = refused_to_buy_netherlands }}
+		}
+		BAV = {
+			country_event = {
+				id = spain.63
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "How about they buy out their own independence?"
+		SPR = {
+			end_puppet = BEL
+			add_ideas = SPR_payment_for_the_low_countries_income
+		}
+		BEL = {
+			add_ideas = SPR_payment_for_the_low_countries_outgoing
+		}
+	}
+}
+
+#offer from spain
+
+country_event = {
+	id = spain.63
+	title = "The Sale of The Southern Netherlands"
+	desc = spain.63.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "It is a great deal."
+		add_ideas = SPR_payment_for_the_low_countries_outgoing
+		set_country_flag = buy_netherlands
+		SPR = {
+			country_event = {
+				id = spain.65
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "Nobody wants the Southern Netherlands!."
+		set_country_flag = refused_to_buy_netherlands
+		SPR = {
+			country_event = {
+				id = spain.64
+				days = 2
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.64
+	title = "[FROM.GetName] refuses!"
+	desc = spain.64.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Perhaps we should keep them after all."
+	}
+
+	option = {
+		name = "We should try with another candidate."
+		country_event = spain.62
+	}
+}
+
+country_event = {
+	id = spain.65
+	title = "[FROM.GetName] accepts!"
+	desc = spain.65.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We shall officialize the transfer immediatly!."
+		if = {
+			limit = {
+				AUS = { has_country_flag = buy_netherlands }
+			}
+			AUS = {
+				set_autonomy = {
+					target = BEL
+					autonomous_state = autonomy_viceroyalty
+					freedom_level = 0.2
+				}
+			}
+		}
+		if = {
+			limit = {
+				BAV = { has_country_flag = buy_netherlands }
+			}
+			BAV = {
+				set_autonomy = {
+					target = BEL
+					autonomous_state = autonomy_viceroyalty
+					freedom_level = 0.2
+				}
+			}
+		}
+		if = {
+			limit = {
+				HOL = { has_country_flag = buy_netherlands }
+			}
+			HOL = {
+				transfer_state = 6
+				transfer_state = 34
+				transfer_state = 8
+				transfer_state = 793
+				transfer_state = 968
+			}
+		}
+		add_ideas = SPR_payment_for_the_low_countries_income
+	}
+
+}
+
+country_event = {
+	id = spain.66
+	title = "Succession Of Austria"
+	desc = spain.66.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Bella gerant alii, tu felix Austria nube."
+		kill_country_leader = yes
+		promote_character = SPR_Charles_I
+		ai_chance = {
+			factor = 100
+		}
+		SPR = {
+			country_event = {
+				id = spain.67
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "We shall rule ourselves forever!"
+		if = {
+			limit = {
+				is_in_faction_with = SPR
+			}
+			leave_faction = yes
+		}
+		SPR = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ROOT
+			}
+		}
+		kill_country_leader = yes
+		SPR = {
+			country_event = {
+				id = spain.68
+				days = 2
+			}
+		}
+	}
+
+}
+
+country_event = {
+	id = spain.67
+	title = "The Fate Of Austria"
+	desc = spain.67.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Unite The Thrones!"
+		annex_country = {
+		    target = AUS
+		    transfer_troops = no
+		}
+		ai_chance = {
+			factor = 100
+		}
+		set_cosmetic_tag = SPR_habsburg_empire
+	}
+
+	option = {
+		name = "These states are better ruled seperatly."
+		set_autonomy = {
+			target = AUS
+			autonomous_state = autonomy_viceroyalty
+			freedom_level = 0.5
+		}
+	}
+}
+
+#emperor demands pledge of loyalty
+
+country_event = {
+	id = spain.69
+	title = "The Emperor Revokes The Privilegia"
+	desc = spain.69.d
+	is_triggered_only = yes
+
+	option = {
+		name = "We Are Their Servants"
+		FROM = { puppet = ROOT }
+		FROM = { country_event = spain.70 } 
+	}
+
+	option = {
+		name = "We would rather have death!"
+		FROM = { add_opinion_modifier = { target = ROOT modifier = abandoned_hre } }
+		FROM = {
+			diplomatic_relation = {
+			    country = ROOT
+			    relation = guarantee
+			    active = no
+			}
+		}
+		set_country_flag = left_the_empire
+		clr_country_flag  = HRE_imperial_subject
+		FROM = { country_event = spain.71 } 
+	}
+}
+
+#accept vassalization
+
+country_event = {
+	id = spain.70
+	title = austria.21.t
+	desc = austria.21.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.21.a
+	}
+}
+#refuse vassalization
+country_event = {
+	id = spain.71
+	title = austria.22.t
+	desc = austria.22.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.22.a
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+	}
+}
+
+country_event = {
+	id = spain.72
+	title = "[FROM.GetName] Demands Our Subjugation"
+	desc = spain.72.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Resisting is pointless."
+		FROM = { puppet = ROOT }
+		FROM = { country_event = spain.74 } 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				is_major = no
+			}
+		}
+	}
+
+	option = {
+		name = "Proposterous!"
+		FROM = { country_event = spain.73 } 
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 8
+				is_major = yes
+			}
+		}
+	}
+}
+
+country_event = {
+	id = spain.73
+	title = "[FROM.GetName] Dares To Resist!"
+	desc = spain.73.d
+	is_triggered_only = yes
+
+	option = {
+		name = "They shall pay in blood."
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+	}
+}
+
+country_event = {
+	id = spain.74
+	title = "[FROM.GetName] Submits!"
+	desc = spain.74.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Good."
+	}
+}
+
+# spain demands artois
+
+country_event = {
+	id = spain.75
+	title = "[FROM.GetName] Demands Artois"
+	desc =spain.75.d
+	is_triggered_only = yes
+
+	option = {
+		name = "The demand is acceptable."
+		if = {
+			limit = {
+				BEL = { is_subject_of = SPR }
+			}
+			BEL = { transfer_state = 29 }
+		}
+		else = {
+			SPR = { transfer_state = 29 }
+		}
+		SPR = { country_event = spain.76 }
+	}
+
+	option = {
+		name = "We will never give up our land!"
+		SPR = { country_event = spain.77 } 
+	}
+}
+
+country_event = {
+	id = spain.76
+	title = "[FROM.GetName] Transfers Artois."
+	desc = spain.76.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Good."
+	}
+}
+
+country_event = {
+	id = spain.77
+	title = "[FROM.GetName] Refuses Demands."
+	desc = spain.77.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Damn them."
+		if = {
+			limit = {
+				BEL = { is_subject_of = SPR }
+			}
+			BEL = { add_state_claim = 29 }
+		}
+		else = {
+			SPR = { add_state_claim = 29 }
+		}
+	}
+}
+
+# spain demands france compté
+
+country_event = {
+	id = spain.78
+	title = "[FROM.GetName] Demands Franche Compté."
+	desc =spain.78.d
+	is_triggered_only = yes
+
+	option = {
+		name = "The demand is acceptable."
+		SPR = { transfer_state = 17 }
+		SPR = { country_event = spain.79 }
+	}
+
+	option = {
+		name = "We will never give up our land!"
+		SPR = { country_event = spain.80 } 
+	}
+}
+
+country_event = {
+	id = spain.79
+	title = "[FROM.GetName] Transfers Franche Compté."
+	desc = spain.79.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Good."
+	}
+}
+
+country_event = {
+	id = spain.80
+	title = "[FROM.GetName] Refuses Demands."
+	desc = spain.80.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Damn them."
+		SPR = { add_state_claim = 17 }
+	}
+}
+
+country_event = {
+	id = spain.81
+	title = "War Of The Quadruple Alliance."
+	desc = spain.81.d
+	is_triggered_only = yes
+
+	option = {
+		name = "Okay let's do this."
+	}
+}

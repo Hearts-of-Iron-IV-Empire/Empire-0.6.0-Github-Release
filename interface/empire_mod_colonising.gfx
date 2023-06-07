@@ -1,0 +1,9 @@
+spriteTypes = {	
+
+	### categories
+
+	spriteType = {
+		name = "GFX_colonization_top_win"
+		texturefile = "gfx/interface/colonization_top_win.dds"
+	}
+}

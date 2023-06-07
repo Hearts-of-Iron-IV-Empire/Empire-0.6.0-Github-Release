@@ -1,0 +1,26 @@
+
+state={
+	id=148
+	name="STATE_148"
+	manpower = 36737
+	
+	state_category = pastoral 
+	
+	resources={
+		steel=7 # was: 8
+		chromium=2 # was: 2
+	}
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = SWE
+		add_core_of = FIN
+			
+	}
+
+	provinces={
+		167 203 2992 3055 3107 6076 6142 9189 11115 11167 
+	}
+}

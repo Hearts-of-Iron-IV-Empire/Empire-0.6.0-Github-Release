@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+        INS_spice_trade_profits = {
+            allowed = {
+                always = no
+            }
+
+            removal_cost = -1
+
+            picture = spices
+            
+            modifier = {
+                extra_trade_to_overlord_factor = 0.3
+            }
+        }
+    }
+}

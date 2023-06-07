@@ -1,0 +1,30 @@
+state={
+	id=366
+	name="STATE_366"
+
+	history={
+		owner = MEX
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			1584 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = MEX
+		add_core_of = FLO
+		1765.1.1 = {
+			owner = FLO
+		}
+		victory_points = {
+			1572 3 
+		}
+	}
+
+	provinces={
+		1556 1572 1584 10407 12353 12381 12439 
+	}
+	manpower=12498
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

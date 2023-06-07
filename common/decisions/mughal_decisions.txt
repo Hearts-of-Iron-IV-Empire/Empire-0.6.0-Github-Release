@@ -1,0 +1,1538 @@
+mughal_maratha_war = {
+	defeat_marathas = {
+		activation = {
+			always = no
+		}
+		available = {
+			controls_state = 960
+		}
+		visible = {
+			has_war_with = MAR
+			has_country_flag = MUG_defeat_marathas
+		}
+		icon = mission_icon
+		days_mission_timeout = 365
+		timeout_effect = {
+			add_political_power = -200
+			add_stability = -0.30
+			add_war_support = -0.20
+			white_peace = MAR
+			424 = {
+				transfer_state_to = MAR
+			}
+			427 = {
+				transfer_state_to = MAR
+			}
+			429 = {
+				transfer_state_to = MAR
+			}
+			962 = {
+				transfer_state_to = MAR
+			}
+			965 = {
+				transfer_state_to = MAR
+			}
+			clr_country_flag = MUG_defeat_marathas
+		}
+	}
+	defeat_marathas_ai = {
+		activation = {
+			always = no
+		}
+		available = {
+			controls_state = 960
+		}
+		visible = {
+			has_war_with = MAR
+			has_country_flag = MUG_defeat_marathas
+		}
+		icon = mission_icon
+		days_mission_timeout = 3650
+		timeout_effect = {
+			add_political_power = -200
+			add_stability = -0.30
+			add_war_support = -0.20
+			white_peace = MAR
+			424 = {
+				transfer_state_to = MAR
+			}
+			427 = {
+				transfer_state_to = MAR
+			}
+			429 = {
+				transfer_state_to = MAR
+			}
+			962 = {
+				transfer_state_to = MAR
+			}
+			965 = {
+				transfer_state_to = MAR
+			}
+			clr_country_flag = MUG_defeat_marathas
+		}
+	}
+	#MUG_negiotiate_maratha_surrender = {
+	#	
+	#	icon = generic_decisison
+#
+#		days_re_enable = 60 
+#
+#		cost = 0
+#
+#		visible = {
+#			has_war_with = MAR
+#			original_tag = RAJ
+#			NOT = { RAJ = { has_country_flag = MUG_won_the_war } }
+#		}
+#
+#		available = {
+#			MAR = { 
+#				surrender_progress > 0.70
+#			}
+#		}
+#
+#		complete_effect = {
+#			country_event = {
+#				id = mughal.65
+#			}
+#		}
+#	}
+}
+MUG_expansion = {
+	MUG_clash_over_mangalore = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 423
+			owns_state = 959
+			NOT = {
+				owns_state = 963
+			}	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 963
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_portugese
+			NOT = {
+				owns_state = 963
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 960
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 963
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_goa = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 960
+			owns_state = 962
+			NOT = {
+				owns_state = 321
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 321
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_portugese
+			NOT = {
+				owns_state = 321
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 960
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 321
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_diu = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 428
+			NOT = {
+				owns_state = 846
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 846
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_portugese
+			NOT = {
+				owns_state = 846
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 428
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 846
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_daman = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 960
+			NOT = {
+				owns_state = 1027
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1027
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_portugese
+			NOT = {
+				owns_state = 1027
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 960
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1027
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_tranquebar = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 965
+			NOT = {
+				owns_state = 847
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 847
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_rest
+			NOT = {
+				owns_state = 847
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 965
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 847
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_pondicherry = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 965
+			NOT = {
+				owns_state = 320
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 320
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_rest
+			NOT = {
+				owns_state = 320
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 965
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 320
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_french_bengal = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 431
+			NOT = {
+				owns_state = 1034
+			}	
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1034
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_kick_out_the_rest
+			NOT = {
+				owns_state = 1034
+			}
+		}
+		
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 431
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1034
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+}
+MUG_per_expansion = {
+	MUG_clash_over_sistan = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 444
+			NOT = {
+				owns_state = 410
+			}	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 410
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_into_persia
+			NOT = {
+				owns_state = 410
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 444
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 410
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_khorasan = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 1026
+			NOT = {
+				owns_state = 416
+			}	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 416
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_into_persia
+			NOT = {
+				owns_state = 416
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 1026
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 416
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_kerman = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 415
+			NOT = {
+				owns_state = 414
+			}	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 414
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_into_persia
+			NOT = {
+				owns_state = 414
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 415
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 414
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	MUG_clash_over_merv = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 415
+			NOT = {
+				owns_state = 1026
+			}	
+		}
+		
+		highlight_states = {
+			highlight_state_targets = {
+				state = 1026
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_into_persia
+			NOT = {
+				owns_state = 1026
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 415
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1026
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+}
+MUG_tribal_raids = {
+	MUG_tribal_raid = {
+
+		icon = revolt
+
+		available = {
+			NOT = { has_idea = MUG_raiding_tribes }
+		}
+
+		days_mission_timeout = 30
+
+		activation = {
+			has_idea = MUG_raiding_tribes
+		}
+
+		visible = {
+		}		
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+		timeout_effect = {
+			random_list = {
+				25 = {
+					country_event = mughal.28
+				}
+				25 = {
+					country_event = mughal.29
+				}
+				25 = {
+					country_event = mughal.30
+				}
+				25 = {
+					country_event = mughal.31
+				}
+			}
+		}
+	}
+	MUG_hunt_down_tribals_herat = {
+
+		icon = oppression
+
+		available = {
+			has_completed_focus = MUG_pacify_pashtun_tribes
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = MUG_herat_tribals
+			divisions_in_state = {
+				state = 415
+				size > 5
+			}
+		}
+
+		cost = 70
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 415
+			}
+		}
+
+		visible = {
+			has_country_flag = MUG_herat_tribals
+			has_completed_focus = MUG_pacify_pashtun_tribes
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 415
+					size < 6
+				}
+			}
+		}
+
+		complete_effect = {
+			activate_mission = MUG_maintain_control_herat
+		}
+	}
+	MUG_maintain_control_herat = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+			always = no # Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 415	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 415
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = MUG_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = MUG_herat_tribals
+			if = {
+				limit = {
+					NOT = { has_country_flag = MUG_qandahar_tribals }
+					NOT = { has_country_flag = MUG_balochistan_tribals }
+				}
+				remove_ideas = MUG_raiding_tribes
+			}
+		}
+	}
+	MUG_hunt_down_tribals_balochistan = {
+
+		icon = oppression
+
+		available = {
+			has_completed_focus = MUG_pacify_pashtun_tribes
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = MUG_balochistan_tribals
+			divisions_in_state = {
+				state = 444
+				size > 5
+			}
+		}
+
+		cost = 70
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 444
+			}
+		}
+
+		visible = {
+			has_country_flag = MUG_balochistan_tribals
+			has_completed_focus = MUG_pacify_pashtun_tribes
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 444
+					size < 6
+				}
+			}
+		}
+
+		complete_effect = {
+			activate_mission = MUG_maintain_control_balochistan
+		}
+	}
+	MUG_maintain_control_balochistan = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+			always = no # Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 444	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 444
+			}
+		}
+
+		timeout_effect = {
+			custom_effect_tooltip = MUG_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = MUG_balochistan_tribals
+			if = {
+				limit = {
+					NOT = { has_country_flag = MUG_qandahar_tribals }
+					NOT = { has_country_flag = MUG_herat_tribals }
+				}
+				remove_ideas = MUG_raiding_tribes
+			}
+		}
+	}
+	MUG_hunt_down_tribals_qandahar = {
+
+		icon = oppression
+
+		available = {
+			has_completed_focus = MUG_pacify_pashtun_tribes
+			has_equipment = { infantry_equipment > 999 }
+			has_country_flag = MUG_qandahar_tribals
+			divisions_in_state = {
+				state = 445
+				size > 5
+			}
+		}
+
+		cost = 70
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 445
+			}
+		}
+
+		visible = {
+			has_country_flag = MUG_qandahar_tribals
+			has_completed_focus = MUG_pacify_pashtun_tribes
+		}
+
+		fire_only_once = yes
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				add = 200
+				divisions_in_state = {
+					state = 445
+					size < 6
+				}
+			}
+		}
+
+		complete_effect = {
+			activate_mission = MUG_maintain_control_qandahar
+		}
+	}
+	MUG_maintain_control_qandahar = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 200
+
+		activation = {
+			always = no # Triggered from effect
+		}
+
+		cancel_trigger = {
+			divisions_in_state = {
+				state = 445	
+				size < 6
+			}
+		}
+
+		highlight_states = {
+			highlight_state_targets = {
+				state = 445
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			custom_effect_tooltip = MUG_maintained_control_tt
+			army_experience = 5
+			clr_country_flag = MUG_qandahar_tribals
+			if = {
+				limit = {
+					NOT = { has_country_flag = MUG_herat_tribals }
+					NOT = { has_country_flag = MUG_balochistan_tribals }
+				}
+				remove_ideas = MUG_raiding_tribes
+			}
+		}
+	}
+}
+mughal_qing_war = {
+	defeat_qing = {
+		activation = {
+			always = no
+		}
+		available = {
+			has_war_with = CHI
+			controls_state = 608
+		}
+		visible = {
+			has_war_with = CHI
+			has_country_flag = MUG_defeat_qing
+		}
+		icon = mission_icon
+		days_mission_timeout = 500
+		timeout_effect = {
+			add_political_power = -150
+			add_stability = -0.20
+			add_war_support = -0.20
+			white_peace = CHI
+			clr_country_flag = MUG_defeat_qing
+		}
+	}
+	dismantle_tributary_system = {
+		icon = nobility
+		cost = 30
+		available = {
+			has_war_with = CHI
+			CHI = {
+				has_country_flag = defeated_by_mughals
+			}
+		}
+		visible = {
+			has_war_with = CHI
+			CHI = {
+				has_country_flag = defeated_by_mughals
+			}
+		}
+		complete_effect = {
+			CHI = {
+				remove_ideas = tributary_system
+				dismantle_faction = yes
+			}
+			hidden_effect = {
+				KOR = {
+					remove_ideas = pays_tribute_2
+				}
+				RYU = {
+					remove_ideas = pays_tribute_1
+				}
+				TIB = {
+					remove_ideas = pays_tribute_2
+				}
+				VIN = {
+					remove_ideas = pays_tribute_2
+				}
+				SIA = {
+					remove_ideas = pays_tribute_2
+				}
+			}
+		}
+	}
+	demand_tribute = {
+		icon = burghers
+		cost = 50
+		available = {
+			CHI = {
+				has_country_flag = defeated_by_mughals
+			}
+			NOT = {
+				CHI = {
+					has_idea = tributary_system
+				}
+			}
+		}
+		visible = {
+			CHI = {
+				has_country_flag = defeated_by_mughals
+			}
+		}
+		complete_effect = {
+			VIN = {
+				country_event = {
+					id = mughal.49
+				}
+			}
+			SIA = {
+				country_event = {
+					id = mughal.49
+				}
+			}
+			KOR = {
+				country_event = {
+					id = mughal.49
+				}
+			}
+			RYU = {
+				country_event = {
+					id = mughal.49
+				}
+			}
+			TIB = {
+				country_event = {
+					id = mughal.49
+				}
+			}
+		}
+	}
+}
+MUG_suppress_marathas = {
+	MUG_maratha_raid = {
+		icon = generic_ignite_civil_war
+
+		##available = {
+		#	NOT = { 
+		#		has_idea = MUG_maratha_resistance
+		#		has_idea = MUG_maratha_resistance_2
+		#		has_idea = MUG_maratha_resistance_3
+		#	}
+		#}
+
+		days_mission_timeout = 50
+
+		activation = {
+			always = no
+		}
+
+		visible = {
+			OR = {	
+				has_idea = MUG_maratha_resistance
+				has_idea = MUG_maratha_resistance_2
+				has_idea = MUG_maratha_resistance_3
+			}
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+		timeout_effect = {
+			custom_effect_tooltip = marathas_will_attack_tt
+			hidden_effect = {	
+				random_list = {
+					20 = {
+						country_event = mughal.51
+					}
+					20 = {
+						country_event = mughal.52
+					}
+					20 = {
+						country_event = mughal.53
+					}
+					20 = {
+						country_event = mughal.54
+					}
+					20 = {
+						country_event = mughal.55
+					}
+				}
+				RAJ_increase_maratha_resistance = yes
+			}
+		}
+	}
+	MUG_suppress_marathas = {
+		icon = nobility
+
+		available = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+		}
+		
+		visible = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+			OR = {	
+				has_idea = MUG_maratha_resistance
+				has_idea = MUG_maratha_resistance_2
+				has_idea = MUG_maratha_resistance_3
+			}
+		}
+
+		cost = 30
+
+		days_remove = 50
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = MUG_maratha_raid
+				days = 50
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MUG_increase_our_support = {
+		icon = generic_nationalism
+
+		available = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+		}
+
+		visible = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+			OR = {	
+				has_idea = MUG_maratha_resistance
+				has_idea = MUG_maratha_resistance_2
+				has_idea = MUG_maratha_resistance_3
+			}
+		}
+
+		cost = 50
+		days_re_enable = 50
+
+		complete_effect = {
+			960 = {
+				add_compliance = 10
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MUG_destroy_maratha_resistance = {
+		icon = generic_civil_support
+
+		available = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+			960 = {
+				compliance > 40
+			}
+		}
+
+		visible = {
+			has_completed_focus = MUG_crush_the_maratha_resistance
+			OR = {	
+				has_idea = MUG_maratha_resistance
+				has_idea = MUG_maratha_resistance_2
+				has_idea = MUG_maratha_resistance_3
+			} 
+		}
+
+		cost = 50
+
+		complete_effect = {
+			if = {
+				limit = { has_idea = MUG_maratha_resistance }
+				remove_ideas = MUG_maratha_resistance
+			}
+			else_if = {
+				limit = { has_idea = MUG_maratha_resistance_2 }
+				remove_ideas = MUG_maratha_resistance_2
+			}
+			else_if = {
+				limit = { has_idea = MUG_maratha_resistance_3 }
+				remove_ideas = MUG_maratha_resistance_3
+			}
+			set_country_flag = MUG_crushed_maratha_resistance
+			custom_effect_tooltip = maratha_resistance_crushed_tt
+		}
+	}
+	MUG_pacify_the_people = {
+		icon = generic_civil_support
+
+		available = {
+			NOT = {
+				has_idea = MUG_maratha_resistance
+				has_idea = MUG_maratha_resistance_2
+				has_idea = MUG_maratha_resistance_3
+			}
+			has_idea = MUG_rebellious_populace
+		}
+		
+		visible = {
+			has_idea = MUG_rebellious_populace
+			NOT = {
+				has_country_flag = pacified_populace
+			}
+		}
+
+		cost = 50
+
+		complete_effect = {
+			remove_ideas = MUG_rebellious_populace
+			set_country_flag = pacified_populace
+		}
+	}
+}
+MUG_dealing_with_the_zamindars = {
+	MUG_arrest_corrupt_zamindars = {
+
+		available = {
+			has_country_flag = MUG_dealing_with_the_zamindars_flag
+		}
+
+		visible = {
+			OR = {	
+				has_idea = MUG_zamindari_system
+				has_idea = MUG_zamindari_system_2
+				has_idea = MUG_zamindari_system_3
+				has_idea = MUG_zamindari_system_4
+				has_idea = MUG_zamindari_system_5
+				has_idea = MUG_zamindari_system_6
+			}
+			has_completed_focus = MUG_the_zamindari_system
+		}
+
+		cost = 80
+		fire_only_once = no
+		days_remove = 75
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+
+		complete_effect = {
+			improve_zamindari_system = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MUG_frame_zamindars = {
+		icon = burghers
+
+		available = {
+			has_country_flag = MUG_dealing_with_the_zamindars_flag
+		}
+
+		visible = {
+			OR = {	
+				has_idea = MUG_zamindari_system
+				has_idea = MUG_zamindari_system_2
+				has_idea = MUG_zamindari_system_3
+				has_idea = MUG_zamindari_system_4
+				has_idea = MUG_zamindari_system_5
+				has_idea = MUG_zamindari_system_6
+			}
+			has_completed_focus = MUG_the_zamindari_system
+		}
+
+		cost = 50
+
+		fire_only_once = no
+		days_remove = 100
+
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+
+		complete_effect = {
+			improve_zamindari_system = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	MUG_raid_zamindar_estates = {
+		icon = generic_military
+
+		available = {
+			has_country_flag = MUG_dealing_with_the_zamindars_flag
+		}
+
+		visible = {
+			OR = {	
+				has_idea = MUG_zamindari_system
+				has_idea = MUG_zamindari_system_2
+				has_idea = MUG_zamindari_system_3
+				has_idea = MUG_zamindari_system_4
+				has_idea = MUG_zamindari_system_5
+				has_idea = MUG_zamindari_system_6
+			}
+			has_completed_focus = MUG_the_zamindari_system
+		}
+
+		cost = 100
+
+		fire_only_once = no
+		days_re_enable = 70
+
+		complete_effect = {
+			improve_zamindari_system = yes
+			add_manpower = -600
+			add_stability = -0.05
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+MUG_foreign_influence = {
+	MUG_increase_influence = {
+		available = {
+			RAJ = {
+				exists = yes
+				is_subject = no
+				is_puppet = no
+			}
+		}
+
+		visible = {
+			RAJ = {
+				has_completed_focus = MUG_economic_concessions
+			}
+			OR = {
+				original_tag = ENG
+				original_tag = POR
+				original_tag = HOL
+				original_tag = FRA
+			}
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_re_enable = 80
+		days_remove = 100
+
+		modifier = {
+			political_power_gain = -0.10
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			if = {
+				limit = {
+					original_tag = ENG
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.61
+					}
+				}
+				MUG_increase_own_influence = yes
+			}
+			else_if = {
+				limit = {
+					original_tag = HOL
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.62
+					}
+				}
+				MUG_increase_own_influence = yes
+			}
+			else_if = {
+				limit = {
+					original_tag = POR
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.63
+					}
+				}
+				MUG_increase_own_influence = yes
+			}
+			else_if = {
+				limit = {
+					original_tag = FRA
+				}
+				RAJ = {
+					country_event = {
+						id = mughal.64
+					}
+				}
+				MUG_increase_own_influence = yes
+			}
+			RAJ = {	
+				MUG_increase_foreign_influence = yes
+			}
+		}
+
+		ai_will_do = {
+			factor = 60
+		}
+	}
+	MUG_decrease_foreign_influence = {
+		available = {
+			original_tag = RAJ
+		}
+
+		visible = {
+			has_country_flag = opposing_foreign_influence
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 90
+
+		modifier = {
+			political_power_gain = 0.10
+		}
+
+		complete_effect = {
+			MUG_decrease_foreign_influence = yes
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+MUG_economic_decisions = {
+	MUG_invest_in_infrastructure = {
+		available = {
+			original_tag = RAJ
+		}
+
+		visible = {
+			has_completed_focus = MUG_invest_in_the_economy
+		}
+
+		cost = 50
+		fire_only_once = no
+		days_remove = 100
+		days_re_enable = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			industrial_capacity_factory = -0.05
+		}
+
+		complete_effect = {
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_flag = {
+							flag = built_infrastructure
+							value > 2
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = {
+					flag = built_infrastructure
+					value = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 30
+				has_political_power > 100
+			}
+		}
+	}
+	MUG_invest_in_civilian_manufactories = {
+		available = {
+			original_tag = RAJ
+		}
+
+		visible = {
+			has_completed_focus = MUG_invest_in_the_economy
+		}
+
+		cost = 100
+		fire_only_once = no
+		days_remove = 100
+		days_re_enable = 150
+
+		modifier = {
+			consumer_goods_factor = 0.10
+			industrial_capacity_factory = -0.05
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_flag = {
+							flag = built_civilian_manufactories
+							value > 3
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = {
+					flag = built_civilian_manufactories
+					value = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 30
+				has_political_power > 100
+			}
+		}
+	}
+	MUG_invest_in_arms_manufactories = {
+		available = {
+			original_tag = RAJ
+		}
+
+		visible = {
+			has_completed_focus = MUG_invest_in_the_economy
+		}
+
+		cost = 120
+		fire_only_once = no
+		days_remove = 100
+		days_re_enable = 140
+
+		modifier = {
+			consumer_goods_factor = 0.08
+			industrial_capacity_factory = -0.05
+		}
+
+		complete_effect = {
+			add_stability = -0.05
+			random_owned_controlled_state = {
+				limit = {
+					NOT = {
+						has_state_flag = {
+							flag = built_arms_manufactories
+							value > 1
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_flag = {
+					flag = built_arms_manufactories
+					value = 1
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 30
+				has_political_power > 100
+			}
+		}
+	}
+}

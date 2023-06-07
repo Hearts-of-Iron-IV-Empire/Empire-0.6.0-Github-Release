@@ -1,0 +1,19 @@
+
+state={
+	id=273
+	name="STATE_273"
+
+	history={
+		owner = UNC
+	}
+
+	impassable = yes
+
+	provinces={
+		1174 1994 4051 4117 4133 4176 4200 4962 7076 7136 7154 7194 7985 8069 9977 10037 10067 10754 10785 10884 11940 12009 12022 12082 12866 13073
+	}
+	manpower=2465
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

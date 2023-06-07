@@ -1,0 +1,37 @@
+
+state={
+	id=185
+	name="STATE_185"
+	resources={
+		chromium=13.000
+		steel=12.000
+	}
+
+	history={
+		victory_points = {
+			3914 3 
+		}
+		victory_points = {
+			1205 1 
+		}
+		owner = TUR
+		buildings = {
+			infrastructure = 2
+			9805 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = GRE
+		add_core_of = TUR
+
+	}
+
+	provinces={
+		841 1205 3914 3980 9805 9837 9916 11786 11895 12001
+	}
+	manpower=87550
+	buildings_max_level_factor=1.000
+	state_category=town
+}

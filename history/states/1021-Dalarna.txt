@@ -1,0 +1,21 @@
+state={
+	id=1021
+	name="STATE_1021"
+
+
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		35 77 114 156 3005 3045 3070 3106 3148 6084 6093 6123 6147 9117 9173 9182 9185 9193 11044 11053 11091 11197 13099
+	}
+	manpower=91002
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

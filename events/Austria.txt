@@ -1,0 +1,1017 @@
+add_namespace = austria
+
+# Ultimatum to spain
+
+country_event = {
+	id = austria.1
+	title = austria.1.t
+	desc = austria.1.d
+	picture = GFX_news_event_001
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.1.a
+		SPR = {
+			country_event = {
+				id = austria.2
+			}
+		}
+		add_political_power = -100
+	}
+	option = {
+		name = austria.1.b
+		SPR = {
+			country_event = {
+				id = austria.3
+			}
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.1.c
+		add_political_power = -300
+	}
+
+}
+
+country_event = {
+	id = austria.2
+	title = austria.2.t
+	desc = austria.2.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.4
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = austria.2.b
+		hidden_effect =  {	
+		}
+		AUS = {
+			country_event = {
+				id = austria.5
+			}
+		}
+		AUS = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+			transfer_state = 159
+			transfer_state = 157
+			transfer_state = 117
+			transfer_state = 156
+			transfer_state = 114
+		}
+		ITA = {
+			transfer_state = 115
+		}
+	}
+}
+
+country_event = {
+	id = austria.3
+	title = austria.3.t
+	desc = austria.3.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.2.a
+		AUS = {
+			country_event = {
+				id = austria.4
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		name = austria.2.b
+		AUS = {
+			country_event = {
+				id = austria.5
+			}
+		}
+
+		AUS = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+			transfer_state = 159
+		}
+	}
+}
+
+country_event = {
+	id = austria.4
+	title = austria.4.t
+	desc = austria.4.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.4.a
+		declare_war_on = {
+		    target = SPR
+		    type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = austria.5
+	title = austria.5.t
+	desc = austria.5.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.5.a
+		hidden_effect =  {	
+		}
+	}
+}
+
+#Appease Hungarian Nobles
+
+country_event = {
+	id = austria.6
+	title = austria.6.t
+	desc = austria.6.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.6.a
+		hidden_effect =  {
+			country_event = { id = austria.7 }
+		}
+	}
+}
+
+country_event = {
+	id = austria.7
+	title = austria.7.t
+	desc = austria.7.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.7.a
+		add_timed_idea = {
+			idea = lowered_burden_peasants
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { id = austria.8 }
+		}
+		add_political_power = -50
+	}
+
+	option = {
+		name = austria.7.b
+		add_timed_idea = {
+			idea = temporary_tax_reform
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { id = austria.8 }
+		}
+		add_political_power = -50
+	}
+
+	option = {
+		name = austria.7.c
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.8
+	title = austria.8.t
+	desc = austria.8.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.8.a
+		add_timed_idea = {
+			idea = no_hungarians_drafted
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { days = 5 id = austria.9 }
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.8.b
+		add_timed_idea = {
+			idea = high_soldier_wages
+			days = 960
+		}
+		hidden_effect =  {
+			country_event = { days = 5 id = austria.9 }	
+		}
+		add_political_power = -50
+	}
+	option = {
+		name = austria.8.c
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.9
+	title = austria.9.t
+	desc = austria.9.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.9.a
+		add_ideas = hungarian_noble_council
+		add_political_power = -50
+	}
+	option = {
+		name = austria.9.b
+		set_country_flag = failed_negotiations
+		add_political_power = 50
+	}
+}
+
+country_event = {
+	id = austria.10
+	title = austria.10.t
+	desc = austria.10.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.10.a
+		remove_unit_leader = 100
+
+		hidden_effect =  {
+			country_event = { days = 10 id = austria.11 }	
+		}
+	}
+}
+
+country_event = {
+	id = austria.11
+	title = austria.11.t
+	desc = austria.11.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.11.a
+		add_political_power = -300
+
+		hidden_effect =  {
+			country_event = {
+				id = hungary.3
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.12
+	title = austria.12.t
+	desc = austria.12.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.12.a
+		add_political_power = -100
+		AUS = {
+			country_event = { 
+				id = austria.13 
+				days = 5
+			}
+		}
+	}
+
+	option = {
+		name = austria.12.b
+		set_truce = {
+		    target = AUS
+		    days = 150
+		}
+		AUS = { transfer_state = 82
+			transfer_state = 764
+		}
+		AUS = {
+			country_event = { 
+				id = austria.14 
+				days = 5
+			}
+		}
+	}
+}
+
+country_event = {
+	id = austria.13
+	title = austria.13.t
+	desc = austria.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.13.a
+	}
+}
+
+country_event = {
+	id = austria.14
+	title = austria.14.t
+	desc = austria.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = austria.14.a
+	}
+}
+
+#AUSTRIA DEMANDS CONVERSION
+
+country_event = {
+	id = austria.15
+	title = austria.15.t
+	desc = austria.15.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.15.a
+		swap_ideas = {
+			remove_idea = protestant
+			add_idea = catholic
+		}
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 99
+				}
+			}
+			modifier = {
+				factor = 4
+				has_opinion = {
+					target = AUS
+					value > 149
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = AUS
+					value > 199
+				}
+			}
+		}
+		AUS = { country_event = austria.16 } 
+	}
+
+	option = {
+		name = austria.15.b
+		AUS = { add_opinion_modifier = { target = ROOT modifier = abandoned_hre } }
+		AUS = {
+			diplomatic_relation = {
+			    country = ROOT
+			    relation = guarantee
+			    active = no
+			}
+		}
+		set_country_flag = left_the_empire
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value < 100
+				}
+			}
+		}
+		AUS = { country_event = austria.17 } 
+	}
+}
+
+#convert
+
+country_event = {
+	id = austria.16
+	title = austria.16.t
+	desc = austria.16.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.16.a
+	}
+}
+ 
+# Refuse conversion
+country_event = {
+	id = austria.17
+	title = austria.17.t
+	desc = austria.17.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.17.a
+	}
+}
+
+#investment hre
+
+country_event = {
+	id = austria.18
+	title = austria.18.t
+	desc = austria.18.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.18.a
+		add_offsite_building = { type = industrial_complex level = 1 }
+	}
+}
+
+#stabilize
+
+country_event = {
+	id = austria.19
+	title = austria.19.t
+	desc = austria.19.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.18.a
+		add_stability = 0.05
+	}
+}
+#emperor demands pledge of loyalty
+
+country_event = {
+	id = austria.20
+	title = austria.20.t
+	desc = austria.20.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.20.a
+		AUS = { puppet = ROOT }
+		ai_chance = {
+			factor = 5
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value > 99
+				}
+			}
+			modifier = {
+				factor = 4
+				has_opinion = {
+					target = AUS
+					value > 149
+				}
+			}
+			modifier = {
+				factor = 10
+				has_opinion = {
+					target = AUS
+					value > 199
+				}
+			}
+		}
+		AUS = { country_event = austria.21 } 
+	}
+
+	option = {
+		name = austria.20.b
+		AUS = { add_opinion_modifier = { target = ROOT modifier = abandoned_hre } }
+		AUS = {
+			diplomatic_relation = {
+			    country = ROOT
+			    relation = guarantee
+			    active = no
+			}
+		}
+		set_country_flag = left_the_empire
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = AUS
+					value < 100
+				}
+			}
+		}
+		AUS = { country_event = austria.22 } 
+	}
+}
+
+#accept vassalization
+
+country_event = {
+	id = austria.21
+	title = austria.21.t
+	desc = austria.21.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.21.a
+	}
+}
+
+# Refuse vassalization
+country_event = {
+	id = austria.22
+	title = austria.22.t
+	desc = austria.22.d
+	is_triggered_only = yes
+
+	option = {
+		name = austria.22.a
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = FROM
+		}
+	}
+}
+
+# Treaty of Karlowitz, accept or not
+country_event = {
+	id = austria.23
+	title = austria.23.t
+	desc = austria.23.d
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = austria.23.a
+		white_peace = {
+			tag = PAP
+		}
+		white_peace = {
+			tag = AUS
+		}
+		white_peace = {
+			tag = SOV
+		}
+		white_peace = {
+			tag = POL
+		}
+		white_peace = {
+			tag = VNC
+		}
+		hidden_effect = {	
+			AUS = {
+				remove_ideas = great_turkish_war
+				dismantle_faction = yes
+				add_political_power = 150
+			}	
+			VNC = {
+				remove_ideas = great_turkish_war
+			}
+			PAP = {
+				remove_ideas = great_turkish_war
+			}
+			SOV = {
+				remove_ideas = great_turkish_war
+				create_faction = "Anti-Swedish Coalition"
+				218 = {
+				    set_border_war = yes
+				}
+				transfer_state = 1029
+				clr_country_flag = dont_call_in_zap_to_gtw
+			}
+			POL = {
+				remove_ideas = great_turkish_war
+				transfer_state = 198
+			}
+			ROM = {
+				remove_ideas = great_turkish_war
+			}
+			MOL = {
+				remove_ideas = great_turkish_war
+			}
+			CRI = {
+				remove_ideas = great_turkish_war
+			}
+		}
+		remove_ideas = great_turkish_war
+		add_political_power = 100
+		add_stability = 0.10
+		news_event = mod.8
+		custom_effect_tooltip = TUR_peace_with_austria
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { # No
+		name = austria.23.b
+		TUR_increase_loyalty = yes
+		swap_ideas = {
+			remove_idea = great_turkish_war
+			add_idea = great_turkish_war_2
+		} 
+		add_stability = -0.10
+		add_war_support = 0.15
+		news_event = mod.33
+		set_country_flag = ottomansussybaka
+		AUS = {
+			set_country_flag = ottomansussybakaa
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Austria wins the resumption of the GTW
+country_event = {
+	id = austria.70
+	title = austria.70.t
+	desc = austria.70.d
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = "We have no choice. We accept."
+		white_peace = {
+			tag = PAP
+		}
+		white_peace = {
+			tag = AUS
+		}
+		white_peace = {
+			tag = SOV
+		}
+		white_peace = {
+			tag = POL
+		}
+		white_peace = {
+			tag = VNC
+		}
+		hidden_effect = {	
+			AUS = {
+				remove_ideas = great_turkish_war
+				dismantle_faction = yes
+				add_political_power = 150
+				transfer_state = 82 # Banat
+				transfer_state = 104 # Bosnia
+				transfer_state = 107 # Serbia
+				transfer_state = 764 # West Banat
+			}
+			VNC = {
+				remove_ideas = great_turkish_war
+				transfer_state = 182 # Crete
+				transfer_state = 164 # Dodecanese
+			}
+			PAP = {
+				remove_ideas = great_turkish_war
+			}
+			SOV = {
+				remove_ideas = great_turkish_war
+				create_faction = "Anti-Swedish Coalition"
+				add_to_faction = POL
+				add_to_faction = DEN
+				transfer_state = 881 # Matriovka
+				transfer_state = 880 # Kaffa
+				puppet = CRI
+				clr_country_flag = dont_call_in_zap_to_gtw
+			}
+			POL = {
+				remove_ideas = great_turkish_war
+				transfer_state = 198 # Vinnytsia
+			}
+			ROM = {
+				remove_ideas = great_turkish_war
+			}
+			MOL = {
+				remove_ideas = great_turkish_war
+			}
+			CRI = {
+				remove_ideas = great_turkish_war
+			}
+		}
+		TUR = {		
+			if = {
+				limit = {
+					has_idea = great_turkish_war
+				}
+				remove_ideas = great_turkish_war
+			}
+			if = {
+				limit = {
+					has_idea = great_turkish_war_2
+				}
+				remove_ideas = great_turkish_war_2
+			}
+			complete_national_focus = TUR_defeat
+		}
+		add_political_power = -100
+		add_stability = -0.10
+		add_war_support = -0.2
+		news_event = mod.8
+		custom_effect_tooltip = TUR_peace_with_austria
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Ottomans win the resumption of the GTW
+country_event = {
+	id = austria.71
+	title = austria.71.t
+	desc = austria.71.d
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = "Damn those Turks..."
+		PAP = {
+			white_peace = {
+				tag = TUR
+			}
+		}
+		AUS = {
+			white_peace = {
+				tag = TUR
+			}
+		}
+		SOV = {
+			white_peace = {
+				tag = TUR
+			}
+		}
+		POL = {
+			white_peace = {
+				tag = TUR
+			}
+		}
+		VNC = {
+			white_peace = {
+				tag = TUR
+			}
+		}
+		hidden_effect = {
+			TRA = {				
+				transfer_state = 73
+				transfer_state = 76
+				transfer_state = 84
+			}
+			TUR = {
+				if = {
+					limit = {
+						has_idea = great_turkish_war
+					}
+					remove_ideas = great_turkish_war
+				}
+				if = {
+					limit = {
+						has_idea = great_turkish_war_2
+					}
+					remove_ideas = great_turkish_war_2
+				}
+				add_political_power = 150
+				add_stability = 0.15
+				TUR_reduce_sick_man = yes
+				43 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				45 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				71 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				83 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				103 = {
+					transfer_state_to = TUR
+				}
+				109 = {
+					transfer_state_to = TUR
+				}
+				154 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				155 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				186 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				198 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				664 = {
+					transfer_state_to = TUR
+					add_core_of = TUR
+				}
+				puppet = TRA
+				complete_national_focus = TUR_defeat
+			}
+			AUS = {
+			    remove_ideas = great_turkish_war
+				dismantle_faction = yes
+			}
+			VNC = {
+				remove_ideas = great_turkish_war
+				add_political_power = -150
+				add_stability = -0.10
+				add_war_support = -0.10
+			}
+			PAP = {
+				remove_ideas = great_turkish_war
+				add_political_power = -75
+				add_stability = -0.20
+				add_war_support = -0.20
+			}
+			SOV = {
+				remove_ideas = great_turkish_war
+				create_faction = "Anti-Swedish Coalition"
+				add_to_faction = POL
+				add_to_faction = DEN
+				add_political_power = -100
+				add_stability = -0.10
+				add_war_support = -0.15
+				clr_country_flag = dont_call_in_zap_to_gtw
+			}
+			POL = {
+				remove_ideas = great_turkish_war
+				add_political_power = -100
+				add_stability = -0.05
+				add_war_support = -0.15
+			}
+			ROM = {
+				remove_ideas = great_turkish_war
+			}
+			MOL = {
+				remove_ideas = great_turkish_war
+			}
+			CRI = {
+				remove_ideas = great_turkish_war
+				transfer_state = 218
+			}
+		}
+		add_political_power = -150
+		add_stability = -0.25
+		add_war_support = -0.25
+		news_event = mod.8
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+country_event = {
+	id = austria.24
+	title = austria.24.t
+	desc = austria.24.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = AUS
+		AND = {
+			date > 1705.5.1	
+			}
+		has_country_leader = {
+		    name = "Leopold I"
+		    ruling_only = yes
+		}
+	}
+	mean_time_to_happen = {
+    	days = 1
+	}
+	option = {
+		kill_country_leader = yes
+		create_country_leader = {
+			name = "Joseph I"
+			picture = "joseph_i.dds"
+			ideology = despotism
+			traits = {	
+			}
+		}
+		
+		name = "Long live the king!"
+		add_stability = -0.01
+		remove_unit_leader = 102
+	}
+}
+
+country_event = {
+	id = austria.25
+	title = austria.25.t
+	desc = austria.25.d
+
+	fire_only_once = yes
+	trigger = {
+		tag = AUS
+		has_war_with = FRA
+		has_war_with = BAV
+		BAV = { has_capitulated = yes }
+		controls_state = 52
+		controls_state = 53
+	}
+	mean_time_to_happen = {
+   		days = 10
+	}
+	option = {	
+		ai_chance = {
+			factor = 100
+		}
+		name = "They shall be a useful ally"	
+		BAV = { white_peace = ENG }
+		BAV = { white_peace = AUS }
+		BAV = { leave_faction = yes }
+		if = {
+			limit = {
+				AUS = {
+					is_faction_leader = yes
+				}
+			}
+			AUS = { add_to_faction = BAV }
+		}
+		else_if = {
+			limit = {
+				ENG = {
+					is_faction_leader = yes
+				}
+				AUS = { is_in_faction_with = ENG}
+			}
+			ENG = { add_to_faction = BAV }
+		}
+		BAV = { country_event = austria.26 }
+	}
+
+	option = {	
+		name = "No, we should keep them occupied."
+		add_political_power = -100
+		add_stability = -0.05
+	}
+}
+
+country_event = {
+	id = austria.26
+	title = austria.26.t
+	desc = austria.26.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {	
+		name = "It is no like we have a say in the matter..."
+	}
+}
+

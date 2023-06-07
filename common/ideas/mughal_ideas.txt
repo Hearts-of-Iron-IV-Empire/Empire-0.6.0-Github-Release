@@ -1,0 +1,1539 @@
+ideas = {
+	country = {
+		MUG_depleted_army = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_army_problems
+
+			modifier = {
+				army_attack_factor = -0.15
+				army_defence_factor = -0.15
+			}
+    	}
+		MUG_depleted_army_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_army_problems
+
+			modifier = {
+				army_attack_factor = -0.10
+				army_defence_factor = -0.10
+			}
+    	}
+		MUG_jizya_imposed = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = jizya_imposed
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_factor = -0.1
+			}
+    	}
+		MUG_jizya_enforced = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = jizya_imposed
+
+			modifier = {
+				consumer_goods_factor = -0.15
+				stability_factor = -0.13
+			}
+    	}
+		MUG_imperial_administration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = bra_monarchist_uprising
+
+			modifier = {
+				compliance_growth = 0.10
+				consumer_goods_factor = -0.05
+			}
+    	}
+		MUG_imperial_administration_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = bra_monarchist_uprising
+
+			modifier = {
+				compliance_growth = 0.15
+				consumer_goods_factor = -0.10
+			}
+    	}
+		MUG_imperial_administration_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = bra_monarchist_uprising
+
+			modifier = {
+				compliance_gain = 0.25
+				compliance_growth = 0.25
+				consumer_goods_factor = -0.15
+			}
+    	}
+		MUG_high_court_spending = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = 0.20
+			}
+    	}
+		MUG_high_court_spending_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = 0.3
+			}
+    	}
+		MUG_orthodox_support_very_high = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = sunni
+
+			modifier = {
+				political_power_gain = 0.15
+				stability_factor = 0.15
+				consumer_goods_factor = 0.07
+			}
+    	}
+		MUG_orthodox_support_high = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = sunni
+
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				consumer_goods_factor = 0.05
+			}
+    	}
+		MUG_orthodox_support_medium = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = sunni
+
+			modifier = {
+				political_power_gain = 0.05
+				stability_factor = 0.05
+				consumer_goods_factor = 0.03
+			}
+    	}
+		MUG_orthodox_support_low = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = sunni
+
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.05
+				consumer_goods_factor = 0.01
+			}
+    	}
+		MUG_orthodox_support_very_low = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = great_turkish_war
+
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.10
+				consumer_goods_factor = -0.02
+			}
+    	}
+		MUG_religious_oppression = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_oppression
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				stability_factor = -0.05
+			}
+    	}
+		MUG_religious_oppression_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_oppression
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				stability_factor = -0.10
+				army_attack_factor = 0.05
+			}
+    	}
+		MUG_religious_oppression_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_oppression
+
+			modifier = {
+				consumer_goods_factor = -0.13
+				stability_factor = -0.15
+				army_attack_factor = 0.07
+			}
+    	}
+		MUG_army_of_islam = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+			}
+    	}
+		MUG_liberalization = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				consumer_goods_factor = 0.07
+				stability_factor = 0.15
+			}
+    	}
+		MUG_liberalization_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				stability_factor = 0.20
+				army_defence_factor = 0.05
+			}
+    	}
+		MUG_liberalization_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_neutrality_drift_bonus
+
+			modifier = {
+				consumer_goods_factor = 0.13
+				stability_factor = 0.25
+				army_defence_factor = 0.07
+			}
+    	}
+		MUG_large_gun_purchase = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+    	}
+		MUG_islamic_studies_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = old_book
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+    	}
+		MUG_islamic_studies_idea_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = old_book
+
+			modifier = {
+				research_speed_factor = 0.07
+			}
+    	}
+		MUG_meritocratic_administration_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				political_power_factor = 0.15
+				mobilization_laws_cost_factor = -0.25
+				economy_cost_factor = -0.25
+				political_advisor_cost_factor = -0.25
+			}
+    	}
+		MUG_secularist_state = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				political_power_gain = 0.15
+				army_defence_factor = 0.12
+				defensive_war_stability_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+    	}
+		MUG_sikh_warriors_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_attack_factor = 0.04
+			}
+    	}
+		MUG_hindu_warriors_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_infantry_bonus
+
+			modifier = {
+				army_speed_factor = 0.04
+			}
+    	}
+		MUG_court_infighting = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			modifier = {
+				political_power_factor = -0.15
+				army_org_factor = -0.15
+			}
+    	}
+		MUG_court_purged = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = raj_marginalized_muslim_community
+
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.10
+				conscription = -0.02
+			}
+    	}
+		MUG_court_consolidated = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = raj_marginalized_muslim_community
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.15
+				political_advisor_cost_factor = -0.15
+			}
+    	}
+		MUG_pacified_court = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			modifier = {
+				political_power_factor = 0.10
+				production_speed_buildings_factor = 0.10
+			}
+    	}
+		MUG_rebuild_the_country_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				production_speed_buildings_factor = 0.15
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.10
+			}
+    	}
+		MUG_crush_the_maratha_rats = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			targeted_modifier = {
+				tag = MAR
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1				
+			}
+    	}
+		MUG_decentralized_administration = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			modifier = {
+				political_power_gain = -1
+				global_building_slots_factor = -0.30
+			}
+		}
+		MUG_decentralized_administration_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			modifier = {
+				political_power_gain = -0.80
+				global_building_slots_factor = -0.20
+			}
+		}
+		MUG_land_purchaser = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = 0.15
+			}
+		}
+		MUG_land_seller = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		MUG_raiding_tribes = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_war_of_resistance3
+
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.15
+				resistance_activity = 0.40
+				compliance_growth = -0.50
+			}
+		}
+		MUG_preparing_for_war = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = FRA_scw_intervention_nationalists_focus
+
+			modifier = {
+				war_support_weekly = 0.002
+				weekly_manpower = 500
+			}
+		}
+		MUG_covert_ops_against_qing = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = FRA_scw_intervention_nationalists_focus
+
+			targeted_modifier = {
+				tag = CHI
+				attack_bonus_against = 0.10
+			}
+		}
+		MUG_economic_cooperation = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_flexible_foreign_policy2
+
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		MUG_maratha_resistance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = maratha_resistance
+
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.10
+				resistance_activity = 0.20
+				compliance_growth = -0.20
+			}
+		}
+		MUG_maratha_resistance_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = maratha_resistance
+
+			modifier = {
+				political_power_gain = -0.20
+				stability_factor = -0.15
+				resistance_activity = 0.30
+				compliance_growth = -0.40
+			}
+		}
+		MUG_maratha_resistance_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = maratha_resistance
+
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.20
+				resistance_activity = 0.40
+				compliance_growth = -0.50
+			}
+		}
+		MUG_rebellious_populace = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = chi_war_of_resistance1
+
+			modifier = {
+				political_power_gain = -0.05
+				resistance_activity = 0.15
+				compliance_growth = -0.15
+			}
+		}
+		MUG_rooting_out_resistance = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = SAF_history_of_segregation
+
+			modifier = {
+				resistance_target = -0.15
+				resistance_activity = -0.15
+			}
+		}
+		MUG_masters_of_the_deccan_idea = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = mug_masters_of_the_deccan
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				political_power_gain = 0.15
+				industrial_capacity_factory = 0.10
+			}
+		}
+		pays_tribute_mug = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = pays_tribute_mug
+
+			modifier = {
+				consumer_goods_factor = 0.7
+			}
+		}
+		tributary_system_mug = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = mug_receiving_money
+
+			modifier = {
+				consumer_goods_factor = -0.15
+			}
+		}
+		MUG_rely_on_ourselves_idea = { # To be swapped with a new india
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = mug_receiving_money
+
+			modifier = {
+				local_resources_factor = 0.10
+			}
+		}
+		MUG_a_new_india_idea = { 
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = mug_receiving_money
+
+			modifier = {
+				local_resources_factor = 0.15
+				production_speed_buildings_factor = 0.07
+				industrial_capacity_factory = 0.05
+				line_change_production_efficiency_factor = 0.05
+			}
+		}
+		MUG_zamindari_system = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				stability_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+		MUG_zamindari_system_supported = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				industrial_capacity_factory = 0.10
+				consumer_goods_factor = -0.10
+				stability_factor = -0.20
+				political_power_gain = 0.10
+			}
+		}
+		MUG_zamindari_system_2 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_zamindari_system
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.13
+				stability_factor = -0.08
+				political_power_gain = -0.08
+			}
+		}
+		MUG_zamindari_system_3 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_zamindari_system
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.11
+				stability_factor = -0.06
+				political_power_gain = -0.06
+			}
+		}
+		MUG_zamindari_system_4 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_zamindari_system
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.09
+				stability_factor = -0.04
+				political_power_gain = -0.04
+			}
+		}
+		MUG_zamindari_system_5 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_zamindari_system
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.07
+				stability_factor = -0.02
+				political_power_gain = -0.02
+			}
+		}
+		MUG_zamindari_system_6 = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_zamindari_system
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		MUG_construct_infrastructure_better = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = saf_history_of_segregation
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
+			}
+		}
+		MUG_english_support = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		MUG_english_support_2 = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_english_support
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_dockyard = 0.15
+				naval_invasion_capacity = 5
+				convoy_raiding_efficiency_factor = 0.15
+				naval_accidents_chance = -0.15
+				naval_damage_factor = 0.15
+				naval_defense_factor = 0.20
+			}
+		}
+		MUG_favoured_england = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.1
+			}
+		}
+		MUG_portuguese_support = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			modifier = {
+				political_power_gain = 0.05
+			}
+		}
+		MUG_portuguese_support_2 = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+			name = MUG_portuguese_support
+
+			modifier = {
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
+			}
+		}
+		MUG_portuguese_support_3 = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+			name = MUG_portuguese_support
+
+			modifier = {
+				political_power_gain = 0.05
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		MUG_dutch_support = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				army_org_factor = 0.05
+			}
+		}
+		MUG_dutch_support_2 = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_dutch_support
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.05
+			}
+		}
+		MUG_opposition_to_foreign_influence = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = generic_disjointed_gov
+
+			modifier = {
+				aristocracy_drift = 0.01
+				political_power_gain = -0.02
+			}
+		}
+		MUG_foreign_influence_extremely_low = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.01
+				political_power_gain = -0.01
+			}
+		}
+		MUG_foreign_influence_very_low = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.03
+				political_power_gain = -0.03
+			}
+		}
+		MUG_foreign_influence_low = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.05
+				political_power_gain = -0.05
+			}
+		}
+		MUG_foreign_influence_medium = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.07
+				political_power_gain = -0.07
+			}
+		}
+		MUG_foreign_influence_present = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				political_power_gain = -0.08
+			}
+		}
+		MUG_foreign_influence_high = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				political_power_gain = -0.10
+			}
+		}
+		MUG_foreign_influence_very_high = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.12
+				political_power_gain = -0.12
+			}
+		}
+		MUG_foreign_influence_extremely_high = {
+			
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_government = neutrality 
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = foreign_influence_india
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				political_power_gain = -0.15
+			}
+		}
+		MUG_holds_influence_very_high = {
+			allowed = {
+				always = no
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.20
+				consumer_goods_factor = -0.15
+			}
+		}
+		MUG_holds_influence_high = {
+			allowed = {
+				always = no
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.15
+				consumer_goods_factor = -0.12
+			}
+		}
+		MUG_holds_influence_medium = {
+			allowed = {
+				always = no
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.10
+			}
+		}
+		MUG_holds_influence_low = {
+			allowed = {
+				always = no
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.05
+			}
+		}
+		MUG_holds_influence_very_low = {
+			allowed = {
+				always = no
+			}
+
+			name = MUG_holds_influence
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				political_power_gain = 0.02
+				consumer_goods_factor = -0.02
+			}
+		}
+		MUG_agrarian_reforms = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+				local_resources_factor = 0.20
+			}
+		}
+		MUG_bengali_products_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = chi_wargaming_division
+
+			modifier = {
+				consumer_goods_factor = -0.06
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+			}
+		}
+		MUG_stabilizing_the_rupee = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = taxes
+
+			modifier = {
+				consumer_goods_factor = 0.10
+				stability_factor = -0.05
+				political_power_gain = -0.15
+			}
+		}
+		MUG_traditional_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				army_core_defence_factor = 0.05
+			}
+		}
+		MUG_traditional_army_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+			name = MUG_traditional_army
+
+			modifier = {
+				army_core_defence_factor = 0.05
+				consumer_goods_factor = 0.05
+				minimum_training_level = -0.10
+				training_time_factor = -0.10
+			}
+		}
+		MUG_traditional_army_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+			name = MUG_traditional_army
+
+			modifier = {
+				army_core_defence_factor = 0.10
+				army_morale_factor = 0.10
+				consumer_goods_factor = 0.10
+				minimum_training_level = -0.15
+				training_time_factor = -0.15
+			}
+		}
+		MUG_gunpowder_army = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				army_core_attack_factor = 0.05
+			}
+		}
+		MUG_gunpowder_army_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+			name = MUG_gunpowder_army
+
+			modifier = {
+				army_core_attack_factor = 0.10
+				army_org_factor = 0.08
+			}
+		}
+		MUG_centralized_army_command = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				command_power_gain_mult = 0.15
+				max_command_power = 20
+			}
+		}
+		MUG_centralized_army_command_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+
+			name = MUG_centralized_army_command
+
+			modifier = {
+				command_power_gain_mult = 0.15
+				max_command_power = 20
+				army_org_factor = 0.03
+			}
+		}
+		MUG_superior_horses = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = army
+
+			modifier = {
+				army_speed_factor = 0.05
+			}
+		}
+		MUG_rifle_production = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			picture = generic_production_bonus
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+		}
+    }
+}

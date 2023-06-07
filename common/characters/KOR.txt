@@ -1,0 +1,14 @@
+characters = {
+    KOR_Sukjong = {
+        name = "Sukjong"
+        portraits = {
+            civilian = {
+                large = "GFX_Sukjong"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

@@ -1,0 +1,466 @@
+german_consolidation_category = {
+
+	form_westfalen = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = MUN
+				original_tag = HAN
+				original_tag = HES
+				original_tag = LUN
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 56
+			controls_state = 57
+			controls_state = 891
+			controls_state = 55
+			controls_state = 893
+			controls_state = 59
+		}
+
+		visible = {
+			OR = {
+				original_tag = MUN
+				original_tag = HAN
+				original_tag = HES
+				original_tag = LUN
+			}
+			NOT = { has_global_flag = form_westfalen_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GER_WESTFALEN
+			56 = { add_core_of = ROOT }
+			57 = { add_core_of = ROOT }
+			891 = { add_core_of = ROOT }
+			55 = { add_core_of = ROOT }
+			893 = { add_core_of = ROOT }
+			59 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				set_global_flag = form_westfalen_flag
+			}
+			add_ideas = kingdom
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	form_rhine = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = CLG
+				original_tag = RPA
+				original_tag = TRR
+				original_tag = AAC
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 888
+			controls_state = 900
+			controls_state = 861
+			controls_state = 51
+			controls_state = 887
+			controls_state = 42
+		}
+
+		visible = {
+			OR = {
+				original_tag = CLG
+				original_tag = RPA
+				original_tag = TRR
+				original_tag = AAC
+			}
+			NOT = { has_global_flag = form_rhine_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GER_RHINE
+			888 = { add_core_of = ROOT }
+			900 = { add_core_of = ROOT }
+			861 = { add_core_of = ROOT }
+			51 = { add_core_of = ROOT }
+			887 = { add_core_of = ROOT }
+			42 = { add_core_of = ROOT }
+			8 = { add_core_of = ROOT }
+			28 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				set_global_flag = form_rhine_flag
+			}
+			add_ideas = kingdom
+			add_state_claim = 890
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	form_greater_bavaria = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = BAV
+				original_tag = AUG
+				original_tag = ANS
+				original_tag = WRZ
+				original_tag = WUR
+				original_tag = ULM
+				original_tag = NUR
+				original_tag = SAL
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 53
+			controls_state = 52
+			controls_state = 885
+			controls_state = 898
+			controls_state = 894
+			controls_state = 54
+			controls_state = 886
+			controls_state = 915
+		}
+
+		visible = {
+			OR = {
+				original_tag = BAV
+				original_tag = AUG
+				original_tag = ANS
+				original_tag = WRZ
+				original_tag = WUR
+				original_tag = ULM
+				original_tag = NUR
+				original_tag = SAL
+			}
+			NOT = { has_global_flag = form_greater_bavaria_flag }
+		}
+
+		complete_effect = {
+			53 = { add_core_of = ROOT }
+			52 = { add_core_of = ROOT }
+			885 = { add_core_of = ROOT }
+			898 = { add_core_of = ROOT }
+			894 = { add_core_of = ROOT }
+			54 = { add_core_of = ROOT }
+			886 = { add_core_of = ROOT }
+			915 = { add_core_of = ROOT }
+			914 = { add_core_of = ROOT }
+			add_state_claim = 897
+			add_state_claim = 50
+			add_state_claim = 836
+			add_state_claim = 895
+
+			hidden_effect = {
+				set_global_flag = form_greater_bavaria_flag
+			}
+			add_ideas = kingdom
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	form_hanzeatic_republic = {
+		icon = generic_form_nation
+
+		allowed = {
+			OR = {
+				original_tag = LUB
+				original_tag = HAM
+				original_tag = SHL
+				original_tag = LUN
+				original_tag = MEC
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 58
+			controls_state = 882
+			controls_state = 899
+			controls_state = 61
+			controls_state = 896
+			controls_state = 794
+			controls_state = 866
+			has_government = democratic
+		}
+
+		visible = {
+			OR = {
+				original_tag = LUB
+				original_tag = HAM
+				original_tag = SHL
+				original_tag = LUN
+				original_tag = MEC
+			}
+			NOT = { has_global_flag = form_hanzeatic_republic_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = GER_hanze
+			58 = { add_core_of = ROOT }
+			882 = { add_core_of = ROOT }
+			899 = { add_core_of = ROOT }
+			61 = { add_core_of = ROOT }
+			896 = { add_core_of = ROOT }
+			794 = { add_core_of = ROOT }
+			866 = { add_core_of = ROOT }
+			867 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				set_global_flag = form_hanzeatic_republic_flag
+			}
+			add_ideas = kingdom
+			add_state_core = 867
+			add_state_core = 63
+			add_state_core = 85
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	form_greater_saxony = {
+		icon = generic_form_nation
+
+		allowed = {
+			AND = { 
+				OR = {
+					original_tag = SAX
+					original_tag = ANH
+					original_tag = BSG
+					original_tag = THU
+					original_tag = LUB
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 884
+			controls_state = 65
+			controls_state = 883
+			controls_state = 892
+			controls_state = 60
+		}
+
+		visible = {
+			OR = {
+				original_tag = SAX
+				original_tag = ANH
+				original_tag = BSG
+				original_tag = THU
+				original_tag = LUB
+			}
+			NOT = { has_country_flag = form_greater_saxony_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = SAX
+			884 = { add_core_of = ROOT }
+			65 = { add_core_of = ROOT }
+			883 = { add_core_of = ROOT }
+			892 = { add_core_of = ROOT }
+			60 = { add_core_of = ROOT }
+
+			hidden_effect = {
+				set_country_flag = form_greater_saxony_flag
+			}
+			add_ideas = kingdom
+			add_state_claim = 896
+			add_state_claim = 59
+			add_state_claim = 893
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	consolidate_baden_wurtemburg = {
+		icon = generic_form_nation
+
+		allowed = {
+			AND = { 
+				OR = {
+					original_tag = WUR
+					original_tag = BAV
+					original_tag = RPA
+					original_tag = MAI
+					original_tag = ULM
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			controls_state = 897
+			controls_state = 836
+			controls_state = 50
+			controls_state = 895
+			controls_state = 889
+			controls_state = 901
+		}
+
+		visible = {
+			OR = {
+				original_tag = WUR
+				original_tag = BAV
+				original_tag = RPA
+				original_tag = MAI
+				original_tag = ULM
+			}
+			NOT = { has_country_flag = formed_wurtemburg_flag } 
+		}
+
+		complete_effect = {
+			897 = { add_core_of = ROOT }
+			836 = { add_core_of = ROOT }
+			50 = { add_core_of = ROOT }
+			895 = { add_core_of = ROOT }
+			889 = { add_core_of = ROOT }
+			901 = { add_core_of = ROOT }
+			set_country_flag = formed_wurtemburg_flag
+			add_ideas = kingdom
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	form_the_german_empire = {
+		icon = generic_form_nation
+
+		allowed = {
+			AND = { 
+				OR = {
+					original_tag = WUR
+					original_tag = BAV
+					original_tag = RPA
+					original_tag = MAI
+					original_tag = ULM
+					original_tag = MUN
+					original_tag = HAN
+					original_tag = HES
+					original_tag = LUN
+					original_tag = SAX
+					original_tag = ANH
+					original_tag = BSG
+					original_tag = THU
+					original_tag = LUB
+					original_tag = BAV
+					original_tag = AUG
+					original_tag = ANS
+					original_tag = WRZ
+					original_tag = WUR
+					original_tag = ULM
+					original_tag = NUR
+					original_tag = SAL
+					original_tag = CLG
+					original_tag = RPA
+					original_tag = TRR
+					original_tag = AAC
+					original_tag = IFC
+					original_tag = SWI
+				}
+			}
+		}
+
+		available = {
+			is_subject = no
+			has_idea = kingdom
+			controls_state  = 64
+			controls_state  = 52
+			controls_state  = 890
+			controls_state  = 51
+			controls_state  = 887
+			controls_state  = 898
+			controls_state  = 896
+			controls_state  = 56
+			controls_state  = 62
+			controls_state  = 58
+			OR = {
+				controls_state  = 28
+				controls_state  = 85
+			}
+		}
+
+		visible = {
+			OR = {
+				original_tag = WUR
+				original_tag = BAV
+				original_tag = RPA
+				original_tag = MAI
+				original_tag = ULM
+				original_tag = MUN
+				original_tag = HAN
+				original_tag = HES
+				original_tag = LUN
+				original_tag = SAX
+				original_tag = ANH
+				original_tag = BSG
+				original_tag = THU
+				original_tag = LUB
+				original_tag = BAV
+				original_tag = AUG
+				original_tag = ANS
+				original_tag = WRZ
+				original_tag = WUR
+				original_tag = ULM
+				original_tag = NUR
+				original_tag = SAL
+				original_tag = CLG
+				original_tag = RPA
+				original_tag = TRR
+				original_tag = AAC
+				original_tag = IFC
+				original_tag = SWI
+			}
+			NOT = {
+				has_global_flag = formed_germany_flag
+			}
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = PRS_GER
+			hidden_effect = {
+				set_global_flag = formed_germany_flag
+			}
+			every_state = { 
+				limit = {
+					OR = {
+						region = 6
+						region = 7
+						region = 8
+					}
+					NOT = {
+						state = 99
+						state = 37
+					}
+				}
+				add_core_of = ROOT
+			}
+			add_ideas = empire
+		}
+
+		ai_will_do = {
+			factor = 200
+		}
+	}
+}

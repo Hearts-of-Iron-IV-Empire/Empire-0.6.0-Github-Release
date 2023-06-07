@@ -1,0 +1,25 @@
+ideas = {
+	#hidden_ideas = {
+	#	ruler_stats_idea = {		
+	#		allowed = {
+	#			always = no
+	#		}
+#
+	#		picture = undisturbed_isolation
+#
+	#		allowed_civil_war = {
+	#			has_government = neutrality
+	#		}
+#
+	#		cancel = {
+	#			has_war = yes
+	#		}
+	#		
+	#		removal_cost = -1
+#
+	#		modifier = {
+	#			political_power_factor = var:management_skill
+	#		}
+	#	}
+	#}
+}

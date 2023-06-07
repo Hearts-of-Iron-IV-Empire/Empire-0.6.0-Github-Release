@@ -1,0 +1,32 @@
+
+state={
+	id=424
+	name="STATE_424"
+
+	history={
+		owner = RAJ
+		add_core_of = MAR
+		add_core_of = CAA
+		add_claim_by = MYS
+		add_claim_by = MDR
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			10208 = {
+				bunker = 5
+			}
+		}
+		1707.6.8 = {
+			owner = CAA
+			add_core_of = CAA
+		}
+	}
+
+	provinces={
+		1344 1412 4414 5032 7310 8100 10152 10208 10296 10756 10897 12146 12734 12779 13313 13314 13315 13316 
+	}
+	manpower=6791700
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

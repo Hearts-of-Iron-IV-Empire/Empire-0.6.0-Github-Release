@@ -1,0 +1,40 @@
+
+state={
+	id=158
+	name="STATE_158"
+	resources={
+		steel=16.000
+		oil=5
+	}
+
+	history={
+		owner = ITA
+		victory_points = {
+			6780 15 
+		}
+		victory_points = {
+			11721 5 
+		}
+		victory_points = {
+			9738 1 
+		}
+		victory_points = {
+			611 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 4
+		}
+		1802.1.1 = {
+			owner = FRA
+		}
+	}
+
+	provinces={
+		611 770 3782 6780 9738 11570 11721 11723 11730 
+	}
+	manpower=1036000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

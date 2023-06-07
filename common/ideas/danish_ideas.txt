@@ -1,0 +1,424 @@
+ideas = {
+	country = {
+
+		DEN_additional_sound_toll_dues = {
+			allowed = {
+				always = no
+			}
+
+			picture = HUN_treaty_of_triannon
+
+			removal_cost = -1
+
+			cancel = { has_war_with = SWE }
+			
+			modifier = {
+				consumer_goods_factor = -0.04
+			}
+		}
+		
+		DEN_legacy_of_the_great_adventurers = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_reserve_divisions
+
+			removal_cost = -1
+
+			
+			modifier = {
+				war_support_weekly = 0.005
+					army_attack_factor = 0.1
+			}
+		}
+		DEN_naval_arms_race = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_coastal_navy
+
+			removal_cost = -1
+
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.33
+				production_speed_dockyard_factor = 0.2
+			}
+		}
+		DEN_invasion_specialists = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_naval_manufacturer_1
+
+			removal_cost = -1
+
+			
+			modifier = {
+				amphibious_invasion = 0.10
+				invasion_preparation = -0.3
+				special_forces_attack_factor = 0.1
+				special_forces_cap = 0.02
+			}
+		}
+		DEN_raiding_fleet = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_coastal_navy
+
+			removal_cost = -1
+
+			
+			modifier = {
+				navy_submarine_attack_factor = 0.25
+				navy_submarine_defence_factor = 0.25
+				industrial_capacity_dockyard = 0.25
+				convoy_raiding_efficiency_factor = 0.5
+			}
+		}
+		DEN_battle_for_the_north_sea = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_coastal_navy
+
+			removal_cost = -1
+
+			
+			modifier = {
+				navy_capital_ship_attack_factor = 0.10
+				navy_submarine_attack_factor = 0.10
+				navy_screen_attack_factor = 0.10
+				spotting_chance = 0.1
+				naval_retreat_chance = 0.2
+			}
+		}
+		DEN_russo_danish_pact = {
+			allowed = {
+				always = no
+			}
+			picture = Molotov_Ribbentrop_pact
+			removal_cost = -1
+		}
+
+		DEN_kalmar_restauration = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_constitutional_guarantees
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.05
+				political_power_gain = 0.15
+			}
+		}
+
+		DEN_unification_of_embassies = {
+			allowed = {
+				always = no
+			}
+
+			picture = MEX_callistas
+
+			removal_cost = -1
+
+			cancel = { SWE = { has_war_with = DEN }}
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.15
+				opinion_gain_monthly_factor = 0.15
+			}
+		}
+
+		DEN_kalmar_economic_integration = {
+			allowed = {
+				always = no
+			}
+
+			picture = MEX_callistas
+
+			removal_cost = -1
+
+			cancel = { SWE = { has_war_with = DEN }}
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+
+		DEN_danish_swedish_trade_activities = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_naval_manufacturer_1
+
+			removal_cost = -1
+
+			name = DEN_danish_swedish_trade_activities
+
+			cancel = { SWE = { has_war_with = DEN }}
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_6 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.30
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+				land_doctrine = -0.60
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_5 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.25
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+				land_doctrine = -0.50
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_4 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.20
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+				land_doctrine = -0.40
+			}
+		}
+
+		DEN_outmanoeuvred_by_sweden_3 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.15
+				
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+					land_doctrine = -0.30
+				}
+		}
+
+		DEN_outmanoeuvred_by_sweden_2 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.10
+				
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+					land_doctrine = -0.20
+				}
+		}
+
+		DEN_outmanoeuvred_by_sweden_1 = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_army_war_college
+
+			removal_cost = -1
+
+			name = DEN_outmanoeuvred_by_sweden
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				army_org_factor = -0.04
+				
+				join_faction_tension = 0.60
+				ai_join_ally_desire_factor = -1000
+			}
+			research_bonus = {
+					land_doctrine = -0.10
+				}
+		}
+
+		DEN_cattle_crisis = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = cattle_crisis
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+			
+			modifier = {
+				industrial_capacity_factory = -0.2
+				production_speed_buildings_factor = -0.2
+			}
+		}
+		danish_volunteer_corps_focus = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				send_volunteers_tension = -0.30
+				send_volunteer_divisions_required = -0.25
+			}
+		}
+		danish_volunteer_corps_focus_2 = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_volunteer_expedition_bonus
+
+			modifier = {
+				send_volunteers_tension = -0.30
+				send_volunteer_divisions_required = -0.50
+				send_volunteer_size = 3
+			}
+		}
+		DEN_defense_of_denmark = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = generic_intel_bonus
+
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		DEN_rebuilding_our_defenses = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			picture = protected_by_the_Maginot_Line
+
+			modifier = {
+				production_speed_bunker_factor = 0.3
+				production_speed_coastal_bunker_factor = 0.3
+			}
+		}
+	}
+}

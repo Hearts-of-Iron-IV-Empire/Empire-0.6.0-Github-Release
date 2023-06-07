@@ -1,0 +1,189 @@
+#formable_nations = {
+#
+#	icon = generic_formable_nations
+#
+#	allowed = {
+#		has_dlc = "Waking the Tiger"
+#	}
+#}
+
+restore_songhai_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_songhai_empire
+}
+
+restore_mali_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_mali_empire
+}
+
+german_consolidation_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_germany
+
+}
+
+form_scandinavia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_scandinavia
+
+}
+
+form_nordic_league_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_nordic_league
+
+}
+
+form_gran_colombia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_united_netherlands_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_united_netherlands
+
+	allowed = {
+		tag = HOL
+	}
+}
+
+form_united_central_america_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_united_central_america
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_baltic_federation_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_baltic_federation
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_ottoman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_ottoman_empire
+
+}
+
+form_european_union_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_european_union
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+form_mutapa_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_mutapa
+
+}
+
+form_roman_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_roman_empire
+
+}
+
+form_persian_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_persian_empire
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+
+	priority = -5
+}
+
+form_byzantine_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_byzantine_empire
+
+}
+
+form_arabia_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_arabia
+
+}
+
+form_majapahit_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_majapahit_empire
+
+}
+
+form_rattanakosin_kingdom_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_rattanakosin_kingdom
+
+}
+
+form_hre_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_hre
+
+}
+
+form_greater_german_reich_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_hre
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}

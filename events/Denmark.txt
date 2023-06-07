@@ -1,0 +1,1480 @@
+﻿#Denmark
+
+add_namespace = denmark
+
+#treaty of travendal
+
+country_event = {
+	id = denmark.1
+	title = denmark.1.t
+	desc = denmark.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We will be back!"
+		add_ideas = DEN_outmanoeuvred_by_sweden_6
+		set_truce = {
+		    target = SWE
+		    days = 720
+		}
+		white_peace = {
+			tag = SWE	
+		}
+		white_peace = {
+			tag = ENG	
+		}
+		if = {
+			limit = {
+				SOV = { has_war_with = ENG }
+			}
+			SOV = { white_peace = { tag = ENG } }
+		}
+
+		if = {
+			limit = {
+				POL = { has_war_with = ENG }
+			}
+			POL = { white_peace = { tag = ENG } }
+		}
+
+		leave_faction = yes
+		add_war_support = -0.4
+
+		hidden_effect = {
+			news_event = { id = mod.4 days = 1 }
+		}
+
+	}	
+}
+
+country_event = {
+	id = denmark.2
+	title = denmark.2.t
+	desc = denmark.2.d
+
+	is_triggered_only = yes
+
+	mean_time_to_happen = { days = 1 }
+
+	option = {
+		name = denmark.2.a
+		trigger = {
+			original_tag = DEN
+		}
+		create_country_leader = {
+			name = "Sophia Hedwig"
+			desc = "SOPHIA_HEDWIG_DESC"
+			picture = "sophia_hedwig.dds"
+			ideology = despotism
+		}
+	}
+	option = {
+		name = denmark.2.b
+		trigger = {
+			original_tag = SWE
+		}
+		puppet = DEN
+	}	
+}
+
+# King Christian V dies
+
+country_event = {
+	id = denmark.3
+	title = denmark.3.t
+	desc = denmark.3.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	mean_time_to_happen = {
+    	days = 1
+	}
+	option = {
+		name = "Long may he reign!"
+		if = {
+			limit = {
+				has_country_leader = {
+					character = DEN_Christian_V
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality # Despotism
+					elections_allowed = no
+				}
+			}
+			add_stability = -0.05
+			promote_character = DEN_Frederick_IV
+		}
+	}
+}
+
+#england intervene event
+
+country_event = {
+	id = denmark.4
+	title = denmark.4.t
+	desc = denmark.4.d
+
+	fire_only_once = yes
+
+	trigger = {
+		tag = ENG
+		DEN = { has_offensive_war_with = SWE }
+		NOT = { date > 1712.1.1}
+	}
+	mean_time_to_happen = {
+    days = 10
+		}
+
+	option = {
+		name = "Send an ultimatum"
+		ai_chance = {
+			base = 800
+			modifier = {
+				factor = 0
+				NOT = { has_government = neutrality }
+			}
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+		DEN = {
+			country_event = {
+				id = denmark.5
+				days = 2
+			}
+		}
+		SWE = {
+			country_event = {
+				id = denmark.30
+				days = 2
+			}
+		}
+	}
+
+	option = {	
+		name = "It is not our concern"
+		ai_chance = {
+			base = 1
+		}
+		add_political_power = -150
+	}
+}
+
+#england threatens war
+
+country_event = {
+	id = denmark.5
+	title = denmark.5.t
+	desc = denmark.5.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We have to back down"
+		ai_chance = {
+			factor = 10
+		}
+		country_event = {
+			id = denmark.1
+			days = 2
+		}
+		ENG = {
+			country_event = {
+				id = denmark.6
+				days = 2
+			}
+		}
+		set_country_flag = flag_peace_of_travendal
+	}
+
+	option = {	
+		name = "We call their bluff!"
+		ai_chance = {
+			factor = 20
+		}
+		add_war_support = 0.05
+		ENG = {
+			country_event = {
+				id = denmark.7
+				days = 2
+			}
+		}
+	}
+
+	#option = {	
+	#	name = "Seek the support of the French"
+	#	ai_chance = {
+	#		factor = 10
+	#	}
+	#	add_political_power = -150
+	#}
+}
+
+#ENG - denmark backs down
+
+country_event = {
+	id = denmark.6
+	title = denmark.6.t
+	desc = denmark.6.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We have shown our strenght!"
+		ai_chance = {
+			factor = 10
+		}
+		add_political_power = 50
+	}
+}
+
+#ENG - denmark dares us
+
+country_event = {
+	id = denmark.7
+	title = denmark.7.t
+	desc = denmark.7.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "It's not worth it"
+		ai_chance = {
+			factor = 1
+		}
+		add_political_power = -50
+		DEN = {
+			country_event = {
+				id = denmark.8
+				days = 2
+			}
+		}
+	}
+
+	option = {
+		name = "We will shell Copenhagen into the ground!"
+		ai_chance = {
+			factor = 20
+		}
+		declare_war_on = {
+		    target = DEN
+		    type = annex_everything
+		}
+		DEN = {
+			country_event = {
+				id = denmark.9
+				days = 10
+			}
+		}
+	}
+}
+
+#DEN - england backs down
+
+country_event = {
+	id = denmark.8
+	title = denmark.8.t
+	desc = denmark.8.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We have shown our strenght!"
+		add_political_power = 50
+	}
+}
+
+# at war with maritime powers
+
+country_event = {
+	id = denmark.9
+	title = denmark.9.t
+	desc = denmark.9.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "We will never surrender!"
+		ai_chance = {
+			factor = 1
+		}
+		add_war_support = 0.10
+		37 = {
+			damage_building = {
+		    type = infrastructure
+		    damage = 3
+			}
+			damage_building = {
+			    type = industrial_complex
+			    damage = 3
+			}
+			damage_building = {
+			    type = arms_factory
+			    damage = 3
+			}
+		}
+	}
+
+	option = {
+		name = "We MUST back down..."
+		ai_chance = {
+			factor = 20
+		}
+		country_event = {
+			id = denmark.1
+			days = 2
+		}
+		ENG = {
+			country_event = {
+				id = denmark.6
+				days = 2
+			}
+		}
+		37 = {
+			damage_building = {
+		    type = infrastructure
+		    damage = 3
+			}
+			damage_building = {
+			    type = industrial_complex
+			    damage = 3
+			}
+			damage_building = {
+			    type = arms_factory
+			    damage = 3
+			}
+		}
+		
+		set_country_flag = flag_peace_of_travendal
+	}
+}
+
+#den drops claims 
+
+country_event = {
+	id = denmark.10
+	title = denmark.10.t
+	desc = denmark.10.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Kind, but foolish!"
+	}
+
+	option = {
+		name = "We shall return the favor!"
+		add_political_power = 50
+		143 = {
+			remove_claim_by = SWE
+		}
+		DEN = {
+			country_event = {
+				id = denmark.11
+				days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+		    target = DEN
+		    modifier = large_increase
+		}
+	}
+}
+#sweden returns favor
+country_event = {
+	id = denmark.11
+	title = denmark.11.t
+	desc = denmark.11.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A toast to friendship!"
+
+	}
+}
+
+# guarantee - territory deal
+
+country_event = {
+	id = denmark.12
+	title = denmark.12.t
+	desc = denmark.12.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "That's hardly a fair deal!"
+		add_political_power = 10
+		DEN = {
+			country_event = {
+				id = denmark.13
+				days = 3
+			}
+		}
+	}
+
+	option = {
+		name = "Better than fighting them I suppose"
+		add_political_power = -10
+		DEN = { transfer_state = 138 }
+		DEN = {
+			country_event = {
+				id = denmark.14
+				days = 3
+			}
+		}
+	}
+}
+#nope
+country_event = {
+	id = denmark.13
+	title = denmark.13.t
+	desc = denmark.13.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "They will come to regret it later!"
+		add_political_power = 10
+	}
+}
+#yes
+country_event = {
+	id = denmark.14
+	title = denmark.14.t
+	desc = denmark.14.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "A good deal!"
+		add_political_power = 10
+		give_guarantee = SWE
+	}
+}
+
+#alliance of kalmar
+
+country_event = {
+	id = denmark.15
+	title = denmark.15.t
+	desc = denmark.15.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Together we stand united!"
+		DEN = {
+			country_event = {
+				id = denmark.16
+				days = 3
+			}
+		}
+		dismantle_faction = yes
+	}
+
+	option = {
+		name = "We shouldn't stick to the past."
+		DEN = {
+			country_event = {
+				id = denmark.17
+				days = 3
+			}
+		}
+		reverse_add_opinion_modifier = {
+		    target = DEN
+		    modifier = large_decrease
+		}
+	}
+}
+
+country_event = {
+	id = denmark.16
+	title = denmark.16.t
+	desc = denmark.16.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "The world shall fear our combined strenght!"
+		DEN = { add_to_faction = SHL }
+		DEN = { add_to_faction = SWE }
+	}
+}
+
+country_event = {
+	id = denmark.17
+	title = denmark.17.t
+	desc = denmark.17.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Regrettable"
+		unlock_national_focus = DEN_the_weakness_of_sweden
+	}
+}
+
+#Russo-Danish pact to split Sweden
+
+country_event = {
+	id = denmark.18
+	title = denmark.18.t
+	desc = denmark.18.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "An excellent idea!"
+		add_ideas = DEN_russo_danish_pact
+		DEN = {
+			add_ideas = DEN_russo_danish_pact
+		}
+		add_state_claim = 191
+		add_state_claim = 12
+		add_state_claim = 13
+		add_state_claim = 208
+		add_state_claim = 195
+		add_state_claim = 146
+		add_state_claim = 150
+		add_state_claim = 111
+		add_state_claim = 149
+		add_state_claim = 148
+		add_state_claim = 147
+	}
+
+	option = {
+		name = "They live in a fantasy, it's unrealistic."
+	}
+}
+
+#russia agrees
+
+country_event = {
+	id = denmark.19
+	title = denmark.19.t
+	desc = denmark.19.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Onward, men!"
+		add_state_claim = 138
+		add_state_claim = 139
+		add_state_claim = 140
+		add_state_claim = 141
+		add_state_claim = 38
+		add_state_claim = 124
+		add_state_claim = 666
+		add_state_claim = 794
+		add_state_claim = 62
+	}
+}
+
+#russia disagrees
+
+country_event = {
+	id = denmark.20
+	title = denmark.20.t
+	desc = denmark.20.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Not so great friends after all."
+	}
+}
+
+#russia honor pact?
+
+country_event = {
+	id = denmark.21
+	title = denmark.21.t
+	desc = denmark.21.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = SOV
+		has_idea = DEN_russo_danish_pact
+		DEN = { exists = yes }
+		NOT =  { has_war_with = DEN }
+		AND = {
+			OR = {
+				SWE = { has_capitulated = yes }
+				NOT = { country_exists = SWE }
+			}
+			OR = {
+				OR = {
+					controls_state = 934
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 934
+					}
+				}
+				OR = {
+					controls_state = 935
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 935
+					}
+				}
+				OR = {
+					controls_state = 138
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 138
+					}
+				}
+				OR = {
+					controls_state = 139
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 139
+					}
+				}
+				OR = {
+					controls_state = 140
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 140
+					}
+				}
+				OR = {
+					controls_state = 141
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 141
+					}
+				}
+				OR = {
+					controls_state = 38
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 38
+					}
+				}
+				OR = {
+					controls_state = 124
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 124
+					}
+				}
+				OR = {
+					controls_state = 666
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 666
+					}
+				}
+				OR = {
+					controls_state = 794
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 794
+					}
+				}
+				OR = {
+					controls_state = 62
+					any_other_country = {
+						is_in_faction_with = SOV
+						SOV = {
+							is_faction_leader = yes
+						}
+						controls_state = 62
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					SWE = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = SWE
+				}
+			}
+		}
+		name = "We shall honour our word."
+		if = {
+			limit = {
+				138 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 138
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 138 }
+		}
+		if = {
+			limit = {
+				934 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 934
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 934 }
+		}
+		if = {
+			limit = {
+				935 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 935
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 935 }
+		}
+		if = {
+			limit = {
+				139 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 139
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 139 }
+		}
+		if = {
+			limit = {
+				140 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 140
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 140 }
+		}
+		if = {
+			limit = {
+				141 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 141
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 141 }
+		}
+		if = {
+			limit = {
+				38 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 38
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 38 }
+		}
+		if = {
+			limit = {
+				124 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 124
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 124 }
+		}
+		if = {
+			limit = {
+				666 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 666
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 666 }
+		}
+		if = {
+			limit = {
+				794 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 794
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 794 }
+		}
+		if = {
+			limit = {
+				62 = {
+					OR = {
+						is_controlled_by = SOV
+						any_other_country = {
+							controls_state = 62
+							is_in_faction_with = SOV
+							SOV = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			DEN = { transfer_state = 62 }
+		}
+		DEN = { country_event = denmark.22 }
+	}
+	option = {
+		name = "Actually, we have decided to alter the deal."
+		ai_chance = {
+			base = 1
+		}
+		DEN = { country_event = denmark.23 }
+		remove_ideas = DEN_russo_danish_pact
+		add_ai_strategy = {
+		    type = antagonize
+		    id = DEN
+		    value = 200
+		}
+		remove_from_faction = DEN		
+		DEN = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = SOV
+				}
+			}
+			add_ai_strategy = {
+			    type = antagonize
+			    id = SOV
+			    value = 200
+			}
+		}
+	}
+}
+
+#russia honors pact
+
+country_event = {
+	id = denmark.22
+	title = denmark.22.t
+	desc = denmark.22.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We always knew we had a friend in Russia"
+	}
+}
+
+#russia dishonors pact
+
+country_event = {
+	id = denmark.23
+	title = denmark.23.t
+	desc = denmark.23.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Traitors!"
+		create_wargoal = {
+			type = annex_everything
+			target = SOV
+		}
+	}
+}
+
+#denmark honor pact?
+
+	
+country_event = {
+	id = denmark.24
+	title = denmark.24.t
+	desc = denmark.24.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = DEN
+		has_idea = DEN_russo_danish_pact
+		SOV = { exists = yes }
+		NOT =  { has_war_with = SOV }
+		AND = {
+			OR = {
+				SWE = { has_capitulated = yes }
+				NOT = { country_exists = SWE }
+			}
+			OR = {
+				OR = {
+					controls_state = 191
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 191
+					}
+				}
+				OR = {
+					controls_state = 12
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 12
+					}
+				}
+				OR = {
+					controls_state = 13
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 13
+					}
+				}
+				OR = {
+					controls_state = 208
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 208
+					}
+				}
+				OR = {
+					controls_state = 195
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state =  195
+					}
+				}
+				OR = {
+					controls_state = 146
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 146
+					}
+				}
+				OR = {
+					controls_state = 111
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 111
+					}
+				}
+				OR = {
+					controls_state = 149
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 149
+					}
+				}
+				OR = {
+					controls_state = 148
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 148
+					}
+				}
+				OR = {
+					controls_state = 149
+					any_other_country = {
+						is_in_faction_with = DEN
+						controls_state = 149
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					SWE = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = SWE
+				}
+			}
+		}
+
+		#add_state_claim = 191
+		#add_state_claim = 12
+		#add_state_claim = 13
+		#add_state_claim = 208
+		#add_state_claim = 195
+		#add_state_claim = 146
+		#add_state_claim = 150
+		#add_state_claim = 111
+		#add_state_claim = 149
+		#add_state_claim = 148
+		#add_state_claim = 147
+
+		name = "We shall honour our word."
+		if = {
+			limit = {
+				191 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 191
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 191 }
+		}
+		if = {
+			limit = {
+				12 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 12
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 12 }
+		}
+		if = {
+			limit = {
+				13 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 13
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 13 }
+		}
+		if = {
+			limit = {
+				208 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 208
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 208 }
+		}
+		if = {
+			limit = {
+				195 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 195
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 195 }
+		}
+		if = {
+			limit = {
+				146 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 146
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 146 }
+		}
+		if = {
+			limit = {
+				150 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 150
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 150 }
+		}
+		if = {
+			limit = {
+				111 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 111
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 111 }
+		}
+		if = {
+			limit = {
+				149 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 149
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 149 }
+		}
+		if = {
+			limit = {
+				148 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 148
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 148 }
+		}
+		if = {
+			limit = {
+				147 = {
+					OR = {
+						is_controlled_by = DEN
+						any_other_country = {
+							controls_state = 147
+							is_in_faction_with = DEN
+							DEN = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			SOV = { transfer_state = 147 }
+		}
+		SOV = { country_event = denmark.25 }
+	}
+	option = {
+		name = "Actually, we have decided to alter the deal."
+		ai_chance = {
+			base = 1
+		}
+		SOV = { country_event = denmark.26 }
+		remove_ideas = DEN_russo_danish_pact
+		add_ai_strategy = {
+		    type = antagonize
+		    id = SOV
+		    value = 200
+		}
+		leave_faction = yes	
+		SOV = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = DEN
+				}
+			}
+			add_ai_strategy = {
+			    type = antagonize
+			    id = DEN
+			    value = 200
+			}
+		}
+	}
+}
+
+#denmark honors pact
+
+country_event = {
+	id = denmark.25
+	title = denmark.25.t
+	desc = denmark.25.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We always knew we had a friend in Denmark"
+	}
+}
+
+#denmark dishonors pact
+
+country_event = {
+	id = denmark.26
+	title = denmark.26.t
+	desc = denmark.26.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Traitors!"
+		create_wargoal = {
+			type = annex_everything
+			target = DEN
+		}
+	}
+}
+
+#denmark offer closer union
+
+country_event = {
+	id = denmark.27
+	title = denmark.27.t
+	desc = denmark.27.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We will not give up sovereignty!"
+		SOV = { country_event = denmark.28 }
+	}
+
+	option = {
+		name = "It is the only way."
+		SOV = { country_event = denmark.29 }
+	}
+}
+
+#sweden aye
+
+country_event = {
+	id = denmark.28
+	title = denmark.28.t
+	desc = denmark.28.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Damn."
+		complete_national_focus = DEN_a_decentralized_union
+	}
+}
+
+#sweden nay
+
+country_event = {
+	id = denmark.29
+	title = denmark.29.t
+	desc = denmark.29.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent."
+		set_global_flag = SWE_agrees_to_closer_union
+	}
+}
+
+#england intervenes against denmark note to sweden
+
+country_event = {
+	id = denmark.30
+	title = denmark.30.t
+	desc = denmark.30.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We do not stand alone after all!"
+	}
+}
+
+#denmark offers peace for scania and gotland
+
+country_event = {
+	id = denmark.31
+	title = denmark.31.t
+	desc = denmark.31.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We submit."
+		DEN = { transfer_state = 138}
+		DEN = { transfer_state = 934}
+		DEN = { transfer_state = 935}
+		DEN = { transfer_state = 124}
+		white_peace = DEN
+		DEN = { leave_faction = yes }
+		set_truce = {
+		    target = DEN
+		    days = 365
+		}
+		DEN = { country_event = denmark.32 }
+	}
+	option = {
+		name = "We will fight them to the death!"
+		add_war_support = 0.05
+		add_political_power = -100
+		DEN = { country_event = denmark.33 }
+	}
+}
+
+#sweden agrees
+
+country_event = {
+	id = denmark.32
+	title = denmark.32.t
+	desc = denmark.32.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "They saw reason at last."
+	}
+}
+
+#sweden disagrees
+
+country_event = {
+	id = denmark.33
+	title = denmark.33.t
+	desc = denmark.33.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Stubborn fools!"
+	}
+}

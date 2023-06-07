@@ -1,0 +1,30 @@
+
+state={
+	id=997
+	name="STATE_997"
+	resources = {
+		steel=24
+	}
+	history={
+		owner = CHR
+		add_core_of = CHR
+		1730.1.1 = {
+			owner = USA
+			add_core_of = USA
+			remove_core_of = CHR
+			add_manpower = 40000
+		}
+		1737.1.1 = {
+			victory_points = {
+				10412 15 
+			}
+		}
+	}
+
+	provinces={
+		1506 3925 7558 9931 10412 10439 11841
+	}
+	manpower=1567
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

@@ -1,0 +1,26 @@
+
+state={
+	id=705
+	name="STATE_705"
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 1
+			13015 = {
+				naval_base = 3
+			}
+			1903 = {
+				naval_base = 1
+			}
+		}
+
+	}
+
+	provinces={
+		1903 13015 
+	}
+	manpower=24725
+	buildings_max_level_factor=1.000
+	state_category=tiny_island
+}

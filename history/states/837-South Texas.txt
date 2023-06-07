@@ -1,0 +1,18 @@
+
+state={
+	id=837
+	name="STATE_837"
+
+	history={
+		owner = MEX
+		add_core_of = MEX
+
+	}
+
+	provinces={
+		1915 1927 1998 2019 5022 5061 6798 7836 7981 8064 9773 12301 12728 12782 12875 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

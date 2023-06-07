@@ -1,0 +1,108 @@
+characters = {
+    SAX_Augustus_III = {
+        name = "Augustus III"
+        portraits = {
+            civilian = {
+                large = "GFX_Augustus_III"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SAX_Frederick_Augustus = {
+        name = "Frederick Augustus"
+        portraits = {
+            civilian = {
+                large = "GFX_Frederick_Augustus"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = { absolutist_reformer }
+        }
+    }
+    SAX_Jacob_Heinrich_von_Flemming = {
+        name = "Jacob Heinrich von Flemming"
+        portraits = {
+            army = {
+                large = "GFX_GFX_Jacob_Heinrich_Von_Flemming"
+            }
+            civilian = {
+                large = "GFX_GFX_Jacob_Heinrich_Von_Flemming"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = nobility
+            traits = { cristero_general }
+        }
+        field_marshal = {
+            traits = { organizer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 1
+        }
+    }
+    SAX_Protestant_Church = {
+        name = "Protestant Church"
+        portraits = {
+            civilian = {
+                large = "GFX_Protestant_Church"
+            }
+        }
+        country_leader = {
+            ideology = fascism_ideology
+            traits = {}
+        }
+    }
+    SAX_The_Saxon_People = {
+        name = "The Saxon People"
+        portraits = {
+            civilian = {
+                large = "GFX_Saxon_People_Leader"
+            }
+        }
+        country_leader = {
+            ideology = anarchist_communism
+            traits = {}
+            desc = SAXON_PEOPLE_DESC
+        }
+    }
+    SAX_Matthias_Johann_von_der_Schulenburg = {
+        name = "Matthias Johann von der Schulenburg"
+        portraits = {
+            army = {
+                large = "GFX_Matthias_Johann_Von_der_Schulenburg"
+            }
+        }
+        corps_commander ={        
+            traits = { inflexible_strategist }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    SAX_Johann_August_Marschall_von_Bieberstein = {
+        name = "Johann August Marschall von Bieberstein"
+        portraits = {
+            army = {
+                large = "GFX_Johann_August_Marschall_Von_Bieberstein"
+            }
+        }
+        corps_commander ={        
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 1
+        }
+    }
+}

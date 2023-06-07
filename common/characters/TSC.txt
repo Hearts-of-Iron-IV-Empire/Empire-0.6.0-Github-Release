@@ -1,0 +1,37 @@
+characters = {
+    TSC_Luis_Francisco_de_la_Cerda = {
+        name = "Luis Francisco de la Cerda"
+        portraits = {
+            civilian = {
+                large = "GFX_Luis_Francisco_de_la_Cerda"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    TSC_Wirich_Von_Daun = {
+        name = "Wirich Philipp von Daun"
+        portraits = {
+            army = {
+                large = "GFX_Wirich_Von_Daun"
+            }
+            civilian = {
+                large = "GFX_Wirich_Von_Daun"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+        corps_commander = {
+            traits = {}
+            skill = 4
+            attack_skill = 2
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+}

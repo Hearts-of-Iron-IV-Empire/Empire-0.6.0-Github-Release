@@ -1,0 +1,114 @@
+ideas = {	
+	country = {
+		isolationism_idea = {		
+			allowed = {
+				always = no
+			}
+
+			picture = undisturbed_isolation
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			cancel = {
+				has_war = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				#generate_wargoal_tension = 0.5
+				join_faction_tension = 1.00
+				#lend_lease_tension = 0.50
+				send_volunteers_tension = 1.00
+				guarantee_tension = 1.0
+				ai_badass_factor = 0.01    # Will receive 1% of the threat from others
+				ai_get_ally_desire_factor = -1000
+			}
+		}
+		mandate_of_heaven = {		
+			allowed = {
+				always = no
+			}
+
+			picture = man_low_legitimacy5
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.20
+				stability_factor = 0.20
+				war_support_factor = 0.20
+				army_org_factor = 0.10
+				army_morale_factor = 0.10
+			}
+		}
+		eight_banners_system = {		
+			allowed = {
+				always = no
+			}
+
+			picture = soldier_qing
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				experience_gain_army_factor = -0.20
+				land_reinforce_rate = -0.15
+			}
+		}
+		pays_tribute_1 = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = pays_tribute
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+		pays_tribute_2 = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = pays_tribute
+
+			modifier = {
+				consumer_goods_factor = 0.07
+			}
+		}
+		tributary_system = {
+			
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = chi_receiving_money
+
+			modifier = {
+				consumer_goods_factor = -0.12
+			}
+		}
+	}
+}

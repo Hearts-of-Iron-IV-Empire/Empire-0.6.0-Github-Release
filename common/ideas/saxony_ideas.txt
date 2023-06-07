@@ -1,0 +1,148 @@
+ideas = {
+	country = {
+
+		SAX_high_developed_region = {
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industry_free_repair_factor = 0.2
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		SAX_medium_developed_region = {
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory = 0.04
+				industry_free_repair_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		SAX_polish_leash_dog = {
+			picture = ast_abandon_the_westminster_system
+
+			modifier = {
+				political_power_gain = -0.1
+				overlord_trade_cost_factor = -0.3
+			}
+		}
+		SAX_golden_century = {
+			picture = chi_hyper_inflation5
+			
+			modifier = {
+				political_power_gain = 0.1
+				stability_factor = 0.1
+				research_speed_factor = 0.08
+			}
+		}
+		SAX_recent_payments = {
+			picture = burgher_coup
+			modifier = {
+				consumer_goods_factor = 0.2
+			}
+		}
+		SAX_offensive_army = {
+			picture = generic_intel_bonus
+			modifier = {
+				offence = 0.1
+				army_org = 6
+			}
+		}
+		SAX_defensive_army = {
+			picture = ast_volunteer_defence_corps
+			modifier = {
+				defence = 0.1
+				army_org = 6
+			}
+		}
+		SAX_low_legitimacy = {
+			picture = prc_low_popular_support
+			modifier = {
+				political_power_gain = -0.3
+				stability_factor = -0.1
+			}
+		}
+		SAX_medium_legitimacy = {
+			picture = prc_low_popular_support2
+			modifier = {
+				political_power_gain = -0.15
+				stability_factor = -0.05
+			}
+		}
+		SAX_population_boom = {
+			picture = generic_agrarian_reform
+			modifier = {
+				monthly_population = 0.5
+			}
+		}
+		SAX_PRU_advisors = {
+			picture = FRA_national_mobilization_focus
+			modifier ={
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+				breakthrough_factor = 0.2
+				army_org_regain = 0.1
+			}
+		}
+		SAX_high_resistance = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier ={
+				production_speed_buildings_factor = -0.5
+				stability_weekly = -0.003
+				communism_drift = 0.10
+			}
+		}
+		SAX_medium_resistance = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier ={
+				production_speed_buildings_factor = -0.3
+				stability_weekly = -0.001
+				communism_drift = 0.08
+			}
+		}
+		SAX_low_resistance = {
+			picture = FRA_scw_intervention_republicans_focus
+			modifier ={
+				production_speed_buildings_factor = -0.2
+				communism_drift = 0.04
+			}
+		}
+		SAX_for_the_people = {
+			picture = SPR_torchbearers_of_tomorrow
+			cancel = {
+				is_puppet_of = AUS
+			}
+			modifier = {
+				surrender_limit = 2
+				army_core_attack_factor = 0.4
+				army_core_defence_factor = 0.6
+				army_speed_factor = 0.2
+				army_org_factor = 0.3
+				planning_speed = 0.3
+			}
+		}
+		SAX_AUS_war_reparations = {
+			picture = generic_economic_increase
+			modifier = {
+				political_power_gain = 0.05
+				consumer_goods_factor = -0.3
+			}
+		}
+		SAX_land_reform = {
+			picture = man_five_year_plan_industry
+			modifier = {
+				consumer_goods_factor = -0.1
+				production_factory_efficiency_gain_factor = 0.1
+				industrial_capacity_factory = 0.2
+			}
+		}
+		SAX_people_flood_in	= {		
+			picture = generic_agrarian_reform
+			modifier = {
+				monthly_population = 1
+			}
+		}
+	}
+}

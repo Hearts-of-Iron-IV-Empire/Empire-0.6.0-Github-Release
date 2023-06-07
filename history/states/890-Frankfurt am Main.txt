@@ -1,0 +1,22 @@
+state={
+	id=890
+	name="STATE_890"
+	provinces={
+		6488 
+	}
+	history={
+		victory_points = {
+			6488  20 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = IFC
+		add_core_of = IFC
+	}
+	manpower=69487
+	buildings_max_level_factor=1.000
+	state_category=city
+
+}

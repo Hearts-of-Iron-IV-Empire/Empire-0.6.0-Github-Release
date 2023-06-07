@@ -1,0 +1,35 @@
+
+state={
+	id=438
+	name="STATE_438"
+	resources={
+		oil=25.000
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = RAJ
+		add_core_of = AWA
+		add_extra_state_shared_building_slots = 5
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 3
+		}
+		1730.5.1 = {
+			owner = AWA
+			controller = AWA
+			add_core_of = AWA
+
+		}
+
+	}
+
+	provinces={
+		1377 1983 4299 7064 7334 8082 9973 
+	}
+	manpower=15491000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+	local_supplies=0.000
+}

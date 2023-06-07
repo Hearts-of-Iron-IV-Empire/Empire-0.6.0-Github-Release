@@ -1,0 +1,27 @@
+
+state={
+	id=994
+	name="STATE_994"
+
+	history={
+		owner = CRE
+		add_core_of = CRE
+		add_core_of = FLO
+		
+		1730.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+		}
+
+		1765.1.1 = {
+			owner = FLO
+		}
+	}
+
+	provinces={
+		7640 10520 11942 
+	}
+	manpower=1201
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

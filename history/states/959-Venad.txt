@@ -1,0 +1,23 @@
+state={
+	id=959
+	name="STATE_959"
+
+	history={
+		owner = VED
+		add_core_of = VED
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			13304 10
+		}
+	}
+
+	provinces={
+		1238 7402 7447 13303 13304
+	}
+	manpower=3618794
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

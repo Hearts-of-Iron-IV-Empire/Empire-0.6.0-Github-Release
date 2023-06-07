@@ -1,0 +1,23 @@
+state={
+	id=1025
+	name="STATE_1025"
+	resources={
+		steel=5
+	}
+
+	history={
+		owner = UNC
+		add_extra_state_shared_building_slots = 5
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
+	}
+
+	provinces={
+		4435 4386 4987 5310 10910 12338 12892
+	}
+	manpower=20000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

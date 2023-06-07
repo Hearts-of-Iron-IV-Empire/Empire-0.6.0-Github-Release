@@ -1,0 +1,23 @@
+state={
+	id=1039
+	name="STATE_1039"
+	provinces={
+		13269 13270 13275
+	}
+
+	history={
+		owner = INS
+		buildings = {
+			infrastructure = 1
+			13269 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			13269 1
+		}
+	}
+	manpower=500
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

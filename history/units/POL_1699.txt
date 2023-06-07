@@ -1,0 +1,184 @@
+﻿division_template = {
+	name = "Dywizja Piechoty"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	support = {
+        recon = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Brygada Kawalerii" 
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 1 y = 2 }
+
+	}
+	support = {
+		recon = { x = 0 y = 0 }     
+	}
+}
+
+
+units = {
+	##### Ottoman Front #####
+
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3430
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3430
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6429
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6429
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Brygada Kawalerii"
+		location = 3457
+		division_template = "Brygada Kawalerii"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 3457
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9533
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9533
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11464
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11464
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11490
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11490
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6497
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 6497
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 9465
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division= {
+		name = "Dywizja Piechoty"
+		location = 11438
+		division_template = "Dywizja Piechoty"
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+}
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "POL"
+		}
+		requested_factories = 3
+		progress = 0.77
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "POL"
+		}
+		requested_factories = 1
+		progress = 0.21
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "POL"
+		}
+		requested_factories = 1
+		progress = 0.21
+		efficiency = 100
+	}
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=585
+	name="STATE_585"
+
+	history={
+		add_core_of = KAZ
+		owner = KYR
+		victory_points = {
+			1479 50
+		}
+		victory_points = {
+			12324 1 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			arms_factory = 1
+
+		}
+		add_core_of = KYR
+
+	}
+
+	provinces={
+		1479 1532 1576 1614 4488 4618 10395 10420 10435 12324 12465 
+	}
+	manpower=433721
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

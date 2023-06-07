@@ -1,0 +1,19 @@
+
+state={
+	id=1014
+	name="STATE_1014"
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		2193 5212 8245
+	}
+	manpower=16037
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

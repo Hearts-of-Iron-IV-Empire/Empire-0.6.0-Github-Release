@@ -1,0 +1,37 @@
+state={
+	id=604
+	name="STATE_604"
+
+	history={
+		owner = TIB
+		add_core_of = TIB
+		add_core_of = CHI
+		add_extra_state_shared_building_slots = 5
+		victory_points = {
+			7940 10 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+
+		}
+		1716.5.1 = {
+			owner = SIK
+			controller = SIK
+			add_core_of = SIK
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+
+		}
+	}
+
+	provinces={
+		4914 4964 7940 8018 8037 12899 
+	}
+	manpower=296100
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,32 @@
+political_actions = {
+	LOR_decision_join_austria ={
+		available = {
+			has_war_with = FRA
+			AUS = { has_war_with = FRA }
+		}
+		visible = {
+			original_tag = LOR
+			NOT = { is_in_faction = yes }
+		}
+		ai_will_do = {
+			factor = 4000
+		}
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {	
+			if = {
+				limit = {
+					AUS = { is_faction_leader = yes }
+				}
+				AUS = { country_event = generic.2 }
+			}
+			else_if = {
+				limit = {
+					AUS = { is_in_faction_with = ENG }
+				}
+				ENG = { country_event = generic.2 }
+			}
+		}
+	}
+}

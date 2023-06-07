@@ -1,0 +1,32 @@
+state={
+	id=736
+	name="STATE_736"
+	
+	state_category = rural
+
+	history={
+		owner = VNC
+		add_core_of = VNC
+		add_claim_by = AUS
+		add_extra_state_shared_building_slots = 5
+		victory_points = {
+			11735 1
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 3
+			6626 = {
+				naval_base = 3
+			}
+		}
+		1798.1.1 = {
+			owner = AUS
+		}
+	}
+
+	provinces={
+		11735 6626
+	}
+	manpower=80000
+	buildings_max_level_factor=1.000
+}

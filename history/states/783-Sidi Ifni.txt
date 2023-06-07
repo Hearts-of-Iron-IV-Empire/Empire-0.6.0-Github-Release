@@ -1,0 +1,26 @@
+
+state={
+	id=783
+	name="STATE_783" # Sidi Ifni
+	manpower = 26043
+	
+	state_category = enclave
+
+	history={
+		owner = POR
+		add_core_of = MOR
+		buildings = {
+			infrastructure = 1
+			12857 = {
+				naval_base = 4
+			}
+		}
+		victory_points = {
+			12857 2
+		}
+	}
+
+	provinces={
+		12857
+	}
+}

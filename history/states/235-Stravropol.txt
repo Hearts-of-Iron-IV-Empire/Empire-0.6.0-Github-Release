@@ -1,0 +1,18 @@
+state = {
+    id = 235 #Nogai
+    name = STATE_235 
+    manpower = 100000
+    state_category = rural
+    
+    history = {
+        owner = CAU
+        add_core_of = CAU
+        buildings = {
+            infrastructure = 1
+        }
+    }
+    
+    provinces = { 731 748 3748 3779 6750 6753 6796 9688 9707 11678 11696 11727 }
+    
+    local_supplies = 0.25
+}

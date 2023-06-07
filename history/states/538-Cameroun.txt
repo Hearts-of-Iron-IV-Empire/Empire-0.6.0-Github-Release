@@ -1,0 +1,23 @@
+
+state={
+	id=538
+	name="STATE_538"
+	resources={
+		rubber=2.000
+	}
+
+	history={
+		owner = UNC
+
+	}
+
+
+	impassable = yes
+	
+	provinces={
+		988 1731 1929 2024 7219 7931 8016 8048 10071 10858 10883 10951 12741 12824 
+	}
+	manpower=845127
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

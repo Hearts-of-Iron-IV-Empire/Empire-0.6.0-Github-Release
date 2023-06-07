@@ -1,0 +1,36 @@
+
+state={
+	id=792
+	name="Kyiv"
+
+	history={
+		owner = ZAP
+		victory_points = {
+			525 25 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = ZAP
+		add_core_of = UKR
+		1939.1.1 = {
+			buildings = {
+				arms_factory = 3
+				industrial_complex = 3
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		489 525 582 3568 6458 6532 9543 11530 11557 
+	}
+	manpower=322415
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

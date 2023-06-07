@@ -1,0 +1,227 @@
+defined_text = {
+	name = GetInfluenceSOV
+	text = {
+		trigger = {
+			SOV = {
+				NOT = {
+					OR = {
+						has_idea = POL_influence_over_poland_1 
+						has_idea = POL_influence_over_poland_2
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_6 
+					}
+				}
+			}
+		}
+		localization_key = POL_influence_0
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_1 }
+		}
+		localization_key = POL_influence_15
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_2 }
+		}
+		localization_key = POL_influence_30
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_3 }
+		}
+		localization_key = POL_influence_45
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_4 }
+		}
+		localization_key = POL_influence_60
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_5 }
+		}
+		localization_key = POL_influence_75
+	}
+	text = {
+		trigger = {
+			SOV = { has_idea = POL_influence_over_poland_6 }
+		}
+		localization_key = POL_influence_90
+	}
+}
+
+defined_text = {
+	name = GetInfluenceAUS
+	text = {
+		trigger = {
+			AUS = {
+				NOT = {
+					OR = {
+						has_idea = POL_influence_over_poland_1 
+						has_idea = POL_influence_over_poland_2
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_6 
+					}
+				}
+			}
+		}
+		localization_key = POL_influence_0
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_1 }
+		}
+		localization_key = POL_influence_15
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_2 }
+		}
+		localization_key = POL_influence_30
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_3 }
+		}
+		localization_key = POL_influence_45
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_4 }
+		}
+		localization_key = POL_influence_60
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_5 }
+		}
+		localization_key = POL_influence_75
+	}
+	text = {
+		trigger = {
+			AUS = { has_idea = POL_influence_over_poland_6 }
+		}
+		localization_key = POL_influence_90
+	}
+}
+
+defined_text = {
+	name = GetInfluenceSWE
+	text = {
+		trigger = {
+			SWE = {
+				NOT = {
+					OR = {
+						has_idea = POL_influence_over_poland_1 
+						has_idea = POL_influence_over_poland_2
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_6 
+					}
+				}
+			}
+		}
+		localization_key = POL_influence_0
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_1 }
+		}
+		localization_key = POL_influence_15
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_2 }
+		}
+		localization_key = POL_influence_30
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_3 }
+		}
+		localization_key = POL_influence_45
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_4 }
+		}
+		localization_key = POL_influence_60
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_5 }
+		}
+		localization_key = POL_influence_75
+	}
+	text = {
+		trigger = {
+			SWE = { has_idea = POL_influence_over_poland_6 }
+		}
+		localization_key = POL_influence_90
+	}
+}
+
+defined_text = {
+	name = GetInfluencePRS
+	text = {
+		trigger = {
+			PRS = {
+				NOT = {
+					OR = {
+						has_idea = POL_influence_over_poland_1 
+						has_idea = POL_influence_over_poland_2
+						has_idea = POL_influence_over_poland_3 
+						has_idea = POL_influence_over_poland_4 
+						has_idea = POL_influence_over_poland_5 
+						has_idea = POL_influence_over_poland_6 
+					}
+				}
+			}
+		}
+		localization_key = POL_influence_0
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_1 }
+		}
+		localization_key = POL_influence_15
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_2 }
+		}
+		localization_key = POL_influence_30
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_3 }
+		}
+		localization_key = POL_influence_45
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_4 }
+		}
+		localization_key = POL_influence_60
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_5 }
+		}
+		localization_key = POL_influence_75
+	}
+	text = {
+		trigger = {
+			PRS = { has_idea = POL_influence_over_poland_6 }
+		}
+		localization_key = POL_influence_90
+	}
+}

@@ -1,0 +1,378 @@
+#1718 Swedish Endsieg
+
+division_template = {
+	name = "Arméfördelning"		
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 } 
+		engineer = { x = 0 y = 1 }   
+		recon = { x = 0 y = 2 }     
+	}
+}
+division_template = {
+	name = "Kavalleribrigaden"  	# Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry  = { x = 0 y = 1 }
+		cavalry  = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon consisted of ACs, motorcycle inf, cavalry
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+
+# LAND ARMY	
+
+	division = {
+		name =Arméfördelning
+		location = 158
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 120
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 82
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 9233
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3125
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 9104
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11141
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 141
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 136
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 37
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6156
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 9169
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 193
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3185
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 7
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6134
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6134
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3073
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6045
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3156
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11030
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6134
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3107
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3158
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3097
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6061
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 3069
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6061
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 167
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 203
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11130
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6345
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6345
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 6345
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 11114
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 383
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 46
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+	division = {
+		name =Arméfördelning
+		location = 46
+		division_template = Arméfördelning
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.45
+	}
+}

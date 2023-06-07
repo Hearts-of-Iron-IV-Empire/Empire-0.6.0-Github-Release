@@ -1,0 +1,21 @@
+state={
+	id=975
+	name="STATE_975"
+	resources={
+		steel= 20
+	}
+	history={
+		owner = SAX
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = SAX
+	}
+	provinces={
+		9441 9471
+	}
+	manpower=20000
+	state_category = town
+	buildings_max_level_factor=1.000
+}

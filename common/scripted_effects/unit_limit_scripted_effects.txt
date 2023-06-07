@@ -1,0 +1,6 @@
+unit_limit_by_industry = { #Negative Modifiers for your Army if you have more Units than Factories (EU4 Forcelimit Mechanic Kinda)
+	if = {
+		limit = { num_divisions > num_controlled_factories } #Has more Units than Factories
+		add_dynamic_modifier = { modifier = EMPIRE_unit_limit_penalties }
+	}
+}

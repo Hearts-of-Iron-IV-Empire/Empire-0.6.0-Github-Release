@@ -1,0 +1,47 @@
+RAJ_continuing_mughal_maratha_war = { 
+	allowed = {
+		original_tag = RAJ
+	}
+
+	enable = {
+		date > 1699.1.1
+		has_war_with = MAR
+	}
+
+	abort = {
+		NOT = {
+			country_exists = MAR
+		}
+	}
+
+	abort_when_not_enabled = no
+
+	ai_strategy = {
+		type = antagonize
+		id = "MAR"
+		value = 100
+	}
+
+	ai_strategy = {
+		type = theatre_distribution_demand_increase
+		id = 960 # State ID for Marathas, so will target the theatre where Maratha belongs
+		value = 3000 # Increase desired unit demand by 3000
+	}
+
+	ai_strategy = {
+		type = front_control
+		tag = MAR
+        priority = 10
+        ratio = 0.1
+        ordertype = front
+		execution_type = balanced #TODO
+        execute_order = yes
+		manual_attack = no
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		tag = MAR
+		value = 3000
+	}
+}

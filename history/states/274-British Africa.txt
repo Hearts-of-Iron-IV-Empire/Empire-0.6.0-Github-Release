@@ -1,0 +1,22 @@
+
+state={
+	id=274
+	name="STATE_274"
+
+	history={
+		owner = GHA
+		victory_points = { 12787 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		5013 7983 8039 8096 12787 13136 
+	}
+	manpower=3163600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

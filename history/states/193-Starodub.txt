@@ -1,0 +1,23 @@
+state = {
+    id = 193
+    name = STATE_193
+    manpower = 15000
+    state_category = rural
+    
+    history = {
+        owner = ZAP
+        add_core_of = ZAP
+        buildings = {
+            infrastructure = 1
+        }
+        victory_points = { 238 10 }
+        1708.12.29 = {
+            owner = SOV
+        }
+    }
+    
+    provinces = { 238 315 343 3542 6589 11229 11298 }
+    
+    local_supplies = 5
+}
+

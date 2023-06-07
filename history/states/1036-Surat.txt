@@ -1,0 +1,24 @@
+state={
+	id=1036
+	name="STATE_1036"
+	provinces={
+		13263
+	}
+
+	history={
+		owner = ENG
+		victory_points = {
+			13263 1 
+		}
+		buildings = {
+			infrastructure = 2
+			13263 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	manpower=500
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

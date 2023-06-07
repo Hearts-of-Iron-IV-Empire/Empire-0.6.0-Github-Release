@@ -1,0 +1,31 @@
+state={
+	id=902
+	name="STATE_902"
+	manpower = 60000
+	state_category = rural
+	provinces={
+		317 332 3368 13255
+	}
+	history=
+	{
+		owner = DEN
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			317 = {
+				naval_base = 1
+			}
+			3368 = {
+				naval_base = 1
+			}			
+		}
+		add_core_of = DEN
+		add_core_of = SHL
+		1707.5.1 = {
+			owner = DEN
+			controller = DEN
+			add_core_of = SHL
+		}
+	}
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,28 @@
+state={
+	id=390
+	name="STATE_390"
+
+	history={
+		owner = UNC
+		1730.1.1 = {
+			owner = QUE
+			add_core_of = QUE
+		}
+		1770.1.1 = {
+			owner = LOU
+			add_core_of = LOU
+			remove_core_of = QUE
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+
+	provinces={
+		1747 1875 3750 4839 4880 7745 7771 7862 10569 10595 12620 12667 
+	}
+	manpower=692
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

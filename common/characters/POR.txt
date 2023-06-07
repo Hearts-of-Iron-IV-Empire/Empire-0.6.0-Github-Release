@@ -1,0 +1,42 @@
+characters = {
+    POR_Pedro_II = {
+        name = "Pedro II"
+        portraits = {
+            civilian = {
+                large = "GFX_Pedro_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+            expire = 1706.9.12
+        }
+    }
+    POR_João_V = {
+        name = "João V"
+        portraits = {
+            civilian = {
+                large = "GFX_João_V"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    POR_António_Luís_de_Sousa = {
+        name = "António Luís de Sousa"
+        portraits = {
+            army = {
+                large = "GFX_António_Luís_de_Sousa"
+            }
+        }
+        corps_commander = {
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+}

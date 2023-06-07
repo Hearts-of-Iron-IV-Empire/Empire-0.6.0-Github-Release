@@ -1,0 +1,1526 @@
+add_namespace = succession
+
+#Bourbon Alliance Surrender
+
+country_event = {
+	id = succession.1
+	title = succession.1.t
+	desc = succession.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sign an Armistice."
+		set_global_flag = FRA_defeated_flag
+		ai_chance = {
+			base = 200
+		}
+		if = {
+			limit  = { 
+				AUS = { is_faction_leader = yes }
+			}
+			white_peace = {
+			    tag = AUS
+			}
+		}
+		if = {
+			limit  = { 
+				ENG = { is_faction_leader = yes }
+				AUS = { is_in_faction_with = ENG }
+			}
+			white_peace = {
+			    tag = ENG
+			}
+		}
+		if = {
+			limit  = { 
+				HOL = { is_faction_leader = yes }
+				AUS = { is_in_faction_with = HOL }
+			}
+			white_peace = {
+			    tag = HOL
+			}
+		}
+		if = {
+			limit  = { 
+				PRS = { is_faction_leader = yes }
+				AUS = { is_in_faction_with = HOL }
+			}
+			white_peace = {
+			    tag = PRS
+			}
+		}
+		news_event = succession.80
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			country_event = succession.84
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			country_event = succession.85
+		}
+		add_threat = -50
+	}
+
+	option = {
+		name = "There will be no surrender!"
+		add_war_support = -0.30
+	}
+}
+
+#fate of the Netherlands part 1
+
+country_event = {
+	id = succession.2
+	title = succession.2.t
+	desc = succession.2.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Southern Netherlands belong to Austria."
+		AUS = {
+			set_autonomy = {
+				target = BEL
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		BEL = {
+			set_cosmetic_tag = BEL_AUS
+			create_country_leader = {
+				name = "Eugene Of Savoy"
+				picture = "eugene_of_savoy.dds"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = "They should go to another country."
+		country_event = succession.3
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 20
+				HOL = { has_completed_focus = hol_alter_treaty_of_london }
+			}
+		}
+		
+	}
+	option = {
+		name = "A new independent state is preferable."
+		SPR = {
+			end_puppet = BEL
+		}
+	}
+	option = {
+		name = "They should stay with Spain."
+		add_political_power = 30
+	}
+}
+
+#fate of the Netherlands part 2
+
+country_event = {
+	id = succession.3
+	title = succession.3.t
+	desc = succession.3.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The Southern Netherlands belong to England."
+		ENG = {
+			set_autonomy = {
+				target = BEL
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+	}
+	option = {
+		name = "The Southern Netherlands belong to the Netherlands."
+		HOL = {
+			transfer_state = 6
+			transfer_state = 34
+			transfer_state = 8
+			transfer_state = 793
+			transfer_state = 968
+		}
+		ai_chance = {
+			base = 10
+			modifier = {
+				factor = 20
+				HOL = { has_completed_focus = hol_alter_treaty_of_london }
+			}
+		}
+	}
+	option = {
+		name = "The Southern Netherlands belong to Bavaria."
+		trigger = {
+			BAV = { is_in_faction_with = AUS }
+		}
+		BAV = {
+			set_autonomy = {
+				target = BEL
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+	}
+	option = {
+		name = "The Southern Netherlands belong to Prussia."
+		trigger = {
+			PRS = { is_in_faction_with = AUS }
+		}
+		PRS = {
+			set_autonomy = {
+				target = BEL
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+	}
+}
+
+#Sardinia (1)
+
+country_event = {
+	id = succession.4
+	title = succession.4.t
+	desc = succession.4.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sardinia belongs to Austria."
+		AUS = {
+			transfer_state = 114
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = "They should go to another country."
+		country_event = succession.5
+	}
+	option = {
+		name = "A new independent state is preferable."
+		SRD = {
+			transfer_state = 114
+		}
+	}
+	option = {
+		name = "They should stay with Spain."
+		add_political_power = 30
+	}
+}
+
+#sardinia (2)
+
+country_event = {
+	id = succession.5
+	title = succession.5.t
+	desc = succession.5.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sardinia belongs to Savoy."
+		trigger = {
+			ITA = { is_in_faction_with = AUS }
+		}
+		ITA = {
+			transfer_state = 114
+		}
+	}
+	option = {
+		name = "Sardinia belongs to England."
+		trigger = {
+			ENG = { is_in_faction_with = AUS }
+		}
+		ENG = {
+			transfer_state = 114
+		}
+	}
+	option = {
+		name = "Sardinia belongs to Aragon."
+		trigger = {
+			ARA = { is_in_faction_with = AUS }
+		}
+		ARA = {
+			transfer_state = 114
+		}
+	}
+}
+
+#naples (1)
+
+country_event = {
+	id = succession.6
+	title = succession.6.t
+	desc = succession.6.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Naples belongs to Austria."
+		AUS = {
+			set_autonomy = {
+				target = TSC
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		TSC = {
+			create_country_leader = {
+				name = "Wirich Philipp von Daun"
+				picture = "Wirich Philipp von Daun"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					#
+				}
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = "They should go to another country."
+		country_event = succession.7
+		trigger = {
+			OR = {
+				ARA = { is_in_faction_with = AUS }
+				ITA = { is_in_faction_with = AUS }
+			}
+		}
+	}
+	option = {
+		name = "A new independent state is preferable."
+		SPR = {
+			end_puppet = TSC
+		}
+	}
+	option = {
+		name = "They should stay with Spain."
+		add_political_power = 30
+	}
+}
+
+#naples (2)
+
+country_event = {
+	id = succession.7
+	title = succession.7.t
+	desc = succession.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Naples belongs to Savoy."
+		ITA = {
+			transfer_state = 156
+			transfer_state = 117
+			transfer_state = 157
+		}
+		trigger = {
+			ITA = { is_in_faction_with = AUS }
+		}
+	}
+	option = {
+		name = "Naples belongs to Aragon."
+		trigger = {
+			ARA = { is_in_faction_with = AUS }
+		}
+		ARA = {
+			set_autonomy = {
+				target = TSC
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+	}
+}
+
+#sicily
+
+country_event = {
+	id = succession.8
+	title = succession.8.t
+	desc = succession.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sicily belongs to Savoy."
+		ITA = {
+			transfer_state = 115
+			country_event = savoy.45
+		}
+		trigger = {
+			ITA = { is_in_faction_with = AUS }
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+	option = {
+		name = "They should go to another country."
+		country_event = succession.9
+		ai_chance = {
+			base = 10
+		}
+	}
+	#option = {
+	#	name = "A new independent state is preferable."
+	#}
+	option = {
+		name = "They should stay with Spain."
+		add_political_power = 30
+	}
+}
+
+#sicily (2)
+
+country_event = {
+	id = succession.9
+	title = succession.9.t
+	desc = succession.9.d
+
+	fire_only_once = no
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Sicily should go to Naples."
+		TSC = {
+			transfer_state = 115
+		}
+		trigger = {
+			TSC = { is_in_faction_with = AUS }
+		}
+	}
+	option = {
+		name = "Sicily belongs to Aragon."
+		ARA = {
+			transfer_state = 115
+		}
+		trigger = {
+			ARA = { is_in_faction_with = AUS }
+		}
+	}
+	option = {
+		name = "Sicily belongs to Austria."
+		AUS = {
+			transfer_state = 115
+		}
+		trigger = {
+			AUS = { is_in_faction_with = AUS }
+		}
+	}
+}
+
+#british naval bases
+
+country_event = {
+	id = succession.10
+	title = succession.10.t
+	desc = succession.10.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Girbraltar and Menorca will henceforth be English!."
+		ENG = {
+			transfer_state = 118
+			transfer_state = 797
+		}
+		trigger = {
+			ENG = { is_in_faction_with = AUS }
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = "The English have no business in the Mediterranean."
+	}
+}
+
+#asiento de negros
+
+country_event = {
+	id = succession.11
+	title = succession.11.t
+	desc = succession.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The monopoly should go to England."
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = "The monopoly should go the Netherlands."
+	}
+	option = {
+		name = "The monopoly should go the Spain."
+	}
+	option = {
+		name = "The monopoly should go the Portugal."
+	}
+}
+
+#fate of milan (1)
+
+country_event = {
+	id = succession.12
+	title = succession.12.t
+	desc = succession.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Milan belongs to Austria."
+		AUS = {
+			set_autonomy = {
+				target = LOM
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		name = "They should go to another country."
+		country_event = succession.13
+	}
+	option = {
+		name = "A new independent state is preferable."
+		SPR = { end_puppet = LOM }
+	}
+	option = {
+		name = "The situation works as it is."
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = succession.13
+	title = succession.13.t
+	desc = succession.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "A strong North Italian State is desireable."
+		ITA = {
+			transfer_state = 159
+		}
+		trigger = {
+			ITA = { is_in_faction_with = AUS }
+		}
+	}
+	option = {
+		name = "Milan belongs to Venice."
+		VNC = {
+			transfer_state = 159
+		}
+	}
+}
+
+# The Portuguese demands
+
+country_event = {
+	id = succession.14
+	title = "The Portuguese Price of Involvement"
+	desc = succession.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Portuguese ownership of Brazil must be recognized."
+		set_country_flag = POR_recognition_brazilian_colony
+		custom_effect_tooltip = POR_recognition_brazilian_colony_tt
+	}
+	option = {
+		name = "Portugal deserves colonial compensation."
+		set_country_flag = POR_recognition_brazilian_colony
+		custom_effect_tooltip = POR_recognition_brazilian_colony_tt
+		BRA = {
+			transfer_state = 502
+		}
+		trigger = {
+			POR = { has_completed_focus = POR_colonial_demands }
+		}
+		ai_chance = {
+			base = 200
+		}
+	}
+	option = {
+		name = "Galicia should go to Portugal as promised."
+		set_country_flag = POR_recognition_brazilian_colony
+		custom_effect_tooltip = POR_recognition_brazilian_colony_tt
+		POR = {
+			transfer_state = 171
+		}
+		trigger = {
+			POR = { has_completed_focus = POR_demand_galicia }
+		}
+		ai_chance = {
+			base = 200
+		}
+	}
+	option = {
+		name = "Portugal will unite iberia."
+		set_country_flag = POR_recognition_brazilian_colony
+		custom_effect_tooltip = POR_recognition_brazilian_colony_tt
+		POR = {
+			annex_country =  { target = SPR }
+		}
+		trigger = {
+			POR = { has_completed_focus = POR_unification_of_ibera }
+		}
+		ai_chance = {
+			base = 200
+		}
+	}
+}
+
+#Bourbon Alliance Demands Grand Alliance Surrender
+
+country_event = {
+	id = succession.20
+	title = succession.20.t
+	desc = succession.20.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The situation is hopeless, surrender!"
+		set_global_flag = grand_alliance_defeated_flag
+		ai_chance = {
+			base = 200
+		}
+		white_peace = {
+		    tag = FRA
+		}
+		news_event = succession.81
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			country_event = succession.84
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			country_event = succession.85
+		}
+		add_threat = -50
+	}
+
+	option = {
+		name = "No, we will fight on!"
+		add_war_support = -0.30
+	}
+}
+
+#fate of Britain - Regime of England #1
+
+country_event = {
+	id = succession.21
+	title = succession.21.t
+	desc = succession.21.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "James Stuart will lead a friendly regime."
+		country_event = succession.22
+		ENG = {
+			create_country_leader = {
+				name = "James III"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "the_old_pretender.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					old_pretender
+				}
+			}
+			remove_ideas = ENG_legacy
+			remove_opinion_modifier = {
+			    target = FRA
+			    modifier = rivalry
+			}
+			FRA = {
+				remove_opinion_modifier = {
+					target = ENG
+					modifier = rivalry
+				}
+			}
+		}
+	}
+	option = {
+		name = "James Stuart will serve as a puppet to France."
+		country_event = succession.22
+		ENG = {
+			create_country_leader = {
+				name = "James III"
+				desc = "POLITICS_LEON_TROTSKY_DESC"
+				picture = "the_old_pretender.dds"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					old_pretender
+				}
+			}
+			remove_ideas = ENG_legacy
+			remove_opinion_modifier = {
+			    target = FRA
+			    modifier = rivalry
+			}
+			FRA = {
+				remove_opinion_modifier = {
+					target = ENG
+					modifier = rivalry
+				}
+			}
+		}
+		set_autonomy = {
+			target = ENG
+			autonomous_state = autonomy_dominion
+			freedom_level = 0.2
+		}
+	}
+	option = {
+		name = "Recognize the ruling regime, if they disband their fleet and pay reparations."
+		country_event = succession.22
+		ENG = {
+			destroy_ships = {
+			    type = destroyer
+			    count = all
+			}
+			add_ideas = disarmed_nation
+		}
+	}
+	option = {
+		name = "Our Scottish allies will take care of England."
+		trigger = {
+			SCO = { is_in_faction_with = FRA }
+		}
+	}
+}
+
+#fate of Britain - integrity of England #1
+
+country_event = {
+	id = succession.22
+	title = succession.22.t
+	desc = succession.22.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The integrity of England should be maintained."
+		country_event = succession.23
+		add_political_power = 30
+		add_stability = 0.01
+	}
+	option = {
+		name = "The Irish should be given independence."
+		country_event = succession.23
+		ENG = { release = IRE }
+		IRE = { transfer_state = 119 }
+	}
+	option = {
+		name = "The Welsh should rule themselves."
+		country_event = succession.23
+		ENG = { release = WLS }
+	}
+	option = {
+		name = "Both the Irish and Welsh deserve an end to English oppression!"
+		country_event = succession.23
+		ENG = { release = WLS }
+		ENG = { release = IRE }
+		IRE = { transfer_state = 119 }
+		add_political_power = -30
+	}
+}
+
+#fate of Britain - Scotland
+
+country_event = {
+	id = succession.23
+	title = succession.23.t
+	desc = succession.23.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "An independent Scotland is desirable."
+		if = {
+			limit = {
+				SCO = { is_subject_of = ENG }
+			}
+			ENG = { end_puppet  = SCO }
+		}
+	}
+	option = {
+		name = "Scotland should be united with England."
+		ENG = { 
+			annex_country = {
+			    target = SCO
+			    transfer_troops = yes
+			}
+		}
+	}
+	option = {
+		name = "The personal union should be maintained."
+	}
+	option = {
+		name = "A greater Scotland shall lead the British isles instead!"
+		SCO = {
+			transfer_state = 131
+			if = {
+				limit = {
+					WLS = { exists = yes }
+				}
+				puppet = WLS
+			}
+			if = {
+				limit = {
+					IRE = { exists = yes }
+				}
+				puppet = IRE
+			}
+			if = {
+				limit = {
+					ENG = { exists = yes }
+				}
+				puppet = ENG
+			}
+		}	
+	}
+}
+
+#fate of the Netherlands
+
+country_event = {
+	id = succession.24
+	title = succession.24.t
+	desc = succession.24.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Expand the Spanish Netherlands, install a puppet regime in the rest."
+		BEL = { 
+			transfer_state = 970
+			transfer_state = 35
+			transfer_state = 793
+		}
+		puppet = HOL
+		puppet = INS
+	}
+	option = {
+		name = "The Spanish Netherlands should rule all of the Netherlands."
+		BEL = { 
+			annex_country = {
+			    target = HOL
+			    transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name = "The Dutch are better left alone."
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+#fate of North America
+
+country_event = {
+	id = succession.25
+	title = succession.25.t
+	desc = succession.25.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Seize only the disputed territories."
+		QUE = {
+			transfer_state = 818
+			transfer_state = 682
+			transfer_state = 683
+			transfer_state = 955
+			transfer_state = 830
+		}
+	}
+	option = {
+		name = "Subdue the Entire continent."
+		QUE = {
+			transfer_state = 818
+			transfer_state = 682
+			transfer_state = 683
+			transfer_state = 955
+			transfer_state = 830
+		}
+		QUE = {
+			annex_country = {
+			    target = USA
+			    transfer_troops = no
+			}
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = IRO
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = CHR
+		}
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = CRE
+		}
+	}
+	option = {
+		name = "Give the American settlers independence."
+		ENG = { end_puppet = USA }
+	}
+	option = {
+		name = "Who gives a damn about North America anyways?"
+	}
+}
+
+#fate of the Caribbean
+
+country_event = {
+	id = succession.26
+	title = succession.26.t
+	desc = succession.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Spanish hegemony in the region should be respected."
+		MEX = {
+			transfer_state = 311
+			if = {
+				limit = {
+					HOL = {is_in_faction_with = AUS}
+				}
+				transfer_state = 695
+			}
+		}
+		SPR = {
+			transfer_state = 689
+			transfer_state = 693
+			transfer_state = 308
+			transfer_state = 692
+		}
+		if = {
+			limit = {
+				HOL = {is_in_faction_with = AUS}
+			}
+			FRA = { transfer_state = 309 }
+		}
+	}
+	option = {
+		name = "The status quo suites us nicely."
+	}
+}
+
+# fate of Savoy
+
+country_event = {
+	id = succession.27
+	title = succession.27.t
+	desc = succession.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Annex Savoy and Nice, set up a puppet in Piedmont."
+		FRA = {
+			transfer_state = 735
+			transfer_state = 923
+			puppet = ITA
+		}
+	}
+	option = {
+		name = "Partition Savoy with Spain."
+		FRA = {
+			transfer_state = 735
+			transfer_state = 923
+		}
+		LOM = {
+			annex_country = {
+			    target = ITA
+			    transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name = "All of Savoy belongs to France!"
+		FRA = {
+			annex_country = {
+			    target = ITA
+			    transfer_troops = no
+			}
+		}	
+	}
+}
+
+# fate of Aragon
+
+country_event = {
+	id = succession.28
+	title = succession.28.t
+	desc = succession.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "There is no doubt. The lands should be returned to Spain!"
+		SPR = {
+			annex_country = {
+			    target = ARA
+			    transfer_troops = no
+			}
+			every_owned_state = { limit = { is_core_of = ARA } add_resistance = 10 } 
+		}	
+	}
+	option = {
+		name = "We shall maintain a presence in Catalonia to ensure stability."
+		SPR = {
+			annex_country = {
+			    target = ARA
+			    transfer_troops = no
+			}
+			every_owned_state = { limit = { is_core_of = ARA } add_compliance = 10 } 
+		}
+		FRA = {
+			transfer_state = 165
+		}
+	}
+	option = {
+		name = "The region's struggle was justified, they should be given some autonomy."
+		SPR = {
+			set_autonomy = {
+			    target = ARA
+			    autonomy_state = autonomy_dominion
+			}
+		}
+		SPR = { 
+			every_owned_state = { limit = { is_core_of = ARA } add_compliance = 10 } 
+		}
+	}
+	option = {
+		name = "The region's struggle was justified, they should be given freedom."
+		SPR = {
+			set_autonomy = {
+			    target = ARA
+			    autonomy_state = autonomy_free
+			}
+		}
+		SPR = { 
+			every_owned_state = { limit = { is_core_of = ARA } add_compliance = 10 } 
+		}
+	}
+}
+
+# fate of Austria - Hungary
+
+country_event = {
+	id = succession.29
+	title = succession.29.t
+	desc = succession.29.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Hungary shall henceforth rule over all Hungarians!"
+	}
+	option = {
+		name = "Hungary must receive all Hungarian lands as well as Croatia."
+	}
+	option = {
+		name = "Hungary should be kept to the initial territories controlled by the revolt."
+	}
+}
+
+# fate of Austria - Bohemia and Silezia
+
+country_event = {
+	id = succession.30
+	title = succession.30.t
+	desc = succession.30.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Silezia belongs to Prussia!"
+		trigger = {
+			PRS = { is_in_faction_with = FRA }
+		}
+		transfer_state = 66
+		transfer_state = 67
+		transfer_state = 762
+	}
+	option = {
+		name = "A strong Bohemia should be released."
+		AUS = {
+			release = CZE
+		}
+		CZE = { 
+			transfer_state = 66
+			transfer_state = 67
+			transfer_state = 762
+		}
+	}
+	option = {
+		name = "Silezia and Bohemia should become independent princedoms."
+		AUS = {
+			release = CZE
+			release = SIL
+		}
+	}
+	option = {
+		name = "Austria should keep these slavs under their boot."
+	}
+}
+
+#fate of the Rhine
+
+country_event = {
+	id = succession.31
+	title = succession.31.t
+	desc = succession.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We must avoid upsetting all of Europe."
+	}
+	option = {
+		name = "The Emperor must give up the protection over the lands west of the Rhine."
+		AUS = {
+			diplomatic_relation = {
+			    country = RPA
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = LOR
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = TRR
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = CLG
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = AAC
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = BEL
+			    relation = guarantee
+			    active = no
+			}
+		}
+		AUS = {
+			diplomatic_relation = {
+			    country = LUI
+			    relation = guarantee
+			    active = no
+			}
+		}
+	}
+}
+
+#fate of Portugal
+
+country_event = {
+	id = succession.32
+	title = succession.32.t
+	desc = succession.32.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Bind Portugal to France!"
+		FRA = {
+			set_autonomy = {
+			    target = POR
+			    autonomy_state = autonomy_dominion
+			}
+		}
+	}
+	option = {
+		name = "Spain must once again rule these lands!"
+		SPR = {
+			annex_country = {
+			    target = POR
+			    transfer_troops = no
+			}
+		}
+	}
+	option = {
+		name = "We will leave Portugal be."
+	}
+}
+
+
+# Bourbon Alliance Demands Habsburg Alliance Surrender
+
+country_event = {
+	id = succession.40
+	title = succession.40.t
+	desc = succession.40.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The situation is hopeless, surrender!"
+		set_global_flag = habsburg_alliance_defeated_flag
+		ai_chance = {
+			base = 200
+		}
+		white_peace = {
+		    tag = FROM
+		}
+		SPR = {
+			white_peace = {
+		   		tag = FROM
+			}
+		}
+		news_event = succession.82
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			country_event = succession.84
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			country_event = succession.85
+		}
+		add_threat = -50
+	}
+
+	option = {
+		name = "No, we will fight on!"
+		add_war_support = -0.30
+	}
+}
+
+#execute terms of treaty of london
+
+country_event = {
+	id = succession.41
+	title = succession.41.t
+	desc = succession.41.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It is the best agreement for lasting peace."
+		FRA = {
+			transfer_state = 115
+			transfer_state = 972
+			set_autonomy = {
+				target = TSC
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+			set_autonomy = {
+				target = LOM
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		SPR = {  leave_faction = yes }
+		if = {
+			limit = {
+				ENG = { is_in_faction_with = FRA }
+			}
+			ENG = { leave_faction = yes }
+			ENG = { transfer_state = 118 }
+			ENG = { transfer_state = 797 }
+		}
+		if = {
+			limit = {
+				HOL = { is_in_faction_with = FRA }
+			}
+			HOL = { leave_faction = yes }
+		}
+		if = {
+			limit = {
+				ITA = { is_in_faction_with = FRA }
+			}
+			ITA = { transfer_state = 115 }
+		}
+	}
+}
+
+# Habsburg Alliance Demands Bourbon Alliance Surrender
+
+country_event = {
+	id = succession.60
+	title = succession.60.t
+	desc = succession.60.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The situation is hopeless, surrender!"
+		set_global_flag = bourbon_alliance_defeated_flag
+		ai_chance = {
+			base = 200
+		}
+		white_peace = {
+		    tag = AUS
+		}
+		news_event = succession.83
+		every_country = {
+			limit = {
+				is_in_faction_with = ROOT
+			}
+			country_event = succession.84
+		}
+		every_country = {
+			limit = {
+				is_in_faction_with = FROM
+			}
+			country_event = succession.85
+		}
+		add_threat = -50
+	}
+
+	option = {
+		name = "No, we will fight on!"
+		add_war_support = -0.30
+		add_stability = -0.30
+	}
+}
+
+# Fate of france
+
+country_event = {
+	id = succession.61
+	title = succession.61.t
+	desc = succession.61.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Strip away their border provinces!"
+		AUS = { transfer_state = 17 }
+		AUS = { transfer_state = 28 }
+		if = {
+			limit = {
+				LOR = { is_puppet_of = FRA }
+			}
+			FRA = { end_puppet  = LOR }
+		}
+		if = {
+			limit = {
+				country_exists = BEL
+			}
+			BEL = { transfer_state = 29 }
+		}
+		FRA = { release = BRI }
+	}
+	option = {
+		name = "Confiscate their colonial empire!"
+		SPR = { 
+			transfer_state = 318
+			transfer_state = 310
+			set_autonomy = {
+				target = QUE
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		AUS = {
+			transfer_state = 320
+		}
+	}
+	option = {
+		name = "How about we demand both?"
+		SPR = { 
+			transfer_state = 318
+			transfer_state = 310
+			set_autonomy = {
+				target = QUE
+				autonomous_state = autonomy_viceroyalty
+				freedom_level = 0.2
+			}
+		}
+		AUS = {
+			transfer_state = 320
+		}
+		AUS = { transfer_state = 17 }
+		AUS = { transfer_state = 28 }
+		if = {
+			limit = {
+				LOR = { is_puppet_of = FRA }
+			}
+			FRA = { end_puppet  = LOR }
+		}
+		if = {
+			limit = {
+				country_exists = BEL
+			}
+			BEL = { transfer_state = 29 }
+		}
+		FRA = { release = BRI }
+		add_political_power = -150
+	}
+}
+
+# GA wins over BOURBON
+
+news_event = {
+	id = succession.80
+	title = "Bourbon Alliance Signs Armistice"
+	desc = succession.80.d
+	picture = GFX_news_event_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The balance of power has been restored."
+	}
+}
+
+# GA deafeated by BOURBON
+
+news_event = {
+	id = succession.81
+	title = "Bourbons Defeat Grand Alliance"
+	desc = succession.81.d
+	picture = GFX_news_event_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Who will stop Louis XIV now?"
+	}
+}
+
+# FRA/ENG win over Habsburg
+
+news_event = {
+	id = succession.82
+	title = "Armistice: Habsburg Alliance Accepts Defeat"
+	desc = succession.82.d
+	picture = GFX_news_event_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It is a good thing peace has been restored."
+	}
+}
+
+# Execution Treaty of London
+
+news_event = {
+	id = succession.821
+	title = "Terms of Treaty of London Executed"
+	desc = succession.821.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The balance of power has been restored."
+	}
+}
+
+# Habsburg alliance win
+
+news_event = {
+	id = succession.83
+	title = succession.83.t
+	desc = succession.83.d
+	picture = GFX_news_event_agreement
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Is the second age of Habsburg domination upon us now?"
+	}
+}
+
+# Faction was defeated
+
+country_event = {
+	id = succession.84
+	title = "We have been defeated..."
+	desc = succession.84.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "This does not bode well..."
+	}
+}
+
+#faction has won
+
+country_event = {
+	id = succession.85
+	title = "Victory in the War of The Spanish Succession!"
+	desc = succession.85.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We have achieved victory!"
+		add_stability = 0.10
+		add_war_support = -0.15
+	}
+}

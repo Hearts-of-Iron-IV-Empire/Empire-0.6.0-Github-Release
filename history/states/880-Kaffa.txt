@@ -1,0 +1,32 @@
+state={
+	id=880
+	name="STATE_880"
+	provinces={
+		3686 6704 
+	}
+	history={
+		owner = TUR
+		victory_points = {
+			3686 5 
+		}
+		victory_points = {
+			6704 1 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+			3686 = {
+				naval_base = 3
+				coastal_bunker = 1
+			}
+		}
+		1789.1.1 = {
+			owner = SOV
+		}
+		add_core_of = TUR
+		add_claim_by = SOV
+	}
+	state_category=city
+	manpower=152349
+	buildings_max_level_factor=1.000
+}

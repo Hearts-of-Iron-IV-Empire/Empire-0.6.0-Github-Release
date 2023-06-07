@@ -1,0 +1,166 @@
+characters = {
+    ############# Country Leaders #############
+    USA_George_Washington = { # 1789 - 1797
+        name = "George Washington"
+        portraits = {
+            army = {
+                large = "GFX_George_Washington_general"
+            }
+            civilian = {
+                large = "GFX_George_Washington"
+                small = "GFX_George_Washington_Small"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+        field_marshal = {
+            traits = { war_hero inspirational_leader }
+			skill = 4
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 3
+			logistics_skill = 3
+        }
+    }
+    USA_John_Adams = { # 1797 - 1801
+        name = "John Adams"
+        portraits = {
+            civilian = {
+                large = "GFX_John_Adams"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+    USA_Thomas_Jefferson = { # 1801 - 1809
+        name = "Thomas Jefferson"
+        portraits = {
+            civilian = {
+                large = "GFX_Thomas_Jefferson"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+    USA_James_Madison = { # 1809 - 1817
+        name = "James Madison"
+        portraits = {
+            civilian = {
+                large = "GFX_James_Madison"
+            }
+        }
+        country_leader = {
+            ideology = liberalism
+            traits = {}
+        }
+    }
+    USA_Board_Of_Trade = {
+        name = "Board Of Trade"
+        portraits = {
+            civilian = {
+                large = "GFX_Board_Of_Trade"
+            }
+        }
+        country_leader = {
+            expire = "1830.3.8"
+            ideology = liberalism
+            traits = {}
+        }
+        country_leader = {
+            expire = "1830.3.8"
+            ideology = nobility
+            traits = {}
+        }
+        country_leader = {
+            expire = "1830.3.8"
+            ideology = despotism
+            traits = {}
+        }
+        country_leader = {
+            expire = "1830.3.8"
+            ideology = rexism
+            traits = {}
+        }
+        country_leader = {
+            expire = "1830.3.8"
+            ideology = socialism
+            traits = {}
+        }
+    }
+
+    ##### Advisors #####
+    USA_friedrich_wilhelm_von_steuben = {
+        name = "Freidrich Wilhelm Von Steuben"
+
+        portraits = {
+            army = {
+                large = "GFX_Friedrich_Wilhelm_Von_Steuben"
+                small = "GFX_idea_von_steuben"
+            }
+        }
+    }
+    
+    USA_George_Washington_1699 = {
+        name = "George Washington"
+        portraits = {
+            army = {
+                large = "GFX_George_Washington_general"
+                small = "GFX_idea_george_washington"
+            }
+            civilian = {
+                large = "GFX_George_Washington"
+            }
+        }
+    }
+
+    USA_benjamin_franklin = {
+        name = "Benjamin Franklin"
+        portraits = {
+            army = {
+                small = "GFX_idea_benjamin_franklin"
+            }
+        }
+    }
+
+    USA_John_Adams_advisor = {
+        name = "John Adams"
+        portraits = {
+            army = {
+                small = "GFX_idea_john_adams"
+            }
+        }
+    }
+
+    USA_robert_livingston = {
+        name = "Robert Livingston"
+        portraits = {
+            army = {
+                small = "GFX_idea_robert_livingston"
+            }
+        }
+    }
+
+    USA_roger_sherman = {
+        name = "Roger Sherman"
+        portraits = {
+            army = {
+                small = "GFX_idea_roger_sherman"
+            }
+        }
+    }
+
+    USA_thomas_jefferson_advisor = {
+        name = "Thomas Jefferson"
+        portraits = {
+            army = {
+                small = "GFX_idea_thomas_jefferson"
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+state={
+	id=861
+	name="STATE_861"
+	resources={
+		steel=12.000
+	}
+	provinces={
+		529 3512 6469 6570 9482 
+	}
+	history = {
+		owner = RPA
+		victory_points = {
+			6469 10 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		add_core_of = RPA
+	}
+	manpower=684876
+	buildings_max_level_factor=1.000
+	state_category=city
+}

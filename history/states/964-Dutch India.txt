@@ -1,0 +1,41 @@
+
+state={
+	id=964
+	name="STATE_964"
+	resources={
+		steel=10.000
+		rubber=15.000
+		tungsten=5.000
+	}
+
+	history={
+		owner = INS
+		add_claim_by = RAJ
+		add_claim_by = MYS
+		add_claim_by = MAR
+		add_claim_by = MDR
+		buildings = {
+			infrastructure = 2
+			1381 = {
+				naval_base = 1
+			}
+			12180 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			1381 1 
+		}
+		victory_points = {
+			12180 1 
+		}
+	}
+
+	provinces={
+		1381 12180 13267 13268 
+	}
+	manpower=1254876
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

@@ -1,0 +1,17 @@
+
+state={
+	id=988
+	name="STATE_988"
+
+	history={
+		owner = UNC
+
+	}
+
+	provinces={
+		1736 1832 1854 3781 4778 4838 6742 7779 12124 12676 
+	}
+	manpower=1248
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

@@ -1,0 +1,22 @@
+state={
+	id=876
+	name="STATE_876"
+
+	history={
+		owner = SPR
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = SPR
+		add_core_of = ARA
+
+	}
+
+	provinces={
+		790 798 871 899 915 3909 3954 9813 11793 11819 11821 13222 13223 13225 
+	}
+	manpower=123048
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

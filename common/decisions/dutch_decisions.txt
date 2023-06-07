@@ -1,0 +1,337 @@
+foreign_policy = {
+	HOL_peace_new_netherland = {
+		icon = generic_prepare_civil_war
+
+		visible = {
+			has_completed_focus = HOL_reclaim_new_netherland 
+			has_war_with = USA
+			NOT = { has_active_mission = HOL_maintain_control_new_netherland }
+		}
+		available = {
+			358 = {
+			    is_controlled_by = HOL
+			}
+			359 = {
+			    is_controlled_by = HOL
+			}	
+		}
+		complete_effect = {
+			custom_effect_tooltip = HOL_negotiate_peace_tt
+			activate_mission = HOL_maintain_control_new_netherland
+		}
+	}
+	HOL_maintain_control_new_netherland = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			OR = { 
+				NOT = {
+					358 = {
+				    is_controlled_by = HOL
+					}
+					359 = {
+					    is_controlled_by = HOL
+					}
+				}
+				surrender_progress > 0.1
+			}
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			army_experience = 5
+			every_enemy_country = {
+				limit = {
+					is_in_faction_with = ENG
+				}
+				white_peace = HOL
+			}
+			transfer_state = 358
+			transfer_state = 359
+		}
+	}
+
+# BRAZIL
+
+	HOL_peace_brazil = {
+		icon = generic_prepare_civil_war
+
+		visible = {
+			has_completed_focus = HOL_recover_brazil
+			has_war_with = BRA
+			NOT = { has_active_mission = HOL_maintain_control_brazil }
+		}
+		available = {
+			BRA = { has_capitulated = yes }
+		}
+		complete_effect = {
+			custom_effect_tooltip = HOL_maintain_control_brazil_tt
+			activate_mission = HOL_maintain_control_brazil
+		}
+	}
+	HOL_maintain_control_brazil = {
+
+		icon = generic_civil_support
+
+		available = {
+			always = no
+		}
+
+		days_mission_timeout = 90
+
+		activation = {
+			always = no #Triggered from effect
+		}
+
+		cancel_trigger = {
+			surrender_progress > 0.1
+		}
+
+		is_good = yes
+
+		timeout_effect = {
+			army_experience = 5
+			every_enemy_country = {
+				limit = {
+					is_in_faction_with = POR
+				}
+				white_peace = HOL
+			}
+			transfer_state = 497
+			transfer_state = 498
+			transfer_state = 499
+			transfer_state = 496
+			transfer_state = 501
+			transfer_state = 503
+		}
+	}
+}
+economy_decisions = {
+	HOL_take_out_loans = {
+
+		icon = generic_decision
+
+		cost = 100
+
+		available = {
+			NOT = { has_idea = HOL_balanced_budget }
+			has_completed_focus = hol_forced_loans 
+		}
+
+		visible = {
+			original_tag = HOL
+		}
+
+		days_remove = 140
+
+		days_re_enable = 10
+
+		remove_effect = {
+			HOL_decrease_inflation = yes
+		}
+	}
+}
+
+HOL_prepare_the_inundation_lines = {
+	
+	HOL_inundate_the_water_lines = {
+
+		icon = hol_inundate_water_lines
+
+		allowed = {
+			tag = HOL
+		}
+
+		available = {
+			has_war = yes
+			7 = { is_fully_controlled_by = ROOT }
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 14
+
+		highlight_states = {
+			highlight_state_targets = { state = 7 }
+			highlight_provinces = {
+				9498
+				391
+				11456
+				6241
+			}
+		}
+
+		modifier = {
+		}
+
+		visible = {
+			HOL = { has_completed_focus = hol_prepare_the_water_lines }
+			7 = { is_fully_controlled_by = ROOT }
+			NOT = { has_global_flag = HOL_inundation_lines_flooded }
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					7 = { is_fully_controlled_by = ROOT }
+				}
+				7 = {
+					add_province_modifier = {
+						static_modifiers = { flooded }
+						province = {
+							id = 9498
+							id = 391
+						}
+					}
+					damage_building = {
+					    type = infrastructure
+					    damage = 2
+					}
+					damage_building = {
+					    type = industrial_complex
+					    damage = 0.5
+					}
+					damage_building = {
+					    type = arms_factory
+					    damage = 0.5
+					}
+				}
+				35 = {
+					add_province_modifier = {
+						static_modifiers = { flooded }
+						province = {
+							id = 11456
+						}
+					}
+					damage_building = {
+					    type = infrastructure
+					    damage = 3
+					}
+					damage_building = {
+					    type = industrial_complex
+					    damage = 1.5
+					}
+					damage_building = {
+					    type = arms_factory
+					    damage = 1.5
+					}
+				}
+				36 = {
+					add_province_modifier = {
+						static_modifiers = { flooded }
+						province = {
+							id = 6241
+						}
+					}
+					damage_building = {
+					    type = infrastructure
+					    damage = 3
+					}
+					damage_building = {
+					    type = industrial_complex
+					    damage = 1.5
+					}
+					damage_building = {
+					    type = arms_factory
+					    damage = 1.5
+					}
+				}
+			}
+			set_global_flag = HOL_inundation_lines_flooded
+			set_global_flag = { flag = HOL_inundation_lines_flooded_unhappiness_timer value = 1 days = 180 }
+		}
+
+		complete_effect = {
+		}
+
+	}
+
+	HOL_drain_the_water_lines = {
+
+		icon = hol_drain_water_lines
+
+		allowed = {
+			tag = HOL
+		}
+
+		available = {
+			7 = { is_fully_controlled_by = ROOT }
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 14
+		
+		highlight_states = {
+			highlight_state_targets = { state = 7 }
+			highlight_provinces = {
+				9498
+				391
+				11456
+				6241
+			}
+		}
+
+		modifier = {
+		}
+
+		visible = {
+			HOL = { has_completed_focus = hol_prepare_the_water_lines }
+			7 = { is_fully_controlled_by = ROOT }
+			has_global_flag = HOL_inundation_lines_flooded
+		}
+
+		remove_effect = {
+			7 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 9498
+						id = 391
+					}
+				}
+			}
+			35 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 11456
+					}
+				}
+			}
+			36 = {
+				remove_province_modifier = {
+					static_modifiers = { flooded }
+					province = {
+						id = 6241
+					}
+				}
+			}
+			clr_global_flag = HOL_inundation_lines_flooded
+			set_variable = {
+				var = HOL_inundation_lines_flooding_unhappiness_var
+				value = 0
+			}
+		}
+
+		complete_effect = {
+			set_country_flag = { flag = HOL_draining_in_progress value = 1 days = 14 }
+		}
+	}
+}

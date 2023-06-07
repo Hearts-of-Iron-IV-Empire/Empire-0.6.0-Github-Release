@@ -1,0 +1,88 @@
+on_actions = {
+    on_startup = {
+        effect = {
+            ENG = { 
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        NOT = { has_completed_focus = eng_go_with_the_tories }
+                        has_country_leader = {
+                            character = ENG_William_III
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = england.3 days = 1152 }
+                }
+            }
+            DEN = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_country_leader = {
+                            character = DEN_Christian_V
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = denmark.3 days = 237 }
+                }
+            }
+            POR = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_country_leader = {
+                            character = POR_Pedro_II
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = portugal.21 days = 1512 }
+                    country_event = { id = portugal.22 days = 2557 }
+                }
+            }
+            MAR = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_country_leader = {
+                            character = MAR_Chhatrapati_Rajaram
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = maratha.1 days = 417 }
+                }
+            }
+            VNC = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_country_leader = {
+                            character = VNC_Nicolò_Cassana
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = venice.1 days = 543 }
+                }
+            }
+            TUR = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                        has_war_with = POL
+                        has_war_with = SOV
+                        POL = {
+                            country_exists = yes
+                        }
+                        SOV = {
+                            country_exists = yes
+                        }
+                        has_country_flag = ottomansussybaka
+                    }
+                    country_event = {
+                        id = ottoman.18
+                        days = 313
+                    }
+                }
+            }
+        }
+    }
+}

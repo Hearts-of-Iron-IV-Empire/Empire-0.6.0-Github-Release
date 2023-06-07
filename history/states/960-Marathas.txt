@@ -1,0 +1,70 @@
+state={
+	id=960
+	name="STATE_960"
+
+	resources= {
+		steel = 20
+		chromium = 15
+		rubber = 15
+		aluminium = 3
+		oil = 6
+	}
+
+	history={
+		owner = MAR
+		add_extra_state_shared_building_slots = 30
+		victory_points = { # Satara
+			13281 50
+		}
+		victory_points = { # Rajgad
+			13284 5
+		}
+		victory_points = { # Sinhagad
+			12182 5 
+		}
+		victory_points = { # Pune
+			10270 20
+		}
+		victory_points = { # Raigad
+			7232 20 
+		}
+		victory_points = { # Vishalgad
+			4395 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 15
+			arms_factory = 7
+			13281 = {
+				bunker = 5
+			}
+			13284 = {
+				bunker = 5
+			}
+			12182 = {
+				bunker = 5
+			}
+			10270 = {
+				bunker = 1
+			}
+			7232 = {
+				bunker = 5
+			}
+			4395 = {
+				bunker = 3
+			}
+		}
+		1699.1.1 = {
+			RAJ = {
+				set_province_controller = 13284
+			}
+		}
+	}
+	state_category = metropolis
+	manpower=5871097
+	buildings_max_level_factor=1.000
+
+	provinces={
+		506 4395 7232 10270 12182 12269 13266 13279 13280 13281 13282 13283 13284
+	}
+}

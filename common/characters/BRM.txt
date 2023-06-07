@@ -1,0 +1,14 @@
+characters = {
+    BRM_Sanay_Min = {
+        name = "Sanay Min"
+        portraits = {
+            civilian = {
+                large = "GFX_Mindon_Min" # Couldn't find a picture of him so I'm using this random fellow
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

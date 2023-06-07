@@ -1,0 +1,53 @@
+capital = 863
+
+oob = "IRO_1699"
+
+set_research_slots = 1
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+add_ideas = {
+	tribal_centralization_2
+	totemism
+	all_adults_serve
+}
+
+set_convoys = 5
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	fascism = 20
+	neutrality = 80
+}
+
+1765.1.1 ={
+	create_country_leader = {
+		name = "Thayendanegea"
+		desc = ""
+		picture = "thayendanegea.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+create_country_leader = {
+	name = "Sa Ga Yeath Qua Pieth Tow "
+	desc = ""
+	picture = "gfx/leaders/IRO/iroquois_leader.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

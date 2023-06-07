@@ -1,0 +1,27 @@
+
+state={
+	id=367
+	name="STATE_367"
+
+	history={
+		owner = CHO
+		add_core_of = CHO
+		1765.1.1 = {
+			owner = ENG
+			add_core_of = ENG
+			controller = ENG
+
+		}
+		add_core_of = FLO
+		1765.1.1 = {
+			owner = FLO
+		}
+	}
+
+	provinces={
+		4464 7480 7524 7668 
+	}
+	manpower=800
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

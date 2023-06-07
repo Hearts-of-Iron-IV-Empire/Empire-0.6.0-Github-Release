@@ -1,0 +1,101 @@
+characters = {
+    MAR_Chhatrapati_Rajaram = { # 1689 - 1700
+        name = "Chhatrapati Rajaram"
+        portraits = {
+            civilian = {
+                large = "GFX_Rajaram"
+            }
+        }
+        country_leader = {
+            expire = 1700.3.3
+            ideology = despotism
+            traits = {}
+        }
+    }
+    MAR_Tarabai = { # Regent for Shivaji II
+        name = "Maharani Tarabai"
+        portraits = {
+            civilian = {
+                large = "GFX_Tarabai"
+            }
+            army = {
+                large = "GFX_Tarabai"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    MAR_Shivaji_II = { # 1700 - 1707
+        name = "Shivaji II"
+        portraits = {
+            civilian = {
+                large = "GFX_Shivaji_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    MAR_Chhatrapati_Shahu_I = { # 1707 - 1749
+        name = "Chhatrapati Shahu I"
+        portraits = {
+            civilian = {
+                large = "GFX_Chhatrapati_Shahu_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    MAR_Dhanaji_Jadhav = {
+        name = "Dhanaji Jadhav"
+        portraits = {
+            army = {
+                large = "GFX_Dhanaji_Jadhav"
+            }
+        }
+        field_marshal = {
+            skill = 3
+            attack_skill = 4
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    MAR_Ramchandra_Pant = {
+        name = "Ramchandra Pant Amatya"
+        portraits = {
+            army = {
+                large = "GFX_Ramchandra_Pant"
+                small = "GFX_Ramchandra_Pant_small"
+            }
+        }
+        field_marshal = {
+            skill = 3
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 2
+            logistics_skill = 3
+        }
+        advisor = {
+            slot = chief_economic_advisor
+            idea_token = ramchandra_pant
+            cost = 0
+            allowed = {
+                original_tag = MAR
+            }
+            traits = { civil_administrator }
+            available = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                    }
+                }
+            }
+        }
+    }
+}

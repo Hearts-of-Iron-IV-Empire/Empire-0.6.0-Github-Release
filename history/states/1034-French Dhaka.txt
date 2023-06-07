@@ -1,0 +1,24 @@
+state={
+	id=1034
+	name="STATE_1034"
+	provinces={
+		13271 13273
+	}
+
+	history={
+		owner = FRA
+		buildings = {
+			infrastructure = 1
+			13271 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			13271 2
+		}
+	}
+
+	manpower=500
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

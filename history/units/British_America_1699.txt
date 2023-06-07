@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Infantry Division"			# Infantry Division - Planned formation for mobilization of divisions, 1937-1940
+
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+	}
+	support = {
+		artillery = { x = 0 y = 0 }  # Regiment of 155mm howitzers, 105mm arty
+		engineer = { x = 0 y = 1 }   
+		recon = { x = 0 y = 2 }      # Recon consisted of ACs, motorcycle inf, cavalry
+	}
+}
+division_template = {
+	name = "Cavalry Brigade"  	# Cavalry Brigade
+
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 0 y = 2 }
+	}
+	support = {
+		recon = { x = 0 y = 0 }      # Recon consisted of ACs, motorcycle inf, cavalry
+	}
+}
+
+units = {
+	######## LAND UNITS ########
+	##### Northern states #####
+	# Northern Military District
+	division = { # "Ist British Infantry"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6845 # Philadelphia
+		division_template = "Infantry Division"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+
+	}
+	division = {
+		name = "2nd British Infantry"
+		location = 6845 # Philadelphia
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}
+	division = {
+		name = "3rd British Infantry"
+		location = 3878 # NYC
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+	division = {
+		name = "4th British Infantry"
+		location = 6732 # Capital
+		division_template = "Infantry Division"
+		start_experience_factor = 0.2
+		start_equipment_factor = 1
+	}	
+}
+
+
+
+### Starting Production ###
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = infantry_equipment_1
+			creator = "USA"
+		}
+		requested_factories = 10
+		progress = 0.77
+		efficiency = 100
+	}
+}

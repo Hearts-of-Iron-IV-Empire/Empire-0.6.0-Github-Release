@@ -1,0 +1,167 @@
+characters = {
+    HOL_Anthonie_Van_Der_Heim = {
+        name = "Anthonie Van Der Heim"
+        portraits = {
+            civilian = {
+                large = "GFX_Anthonie_Van_Der_Hein"
+            }
+        }
+        country_leader = {
+            expire = 1750.1.1
+            ideology = conservatism
+            traits = {}
+        }
+        country_leader = {
+            expire = 1750.1.1
+            ideology = nobility
+            traits = {}
+        }
+    }   
+    HOL_Willem_V = {
+        name = "Willem V"
+        portraits = {
+            civilian = {
+                large = "GFX_Willem_V"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    HOL_William_III = {
+        name = "William III"
+        portraits = {
+            civilian = {
+                large = "GFX_William_III"
+            }
+        }
+        country_leader = {
+            expire = 1702.3.8
+            ideology = despotism
+            traits = {}
+        }
+    }
+    HOL_Anthonie_Heinsius = {
+        name = "Anthonie Heinsius"
+        portraits = {
+            civilian = {
+                large = "GFX_Anthonie_Heinsius"
+            }
+        }
+        country_leader = {
+            expire = 1720.3.8
+            ideology = despotism
+            traits = { competent_statesman }
+        }
+    }
+    HOL_The_Estates_General = {
+        name = "The Estates General"
+        portraits = {
+            civilian = {
+                large = "GFX_Estates_General_of_the_Netherlands"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = conservatism
+            traits = {}
+        }
+    }
+    HOL_Frederik_Johann_van_Baer = {
+        name = "Frederik Johann van Baer"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Europe_Generic_land_5"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 3
+        }
+    }
+    HOL_Henry_de_Nassau = {
+        name = "Henry de Nassau"
+        portraits = {
+            army = {
+                large = "GFX_Henry_de_Nassau"
+            }
+        }
+        corps_commander = {
+            traits = { organizer skilled_staffer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    HOL_Jacob_van_Wassenaer_Obdam = {
+        name = "Jacob van Wassenaer Obdam"
+        portraits = {
+            army = {
+                large = "GFX_Jacob_van_Wassenaer"
+            }
+        }
+        corps_commander = {
+            traits = { brilliant_strategist career_officer armor_officer politically_connected }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 4
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    HOL_Johannes_Theodorus_Furstner = {
+        name = "Johannes Theodorus Furstner"
+        portraits = {
+            army = {
+                large = "GFX_Jansse_van_Nes"
+            }
+        }
+        navy_leader = {
+            traits = { caustic_personality blockade_runner }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            maneuvering_skill = 2
+            coordination_skill = 3
+        }
+    }
+    HOL_Cornelis_Evertsen = {
+        name = "Cornelis Evertsen"
+        portraits = {
+            army = {
+                large = "GFX_Cornelis_Evertsen"
+            }
+        }
+        navy_leader = {
+            traits = {}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            maneuvering_skill = 2
+            coordination_skill = 3
+        }
+    }
+    HOL_Philips_Van_Almonde = {
+        name = "Philips Van Almonde"
+        portraits = {
+            army = {
+                large = "GFX_Philips_Van_Almonde"
+            }
+        }
+        navy_leader = {
+            traits = {}
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            maneuvering_skill = 2
+            coordination_skill = 3
+        }
+    }
+}

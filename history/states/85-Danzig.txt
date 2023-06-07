@@ -1,0 +1,45 @@
+
+state={
+	id=85
+	name="STATE_85"
+
+	history={
+		owner = POL
+		victory_points = {
+			362 20 
+		}
+		victory_points = {
+			3295 15 
+		}
+		victory_points = {
+			279 1 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 1
+			dockyard = 1
+			362 = {
+				naval_base = 5
+
+			}
+
+		}
+		add_core_of = POL
+		add_claim_by = PRS
+		1772.1.1 = {
+			owner = PRS
+			add_core_of = PRS
+			controller = PRS
+
+		}
+
+	}
+
+	provinces={
+		279 334 362 389 3295 3324 6347 9263 11288
+	}
+	manpower=280100
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,37 @@
+
+state={
+	id=304
+	name="STATE_304"
+	manpower = 46745
+	resources={
+		oil=1 # was: 1
+	}
+	
+	state_category = town
+	
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 1
+			7630 = {
+				naval_base = 4
+			}
+			4611 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = COL
+		add_core_of = PRU
+		victory_points = {
+			7630 5 
+		}
+		victory_points = {
+			4611 1
+		}
+
+	}
+
+	provinces={
+		1633 4611 4624 7630 10482 
+	}
+}

@@ -1,0 +1,94 @@
+﻿capital = 282
+
+oob = "JAP_1699"
+
+set_stability = 0.65
+set_war_support = 0.40
+
+add_ideas = {
+	samurai_japan
+	han_system
+	disloyal_daimyo
+	isolated
+	japanese_catholics
+	small_tokugawa_territories
+
+	#Laws and Religions
+	shinto
+	kingdom
+	closed_economy
+	extensive_conscription
+}
+
+set_research_slots = 2
+set_fuel_ratio = 1.0
+
+set_technology = {
+	infantry_weapons = 1
+	tech_support = 1		
+	tech_recon = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	gw_artillery = 1
+	basic_cavalry = 1	
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_heavy_battery = 1
+		basic_medium_battery = 1
+		improved_ship_torpedo_launcher = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		mtg_transport = 1
+		coastal_defense_ships = 1
+		cruiser_submarines = 1
+	}
+
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		basic_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+
+set_convoys = 30
+
+recruit_character = JAP_Tokugawa_Tsunayoshi
+recruit_character = JAP_Tokugawa_Mitsusada
+recruit_character = JAP_Emperor_Go_Komyo
+
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 15
+	fascism = 15
+	communism = 15
+	neutrality = 15
+	aristocracy = 40
+}

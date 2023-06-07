@@ -1,0 +1,28 @@
+state={
+	id=1000
+	name="STATE_1000"
+	provinces={
+		1480 11975 
+	}
+	history={
+		owner = MEX
+		add_core_of = FLO
+		buildings = {
+			infrastructure = 1
+			11975 = {
+				naval_base = 1
+
+			}
+
+		}
+		1760.1.1 = {
+			add_manpower = 56000
+			add_core_of = USA
+			owner = USA
+		}
+
+	}
+	manpower=250
+	buildings_max_level_factor=1.000
+	state_category= rural
+}

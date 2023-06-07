@@ -1,0 +1,42 @@
+﻿capital = 629
+
+# Starting tech
+
+set_research_slots = 0
+
+add_ideas = {
+	disorganised_tribes
+	fetishist
+}
+
+1939.1.1 = {
+
+	
+	#generic focuses
+	
+	
+}
+
+
+
+
+set_popularities  = {
+	aristocracy = 100
+}
+set_politics = {	
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+create_country_leader = {
+	name = "Unorganised Tribes"
+	desc = "POLITICS_GABRIEL_TERRA_DESC"
+	picture = "Tribes.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}

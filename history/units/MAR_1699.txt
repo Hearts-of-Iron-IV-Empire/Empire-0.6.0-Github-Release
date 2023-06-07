@@ -1,0 +1,366 @@
+division_template = {
+	name = "Maval Division"
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+        irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+		irregular_infantry = { x = 1 y = 2 }
+        irregular_infantry = { x = 2 y = 0 }
+		irregular_infantry = { x = 2 y = 1 }
+		irregular_infantry = { x = 2 y = 2 }
+	}
+	support = {
+		logistics_company = { x = 0 y = 0 }
+	}
+}
+
+division_template = {
+	name = "Light Cavalry"
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+	}
+}
+
+division_template = {
+	name = "Mountaineers" 				# Mountain Brigade
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 0 y = 2 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+		mountaineers = { x = 1 y = 2 }
+		mountaineers = { x = 2 y = 0 }
+		mountaineers = { x = 2 y = 1 }
+	}
+}
+
+
+####### OOB #######
+units = {
+	#India Command
+	
+	division= {	# "Satara"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 12269
+		division_template = "Light Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Satara"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 13279
+		division_template = "Light Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Satara"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 101
+		}
+		location = 13279
+		division_template = "Light Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Satara"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 102
+		}
+		location = 12269
+		division_template = "Light Cavalry"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Sinhagad"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 12182
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Sinhagad"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13279
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Sinhagad"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 12182
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+    division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 4187
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13264
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13264
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13278
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13278
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13277
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13277
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Pune"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 10270
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+    division= {	# "Panhala"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13266
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Panhala"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13266
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 506
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 506
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+    division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 10270
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 4395
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 4395
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 4395
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13281
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Misc."
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 13281
+		division_template = "Maval Division"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Raigad Mountaineers"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7232
+		division_template = "Mountaineers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Raigad Mountaineers"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7232
+		division_template = "Mountaineers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Raigad Mountaineers"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7232
+		division_template = "Mountaineers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+	division= {	# "Raigad Mountaineers"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 103
+		}
+		location = 7232
+		division_template = "Mountaineers"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.8
+	}
+}
+
+##### Starting Production and Stockpiles #####
+instant_effect = {
+    add_equipment_production = {
+        equipment = {
+            type = infantry_equipment_1
+            creator = "RAJ"
+        }
+        requested_factories = 4
+        progress = 0.15
+        efficiency = 100
+    }
+	add_equipment_to_stockpile = {
+		type = infantry_equipment
+		amount = 3000
+		producer = MAR
+	}	
+	add_equipment_to_stockpile = {
+		type = motorized_equipment_1
+		amount = 100
+		producer = MAR
+	}
+	add_equipment_to_stockpile = {
+		type = support_equipment_1
+		amount = 100
+		producer = MAR
+	}	
+}

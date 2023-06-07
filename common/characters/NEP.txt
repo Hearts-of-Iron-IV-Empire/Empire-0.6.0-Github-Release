@@ -1,0 +1,14 @@
+characters = {
+    NEP_Prithvipati_Shah = {
+        name = "Prithvipati Shah"
+        portraits = {
+            civilian = {
+                large = "GFX_Prithvipati_Shah"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

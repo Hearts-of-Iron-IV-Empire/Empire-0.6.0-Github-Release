@@ -1,0 +1,38 @@
+guiTypes = {
+	containerWindowType = {
+		name = "colonial_area"
+		
+		#buttonType = {
+		#	name = "area_flag"
+		#	position = { x = 0 y = 75 }
+		#	spriteType = "GFX_shield_medium"
+		#	Orientation = "LOWER_LEFT"
+		#}
+		instantTextboxType = {
+			name = "colonial_area_name"
+			position = { x = 20 y = 200 }
+			textureFile = ""
+			font = "hoi_36header"
+			text = "Colonial [?colonial_area.GetName]"
+			maxWidth = 130
+			maxHeight = 30
+			format = center
+		}
+	}
+	containerWindowType = {
+		name = "colony_overlord_dip_view"
+		
+		#buttonType = {
+		#	name = "area_flag"
+		#	position = { x = 0 y = 75 }
+		#	spriteType = "GFX_shield_medium"
+		#	Orientation = "LOWER_LEFT"
+		#}
+		iconType = {
+			name = "diplo_overlord_colony_flag"
+			quadTextureSprite ="GFX_flag_small"
+			position = { x= 39 y = 0 } 
+			Orientation = "UPPER_LEFT"
+		}
+	}
+}

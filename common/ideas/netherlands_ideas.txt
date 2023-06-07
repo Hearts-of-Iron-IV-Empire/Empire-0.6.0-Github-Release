@@ -1,0 +1,510 @@
+ideas = {
+	country = {
+		HOL_grand_naval_strategy = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_coastal_navy
+
+			removal_cost = -1
+			
+			modifier = {	
+				industrial_capacity_dockyard = 0.15
+				naval_damage_factor = 0.2
+			}
+		}
+		HOL_legacy_of_the_sea_beggars = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_coastal_navy
+
+			removal_cost = -1
+			
+			modifier = {	
+				amphibious_invasion = 0.15
+				invasion_preparation = -0.25
+				amphibious_invasion_defence = 0.1
+				convoy_raiding_efficiency_factor = 0.25
+				convoy_retreat_speed = 0.25
+			}
+		}
+		HOL_unification_of_embassies = {
+			allowed = {
+				always = no
+			}
+
+			picture = MEX_callistas
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.02
+				political_power_gain = 0.15
+				opinion_gain_monthly_factor = 0.15
+			}
+		}
+		HOL_economic_integration = {
+			allowed = {
+				always = no
+			}
+
+			picture = MEX_callistas
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+				industrial_capacity_factory = 0.1
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		HOL_prepare_the_water_lines = {
+		
+			picture = hol_prepare_the_inundation_lines
+
+			allowed = {
+				original_tag = HOL
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+
+			modifier = {
+				production_speed_bunker_factor = 0.1
+			}
+		}
+		HOL_defensive_stance = {
+			picture = YUG_federal_defense_council
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.20
+				army_core_attack_factor = 0.15
+			}
+		}
+		HOL_second_barrier_treaty = {
+			picture = FRA_fortification_focus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning_factor = 0.35
+				planning_speed = -0.15
+				conscription = 0.02
+				political_power_gain = 0.15
+			}
+		}
+		HOL_haven_of_tolerance = {
+			picture = generic_research_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+				monthly_population = 0.10
+			}
+		}
+		HOL_anti_french_stance = {
+			picture = generic_intel_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = FRA
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.10
+			}
+		}
+		HOL_free_shooters = {
+			picture = MEX_politicised_army_2
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription = 0.005
+				land_reinforce_rate = 0.12
+			}
+		}
+		HOL_protected_by_the_barrier = {
+			picture = FRA_fortification_focus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning_factor = 0.25
+				planning_speed = -0.25
+			}
+		}
+		HOL_gallia_amica_sed_non_vicina = {
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = { is_owner_neighbor_of = FRA }
+			
+			modifier = {
+				political_power_factor = 0.3
+				stability_factor = 0.2
+			}
+		}
+
+		HOL_rise_in_monarchist_sentiment = {
+			picture = hol_oranje_boven
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.10
+				stability_factor = -0.05
+			}
+		}
+		HOL_military_spending_maintained = {
+			picture = man_five_year_plan_industry
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1 
+				production_speed_dockyard_factor = 0.1 
+			}
+		}
+		HOL_recent_military_budget_cuts = {
+			picture = generic_army_problems
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.2 
+				production_speed_dockyard_factor = -0.2 
+				production_speed_industrial_complex_factor = 0.1 
+			}
+		}
+		HOL_craftsmen_in_power = {
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		HOL_admirals_in_power = {
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.10
+				production_speed_dockyard_factor = 0.20
+				naval_damage_factor = 0.05
+				naval_defense_factor = 0.05
+				experience_gain_navy = 0.05
+			}
+		}
+		HOL_traders_in_power = {
+			picture = generic_pp_unity_bonus
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_opinion_factor = 0.5
+				war_stability_factor = -0.3
+				war_support_factor = -0.3
+				stability_factor = 0.1
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		HOL_strenghtened_states_general = {
+			picture = generic_pp_unity_bonus
+
+			name = HOL_strenghtened_states_general
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.10
+				stability_factor = 0.05
+				democratic_drift = 0.03
+				aristocracy_drift = 0.01
+			}
+		}
+		HOL_absence_of_the_stadtholder = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = william_of_orange
+			
+			modifier = {
+				political_power_factor = -0.15
+			}
+		}
+		HOL_voc_funding = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		HOL_voc_funding2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = generic_foreign_capital
+			
+			modifier = {
+				political_power_gain = 0.20
+				consumer_goods_factor = -0.10
+			}
+		}
+		
+		HOL_voc_integration = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = hol_oranje_boven
+			
+			modifier = {
+				autonomy_gain = -2
+			}
+		}
+		HOL_spice_trade_profits = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = spices
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				custom_modifier_tooltip = HOL_cannot_colonize_asia
+			}
+		}
+		HOL_spice_trade_profits2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = spices
+			
+			modifier = {
+				consumer_goods_factor = -0.10
+			}
+		}
+		HOL_balanced_budget = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+
+			}
+		}
+		HOL_inflation_1 = {
+
+			picture = chi_hyper_inflation
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+			}
+		}	
+		HOL_inflation_2 = {
+
+			picture = chi_hyper_inflation2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.10
+				industrial_capacity_factory = -0.10
+			}
+		}
+		HOL_inflation_3 = {
+
+			picture = chi_hyper_inflation3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+			}
+		}
+		HOL_inflation_4 = {
+
+			picture = chi_hyper_inflation4
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.20
+				industrial_capacity_factory = -0.20
+			}
+		}
+		HOL_inflation_5 = {
+
+			picture = chi_hyper_inflation5
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.25
+			}
+		}
+		HOL_declared_bankruptcy= {
+
+			picture = usa_great_depression_2
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.40
+				industrial_capacity_factory = -0.35
+				army_morale_factor = -0.2
+				stability_factor = -0.20
+			}
+		}
+	}
+}
+

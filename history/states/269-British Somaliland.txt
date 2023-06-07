@@ -1,0 +1,15 @@
+state=
+{
+	id=269
+	name="STATE_269"
+	manpower = 344700
+	
+	state_category = enclave
+	history={
+	owner = UNC
+	}
+	
+	provinces={
+		1905 5068 8094 10833 10921 12759 12814
+	}
+}

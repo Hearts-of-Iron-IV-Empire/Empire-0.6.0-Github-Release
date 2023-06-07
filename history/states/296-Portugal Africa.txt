@@ -1,0 +1,28 @@
+state={
+	id=296
+	name="STATE_296"
+	resources={
+		rubber=1.000
+	}
+
+	history={
+		owner = GNB
+		add_extra_state_shared_building_slots = 10
+		victory_points = { 12747 1 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			12747 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		12747 12802 12858 12891 
+	}
+	manpower=364900
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

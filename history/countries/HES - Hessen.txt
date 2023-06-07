@@ -1,0 +1,96 @@
+set_country_flag = HRE_imperial_subject
+
+set_research_slots = 3
+capital = 893
+load_oob = Imperial_army
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+}
+
+add_ideas = {
+	protestant
+}
+
+create_country_leader = {
+	name = "Karl I"
+	picture = "karl_i.dds"
+	expire = "1965.1.1"
+	ideology = despotism
+	traits = {
+		#
+	}
+}
+
+1730.3.23 = {
+	create_country_leader = {
+		name = "Frederick I"
+		picture = "frederick_i.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+1751.4.5 = {
+	create_country_leader = {
+		name = "Wilhelm VIII"
+		picture = "wilhelm_viii.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+1760.1.1 = {
+	create_country_leader = {
+		name = "Frederick II"
+		picture = "frederick_ii.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+1785.10.31 = {
+	create_country_leader = {
+		name = "Wilhelm XI"
+		picture = "wilhelm_xi.dds"
+		expire = "1965.1.1"
+		ideology = despotism
+		traits = {
+			#
+		}
+	}
+}
+
+
+give_military_access = AUS
+give_military_access = PRS
+give_military_access = IFC
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 15
+	fascism = 15
+	communism = 10
+	neutrality = 30
+	aristocracy = 30
+}

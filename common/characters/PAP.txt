@@ -1,0 +1,38 @@
+characters = {
+    PAP_Clement_XI = {
+        name = "Clement XI"
+        portraits = {
+            civilian = {
+                large = "GFX_Clement_XI"
+            }
+        }
+        country_leader = {
+            ideology = nazism
+            traits = {}
+        }
+    }
+    PAP_Clement_XII = {
+        name = "Clement XII"
+        portraits = {
+            civilian = {
+                large = "GFX_Clement_XII"
+            }
+        }
+        country_leader = {
+            ideology = nazism
+            traits = {}
+        }
+    }
+    PAP_Innocent_XII = {
+        name = "Innocent XII"
+        portraits = {
+            civilian = {
+                large = "GFX_Innocent_XII"
+            }
+        }
+        country_leader = {
+            ideology = nazism
+            traits = {}
+        }
+    }
+}

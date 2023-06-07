@@ -1,0 +1,49 @@
+
+state={
+	id=86
+	name="STATE_86"
+	resources={
+		oil=10.000
+	}
+
+	history={
+		owner = POL
+		victory_points = {
+			6558 15 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			11232 = {
+				bunker = 1
+
+			}
+			9532 = {
+				bunker = 1
+
+			}
+			3381 = {
+				bunker = 1
+
+			}
+
+		}
+		add_core_of = POL
+		1772.1.1 = {
+			owner = PRS
+			add_core_of = PRS
+			controller = PRS
+
+		}
+		1812.1.1 = {
+			owner = POL
+		}
+	}
+
+	provinces={
+		17 243 388 3381 3460 3532 6558 9252 9532 11232 11260 11558 
+	}
+	manpower=406500
+	buildings_max_level_factor=1.000
+	state_category=city
+}

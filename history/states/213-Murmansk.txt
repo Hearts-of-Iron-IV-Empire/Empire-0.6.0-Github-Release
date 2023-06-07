@@ -1,0 +1,22 @@
+state={
+	id=213
+	name="STATE_213"
+	manpower = 45751
+	state_category = rural
+
+	history={
+		owner = SOV
+		add_core_of = SOV
+		add_core_of = NOV
+		buildings = {
+			infrastructure = 1	
+		}
+		victory_points = {
+			197 1
+		}	
+	}
+
+	provinces={
+		15 74 98 116 142 178 197 3012 3121 3134 3158 3170 6012 6117 6128 6140 6157 6181 6183 6194 9039 9059 9115 9116 9123 9140 9162 9165 9179 9201 9203 9215 9217 11030 11031 11085 11088 11117 11128 11140 11142 11183 11196  
+	}
+}

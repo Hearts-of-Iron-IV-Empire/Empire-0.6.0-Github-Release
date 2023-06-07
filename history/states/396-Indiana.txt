@@ -1,0 +1,29 @@
+
+state={
+	id=396
+	name="STATE_396"
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LOU
+		1789.1.1 = {
+			remove_core_of = QUE
+			remove_core_of = LOU
+			owner = IRO
+			add_core_of = IRO
+			add_claim_by = USA
+		}
+	}
+
+	provinces={
+		689 870 4437 4531 6713 7551 9653 9654 9810 11637 
+	}
+	manpower=2000
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

@@ -1,0 +1,29 @@
+
+state={
+	id=893
+	name="STATE_893"
+
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		owner = HES
+		add_core_of = HES
+		victory_points = {
+			564 3 
+		}
+		1812.1.1 = {
+			owner = MUN
+			add_core_of = MUN
+		}
+	}
+
+	provinces={
+		564 6513 9524 11533 
+	}
+	manpower=120450
+	buildings_max_level_factor=1.000
+	state_category=town
+}

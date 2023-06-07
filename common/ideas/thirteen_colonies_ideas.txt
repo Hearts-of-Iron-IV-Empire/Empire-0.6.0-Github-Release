@@ -1,0 +1,620 @@
+ideas = {
+	country = {
+		USA_refused_negotiations = {
+			picture = generic_deal_with_the_devil
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				war_support_weekly = -0.01
+				war_support_factor = -0.1
+			}
+		}
+
+		USA_bolstered_army_morale = {
+			picture = FRA_national_mobilization_focus
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {		
+				army_morale_factor = 0.12
+			}
+		}
+		USA_commitee_of_secret_correspondence = {
+			picture = generic_constitutional_guarantees
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.15
+				request_lease_tension = -0.5
+			}
+		}
+
+		USA_commitee_of_foreign_affairs_idea = {
+			picture = generic_constitutional_guarantees
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_factor = 0.30
+				political_power_factor = 0.05
+				request_lease_tension = -0.5
+				trade_opinion_factor = 0.2
+			}
+		}
+
+		USA_articles_of_confederation = {
+			picture = generic_constitutional_guarantees
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				non_core_manpower = 0.4
+				resistance_growth = -0.25
+				production_speed_buildings_factor = 0.1 
+			}
+		}
+		USA_drafting_the_constitution = {
+			picture = generic_constitutional_guarantees
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_weekly = 0.001
+				democratic_drift = 0.05
+				political_power_factor = -0.15
+			}
+		}
+
+		USA_small_investment_cost = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				civilian_factory_use = 3
+			}
+		}
+		USA_medium_investment_cost = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				civilian_factory_use = 8
+			}
+		}
+		USA_large_investment_cost = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				civilian_factory_use = 15
+			}
+		}
+		USA_small_investment_HOL = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 3
+			}
+		}
+		USA_medium_investment_HOL = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 8
+			}
+		}
+		USA_large_investment_HOL = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 15
+			}
+		}
+
+		USA_small_investment_SPR = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 3
+			}
+		}
+		USA_medium_investment_SPR = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 8
+			}
+		}
+		USA_large_investment_SPR = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 15
+			}
+		}
+
+		USA_small_investment_FRA= {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 3
+			}
+		}
+		USA_medium_investment_FRA = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 8
+			}
+		}
+		USA_large_investment_FRA = {
+			picture = SPR_relocate_the_gold_reserves
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_factory_donations = 15
+			}
+		}
+
+		USA_partition_from_the_crown = {
+			picture = generic_agrarian_reform
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.001
+				autonomy_gain = 0.5
+			}
+		}
+		USA_self_sufficiency = {
+			picture = generic_agrarian_reform
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.05 
+			}
+		}
+		colonial_immigration = {
+			picture = generic_morale_bonus
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 1
+			}
+		}
+		english_migration = {
+			picture = prc_low_popular_support2
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.5
+				consumer_goods_factor = -0.025
+			}
+		}
+		scottish_migration = {
+			picture = prc_low_popular_support
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = -0.01
+			}
+		}
+		irish_migration = {
+			picture = prc_low_popular_support
+	
+			allowed = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.25
+				consumer_goods_factor = -0.01
+			}
+		}
+		USA_board_of_war_and_ordnance_idea = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_leader_cost_factor = -0.5 
+				army_leader_start_level = 1 
+				max_planning_factor = 0.25
+				planning_speed = 0.1
+			}
+		}
+		USA_commitee_of_safety = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.05
+				neutrality_drift = -0.05
+			}
+		}
+		USA_purtian_refugee_influx = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 200 
+				monthly_population = 0.25
+			}
+		}
+		USA_central_government = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.15
+				stability_factor = -0.05
+			}
+		}
+		USA_autonomous_colonies = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		USA_continental_association_boycott = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				extra_trade_to_overlord_factor = -0.5
+				overlord_trade_cost_factor = 0.5
+				can_master_build_for_us = 0
+				cic_to_overlord_factor = -0.8
+			}
+		}
+		USA_minutemen = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				training_time_factor = -0.3
+				supply_consumption_factor = -0.25
+				out_of_supply_factor = -0.25
+				army_org_factor = -0.1
+			}
+		}
+		USA_commitees_of_correspondence = {
+
+			picture = generic_pp_unity_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = 0.10
+			}
+		}
+		USA_largely_male_population = {
+
+			picture = generic_reserve_divisions
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.15
+				monthly_population = -0.30
+			}
+		}
+
+		USA_indentured_servants = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.1 
+				industrial_capacity_factory = 0.1
+			}
+		}
+
+		USA_forced_labour = {
+
+			picture = generic_production_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				production_speed_buildings_factor = 0.15 
+				industrial_capacity_factory = 0.15
+			}
+		}
+
+		USA_massachussetts_govt_act = {
+
+			picture = FRA_matignon_agreements
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_factor = -0.05
+			}
+		}
+
+		USA_murder_act = {
+
+			picture = generic_purge
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				neutrality_drift = 0.05
+				stability_factor = -0.1
+			}
+		}
+
+		USA_quartering_act = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_growth = -0.3
+				consumer_goods_factor = 0.1
+			}
+		}
+
+		USA_liberty_or_death = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				surrender_limit = 1
+				war_support_weekly_factor = 0.001
+				resistance_damage_to_garrison_on_our_occupied_states = 0.25
+			}
+		}
+
+		USA_louisiana_purchase_idea = {
+
+			picture = taxes
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.25
+			}
+		}
+
+		USA_louisiana_purchase_2 = {
+
+			picture = taxes
+			
+			name = USA_louisiana_purchase_idea
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = -0.25
+			}
+		}
+
+		USA_george_washington_idea = {
+
+			picture = george_washington
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor = 0.15
+				army_core_defence_factor = 0.15
+			}
+		}
+	}
+}

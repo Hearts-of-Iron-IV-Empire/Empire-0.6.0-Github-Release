@@ -1,0 +1,295 @@
+﻿###########################
+# Saxon Events
+###########################
+
+add_namespace = Saxony
+
+country_event = {
+	id = saxony.1
+	title = "An unexpected Discovery"
+	desc = saxony.1.d
+	#picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+	
+	option = {
+		name = "This is great, we have to share this with the world"
+	}
+}
+country_event = {
+	id = saxony.2
+	title = "Saxony In Chaos"
+	desc = saxony.2.d
+	#picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "the Saxon General Jacob August Marches In"
+		complete_national_focus = SAX_ruler_Jakob_Heinrich
+		ai_chance = {
+			factor = 20
+		}
+	}
+	option = {
+		name = "Prussia marches in"
+		complete_national_focus = SAX_PRU_marches_in
+		ai_chance = {
+			factor = 40
+			modifier = { PRS = { is_ai = no} add = 800 }
+		}
+	}
+	option = {
+		name = "Austria marches in"
+		complete_national_focus = SAX_AUS_marches_in
+		ai_chance = {
+			factor = 10
+			modifier = { AUS = { is_ai = no} add = 800 }
+		}
+	}
+}
+country_event = {
+	id = saxony.3
+	title = "Unrest Among the Saxon People"
+	desc = saxony.3.d
+	#picture = GFX_report_event_generic_army
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		SAX = { has_completed_focus = SAX_take_skilled_workers }
+	}
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+		}
+	}
+
+	option = {
+		name = "Nothing we have to worry about"	
+		add_stability = -0.04
+	}
+}
+country_event = {
+	id = saxony.4
+	title = "Unrest grows a lot bigger"
+	desc = saxony.4.d
+	picture = GFX_report_event_worker_protests
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		SAX = { has_completed_focus = SAX_convert_them }
+	}
+	mean_time_to_happen = {
+		days = 500
+		modifier = {
+			factor = 0.5
+		}
+	}
+
+
+	option = {
+		name = "Maybe this is a Problem"
+	}
+}
+
+# Event when for the Rebellion to start
+country_event = {
+	id = saxony.6
+	title = "Revolution!"
+	desc = saxony.6.d
+	#picture = GFX_report_event_generic_army
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		SAX = { has_completed_focus = SAX_Leopold_is_your_king 
+		has_completed_focus = SAX_resistance_no_more
+		}
+	}
+	mean_time_to_happen = {
+		days = 20
+	}
+
+	option = {
+		name = "Crush them now before it's to late"
+		AUS = { 
+			set_autonomy = {
+				target = SAX
+				autonomy_state = autonomy_free
+			}
+			set_state_controller = 974
+			add_state_claim = 975
+		}
+		SAX = {
+			set_politics = {
+				ruling_party = communism
+					elections_allowed = no
+					last_election = "1935.12.17"
+					election_frequency = 48
+			}
+			add_popularity = {
+			ideology = communism
+			popularity = 0.80
+			}
+			declare_war_on = {
+    			target = AUS
+    			type = annex_everything
+			}
+			swap_ideas = {
+				remove_idea = catholic
+				add_idea = protestant
+			}
+			set_war_support = 1
+			set_stability = 0.8
+			add_ideas = SAX_for_the_people
+			load_oob = SAX_revolution
+		}
+		news_event = mod.31
+	}
+}
+
+# event fo changing the flag of Saxony
+
+country_event = {
+	id = saxony.5
+	title = "A new Flag?"
+	desc = saxony.5.d
+	picture = GFX_report_event_SAX_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+	
+	#mean_time_to_happen = {
+		#days = 4
+	#}
+
+	option = {
+		name = "The Flag of the People"
+		set_cosmetic_tag = SAX_normal
+		ai_chance = {
+			factor = 50
+		}
+	}
+	option = {
+		name = "The Flag of the Farmers"
+		set_cosmetic_tag = SAX_people
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+country_event = {
+	id = saxony.7
+	title = "The Fall of our Capital"
+	desc = saxony.7.d
+	#picture = GFX_report_event_SAX_flag
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		tag = SAX
+		AUS = {
+			controls_province = 514
+			has_war_with = SAX
+		}
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "Sent this Letter to the Austrian King"
+		white_peace = AUS
+		set_war_support = 0.2
+		AUS = {
+			transfer_state = 975
+			set_autonomy = {
+				target = SAX
+				autonomy_state = autonomy_puppet
+			}
+		}
+	}
+}
+country_event = {
+	id = saxony.8
+	title = "A Story from Jacob"
+	desc = saxony.8.d
+	#picture = GFX_report_event_SAX_flag
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+	trigger = {
+		has_completed_focus = SAX_ruler_Jakob_Heinrich
+		date > 1699.3.2
+	}
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = {
+		name = "I do not believe that"
+		add_ideas = SAX_low_legitimacy
+		add_stability = -0.07
+	}
+}
+country_event = {
+	id = saxony.9
+	title = "Austria wants Peace"
+	desc = saxony.9.d
+	#picture = GFX_report_event_SAX_flag
+
+	#is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		tag = SAX
+		SAX = {
+			controls_province = 11542
+			has_war_with = AUS
+		}
+		NOT = {
+			has_non_aggression_pact_with = AUS
+		}
+	}
+	mean_time_to_happen = {
+		days = 10
+	}
+
+	option = {
+		name = "YES we Won!"
+		set_stability = 0.2
+		SAX = {
+			white_peace = AUS
+			diplomatic_relation = { 
+				country = AUS
+				relation = non_aggression_pact 
+			}
+		}
+		AUS = {
+			give_guarantee = SAX
+		}
+	}
+}
+country_event = {
+	id = saxony.10
+	title = "People are flooding in"
+	desc = saxony.10.d
+	#picture = GFX_report_event_SAX_flag
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = {
+		name = "Let's hope that doesn't end in a famine"
+		add_ideas = SAX_people_flood_in
+	}
+}

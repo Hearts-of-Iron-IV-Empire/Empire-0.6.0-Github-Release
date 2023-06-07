@@ -1,0 +1,365 @@
+ideas = {
+	country = {
+		SAV_huge_savoyard_payment = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_factory_donations = 15
+			}
+		}
+		SAV_large_savoyard_payment = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_factory_donations = 10
+			}
+		}
+		SAV_modest_savoyard_payment = {
+			picture = SPR_seize_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				industrial_factory_donations = 5
+			}
+		}
+		SAV_huge_payment = {
+			picture = SPR_relocate_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_factory_use = 15
+			}
+		}
+		SAV_large_payment = {
+			picture = SPR_relocate_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_factory_use = 10
+			}
+		}
+		SAV_modest_payment = {
+			picture = SPR_relocate_the_gold_reserves
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				civilian_factory_use = 5
+			}
+		}
+		SAV_alpine_defense = {
+			picture = ast_all_in
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				max_dig_in_factor = 0.20
+				recon_factor_while_entrenched = 0.15
+			}
+		}
+		SAV_improved_conscription = {
+			picture = generic_manpower_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.02
+			}
+		}
+		SAV_military_reforms = {
+			picture = military_reforms
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_org_factor = -0.15
+				experience_gain_army = 0.05
+			}
+		}
+		SAV_driving_out_the_spanish = {
+			picture = SPR_nationalist_remnants
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = SPR
+				attack_bonus_against = 0.10
+				defense_bonus_against = 0.15
+			}
+		}
+		SAV_savoyard_diplomatic_corps = {
+			picture = generic_air_support_focus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				opinion_gain_monthly_factor = 0.25
+				political_power_factor  = 0.05
+			}
+		}
+		SAV_savoyard_resistance = {
+			picture = CHI_war_of_resistance2
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				resistance_target_on_our_occupied_states = 0.15
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.1
+			}
+		}
+		SAV_morale_propaganda = {
+			picture = generic_volunteer_expedition_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_weekly = 0.005 
+				war_support_weekly = 0.005
+			}
+		}
+		SAV_sanitary_provisions = {
+			picture = CZE_planning_bonus
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.25
+				production_speed_infrastructure_factor = 0.10
+				attrition = -0.10
+			}
+		}
+		SAV_food_distribution = {
+			picture = generic_agrarian_reform
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				monthly_population = 0.25
+				stability_weekly = 0.005 
+			}
+		}
+		SAV_perequazione = {
+			picture = generic_local_self_management
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.10 
+				production_factory_efficiency_gain_factor = -0.05 
+			}
+		}
+		SAV_fallout_of_plague = {
+			picture = ENG_the_war_to_end_all_wars
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				recruitable_population_factor = -0.12
+				monthly_population = -0.1
+				stability_factor = -0.1
+			}
+		}
+		SAV_economic_depression_5 = {
+			picture = great_depression
+			name = SAV_economic_depression
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.02
+				production_speed_buildings_factor = -0.03 
+				industrial_capacity_factory = -0.02
+			}
+		}
+		SAV_economic_depression_4 = {
+			picture = great_depression
+			name = SAV_economic_depression
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.04
+				production_speed_buildings_factor = -0.06 
+				industrial_capacity_factory = -0.04
+			}
+		}
+		SAV_economic_depression_3 = {
+			picture = great_depression
+			name = SAV_economic_depression
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.06
+				production_speed_buildings_factor = -0.09 
+				industrial_capacity_factory = -0.06
+			}
+		}
+		SAV_economic_depression_2 = {
+			picture = great_depression
+			name = SAV_economic_depression
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.08
+				production_speed_buildings_factor = -0.12 
+				industrial_capacity_factory = -0.08
+			}
+		}
+		SAV_economic_depression = {
+			picture = great_depression
+			name = SAV_economic_depression
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.15 
+				industrial_capacity_factory = -0.1
+			}
+		}
+	}
+}

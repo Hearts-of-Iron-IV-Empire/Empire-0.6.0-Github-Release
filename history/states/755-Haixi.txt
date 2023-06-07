@@ -1,0 +1,28 @@
+state={
+	id=755
+	name="STATE_755"
+	provinces={
+		2053 2099 7997 10750 10796 10834 10865 12846 12890 13146
+	}
+	manpower=500000
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+	history={
+		owner = CHI
+		add_core_of = CHI
+		buildings = {
+			infrastructure = 1
+		}
+		1716.5.1 = {
+			owner = SIK
+			controller = SIK
+			add_core_of = SIK
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+
+		}
+	}
+}

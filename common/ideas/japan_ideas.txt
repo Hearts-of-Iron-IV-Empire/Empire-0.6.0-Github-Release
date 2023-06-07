@@ -1,0 +1,450 @@
+ideas = {
+
+	country = {
+	
+		samurai_japan = { # Add at start
+			picture = usa_great_depression_3
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = -0.05
+				army_defence_factor = 0.1
+			}
+		}
+		
+		han_system = { # Add at start
+			picture = usa_great_depression_2
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+		
+		disloyal_daimyo = { # Add at start
+			picture = chi_war_of_resistance2
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.15
+				war_support_factor = -0.15
+			}
+		}
+		
+		peace_at_last = {
+			picture = usa_great_depression
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = -0.2
+				monthly_population = 0.1
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+		
+		enforced_isolation = {
+			picture = undisturbed_isolation
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				production_speed_buildings_factor = -0.1
+				trade_opinion_factor = -1
+				neutrality_drift = 0.2
+			}
+		}
+				
+		isolated = { # Add at start
+			picture = undisturbed_isolation
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.1 
+				trade_opinion_factor = -1
+			}
+		}
+
+		japanese_catholics = { # Add at start
+			picture = MEX_church_power_5
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.2 
+				neutrality_drift = -0.05
+			}
+		}
+		
+		JAP_growing_christian_minority = { 
+			picture = MEX_church_power_4
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.05
+				stability_factor = -0.1
+				neutrality_drift = -0.05
+			}
+		}
+
+		small_tokugawa_territories = { # Add at start
+			picture = generic_intel_bonus
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				global_building_slots_factor = -0.1
+			}
+		}
+
+		integrating_formosa = { 
+			picture = MEX_church_power_5
+			
+			allowed = {
+				tag = JAP
+			}
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = -0.1
+			}
+		}
+
+		japanese_influence = { 
+			picture = MEX_church_power_5
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				autonomy_gain = -0.2
+			}
+		}
+
+		foreign_book_ban_revised = { 
+			picture = old_book
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		imperial_approval = { 
+			picture = old_book
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_laws_cost_factor = -0.10
+				economy_cost_factor = -0.10
+				political_advisor_cost_factor = -0.10
+				chief_economic_advisor_cost_factor = -0.10
+				chief_diplomatic_advisor_cost_factor = -0.10
+			}
+		}
+
+		warrior_spirit = { 
+			picture = generic_morale_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_attack_factor  = 0.1
+				army_core_defence_factor = 0.1 
+				army_speed_factor = 0.05
+			}
+		}
+
+		recovering_from_war = { 
+			picture = generic_production_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industry_repair_factor = 0.15
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		preparing_for_war = { 
+			picture = generic_production_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_dockyard = 0.1
+				industrial_capacity_factory = 0.1
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		pacified_daimyo = { 
+			picture = generic_production_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.05
+				army_attack_factor = 0.05
+				army_defence_factor = 0.05
+				aristocracy_drift = 0.03
+			}
+		}
+
+		established_gosankyo = { # Not being added in-game for now
+			picture = generic_production_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_gain = 0.1
+				neutrality_drift = 0.05
+			}
+		}
+
+		tea_ceremonies = { 
+			picture = generic_morale_bonus
+
+			available = {
+			}
+			
+			cancel = {
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+		}
+	}
+}

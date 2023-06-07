@@ -1,0 +1,25 @@
+
+state={
+	id=1012
+	name="STATE_1012"
+
+	history={
+		owner = PRS
+				victory_points = {
+			13247 1
+		}
+			buildings = {
+			infrastructure = 1
+			13247 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		13247
+	}
+	manpower=73
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

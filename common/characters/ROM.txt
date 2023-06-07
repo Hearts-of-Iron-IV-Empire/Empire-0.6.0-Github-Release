@@ -1,0 +1,14 @@
+characters = {
+    ROM_Constantin_Brancoveanu = {
+        name = "Constantin Brancoveanu"
+        portraits = {
+            civilian = {
+                large = "GFX_Constantin_Brancoveanu"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

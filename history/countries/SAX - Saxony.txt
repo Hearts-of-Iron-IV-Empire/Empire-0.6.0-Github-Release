@@ -1,0 +1,61 @@
+﻿capital = 65
+
+oob = "SAX_1699"
+set_research_slots = 3
+set_country_flag = SAX
+set_stability = 0.65
+set_war_support = 0.50
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+}
+
+1730.1.1 = {
+	recruit_character = SAX_Augustus_III
+	promote_character = SAX_Augustus_III
+	retire_character = SAX_Frederick_Augustus
+	retire_character = SAX_Jacob_Heinrich_von_Flemming
+}
+
+1740.1.1 = {
+	diplomatic_relation = { country = POL relation = war_relation active = no }
+}
+
+add_ideas = {
+	protestant
+	PRS_status_elector
+	SAX_high_developed_region
+	SAX_polish_leash_dog
+}
+
+set_convoys = 0
+give_military_access = AUS
+give_military_access = IFC
+give_guarantee = IFC
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 6
+	fascism = 8
+	communism = 0
+	neutrality = 54
+	aristocracy = 32
+}
+
+recruit_character = SAX_Frederick_Augustus # Country Leader (Despotism)
+recruit_character = SAX_Jacob_Heinrich_von_Flemming # Country Leader (Nobility), Field Marshal 
+recruit_character = SAX_Protestant_Church # Country Leader (Fascism) :p
+recruit_character = SAX_The_Saxon_People # Country Leader (Anarchists)
+recruit_character = SAX_Matthias_Johann_von_der_Schulenburg # General
+recruit_character = SAX_Johann_August_Marschall_von_Bieberstein # General

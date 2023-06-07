@@ -1,0 +1,118 @@
+characters = {
+    DEN_Christian_V = {
+        name = "Christian V"
+        portraits = {
+            civilian = {
+                large = "GFX_Christian_V"
+            }
+        }
+        country_leader = {
+            expire = 1699.8.25
+            ideology = despotism
+            traits = { absolutist_reformer }
+            desc = CHRISTIAN_V_DESC
+        }
+    }
+    DEN_Frederick_IV = {
+        name = "Frederick IV"
+        portraits = {
+            army = {
+                large = GFX_Frederick_IV
+            }
+            civilian = {
+                large = "GFX_Frederick_IV"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = {}
+            desc = FREDERICK_IV_DESC
+        }
+        field_marshal = {
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    DEN_Christian_VI = {
+        name = "Christian VI"
+        portraits = {
+            civilian = {
+                large = "GFX_Christian_VI"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+            desc = FREDERICK_IV_DESC
+        }
+    }
+    DEN_Ulrik_C_Gyldenløve = {
+        name = "Ulrik C. Gyldenløve"
+        portraits = {
+            army = {
+                large = "GFX_Christian_Ulrik"
+            }
+        }
+        corps_commander = {
+            traits = { trickster }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    DEN_Christian_D_Reventlow = {
+        name = "Christian D. Reventlow"
+        portraits = {
+            army = {
+                large = "GFX_Ditlev_Reventlow"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 1
+        }
+    }
+    DEN_Peter_Tordenskiold = {
+        name = "Peter Tordenskiold"
+        portraits = {
+            army = {
+                large = "GFX_Peter_Tordenskiold"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    DEN_Jørgen_Rantzau = {
+        name = "Jørgen Rantzau"
+        portraits = {
+            army = {
+                large = "GFX_Portrait_Europe_Generic_land_3"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+}

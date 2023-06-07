@@ -1,0 +1,41 @@
+
+state={
+	id=429
+	name="STATE_429"
+	resources={
+		tungsten=19.000
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = MAR
+		add_extra_state_shared_building_slots = 10
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+
+		}
+		1699.1.1 = {
+			MAR = {
+				set_province_controller = 13277
+				set_province_controller = 4187
+				set_province_controller = 13278
+				set_province_controller = 13264
+			}
+		}
+		1707.5.1 = {
+			owner = MAR
+			controller = MAR
+
+		}
+
+	}
+
+	provinces={
+		1405 4072 4187 7119 7150 7177 10019 11993 13264 13277 13278 13286 13292 13293 13294 13295 13296 13297 13298 13299
+	}
+	manpower=2355600
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

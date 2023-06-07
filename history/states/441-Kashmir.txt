@@ -1,0 +1,29 @@
+
+state={
+	id=441
+	name="STATE_441"
+
+	history={
+		owner = RAJ
+		add_core_of = RAJ
+		buildings = {
+			infrastructure = 1
+
+		}
+		1730.5.1 = {
+			owner = CHI
+			controller = CHI
+			add_core_of = CHI
+
+		}
+
+	}
+
+	provinces={
+		2041 7273 7316 8005 10821 10905 12884 13348 
+	}
+	manpower=1023700
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

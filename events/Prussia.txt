@@ -1,0 +1,305 @@
+add_namespace = prussia
+
+country_event = { #Krontraktak
+	id = prussia.1
+	title = prussia.1.t
+	desc = prussia.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Austria Accepts
+		name = prussia.1.a
+			ai_chance = { 
+				factor = 80
+			}
+		PRS = {
+			country_event = { id = prussia.2 }	
+		}	
+		add_manpower = 8000	
+	}
+
+	option = { #Austria refuses
+		name = prussia.1.b
+			ai_chance = { 
+				factor = 20
+			}
+	}
+}
+
+country_event = { #Krontraktak Austria Accepts
+	id = prussia.2
+	title = prussia.2.t
+	desc = prussia.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { 
+		name = prussia.2.a	
+		add_manpower = -8000	
+	}
+}
+
+country_event = { #Krontraktak Austria Refuses
+	id = prussia.3
+	title = prussia.3.t
+	desc = prussia.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Austria Accepts
+		name = prussia.3.a	
+	}
+}
+
+country_event = { #demand danzig
+	id = prussia.4
+	title = prussia.4.t
+	desc = prussia.4.d
+
+	is_triggered_only = yes
+
+	option = { # Austria Accepts
+		name = prussia.4.a
+		PRS = {
+			country_event = { id = prussia.5 }	
+		}	
+	}
+
+	option = { #Austria refuses
+		PRS = {
+			country_event = { id = prussia.6 }	
+		}
+	}
+}
+
+country_event = { #poland Accepts
+	id = prussia.5
+	title = prussia.5.t
+	desc = prussia.5.d
+
+	is_triggered_only = yes
+
+	option = { 
+		name = prussia.5.a	
+		PRS = {
+			transfer_state = 86
+			transfer_state = 85
+			transfer_state = 868
+		}	
+	}
+}
+
+country_event = { #poland Refuses
+	id = prussia.6
+	title = prussia.6.t
+	desc = prussia.6.d
+
+	is_triggered_only = yes
+
+	option = { # Austria refuses
+		name = prussia.6.a	
+		PRS = {
+			create_wargoal = {
+			    target = POL
+			    type = take_state_focus
+				generator = { 86 85 868 }
+			}
+		}
+	}
+}
+
+country_event = { #teutons propose federation
+	id = prussia.7
+	title = prussia.7.t
+	desc = prussia.7.d
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = prussia.7.a
+		PRS = {
+			country_event = { id = prussia.8 }	
+		}	
+	}
+
+	option = { #no
+		name = prussia.7.b
+		PRS = {
+			country_event = { id = prussia.9 }	
+		}
+	}
+}
+country_event = { #malta accepts
+	id = prussia.8
+	title = prussia.8.t
+	desc = prussia.8.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.8.a	
+		annex_country = {
+		    target = MLT
+		    transfer_troops = yes
+		}
+		add_state_core = 116
+	}
+}
+country_event = { #malta refuses
+	id = prussia.9
+	title = prussia.9.t
+	desc = prussia.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.9.a
+		add_political_power = 25
+	}
+
+	option = {
+		name = prussia.9.b
+		PRS = { 
+			create_wargoal = {
+		    type = annex_everything
+		    target = MLT
+			}
+		}
+		add_state_claim = 116
+	}
+}
+
+country_event = { #prussia proposed PU
+	id = prussia.10
+	title = prussia.10.t
+	desc = prussia.10.d
+
+	is_triggered_only = yes
+
+	option = { #yes
+		name = prussia.10.a
+		PRS = {
+			country_event = { id = prussia.11 }	
+		}	
+	}
+
+	option = { #no
+		name = prussia.10.b
+		PRS = {
+			country_event = { id = prussia.12 }	
+		}
+	}
+}
+country_event = { #ansbach accepts
+	id = prussia.11
+	title = prussia.11.t
+	desc = prussia.11.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.11.a	
+		puppet = ANS
+	}
+}
+country_event = { #ansbach refuses
+	id = prussia.12
+	title = prussia.12.t
+	desc = prussia.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.12.a
+		add_political_power = 25
+	}
+
+	option = {
+		name = prussia.12.b
+		create_wargoal = {
+		    type = puppet_wargoal_focus
+		    target = ANS
+		}
+	}
+}
+
+country_event = { #prussia proposes confederation
+	id = prussia.13
+	title = prussia.13.t
+	desc = prussia.13.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.13.a
+		PRS = { 
+			create_wargoal = {
+		    type = annex_everything
+		    target = ROOT
+			}
+			country_event = {
+			    id = prussia.14
+			    days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+	option = {
+		name = prussia.13.b
+		PRS = { 
+			annex_country = {
+			    target = ROOT
+			}
+			country_event = {
+			    id = prussia.15
+			    days = 2
+			}
+		}
+		ai_chance = {
+			factor = 10
+			modifier = {
+				factor = 2
+				has_opinion = {
+					target = PRS
+					value > 99
+				}
+			}
+			modifier = {
+				factor = 2
+				strength_ratio = {
+				    tag = PRS
+				    ratio < 0.5
+				}
+			}
+		}
+	}
+}
+
+country_event = { #eya
+	id = prussia.14
+	title = prussia.14.t
+	desc = prussia.14.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.14.a
+	}
+}
+
+country_event = { #no
+	id = prussia.15
+	title = prussia.15.t
+	desc = prussia.15.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = prussia.15.a
+	}
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=279
+	name="STATE_279" # Santiago
+	manpower = 593514
+	
+	state_category = large_city
+	
+	resources={
+		steel=16 # was: 24
+	}
+
+	history={
+		owner = PRU
+		buildings = {
+			infrastructure = 1
+			8222 = {
+				naval_base = 1
+			}
+			5121 = {
+				naval_base = 1
+			}
+			650 = {
+				bunker = 1
+			}
+		}
+		add_core_of = ARG
+		add_core_of = PRU
+		victory_points = {
+			650 10
+		}
+
+	}
+
+	provinces={
+		650 5121 5169 5191 8194 8222 8229 8251 12920 12954 12984 
+	}
+}

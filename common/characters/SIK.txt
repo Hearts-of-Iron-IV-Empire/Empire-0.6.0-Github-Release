@@ -1,0 +1,14 @@
+characters = {
+    SIK_Tsewang_Rabtan = { # 1697 - 1727
+        name = "Tsewang Rabtan"
+        portraits = {
+            civilian = {
+                large = "GFX_Tsewang_Rabtan"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

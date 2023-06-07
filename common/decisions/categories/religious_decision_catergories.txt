@@ -1,0 +1,11 @@
+totemist_interactions = {
+
+	icon = totemism
+	
+	allowed = {
+	}
+
+	visible = {
+		has_idea = totemism
+	}
+}

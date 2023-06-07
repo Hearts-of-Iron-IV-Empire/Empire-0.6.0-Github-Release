@@ -1,0 +1,25 @@
+
+state={
+	id=808
+	name="STATE_808"
+
+	history={
+		owner = MEX
+		add_core_of = MEX
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = FLO
+		1765.1.1 = {
+			owner = FLO
+		}
+	}
+
+	provinces={
+		10352 10380 
+	}
+	manpower=1378
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

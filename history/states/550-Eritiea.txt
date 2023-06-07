@@ -1,0 +1,22 @@
+
+state={
+	id=550
+	name="STATE_550"
+
+	history={
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+			8124 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		4985 5041 8124
+	}
+	manpower=600600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

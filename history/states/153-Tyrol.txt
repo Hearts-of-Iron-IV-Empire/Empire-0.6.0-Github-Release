@@ -1,0 +1,33 @@
+state={
+	id=153
+	name="STATE_153"
+
+	resources = {
+		steel=45
+	}
+
+	history={
+		owner = AUS
+		victory_points = {
+			11618 5 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		add_core_of = AUS
+		1812.1.1 = {
+			owner = BAV
+			add_core_of = BAV
+		}
+	}
+
+	provinces={
+		596 673 6678 6680 9630 9633 9636 11615 11618 11634
+	}
+	manpower=265534
+	buildings_max_level_factor=1.000
+	state_category=town
+}

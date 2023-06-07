@@ -1,0 +1,6 @@
+﻿l_english:
+ UNIT_LEADER_NEW_LEADER:1 "New Commander £command_power $VALUE|Y0$"
+ UNIT_LEADER_NEW_LEADER_TOOLTIP:2 "Recruiting new Commanders costs £command_power $VALUE|Y0$\n Up to a cap, the more Commanders you have, the more expensive it gets to recruit new ones, so try to find jobs for the ones you have first."
+ UNIT_LEADER_NEW_LEADER_DIVC_TOOLTIP:0 "Recruiting new Commanders costs £command_power $VALUE|Y0$\n Up to a cap, the more Commanders you have, the more expensive it gets to recruit new ones, so try to find jobs for the ones you have first."
+ warrior_infantry:0 "Tribal Warriors"
+ warrior_infantry_desc:0 "Local Tribesmen armed with their own personal swords and spears."

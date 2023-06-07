@@ -1,0 +1,32 @@
+state={
+	id=788
+	name="STATE_788"
+
+	history={
+		owner = PAP
+		victory_points = {
+			925 1 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+			925 = {
+				naval_base = 4
+
+			}
+
+		}
+		add_core_of = PAP
+		1812.1.1 = {
+			owner = LOM
+		}
+	}
+
+	provinces={
+		925 967 6926 11790 11861 
+	}
+	manpower=427146
+	buildings_max_level_factor=1.000
+	state_category=city
+}

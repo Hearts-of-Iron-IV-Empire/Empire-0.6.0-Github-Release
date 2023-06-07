@@ -1,0 +1,15 @@
+
+state={
+	id=547
+	name="STATE_547"
+	provinces={
+		1939 2066 5079 5160 5196 6020 8133 10761 10860 10962 11014 11145 12927 13135 
+	}
+	history={
+	owner = UNC
+	}
+	impassable = yes
+	manpower=3392000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

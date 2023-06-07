@@ -1,0 +1,14 @@
+characters = {
+    RYU_Sho_Tei = {
+        name = "Sho Tei"
+        portraits = {
+            civilian = {
+                large = "GFX_Sho_Tei"
+            }
+        }
+         country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

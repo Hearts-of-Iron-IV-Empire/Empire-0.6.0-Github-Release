@@ -1,0 +1,45 @@
+state={
+	id=195
+	name="STATE_195"
+	manpower = 37501
+	
+	state_category = town
+
+	history={
+		owner = SWE
+		victory_points = { # Nyen
+			3151 3
+		}
+		victory_points = { # Nöteborg
+			149 3
+		}
+		victory_points = {
+			181 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			dockyard = 2
+			3151 ={
+				naval_base = 5
+			}
+		}
+		add_core_of = SWE
+		add_core_of = NOV
+		1712.1.1 = {
+			owner = SWE
+			controller = SOV
+		}
+
+		1730.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+			remove_core_of = SWE
+		}
+	}
+
+	provinces={
+		79 104 149 181 3151 6174 9097 11068 11080 11186 
+	}
+}

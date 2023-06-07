@@ -1,0 +1,35 @@
+state={
+	id=198
+	name="STATE_198"
+	resources={
+		oil=30.000
+	}
+
+	history={
+		owner = TUR
+		add_core_of = TUR
+		add_core_of = POL
+		add_core_of = UKR
+		victory_points = {
+			476 3 
+		}
+		buildings = {
+			infrastructure = 3
+		}
+		1700.1.1 = {
+			owner = POL
+			controller = POL
+			add_core_of = POL
+		}
+		1798.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		434 476 6455 6480 6597 9423 9435 9451 9481 9576 11409 11424 
+	}
+	manpower=493391
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

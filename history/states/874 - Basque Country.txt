@@ -1,0 +1,35 @@
+
+state={
+	id=874
+	name="STATE_874"
+	resources={
+		steel=8.000
+	}
+
+	history={
+		owner = SPR
+		victory_points = {
+			740 10 
+		}
+		add_claim_by = NAV
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 1
+			740 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = SPR
+
+	}
+
+	provinces={
+		740 3735 13220 13233 
+	}
+	manpower=327952
+	buildings_max_level_factor=1.000
+	state_category=town
+}

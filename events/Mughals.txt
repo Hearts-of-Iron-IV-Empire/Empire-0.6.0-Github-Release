@@ -1,0 +1,2231 @@
+﻿##########################
+##     Mughal Events    ##
+##########################
+
+add_namespace = mughal
+
+# Course of action
+country_event = {
+	id = mughal.1
+	title = mughal.1.t
+	desc = mughal.1.d
+	
+	is_triggered_only = yes
+	
+	option = { # Pull out of the Deccan
+		name = mughal.1.a
+		set_country_flag = MUG_pulled_out_of_deccan
+		ai_chance = {
+			factor = 0 
+		}
+	}
+	option = { # Fight the Maratha Rats
+		name = mughal.1.b
+		set_country_flag = MUG_continued_the_fight
+		ai_chance = {
+			factor = 100 
+		}
+	}
+}
+
+# Continue fighting the Marathas, options to advance
+country_event = {
+	id = mughal.2
+	title = mughal.2.t
+	desc = mughal.2.d
+	
+	is_triggered_only = yes
+	
+	option = { # Hire foreigners and purchase guns
+		name = mughal.2.a
+		add_timed_idea = {
+			idea = MUG_large_gun_purchase
+			days = 200
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment_1
+			amount = 3000
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment_1
+			amount = 400
+			producer = ENG
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment_1
+			amount = 400
+			producer = ENG
+		}
+		add_war_support = 0.1
+		ai_chance = {
+			factor = 25 
+		}
+	}
+	option = { # Cut court spending
+		name = mughal.2.b
+		remove_ideas = MUG_high_court_spending
+		swap_ideas = {
+			remove_idea = MUG_depleted_army
+			add_idea = MUG_depleted_army_2
+		}
+		add_political_power = -100
+		add_war_support = 0.1
+		ai_chance = {
+			factor = 50 
+		}
+	}
+	option = { # Infiltrate Maratha Territory
+		name = mughal.2.c
+		MAR = {	
+			swap_ideas = {
+				remove_idea = MAR_traitors_everywhere
+				add_idea = MAR_traitors_everywhere_2
+			}
+		}
+		add_war_support = 0.1
+		ai_chance = {
+			factor = 25 
+		}
+	}
+}
+
+# Truce with Marathas, for Marathas
+country_event = {
+	id = mughal.3
+	title = mughal.3.t
+	desc = mughal.3.d
+	
+	is_triggered_only = yes
+	
+	option = { # Excellent. Let's begin harassing them.
+		name = mughal.3.a
+		add_stability = 0.1
+		add_war_support = 0.1
+	}
+}
+
+# Religious Reform
+country_event = {
+	id = mughal.4
+	title = mughal.4.t
+	desc = mughal.4.d
+	
+	is_triggered_only = yes
+	
+	option = { # Oppression
+		name = mughal.4.a
+		set_country_flag = MUG_oppression
+		add_political_power = 30
+	}
+
+	option = { # Liberalization
+		name = mughal.4.b
+		set_country_flag = MUG_liberalization_flag
+		add_political_power = 30
+	}
+}
+
+# Court Infighting
+country_event = {
+	id = mughal.5
+	title = mughal.5.t
+	desc = mughal.5.d
+	
+	is_triggered_only = yes
+	
+	option = { # Breh
+		name = mughal.5.a
+		add_political_power = -30
+		add_ideas = MUG_court_infighting
+	}
+}
+
+# Ultimatums to Southern Princes - Mysore
+country_event = {
+	id = mughal.6
+	title = mughal.6.t
+	desc = mughal.6.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = mughal.6.a
+		RAJ = {
+			transfer_state = 425
+			country_event = { 
+				id = mughal.7 
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = { # No
+		name = mughal.6.b
+		RAJ = {
+			declare_war_on = {
+				target = MYS
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Mysore Yields
+country_event = {
+	id = mughal.7
+	title = mughal.7.t
+	desc = mughal.7.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.7.a
+		add_political_power = 40
+	}
+}
+
+# Ultimatums to Southern Princes - Madurai
+country_event = {
+	id = mughal.8
+	title = mughal.8.t
+	desc = mughal.8.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = mughal.7.a
+		RAJ = {
+			transfer_state = 423
+			country_event = { 
+				id = mughal.9 
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = { # No
+		name = mughal.6.b
+		RAJ = {
+			declare_war_on = {
+				target = MDR
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Madurai Yields
+country_event = {
+	id = mughal.9
+	title = mughal.9.t
+	desc = mughal.9.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.9.a
+		add_political_power = 40
+	}
+}
+
+# Ultimatums to Southern Princes - Venad
+country_event = {
+	id = mughal.66
+	title = mughal.66.t
+	desc = mughal.66.d
+	picture = GFX_report_event_generic_army
+	
+	is_triggered_only = yes
+	
+	option = { # Yes
+		name = mughal.6.a
+		RAJ = {
+			transfer_state = 959
+			country_event = { 
+				id = mughal.67
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = { # No
+		name = mughal.6.b
+		RAJ = {
+			declare_war_on = {
+				target = VED
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Venad Yields
+country_event = {
+	id = mughal.67
+	title = mughal.67.t
+	desc = mughal.67.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.67.a
+		add_political_power = 40
+	}
+}
+
+# Ultimatums to Southern Princes - Keladi
+country_event = {
+	id = mughal.68
+	title = mughal.6.t
+	desc = mughal.6.d
+
+	is_triggered_only = yes
+
+	option = { # Yes
+		name = mughal.6.a
+		RAJ = {
+			transfer_state = 1035
+			country_event = { 
+				id = mughal.69
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+
+	option = { # No
+		name = mughal.6.b
+		RAJ = {
+			declare_war_on = {
+				target = KOL
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# Keladi Yields
+country_event = {
+	id = mughal.69
+	title = mughal.69.t
+	desc = mughal.69.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.67.a
+		add_political_power = 40
+	}
+}
+
+# The problems faced after the end of the war, decentralized administration etc
+country_event = {
+	id = mughal.10
+	title = mughal.10.t
+	desc = mughal.10.d
+	picture = GFX_report_event_generic_riot
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.10.a
+		add_ideas = MUG_decentralized_administration
+		430 = {
+			add_dynamic_modifier = {
+				modifier = decentralized_state
+			}
+		}
+		431 = {
+			add_dynamic_modifier = {
+				modifier = decentralized_state
+			}
+		}
+		435 = {
+			add_dynamic_modifier = {
+				modifier = decentralized_state
+			}
+		}
+	}
+}
+
+# Split Persia with the Ottomans
+country_event = {
+	id = mughal.11
+	title = mughal.11.t
+	desc = mughal.11.d
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = mughal.11.a
+		RAJ = {
+			create_faction = "Anti-Persian Front"
+			add_to_faction = TUR
+			create_wargoal = {
+				target = PER
+				type = annex_everything
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+
+	option = { # Nah
+		name = mughal.11.b
+		RAJ = { 
+			country_event = { 
+				id = mughal.12 
+			} 
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# Ottomans refuse to split Persia
+country_event = {
+	id = mughal.12
+	title = mughal.12.t
+	desc = mughal.12.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = mughal.12.a
+		set_country_flag = ottomans_refused_to_split_persia
+		create_wargoal = {
+			target = PER
+			type = annex_everything
+		}
+	}
+}
+
+# Peace deal with the Persians
+country_event = {
+	id = mughal.13
+	title = mughal.13.t
+	desc = mughal.13.desc
+
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	option = { # Take provinces and honor the deal
+		name = mughal.13.a
+		TUR = {
+			white_peace = {
+				tag = PER
+			}
+			transfer_state = 229 # Azerbaijan
+			transfer_state = 230 # Armenia 
+			transfer_state = 419 # Tibriz
+			add_political_power = 100
+			add_stability = 0.15
+		}
+		PER = { # Persia still exists
+			transfer_state = 266 # Tehran
+			transfer_state = 410 # Sistan
+			transfer_state = 411 # Isfahan
+			transfer_state = 412 # Fars
+			transfer_state = 413 # Khuzestan
+			transfer_state = 414 # Kerman
+			transfer_state = 416 # Khorasan
+			transfer_state = 417 # Hamadan
+			transfer_state = 418 # Semnan
+			transfer_state = 420 # Gilan
+			transfer_state = 421 # Kurdistan
+			transfer_state = 584 # Ashkhabad
+			add_stability = -0.20
+			add_war_support = -0.20
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = empire
+					add_idea = kingdom
+				}
+			}
+		}
+		RAJ = {
+			white_peace = {
+				tag = PER
+			}
+			transfer_state = 415 # Herat
+			transfer_state = 444 # Baluchistan
+			transfer_state = 445 # Qandahar
+			add_political_power = 100
+			add_stability = 0.15
+			dismantle_faction = yes
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			has_completed_focus = MUG_approach_the_ottomans
+			NOT = {
+				has_country_flag = ottomans_refused_to_split_persia
+			}
+		}
+	}
+	option = { # Puppet the Persians
+		name = mughal.13.b
+		TUR = {
+			transfer_state = 229 # Azerbaijan
+			transfer_state = 230 # Armenia 
+			transfer_state = 419 # Tibriz
+			add_political_power = 100
+			add_stability = 0.15
+			white_peace = {
+				tag = PER
+			}
+		}
+		PER = {
+			transfer_state = 266 # Tehran
+			transfer_state = 411 # Isfahan
+			transfer_state = 412 # Fars
+			transfer_state = 413 # Khuzestan
+			transfer_state = 414 # Kerman
+			transfer_state = 416 # Khorasan
+			transfer_state = 417 # Hamadan
+			transfer_state = 418 # Semnan
+			transfer_state = 420 # Gilan
+			transfer_state = 421 # Kurdistan
+			transfer_state = 445 # Qandahar
+			transfer_state = 584 # Ashkhabad
+			transfer_state = 1026 # Merv
+			add_stability = -0.20
+			add_war_support = -0.20
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = empire
+					add_idea = kingdom
+				}
+			}
+		}
+		RAJ = {
+			white_peace = {
+				tag = PER
+			}
+			puppet = PER
+			add_political_power = 100
+			add_stability = 0.15
+			dismantle_faction = yes
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			has_completed_focus = MUG_approach_the_ottomans
+			NOT = {
+				has_country_flag = ottomans_refused_to_split_persia
+			}
+		}
+	}
+	option = { # Declare war on the Ottomans
+		name = mughal.13.c
+		RAJ = {
+			dismantle_faction = yes
+			annex_country = {
+				target = PER
+			}
+			declare_war_on = {
+				target = TUR
+			}
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+			add_stability = -0.15
+			add_political_power = -100
+		}
+		ai_chance = {
+			factor = 0
+		}
+		trigger = {
+			has_completed_focus = MUG_approach_the_ottomans
+			NOT = {
+				has_country_flag = ottomans_refused_to_split_persia
+			}
+		}
+	}
+
+	######## If player has not done MUG_ally_with_the_ottomans ########
+
+	option = { # Has not done MUG_ally_with_the_ottomans
+		name = mughal.13.d
+		trigger = {
+			NOT = {
+				has_completed_focus = MUG_approach_the_ottomans
+			}
+		}
+		PER = { # Persia still exists
+			transfer_state = 229 # Azerbaijan
+			transfer_state = 230 # Armenia 
+			transfer_state = 419 # Tibriz
+			transfer_state = 266 # Tehran
+			transfer_state = 410 # Sistan
+			transfer_state = 411 # Isfahan
+			transfer_state = 412 # Fars
+			transfer_state = 413 # Khuzestan
+			transfer_state = 414 # Kerman
+			transfer_state = 416 # Khorasan
+			transfer_state = 417 # Hamadan
+			transfer_state = 418 # Semnan
+			transfer_state = 420 # Gilan
+			transfer_state = 421 # Kurdistan
+			transfer_state = 584 # Ashkhabad
+			add_stability = -0.20
+			add_war_support = -0.20
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = empire
+					add_idea = kingdom
+				}
+			}
+		}
+		RAJ = {
+			white_peace = {
+				tag = PER
+			}
+			transfer_state = 415 # Herat
+			transfer_state = 444 # Baluchistan
+			transfer_state = 445 # Qandahar
+			add_political_power = 100
+			add_stability = 0.15
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+		}
+		
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # Puppet the Persians
+		name = mughal.13.e
+		trigger = {
+			NOT = {
+				has_completed_focus = MUG_approach_the_ottomans
+			}
+		}
+		PER = {
+			transfer_state = 229 # Azerbaijan
+			transfer_state = 230 # Armenia 
+			transfer_state = 419 # Tibriz
+			transfer_state = 266 # Tehran
+			transfer_state = 410 # Sistan
+			transfer_state = 411 # Isfahan
+			transfer_state = 412 # Fars
+			transfer_state = 413 # Khuzestan
+			transfer_state = 414 # Kerman
+			transfer_state = 416 # Khorasan
+			transfer_state = 417 # Hamadan
+			transfer_state = 418 # Semnan
+			transfer_state = 420 # Gilan
+			transfer_state = 421 # Kurdistan
+			transfer_state = 584 # Ashkhabad
+			add_stability = -0.20
+			add_war_support = -0.20
+			hidden_effect = {
+				swap_ideas = {
+					remove_idea = empire
+					add_idea = kingdom
+				}
+			}
+		}
+		RAJ = {
+			white_peace = {
+				tag = PER
+			}
+			puppet = PER
+			add_political_power = 100
+			add_stability = 0.15
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+		}
+
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { # Annex Persia
+		trigger = {
+			NOT = {
+				has_completed_focus = MUG_approach_the_ottomans
+			}
+		}
+		name = mughal.13.f
+		RAJ = {
+			annex_country = {
+				target = PER
+			}
+			add_stability = -0.15
+			add_political_power = -100
+			hidden_effect = {
+				country_event = {
+					id = mughal.27
+					days = 15
+				}
+			}
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Ultimatum to the English to get out of India
+country_event = {
+	id = mughal.14
+	title = mughal.14.t
+	desc = mughal.14.d
+
+	is_triggered_only = yes
+
+	option = { # Alright
+		name = mughal.14.a
+		RAJ = {
+			transfer_state = 961 # Mumbai
+			transfer_state = 1036 # Surat
+			transfer_state = 1038 # Madras
+			transfer_state = 1040 # English Bengal
+			transfer_state = 1041 # Karwar
+			country_event = {
+				id = mughal.22
+			}
+		}
+		add_stability = -0.05
+		add_political_power = -90
+		ai_chance = {
+			factor = 30
+		}
+	}
+
+	option = { # No
+		name = mughal.14.b
+		RAJ = {	
+			declare_war_on = {
+				target = ENG
+			}
+			country_event = {
+				id = mughal.15
+				days = 3
+			}
+		}
+		ENG = {
+			activate_mission = defeat_the_mughals_eng
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { # Pay us?
+		name = mughal.14.c
+		RAJ = {
+			country_event = {
+				id = mughal.16
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+# The English refuse to cede, declare war
+country_event = {
+	id = mughal.15
+	title = mughal.15.t
+	desc = mughal.15.d
+
+	is_triggered_only = yes
+
+	option = { # ;-;-;-;-;
+		name = mughal.15.a
+		add_stability = -0.05
+		add_war_support = 0.05
+	}
+}
+
+# The English wish to negiotiate
+country_event = {
+	id = mughal.16
+	title = mughal.16.t
+	desc = mughal.16.d
+
+	is_triggered_only = yes
+
+	option = { # Fine, we'll pay you
+		name = mughal.16.a
+		add_political_power = -100
+		add_timed_idea = {
+			idea = MUG_land_purchaser
+			days = 200
+		}
+		ENG = {
+			country_event = {
+				id = mughal.17
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = { # No, give us our land back
+		name = mughal.16.b
+		add_stability = 0.05
+		add_political_power = 50
+		ENG = {
+			country_event = {
+				id = mughal.18
+				days = 5
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# The Mughals agree to negiotiate
+country_event = {
+	id = mughal.17
+	title = mughal.17.t
+	desc = mughal.17.d
+
+	is_triggered_only = yes
+
+	option = { # Nice
+		name = mughal.17.a
+		add_political_power = 150
+		add_timed_idea = {
+			idea = MUG_land_seller
+			days = 200
+		}
+		RAJ = {
+			transfer_state = 961 # Mumbai
+			transfer_state = 1036 # Surat
+			transfer_state = 1038 # Madras
+			transfer_state = 1040 # English Bengal
+			transfer_state = 1041 # Karwar
+		}
+	}
+}
+
+# The Mughals don't want to negiotiate
+country_event = {
+	id = mughal.18
+	title = mughal.18.t
+	desc = mughal.18.d
+
+	is_triggered_only = yes
+
+	option = { # Srsly bruh? Fine, we give up
+		name = mughal.18.a
+		add_stability = -0.05
+		add_political_power = -80
+		RAJ = {
+			transfer_state = 961 # Mumbai
+			transfer_state = 1036 # Surat
+			transfer_state = 1038 # Madras
+			transfer_state = 1040 # English Bengal
+			transfer_state = 1041 # Karwar
+			country_event = {
+				id = mughal.22
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = { # No. F off
+		name = mughal.18.b
+		add_stability = 0.05
+		add_political_power = 80
+		RAJ = {
+			country_event = {
+				id = mughal.19
+			}
+		}
+		ai_chance = {
+			factor = 20
+		}
+	}
+}
+
+# English refuse to give in to Mughal's second ultimatum
+country_event = {
+	id = mughal.19
+	title = mughal.19.t
+	desc = mughal.19.d
+
+	is_triggered_only = yes
+
+	option = { # De-escalate
+		name = mughal.19.a
+		add_stability = -0.05
+		add_political_power = -80
+		ENG = {
+			country_event = {
+				id = mughal.20
+			}
+		}
+	}
+
+	option = { # Declare war
+		name = mughal.19.b
+		add_stability = 0.05
+		add_political_power = 80
+		declare_war_on = {
+			target = ENG
+		}
+		ENG = {
+			country_event = {
+				id = mughal.21
+			}
+		}
+	}
+}
+
+# Mughals de-escalate
+country_event = {
+	id = mughal.20
+	title = mughal.20.t
+	desc = mughal.20.d
+
+	is_triggered_only = yes
+
+	option = { # Cool
+		name = mughal.20.a
+		add_stability = 0.05
+		add_political_power = 80
+	}
+}
+
+# Mughals declare war
+country_event = {
+	id = mughal.21
+	title = mughal.21.t
+	desc = mughal.21.d
+
+	is_triggered_only = yes
+
+	option = { # Damn
+		name = mughal.21.a
+		add_stability = -0.05
+		add_war_support = 0.10
+		activate_mission = defeat_the_mughals_eng
+	}
+}
+
+# England gives in to demands after negiotiation
+country_event = {
+	id = mughal.22
+	title = mughal.22.t
+	desc = mughal.22.d
+
+	is_triggered_only = yes
+
+	option = { # Nice
+		name = mughal.22.a
+		add_stability = 0.05
+		add_political_power = 70
+	}
+}
+
+# The Mughals have captured the English territories, give in
+country_event = {
+	id = mughal.23
+	title = mughal.23.t
+	desc = mughal.23.d
+
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	option = { # Fine we give in
+		name = mughal.23.a
+		add_timed_idea = {
+			idea = war_reparations_payer_2
+			days = 200
+		}
+		white_peace = RAJ
+		RAJ = {		
+			add_stability = 0.05
+			add_political_power = 70
+			add_timed_idea = {
+				idea = war_reparations_receiver_2
+				days = 200
+			}
+			transfer_state = 961 # Mumbai
+			transfer_state = 1036 # Surat
+			transfer_state = 1038 # Madras
+			transfer_state = 1040 # English Bengal
+			transfer_state = 1041 # Karwar
+			country_event = {
+				id = mughal.26
+			}
+		}
+	}
+}
+
+# For HOL/Netherlands, Mughals demand Dutch India
+country_event = {
+	id = mughal.24
+	title = mughal.24.t
+	desc = mughal.24.d
+
+	is_triggered_only = yes
+
+	option = { # Alright, give in
+		name = mughal.24.a
+		add_stability = -0.05
+		add_political_power = -70
+		RAJ = {
+			transfer_state = 963 # Mangalore
+			transfer_state = 964 # South Coromandel
+			transfer_state = 1037 # North Coromandel
+			transfer_state = 1039 # Unnamed factories
+			add_stability = 0.05
+			add_political_power = 70
+		}
+		ai_chance = { 
+			factor = 30
+		}
+	}
+
+	option = { # No, we will not be giving away anything
+		name = mughal.24.b
+		add_stability = 0.05
+		add_political_power = 70
+		RAJ = {
+			country_event = {
+				id = mughal.25
+				days = 3
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+# Reply to ultimatum
+country_event = {
+	id = mughal.25
+	title = mughal.25.t
+	desc = mughal.25.d
+
+	is_triggered_only = yes
+
+	option = { # ;-;-;-;
+		name = mughal.25.a
+		add_stability = -0.05
+		add_war_support = 0.05
+		create_wargoal = {
+			target = INS
+			type = take_claimed_state
+			generator = { 963 964 1037 1039 }
+		}
+	}
+}
+
+# Capture of British territories in India
+country_event = {
+	id = mughal.26
+	title = mughal.26.t
+	desc = mughal.26.d
+
+	is_triggered_only = yes
+
+	option = { # Lesgo
+		name = mughal.26.a
+	}
+}
+
+# Pashtun tribes begin raiding
+country_event = {
+	id = mughal.27
+	title = mughal.27.t
+	desc = mughal.27.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # De fok 
+		name = mughal.27.a
+		add_ideas = MUG_raiding_tribes
+	}
+}
+
+# Pashtun tribes damage infrastructure in Balochistan
+country_event = {
+	id = mughal.28
+	title = mughal.28.t
+	desc = mughal.28.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = mughal.28.a
+		444 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.60
+			}
+			add_resistance = 10
+		}
+		add_stability = -0.02
+	}
+}
+
+# Pashtun tribes damage infrastructure in Herat
+country_event = {
+	id = mughal.29
+	title = mughal.29.t
+	desc = mughal.29.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = mughal.29.a
+		415 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.60
+			}
+			add_resistance = 10
+		}
+		add_stability = -0.02
+	}
+}
+
+# Pashtun tribes damage infrastructure in Merv
+country_event = {
+	id = mughal.30
+	title = mughal.30.t
+	desc = mughal.30.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = mughal.30.a
+		1026 = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.60
+			}
+			add_resistance = 10
+		}
+		add_stability = -0.02
+	}
+}
+
+# Pashtun tribals kill patrols and steal equipment
+country_event = {
+	id = mughal.31
+	title = mughal.31.t
+	desc = mughal.31.d
+	picture = GFX_report_event_generic_ruins
+
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = mughal.31.a
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -200
+			producer = RAJ
+		}
+		add_manpower = -200
+		add_war_support = -0.02
+	}
+}
+
+# Dealings with China
+country_event = {
+	id = mughal.32
+	title = mughal.32.t
+	desc = mughal.32.d
+
+	is_triggered_only = yes
+
+	option = { # Yea sure
+		name = mughal.32.a
+		add_ideas = MUG_economic_cooperation
+		add_opinion_modifier = {
+			target = RAJ
+			modifier = MUG_economic_ties_with_china
+		}
+		RAJ = {
+			country_event = {
+				id = mughal.33
+			}
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = CHI
+					modifier = MUG_economic_ties_with_china
+				}
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+
+	option = { # No.
+		name = mughal.32.b
+		add_stability = 0.02
+		add_political_power = 30
+		RAJ = {
+			country_event = {
+				id = mughal.34
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+}
+
+# China accepts
+country_event = {
+	id = mughal.33
+	title = mughal.33.t
+	desc = mughal.33.d
+
+	is_triggered_only = yes
+
+	option = { # Cool
+		name = mughal.33.a
+		add_ideas = MUG_economic_cooperation
+		add_political_power = 30
+	}
+}
+
+# China says no
+country_event = {
+	id = mughal.34
+	title = mughal.34.t
+	desc = mughal.34.d
+
+	is_triggered_only = yes
+
+	option = { # Breh
+		name = mughal.34.a
+		add_political_power = -30
+	}
+}
+
+# Fall of Peking
+country_event = {
+	id = mughal.35
+	title = mughal.35.t
+	desc = mughal.35.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Excellent. Get them to pay reparations and recognize our overlordship of Tibet.
+		name = mughal.35.a
+		white_peace = CHI
+		add_political_power = 100
+		add_stability = 0.15
+		if = {
+			limit = {
+				has_dlc = "Together for Victory"
+			}
+			set_autonomy = {
+				target = TIB
+				autonomous_state = autonomy_dominion
+				freedom_level = 0.4
+			}
+			else = {
+				puppet = TIB
+			}
+		}
+		add_timed_idea = {
+			idea = war_reparations_receiver_4
+			days = 600
+		}
+		CHI = {
+			add_timed_idea = {
+				idea = war_reparations_payer_4
+				days = 600
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = { # Continue the war
+		name = mughal.35.b
+		custom_effect_tooltip = will_continue_war_with_china
+		add_political_power = -100
+		add_stability = -0.15
+		add_war_support = 0.10
+		CHI = {
+			set_country_flag = defeated_by_mughals
+		}
+		ai_chance = {
+			factor = 0
+		}
+	}
+}
+
+# Military Cooperation with the Mughals
+country_event = {
+	id = mughal.36
+	title = mughal.36.t
+	desc = mughal.36.d
+
+	is_triggered_only = yes
+
+	option = { # Alright, let's train together.
+		name = mughal.36.a
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+			name = land_doc_bonus
+		}
+		add_opinion_modifier = {
+			target = RAJ
+			modifier = MUG_military_ties_with_china
+		}
+		RAJ = {
+			hidden_effect = {
+				add_opinion_modifier = {
+					target = CHI
+					modifier = MUG_military_ties_with_china
+				}
+			}
+			country_event = {
+				id = mughal.37
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# China accepts military cooperation
+country_event = {
+	id = mughal.37
+	title = mughal.37.t
+	desc = mughal.37.d
+
+	is_triggered_only = yes
+
+	option = { # Noice.
+		name = mughal.37.a
+		army_experience = 25
+		add_doctrine_cost_reduction = {
+			cost_reduction = 0.5
+			uses = 2
+			category = land_doctrine
+			name = land_doc_bonus
+		}
+	}
+}
+
+# Two Asian Empires, yes or no to a faction
+country_event = {
+	id = mughal.38
+	title = mughal.38.t
+	desc = mughal.38.d
+
+	is_triggered_only = yes
+
+	option = { # Alright, form a faction.
+		name = mughal.38.a
+		set_faction_name = "Empires of Asia"
+		add_to_faction = RAJ
+		ai_chance = {
+			factor = 90
+		}
+	}
+
+	option = { # No thanks.
+		name =  mughal.38.b
+		add_stability = -0.02
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Choose kill or not kill the Qing
+country_event = {
+	id = mughal.39
+	title = mughal.39.t
+	desc = mughal.39.d
+
+	is_triggered_only = yes
+
+	option = { # Take on the Qing
+		name = mughal.39.a
+		set_country_flag = MUG_take_on_the_qing_flag
+		ai_chance = {
+			factor = 0
+		}
+	}
+
+	option = { # No thanks.
+		name =  mughal.39.b
+		set_country_flag = MUG_do_not_awaken_the_sleeping_dragon_flag
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+
+# Ultimatum to Lan Na
+country_event = {
+	id = mughal.40
+	title = mughal.40.t
+	desc = mughal.40.d
+
+	is_triggered_only = yes
+
+	option = { # Yes
+		name = mughal.40.a
+		RAJ = {
+			transfer_state = 1023
+			country_event = {
+				id = mughal.41
+			}
+		}
+		ai_chance = {
+			factor = 100
+		}
+	}
+
+	option = { # No
+		name =  mughal.40.b
+		#RAJ = {
+		#	country_event = {
+		#		id = mughal.42
+		#	}
+		#}
+	}
+}
+
+# They say yes
+country_event = {
+	id = mughal.41
+	title = mughal.41.t
+	desc = mughal.41.d
+
+	is_triggered_only = yes
+
+	option = { # Yes
+		name = mughal.41.a
+		add_political_power = 30
+	}
+}
+
+# They say no
+#country_event = {
+#	id = mughal.42
+#	title = mughal.42.t
+#	desc = mughal.42.d
+#
+#	is_triggered_only = yes
+#
+#	option = { # ;-;
+#		name = mughal.42.a
+#		create_wargoal = {
+#			target = VED
+#			type = annex_everything
+#		}
+#	}
+#}
+
+# Mughal Expansion into SEA for China
+country_event = {
+	id = mughal.43
+	title = mughal.43.t
+	desc = mughal.43.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Tell the Mughals to staph
+		name = mughal.43.a
+		add_war_support = 0.1
+		add_political_power = 75
+		RAJ = {
+			country_event = {
+				id = mughal.44
+			}
+		}
+		hidden_effect = {		
+			add_ai_strategy = {
+				type = prepare_for_war
+				id = "RAJ"
+				value = 100
+			}
+			RAJ = {
+				add_ai_strategy = {
+					type = prepare_for_war
+					id = "CHI"
+					value = 100
+				}
+			}
+		}
+		ai_chance = {
+			base = 70
+			modifier = {
+				factor = -2000
+				has_country_flag = defeated_by_mughals
+			}
+		}
+	}
+
+	option = { # Ignore them
+		name = mughal.43.b
+		add_stability = -0.05
+		add_political_power = -40
+		ai_chance = {
+			factor = 30
+		}
+	}
+}
+
+# China asks us to stop invading Burma
+country_event = {
+	id = mughal.44
+	title = mughal.44.t
+	desc = mughal.44.d
+
+	is_triggered_only = yes
+
+	option = { # Alright...
+		name = mughal.44.a
+		white_peace = BRM
+		add_war_support = -0.10
+		add_political_power = -100
+		CHI = {
+			country_event = {
+				id = mughal.45
+			}
+		}
+		ai_chance = {
+			factor = 30
+		}
+	}
+
+	option = { # F off China
+		name = mughal.44.b
+		add_political_power = 60
+		add_war_support = 0.10
+		CHI = {
+			country_event = {
+				id = mughal.46
+			}
+		}
+		ai_chance = {
+			factor = 70
+		}
+	}
+}
+
+# Mughals agree
+country_event = {
+	id = mughal.45
+	title = mughal.45.t
+	desc = mughal.45.d
+
+	is_triggered_only = yes
+
+	option = { # Very nice
+		name = mughal.45.a
+		add_political_power = 100
+	}
+}
+
+# Mughals refuse
+country_event = {
+	id = mughal.46
+	title = mughal.46.t
+	desc = mughal.46.d
+
+	is_triggered_only = yes
+
+	option = { # Time to die
+		name = mughal.46.a
+		add_war_support = 0.1
+		declare_war_on = {
+			target = RAJ
+			type = annex_everything
+		}
+		RAJ = {
+			country_event = {
+				id = mughal.47
+				days = 4
+			}
+		}
+		ai_chance = {
+			factor = 40
+		}
+	}
+
+	option = { # Back down
+		name = mughal.46.a
+		add_stability = -0.1
+		add_political_power = -80
+		RAJ = {
+			country_event = {
+				id = mughal.48
+				days = 4
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+}
+
+# China declares war
+country_event = {
+	id = mughal.47
+	title = mughal.47.t
+	desc = mughal.47.d
+
+	is_triggered_only = yes
+
+	option = { # Well that's just great
+		name = mughal.47.a
+	}
+}
+
+# China backs down
+country_event = {
+	id = mughal.48
+	title = mughal.48.t
+	desc = mughal.48.d
+
+	is_triggered_only = yes
+
+	option = { # Great!
+		name = mughal.48.a
+		add_political_power = 100
+		add_stability = 0.03
+	}
+}
+
+# Mughals demand tribute
+country_event = {
+	id = mughal.49
+	title = mughal.49.t
+	desc = mughal.49.d
+
+	is_triggered_only = yes
+
+	option = { # Alright....
+		name = mughal.49.a
+		add_political_power = -40
+		add_stability = -0.03
+		add_ideas = pays_tribute_2
+		if = {
+			limit = {
+				RAJ = {
+					NOT = {
+						has_idea = tributary_system
+					}
+				}
+			}
+			RAJ = {
+				add_ideas = tributary_system
+			}
+		}
+		ai_chance = {
+			factor = 60
+		}
+	}
+
+	option = { # No.
+		name = mughal.49.b
+		add_political_power = 50
+		add_war_support = 0.1
+		add_stability = 0.05
+		RAJ = {
+			create_wargoal = {
+				target = ROOT
+				type = puppet_wargoal_focus
+			}
+		}
+		ai_chance = {
+			base = 30
+			modifier = { # Ryukyu couldn't care less
+				factor = -27
+				original_tag = RYU
+			}
+		}
+	}
+}
+
+# Marathas begin resisting the occupation
+country_event = {
+	id = mughal.50
+	title = mughal.50.t
+	desc = mughal.50.d
+
+	is_triggered_only = yes
+
+	option = { # We will stamp these flames out...
+		name = mughal.50.a
+		add_political_power = -50
+		add_stability = -0.05
+		add_ideas = MUG_maratha_resistance
+		activate_mission = MUG_maratha_raid
+		hidden_effect = {
+			country_event = {
+				id = mughal.56
+				days = 10
+			}
+		}
+	}
+}
+
+# Maratha terrorism events
+country_event = { # Marathas damage infrastructure
+	id = mughal.51
+	title = mughal.51.t
+	desc = mughal.51.d
+
+	is_triggered_only = yes
+
+	option = { # Bah
+		name = mughal.51.a
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance } 
+			}
+			960 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.4
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_2 }
+			}
+			960 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.5
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_3 }
+			}
+			960 = {
+				damage_building = {
+					type = infrastructure
+					damage = 0.7
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Marathas damage civilian factory
+	id = mughal.52
+	title = mughal.52.t
+	desc = mughal.52.d
+
+	is_triggered_only = yes
+
+	option = { # Bah
+		name = mughal.52.a
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance }
+			}
+			960 = {
+				damage_building = {
+					type = industrial_complex
+					damage = 0.3
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_2 }
+			}
+			960 = {
+				damage_building = {
+					type = industrial_complex
+					damage = 0.4
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_3 }
+			}
+			960 = {
+				damage_building = {
+					type = industrial_complex
+					damage = 0.6
+				}
+			}
+		}
+	}
+}
+
+country_event = { # Marathas damage military factory
+	id = mughal.53
+	title = mughal.53.t
+	desc = mughal.53.d
+
+	is_triggered_only = yes
+
+	#custom_trigger_tooltip = {
+	#	tooltip = high_levels_of_resistance_tt
+	#	trigger = {
+	#		ROOT = {
+	#			OR = {
+	#				has_idea = MUG_maratha_resistance_2
+	#				has_idea = MUG_maratha_resistance_3
+	#			}
+	#		}
+	#	}
+	#}
+
+	option = { # Bah
+		name = mughal.53.a
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance }
+			}
+			960 = {
+				damage_building = {
+					type = arms_factory
+					damage = 0.3
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_2 }
+			}
+			960 = {
+				damage_building = {
+					type = arms_factory
+					damage = 0.4
+				}
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_3 }
+			}
+			960 = {
+				damage_building = {
+					type = arms_factory
+					damage = 0.5
+				}
+			}
+		}	
+		if = {
+			limit = {
+				ROOT = {
+					OR = {
+						has_idea = MUG_maratha_resistance_2
+						has_idea = MUG_maratha_resistance_3
+					}
+				}
+			}
+			custom_effect_tooltip = high_levels_of_resistance_tt
+		}
+	}
+}
+
+# Marathas kill fort keeper
+country_event = {
+	id = mughal.54
+	title = mughal.54.t
+	desc = mughal.54.d
+
+	is_triggered_only = yes
+
+	option = { # Bah
+		name = mughal.54.a
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance }
+			}
+			add_manpower = -1
+			add_war_support = -0.03
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_2 }
+			}
+			add_manpower = -1
+			add_war_support = -0.05
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_3 }
+			}
+			add_manpower = -1
+			add_war_support = -0.07
+		}
+	}
+}
+
+# Marathas instigate local populace
+country_event = { 
+	id = mughal.55
+	title = mughal.55.t
+	desc = mughal.55.d
+
+	is_triggered_only = yes
+
+	option = { # Bah
+		name = mughal.55.a
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance }
+			}
+			960 = {
+				add_resistance = 5
+				add_compliance = -10
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance_2 }
+			}
+			960 = {
+				add_resistance = 8
+				add_compliance = -13
+			}
+		}
+		if = {
+			limit = {
+				ROOT = { has_idea = MUG_maratha_resistance }
+			}
+			960 = {
+				add_resistance = 12
+				add_compliance = -16
+			}
+		}
+	}
+}
+
+# Angry/Resentful/Rebellious populace
+country_event = { 
+	id = mughal.56
+	title = mughal.56.t
+	desc = mughal.56.d
+
+	is_triggered_only = yes
+
+	option = { # WOW
+		name = mughal.56.a
+		add_ideas = MUG_rebellious_populace
+	}
+}
+
+# Request the Ottomans for a permanent alliance
+country_event = { 
+	id = mughal.57
+	title = mughal.57.t
+	desc = mughal.57.d
+
+	is_triggered_only = yes
+
+	option = { # Sure
+		name = mughal.57.a
+		RAJ = {
+			create_faction = "Islamic Empires"
+			add_to_faction = TUR
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 40
+				RAJ = {
+					has_completed_focus = MUG_approach_the_ottomans
+				}
+			}
+		}
+	}
+
+	option = { # No
+		name = mughal.57.b
+		RAJ = {
+			country_event = {
+				id = mughal.58
+			}
+		}
+		ai_chance = {
+			factor = 50
+		}
+	}
+}
+
+# Ottomans say no to an alliance
+country_event = { 
+	id = mughal.58
+	title = mughal.58.t
+	desc = mughal.58.d
+
+	is_triggered_only = yes
+
+	option = { # Well that's sad...
+		name = mughal.58.a
+	}
+}
+
+# Zamindari System
+country_event = {
+	id = mughal.59
+	title = mughal.59.t
+	desc = mughal.59.d
+
+	is_triggered_only = yes
+
+	option = { # Seize all the land
+		name = mughal.59.a
+		remove_ideas = MUG_zamindari_system
+		add_stability = -0.15
+		add_political_power = -100
+	}
+
+	option = { # Fix the issue gradually
+		name = mughal.59.b
+		improve_zamindari_system = yes
+		unlock_decision_category_tooltip = MUG_dealing_with_the_zamindars
+		set_country_flag = MUG_dealing_with_the_zamindars_flag
+	}
+
+	option = {
+		name = mughal.59.c
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system
+			add_idea = MUG_zamindari_system_supported
+		}
+		add_political_power = -100
+	}
+}
+
+# Opposition to foreign elements
+country_event = {
+	id = mughal.60
+	title = mughal.60.t
+	desc = mughal.60.d
+
+	is_triggered_only = yes
+
+	option = { # Ignore it. It will disperse
+		name = mughal.60.a
+		add_stability = -0.05
+		add_political_power = -30
+	}
+}
+
+# The English expand their influence in Surat
+country_event = {
+	id = mughal.61
+	title = mughal.61.t
+	desc = mughal.61.d
+
+	is_triggered_only = yes
+
+	option = { # Let them, they are not doing any harm.
+		name = mughal.61.a
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+	}
+
+	option = { # Let us get rid of this influence...
+		name = mughal.61.b
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+		unlock_decision_category_tooltip = MUG_foreign_influence
+		set_country_flag = opposing_foreign_influence
+	}
+}
+
+# The Dutch expand their influence in Chinsura
+country_event = {
+	id = mughal.62
+	title = mughal.62.t
+	desc = mughal.62.d
+
+	is_triggered_only = yes
+
+	option = { # Let them, they are not doing any harm.
+		name = mughal.61.a
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+	}
+
+	option = { # Let us get rid of this influence...
+		name = mughal.61.b
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+		unlock_decision_category_tooltip = MUG_foreign_influence
+		set_country_flag = opposing_foreign_influence
+	}
+}
+
+# The Portuguese expand their influence in Hooghly
+country_event = {
+	id = mughal.63
+	title = mughal.63.t
+	desc = mughal.63.d
+
+	is_triggered_only = yes
+
+	option = { # Let them, they are not doing any harm.
+		name = mughal.61.a
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+	}
+
+	option = { # Let us get rid of this influence...
+		name = mughal.61.b
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+		unlock_decision_category_tooltip = MUG_foreign_influence
+	}
+}
+
+# The French expand their influence in Chandernagore
+country_event = {
+	id = mughal.64
+	title = mughal.64.t
+	desc = mughal.64.d
+
+	is_triggered_only = yes
+
+	option = { # Let them, they are not doing any harm.
+		name = mughal.61.a
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+	}
+
+	option = { # Let us get rid of this influence...
+		name = mughal.61.b
+		add_stability = -0.05
+		add_political_power = -50
+		add_ideas = MUG_opposition_to_foreign_influence
+		add_ideas = MUG_foreign_influence_extremely_low
+		unlock_decision_category_tooltip = MUG_foreign_influence
+		set_country_flag = opposing_foreign_influence
+	}
+}
+
+# The Marathas Surrender
+country_event = {
+	id = mughal.65
+	title = mughal.65.t
+	desc = mughal.65.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Excellent
+		name = mughal.65.a
+		annex_country = {
+			target = MAR
+		}
+		set_country_flag = MUG_won_the_war
+		hidden_effect = {
+			RAJ = {
+				country_event = {
+					id = mughal.10
+					days = 10
+				}
+				country_event = {
+					id = mughal.50
+					days = 15
+				}
+			}
+			960 = {
+				set_resistance = 20
+				damage_building = {
+				    type = infrastructure
+				    damage = 1
+				}
+			}
+		}
+	}
+}

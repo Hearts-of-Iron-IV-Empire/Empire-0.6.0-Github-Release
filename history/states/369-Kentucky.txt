@@ -1,0 +1,27 @@
+
+state={
+	id=369
+	name="STATE_369"
+
+	history={
+		owner = IRO
+		1765.1.1 = {
+			owner = CHR
+			add_core_of = CHR
+			controller = CHR
+			
+		}
+		1789.1.1 = {
+			remove_core_of = CHR
+			owner = USA
+			add_core_of = USA
+		}
+	}
+
+	provinces={
+		1445 4402 4452 6696 6974 7547 9727 10727 12568 12637 12709 
+	}
+	manpower=3507
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

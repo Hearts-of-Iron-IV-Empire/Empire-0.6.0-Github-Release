@@ -1,0 +1,42 @@
+﻿l_english:
+
+ # Bookmarks:
+ MAR_GATHERING_STORM:0 "The Marathas are a fledgling kingdom, established only a few decades ago. However, they have had a turbulent history, conflicts with neighbouring nations, especially the Mughals, have yielded dividends but have also caused immense damage to the kingdom. Currently, the war between the Marathas and the Mughals has been turning in the Maratha's favour, however it is far from over. Will the Marathas be able to defeat the formidable Mughals, and achieve their dream of a Hindavi Swarajya?"
+ 
+ # Focuses:
+ MAR_legacy_of_shivaji:0 "Legacy of Shivaji"
+ MAR_legacy_of_shivaji_desc:0 "Chhatrapati Shivaji Maharaj was the one who founded the Maratha Empire, based on the ideals of Hindavi Swaraj and freedom from the oppression of the Mughals. We must honour his legacy and ensure that his dream is fulfilled."
+ MAR_continue_the_fight:0 "Continue the Fight"
+ MAR_continue_the_fight_desc:0 "The Mughals continue to try and break us, but they will not succeed. We shall continue fighting for the dream of the Swarajya and for all the people who were sacrificed themselves to achieve it."
+ MAR_ask_mysore_for_aid:0 "Ask Mysore for aid"
+ MAR_ask_mysore_for_aid_desc:0 "Our fight against the Mughals cannot be won alone. We must call on the other free nations of India to help us in driving the Mughals out."
+ MAR_ask_madurai_for_aid:0 "Ask Madurai for aid"
+ MAR_ask_madurai_for_aid_desc:0 "Our fight against the Mughals cannot be won alone. We must call on the other free nations of India to help us in driving the Mughals out."
+ MAR_develop_pune:0 "Develop Pune"
+ MAR_develop_pune_desc:0 "We should begin developing Pune, as it is a very important city and can become a trade hub if invested in properly."
+ 
+ # Ideas:
+ MAR_avenge_sambhaji:0 "Avenge Sambhaji"
+ MAR_avenge_sambhaji_desc:0 "The death of our previous ruler, Sambhaji, has spurred our soldiers to continue fighting the Mughals with every fibre of their being."
+ MAR_traitors_everywhere:0 "Traitors Everywhere"
+ MAR_traitors_everywhere_desc:0 "Our army is plagued by frequent betrayals, destabilizing it at times. Many times in our history, men in important places have turned traitor to our enemies, causing immense damage to the country. Just recently, our leader Sambhaji was captured and killed due to one such traitor."
+ MAR_traitors_everywhere_2:0 "Traitors Everywhere"
+ MAR_traitors_everywhere_2_desc:0 "Our army is plagued by frequent betrayals, destabilizing it at times. Many times in our history, men in important places have turned traitor to our enemies, causing immense damage to the country. Just recently, our leader Sambhaji was captured and killed due to one such traitor."
+ MAR_maratha_army:0 "Maratha Army"
+ MAR_maratha_army_desc:0 "Our army is not a conventional one, instead utilizing guerrilla tactics, which allows it to move vast distances in short amounts of time, as well as harass the enemy without directly engaging them."
+
+ # Events:
+ maratha.1.t:0 "Death of the Chhatrapati"
+ maratha.1.d:0 "Our Chhatrapati, Rajaram, has passed away, possibly due to smoking too much tobacco. This is a severe blow to us, and for now his wife, Tarabai, will take up the reigns of the kingdom."
+ maratha.1.a:0 "RIP"
+ maratha.2.t:0 "The Marathas ask for aid"
+ maratha.2.d:0 "The Marathas have asked us for aid in their fight against the Mughals. While it is not yet certain who will win the war, it is certain that whoever does will eventually control all of India."
+ maratha.2.a:0 "We accept."
+ maratha.3.a:0 "We refuse."
+
+ # Traits:
+ civil_administrator:0 "Civil Administrator"
+ 
+ 
+
+

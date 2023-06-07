@@ -1,0 +1,20 @@
+
+state={
+	id=812
+	name="STATE_812"
+
+	history={
+		buildings = {
+			infrastructure = 1
+
+		}
+		owner = CHO
+	}
+
+	provinces={
+		4565 4622 8110 12429 
+	}
+	manpower=20250
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

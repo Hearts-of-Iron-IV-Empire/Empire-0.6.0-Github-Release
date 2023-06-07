@@ -1,0 +1,16 @@
+state={
+	id=1007
+	name="STATE_1007"
+	provinces={
+		1282 4287 10247 12221 
+	}
+	history = {
+		owner = QUE
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	manpower=9818
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

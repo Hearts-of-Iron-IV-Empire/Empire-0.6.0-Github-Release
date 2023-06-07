@@ -1,0 +1,353 @@
+﻿capital = 341
+
+oob = "TUR_1699"
+if = {
+	limit = { has_dlc = "Man the Guns" }
+		set_naval_oob = "TUR_naval_mtg"
+	else = {
+		set_naval_oob = "TUR_naval_mtg"
+	}
+}
+
+set_research_slots = 3
+
+add_ideas = {
+	TUR_janissary_loyalty_3
+	TUR_sick_man_of_europe_1
+	great_turkish_war
+
+	# Laws and Religion
+	limited_conscription
+	partial_economic_mobilisation
+	sunni
+	empire
+}
+
+1718.1.1 = {
+	recruit_character = TUR_Ahmed_III # Country Leader
+	promote_character = TUR_Ahmed_III
+	retire_character = TUR_Mustafa_II
+	
+	complete_national_focus = TUR_the_state
+	complete_national_focus = TUR_look_to_the_economy
+	complete_national_focus = TUR_develop_anatolia
+	complete_national_focus = TUR_the_means
+	unlock_national_focus = TUR_land_reform
+	complete_national_focus = TUR_restart_economy
+	complete_national_focus = TUR_militarization
+	complete_national_focus = TUR_resource_management
+	complete_national_focus = TUR_reinforce_eyalets
+	complete_national_focus = TUR_autonomous_pashas
+	complete_national_focus = TUR_encourage_local_development
+	unlock_national_focus = TUR_increase_janissar_wages
+	unlock_national_focus = TUR_military_meritocracy
+	unlock_national_focus = TUR_islamic_legalism
+	unlock_national_focus = TUR_defeat
+	unlock_national_focus = TUR_blame_sultan
+	unlock_national_focus = TUR_delegate_more_power
+	unlock_national_focus = TUR_replace_sultan
+	unlock_national_focus = TUR_restore_order_in_georgia
+	unlock_national_focus = TUR_guide_the_sultan
+	unlock_national_focus = TUR_islam_is_peace
+	unlock_national_focus = TUR_dhimmi_tolerance
+	unlock_national_focus = TUR_idabat_khana
+	unlock_national_focus = TUR_dawn_of_the_tulip_period
+	unlock_national_focus = TUR_still_sultan_of_rum
+	unlock_national_focus = TUR_recover_morea
+	unlock_national_focus = TUR_escalate_tensions_with_austria
+	unlock_national_focus = TUR_support_sweden
+	unlock_national_focus = TUR_azov_border_clash
+	unlock_national_focus = TUR_invade_russia
+	unlock_national_focus = TUR_lead_islamic_world
+
+	remove_ideas = {
+		TUR_janissary_loyalty_3
+		TUR_sick_man_of_europe_1
+		great_turkish_war
+	}
+	add_ideas = {
+		TUR_sick_man_of_europe_4
+	}
+}
+
+1730.1.1 = {
+	recruit_character = TUR_Mahmud_I
+	promote_character = TUR_Mahmud_I
+	retire_character = TUR_Ahmed_III
+}
+
+give_guarantee = CRO
+give_guarantee = MOL
+give_guarantee = ROM
+
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	
+	set_autonomy = {
+		target = LBA
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = TUN
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = ALG
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = CRI
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = SAU
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = YEM
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = MOL
+		autonomous_state = autonomy_dominion
+		freedom_level = 0.4
+	}
+	set_autonomy = {
+		target = ACH
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.4
+	}
+
+	else = {
+		puppet = LBA
+		puppet = TUN
+		puppet = ALG
+		puppet = MOL
+		puppet = CRI
+		puppet = ACH
+	}
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	basic_cavalry = 1
+	gw_artillery = 1
+	transport = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 14
+	neutrality = 27
+	aristocracy = 39
+	fascism = 16
+	communism = 4
+}
+
+TUR = {
+	add_opinion_modifier = { target = SOV modifier = Rivalry }
+	add_opinion_modifier = { target = AUS modifier = Rivalry }
+	add_opinion_modifier = { target = POL modifier = Rivalry }
+	add_opinion_modifier = { target = VNC modifier = Rivalry }
+	add_opinion_modifier = { target = PER modifier = Rivalry }
+}
+
+set_convoys = 20
+set_stability = 0.55
+
+recruit_character = TUR_Mustafa_II # Country Leader, Field Marshal
+recruit_character = TUR_Ahmed_III_nobility # Country Leader, Field Marshal
+recruit_character = TUR_Amcazade_Köprülü_Hüseyin_Pasha # General, Advisor
+recruit_character = TUR_Nazmi_Solok # General
+recruit_character = TUR_Baltac_Mehmet_Pasha # General
+recruit_character = TUR_Elmas_Mehmed_Pasha # General 
+recruit_character = TUR_Mezzo_Morto_Hüseyin_Pasha # Admiral
+
+
+### VARIANTS ###
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	### Ship Variants ###
+	create_equipment_variant = {
+		name = "Kocatepe Class"
+		type = destroyer_1
+		upgrades = {
+			ship_torpedo_upgrade = 2
+			destroyer_engine_upgrade = 2
+			ship_ASW_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Tinaztepe Class"
+		type = destroyer_1
+		obsolete = yes
+		upgrades = {
+			ship_torpedo_upgrade = 1
+			destroyer_engine_upgrade = 1
+			ship_ASW_upgrade = 1
+		}
+	}
+	create_equipment_variant = {
+		name = "Dumlupinar Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 2
+			sub_engine_upgrade = 2
+			sub_stealth_upgrade = 2
+			sub_torpedo_upgrade = 2
+		}
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Birinci Inönü Class"				
+		type = ship_hull_submarine_1
+		name_group = TUR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Sakarya Class"								# represents Sakarya and Gur classes
+		type = ship_hull_submarine_1
+		name_group = TUR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_2
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Dumlupinar Class"				
+		type = ship_hull_submarine_2
+		name_group = TUR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	create_equipment_variant = {
+		name = "Saldiray Class"				
+		type = ship_hull_submarine_2
+		name_group = TUR_SS_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Peyk Class"									# large torpedo boats		
+		type = ship_hull_light_1
+		name_group = TUR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Kocatepe Class"								# represents Kocatepe and Zafer classes
+		type = ship_hull_light_1
+		name_group = TUR_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+	# Battlecruiser #
+	create_equipment_variant = {
+		name = "Yavuz Class"	
+		type = ship_hull_heavy_1
+		name_group = TUR_BC_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bc_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

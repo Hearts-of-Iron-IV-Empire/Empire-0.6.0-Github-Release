@@ -1,0 +1,25 @@
+state={
+	id=1035
+	name="STATE_1035"
+
+	history={
+		owner = KOL
+		add_core_of = KOL
+		buildings = {
+			infrastructure = 1
+			4278 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			13301 10
+		}
+	}
+
+	provinces={
+		4278 4344 7244 10190 13300 13301 13302
+	}
+	manpower=6348200
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

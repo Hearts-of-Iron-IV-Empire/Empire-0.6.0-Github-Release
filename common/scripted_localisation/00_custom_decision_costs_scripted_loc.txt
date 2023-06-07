@@ -1,0 +1,332 @@
+##########################
+### Command Power Cost ###
+##########################
+defined_text = {
+    name = 5CP
+    text = { trigger = { NOT = { command_power < 5 } } localization_key = true_5CP }
+    text = { trigger = { command_power < 5 } localization_key = false_5CP }
+}
+defined_text = {
+    name = 10CP
+    text = { trigger = { NOT = { command_power < 10 } } localization_key = true_10CP }
+    text = { trigger = { command_power < 10 } localization_key = false_10CP }
+}
+defined_text = {
+    name = 15CP
+    text = { trigger = { NOT = { command_power < 15 } } localization_key = true_15CP }
+    text = { trigger = { command_power < 15 } localization_key = false_15CP }
+}
+defined_text = {
+    name = 20CP
+    text = { trigger = { NOT = { command_power < 20 } } localization_key = true_20CP }
+    text = { trigger = { command_power < 20 } localization_key = false_20CP }
+}
+defined_text = {
+    name = 25CP
+    text = { trigger = { NOT = { command_power < 25 } } localization_key = true_25CP }
+    text = { trigger = { command_power < 25 } localization_key = false_25CP }
+}
+defined_text = {
+    name = 30CP
+    text = { trigger = { NOT = { command_power < 30 } } localization_key = true_30CP }
+    text = { trigger = { command_power < 30 } localization_key = false_30CP }
+}
+
+################
+### Gun Cost ###
+################
+defined_text = {
+    name = 500GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 500 } } } localization_key = true_500GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 500 } } localization_key = false_500GUN }
+}
+defined_text = {
+    name = 1000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 1000 } } } localization_key = true_1000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 1000 } } localization_key = false_1000GUN }
+}
+defined_text = {
+    name = 1500GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 1500 } } } localization_key = true_1500GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 1500 } } localization_key = false_1500GUN }
+}
+defined_text = {
+    name = 2000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 2000 } } } localization_key = true_2000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 2000 } } localization_key = false_2000GUN }
+}
+defined_text = {
+    name = 2500GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 2500 } } } localization_key = true_2500GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 2500 } } localization_key = false_2500GUN }
+}
+defined_text = {
+    name = 5000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 5000 } } } localization_key = true_5000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 5000 } } localization_key = false_5000GUN }
+}
+defined_text = {
+    name = 7500GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 7500 } } } localization_key = true_7500GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 7500 } } localization_key = false_7500GUN }
+}
+defined_text = {
+    name = 10000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 10000 } } } localization_key = true_10000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 10000 } } localization_key = false_10000GUN }
+}
+defined_text = {
+    name = 15000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 15000 } } } localization_key = true_15000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 15000 } } localization_key = false_15000GUN }
+}
+defined_text = {
+    name = 20000GUN
+    text = { trigger = { NOT = { has_equipment = { infantry_equipment < 20000 } } } localization_key = true_20000GUN }
+    text = { trigger = { has_equipment = { infantry_equipment < 20000 } } localization_key = false_20000GUN }
+}
+
+####################
+### Army XP Cost ###
+####################
+defined_text = {
+    name = 5ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 5 } } localization_key = true_5ArmyXP }
+    text = { trigger = { has_army_experience < 5 } localization_key = false_5ArmyXP }
+}
+defined_text = {
+    name = 10ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 10 } } localization_key = true_10ArmyXP }
+    text = { trigger = { has_army_experience < 10 } localization_key = false_10ArmyXP }
+}
+defined_text = {
+    name = 15ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 15 } } localization_key = true_15ArmyXP }
+    text = { trigger = { has_army_experience < 15 } localization_key = false_15ArmyXP }
+}
+defined_text = {
+    name = 20ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 20 } } localization_key = true_20ArmyXP }
+    text = { trigger = { has_army_experience < 20 } localization_key = false_20ArmyXP }
+}
+defined_text = {
+    name = 25ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 25 } } localization_key = true_25ArmyXP }
+    text = { trigger = { has_army_experience < 25 } localization_key = false_25ArmyXP }
+}
+defined_text = {
+    name = 50ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 50 } } localization_key = true_50ArmyXP }
+    text = { trigger = { has_army_experience < 50 } localization_key = false_50ArmyXP }
+}
+defined_text = {
+    name = 75ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 75 } } localization_key = true_75ArmyXP }
+    text = { trigger = { has_army_experience < 75 } localization_key = false_75ArmyXP }
+}
+defined_text = {
+    name = 100ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 100 } } localization_key = true_100ArmyXP }
+    text = { trigger = { has_army_experience < 100 } localization_key = false_100ArmyXP }
+}
+defined_text = {
+    name = 150ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 150 } } localization_key = true_150ArmyXP }
+    text = { trigger = { has_army_experience < 150 } localization_key = false_150ArmyXP }
+}
+defined_text = {
+    name = 200ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 200 } } localization_key = true_200ArmyXP }
+    text = { trigger = { has_army_experience < 200 } localization_key = false_200ArmyXP }
+}
+defined_text = {
+    name = 250ArmyXP
+    text = { trigger = { NOT = { has_army_experience < 250 } } localization_key = true_250ArmyXP }
+    text = { trigger = { has_army_experience < 250 } localization_key = false_250ArmyXP }
+}
+
+####################
+### Navy XP Cost ###
+####################
+defined_text = {
+    name = 5NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 5 } } localization_key = true_5NavyXP }
+    text = { trigger = { has_navy_experience < 5 } localization_key = false_5NavyXP }
+}
+defined_text = {
+    name = 10NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 10 } } localization_key = true_10NavyXP }
+    text = { trigger = { has_navy_experience < 10 } localization_key = false_10NavyXP }
+}
+defined_text = {
+    name = 15NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 15 } } localization_key = true_15NavyXP }
+    text = { trigger = { has_navy_experience < 15 } localization_key = false_15NavyXP }
+}
+defined_text = {
+    name = 20NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 20 } } localization_key = true_20NavyXP }
+    text = { trigger = { has_navy_experience < 20 } localization_key = false_20NavyXP }
+}
+defined_text = {
+    name = 25NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 25 } } localization_key = true_25NavyXP }
+    text = { trigger = { has_navy_experience < 25 } localization_key = false_25NavyXP }
+}
+defined_text = {
+    name = 50NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 50 } } localization_key = true_50NavyXP }
+    text = { trigger = { has_navy_experience < 50 } localization_key = false_50NavyXP }
+}
+defined_text = {
+    name = 75NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 75 } } localization_key = true_75NavyXP }
+    text = { trigger = { has_navy_experience < 75 } localization_key = false_75NavyXP }
+}
+defined_text = {
+    name = 100NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 100 } } localization_key = true_100NavyXP }
+    text = { trigger = { has_navy_experience < 100 } localization_key = false_100NavyXP }
+}
+defined_text = {
+    name = 150NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 150 } } localization_key = true_150NavyXP }
+    text = { trigger = { has_navy_experience < 150 } localization_key = false_150NavyXP }
+}
+defined_text = {
+    name = 200NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 200 } } localization_key = true_200NavyXP }
+    text = { trigger = { has_navy_experience < 200 } localization_key = false_200NavyXP }
+}
+defined_text = {
+    name = 250NavyXP
+    text = { trigger = { NOT = { has_navy_experience < 250 } } localization_key = true_250NavyXP }
+    text = { trigger = { has_navy_experience < 250 } localization_key = false_250NavyXP }
+}
+
+##################
+### Fatih Cost ###
+##################
+defined_text = {
+    name = 1Fatih
+    text = { trigger = { NOT = { has_air_experience < 1 } } localization_key = true_1Fatih }
+    text = { trigger = { has_air_experience < 1 } localization_key = false_1Fatih }
+}
+defined_text = {
+    name = 2Fatih
+    text = { trigger = { NOT = { has_air_experience < 2 } } localization_key = true_2Fatih }
+    text = { trigger = { has_air_experience < 2 } localization_key = false_2Fatih }
+}
+defined_text = {
+    name = 3Fatih
+    text = { trigger = { NOT = { has_air_experience < 3 } } localization_key = true_3Fatih }
+    text = { trigger = { has_air_experience < 3 } localization_key = false_3Fatih }
+}
+defined_text = {
+    name = 5Fatih
+    text = { trigger = { NOT = { has_air_experience < 5 } } localization_key = true_5Fatih }
+    text = { trigger = { has_air_experience < 5 } localization_key = false_5Fatih }
+}
+defined_text = {
+    name = 10Fatih
+    text = { trigger = { NOT = { has_air_experience < 10 } } localization_key = true_10Fatih }
+    text = { trigger = { has_air_experience < 10 } localization_key = false_10Fatih }
+}
+defined_text = {
+    name = 15Fatih
+    text = { trigger = { NOT = { has_air_experience < 15 } } localization_key = true_15Fatih }
+    text = { trigger = { has_air_experience < 15 } localization_key = false_15Fatih }
+}
+defined_text = {
+    name = 20Fatih
+    text = { trigger = { NOT = { has_air_experience < 20 } } localization_key = true_20Fatih }
+    text = { trigger = { has_air_experience < 20 } localization_key = false_20Fatih }
+}
+defined_text = {
+    name = 25Fatih
+    text = { trigger = { NOT = { has_air_experience < 25 } } localization_key = true_25Fatih }
+    text = { trigger = { has_air_experience < 25 } localization_key = false_25Fatih }
+}
+defined_text = {
+    name = 30Fatih
+    text = { trigger = { NOT = { has_air_experience < 30 } } localization_key = true_30Fatih }
+    text = { trigger = { has_air_experience < 30 } localization_key = false_30Fatih }
+}
+defined_text = {
+    name = 50Fatih
+    text = { trigger = { NOT = { has_air_experience < 50 } } localization_key = true_50Fatih }
+    text = { trigger = { has_air_experience < 50 } localization_key = false_50Fatih }
+}
+defined_text = {
+    name = 75Fatih
+    text = { trigger = { NOT = { has_air_experience < 75 } } localization_key = true_75Fatih }
+    text = { trigger = { has_air_experience < 75 } localization_key = false_75Fatih }
+}
+
+#test1 = {
+#    icon = generic
+#
+#    custom_cost_text = [25CP] # X = 5,10,15,20,25,30
+#    custom_cost_trigger = { always = yes }
+#
+#    available = {
+#        hidden_trigger = { command_power = 25 } 
+#    }
+#    complete_effect = {
+#        hidden_effect = { add_command_power = -25 }
+#    }
+#}
+#test2 = {
+#    icon = generic
+#
+#    custom_cost_text = [5000GUN] # X = 500,1000,1500,2000,2500,5000,7500,10000,15000,20000
+#    custom_cost_trigger = { always = yes }
+#
+#    available = {
+#        hidden_trigger = { NOT = { has_equipment = { infantry_equipment < 500 } } } 
+#    }
+#    complete_effect = {
+#        hidden_effect = {
+#            # Send to other Country OR for resistance maybe
+#        } 
+#    }
+#}
+#test3 = {
+#    icon = generic
+#
+#    custom_cost_text = [50ArmyXP] # X = 5,10,15,20,25,50,75,100,150,200,250
+#    custom_cost_trigger = { always = yes }
+#
+#    available = {
+#        hidden_trigger = { NOT = { has_army_experience < 50 } } 
+#    }
+#    complete_effect = {
+#        hidden_effect = { army_experience = -50 }
+#    }
+#}
+#test4 = {
+#    icon = generic
+#
+#    custom_cost_text = [100NavyXP] # X = 5,10,15,20,25,50,75,100,150,200,250
+#    custom_cost_trigger = { always = yes }
+#
+#    available = {
+#        hidden_trigger = { NOT = { has_navy_experience < 100 } } 
+#    }
+#    complete_effect = {
+#        hidden_effect = { navy_experience = -100 }
+#    }
+#}
+#test5 = {
+#    icon = generic
+#
+#    custom_cost_text = [10Fatih] # X = 1,2,3,5,10,15,20,25,30,50,75
+#    custom_cost_trigger = { always = yes }
+#
+#    available = {
+#        hidden_trigger = { NOT = { has_air_experience < 10 } } 
+#    }
+#    complete_effect = {
+#        hidden_effect = { air_experience = -10 }
+#    }
+#}

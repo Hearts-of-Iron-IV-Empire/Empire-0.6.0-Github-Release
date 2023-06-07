@@ -1,0 +1,30 @@
+state={
+	id=401
+	name="STATE_401"
+	resources={
+		steel=24.000
+		tungsten=16.000
+	}
+
+	history={
+		owner = KAZ
+		buildings = {
+			infrastructure = 2
+			arms_factory = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = KAZ
+		1770.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		432 508 554 576 1254 1290 1318 3502 3563 4322 4351 6615 7438 9462 9526 9528 11442 11455 11469 11480 11510 11552 
+	}
+	manpower=137795
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

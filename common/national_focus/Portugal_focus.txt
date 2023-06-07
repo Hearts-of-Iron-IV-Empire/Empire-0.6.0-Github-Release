@@ -1,0 +1,4775 @@
+focus_tree = {
+	id = portugal_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = POR
+		}
+	}
+	
+	default = no
+##
+	
+	focus = {
+		id = POR_reign_of_peter_the_pacific
+		icon = GFX_focus_reign_of_peter_the_pacific
+		x = 0
+		y = 0
+		cost = 5
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			country_event = portugal.5
+		}
+	}
+
+	focus = {
+		id = POR_absolutist_rule
+		icon = GFX_focus_generic_monarchy_1
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_reign_of_peter_the_pacific }
+		relative_position_id = POR_reign_of_peter_the_pacific
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.10
+			}
+		}
+	}
+
+	focus = {
+		id = POR_favor_noble_noble_advisors
+		icon = GFX_focus_aristocrats
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = POR_merit_first }
+		prerequisite = { focus = POR_absolutist_rule }
+		relative_position_id = POR_absolutist_rule
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_ideas = POR_noble_advisors
+		}
+	}
+
+	focus = {
+		id = POR_merit_first
+		icon = GFX_focus_generic_military_academy
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = POR_favor_noble_noble_advisors }
+		prerequisite = { focus = POR_absolutist_rule }
+		relative_position_id = POR_absolutist_rule
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_ideas = POR_meritocracy
+		}
+	}
+
+	focus = {
+		id = POR_the_final_step
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_merit_first focus = POR_favor_noble_noble_advisors }
+		relative_position_id = POR_merit_first
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_political_power = 80
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_peters_economic_plan
+		icon = GFX_goal_generic_construction2
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_the_final_step }
+		relative_position_id = POR_the_final_step
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = POR_patron_of_textile_manufacturing
+		icon = GFX_focus_generic_industry_2
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_peters_economic_plan }
+		relative_position_id = POR_peters_economic_plan
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_resource = {
+			    type = rubber
+			    amount = 20
+			    state = 112
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_connect_the_inner_cities
+		icon = GFX_roman_road_icon
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_patron_of_textile_manufacturing }
+		relative_position_id = POR_patron_of_textile_manufacturing
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			112 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			180 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			179 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			877 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_produce_luxury_goods
+		icon = GFX_focus_textile
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_connect_the_inner_cities }
+		relative_position_id = POR_connect_the_inner_cities
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 2
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 2
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_the_great_fortification_projects
+		icon = GFX_goal_generic_build_tank
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_the_final_step }
+		relative_position_id = POR_the_final_step
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_ideas = POR_fortification_projects
+		}
+	}
+
+	focus = {
+		id = POR_reinforce_the_border_with_spain
+		icon = GFX_goal_generic_construct_military
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_the_great_fortification_projects }
+		relative_position_id = POR_the_great_fortification_projects
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			179 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        all_provinces = yes
+				        limit_to_border = yes
+				    }
+				}
+			}
+			877 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        all_provinces = yes
+				        limit_to_border = yes
+				    }
+				}
+			}	
+			179 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        all_provinces = yes
+				        limit_to_border = yes
+				    }
+				}
+			}
+			181 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        all_provinces = yes
+				        limit_to_border = yes
+				    }
+				}
+			}	
+			180 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        all_provinces = yes
+				        limit_to_border = yes
+				    }
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = POR_naval_batteries
+		icon = GFX_focus_generic_coastal_fort
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_reinforce_the_border_with_spain }
+		relative_position_id = POR_reinforce_the_border_with_spain
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			180 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        id = 9871
+				    }
+				}
+			}
+			112 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        id = 11805
+				    }
+				}
+			}
+			179 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 2
+				    instant_build = yes
+				    province = {
+				        id = 3790
+				    }
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_the_lisbon_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_naval_batteries }
+		relative_position_id = POR_naval_batteries
+
+		bypass = {
+			NOT = {
+				has_country_leader = {
+				    name = "Pedro II"
+				    ruling_only = yes
+				}
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			112 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_reign_of_john_v
+		icon = GFX_focus_reign_of_john_v
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_produce_luxury_goods }
+		prerequisite = { focus = POR_the_lisbon_arsenal }
+		relative_position_id = POR_produce_luxury_goods
+
+		available = {
+			has_country_leader = {
+			    name = "João V"
+			    ruling_only = yes
+			}
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = POR_the_royal_fifth
+		icon = GFX_focus_hol_abandon_the_gold_standard
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_reign_of_john_v }
+		relative_position_id = POR_reign_of_john_v
+
+		available = {
+			has_idea = POR_brazilian_riches_2
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POR_brazilian_riches_2
+				add_idea = POR_brazilian_riches_3
+			}
+		}
+	}
+
+	focus = {
+		id = POR_construct_the_mafra_palace
+		icon = GFX_goal_generic_construct_palace
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_reign_of_john_v }
+		relative_position_id = POR_reign_of_john_v
+
+		available = {
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = POR_patron_of_the_arts
+		icon = GFX_goal_generic_scientific_exchange
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_construct_the_mafra_palace }
+		relative_position_id = POR_construct_the_mafra_palace
+
+		available = {
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_country_leader_trait = the_magnanimous
+		}
+	}
+	#the Magnanimous
+
+	focus = {
+		id = POR_portuguese_sun_king
+		icon = GFX_focus_generic_monarchy_1
+		x = 1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_construct_the_mafra_palace }
+		relative_position_id = POR_construct_the_mafra_palace
+
+		available = {
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_country_leader_trait = portuguese_sun_king
+		}
+	}
+
+	focus = {
+		id = POR_economic_boom
+		icon = GFX_focus_generic_industry_3
+		x = -1
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_portuguese_sun_king }
+		prerequisite = { focus = POR_patron_of_the_arts }
+		relative_position_id = POR_portuguese_sun_king
+
+		available = {
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_ideas = POR_economic_boom_idea
+		}
+	}
+
+	focus = {
+		id = POR_the_situation_at_home
+		icon = GFX_focus_por_the_fifth_empire
+		x = 5
+		y = 1
+		cost = 5
+		prerequisite = { focus = POR_reign_of_peter_the_pacific }
+		relative_position_id = POR_reign_of_peter_the_pacific
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			country_event = portugal.1
+		}
+	}
+
+	focus = {
+		id = POR_support_the_bourbon_claim
+		icon = GFX_goal_philip_V
+		x = -2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = POR_support_charles_von_habsburg_candidate }
+		prerequisite = { focus = POR_the_situation_at_home }
+		relative_position_id = POR_the_situation_at_home
+
+		available = {
+			OR = {
+				SPR = { 
+					has_country_leader = {
+					    name = "Carlos III"
+					    ruling_only = yes
+					}
+				}
+				SPR = { 
+					has_country_leader = {
+					    name = "Philip V"
+					    ruling_only = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 40
+			modifier = {
+				factor = 0
+				SPR = { 
+					has_country_leader = {
+					    name = "Carlos III"
+					    ruling_only = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			set_country_flag = involved_in_european_affairs
+			custom_effect_tooltip = colonial_affairs_on_hold
+			if = {
+				limit = {
+					SPR = {
+						has_country_leader = {
+						    name = "Philip V"
+						    ruling_only = yes
+						}
+					}
+				}
+				news_event = portugal.6
+				reverse_add_opinion_modifier = {
+				    target = SPR
+				    modifier = large_increase
+				}
+			}
+			else_if = {
+				limit = {
+					SPR = {
+						has_country_leader = {
+						    name = "Carlos III"
+						    ruling_only = yes
+						}
+					}
+				}
+				news_event = portugal.8
+				SPR = { country_event = portugal.12 }
+				reverse_add_opinion_modifier = {
+				    target = SPR
+				    modifier = large_decrease
+				}
+				custom_effect_tooltip = will_anger_spain
+			}		
+		}
+	}
+
+	focus = {
+		id = POR_french_portuguese_research_agreement
+		icon = GFX_research_empire
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_support_the_bourbon_claim }
+		relative_position_id = POR_support_the_bourbon_claim
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+			    bonus = 1
+			    uses = 2
+			    category = naval_doctrine
+			}
+			FRA = {
+				add_tech_bonus = {
+				    bonus = 1
+				    uses = 2
+				    category = naval_doctrine
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_prepare_a_naval_blockade
+		icon = GFX_goal_generic_trade
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_french_portuguese_research_agreement }
+		relative_position_id = POR_french_portuguese_research_agreement
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 10
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+					is_in_home_area = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = POR_support_charles_von_habsburg_candidate
+		icon = GFX_goal_charles_III
+		x = 2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = POR_support_the_bourbon_claim }
+		prerequisite = { focus = POR_the_situation_at_home }
+		relative_position_id = POR_the_situation_at_home
+
+		available = {
+			OR = {
+				SPR = { 
+					has_country_leader = {
+					    name = "Carlos III"
+					    ruling_only = yes
+					}
+				}
+				SPR = { 
+					has_country_leader = {
+					    name = "Philip V"
+					    ruling_only = yes
+					}
+				}
+			}
+		}
+
+		ai_will_do = { 
+			base = 40
+			modifier = {
+				factor = 0
+				SPR = { 
+					has_country_leader = {
+					    name = "Philip V"
+					    ruling_only = yes
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			set_country_flag = involved_in_european_affairs
+			custom_effect_tooltip = colonial_affairs_on_hold
+			if = {
+				limit = {
+					SPR = {
+						has_country_leader = {
+						    name = "Carlos III"
+						    ruling_only = yes
+						}
+					}
+				}
+				news_event = portugal.6
+				reverse_add_opinion_modifier = {
+				    target = SPR
+				    modifier = large_increase
+				}
+			}
+			else_if = {
+				limit = {
+					SPR = {
+						has_country_leader = {
+						    name = "Philip V"
+						    ruling_only = yes
+						}
+					}
+				}
+				news_event = portugal.7
+				SPR = { country_event = portugal.12 }
+				reverse_add_opinion_modifier = {
+				    target = SPR
+				    modifier = large_decrease
+				}
+				custom_effect_tooltip = will_anger_spain
+			}
+		}
+	}
+
+	focus = {
+		id = POR_anticipate_french_strike
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_support_charles_von_habsburg_candidate }
+		relative_position_id = POR_support_charles_von_habsburg_candidate
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_send_aid_to_the_english
+		icon = GFX_agree_england
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_anticipate_french_strike }
+		relative_position_id = POR_anticipate_french_strike
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			send_equipment = {
+			    equipment = infantry_equipment
+			    amount = 2000
+			    target = ENG
+			}
+		}
+	}
+
+	focus = {
+		id = POR_buy_precious_time
+		icon = GFX_focus_buy_precious_time
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_support_the_bourbon_claim focus = POR_support_charles_von_habsburg_candidate}
+		relative_position_id = POR_support_the_bourbon_claim
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			FRA = { country_event = portugal.2 }
+			SPR = { country_event = portugal.2 }
+			AUS = { country_event = portugal.2 }
+			ENG = { country_event = portugal.2 }
+		}
+	}
+
+	focus = {
+		id = POR_arm_the_nation
+		icon = GFX_focus_secret_rearmament
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_buy_precious_time}
+		relative_position_id = POR_buy_precious_time
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_ideas = extensive_conscription
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 2000
+				producer = POR
+			}
+		}
+	}
+
+	focus = {
+		id = POR_an_alliance_in_more_than_name
+		icon = GFX_goal_anglo_french_military_pact
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_arm_the_nation focus = POR_prepare_a_naval_blockade }
+		mutually_exclusive = { focus = POR_portuguese_non_involvement focus = POR_treaty_of_methuen }
+		relative_position_id = POR_arm_the_nation
+
+		available = {
+			NOT = {
+				has_non_aggression_pact_with = AUS
+			}
+			if = {
+				limit = {
+					FRA = { has_war_with = ENG }
+				}
+				NOT = { has_non_aggression_pact_with = ENG }
+			}
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+
+		completion_reward = {
+			FRA = { country_event = generic.2 }
+			remove_ideas = POR_portuguese_non_involvement_idea
+		}
+	}
+
+	focus = {
+		id = POR_portuguese_non_involvement
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_arm_the_nation focus = POR_send_aid_to_the_english focus = POR_prepare_a_naval_blockade }
+		mutually_exclusive = { focus = POR_an_alliance_in_more_than_name focus = POR_treaty_of_methuen }
+		relative_position_id = POR_arm_the_nation
+
+		ai_will_do = { 
+			factor = 0
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = resume_colonial_affairs
+			clr_country_flag = involved_in_european_affairs
+			swap_ideas = {
+				remove_idea = POR_portuguese_non_involvement_idea
+				add_idea = POR_portuguese_non_involvement_idea_2
+			}
+		}
+	}
+
+	focus = {
+		id = POR_treaty_of_methuen
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_arm_the_nation focus = POR_send_aid_to_the_english}
+		relative_position_id = POR_arm_the_nation
+		mutually_exclusive = { focus = POR_an_alliance_in_more_than_name focus = POR_portuguese_non_involvement }
+
+		available = {
+			if = {
+				limit = {
+					FRA = { has_war_with = ENG }
+				}
+				NOT = { has_non_aggression_pact_with = FRA }
+			}
+			if = {
+				limit = {
+					SPR = { has_war_with = ENG }
+				}
+				NOT = { has_non_aggression_pact_with = SPR }
+			}
+		}
+		ai_will_do = { 
+			factor = 80
+		}
+
+		will_lead_to_war_with = SPR
+
+		completion_reward = {
+			if = {
+				limit = {
+					is_in_faction_with = FRA
+				}
+				leave_faction = yes
+			}
+			ENG = { country_event = generic.2 }
+			remove_ideas = POR_portuguese_non_involvement_idea
+		}
+	}
+
+	focus = {
+		id = POR_colonial_demands
+		icon = GFX_focus_por_reclaim_crown_jewel
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_treaty_of_methuen focus = POR_an_alliance_in_more_than_name }
+		relative_position_id = POR_an_alliance_in_more_than_name
+		mutually_exclusive = { focus = POR_unification_of_ibera focus = POR_demand_galicia }
+
+		available = {
+			has_army_manpower = { size > 25000 }
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_state_claim = 502
+			custom_effect_tooltip = demands_will_be_added
+		}
+	}
+
+	focus = {
+		id = POR_demand_galicia
+		icon = GFX_goal_generic_military_deal
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_treaty_of_methuen focus = POR_an_alliance_in_more_than_name}
+		relative_position_id = POR_an_alliance_in_more_than_name
+		mutually_exclusive = { focus = POR_unification_of_ibera focus = POR_colonial_demands }
+
+		available = {
+			has_army_manpower = { size > 50000 }
+			has_full_control_of_state = 171
+			has_war_with = SPR
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			add_state_claim = 171
+			custom_effect_tooltip = demands_will_be_added
+		}
+	}
+
+	focus = {
+		id = POR_unification_of_ibera
+		icon = GFX_focus_por_iberian_summit
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_treaty_of_methuen focus = POR_an_alliance_in_more_than_name}
+		relative_position_id = POR_an_alliance_in_more_than_name
+		mutually_exclusive = { focus = POR_demand_galicia focus = POR_colonial_demands }
+
+		available = {
+			has_army_manpower = { size > 100000 }
+			has_full_control_of_state = 41
+			has_war_with = SPR
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			every_state = {
+				limit = { is_core_of = SPR }
+				add_claim_by = POR
+			}
+			custom_effect_tooltip = demands_will_be_added
+		}
+	}
+
+	focus = {
+		id = POR_propose_unification_with_aragon
+		icon = GFX_appeal_aragonese_loyalist
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_unification_of_ibera }
+		relative_position_id = POR_unification_of_ibera
+		mutually_exclusive = { focus = POR_alliance_with_aragon }
+
+		available = {
+			country_exists = ARA
+		}
+
+		ai_will_do = { 
+			factor = 10
+		}
+
+		completion_reward = {
+			ARA = { country_event = portugal.13 }
+		}
+	}
+
+	focus = {
+		id = POR_a_new_foreign_policy
+		icon = GFX_focus_hol_the_foundations_of_defense
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_colonial_demands focus = POR_demand_galicia focus = POR_unification_of_ibera }
+		relative_position_id = POR_colonial_demands
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			country_event = portugal.17
+			custom_effect_tooltip = resume_colonial_affairs
+		}
+	}
+
+	focus = {
+		id = POR_alliance_with_aragon
+		icon = GFX_goal_generic_alliance
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = POR_unification_of_ibera focus = POR_demand_galicia focus = POR_colonial_demands }
+		relative_position_id = POR_unification_of_ibera
+		mutually_exclusive = { focus = POR_propose_unification_with_aragon }
+
+		available = {
+			country_exists = ARA
+			ARA = { is_in_faction = no }
+		}
+
+		ai_will_do = { 
+			factor = 80
+		}
+
+		completion_reward = {
+			create_faction = "Iberian Alliance"
+			ARA = { country_event = generic.5 }
+		}
+	}
+
+#empire stuff
+
+	focus = {
+		id = POR_expand_the_empire
+		icon = GFX_focus_por_the_kingdom_reunited
+		x = 26
+		y = 0
+		cost = 10
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_intrest_in_africa
+		icon = GFX_focus_generic_africa_infrastructure
+		prerequisite = { focus = POR_expand_the_empire }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_expand_the_empire
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_the_congo_civil_war
+		icon = GFX_focus_kongo_civil_war
+		prerequisite = { focus = POR_intrest_in_africa }
+		x = -3
+		y = 1
+		cost = 5
+		relative_position_id = POR_intrest_in_africa
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			country_event = portugal.18
+		}
+	}
+
+	focus = {
+		id = POR_secure_the_cabinda_slave_port
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POR_the_congo_civil_war }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = POR_the_congo_civil_war
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRD
+			}
+		}
+
+		will_lead_to_war_with = BRD
+	}
+
+	focus = {
+		id = POR_expand_cabina_port
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = POR_secure_the_cabinda_slave_port }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = POR_secure_the_cabinda_slave_port
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+			owns_state = 878
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			878 = {
+				add_building_construction = {
+				    type = dockyard
+				    level = 1
+				    instant_build = yes
+				}
+				add_building_construction = {
+				    type = naval_base
+				    level = 2
+				    instant_build = yes
+				    province = 2115
+				}
+			}
+			add_equipment_to_stockpile = {
+			    type = convoy
+			    amount = 10
+			    producer = POR
+			}
+		}
+	}
+
+	focus = {
+		id = POR_take_out_soyo
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = POR_secure_the_cabinda_slave_port }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_secure_the_cabinda_slave_port
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = RWA
+			}
+		}
+
+		will_lead_to_war_with = RWA
+	}
+
+	focus = {
+		id = POR_invade_loango
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = POR_take_out_soyo }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_take_out_soyo
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = RCG
+			}
+		}
+
+		will_lead_to_war_with = RCG
+	}
+
+	focus = {
+		id = POR_infilitrate_the_kongo
+		icon = GFX_focus_prc_infiltration
+		prerequisite = { focus = POR_the_congo_civil_war }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_the_congo_civil_war
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			COG = { add_ideas = POR_portuguese_infiltration }
+		}
+	}
+
+	focus = {
+		id = POR_kongo_resource_rights
+		icon = GFX_goal_generic_positive_trade_relations
+		prerequisite = { focus = POR_infilitrate_the_kongo }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_infilitrate_the_kongo
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			give_resource_rights = { receiver = POR state = 936 }
+		}
+	}
+
+	focus = {
+		id = POR_subjugate_the_kongo
+		icon = GFX_focus_CZE_german_puppet
+		prerequisite = { focus = POR_kongo_resource_rights }
+		prerequisite = { focus = POR_angolese_wood }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_kongo_resource_rights
+
+		bypass = {
+			NOT = { country_exists = COG }
+		}
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+			has_global_flag = COG_civil_war_over
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			COG = { country_event = portugal.19 }
+		}
+	}
+
+	focus = {
+		id = POR_develop_kongo
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = POR_subjugate_the_kongo }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_subjugate_the_kongo
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			936 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 2
+			}
+		}
+	}
+
+	focus = {
+		id = POR_deeper_into_the_jungle
+		icon = GFX_focus_por_luso_tropicalism
+		prerequisite = { focus = POR_invade_loango }
+		prerequisite = { focus = POR_subjugate_the_kongo }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = POR_subjugate_the_kongo
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = GAB
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = ZAM
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = UGA
+			}
+		}
+
+		will_lead_to_war_with = GAB
+		will_lead_to_war_with = ZAM
+		will_lead_to_war_with = UGA
+	}
+
+	focus = {
+		id = POR_reorganise_congo_territories
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = POR_deeper_into_the_jungle }
+		prerequisite = { focus = POR_develop_kongo }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_deeper_into_the_jungle
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+			COG = { is_subject_of = POR}
+			NOT = { country_exists = UGA }
+			NOT = { country_exists = RWA }
+			NOT = { country_exists = ANG }
+			NOT = { country_exists = ZAM }
+			NOT = { country_exists = GAB }
+			NOT = { country_exists = RCG }
+			NOT = { country_exists = BRD }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			COG = {
+				transfer_state = 937
+				transfer_state = 878
+				transfer_state = 939
+				transfer_state = 772
+				transfer_state = 937
+				transfer_state = 940
+				transfer_state = 941
+				transfer_state = 540
+				transfer_state = 798
+			}
+			COG = { add_stability = 0.05 }
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = POR_connect_the_colonies
+		icon = GFX_focus_por_the_pink_map
+		prerequisite = { focus = POR_reorganise_congo_territories }
+		prerequisite = { focus = POR_challenge_the_rozwi_empire }
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id = POR_reorganise_congo_territories
+
+		available = {
+			295 = {
+				is_owned_by = UNC
+			}
+			938 = {
+				is_owned_by = UNC
+			}
+			945 = {
+				is_owned_by = UNC
+			}
+			944 = {
+				is_owned_by = UNC
+			}
+			771 = {
+				is_owned_by = UNC
+			}
+			NOT = { has_country_flag = involved_in_european_affairs }
+			COG = { is_subject_of = POR }
+			NOT = { country_exists = BOT }
+			NOT = { country_exists = ZIM }
+			NOT = { country_exists = MLW }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			COG = {
+				transfer_state = 295
+				transfer_state = 542
+				transfer_state = 544
+				transfer_state = 545
+				transfer_state = 770
+				transfer_state = 771
+				transfer_state = 799
+				transfer_state = 938
+				transfer_state = 938
+				transfer_state = 942
+				transfer_state = 943
+				transfer_state = 944
+				transfer_state = 945
+			}
+			add_ideas = empire
+		}
+	}
+
+
+	focus = {
+		id = POR_crush_mbamba
+		icon = GFX_goal_generic_territory_or_war
+		prerequisite = { focus = POR_the_congo_civil_war }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = POR_the_congo_civil_war
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ANG
+			}
+		}
+		will_lead_to_war_with = ANG
+	}
+
+	focus = {
+		id = POR_angolese_wood
+		icon = GFX_focus_tropical_wood
+		prerequisite = { focus = POR_crush_mbamba }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_crush_mbamba
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+			    type = chromium
+			    amount = 16
+			    state = 798
+			}
+		}
+	}
+
+	focus = {
+		id = POR_east_african_expansion
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POR_intrest_in_africa }
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id = POR_intrest_in_africa
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			army_experience = 15
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_develop_mozambique
+		icon = GFX_goal_construct_road
+		prerequisite = { focus = POR_east_african_expansion }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_east_african_expansion
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+			544 = {
+				is_owned_by = POR
+			}
+			799 = {
+				is_owned_by = POR
+			}
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			544 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			799 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = POR_clash_over_niassa
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = POR_develop_mozambique }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_develop_mozambique
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			start_border_war = {
+			    change_state_after_war = yes
+			    attacker = {
+			        state = 799
+			        num_provinces = 3
+					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+			
+			    defender = {
+			        state = 942
+			        num_provinces = 3
+					on_win = wtt_border_conflict_won_defender.1
+					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+
+	focus = {
+		id = POR_subjugate_the_maravi_kingdom
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = POR_clash_over_niassa }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_clash_over_niassa
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = MLW
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MLW
+			}
+		}
+	}
+
+	focus = {
+		id = POR_conquer_mutapa
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = POR_subjugate_the_maravi_kingdom }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_subjugate_the_maravi_kingdom
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ZIM
+			}
+		}
+
+		will_lead_to_war_with = ZIM
+	}
+
+	focus = {
+		id = POR_challenge_the_rozwi_empire
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = POR_conquer_mutapa }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_conquer_mutapa
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = BOT
+			}
+		}
+
+		will_lead_to_war_with = BOT
+	}
+
+	focus = {
+		id = POR_tropical_wood
+		icon = GFX_focus_tropical_wood
+		prerequisite = { focus = POR_develop_mozambique }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_develop_mozambique
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_resource = {
+			    type = chromium
+			    amount = 12
+			    state = 544
+			}
+		}
+	}
+
+	focus = {
+		id = POR_claim_the_mozambique_jungle
+		icon = GFX_focus_explore_the_jungle
+		prerequisite = { focus = POR_tropical_wood }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_tropical_wood
+
+		available = {
+			542 = {
+				is_owned_by = UNC
+			}
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			transfer_state = 542
+			add_state_claim = 542
+		}
+	}
+
+	focus = {
+		id = POR_recognition_for_ownership_of_brazil
+		icon = GFX_focus_por_recover_latin_america
+		prerequisite = { focus = POR_expand_the_empire }
+		x = -10
+		y = 1
+		cost = 5
+		relative_position_id = POR_expand_the_empire
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+			has_country_flag = POR_recognition_brazilian_colony
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_political_power = 120
+			BRA = {
+				add_autonomy_score = {
+			    	value = -200
+				}
+			}
+			custom_effect_tooltip = must_have_international_recognizition_of_brazil_tt
+		}
+	}
+
+	focus = {
+		id = POR_brazilian_rare_metal_exports
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		prerequisite = { focus = POR_recognition_for_ownership_of_brazil }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_recognition_for_ownership_of_brazil
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = POR_brazilian_riches
+		}
+	}
+
+	focus = {
+		id = POR_secular_control
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = POR_brazilian_rare_metal_exports }
+		mutually_exclusive = { focus = POR_empower_the_brazilian_inquistion }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_brazilian_rare_metal_exports
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			BRA = { add_ideas = BRA_secular_administration }
+		}
+	}
+
+	focus = {
+		id = POR_tackle_the_jesuit_state
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		prerequisite = { focus = POR_secular_control }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_secular_control
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = PAR
+			}
+		}
+		will_lead_to_war_with = PAR
+	}
+
+	focus = {
+		id = POR_empower_the_brazilian_inquistion
+		icon = GFX_goal_spanish_inquisition
+		prerequisite = { focus = POR_brazilian_rare_metal_exports }
+		mutually_exclusive = { focus = POR_secular_control }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_brazilian_rare_metal_exports
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			BRA = { add_ideas = BRA_clergical_administration }
+		}
+	}
+
+	focus = {
+		id = POR_protect_the_jesuit_mission_state
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = POR_empower_the_brazilian_inquistion }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_empower_the_brazilian_inquistion
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			give_guarantee = PAR
+			if = {
+				limit = {
+					POR = { is_faction_leader = yes }
+				}
+				PAR = { country_event = generic.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = POR_develop_brazil
+		icon = GFX_focus_por_recover_brazil
+		prerequisite = { focus = POR_protect_the_jesuit_mission_state focus= POR_tackle_the_jesuit_state }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_protect_the_jesuit_mission_state
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = POR_brazilian_riches
+				add_idea = POR_brazilian_riches_2
+			}
+			BRA = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_triangle_trade
+		icon = GFX_focus_triangle_trade
+		prerequisite = { focus = POR_develop_brazil }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_develop_brazil
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = SPR_triangle_trade_idea
+		}
+	}
+
+	focus = {
+	id = POR_rejuvenate_the_navy
+	icon = GFX_goal_generic_construct_naval_dockyard
+	x = 33
+	y = 0
+	cost = 10
+
+	ai_will_do = { 
+		factor = 40
+	}
+
+	available = {
+		any_state = {
+			is_coastal = yes
+			is_controlled_by = ROOT
+		}
+	}
+
+	complete_tooltip = {
+		navy_experience = 25
+		add_extra_state_shared_building_slots = 2
+		add_building_construction = {
+			type = dockyard
+			level = 2
+			instant_build = yes
+		}
+	}
+		
+	completion_reward = {
+		navy_experience = 25
+		if = {
+			limit = {
+				NOT = {
+					any_owned_state = {
+						dockyard > 0
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+				any_owned_state = {
+					is_coastal = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = naval_effort_built
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = naval_effort_built }
+				any_owned_state = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					dockyard > 0
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			set_country_flag = naval_effort_built
+		}
+		if = {
+			limit = {
+				NOT = { has_country_flag = naval_effort_built }
+				NOT = {
+					any_owned_state = {
+						free_building_slots = {
+							building = dockyard
+							size > 1
+							include_locked = yes
+						}
+					}
+				}
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}			
+	}
+}
+
+focus = {
+	id = POR_modernization_effort
+	icon = GFX_focus_por_the_kingdom_reunited
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = POR_rejuvenate_the_navy }
+	relative_position_id = POR_rejuvenate_the_navy
+
+	ai_will_do = { 
+		factor = 20
+	}
+
+	completion_reward = {	
+		add_tech_bonus = {
+		    bonus = 0.5
+		    uses = 4
+		    category = naval_equipment
+		}
+	}
+}
+
+	focus = {
+		id = POR_east_indian_naval_portection
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = POR_modernization_effort }
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id = POR_modernization_effort
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_secure_straits_of_malacca
+		icon = GFX_goal_generic_occupy_states_coastal
+		prerequisite = { focus = POR_east_indian_naval_portection }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_east_indian_naval_portection
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MAL
+			}
+		}
+		will_lead_to_war_with = MAL
+	}
+
+	focus = {
+		id = POR_fortify_the_indian_ports
+		icon = GFX_goal_generic_fortify_city
+		prerequisite = { focus = POR_east_indian_naval_portection }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_east_indian_naval_portection
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			846 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 3
+				    instant_build = yes
+				    province = 4090
+				}
+			}
+			321 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 3
+				    instant_build = yes
+				    province = 1273
+				}
+			}
+			963 = {
+				add_building_construction = {
+				    type = bunker
+				    level = 3
+				    instant_build = yes
+				    province = 7395
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_ceylonese_base
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = POR_fortify_the_indian_ports }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_fortify_the_indian_ports
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SRL
+			}
+		}
+		will_lead_to_war_with = SRL
+	}
+
+	focus = {
+		id = POR_destroy_the_polygars
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = POR_ceylonese_base }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_ceylonese_base
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MDR
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MAR
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = MYS
+			}
+		}
+		will_lead_to_war_with = MAL
+		will_lead_to_war_with = MAR
+		will_lead_to_war_with = MYS
+	}
+
+	focus = {
+		id = POR_eyes_on_the_mughals
+		icon = GFX_attack_mughals2
+		prerequisite = { focus = POR_destroy_the_polygars }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_destroy_the_polygars
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = RAJ
+			}
+		}
+		will_lead_to_war_with = RAJ
+	}
+
+	focus = {
+		id = POR_the_archenemy
+		icon = GFX_focus_hol_oranje_boven
+		prerequisite = { focus = POR_destroy_the_polygars }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_destroy_the_polygars
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = HOL
+			}
+		}
+		will_lead_to_war_with = HOL
+	}
+
+	focus = {
+		id = POR_challenge_oman
+		icon = GFX_focus_generic_provoke_border_clashes
+		prerequisite = { focus = POR_east_african_expansion  }
+		prerequisite = { focus = POR_correias_legacy }
+		x = 4
+		y = 1
+		cost = 5
+		relative_position_id = POR_east_african_expansion
+
+		available = {
+			owns_state = 942
+			owns_state = 546
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			start_border_war = {
+			    change_state_after_war = yes
+			    attacker = {
+			        state = 799
+			        num_provinces = 1
+					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 801
+			        num_provinces = 1
+					on_win = wtt_border_conflict_won_attacker.1
+					on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+			}
+		}
+	}
+
+	focus = {
+		id = POR_crush_oman
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		prerequisite = { focus = POR_challenge_oman }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = POR_challenge_oman
+
+		available = {
+			country_exists = OMA
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = OMA
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = OMA
+			}
+		}
+
+	}
+
+	focus = {
+		id = POR_take_over_madagascar
+		icon = GFX_goal_generic_more_territorial_claims
+		prerequisite = { focus = POR_crush_oman }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_crush_oman
+
+		available = {
+			country_exists = MAD
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = MAD
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = MAD
+			}
+		}
+	}
+
+	focus = {
+		id = POR_secure_the_persian_gulf
+		icon = GFX_goal_demand_sudetenland
+		prerequisite = { focus = POR_challenge_oman }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = POR_challenge_oman
+
+		available = {
+			country_exists = UAE
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = UAE
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = UAE
+			}
+			transfer_state = 765
+		}
+	}
+
+	focus = {
+		id = POR_persian_trade_monopolies
+		icon = GFX_goal_generic_intelligence_exchange
+		prerequisite = { focus = POR_secure_the_persian_gulf }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = POR_secure_the_persian_gulf
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = POR_challenge_the_ottomans
+		icon = GFX_focus_challenge_the_ottoman_empire
+		prerequisite = { focus = POR_crush_oman focus = POR_secure_the_persian_gulf }
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = POR_challenge_oman
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = POR_align_ethiopia
+		icon = GFX_goal_generic_major_alliance
+		prerequisite = { focus = POR_challenge_the_ottomans }
+		mutually_exclusive = { focus = POR_conquer_ethiopia_and_aussa }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_challenge_the_ottomans
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+			    target = ETH
+			    modifier = huge_increase
+			}
+			if = {
+				limit = {
+					POR = { is_faction_leader = yes }
+				}
+				ETH = { country_event = generic.5 }
+			}
+		}
+	}
+
+	focus = {
+		id = POR_conquer_ethiopia_and_aussa
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = POR_challenge_the_ottomans }
+		mutually_exclusive = { focus = POR_align_ethiopia }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_challenge_the_ottomans
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = ETH
+		will_lead_to_war_with = DJI
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = ETH
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = DJI
+			}
+		}
+	}
+
+	focus = {
+		id = POR_vassalize_sennar_sultanate
+		icon = GFX_goal_generic_military_deal
+		prerequisite = { focus = POR_align_ethiopia focus = POR_conquer_ethiopia_and_aussa}
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_align_ethiopia
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = SUD
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SUD
+			}
+		}
+	}
+
+	focus = {
+		id = POR_offer_yemen_protection
+		icon = GFX_goal_generic_defence
+		prerequisite = { focus = POR_vassalize_sennar_sultanate}
+		mutually_exclusive = { focus = POR_conquer_yemen }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = POR_vassalize_sennar_sultanate
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = YEM
+
+		completion_reward = {
+			YEM = { 
+				country_event = {
+					id = portugal.20 
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = POR_conquer_yemen
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		prerequisite = { focus = POR_vassalize_sennar_sultanate}
+		mutually_exclusive = { focus = POR_offer_yemen_protection }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = POR_vassalize_sennar_sultanate
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = YEM
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = YEM
+			}
+		}
+	}
+
+	focus = {
+		id = POR_pick_a_fight_with_the_ottomans
+		icon = GFX_focus_generic_attack_turkey
+		prerequisite = { focus = POR_conquer_yemen focus = POR_offer_yemen_protection }
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = POR_vassalize_sennar_sultanate
+
+		available = {
+			NOT = { has_country_flag = involved_in_european_affairs }
+		}
+
+		ai_will_do = { 
+			factor = 1
+		}
+
+		will_lead_to_war_with = TUR
+
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = TUR
+			}
+		}
+	}
+
+#naval tree
+
+focus = {
+	id = POR_correias_legacy
+	icon = GFX_focus_por_the_kingdom_reunited
+	x = 0
+	y = 1
+	cost = 10
+	prerequisite = { focus = POR_modernization_effort }
+	relative_position_id = POR_modernization_effort
+
+	available = {
+		NOT = { has_country_flag = involved_in_european_affairs }
+	}
+
+	ai_will_do = { 
+		factor = 10
+	}
+
+	completion_reward = {
+		add_ideas = POR_correias_legacy
+	}
+}
+
+#generic industry tree
+
+focus = {
+		id = POR_industrial_effort
+		icon = GFX_economic_stuff
+		x = 11
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+		}
+	}
+
+	focus = {
+		id = POR_construction_effort
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POR_industrial_effort }
+		x = -2
+		y = 1
+		relative_position_id = POR_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction1
+		}
+		
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_production_effort
+		icon = GFX_tanegashima
+		prerequisite = { focus = POR_industrial_effort }
+		x = 2
+		y = 1
+		relative_position_id = POR_industrial_effort
+		cost = 10
+
+		available = {
+			has_tech = construction1
+		}
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2			
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_construction_effort_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POR_construction_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_construction_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_production_effort_2
+		icon = GFX_cannon
+		prerequisite = { focus = POR_production_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_production_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction2
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 0
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 0
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_infrastructure_effort
+		icon = GFX_roman_road_icon
+		prerequisite = { focus = POR_industrial_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_industrial_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_production_effort_3
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = POR_production_effort_2 }
+		prerequisite = { focus = POR_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = POR_production_effort_2
+		cost = 10
+
+		available = {
+			has_tech = construction3
+		}
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = production_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = arms_factory
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}		
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = arms_factory
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = arms_factory
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = arms_factory
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_infrastructure_effort_2
+		icon = GFX_focus_generic_land_reclamation
+		prerequisite = { focus = POR_infrastructure_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_infrastructure_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = infrastructure_effort_tt
+				all_owned_state = {			
+					free_building_slots = {
+						building = infrastructure
+						size < 1
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = infrastructure
+				level = 1
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 1
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 1
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_construction_effort_3
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = POR_construction_effort_2  }
+		prerequisite = { focus = POR_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = POR_construction_effort_2
+		cost = 10
+
+		available = {
+			has_tech = construction3
+		}
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = construction_effort_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 2
+						include_locked = yes
+					}
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = rank_factor
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = { 
+					has_idea = kingdom 
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+			IF = {
+				limit = { 
+					OR = {
+						has_idea = empire 
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = POR_extra_tech_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = POR_infrastructure_effort_2 }
+		x = 0
+		y = 1
+		relative_position_id = POR_infrastructure_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+# army tree
+
+focus = {
+		id = POR_army_effort
+		icon = GFX_focus_por_portuguese_legion
+		x = 11
+		y = 4
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_equipment_effort
+		icon = GFX_tanegashima
+		prerequisite = { focus = POR_army_effort }
+		x = -2
+		y = 1
+		relative_position_id = POR_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = POR_supply_wagons
+		icon = GFX_goal_generic_position_armies
+		prerequisite = { focus = POR_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 2
+		y = 1
+		relative_position_id = POR_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = POR_doctrine_effort
+		icon = GFX_review_military_doctrines_focus
+		prerequisite = { focus = POR_army_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_equipment_effort_2
+		icon = GFX_field_gun
+		prerequisite = { focus = POR_equipment_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = POR_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = POR_doctrine_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = POR_cavalry_effort
+		icon = GFX_cavalry_icon
+		prerequisite = { focus = POR_supply_wagons }
+		x = 0
+		y = 1
+		relative_position_id = POR_supply_wagons
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = motorized_equipment
+			}
+		}
+	}
+
+	focus = {
+		id = POR_special_forces
+		icon = GFX_goal_generic_special_forces
+		prerequisite = { focus = POR_equipment_effort_2 }
+		prerequisite = { focus = POR_doctrine_effort_2 }
+		prerequisite = { focus = POR_cavalry_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_doctrine_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+	
+	focus = {
+		id = POR_merchant_navy
+		icon = GFX_goal_generic_build_navy
+		mutually_exclusive = { focus = POR_fleet_in_being }
+		prerequisite = { focus = POR_modernization_effort }
+		x = 7
+		y = 1
+		cost = 10
+		relative_position_id = POR_modernization_effort
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = POR_fleet_in_being
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		mutually_exclusive = { focus = POR_merchant_navy }
+		prerequisite = { focus = POR_modernization_effort }
+		x = 9
+		y = 1
+		cost = 10
+		relative_position_id = POR_modernization_effort
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = POR_privateering_effort
+		icon = GFX_pirate_deal
+		prerequisite = { focus = POR_merchant_navy }
+		x = -1
+		y = 1
+		relative_position_id = POR_merchant_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POR_frigate_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = POR_fleet_in_being focus = POR_merchant_navy }
+		x = -1
+		y = 1
+		relative_position_id = POR_fleet_in_being
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POR_conquest_of_paradise
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = POR_frigate_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_frigate_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+		
+		completion_reward = {	
+			add_ideas = POR_legacy_of_henry_the_navigator	
+		}
+	}
+
+	focus = {
+		id = POR_destroyer_effort
+		icon = GFX_Imperial_Warship_Generic1
+		prerequisite = { focus = POR_privateering_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_privateering_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POR_battleship_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = POR_fleet_in_being }
+		x = 1
+		y = 1
+		relative_position_id = POR_fleet_in_being
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 3
+				category = bb_tech
+				category = shbb_tech
+			}
+		}
+	}
+
+	focus = {
+		id = POR_battlecruiser_effort
+		icon = GFX_Imperial_Warship_Generic
+		prerequisite = { focus = POR_battleship_effort }
+		x = 0
+		y = 1
+		relative_position_id = POR_battleship_effort
+		cost = 5
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+			}
+		}
+	}
+}

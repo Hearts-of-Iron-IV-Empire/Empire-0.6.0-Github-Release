@@ -1,0 +1,2088 @@
+##f#ac#t#i#o#n #sy#s#t#e#m
+#ZV#e#n#o
+###BUL_zv#e#n#o_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{#BUL_zv#e#n#o_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_zv#e#n#o_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_zv#e#n#o_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_zv#e#n#o_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_zv#e#n#o_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_zv#e#n#o_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_zv#e#n#o_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_zv#e#n#o_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_zv#e#n#o_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_zv#e#n#o_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_zv#e#n#o_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_zv#e#n#o_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_zv#e#n#o_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##B##r#o#a#d #s#oC#i#aL##i#s#t#s
+##BUL_#B#s_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#B#s_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#B#s_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#B#s_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#B#s_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#B#s_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#B#s_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#B#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#B#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##aG##r#a##r#i#a#n U#n#i#o#n
+##BUL_#Bz#n#s_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#Bz#n#s_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#Bz#n#s_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#Bz#n#s_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#Bz#n#s_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#Bz#n#s_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#Bz#n#s_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#Bz#n#s_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##n#a#t#i#o#n#aL #s#oC#i#aL #m#oV#e#m#e#n#t
+##BUL_#n#s#m_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#n#s#m_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#n#s#m_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#i#nc##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#n#s#m_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_l#ow_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#n#s#m_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#m#e#d#iu#m_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_#n#s#m_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_l#oy#al#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_l#oy#al#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+##BUL_#n#s#m_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#e#f#f#ec#t = #{
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#n#s#m_#t#t
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#h#ig#h_#p#o#pul#a##r#i#ty_#d#ec##r#e#a#s#e_#t#t
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#n#s#m_#p#o#pul#a##r#i#ty
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+#}
+
+##BUL_c#o#m#mu#n##i#s#t#s_#t##ry_#t#o_#f##o##r#m_#f#f_#e#f#f#ec#t = #{
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = -#100 #} ##t#h#e #f#a#t#h#e##rl#a#n#d #f##r#o#n#t c#a#n #o#nly #B#e #f##o##r#m#e#d ##i#f #t#h##i#s #v#a##r#i#a#Bl#e #B#ec#o#m#e#s g##r#e#a#t#e##r #t#h#a#n 0 #du##r#i#ng #t#h##i#s c#h#eck
+
+	##i#f = #{ ##h#av#i#ng w#a##r ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			###h#a#s_w#a##r = y#e#s
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = 15 #}
+		##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t ##s#oV ##i#s #s#ig#n##i#f#ic#a#n#t
+			#l#i#m#i#t = #{
+				###h#a#s_w#a##r_w#i#t#h = ##s#oV
+				##o##r = #{
+					##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#a#t_w#a##r_w#i#t#h_#t#h#e_##s#oV#i#e#t#s_#fl#ag #}
+					###h#a#s_#c#ou#n#t##ry_#fl#ag = #{ #fl#ag = ##BUL_#a#t_w#a##r_w#i#t#h_#t#h#e_##s#oV#i#e#t#s_#fl#ag #d#ay#s > 180 #}
+				#}	
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = #10 #}
+			##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t c#o#m#mu#n##i#s#t ##s#oV ##i#s v#e##ry #i#m#p##o##r#t#a#n#t
+				#l#i#m#i#t = #{
+					##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+				#}
+				##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = 50 #}
+			#}
+		#}
+	#}
+
+	##i#f = #{ ##a#n #ally #B#e#i#ng #a#t w#a##r w#i#t#h ##s#oV ##i#s #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+				###h#a#s_w#a##r_w#i#t#h = ##s#oV
+			#}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = #25 #}
+		##i#f = #{ ###i#f ##s#oV ##i#s c#o#m#mu#n##i#s#t #t#h#e#n #i#t #B#ec#o#m#e#s v#e##ry #i#m#p##o##r#t#a#n#t
+			#l#i#m#i#t = #{
+				##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = 75 #}
+		#}
+	#}
+
+	##i#f = #{ #C#o#m#mu#n##i#s#t ##s#oV c#o#n#t##r#oll#i#ng ##a#ny #n#e#ig#h#B##o##r ##s#t#a#t#e ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			###a#ny_#n#e#ig#h#B##o##r_#c#ou#n#t##ry = #{
+				##t#ag = ##s#oV
+			#}
+			##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = 15 #}
+		##i#f= #{ ##n#e#ig#h#B##o##r ##s#oV #B#e#i#ng #a#t w#a##r w#i#t#h ##BULg#a##r#i#a ##o##r #h#e##r #all#i#e#s ##i#s c##r#i#t#ic#al
+			#l#i#m#i#t = #{
+				##o##r = #{
+					###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+						###h#a#s_w#a##r_w#i#t#h = ##s#oV
+					#}
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+				#}			
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = #100 #}
+		#}
+	#}
+
+	##i#f = #{ ###s#oV #B#e#i#ng c#o#m#mu#n##i#s#t ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty = 15 #}
+	#}
+
+	###r#a#n#d#o#m#iz#e_#t#e#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_##r#a#n#d#o#m_#f#f_#f##o##r##m#i#ng_c#h#a#nc#e
+		##d##i#s#t##r#i#Bu#t#i#o#n = #B#i#n#o#m#i#al
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+
+	##i#f = #{
+		#l#i#m#i#t = #{
+			#c#h#eck_#v#a##r#i#a#Bl#e = #{
+				#v#a##r = ##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty
+				#v#alu#e = ##BUL_##r#a#n#d#o#m_#f#f_#f##o##r##m#i#ng_c#h#a#nc#e 
+				#c#o#m#p#a##r#e = g##r#e#a#t#e##r_#t#h#a#n_##o##r_#equ#al#s 
+			#}
+		#}
+		##c#ou#n#t##ry_#ev#e#n#t = #{ #i#d = #B#f#t#B_##BULg#a##r#i#a_#f#a#t#h#e##rl#a#n#d_#f##r#o#n#t.1 #h#ou##r#s = 16 ##r#a#n#d#o#m_#h#ou##r#s = 16 #}
+	#}
+	#l#og = "#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p##r#o#B#a#B#il#i#ty: [?##BUL.##BUL_#f#f_#f##o##r##m#i#ng_#p##r#o#B#a#B#il#i#ty]"
+	#l#og = "#f#a#t#h#e##rl#a#n#d #f##r#o#n#t ##r#a#n#d#o#m c#h#a#nc#e: [?##BUL.##BUL_##r#a#n#d#o#m_#f#f_#f##o##r##m#i#ng_c#h#a#nc#e]"
+#}
+
+##BUL_#f#f_#a#p#p##r#o#ac#h#e#s_#a_#f#ac#t#i#o#n_#e#f#f#ec#t = #{
+
+	###r#a#n#d#o#m#iz#e_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_##r#a#n#d#o#m_#f#f_#a#p#p##r#o#ac#h#i#ng_#f#ac#t#i#o#n_c#h#a#nc#e
+		##d##i#s#t##r#i#Bu#t#i#o#n = #B#i#n#o#m#i#al
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+	#l#og = "#f#f #a#p#p##r#o#ac#h#e#s #f#ac#t#i#o#n ##r#a#n#d#o#m c#h#a#nc#e: [?##BUL.##BUL_##r#a#n#d#o#m_#f#f_#a#p#p##r#o#ac#h#i#ng_#f#ac#t#i#o#n_c#h#a#nc#e]"
+#}
+
+##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n_#t#ak#e#n = #{
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_#ag#a#i#n#s#t_c#ou#p = ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_#B#a#s#e_#v#alu#e #}
+	#cl#a#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_#ag#a#i#n#s#t_c#ou#p
+		##m#i#n = 0
+		##m#ax = ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_c#a#p_#v#alu#e ##t#h##i#s c#a#p#s #t#h#e #pl#ay#e##r'#s #a#B#il#i#ty #t#o #p##r#ev#e#n#t #t#h#e c#ou#p
+	#}
+	#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n_#t#ak#e#n_#t#t
+#}
+
+##BUL_#f#f_#t##r#i#e#s_#t#o_#s##t#ag#e_#a_c#ou#p_#e#f#f#ec#t = #{
+	##m#ak#e #su##r#e #t#h#e c#ou#p w#ill #s#t#a##r#t u#n#d#e##r #t#h#e #s#p#ec##i#f#ic c#i##rcu#m#s#t#a#nc#e#s #o#n #h##i#s#t##o##r#ic#al
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##i#s_#h##i#s#t##o##r#ic#al_#f#ocu#s_#o#n = y#e#s
+			##BUL_#h##i#s#t##o##r#ic#al_##r#equ#i##r#e#m#e#n#t#s_#m#e#t = y#e#s
+		#}
+		#l#og = "#f##o##rc#e#d #f#a#t#h#e##rl#a#n#d #f##r#o#n#t c#ou#p"
+		##c#ou#n#t##ry_#ev#e#n#t = #{ #i#d = #B#f#t#B_##BULg#a##r#i#a_#f#a#t#h#e##rl#a#n#d_#f##r#o#n#t.#2 #h#ou##r#s = 4 ##r#a#n#d#o#m_#h#ou##r#s = 4 #}
+		###s#e#t_#c#ou#n#t##ry_#fl#ag = ##BUL_#f##o##rc#e#d_#f#f_c#ou#p_#fl#ag
+	#}
+	###i#f #h##i#s#t##o##r#ic#al ##r#equ#i##r#e#m#e#n#t#s ##n#o#t #m#e#t, #d#o #a ##r#egul#a##r c#h#eck
+	##el#s#e = #{
+		##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = -#100 #} ##t#h#e c#ou#p w#ill #o#nly #h#a#p#p#e#n ##i#f #t#h##i#s #v#a##r#i#a#Bl#e #B#ec#o#m#e#s g##r#e#a#t#e##r #t#h#a#n 0 #du##r#i#ng #t#h##i#s c#h#eck
+
+		##i#f = #{ ##h#av#i#ng w#a##r ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+			#l#i#m#i#t = #{
+				###h#a#s_w#a##r = y#e#s
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 15 #}
+			##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t ##s#oV ##i#s #s#ig#n##i#f#ic#a#n#t
+				#l#i#m#i#t = #{
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+					##o##r = #{
+						##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#a#t_w#a##r_w#i#t#h_#t#h#e_##s#oV#i#e#t#s_#fl#ag #}
+						###h#a#s_#c#ou#n#t##ry_#fl#ag = #{ #fl#ag = ##BUL_#a#t_w#a##r_w#i#t#h_#t#h#e_##s#oV#i#e#t#s_#fl#ag #d#ay#s > 180 #}
+					#}
+				#}
+				##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = #10 #}
+				##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t c#o#m#mu#n##i#s#t ##s#oV ##i#s v#e##ry #i#m#p##o##r#t#a#n#t
+					#l#i#m#i#t = #{
+						##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+					#}
+					##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 40 #} ##p##r#ev 50
+				#}
+			#}
+		#}
+
+		##i#f = #{ ##a#n #ally #B#e#i#ng #a#t w#a##r w#i#t#h ##s#oV ##i#s #i#m#p##o##r#t#a#n#t
+			#l#i#m#i#t = #{
+				###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+				#}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = #10 #} ##p##r#ev #25
+			##i#f = #{ ###i#f ##s#oV ##i#s c#o#m#mu#n##i#s#t #t#h#e#n #i#t #B#ec#o#m#e#s v#e##ry #i#m#p##o##r#t#a#n#t
+				#l#i#m#i#t = #{
+					##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+				#}
+				##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 15 #} ##p##r#ev 75
+			#}
+		#}
+
+		##i#f = #{ #C#o#m#mu#n##i#s#t ##s#oV c#o#n#t##r#oll#i#ng ##a#ny #n#e#ig#h#B##o##r ##s#t#a#t#e ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+			#l#i#m#i#t = #{
+				###a#ny_#n#e#ig#h#B##o##r_#c#ou#n#t##ry = #{
+					##t#ag = ##s#oV
+				#}
+				###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 5 #}
+			##i#f = #{ ###s#oV c#o#n#t##r#ol#s #o#n#e #o#f #ou##r k#ey ##s#t#a#t#e#s
+				#l#i#m#i#t = #{
+					##s#oV = #{
+						###a#ny_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+							##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#i#n#i#t#i#al_##BULg#a##r#i#a#n_##s#t#a#t#e_#fl#ag
+							##i#s_#i#n_#h#o#m#e_#a##r#e#a = y#e#s
+						#}
+					#}
+				#}
+				##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 15 #}
+				##i#f= #{ ##n#e#ig#h#B##o##r ##s#oV #B#e#i#ng #a#t w#a##r w#i#t#h ##BULg#a##r#i#a ##o##r #h#e##r #all#i#e#s ##i#s c##r#i#t#ic#al
+					#l#i#m#i#t = #{
+						##o##r = #{
+							###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+								###h#a#s_w#a##r_w#i#t#h = ##s#oV
+							#}
+							###h#a#s_w#a##r_w#i#t#h = ##s#oV
+						#}			
+					#}
+					##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = #100 #}
+				#}
+			#}
+		#}
+
+		##i#f = #{ ###s#oV c#o#nqu#e##r#i#ng G#e##r#m##a#ny
+			#l#i#m#i#t = #{
+				##s#oV = #{
+					###a#ny_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+						##i#s_c##o##r#e_#o#f = G#e##r
+					#}
+				#}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 5 #}
+			##i#f = #{ ###s#oV c#o#nqu#e##r#i#ng #i#n#i#t#i#al G#e##r#m#a#n ##s#t#a#t#e#s
+				#l#i#m#i#t = #{
+					##s#oV = #{
+						###a#ny_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+							##i#s_c##o##r#e_#o#f = G#e##r
+							##n#o#t = #{
+								##s#t#a#t#e = 188
+								##s#t#a#t#e = 763
+								##s#t#a#t#e = 5
+								##s#t#a#t#e = 807
+								##s#t#a#t#e = 85
+							#}
+						#}
+					#}
+				#}
+				##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 15 #}
+			#}
+		#}
+
+		##i#f = #{ ###BUL l#o#s#i#ng k#ey #t#e##r##r#i#t##o##ry
+			#l#i#m#i#t = #{
+				##a#ny_##s#t#a#t#e = #{
+					##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#i#n#i#t#i#al_##BULg#a##r#i#a#n_##s#t#a#t#e_#fl#ag
+					#c#o#n#t##r#oll#e##r = #{
+						###h#a#s_w#a##r_w#i#t#h = ###r#o#o#t
+					#}
+				#}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = 15 #}
+		#}
+
+		##i#f = #{ ###s#oV #B#e#i#ng c#o#m#mu#n##i#s#t ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+			#l#i#m#i#t = #{
+				##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty = #10 #} ##p##r#ev 15
+		#}
+
+		###r#a#n#d#o#m#iz#e_#t#e#m#p_#v#a##r#i#a#Bl#e = #{
+			#v#a##r = ##BUL_##r#a#n#d#o#m_#f#f_c#ou#p_c#h#a#nc#e
+			##d##i#s#t##r#i#Bu#t#i#o#n = #B#i#n#o#m#i#al
+			##m#i#n = 0
+			##m#ax = #100
+		#}
+
+		##i#f = #{
+			#l#i#m#i#t = #{
+				#c#h#eck_#v#a##r#i#a#Bl#e = #{
+					#v#a##r = ##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty
+					#v#alu#e = ##BUL_##r#a#n#d#o#m_#f#f_c#ou#p_c#h#a#nc#e 
+					#c#o#m#p#a##r#e = g##r#e#a#t#e##r_#t#h#a#n_##o##r_#equ#al#s 
+				#}
+			#}
+			##c#ou#n#t##ry_#ev#e#n#t = #{ #i#d = #B#f#t#B_##BULg#a##r#i#a_#f#a#t#h#e##rl#a#n#d_#f##r#o#n#t.#2 #h#ou##r#s = 4 ##r#a#n#d#o#m_#h#ou##r#s = 4 #}
+		#}
+		#l#og = "[G#e#t#d#a#t#e#t#ex#t] - #f#a#t#h#e##rl#a#n#d #f##r#o#n#t c#ou#p #p##r#o#B#a#B#il#i#ty: [?##BUL.##BUL_#f#f_c#ou#p_#p##r#o#B#a#B#il#i#ty]"
+		#l#og = "[G#e#t#d#a#t#e#t#ex#t] - #f#a#t#h#e##rl#a#n#d #f##r#o#n#t c#ou#p ##r#a#n#d#o#m c#h#a#nc#e: [?##BUL.##BUL_##r#a#n#d#o#m_#f#f_c#ou#p_c#h#a#nc#e]"
+	#}
+#}
+
+##BUL_#s#t#a##r#t_#f#f_c#iv#il_w#a##r = #{
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_c#o#m#mu#n##i#s#t_#su#p#p##o##r#t_#B#e#f##o##r#e_cw = #p#a##r#ty_#p#o#pul#a##r#i#ty@c#o#m#mu#n##i#s#m #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.15 #}
+	##d#e#f#aul#t ##s#t#a#t#e
+	##i#f = #{
+		#l#i#m#i#t = #{
+			#c#o#n#t##r#ol#s_##s#t#a#t#e = #211
+		#}
+		#211 = #{ ##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #}
+	#}
+	##B#o#nu#s#e#s #f##r#o#m #B#s
+	##i#f = #{
+		#l#i#m#i#t = #{
+			###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#B#s_j#o#i#n#e#d_#f#f_#fl#ag 
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.05 #}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#B#s_#d#e#s#t##r#oy#e#d_#fl#ag #}
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#B#s_#i#n#t#eg##r#a#t#e#d_#fl#ag #}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.05 #}
+			#21#2 = #{ ##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #}
+		#}
+	#}
+	##B#o#nu#s#e#s #f##r#o#m #BZ#n#s
+	##i#f = #{
+		#l#i#m#i#t = #{
+			###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#Bz#n#s_j#o#i#n#e#d_#f#f_#fl#ag 
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.05 #}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#Bz#n#s_#d#e#s#t##r#oy#e#d_#fl#ag #}
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#Bz#n#s_#i#n#t#eg##r#a#t#e#d_#fl#ag #}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.05 #}
+			#801 = #{ ##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #} 
+		#}
+	#}
+	##B#o#nu#s#e#s #f##r#o#m G##r#e#ek #p#a##r#t##i#s#a#n#s
+	##i#f = #{
+		#l#i#m#i#t = #{
+			###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_##o##rg#a#n#iz#e#d_g##r#e#ek_#p#a##r#t##i#s#a#n#s_#fl#ag
+		#}
+		##ev#e##ry_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+			#l#i#m#i#t = #{
+				##i#s_c##o##r#e_#o#f = G##r#e
+				##i#s_c##o##r#e_#o#f = ##BUL
+			#}
+			##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ 
+					###a#ny_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+						##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+						##i#s_c##o##r#e_#o#f = G##r#e
+					#}
+				#}
+			#}
+			###r#a#n#d#o#m_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##i#s_c##o##r#e_#o#f = G##r#e
+				#}
+				##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+			#}
+		#}
+	#}
+	##B#o#nu#s#e#s #f##r#o#m Yug#o#sl#av#i#a#n #p#a##r#t##i#s#a#n#s
+	##i#f = #{
+		#l#i#m#i#t = #{
+			###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_##o##rg#a#n#iz#e#d_yug#o#sl#av#i#a#n_#p#a##r#t##i#s#a#n#s_#fl#ag
+		#}
+		##ev#e##ry_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+			#l#i#m#i#t = #{
+				##i#s_c##o##r#e_#o#f = YUG
+				##i#s_c##o##r#e_#o#f = ##BUL
+				##n#o#t = #{ ##s#t#a#t#e = #106 #}
+			#}
+			##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ 
+					###a#ny_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+						##i#s_c##o##r#e_#o#f = YUG
+						##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+					#}
+				#}
+			#}
+			###r#a#n#d#o#m_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##i#s_c##o##r#e_#o#f = YUG
+					##n#o#t = #{ ##s#t#a#t#e = #106 #}
+				#}
+				##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+			#}
+		#}
+	#}
+	##B#o#nu#s#e#s #f##r#o#m ZV#e#n#o
+	##i#f = #{
+		#l#i#m#i#t = #{
+			###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_zv#e#n#o_j#o#i#n#e#d_#f#f_#fl#ag 
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.1 #}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_zv#e#n#o_#d#e#s#t##r#oy#e#d_#fl#ag #}
+				##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_zv#e#n#o_#i#n#t#eg##r#a#t#e#d_#fl#ag #}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_c#ou#p_##s#iz#e = 0.#25 #}
+			#48 = #{ ##s#e#t_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #} 
+			##m#a#n#ag#e #c#a#p#i#t#al #f##o##r ##o##r#ig#i#n#al ##BUL
+			##i#f = #{
+				#l#i#m#i#t = #{
+					##a#ny_#ow#n#e#d_##s#t#a#t#e = #{
+						##i#s_c##o##r#e_#o#f = ###r#o#o#t
+						##n#o#t = #{ ##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #}
+					#}
+				#}
+				###r#a#n#d#o#m_#ow#n#e#d_##s#t#a#t#e = #{
+					#l#i#m#i#t = #{
+						##i#s_c##o##r#e_#o#f = ###r#o#o#t
+						##n#o#t = #{ ##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #}
+					#}
+					###r#o#o#t = #{ ##s#e#t_#c#a#p#i#t#al = #{ ##s#t#a#t#e = #p##r#eV #} #}
+				#}
+			#}
+			##el#s#e = #{
+				###r#a#n#d#o#m_c#o#n#t##r#oll#e#d_##s#t#a#t#e = #{
+					#l#i#m#i#t = #{
+						##n#o#t = #{ ##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #}
+					#}
+					###r#o#o#t = #{ ##s#e#t_#c#a#p#i#t#al = #{ ##s#t#a#t#e = #p##r#eV #} #}
+				#}
+			#}
+		#}
+	#}
+
+	#l#og = "#f#a#t#h#e##rl#a#n#d c#ou#p ##s#iz#e: [?##BUL.##BUL_#f#f_c#ou#p_##s#iz#e]"
+
+	##s#e#t #f#f #c#a#p#i#t#al #B#a#s#e#d #o#n #t#h#e ##s#t#a#t#e#s #t#h#ey g#e#t #i#n #t#h#e #s#pl#i#t
+	##i#f = #{
+		#l#i#m#i#t = #{
+			#48 = #{ ##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #} ##s#o#f#i#a ##i#s #f#f'#s #c#a#p#i#t#al
+		#}
+		##s#t#a##r#t C#iV#iL W#a##r
+		##s#t#a##r#t_c#iv#il_w#a##r = #{
+			#i#d#e#o#l#ogy = c#o#m#mu#n##i#s#m
+			##s#iz#e = ##BUL_#f#f_c#ou#p_##s#iz#e
+			#c#a#p#i#t#al = #48
+			##s#t#a#t#e#s = #all
+			##s#t#a#t#e#s_#f#il#t#e##r = #{
+				##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+			#}
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			#21#2 = #{ ##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag #} ##pl#ov##d#iv ##i#s #f#f'#s #c#a#p#i#t#al
+		#}
+		##s#t#a##r#t C#iV#iL W#a##r
+		##s#t#a##r#t_c#iv#il_w#a##r = #{
+			#i#d#e#o#l#ogy = c#o#m#mu#n##i#s#m
+			##s#iz#e = ##BUL_#f#f_c#ou#p_##s#iz#e
+			#c#a#p#i#t#al = #21#2
+			##s#t#a#t#e#s = #all
+			##s#t#a#t#e#s_#f#il#t#e##r = #{
+				##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+			#}
+		#}
+	#}
+	##el#s#e = #{	##v#a##r#n#a ##i#s #f#f'#s #c#a#p#i#t#al
+		##s#t#a##r#t C#iV#iL W#a##r
+		##s#t#a##r#t_c#iv#il_w#a##r = #{
+			#i#d#e#o#l#ogy = c#o#m#mu#n##i#s#m
+			##s#iz#e = ##BUL_#f#f_c#ou#p_##s#iz#e
+			#c#a#p#i#t#al = #211
+			##s#t#a#t#e#s = #all
+			##s#t#a#t#e#s_#f#il#t#e##r = #{
+				##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+			#}
+		#}
+	#}
+
+	#cl##r_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#ac#t#i#o#n#s_u#nl#ock#e#d_#fl#ag
+
+	###r#a#n#d#o#m_#c#ou#n#t##ry = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = ##BUL
+			###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m
+			##n#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_c#iv#il_w#a##r_#fl#ag #}
+		#}
+		###s#e#t_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#a#t#h#e##rl#a#n#d_#f##r#o#n#t_#fl#ag
+		##s#e#t_c#o#s#m#e#t#ic_##t#ag = ##BUL_#f#f_##BULg#a##r#i#a
+
+		##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = #{
+			##n#a#m#e = "#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a"
+			#p##r#i##o##r#i#ty = 1
+			##i#s_l#ock#e#d = y#e#s
+			##d#iv##i#s#i#o#n_##n#a#m#e#s_g##r#ou#p = ##BUL_#i#n#f_04
+			###r#eg#i#m#e#n#t#s = #{
+				##i#n#f#a#n#t##ry = #{ x = 0 y = 0 #}
+				##i#n#f#a#n#t##ry = #{ x = 0 y = 1 #}
+				##i#n#f#a#n#t##ry = #{ x = 0 y = #2 #}
+			#}
+		#}
+
+		##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = #{
+			##n#a#m#e = "#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p#a##r#t##i#s#a#n#s"
+			#p##r#i##o##r#i#ty = 1
+			##i#s_l#ock#e#d = y#e#s
+			##d#iv##i#s#i#o#n_##n#a#m#e#s_g##r#ou#p = ##BUL_#i#n#f_06
+			###r#eg#i#m#e#n#t#s = #{
+				##i#n#f#a#n#t##ry = #{ x = 0 y = 0 #}
+				##i#n#f#a#n#t##ry = #{ x = 0 y = 1 #}
+				##i#n#f#a#n#t##ry = #{ x = 0 y = 1 #}
+			#}
+		#}
+
+		##s#p#aw#n #f#a#t#h#e##rL#a#n#d #f##r#o#n#t #m#iL#i#t#i#a#s
+		#C##o##r#e#d ##s#t#a#t#e#s
+		##ev#e##ry_#ow#n#e#d_##s#t#a#t#e = #{
+			#l#i#m#i#t = #{
+				##o##r = #{
+					##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#i#n#i#t#i#al_##BULg#a##r#i#a#n_##s#t#a#t#e_#fl#ag
+					##s#t#a#t#e = #803 ##s#ou#t#h#e##r#n #s#e##r#B#i#a
+					##s#t#a#t#e = #77 ##d#o#B##ru#dj#a
+				#}
+			#}
+			#c##r#e#a#t#e_u#n#i#t = #{
+				##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.#25"  
+				##ow#n#e##r = #p##r#eV
+			#}
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				#c#h#eck_#v#a##r#i#a#Bl#e = #{ ##BUL_c#o#m#mu#n##i#s#t_#su#p#p##o##r#t_#B#e#f##o##r#e_cw = 15 #c#o#m#p#a##r#e = g##r#e#a#t#e##r_#t#h#a#n_##o##r_#equ#al#s #}
+			#}
+			##ev#e##ry_#ow#n#e#d_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#i#n#i#t#i#al_##BULg#a##r#i#a#n_##s#t#a#t#e_#fl#ag
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.15"  
+					##ow#n#e##r = #p##r#eV
+				#}
+			#}
+			##i#f = #{
+				#l#i#m#i#t = #{
+					#c#h#eck_#v#a##r#i#a#Bl#e = #{ ##BUL_c#o#m#mu#n##i#s#t_#su#p#p##o##r#t_#B#e#f##o##r#e_cw = 30 #c#o#m#p#a##r#e = g##r#e#a#t#e##r_#t#h#a#n_##o##r_#equ#al#s #}
+				#}
+				##ev#e##ry_#ow#n#e#d_##s#t#a#t#e = #{
+					#l#i#m#i#t = #{
+						##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#i#n#i#t#i#al_##BULg#a##r#i#a#n_##s#t#a#t#e_#fl#ag
+					#}
+					#c##r#e#a#t#e_u#n#i#t = #{
+						##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.1"  
+						##ow#n#e##r = #p##r#eV
+					#}
+				#}
+			#}
+		#}
+		##B#o#nu#s #f##r#o#m #B#s #i#n #t#h#e #f#f
+		##i#f = #{
+			#l#i#m#i#t = #{
+				###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#B#s_j#o#i#n#e#d_#f#f_#fl#ag 
+				#ow#n#s_##s#t#a#t#e = #21#2
+			#}
+			#21#2 = #{
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.15"  
+					##ow#n#e##r = #p##r#eV
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.15"  
+					##ow#n#e##r = #p##r#eV
+				#}
+			#}
+		#}
+		##B#o#nu#s #f##r#o#m #BZ#n#s #i#n #t#h#e #f#f
+		##i#f = #{
+			#l#i#m#i#t = #{
+				###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#B#s_j#o#i#n#e#d_#f#f_#fl#ag 
+				#ow#n#s_##s#t#a#t#e = #801
+			#}
+			#801 = #{
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.1"  
+					##ow#n#e##r = #p##r#eV
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #m#il#i#t#i#a\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.1"  
+					##ow#n#e##r = #p##r#eV
+				#}
+			#}
+		#}
+
+		#G##r#e#ek ##s#t#a#t#e#s
+		##i#f = #{
+			#l#i#m#i#t = #{ 
+				###r#o#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_##o##rg#a#n#iz#e#d_g##r#e#ek_#p#a##r#t##i#s#a#n#s_#fl#ag #}
+			#}
+			#G##r#e#ek c#o#n#t##r#oll#e#d ##s#t#a#t#e#s
+			##ev#e##ry_#ow#n#e#d_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+					##i#s_c##o##r#e_#o#f = G##r#e
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p#a##r#t##i#s#a#n#s\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.#2" 
+					##ow#n#e##r = #p##r#eV
+					#c#ou#n#t = 1
+				#}
+			#}
+			#G##r#e#ek #n#o#n-c#o#n#t##r#oll#e#d ##s#t#a#t#e#s
+			##r#a#n#d#o#m_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##ow#n#e##r = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_c#iv#il_w#a##r_#fl#ag #}
+					##i#s_c##o##r#e_#o#f = G##r#e
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p#a##r#t##i#s#a#n#s\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.4"
+					##ow#n#e##r = #p##r#eV
+					#all#ow_#s#p#aw#n#i#ng_#o#n_##e#n#e#my_#p##r#ov#s = y#e#s
+					#c#ou#n#t = #2
+				#}
+			#}
+		#}
+		
+		#Yug#o#sl#av#i#a#n ##s#t#a#t#e#s
+		##i#f = #{
+			#l#i#m#i#t = #{ 
+				###r#o#o#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_##o##rg#a#n#iz#e#d_yug#o#sl#av#i#a#n_#p#a##r#t##i#s#a#n#s_#fl#ag #}
+			#}
+			#Yug#o#sl#av#i#a#n c#o#n#t##r#oll#e#d ##s#t#a#t#e#s
+			##ev#e##ry_#ow#n#e#d_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##h#a#s_##s#t#a#t#e_#fl#ag = ##BUL_#f#f_##s#t#a#t#e_#fl#ag
+					##i#s_c##o##r#e_#o#f = YUG
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p#a##r#t##i#s#a#n#s\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.#2" 
+					##ow#n#e##r = #p##r#eV
+					#c#ou#n#t = 1
+				#}
+			#}
+			#Yug#o#sl#av#i#a#n #n#o#n-c#o#n#t##r#oll#e#d ##s#t#a#t#e#s
+			##r#a#n#d#o#m_##s#t#a#t#e = #{
+				#l#i#m#i#t = #{
+					##ow#n#e##r = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_c#iv#il_w#a##r_#fl#ag #}
+					##i#s_c##o##r#e_#o#f = YUG
+				#}
+				#c##r#e#a#t#e_u#n#i#t = #{
+					##d#iv##i#s#i#o#n = "##d#iv##i#s#i#o#n_#t#e#m#pl#a#t#e = \"#f#a#t#h#e##rl#a#n#d #f##r#o#n#t #p#a##r#t##i#s#a#n#s\" #s#t#a##r#t_#ex#p#e##r#i#e#nc#e_#f#ac#t##o##r = 0.4"
+					##ow#n#e##r = #p##r#eV
+					#all#ow_#s#p#aw#n#i#ng_#o#n_##e#n#e#my_#p##r#ov#s = y#e#s
+					#c#ou#n#t = #2
+				#}
+			#}
+		#}
+
+		#G#e#n#e##r#al#s
+		##ev#e##ry_u#n#i#t_l#e#a#d#e##r = #{
+			#l#i#m#i#t = #{
+				##n#o#t = #{ ##h#a#s_#t##r#a#i#t = #t##r#a#i#t_##BUL_#f#f_#sy#m#p#a#t#h#iz#e##r #}
+			#}
+			##s#e#t_#n#a#t#i#o#n#al#i#ty = ###r#o#o#t
+		#}
+		###r#o#o#t = #{
+			##ev#e##ry_u#n#i#t_l#e#a#d#e##r = #{
+				#l#i#m#i#t = #{
+					##h#a#s_#t##r#a#i#t = #t##r#a#i#t_##BUL_#f#f_#sy#m#p#a#t#h#iz#e##r
+				#}
+				##s#e#t_#n#a#t#i#o#n#al#i#ty = #p##r#eV.#p##r#eV
+			#}
+		#}
+		##r#a#n#d#o#m_u#n#i#t_l#e#a#d#e##r = #{
+			#l#i#m#i#t = #{
+				##h#a#s_#i#d = 1#203 ##h#a#dz#h#i#p#e#tk#ov
+			#}
+			#p##r#o#m#o#t#e_l#e#a#d#e##r = y#e#s
+		#}
+
+		##o#p#e##r#a#t#iv#e#s #i#n #t#h#e #f#f
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##h#a#s_#dlc = "L#a ##r#e#s##i#s#t#a#nc#e"
+			#}
+			#ev#e##ry_#o#p#e##r#a#t#iv#e = #{
+				#l#i#m#i#t = #{
+					##h#a#s_#t##r#a#i#t = #t##r#a#i#t_##BUL_#t#s#a##r_l#oy#al##i#s#t
+				#}
+				##s#e#t_#n#a#t#i#o#n#al#i#ty = ##BUL
+			#}
+		#}
+	#}
+	##o#p#e##r#a#t#iv#e#s #i#n ##o##r#ig#i#n#al ##BUL
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#dlc = "L#a ##r#e#s##i#s#t#a#nc#e"
+		#}
+		#ev#e##ry_#o#p#e##r#a#t#iv#e = #{
+			#l#i#m#i#t = #{
+				##h#a#s_#t##r#a#i#t = #t##r#a#i#t_##BUL_#f#f_#sy#m#p#a#t#h#iz#e##r
+			#}
+			##s#e#t_#n#a#t#i#o#n#al#i#ty = #BU#f
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_zv#e#n#o_j#o#i#n#e#d_#f#f_#fl#ag
+			#}
+			#ev#e##ry_#o#p#e##r#a#t#iv#e = #{
+				#l#i#m#i#t = #{
+					##h#a#s_#t##r#a#i#t = #t##r#a#i#t_##BUL_zv#e#n#o_#m#e#m#B#e##r
+				#}
+				##s#e#t_#n#a#t#i#o#n#al#i#ty = #BU#f
+			#}
+		#}
+	#}
+
+	##f#f j#o#i#n#s ##s#oV'#s #f#ac#t#i#o#n #a#n#d w#a##r#s #a#n#d g#iv#e #m#il#i#t#a##ry #acc#e#s#s
+	##i#f = #{
+		#l#i#m#i#t = #{
+			#c#ou#n#t##ry_#ex##i#s#t#s = ##s#oV
+			###h#a#s_w#a##r_w#i#t#h = ##s#oV
+			##s#oV = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##s#oV = #{ ##i#s_#i#n_#f#ac#t#i#o#n = y#e#s #}
+			#}
+			##s#oV = #{
+				#f#ac#t#i#o#n_l#e#a#d#e##r = #{
+					##a#d#d_#t#o_#f#ac#t#i#o#n = #BU#f
+				#}
+			#}
+		#}
+		##i#f = #{
+			#l#i#m#i#t = #{
+				##a#ny_#c#ou#n#t##ry = #{
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+					##i#s_#i#n_#f#ac#t#i#o#n_w#i#t#h = ##BUL
+					##n#o#t = #{	###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_c#iv#il_w#a##r_#fl#ag #}
+				#}
+			#}
+			#ev#e##ry_#c#ou#n#t##ry = #{
+				#l#i#m#i#t = #{
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+					##i#s_#i#n_#f#ac#t#i#o#n_w#i#t#h = ##BUL
+					##n#o#t = #{	###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#f_c#iv#il_w#a##r_#fl#ag #}
+				#}
+				#BU#f = #{
+					##a#d#d_#t#o_w#a##r = #{ #t#a##rg#e#t#e#d_#all#i#a#nc#e = ##s#oV ##e#n#e#my = #p##r#eV #h#o#s#t#il#i#ty_##r#e#a#s#o#n = #a#sk#e#d_#t#o_j#o#i#n #}
+				#}
+			#}
+		#}
+	#}
+	#d#i#pl#o#m#a#t#ic_##r#el#a#t#i#o#n = #{
+		#c#ou#n#t##ry = ##s#oV
+		##r#el#a#t#i#o#n = #m#il#i#t#a##ry_#acc#e#s#s
+		#ac#t#iv#e = y#e#s
+	#}
+	##s#oV = #{
+		#d#i#pl#o#m#a#t#ic_##r#el#a#t#i#o#n = #{
+			#c#ou#n#t##ry = #BU#f
+			##r#el#a#t#i#o#n = #m#il#i#t#a##ry_#acc#e#s#s
+			#ac#t#iv#e = y#e#s
+		#}
+	#}
+#}
+
+##BUL_g#e#t_##r#a#n#d#o#m_##BULg#a##r#i#a#n_#d#e#s#t#i#n#a#t#i#o#n_##r#oy#al_v##i#s#i#t = #{ ##t#h##i#s w##o##rk#s #t#og#e#t#h#e##r w#i#t#h #sc##r#i#p#t#e#d l#oc
+	##r#a#n#d#o#m_l##i#s#t = #{
+		#10 = #{
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				#48 = #{ ##i#s_#c#a#p#i#t#al = y#e#s #} ##n#o #p#o#i#n#t #o#n v##i#s#i#t#i#ng y#ou##r #ow#n c#i#ty...
+			#}
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 1 #} # #s#o#f#i#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = #2 #} # #pl#ov##d#iv
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 3 #} # ##ru#s#e
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 4 #} # #v#a##r#n#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 5 #} # #Bu##rg#a#s
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 6 #} # V#i#d#i#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 7 #} # #t#a##r#n#ov#o
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 8 #} # #s#t#a##r#a Z#ag##o##r#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 9 #} # ##h#a#sk#ov#o
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = #10 #} # #s#hu#m#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 11 #} # #sl#iv#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 1#2 #} # Y#a#m#B#ol
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 13 #} # #pl#ev#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 14 #} # #d#o#B##r#ic#h
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#77 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 15 #} # #sk#o#pj#e
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#106 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 16 #} # #o#h##r#i#d
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#106 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n = 17 #} # L#e#sk#ov#ac
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#803 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+	#}
+#}
+
+##BUL_g#e#t_##r#a#n#d#o#m_##BULg#a##r#i#a#n_#d#e#s#t#i#n#a#t#i#o#n_#m#a##rc#h = #{ ##t#h##i#s w##o##rk#s #t#og#e#t#h#e##r w#i#t#h #sc##r#i#p#t#e#d l#oc
+	##r#a#n#d#o#m_l##i#s#t = #{
+		#10 = #{
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				#48 = #{ ##i#s_#c#a#p#i#t#al = y#e#s #} ##n#o #p#o#i#n#t #o#n #m#a##rc#h#i#ng #f##r#o#m #s#o#f#i#a #t#o #s#o#f#i#a...
+			#}
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 1 #} # #s#o#f#i#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = #2 #} # #pl#ov##d#iv
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 3 #} # ##ru#s#e
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 4 #} # #v#a##r#n#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 5 #} # #Bu##rg#a#s
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 6 #} # V#i#d#i#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 7 #} # #t#a##r#n#ov#o
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 8 #} # #s#t#a##r#a Z#ag##o##r#a
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 9 #} # ##h#a#sk#ov#o
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = #10 #} # #s#hu#m#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 11 #} # #sl#iv#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 1#2 #} # Y#a#m#B#ol
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 13 #} # #pl#ev#e#n
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 14 #} # #d#o#B##r#ic#h
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#77 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 15 #} # #sk#o#pj#e
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#106 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 16 #} # #o#h##r#i#d
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#106 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+		#10 = #{
+			##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n = 17 #} # L#e#sk#ov#ac
+			#m#o#d##i#f#i#e##r = #{
+				#f#ac#t##o##r = 0
+				##n#o#t = #{
+					#803 = #{
+						##i#s_#ow#n#e#d_#By = ##BUL
+						##i#s_c##o##r#e_#o#f = ##BUL
+					#}
+				#}
+			#}
+		#}
+	#}
+#}
+
+##BUL_##r#e#pl#ac#e_#n#a#t#i#o#n#al_#i#n#du#s#t##r#i#al_#d#e#s#ig#n#e##r = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a =  ##BUL_#p#e#t##r#ol_#a#d
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p#e#t##r#ol_#a#d
+			##a#d#d_#i#d#e#a = ##BUL_#p#e#t##r#ol_#a#d_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#i##r#a
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#i##r#a
+			##a#d#d_#i#d#e#a = ##BUL_#i##r#a_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p#i##r#i#n
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p#i##r#i#n
+			##a#d#d_#i#d#e#a = ##BUL_#p#i##r#i#n_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_vulk#a#n_c#e#m#e#n#t
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_vulk#a#n_c#e#m#e#n#t
+			##a#d#d_#i#d#e#a = ##BUL_vulk#a#n_c#e#m#e#n#t_#i#m#p##r#ov#e#d
+		#}
+	#}	
+#}
+
+##BUL_##r#e#pl#ac#e_#n#a#t#i#o#n#al_#n#av#al_#d#e#s#ig#n#e##r = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#v#a##r#n#a_#n#av#al_#d#ocky#a##r#d
+		#}
+		#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_##r#e#pl#ac#e_#n#a#t#i#o#n#al_#n#av#al_#d#e#s#ig#n#e##r_#t#t
+		#h#i#d#d#e#n_#e#f#f#ec#t = #{
+			#sw#a#p_#i#d#e#a#s = #{
+				##r#e#m#ov#e_#i#d#e#a = ##BUL_#v#a##r#n#a_#n#av#al_#d#ocky#a##r#d
+				##a#d#d_#i#d#e#a = ##BUL_#v#a##r#n#a_#n#av#al_#d#ocky#a##r#d_#i#m#p##r#ov#e#d
+			#}
+		#}
+	#}
+	##el#s#e = #{
+		#cu#s#t#o#m_#e#f#f#ec#t_#t#o#ol#t#i#p = ##BUL_##r#e#pl#ac#e_#n#a#t#i#o#n#al_#n#av#al_#d#e#s#ig#n#e##r_#t#t
+	#}
+#}
+
+##BUL_##r#e#pl#ac#e_#n#a#t#i#o#n#al_#a#i##rc##r#a#f#t_#d#e#s#ig#n#e##r = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#d#a##r
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#d#a##r
+			##a#d#d_#i#d#e#a = ##BUL_#d#a##r_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_k#a#p##r#o#n#i_##BULg#a##r#sk#i
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_k#a#p##r#o#n#i_##BULg#a##r#sk#i
+			##a#d#d_#i#d#e#a = ##BUL_k#a#p##r#o#n#i_##BULg#a##r#sk#i_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#dv#f
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#dv#f
+			##a#d#d_#i#d#e#a = ##BUL_#dv#f_#i#m#p##r#ov#e#d
+		#}
+	#}
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#dv#f_#s#o#p#o#t
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#dv#f_#s#o#p#o#t
+			##a#d#d_#i#d#e#a = ##BUL_#dv#f_#s#o#p#o#t_#i#m#p##r#ov#e#d
+		#}
+	#}
+#}
+
+##BUL_##s#e#t_#Buz_#f#ac#t#i#o#n_#v#alu#e#s = #{
+	###s#e#t_#c#ou#n#t##ry_#fl#ag = ##BUL_#f#ac#t#i#o#n#s_u#nl#ock#e#d_#fl#ag
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_l#oy#al#ty = 15 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_zv#e#n#o_#p#o#pul#a##r#i#ty = 50 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_l#oy#al#ty = #25 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#B#s_#p#o#pul#a##r#i#ty = 60 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_l#oy#al#ty = 30 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#Bz#n#s_#p#o#pul#a##r#i#ty = 70 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_l#oy#al#ty = 60 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#n#s#m_#p#o#pul#a##r#i#ty = 40 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#i#n#t#e##r#ac#t#i#o#n_c#o#s#t_#s#t#a#n#d#a##r#d = #20 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#B##r#o#a#d_#s#oc#i#al##i#s#t_#o#p##r#e#s#s#i#o#n_c#o#s#t_#s#t#a#n#d#a##r#d = #20 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_l#ow = 7 #} ##all#ow #s#p#e#ec#h, #d##i#sc##r#e#d#i#t, ##r#e#p##r#e#s#s
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_l#ow = 14 #} #J#o#i#n#t #ac#t, #B#a#n #m#e#d#i#a, #a#n#t#i-#f#ac#t#i#o#n #s#p#e#ec#h
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#m#e#d#iu#m = #21 #} ##B#ol#s#t#e##r Zv#e#n#o, #i#m#p##r##i#s#o#n l#e#a#d#e##r#s
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#h#ig#h = 30 #} #L#eg#al#iz#e, #fu#n#d, #a#p#p#o#i#n#t, ##r#a#i#d, #d#e#s#t##r#oy
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_#h#ig#h = 60 #} ##i#n#t#eg##r#a#t#e
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_l#ow = 7 #} ##all#ow #s#p#e#ec#h, #d##i#sc##r#e#d#i#t
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#m#e#d#iu#m = 14 #} #J#o#i#n#t #ac#t, #a#n#t#i-#f#ac#t#i#o#n #s#p#e#ec#h
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#h#ig#h = 60 #} ##fu#n#d
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_v#e##ry_#h#ig#h = 1#20 #} ###r#a#i#d
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_l#ow_#i#nc##r#e#a#s#e = 5 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#i#nc##r#e#a#s#e = #10 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#h#ig#h_#i#nc##r#e#a#s#e = 15 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_l#ow_#d#ec##r#e#a#s#e = -5 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#m#e#d#iu#m_#d#ec##r#e#a#s#e = -#10 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#h#ig#h_#d#ec##r#e#a#s#e = -15 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#m##i#s#s#i#o#n#s_#B#a#s#e_#d#ay#s_#t#o_##a#d#d = 60 #} ##B#a#s#e #a#m#ou#n#t #o#f #d#ay#s #t#o #B#e ##a#d#d#e#d #t#o #i#m#p#e#n#d#i#ng #f#f C#ou#p #m##i#s#s#i#o#n
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#m##i#s#s#i#o#n#s_#p#o#pul#a##r#i#ty_#f#ac#t##o##r = 1 #} ##m##o##r#e #p#o#pul#a##r#i#ty #m#e#a#n#s #m##o##r#e #d#ay#s #t#o ##a#d#d
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#m##i#s#s#i#o#n#s_l#oy#al#ty_#f#ac#t##o##r = 1 #} ##m##o##r#e l#oy#al#ty #m#e#a#n#s l#e#s#s #d#ay#s #t#o ##a#d#d
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_#ag#a#i#n#s#t_c#ou#p = 0 #} ##t#h##i#s w#ill #B#e u#s#e#d #t#o ##r#e#duc#e #t#h#e c#h#a#nc#e#s #o#f #t#h#e #f#f #s##t#ag#i#ng #t#h#e c#ou#p #a#f#t#e##r #t#h#ey #h#av#e #pl#a#n#n#e#d #i#t
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_#B#a#s#e_#v#alu#e = 5 #} ##t#h#e #v#alu#e ##a#d#d#e#d #t#o #t#h#e #v#a##r#i#a#Bl#e #a#B#ov#e #ev#e##ry #t#i#m#e #a #d#ec##i#s#i#o#n #t#o #p##r#ev#e#n#t #t#h#e c#ou#p ##i#s #t#ak#e#n
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#f_#p##r#ev#e#n#t#iv#e_#ac#t#i#o#n#s_c#a#p_#v#alu#e = 50 #} ##t#h##i#s ##i#s #a c#a#p #t#o #t#h#e #pl#ay#e##r'#s #a#B#il#i#ty #t#o #p##r#ev#e#n#t #t#h#e c#ou#p
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#pu##rc##h#a#s#e_#equ#i#p#m#e#n#t_c#o#s#t = #25 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f##o##r#e#ig#n_#m#il#i#t#a##ry_#ag##r#e#e#m#e#n#t#s_c#o#s#t = 50 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_g#e##r#m#a#n_c#iv_#i#n#du#s#t##r#i#e#s_c#o#s#t = 75 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#B##r#i#t##i#s#h_c#iv_#i#n#du#s#t##r#i#e#s_c#o#s#t = 75 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_##s#oV#i#e#t_c#iv_#i#n#du#s#t##r#i#e#s_c#o#s#t = 75 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f##o##r#e#ig#n_#i#n#du#s#t##ry_c#o#n#su#m#e##r_g#o#o#d#s_#m#o#d##i#f#i#e##r = 0 #} #U#s#e#d #By #f##o##r#e#ig#n #i#n#du#s#t##ry #dy#n#a#m#ic #m#o#d##i#f#i#e##r
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f##o##r#e#ig#n_#i#n#du#s#t##ry_#p##r#o#duc#t#i#o#n_#e#f#f#ic#i#e#ncy_#m#o#d##i#f#i#e##r = -0.05 #} #U#s#e#d #By #f##o##r#e#ig#n #i#n#du#s#t##ry #dy#n#a#m#ic #m#o#d##i#f#i#e##r
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#f##o##r#e#ig#n_#i#n#du#s#t##ry_c#o#n#s#t##ruc#t#i#o#n_#s#p#e#e#d_#m#o#d##i#f#i#e##r = -0.1 #} #U#s#e#d #By #f##o##r#e#ig#n #i#n#du#s#t##ry #dy#n#a#m#ic #m#o#d##i#f#i#e##r
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_g#e##r#m#a#n_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s = 0 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#B##r#i#t##i#s#h_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s = 0 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_##s#oV#i#e#t_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s = 0 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s_#B#a#s#ic_c#a#p = 3 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s_#m#e#d#iu#m_c#a#p = 5 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#i#n#du#s#t##r#i#al_#i#nv#e#s#t#m#e#n#t#s_##m#ax_c#a#p = #10 #}
+	##i#m##r#o
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#i#m##r#o_g#a##r##r##i#s#o#n#s_#m#p_#v#alu#e = 5000 #}
+	##pu##rc##h#a#s#e #f##o##r#e#ig#n #equ#i#p#m#e#n#t
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_##i#n#f#a#n#t##ry_#equ#i#p#m#e#n#t = #1000 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#a##r#t#ill#e##ry = #100 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#m#o#t##o##r#iz#e#d = #100 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#m#ec#h#a#n#iz#e#d = 50 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#a##r#m##o##r#e#d_c#a##r = 50 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_l#ig#h#t_#a##r#m##o##r = 40 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#m#e#d#iu#m_#a##r#m##o##r = #20 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#h#e#avy_#a##r#m##o##r = #10 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#f#ig#h#t#e##r = 40 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#n#av#al_#B#o#m#B#e##r = 30 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_qu#a#n#t#i#ty_#pu##rc##h#a#s#e#d_#t#ac#t#ic#al_#B#o#m#B#e##r = #20 #}
+	##pl#o#t #ag#a#i#n#s#t #B##o##r##i#s
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_##r#eg#ic#i#d#e_#ex#ecu#t#i#o#n_#t#i#m#e = 90 #}
+	##f##r#e#e #B#alk#a#n ##s#t#a#t#e#s #dy#n#a#m#ic #m#o#d##i#f#i#e##r (#n#s)
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#ou##r_#du#ty_#i#n_#t#h#e_#B#alk#a#n#s_c#o#n#su#m#e##r_g#o#o#d#s_#m#o#d##i#f#i#e##r = -0.01 #}
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#ou##r_#du#ty_#i#n_#t#h#e_#B#alk#a#n#s_#s#t#a#B#il#i#ty_#m#o#d##i#f#i#e##r = 0.05 #}
+	##m#o#n#t#hly #ex#t##r#a c#h#a#nc#e #o#f #B##o##r##i#s #d#i#e#i#ng #o#f "#n#a#tu##r#al c#au#s#e#s" (#i#nc##r#e#a#s#e#d #By 5 #e#ac#h #m#o#n#t#h #f##r#o#m 1943.1.1)
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#m#o#n#t#hly_#p##r#o#B#a#B#il#i#ty_#f#ac#t##o##r = 0 #}
+
+	###r#a#n#d#o#m#iz#e_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n
+		##d##i#s#t##r#i#Bu#t#i#o#n = u#n##i#f##o##r#m
+		##m#i#n = #2
+		##m#ax = 13
+	#}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#t#s#a##r#s_#d#e#s#t#i#n#a#t#i#o#n
+	###r#a#n#d#o#m#iz#e_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n
+		##d##i#s#t##r#i#Bu#t#i#o#n = u#n##i#f##o##r#m
+		##m#i#n = #2
+		##m#ax = 13
+	#}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#m#a##rc#h_#d#e#s#t#i#n#a#t#i#o#n
+#}
+
+###a#d#d#s #h#i#d#d#e#n #n#s g##r#a#n#t#i#ng #a#t#t#ack & #d#e#f#e#n#s#e #B#o#nu#s#e#s #ag#a#i#n#s#t #t#h#e #a#p#p##r#o#p##r#i#a#t#e #c#ou#n#t##ry (#f##r#o#m - #sc#o#p#e c#o#m#e#s #f##r#o#m "#t#h#e #a#n#t#i-#c#a#p#i#t#al##i#s#t #f#ig#h#t" ##o##r "#t#o#p#pl#i#ng G#i#a#n#t#s" #f#ocu#s)
+##BUL_##a#d#d_#h#i#d#d#e#n_#t#a##rg#e#t#e#d_#n#s = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #e#nG
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#e#ng
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #f##r#a
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#f##r#a
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = G#e##r
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_g#e##r
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #i#t#a
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#i#t#a
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = ##s#oV
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_##s#oV
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #p##o##r
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#p##o##r
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #s#p##r
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#s#p##r
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #i##r#e
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#i##r#e
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #h#oL
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#h#ol
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #B#eL
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#B#el
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = LUX
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_lux
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #sW#i
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#sw#i
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #aU#s
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#au#s
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = CZ#e
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_cz#e
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #hU#n
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#hu#n
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = YUG
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_yug
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #aL#B
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#al#B
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = G##r#e
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_g##r#e
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #tU##r
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#tu##r
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = ##r#o#m
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_##r#o#m
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #p#oL
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#p#ol
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #e#s#t
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#e#s#t
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = L#a#t
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_l#a#t
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = L#i#t
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_l#i#t
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #sW#e
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#sw#e
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #f#i#n
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#f#i#n
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #n##o##r
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#n##o##r
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##o##r#ig#i#n#al_##t#ag = #d#e#n
+		#}
+		###r#o#o#t = #{
+			##a#d#d_#i#d#e#a#s = ##BUL_#a#n#t#i_#c#a#p#i#t#al##i#s#m_#d#e#n
+		#}
+	#}
+#}
+
+##BUL_##a#d#d_#i#m#p##r#ov#e#d_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_#n#s = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_03
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_03
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_03
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_04
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_0#2
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_0#2
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_03
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_03
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+		#}
+	#}
+#}
+
+##BUL_##a#d#d_w#e#ak#e#n#e#d_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_#n#s = #{
+	##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_01
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_03
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_03
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_0#2
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_01
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_0#2
+		#}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_0#2
+		#}
+		#sw#a#p_#i#d#e#a#s = #{
+			##r#e#m#ov#e_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_0#2
+			##a#d#d_#i#d#e#a = ##BUL_#p##ru#s#s#i#a_#o#f_#t#h#e_#B#alk#a#n#s_w#e#ak#e#n#e#d_03
+		#}
+	#}
+#}
+
+##BUL_#t#s#a##r_#B##o##r##i#s_#m#ay_#d#i#e_#e#f#f#ec#t = #{
+	##s#e#t_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = -#100 #} ##B##o##r##i#s #m#ay #d#i#e #o#nly ##i#f #t#h##i#s #v#a##r#i#a#Bl#e #B#ec#o#m#e#s g##r#e#a#t#e##r #t#h#a#n 0 #du##r#i#ng #t#h##i#s c#h#eck
+
+	##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t #a #m#aj##o##r ##i#s ##r#el#a#t#iv#ely #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			##a#ny_##e#n#e#my_#c#ou#n#t##ry = #{
+				##i#s_#m#aj##o##r = y#e#s
+			#}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = 15 #}
+		##i#f = #{ ##h#av#i#ng w#a##r #ag#a#i#n#s#t #m#a#i#n #m#aj##o##r#s ##i#s #s#ig#n##i#f#ic#a#n#t
+			#l#i#m#i#t = #{
+				##o##r = #{
+					###h#a#s_w#a##r_w#i#t#h = ##s#oV
+					###h#a#s_w#a##r_w#i#t#h = G#e##r
+					###h#a#s_w#a##r_w#i#t#h = #e#nG
+				#}
+			#}
+			##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #10 #}
+		#}
+	#}
+
+	##i#f = #{ ##a#n #ally #B#e#i#ng #a#t w#a##r w#i#t#h ##s#oV w#h#il#e ##BUL ##i#s ##n#o#t ##i#s #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+				###h#a#s_w#a##r_w#i#t#h = ##s#oV
+			#}
+			##BUL = #{ ##n#o#t = #{ ###h#a#s_w#a##r_w#i#t#h = ##s#oV #} #}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #25 #}
+	#}
+
+	##i#f = #{ ##f#ac#t#i#o#n l#e#a#d#e##r #h#av#i#ng #d##i#f#f#e##r#e#n#t #i#d#e#o#l#ogy ##i#s #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			###a#ny_#all#i#e#d_#c#ou#n#t##ry = #{
+				##i#s_#f#ac#t#i#o#n_l#e#a#d#e##r = y#e#s
+				##n#o#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = ###r#o#o#t #}
+			#}
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #25 #}
+	#}
+
+	##i#f = #{ #L#ow #n#o#n-#al#ig#n#e#d #su#p#p##o##r#t ##i#s #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			#n#eu#t##r#al#i#ty < 0.1
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #25 #}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			#n#eu#t##r#al#i#ty < 0.#25
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #20 #}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			#n#eu#t##r#al#i#ty < 0.5
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = 15 #}
+	#}
+
+	##i#f = #{ #L#ow #s#t#a#B#il#i#ty #su#p#p##o##r#t ##i#s #i#m#p##o##r#t#a#n#t
+		#l#i#m#i#t = #{
+			##h#a#s_#s#t#a#B#il#i#ty < 0.1
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = 50 #}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#s#t#a#B#il#i#ty < 0.#25
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = 35 #}
+	#}
+	##el#s#e_##i#f = #{
+		#l#i#m#i#t = #{
+			##h#a#s_#s#t#a#B#il#i#ty < 0.5
+		#}
+		##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = #25 #}
+	#}
+
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty = ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#m#o#n#t#hly_#p##r#o#B#a#B#il#i#ty_#f#ac#t##o##r #}
+
+	###r#a#n#d#o#m#iz#e_#t#e#m#p_#v#a##r#i#a#Bl#e = #{
+		#v#a##r = ##BUL_##r#a#n#d#o#m_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_c#h#a#nc#e
+		##d##i#s#t##r#i#Bu#t#i#o#n = #B#i#n#o#m#i#al
+		##m#i#n = 0
+		##m#ax = #100
+	#}
+
+	##i#f = #{
+		#l#i#m#i#t = #{
+			#c#h#eck_#v#a##r#i#a#Bl#e = #{
+				#v#a##r = ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#p##r#o#B#a#B#il#i#ty
+				#v#alu#e = ##BUL_##r#a#n#d#o#m_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_c#h#a#nc#e 
+				#c#o#m#p#a##r#e = g##r#e#a#t#e##r_#t#h#a#n_##o##r_#equ#al#s 
+			#}
+		#}
+		##c#ou#n#t##ry_#ev#e#n#t = #{ #i#d = #B#f#t#B_##BULg#a##r#i#a_#t#s#a##r_#B##o##r##i#s.#2 #d#ay#s = 15 ##r#a#n#d#o#m_#d#ay#s = 13 #}
+	#}
+
+	##a#d#d_#t#o_#v#a##r#i#a#Bl#e = #{ ##BUL_#t#s#a##r_#B##o##r##i#s_#d#e#a#t#h_#m#o#n#t#hly_#p##r#o#B#a#B#il#i#ty_#f#ac#t##o##r = 5 #} ##i#nc##r#e#a#s#e 5% #e#ac#h #m#o#n#t#h.
+#}
+
+##BUL_#h#alv#e_#f#ac#t#i#o#n_#m#a#n#ag#e#m#e#n#t_#d#ec##i#s#i#o#n_#t#i#m#e#s = #{
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_l#ow = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_l#ow
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_l#ow = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_l#ow
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#m#e#d#iu#m = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#m#e#d#iu#m
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#h#ig#h = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_#h#ig#h
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_#h#ig#h = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#m#ov#e_v#e##ry_#h#ig#h
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_l#ow = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_l#ow
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#m#e#d#iu#m = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#m#e#d#iu#m
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#h#ig#h = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_#h#ig#h
+	##d#iv#i#d#e_#v#a##r#i#a#Bl#e = #{ ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_v#e##ry_#h#ig#h = #2 #}
+	##r#ou#n#d_#v#a##r#i#a#Bl#e = ##BUL_#f#ac#t#i#o#n_#d#ay#s_##r#e#e#n#a#Bl#e_v#e##ry_#h#ig#h
+#}
+
+##BUL_j#o#i#n_w#a##r#s_#o#f_#f##r#o#m = #{
+	#h#i#d#d#e#n_#e#f#f#ec#t = #{
+		#ev#e##ry_#o#t#h#e##r_#c#ou#n#t##ry = #{
+			#l#i#m#i#t = #{
+				###h#a#s_w#a##r_w#i#t#h = #f##r#o#m
+				##n#o#t = #{ ##i#s_#i#n_#f#ac#t#i#o#n_w#i#t#h = ###r#o#o#t #}
+			#}
+			###r#o#o#t = #{
+				##a#d#d_#t#o_w#a##r = #{
+					#t#a##rg#e#t#e#d_#all#i#a#nc#e = #f##r#o#m
+					##e#n#e#my = #p##r#eV
+					#h#o#s#t#il#i#ty_##r#e#a#s#o#n = #a#sk#e#d_#t#o_j#o#i#n
+				#}
+			#}
+		#}
+	#}
+#}
+
+##BUL_##r#e#m#ov#e_#B#alk#a#n_#o#p#i#n#i#o#n_#m#o#d##i#f#i#e##r#s = #{ ###r#equ#i##r#e#s #sc#o#p#i#ng #t#o #t#h#e #o#t#h#e##r #c#ou#n#t##ry j#o#i#n#i#ng ##BULg#a##r#i#a'#s #f#ac#t#i#o#n ##o##r #B#e#i#ng #pu#p#p#e#t#e#d #By ##BULg#a##r#i#a
+	#h#i#d#d#e#n_#e#f#f#ec#t = #{
+		##r#e#m#ov#e_#o#p#i#n#i#o#n_#m#o#d##i#f#i#e##r = #{
+			#t#a##rg#e#t = ##BUL
+			#m#o#d##i#f#i#e##r = #B#f#t#B_#B#alk#a#n_#p#ac#t_##e#n#e#my
+		#}
+		##r#e#m#ov#e_#o#p#i#n#i#o#n_#m#o#d##i#f#i#e##r = #{
+			#t#a##rg#e#t = ##BUL
+			#m#o#d##i#f#i#e##r = #B#f#t#B_#i#nc#o#ng##ru#ou#s_#n#e#ig#h#B##o##r#s
+		#}
+		##BUL = #{
+			##r#e#m#ov#e_#o#p#i#n#i#o#n_#m#o#d##i#f#i#e##r = #{
+				#t#a##rg#e#t = #p##r#eV
+				#m#o#d##i#f#i#e##r = #B#f#t#B_#i#nc#o#ng##ru#ou#s_#n#e#ig#h#B##o##r#s
+			#}
+		#}
+	#}
+#}
+
+##a#p#ply #a#p#p##r#o#p##r#i#a#t#e c#o#s#m#e#t#ic ##t#ag #s#o #t#h#a#t 3#d #m#o#d#el#s c#h#a#ng#e #B#a#s#e#d #o#n #i#d#e#o#l#ogy
+##BUL_##s#e#t_#a#p#p##r#o#p##r#i#a#t#e_c#o#s#m#e#t#ic_##t#ag = #{
+	##i#f = #{
+		#l#i#m#i#t = #{ ##o##r#ig#i#n#al_##t#ag = ##BUL #}
+		##i#f = #{
+			#l#i#m#i#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_#t#B#e_#fl#ag #}
+			##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = #t#B#e_#t#h#i##r#d_##BULg#a##r#i#a#n_#e#m#p#i##r#e_c#o#m#mu#n##i#s#m
+			#}
+			##el#s#e_##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = #d#e#m#oc##r#a#t#ic #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = #t#B#e_#t#h#i##r#d_##BULg#a##r#i#a#n_#e#m#p#i##r#e_#d#e#m#oc##r#a#t#ic
+			#}
+			##el#s#e_##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = #f#a#sc##i#s#m #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = #t#B#e_#t#h#i##r#d_##BULg#a##r#i#a#n_#e#m#p#i##r#e_#f#a#sc##i#s#m
+			#}
+			##el#s#e = #{
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = #t#B#e_#t#h#i##r#d_##BULg#a##r#i#a#n_#e#m#p#i##r#e_#n#eu#t##r#al#i#ty
+			#}
+		#}
+		##el#s#e_##i#f = #{
+			#l#i#m#i#t = #{ ###h#a#s_#c#ou#n#t##ry_#fl#ag = ##BUL_u#B#f_#fl#ag #}
+			##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = c#o#m#mu#n##i#s#m #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = U#B#f_u#n#i#t#e#d_#B#alk#a#n_#f#e#d#e##r#a#t#i#o#n_c#o#m#mu#n##i#s#m
+			#}
+			##el#s#e_##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = #d#e#m#oc##r#a#t#ic #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = U#B#f_u#n#i#t#e#d_#B#alk#a#n_#f#e#d#e##r#a#t#i#o#n_#d#e#m#oc##r#a#t#ic
+			#}
+			##el#s#e_##i#f = #{
+				#l#i#m#i#t = #{ ###h#a#s_g#ov#e##r#n#m#e#n#t = #f#a#sc##i#s#m #}
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = U#B#f_u#n#i#t#e#d_#B#alk#a#n_#f#e#d#e##r#a#t#i#o#n_#f#a#sc##i#s#m
+			#}
+			##el#s#e = #{
+				##s#e#t_c#o#s#m#e#t#ic_##t#ag = U#B#f_u#n#i#t#e#d_#B#alk#a#n_#f#e#d#e##r#a#t#i#o#n_#n#eu#t##r#al#i#ty
+			#}
+		#}
+	#}
+#}

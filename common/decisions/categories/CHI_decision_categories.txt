@@ -1,0 +1,21 @@
+CHI_army_reform = {
+	icon = army_reform
+
+	visible = {
+	}
+}
+
+CHI_border_clashes = {
+	priority = 90
+	picture = generic_border_conflicts
+	icon = border_conflicts
+	allowed = {
+		is_literally_china = yes
+	}	
+}
+
+CHI_warlord_in_opposition = {
+	allowed = {
+		is_literally_china = yes
+	}	
+}

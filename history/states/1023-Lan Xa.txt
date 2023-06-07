@@ -1,0 +1,32 @@
+state={
+	id=1023
+	name="STATE_1023"
+
+	history={
+		owner = BRM
+		victory_points = {
+			1488 50
+		}
+		victory_points = {
+			1990 5
+		}
+		victory_points = {
+			1253 1
+		}
+		victory_points = {
+			4496 1
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 3
+		}
+	}
+
+	provinces={
+		1253 1488 1990 4496 7312 7492 7531 7675 8045 10371
+	}
+	manpower=30000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

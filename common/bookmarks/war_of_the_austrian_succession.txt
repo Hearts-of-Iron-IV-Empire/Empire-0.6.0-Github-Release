@@ -1,0 +1,34 @@
+bookmarks = {
+	bookmark = {
+		name = "War Of The Austrian Succession"
+		desc = "EMPIRE_GATHERING_STORM_DESC"
+		date = 1740.12.1.12
+		picture = "GFX_select_date_1740"
+		default_country = "AUS"
+		default = no
+
+		"AUS"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"PER"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+				PER_qizilbas_troops_1
+			}
+			focuses = {
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

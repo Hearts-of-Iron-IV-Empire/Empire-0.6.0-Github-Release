@@ -1,0 +1,30 @@
+state={
+	id=442
+	name="STATE_442"
+
+	history={
+		owner = RAJ
+		add_core_of = BAN
+		buildings = {
+			infrastructure = 2
+		}
+		1707.5.1 = {
+			owner = BAN
+			controller = BAN
+			add_core_of = BAN
+		}
+		1773.1.1 = {
+			owner = EIC
+			controller = EIC
+			remove_core_of = EIC
+		}
+	}
+
+	provinces={
+		4616 4644 7565 7662 10349 10389 10416 10443 12366 13276 
+	}
+	manpower=4684400
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

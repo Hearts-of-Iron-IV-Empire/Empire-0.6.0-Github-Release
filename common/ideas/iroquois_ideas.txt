@@ -1,0 +1,22 @@
+ideas = {
+	country = {
+		IRO_proclamation_line = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			cancel = {
+				NOT = { is_guaranteed_by = ENG }
+			}
+
+			picture = HUN_treaty_of_triannon
+			
+			modifier = {
+				enemy_justify_war_goal_time = 100
+			}
+		}
+	}
+}

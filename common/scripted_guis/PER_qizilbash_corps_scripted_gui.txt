@@ -1,0 +1,6 @@
+scripted_gui = {
+	PER_qizilbash_corps_decision_ui = {
+		window_name = "PER_qizilbash_corps_decision_ui_container"
+		context_type = decision_category
+	}
+}

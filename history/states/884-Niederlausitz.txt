@@ -1,0 +1,24 @@
+
+state={
+	id=884
+	name="STATE_884"
+
+	history={
+		owner = SAX
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+
+		}
+		add_core_of = SAX
+		add_claim_by = PRS
+
+	}
+
+	provinces={
+		478 3572 
+	}
+	manpower=98747
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

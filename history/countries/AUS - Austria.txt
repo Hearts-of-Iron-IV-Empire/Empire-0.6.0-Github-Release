@@ -1,0 +1,379 @@
+﻿capital = 4
+
+oob = "AUS_1699"
+set_naval_oob = "AUS_naval_oob"
+
+set_research_slots = 3
+
+set_convoys = 30
+
+1714.8.1 = {
+	recruit_character = AUS_Charles_VI # 1711 - 1740
+	promote_character = AUS_Charles_VI
+	retire_character = AUS_Leopold_I
+
+	set_autonomy = {
+		target = LOM
+		autonomous_state = autonomy_viceroyalty
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = TSC
+		autonomous_state = autonomy_viceroyalty
+		freedom_level = 0.2
+	}
+	set_autonomy = {
+		target = BEL
+		autonomous_state = autonomy_viceroyalty
+		freedom_level = 0.4
+	}
+	unlock_national_focus = AUS_treaty_of_karlowitz
+	complete_national_focus = AUS_bourbon_spain
+	unlock_national_focus = AUS_fabricate_claims_low_countries
+	unlock_national_focus = AUS_fabricate_claims_italian_lands
+	unlock_national_focus = AUS_join_grand_alliance
+	unlock_national_focus = AUS_ultimatum_to_spain
+	unlock_national_focus = AUS_back_to_normacy
+	complete_national_focus = AUS_rebuilding_hungary
+	unlock_national_focus = AUS_assert_dominance_over_hungary
+	unlock_national_focus = AUS_purge_hungarian_nobility
+	unlock_national_focus = AUS_reintegrating_hungary
+	complete_national_focus = AUS_recovering_after_war
+	complete_national_focus = AUS_new_methodology
+	complete_national_focus = AUS_attract_foreing_scholars
+	complete_national_focus = AUS_found_vienna_academy
+	complete_national_focus = AUS_build_up_the_capital
+	complete_national_focus = AUS_reorganise_bureaucracy
+	complete_national_focus = AUS_industrial_expansion
+	complete_national_focus = AUS_infrastructural_expansion
+	complete_national_focus = AUS_austrian_military
+	complete_national_focus = AUS_the_empire
+	complete_national_focus = AUS_accept_status_quo
+	complete_national_focus = AUS_german_corporation_treaty
+	complete_national_focus = AUS_imperial_research_circles
+	complete_national_focus = AUS_tirolean_infrastructure
+	complete_national_focus = AUS_expand_tyrol_mines
+	73 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	76 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	664 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	154 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	43 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	45 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	83 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	84 = {
+		cancel_resistance = yes 
+		add_core_of = AUS
+	}
+	remove_ideas = civil_unrest_hungary3
+	remove_ideas = civil_unrest_hungary2
+	remove_ideas = great_turkish_war
+}
+
+1740.1.1 = {
+	diplomatic_relation = { country = SPR relation = war_relation active = no }
+	leave_faction = yes
+}
+
+1743.1.1 = {
+	recruit_character = AUS_Maria_Theresa # 1743 - 1780
+	promote_character = AUS_Maria_Theresa
+	retire_character = AUS_Charles_VI
+}
+
+1789.1.1 = {
+	recruit_character = AUS_Joseph_II # 1780 - 1790
+	promote_character = AUS_Joseph_II
+	retire_character = AUS_Maria_Theresa
+}
+
+1797.1.1 = {
+	recruit_character = AUS_Kaiser_Franz_I # 1792 - 1835
+	promote_character = AUS_Kaiser_Franz_I
+	retire_character = AUS_Joseph_II
+	set_autonomy = {
+		target = LOM
+		autonomous_state = autonomy_free
+		freedom_level = 0.2
+	}
+}
+
+# Emperorship
+give_guarantee = NUR
+give_guarantee = HAM
+give_guarantee = LUB
+give_guarantee = AAC
+give_guarantee = SAL
+give_guarantee = LOR
+give_guarantee = LUI
+give_guarantee = PRS
+give_guarantee = BAV
+give_guarantee = HRE
+give_guarantee = SAX
+give_guarantee = MEC
+give_guarantee = HAN
+give_guarantee = SHL
+give_guarantee = AUG
+give_guarantee = IFC
+give_guarantee = WUR
+give_guarantee = WRZ
+give_guarantee = CLG
+give_guarantee = TRR
+give_guarantee = MAI
+give_guarantee = ANS
+give_guarantee = ANH
+give_guarantee = THU
+give_guarantee = BSG
+give_guarantee = RPA
+give_guarantee = MUN
+give_guarantee = HES
+give_guarantee = LUN
+give_guarantee = NAS
+
+add_ideas = {
+	holy_roman_emperor
+	civil_unrest_hungary3
+	great_turkish_war
+	POL_influence_over_poland_2
+
+	# Laws and Religion
+	catholic
+	empire
+	partial_economic_mobilisation
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1		
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_submarine = 1
+	basic_submarine = 1
+	early_destroyer = 1
+	early_light_cruiser = 1
+	early_heavy_cruiser = 1
+	early_battleship = 1
+	early_battlecruiser = 1
+	electronic_mechanical_engineering = 1
+	mechanical_computing = 1
+	transport = 1
+	basic_cavalry = 1
+	motorised_infantry = 1
+	interwar_antitank = 1
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_ship_hull_submarine = 1
+		basic_ship_hull_heavy = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		coastal_defense_ships = 1
+	}
+}
+
+if = {
+	limit = {
+		has_start_date < 1699.01.02
+	}	
+	declare_war_on = {
+		target = TUR
+		type = annex_everything
+	}
+	create_faction = "Holy League"
+	add_to_faction = PAP
+	add_to_faction = SOV
+	add_to_faction = POL
+	add_to_faction = VNC
+	PAP = {
+		add_to_war = {
+			targeted_alliance = AUS
+			enemy = TUR
+		}
+	}
+	SOV = {
+		add_to_war = {
+			targeted_alliance = AUS
+			enemy = TUR
+		}
+	}
+	POL = {
+		add_to_war = {
+			targeted_alliance = AUS
+			enemy = TUR
+		}
+	}
+	VNC = {
+		add_to_war = {
+			targeted_alliance = AUS
+			enemy = TUR
+		}
+	}
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1698.11.9"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 41
+	aristocracy = 31
+	fascism = 12
+	democratic = 5
+	communism = 11
+}
+
+set_stability = 0.40
+set_war_support = .40
+
+73 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+664 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 5
+	set_garrison_strength = 1.0
+}
+154 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+43 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+76 = {
+	force_enable_resistance = AUS
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+45 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+83 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+84 = {
+	start_resistance = yes
+	set_compliance = 10
+	set_resistance = 10
+	set_garrison_strength = 1.0
+}
+
+AUS = {
+	add_opinion_modifier = { target = VNC modifier = Rivalry }
+	add_opinion_modifier = { target = FRA modifier = Rivalry }
+	add_opinion_modifier = { target = TUR modifier = Rivalry }
+}
+
+recruit_character = AUS_Leopold_I # Country Leader, Field Marhsal
+recruit_character = AUS_Eugene_of_Savoy # Field Marshal
+recruit_character = AUS_Karl_von_Habsburg # Field Marshal
+recruit_character = AUS_Joseph_von_Habsburg # Field Marshal
+recruit_character = AUS_Francis_Rákóczi # Field Marshal
+recruit_character = AUS_Charles_Alexander # General
+recruit_character = AUS_Charles_of_Commercy # General
+recruit_character = AUS_Jánós_Palffy # General
+recruit_character = AUS_Wirich_Philipp_von_Daun # General
+recruit_character = AUS_Georg_Louis_von_Hessen_Darmstadt # General
+recruit_character = AUS_Charles_Thomas_von_Vaudémont # General
+recruit_character = AUS_Claudius_Florimund_de_Mercy # General
+recruit_character = AUS_Jean_Philippe_Eugène_de_Mérode # General
+recruit_character = AUS_Philip_of_Hesse_Darmstadt # General
+recruit_character = AUS_Johann_Matthias_von_der_Schulenburg # General
+recruit_character = AUS_Friedrich_Heinrich_von_Seckendorff # General
+recruit_character = AUS_Guido_Starhemberg # General
+recruit_character = AUS_George_Olivier # General
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = {
+		name = "Draken Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines
+	create_equipment_variant = {
+		name = "Vienna Class"				
+		type = ship_hull_submarine_2
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_2
+			rear_1_custom_slot = ship_mine_layer_sub
+		}
+	}
+
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Kürfürsten Class"										
+		type = ship_hull_light_1
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}

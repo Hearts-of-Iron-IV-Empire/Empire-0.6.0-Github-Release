@@ -1,0 +1,26 @@
+state={
+	id=433
+	name="STATE_433"
+	resources={
+		tungsten=32.000
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = JAI
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		1740.1.1 = {
+			owner = MAR
+		}
+	}
+
+	provinces={
+		4149 4804 7692 7826 12743 12829 
+	}
+	manpower=5786000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

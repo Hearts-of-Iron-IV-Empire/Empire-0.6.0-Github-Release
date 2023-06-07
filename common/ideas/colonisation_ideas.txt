@@ -1,0 +1,30 @@
+ideas = {
+	country = {
+		currently_colonising = {
+			picture = generic_morale_bonus
+			name = currently_colonising
+
+			allowed = {
+					always = no
+				}
+			available = {
+				has_country_flag = colonising
+			}
+			modifier = {
+				civilian_factory_use = 2
+			}
+		}
+		population_boost = {
+			picture = generic_morale_bonus
+			name = population_boost
+
+			allowed = {
+					always = no
+				}
+			
+			modifier = {
+				monthly_population = 3
+			}
+		}
+	}
+}

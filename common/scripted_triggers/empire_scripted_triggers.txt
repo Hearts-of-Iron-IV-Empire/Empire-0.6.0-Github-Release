@@ -1,0 +1,138 @@
+DIPLOMACY_RELEASE_NATION_ENABLE_TRIGGER = {
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = FREE
+			}
+			OR = {
+				NOT = { has_dlc = "Man the Guns" }
+				NOT = { original_tag = AUS }
+			}
+		}
+		always = yes
+	}
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = FREE
+			}
+			has_dlc = "Man the Guns"
+			original_tag = AUS
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_BRITAIN_TOOLTIP
+			NOT = { FROM = { tag = HUN } }
+		}
+	}
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = PEACE_ONLY
+			}
+			OR = {
+				NOT = { has_dlc = "Man the Guns" }
+				NOT = { original_tag = AUS }
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
+			has_war = no
+		}
+	}
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = PEACE_ONLY
+			}
+			has_dlc = "Man the Guns"
+			original_tag = AUS
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_PEACE_ONLY_TOOLTIP
+			has_war = no
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_NOT_BRITAIN_TOOLTIP
+			NOT = { FROM = { tag = HUN } }
+		}
+	}
+	if = {
+		limit = {
+			has_game_rule = {
+				rule = allow_release_nations
+				option = BLOCKED
+			}
+		}
+		custom_trigger_tooltip = {
+			tooltip = RULE_ALLOW_RELEASE_NATIONS_BLOCKED_TOOLTIP
+			always = no
+		}
+	}
+}
+
+#is_exempt_from_division_limit = {
+#	OR = {
+#		threat > 0.70
+#		is_major = yes
+#		has_war = yes
+#	}
+#}
+
+empire_how_to_colonise = {
+	ROOT = {
+		hidden_trigger = {
+			NOT = {
+				has_country_flag = hide_tab_colonisation
+			}
+		} 
+	}
+}
+
+major_minor_divisions_hard_limit = {
+    OR = {
+        AND = {
+            is_major = yes
+            num_divisions > 130
+        }
+        AND = {
+            is_major = no
+            num_divisions > 80
+        }
+    }
+}
+
+is_exception_from_division_limit = {
+    OR = {
+        threat > 0.70
+        has_war = yes
+    }
+}
+
+# After is_exception_from_division_limit is fulfilled
+major_minor_divisions_hard_limit_exception = {
+    OR = {
+        AND = {
+            is_major = yes
+            num_divisions > 150
+        }
+        AND = {
+            is_major = no
+            num_divisions > 100
+        }
+    }
+}
+
+DIPLOMACY_RUS_DONT_CALL_IN_ZAP_TO_GTW_TRIGGER = {
+	if = { 
+		limit = {
+			ROOT = {
+				tag = SOV
+				has_country_flag = dont_call_in_zap_to_gtw
+			}
+		}
+	}
+}

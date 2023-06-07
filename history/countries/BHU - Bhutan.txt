@@ -1,0 +1,27 @@
+﻿capital = 324
+
+oob = "BHU_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	tech_mountaineers = 1
+}
+
+add_ideas = {
+	vajrayana
+}
+
+set_war_support = 0.1
+set_stability = 0.8
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	neutrality = 100
+}

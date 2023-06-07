@@ -1,0 +1,82 @@
+bookmarks = {
+	bookmark = {
+		name = "War of the Polish Succession"
+		desc = "WAR_OF_THE_POLISH_SUCCESSION_DESC"
+		date = 1733.10.1.12
+		picture = "GFX_select_date_1733"
+		default_country = "FRA"
+		default = no
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+
+		"POL"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"FRA"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"ENG"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SOV"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"AUS"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"PRS"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SPR"={
+			history = "SPR_WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC"
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+	}
+}

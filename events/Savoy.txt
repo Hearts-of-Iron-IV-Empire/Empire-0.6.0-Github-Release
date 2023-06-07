@@ -1,0 +1,1178 @@
+add_namespace = savoy
+
+country_event = {
+	id = savoy.1
+	title = "Savoy Demands Execution Of Treaty Of London"
+	desc = savoy.1.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "The treaty must be respected."
+		transfer_state = 923
+		transfer_state = 735
+		ITA = {
+			transfer_state = 115
+			transfer_state = 156
+			transfer_state = 117
+			transfer_state = 157
+		}
+		ai_chance  = {
+			base = 80
+		}
+		ITA = {
+			country_event = {
+				id = savoy.2
+				days = 1
+			}
+		}
+	}
+
+	option = {
+		name = "This treaty holds no power here."
+		remove_state_claim = 923
+		remove_state_claim = 735
+		ITA = {
+			add_state_claim  = 115
+			add_state_claim  = 156
+			add_state_claim  = 117
+			add_state_claim  = 157
+		}
+		ITA = {
+			country_event = {
+				id = savoy.3
+				days = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.2
+	title = "France Accepts"
+	desc = savoy.2.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Good!"
+	}
+}
+
+country_event = {
+	id = savoy.3
+	title = "France Refuses"
+	desc = savoy.3.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "This saddens us deeply."
+	}
+}
+
+country_event = {
+	id = savoy.4
+	title = "[ITA.GetLeader] Announces claims on Milan"
+	desc = savoy.4.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "He is right!"
+		ITA = {
+			country_event = {
+				id = savoy.5
+				days = 5
+			}
+		}
+		custom_effect_tooltip = SAV_recognize_claims_effect_tt
+		ai_chance = {
+			base = 10
+		}
+		set_country_flag = SAV_supported_claim
+	}
+
+	option = {
+		name = "Ignore his claim."
+		ai_chance = {
+			base = 10
+			modifier = {
+				original_tag = AUS
+				factor = 0.1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.5
+	title = "[FROM.GetName] Supports Our Claim!"
+	desc = savoy.5.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "This is good news!"
+		add_state_claim = 159
+	}
+}
+
+#
+
+country_event = {
+	id = savoy.6
+	title = "[FROM.GetName] Requests Control Over Southern Italy"
+	desc = savoy.6.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Fine they can have it."
+		ITA = { 
+			transfer_state = 115
+			set_autonomy = {
+			    target = TSC
+			    autonomy_state = autonomy_viceroyalty
+			}
+			country_event = {
+				id = savoy.8
+				hours = 12
+			}
+		}
+	}
+
+	option = {
+		name = "They can occupy it, untill the war is over."
+		ITA = { 
+			transfer_state = 115
+			set_autonomy = {
+			    target = TSC
+			    autonomy_state = autonomy_viceroyalty
+			}
+			country_event = {
+				id = savoy.7
+				hours = 12
+			}
+		}
+	}
+
+	option = {
+		name = "We will never hand over sovereign territory!"
+		ITA = {
+			country_event = {
+				id = savoy.9
+				hours = 12
+			}
+		}		
+	}
+}
+
+country_event = {
+	id = savoy.7
+	title = "[FROM.GetName] Agrees To Temporary Occupation."
+	desc = savoy.7.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "For the safety of Italy!"
+	}
+}
+
+country_event = {
+	id = savoy.8
+	title = "[FROM.GetName] Transfers Italy Indefinitly."
+	desc = savoy.8.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "A glorious day for Savoy!"
+	}
+}
+
+country_event = {
+	id = savoy.9
+	title = "[FROM.GetName] Refuses."
+	desc = savoy.9.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Damn the [FROM.GetAdjective]!"
+	}
+}
+
+#give Milan to Savoy because supported claim
+
+country_event = {
+	id = savoy.10
+	title = "Promises made..."
+	desc = savoy.10.d
+
+	trigger = {
+		has_country_flag = SAV_supported_claim
+		OR = {
+			owns_state = 159
+			LOM = { is_subject_of = ROOT }
+		}
+	}
+	fire_only_once = yes
+
+	option = {
+		name = "We can't come back on our words now."
+		ITA = { transfer_state = 159 }
+		ITA = {
+			country_event = {
+				id = savoy.14
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.11
+	title = "Savoy asks for imperial protection"
+	desc = savoy.11.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Of course, they shall have it."
+		give_guarantee = ITA
+		ITA = {
+			country_event = {
+				id = savoy.12
+				hours = 12
+			}
+		}
+	}
+
+	option = {
+		name = "We must be careful not to antagonize the French."
+		ITA = {
+			country_event = {
+				id = savoy.13
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.12
+	title = "The emperor acts!"
+	desc = savoy.12.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "A necessary evil to protect against the French."
+	}
+}
+
+country_event = {
+	id = savoy.13
+	title = "The emperor remains silent..."
+	desc = savoy.13.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Cowards!"
+	}
+}
+
+country_event = {
+	id = savoy.14
+	title = "[FROM.GetName] hands us our claims."
+	desc = savoy.14.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Their friendship is appreciated!"
+	}
+}
+
+country_event = {
+	id = savoy.15
+	title = "[FROM.GetName] seeks to join Grand Alliance."
+	desc = savoy.15.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "This will hurt the French badly!"
+		ITA = {
+			if = {
+				limit = {
+					ITA = { has_war_with = ENG }
+				}
+				white_peace = ENG
+			}
+			leave_faction = yes
+			country_event = {
+				id = savoy.16
+				hours = 1
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+
+	option = {
+		name = "We don't need the backstabbing sort in our faction!"
+		ITA = {
+			country_event = {
+				id = savoy.17
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.16
+	title = "[FROM.GetName] welcomes us!"
+	desc = savoy.16.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Good!"
+		ENG = { add_to_faction = ITA }
+	}
+}
+
+country_event = {
+	id = savoy.17
+	title = "[FROM.GetName] refuses."
+	desc = savoy.17.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Then we shall fight them!"
+	}
+}
+
+country_event = {
+	id = savoy.18
+	title = "[FROM.GetName] requests Milan as compensation."
+	desc = savoy.18.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "We agree."
+		ITA = {
+			country_event = {
+				id = savoy.19
+				hours = 12
+			}
+		}
+	}
+
+	option = {
+		name = "We refuse."
+		ITA = {
+			country_event = {
+				id = savoy.20
+				hours = 12
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.19
+	title = "[FROM.GetName] accepts."
+	desc = savoy.19.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Great."
+		transfer_state = 159
+	}
+}
+
+country_event = {
+	id = savoy.20
+	title = "[FROM.GetName] refuses."
+	desc = savoy.20.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Unfortunate."
+	}
+}
+
+country_event = {
+	id = savoy.21
+	title = "[FROM.GetName] seeks a truce"
+	desc = savoy.21.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Very Well"
+		ITA = {
+			if = {
+				limit = {
+					ITA = { has_war_with = FRA }
+				}
+				white_peace = FRA
+			}
+			if = {
+				limit = {
+					ITA = { has_war_with = SPR }
+				}
+				white_peace = SPR
+			}
+			leave_faction = yes
+			country_event = {
+				id = savoy.22
+				hours = 1
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name = "We don't need the backstabbing sort in our faction!"
+		ITA = {
+			country_event = {
+				id = savoy.23
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}
+
+country_event = {
+	id = savoy.22
+	title = "We have officially changed sides!"
+	desc = savoy.22.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Good!"
+		FRA = { add_to_faction = ITA }
+	}
+}
+
+country_event = {
+	id = savoy.23
+	title = "[FROM.GetName] refuses truce"
+	desc = savoy.23.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "How unwise."
+	}
+}
+
+country_event = {
+	id = savoy.24
+	title = "An offer for Milan?"
+	desc = savoy.24.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "On second thought, we don't want to purchase Milan."
+	}
+	option = {
+		name = "Make a modest offer."
+		custom_effect_tooltip = SAV_offer_5_civs
+		if = {
+			limit = {
+				LOM = { is_subject_of = FRA }
+			}
+			FRA = {
+				country_event = {
+					id = savoy.25
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = AUS }
+			}
+			AUS = {
+				country_event = {
+					id = savoy.25
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = SPR }
+			}
+			SPR = {
+				country_event = {
+					id = savoy.25
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject = no }
+			}
+			LOM = {
+				country_event = {
+					id = savoy.25
+					hours = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = "Make a grand offer."
+		custom_effect_tooltip = SAV_offer_10_civs
+		if = {
+			limit = {
+				LOM = { is_subject_of = FRA }
+			}
+			FRA = {
+				country_event = {
+					id = savoy.26
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = AUS }
+			}
+			AUS = {
+				country_event = {
+					id = savoy.26
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = SPR }
+			}
+			SPR = {
+				country_event = {
+					id = savoy.26
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject = no }
+			}
+			LOM = {
+				country_event = {
+					id = savoy.26
+					hours = 6
+				}
+			}
+		}
+	}
+	option = {
+		name = "Make an offer they cannot refuse!"
+		custom_effect_tooltip = SAV_offer_15_civs
+		if = {
+			limit = {
+				LOM = { is_subject_of = FRA }
+			}
+			FRA = {
+				country_event = {
+					id = savoy.27
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = AUS }
+			}
+			AUS = {
+				country_event = {
+					id = savoy.27
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = SPR }
+			}
+			SPR = {
+				country_event = {
+					id = savoy.27
+					hours = 6
+				}
+			}
+		}
+		if = {
+			limit = {
+				LOM = { is_subject = no }
+			}
+			LOM = {
+				country_event = {
+					id = savoy.27
+					hours = 6
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.25
+	title = "[FROM.GetName] makes a modest offer for Milan"
+	desc = savoy.25.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's a good deal!"
+		FROM = {
+			country_event = {
+				id = savoy.28
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+		custom_effect_tooltip = SAV_offer_5_civs_receiver
+		add_timed_idea = {
+		    idea = SAV_modest_savoyard_payment
+		    days = 365
+		}
+		ITA = {
+			add_timed_idea = {
+			    idea = SAV_modest_payment
+			    days = 365
+			}
+		}
+	}
+
+	option = {
+		name = "What a terrible trade deal!"
+		FROM = {
+			country_event = {
+				id = savoy.29
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+}
+
+country_event = {
+	id = savoy.26
+	title = "[FROM.GetName] makes a generous offer for Milan"
+	desc = savoy.26.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's a good deal!"
+		FROM = {
+			country_event = {
+				id = savoy.28
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+		custom_effect_tooltip = SAV_offer_10_civs_receiver
+		add_timed_idea = {
+		    idea = SAV_large_savoyard_payment
+		    days = 365
+		}
+		ITA = {
+			add_timed_idea = {
+			    idea = SAV_large_payment
+			    days = 365
+			}
+		}
+	}
+
+	option = {
+		name = "What a terrible trade deal!"
+		FROM = {
+			country_event = {
+				id = savoy.29
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+country_event = {
+	id = savoy.27
+	title = "[FROM.GetName] makes a very generous offer for Milan"
+	desc = savoy.27.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "It's a good deal!"
+		FROM = {
+			country_event = {
+				id = savoy.28
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 160
+		}
+		custom_effect_tooltip = SAV_offer_15_civs_receiver
+		add_timed_idea = {
+		    idea = SAV_huge_savoyard_payment
+		    days = 365
+		}
+		ITA = {
+			add_timed_idea = {
+			    idea = SAV_huge_payment
+			    days = 365
+			}
+		}
+	}
+
+	option = {
+		name = "What a terrible trade deal!"
+		FROM = {
+			country_event = {
+				id = savoy.29
+				hours = 6
+			}
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+country_event = {
+	id = savoy.28
+	title = "[FROM.GetName] accepts our offer!"
+	desc = savoy.28.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good."
+		transfer_state = 159
+	}
+}
+
+country_event = {
+	id = savoy.29
+	title = "[FROM.GetName] refuses our offer!"
+	desc = savoy.29.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "A shame."
+	}
+}
+
+country_event = {
+	id = savoy.30
+	title = "Terrorists plague Naples!"
+	desc = savoy.30.d
+
+	is_triggered_only = yes
+	fire_only_once = no
+
+	option = {
+		name = "Scoundrels!"
+		117 = {
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+		117 = {
+			damage_building = {
+			    type = industrial_complex
+			    damage = 1
+			}
+		}
+		157 = {
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+		156 = {
+			damage_building = {
+			    type = infrastructure
+			    damage = 1
+			}
+		}
+	}
+}
+
+country_event = {
+	id = savoy.31
+	title = "Savoyard Coup in Naples Succeeds!"
+	desc = savoy.31.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "That's good news!"
+		trigger = {
+			original_tag = ITA
+		}
+		set_autonomy = {
+		    target = TSC
+		    autonomy_state = autonomy_viceroyalty
+		}
+	}
+	option = {
+		name = "The new regime will bring peace and stability"
+		trigger = {
+			original_tag = TSC
+		}
+	}
+}
+
+country_event = {
+	id = savoy.32
+	title = "Savoyard Coup in Naples Fails!"
+	desc = savoy.32.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Whoops..."
+		trigger = {
+			original_tag = ITA
+		}
+	}
+	option = {
+		name = "They shall pay for this!"
+		trigger = {
+			original_tag = TSC
+		}
+		declare_war_on = {
+		    target = ITA
+		    type = annex_everything
+		}
+	}
+}
+
+country_event = {
+	id = savoy.33
+	title = "Renewed Royal Marriage Effort By Savoy"
+	desc = savoy.33.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let us bind our dynasties!"
+		add_stability = 0.10
+		reverse_add_opinion_modifier = {
+		    target = FRA
+		    modifier = medium_decrease
+		}
+		reverse_add_opinion_modifier = {
+		    target = ITA
+		    modifier = royal_marriage
+		}
+		ITA = {
+			country_event = savoy.34
+		}
+	}
+	option = {
+		name = "We cannot afford to upset France..."
+		add_political_power = 50
+		ITA = {
+			country_event = savoy.35
+		}
+	}
+}
+
+country_event = {
+	id = savoy.34
+	title = "Portugal Accepts!"
+	desc = savoy.34.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Let us celebrate!"
+		add_stability = 0.10
+		reverse_add_opinion_modifier = {
+		    target = POR
+		    modifier = royal_marriage
+		}
+	}
+}
+
+country_event = {
+	id = savoy.35
+	title = "Portugal Refuses Marriage!"
+	desc = savoy.35.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "We should abandon all further efforts."
+	}
+}
+
+country_event = {
+	id = savoy.36
+	title = "Savoy wants to create an alliance with us"
+	desc = savoy.36.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes, a good initiative."
+		create_faction = "Porto-Savoyard Alliance"
+		ITA = {
+			country_event = savoy.37
+		}
+		add_to_faction = ITA
+	}
+	option = {
+		name = "This is a step too far."
+		ITA = {
+			country_event = savoy.38
+		}
+		reverse_add_opinion_modifier = {
+		    target = ITA
+		    modifier = disappointed
+		}
+		
+	}
+}
+
+country_event = {
+	id = savoy.37
+	title = "Portugal Accepts!"
+	desc = savoy.37.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Great."
+	}
+}
+
+country_event = {
+	id = savoy.38
+	title = "Portugal Refuses Marriage!"
+	desc = savoy.38.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "So far for friendship."
+		add_political_power = -50
+	}
+}
+
+country_event = {
+	id = savoy.39
+	title = "Savoy Demands Italian Possessions"
+	desc = savoy.39.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "What a ridiculous threat!"
+		ITA = {
+			country_event = savoy.40
+		}
+	}
+
+	option = {
+		name = "We must avoid a new front."
+		if = {
+			limit = {
+				owns_state = 114
+			}
+			ITA = { transfer_state = 114 }
+		}
+		if = {
+			limit = {
+				owns_state = 115
+			}
+			ITA = { transfer_state = 115 }
+		}
+		if = {
+			limit = {
+				LOM = { is_subject_of = ROOT }
+			}
+			ITA = { transfer_state = 159 }
+		}
+		if = {
+			limit = {
+				TSC = { is_subject_of = ROOT }
+			}
+			ITA = { transfer_state = 156 }
+			ITA = { transfer_state = 157 }
+			ITA = { transfer_state = 117 }
+		}
+		ITA = {
+			country_event = savoy.41
+		}
+	}
+}
+
+country_event = {
+	id = savoy.40
+	title = "Spain Refuses"
+	desc = savoy.40.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "No suprises there."
+		create_wargoal = {
+		    type = take_state_focus
+		    target = SPR
+		    generator = { 114 115 117 156 157 }
+		}
+	}
+}
+
+country_event = {
+	id = savoy.41
+	title = "Spain Yields"
+	desc = savoy.41.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Arrivederci Spanish occupiers!"
+	}
+}
+
+country_event = {
+	id = savoy.42
+	title = "Savoy Proposes Unification"
+	desc = savoy.42.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes, we accept."
+		ITA = { 
+			annex_country = {
+			    target = ROOT
+			    transfer_troops = yes
+			}
+			add_state_core = 180
+			add_state_core = 181
+			add_state_core = 112
+			add_state_core = 877
+			add_state_core = 179
+			puppet = BRA
+		}
+		ITA = {
+			country_event = savoy.43
+		}
+	}
+	option = {
+		name = "This is a step too far."
+		ITA = {
+			country_event = savoy.44
+		}
+		reverse_add_opinion_modifier = {
+		    target = ITA
+		    modifier = disappointed
+		}
+	}
+}
+
+country_event = {
+	id = savoy.43
+	title = "Portugal Accepts!"
+	desc = savoy.43.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Excellent."
+		add_ideas = kingdom
+		add_political_power = 75
+		add_stability = 0.10
+	}
+}
+
+country_event = {
+	id = savoy.44
+	title = "Portugal Refuses Marriage!"
+	desc = savoy.44.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Oh well, it was worth asking."
+	}
+}
+
+country_event = {
+	id = savoy.45
+	title = "Spoils of War: Kingdom of Sicily"
+	desc = savoy.45.d
+
+	is_triggered_only = yes
+
+	option = {
+		name = "This will elevate the dukes of Savoy to kings!"
+	}
+}

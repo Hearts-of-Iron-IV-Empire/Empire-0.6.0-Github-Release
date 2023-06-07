@@ -1,0 +1,3337 @@
+political_actions = {
+	recognize_USA ={
+		available = {
+		}
+		visible = {
+			has_global_flag = USA_unrecognized_independent_country
+			NOT = { has_country_flag = recognized_USA }
+		}
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				has_opinion = {
+				    target = USA
+				    value > 49
+				}
+				add = 50
+			}
+		}
+		cost = 50
+
+		is_good = yes
+		fire_only_once = yes
+
+		complete_effect = {	
+			USA = { country_event = usa.30 }
+			set_country_flag = recognized_USA
+			remove_opinion_modifier = {
+			    target = USA
+			    modifier = unrecognized_nation
+			}
+		}
+	}
+}
+USA_moving_the_frontier = {
+	USA_expand_georgia = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 1000
+			NOT = {
+				owns_state = 1001
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_expand_the_carolinas
+			NOT = {
+				owns_state = 1001
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 1000
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1001
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_lay_claim_to_georgia = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 364
+			NOT = {
+				owns_state = 1000
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_expand_the_carolinas
+			NOT = {
+				owns_state = 1000
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 364
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1000
+			        num_provinces = 1
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_south_carolina = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 364
+			NOT = {
+				owns_state = 995
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_expand_the_carolinas
+			NOT = {
+				owns_state = 995
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 364
+			        num_provinces = 4
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 995
+			        num_provinces = 4
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_north_carolina = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 363
+			NOT = {
+				owns_state = 996
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_expand_the_carolinas
+			NOT = {
+				owns_state = 996
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 363
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 996
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_into_blue_ridge = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 362
+			NOT = {
+				owns_state = 997
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_expand_up_to_blue_ridge
+			NOT = {
+				owns_state = 997
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 362
+			        num_provinces = 3
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 997
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_into_maine = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 818
+			NOT = {
+				owns_state = 1007
+			}	
+		}
+
+		visible = {
+			has_completed_focus = USA_claim_maine
+			NOT = {
+				owns_state = 1007
+			}
+		}
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 818
+			        num_provinces = 4
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 1007
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_into_vermont = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 358	
+			NOT = {
+				owns_state = 817
+			}
+		}
+
+		visible = {
+			has_completed_focus = USA_clashes_with_the_iroquois
+			NOT = {
+				owns_state = 817
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 358
+			        num_provinces = 4
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 817
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+	USA_expand_new_york = {
+		icon = border_war
+		days_re_enable = 70
+		cost = 50
+		available = {
+			owns_state = 358	
+			NOT = {
+				owns_state = 862
+			}
+		}
+
+		visible = {
+			has_completed_focus = USA_clashes_with_the_iroquois
+			NOT = {
+				owns_state = 862
+			}
+		}
+
+		complete_effect = {
+			start_border_war = {
+			change_state_after_war = no
+			    attacker = {
+			        state = 358
+			        num_provinces = 4
+			        on_win = wtt_border_conflict_won_attacker.1
+       				on_lose = wtt_border_conflict_lost_attacker.1
+			    }
+							
+			    defender = {
+			        state = 862
+			        num_provinces = 2
+			        on_win = wtt_border_conflict_won_defender.1
+   					on_lose = wtt_border_conflict_lost_defender.1
+			    }
+			}
+		}
+	}
+}
+
+economy_decisions = {
+	USA_massachussetts_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			357 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 357
+		}	
+
+		complete_effect = {
+			357 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_massachussetts_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			357 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			357 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 357
+		}	
+
+		complete_effect = {
+			357 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_massachussetts_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			357 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			357 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 357
+		}	
+
+		complete_effect = {
+			357 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_rhode_island_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			957 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 957
+		}	
+
+		complete_effect = {
+			957 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_rhode_island_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			957 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			957 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 957
+		}	
+
+		complete_effect = {
+			957 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_rhode_island_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			957 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			957 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 957
+		}	
+
+		complete_effect = {
+			957 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_connecticut_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			365 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 365
+		}	
+
+		complete_effect = {
+			365 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_connecticut_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			365 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			365 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 365
+		}	
+
+		complete_effect = {
+			365 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_connecticut_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			365 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			365 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 365
+		}	
+
+		complete_effect = {
+			365 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_new_hampshire_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			816 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 816
+		}	
+
+		complete_effect = {
+			816 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_new_hampshire_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			816 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			816 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 816
+		}	
+
+		complete_effect = {
+			816 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_new_hampshire_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			816 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_new_england_focus
+		}
+
+		available = {
+			816 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 816
+		}	
+
+		complete_effect = {
+			816 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_new_york_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			358 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 358
+		}	
+
+		complete_effect = {
+			358 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_new_york_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			358 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			358 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 358
+		}	
+
+		complete_effect = {
+			358 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_new_york_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			358 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			358 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 358
+		}	
+
+		complete_effect = {
+			358 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_new_jersey_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			359 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 359
+		}	
+
+		complete_effect = {
+			359 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_new_jersey_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			359 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			359 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 359
+		}	
+
+		complete_effect = {
+			359 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_new_jersey_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			359 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			359 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 359
+		}	
+
+		complete_effect = {
+			359 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_pennsylvania_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			360 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 360
+		}	
+
+		complete_effect = {
+			360 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_pennsylvania_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			360 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			360 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 360
+		}	
+
+		complete_effect = {
+			360 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_pennsylvania_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			360 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			360 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 360
+		}	
+
+		complete_effect = {
+			360 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_delaware_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			990 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 5000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 990
+		}	
+
+		complete_effect = {
+			990 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_delaware_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			990 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			990 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 990
+		}	
+
+		complete_effect = {
+			990 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_delaware_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			990 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_middle_colonies
+		}
+
+		available = {
+			990 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 30000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 990
+		}	
+
+		complete_effect = {
+			990 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_maryland_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			361 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 20000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 361
+		}	
+
+		complete_effect = {
+			361 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_maryland_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			361 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			361 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 80000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 361
+		}	
+
+		complete_effect = {
+			361 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_maryland_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			361 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			361 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 200000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 361
+		}	
+
+		complete_effect = {
+			361 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_virginia_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			362 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 20000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 362
+		}	
+
+		complete_effect = {
+			362 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_virginia_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			362 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			362 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 80000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 362
+		}	
+
+		complete_effect = {
+			362 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_virginia_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			362 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_chesapeake_bay
+		}
+
+		available = {
+			362 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 200000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 362
+		}	
+
+		complete_effect = {
+			362 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_north_carolina_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			363 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 363
+		}	
+
+		complete_effect = {
+			363 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_north_carolina_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			363 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			363 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 363
+		}	
+
+		complete_effect = {
+			363 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_north_carolina_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			363 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			363 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 363
+		}	
+
+		complete_effect = {
+			363 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_south_carolina_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			364 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 10000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 364
+		}	
+
+		complete_effect = {
+			364 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_south_carolina_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			364 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			364 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 364
+		}	
+
+		complete_effect = {
+			363 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_south_carolina_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			364 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			364 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 100000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 364
+		}	
+
+		complete_effect = {
+			364 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+
+	USA_georgia_expansion_1 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			1000 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 5000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 1000
+		}	
+
+		complete_effect = {
+			1000 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_1
+			}
+		}
+	}
+	USA_georgia_expansion_2 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			1000 = { has_state_flag = investment_1 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			1000 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 20000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 1000
+		}	
+
+		complete_effect = {
+			1000 = { 
+				add_extra_state_shared_building_slots = 1 
+				set_state_flag = investment_2
+			}
+		}
+	}
+	USA_georgia_expansion_3 = {
+
+		icon = generic_operation
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			1000 = { has_state_flag = investment_2 }
+			has_completed_focus = USA_the_south
+		}
+
+		available = {
+			1000 = { 
+				is_owned_and_controlled_by = USA 
+				state_population > 50000
+			}
+
+		}	
+
+		highlight_states = {
+			state = 1000
+		}	
+
+		complete_effect = {
+			1000 = { 
+				add_extra_state_shared_building_slots = 1 
+			}
+		}
+	}
+}
+
+USA_civil_war_preparation = {
+	USA_militia_maine = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			818 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 818
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	818 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_maine_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			818 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 818
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_new_hampshire = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			816 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 816
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	816 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_new_hampshire_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			816 = { is_owned_and_controlled_by = USA }
+			
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 816
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_vermont = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { VER = { exists = yes }}
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			817 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 817
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	817 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_vermont_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { VER = { exists = yes }}
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			817 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 817
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_massachusetts = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			357 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 357
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	357 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_massachusetts_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			357 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 357
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_rhode_island = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			957 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 957
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	957 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_rhode_island_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			957 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 957
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_connecticut = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			365 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 365
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	365 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_connecticut_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			365 = { is_owned_and_controlled_by = USA }
+
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 365
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_new_york = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			358 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 358
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	358 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_new_york_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			358 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 358
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_new_jersey = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			359 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 359
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	359 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_new_jersey_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			359 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 359
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_pennsylvania = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 75
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			360 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 360
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	360 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_pennsylvania_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			360 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 360
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_maryland = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			361 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 361
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	361 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_maryland_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			361 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 361
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_delaware = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			990 = { is_owned_and_controlled_by = USA }
+		}
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 990
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	990 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_delaware_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			990 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 990
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_militia_virginia = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 125
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			362 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 362
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	362 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_virginia_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			362 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 362
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_north_carolina = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 50
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			363 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 363
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	363 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+				create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_north_carolina_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			363 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 363
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_south_carolina = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			364 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 364
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	364 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_south_carolina_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			364 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 364
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+
+	USA_georgia = {
+
+		icon = generic_prepare_civil_war
+
+		cost = 25
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			NOT = { has_completed_focus = USA_continental_army }
+			has_completed_focus = USA_arm_militias
+		}
+
+		available = {
+			1000 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 1000
+		}
+		days_remove = 30
+
+		 remove_effect = {
+		 	1000 = {
+		 		create_unit = {
+				    division = "name = \"Minutemen Militia\" division_template = \"Minutemen Militia\" start_experience_factor = 0 start_equipment_factor = 0.8"
+				    owner = USA
+				}
+		 	}
+		}	
+	}
+
+	USA_raid_georgia_arsenal = {
+
+		icon = generic_industry
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 100
+		}
+
+		fire_only_once = yes
+
+		visible = {
+			original_tag = USA
+			is_subject_of = ENG
+			has_completed_focus = USA_raid_arsenals
+		}
+
+		available = {
+			1000 = { is_owned_and_controlled_by = USA }
+		}	
+
+		on_map_mode = map_only 
+
+		highlight_states = {
+			state = 1000
+		}
+		days_remove = 30
+
+		remove_effect = {
+		 	random_list = {
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 100
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 250
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 500
+					    producer = ENG
+					}
+			    }
+			    25 = {
+			        add_equipment_to_stockpile = {
+					    type = infantry_equipment
+					    amount = 1000
+					    producer = ENG
+					}
+			    }
+			}
+		}	
+	}
+}

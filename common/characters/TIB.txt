@@ -1,0 +1,14 @@
+characters = {
+    TIB_Lha_bzang_Khan = {
+        name = "Lha-bzang Khan"
+        portraits = {
+            civilian = {
+                large = "GFX_Lha_Bzang_Khan"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

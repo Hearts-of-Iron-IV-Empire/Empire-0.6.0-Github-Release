@@ -1,0 +1,829 @@
+﻿add_namespace = holland
+
+# Death of William III
+country_event = {
+	id = holland.1
+	title = holland.1.t
+	desc = holland.1.d
+
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "May he rest in peace."
+		if = {
+			limit = {
+				has_country_leader = {
+					character = HOL_William_III
+					ruling_only = yes
+				}
+			}
+			kill_country_leader = yes
+			hidden_effect = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+			promote_character = HOL_Anthonie_Heinsius
+			add_stability = -0.05
+			set_country_flag = HOL_william_is_dead
+		}
+		if = {
+			limit = {
+				has_idea = HOL_absence_of_the_stadtholder
+			}
+			remove_ideas = HOL_absence_of_the_stadtholder
+			add_stability = -0.05
+			set_country_flag = HOL_william_is_dead
+		}
+		PRS = {
+			country_event = holland.16
+		}
+	}
+}
+
+#return of orange to holland?
+
+country_event = {
+	id = holland.2
+	title = holland.2.t
+	desc = holland.2.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "The prince should return home."
+		HOL = {
+			country_event = {
+				id = holland.3
+				days = 2
+			}
+		}
+		add_country_leader_trait = absent_monarch
+		add_stability = 0.05
+	}
+
+	option = {
+		name = "No, he is needed here."
+		HOL = {
+			country_event = {
+				id = holland.4
+				days = 2
+			}
+		}
+	}
+}
+
+# Orange returns!
+
+country_event = {
+	id = holland.3
+	title = holland.3.t
+	desc = holland.3.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Welcome back your highness!"
+		create_country_leader = {
+			name = "William III"
+			desc = "william_III_DESC"
+			picture = "William_III.dds"
+			expire = "1702.3.8"
+			ideology = despotism
+			traits = {
+				prince_of_orange
+			}
+		}
+		remove_ideas = HOL_absence_of_the_stadtholder
+	}
+}
+
+# Orange remains in England
+
+country_event = {
+	id = holland.4
+	title = holland.4.t
+	desc = holland.4.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Does he care so little about his subjects?"
+		add_political_power = -10
+	}
+}
+
+#dutch seek a truce
+
+country_event = {
+	id = holland.5
+	title = holland.5.t
+	desc = holland.5.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Yes, let us find peace"
+		white_peace = HOL
+		HOL = {
+			leave_faction = yes
+		}
+		HOL = {
+			add_ai_strategy = {
+			    type = alliance
+			    id = FRA
+			    value = 200
+			}
+		}
+		add_political_power = 25
+		HOL = { country_event = holland.6 }
+	}
+
+	option = {
+		name = "We cannot enter negotiations!"
+		add_war_support = -0.10
+		ai_chance = {
+			factor = 0 
+		}
+		HOL = { country_event = holland.7 }
+	}
+}
+
+#france accepts 
+
+country_event = {
+	id = holland.6
+	title = holland.6.t
+	desc = holland.6.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Peace once again!"
+	}
+}
+
+#france Refuses
+
+country_event = {
+	id = holland.7
+	title = holland.7.t
+	desc = holland.7.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Fools!"
+	}
+}
+
+#partition plan De Witt
+
+country_event = {
+	id = holland.8
+	title = holland.8.t
+	desc = holland.8.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "There will be no deals with the Dutch"
+		HOL = { country_event = holland.9 }
+		ai_chance = {
+			factor = 1 
+		}
+		reverse_add_opinion_modifier = {
+		    target = HOL
+		    modifier = disappointed
+		}
+	}
+
+	option = {
+		name = "It is a good idea!"
+		add_war_support = 0.05
+		ai_chance = {
+			factor = 50 
+		}
+		HOL = { country_event = holland.10 }
+		add_state_claim = 34
+		add_state_claim = 8
+	}
+}
+
+#france refuses partition
+
+country_event = {
+	id = holland.9
+	title = holland.9.t
+	desc = holland.9.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Damnation!"
+	}
+}
+
+#france accepts partition
+
+country_event = {
+	id = holland.10
+	title = holland.10.t
+	desc = holland.10.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = "Very good"
+		add_state_claim = 6
+		add_state_claim = 793
+		add_state_claim = 968
+		add_state_claim = 969
+		set_country_flag = partition_of_the_southern_netherlands
+		FRA = { set_country_flag = partition_of_the_southern_netherlands }
+
+	}
+}
+
+#france honor partition?
+
+country_event = {
+	id = holland.11
+	title = holland.11.t
+	desc = holland.11.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = FRA
+		has_country_flag = partition_of_the_southern_netherlands
+		HOL = { exists = yes }
+		AND = {
+			OR = {
+				BEL = { has_capitulated = yes }
+				NOT = { country_exists = BEL }
+			}
+			OR = {
+				OR = {
+					controls_state = 968
+					any_other_country = {
+						is_in_faction_with = FRA
+						FRA = {
+							is_faction_leader = yes
+						}
+						controls_state = 968
+					}
+				}
+				OR = {
+					controls_state = 793
+					any_other_country = {
+						is_in_faction_with = FRA
+						FRA = {
+							is_faction_leader = yes
+						}
+						controls_state = 793
+					}
+				}
+				OR = {
+					controls_state = 6
+					any_other_country = {
+						is_in_faction_with = FRA
+						FRA = {
+							is_faction_leader = yes
+						}
+						controls_state = 6
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					BEL = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = BEL
+				}
+			}
+		}
+		name = "We shall honour our word."
+		if = {
+			limit = {
+				968 = {
+					OR = {
+						is_controlled_by = FRA
+						any_other_country = {
+							controls_state = 968
+							is_in_faction_with = FRA
+							FRA = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			HOL = { transfer_state = 968 }
+		}
+		if = {
+			limit = {
+				6 = {
+					OR = {
+						is_controlled_by = FRA
+						any_other_country = {
+							controls_state = 6
+							is_in_faction_with = FRA
+							FRA = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			HOL = { transfer_state = 6 }
+		}
+		if = {
+			limit = {
+				793 = {
+					OR = {
+						is_controlled_by = FRA
+						any_other_country = {
+							controls_state = 793
+							is_in_faction_with = FRA
+							FRA = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			HOL = { transfer_state = 793 }
+		}
+		HOL = { country_event = holland.13 }
+		clr_country_flag = partition_of_the_southern_netherlands
+	}
+	option = {
+		name = "Actually, we have decided to alter the deal."
+		ai_chance = {
+			base = 1
+		}
+		HOL = { country_event = holland.14 }
+		clr_country_flag = partition_of_the_southern_netherlands
+		add_ai_strategy = {
+		    type = antagonize
+		    id = HOL
+		    value = 200
+		}
+		remove_from_faction = HOL		
+		HOL = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = FRA
+				}
+			}
+			add_ai_strategy = {
+			    type = antagonize
+			    id = FRA
+			    value = 200
+			}
+		}
+	}
+}
+
+#holland honor partitions
+
+country_event = {
+	id = holland.12
+	title = holland.11.t
+	desc = holland.11.d
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = HOL
+		has_country_flag = partition_of_the_southern_netherlands
+		FRA = { exists = yes }
+		AND = {
+			OR = {
+				BEL = { has_capitulated = yes }
+				NOT = { country_exists = BEL }
+			}
+			OR = {
+				OR = {
+					controls_state = 34
+					any_other_country = {
+						is_in_faction_with = HOL
+						HOL = {
+							is_faction_leader = yes
+						}
+						controls_state = 34
+					}
+				}
+				OR = {
+					controls_state = 8
+					any_other_country = {
+						is_in_faction_with = HOL
+						HOL = {
+							is_faction_leader = yes
+						}
+						controls_state = 8
+					}
+				}
+			}
+		}
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		ai_chance = {
+			base = 1
+			modifier = {
+				factor = 0
+				AND = {
+					BEL = {
+						is_ai = no
+						has_civil_war = no
+					}
+					is_in_faction_with = BEL
+				}
+			}
+		}
+		name = "We shall honour our word."
+		if = {
+			limit = {
+				34 = {
+					OR = {
+						is_controlled_by = HOL
+						any_other_country = {
+							controls_state = 34
+							is_in_faction_with = HOL
+							HOL = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			FRA = { transfer_state = 34 }
+		}
+		if = {
+			limit = {
+				8 = {
+					OR = {
+						is_controlled_by = HOL
+						any_other_country = {
+							controls_state = 8
+							is_in_faction_with = HOL
+							HOL = { is_faction_leader = yes }
+						}
+					}
+				}
+			}
+			FRA = { transfer_state = 8 }
+		}
+		FRA = { country_event = holland.13 }
+		clr_country_flag = partition_of_the_southern_netherlands
+	}
+	option = {
+		name = "Actually, we have decided to alter the deal."
+		ai_chance = {
+			base = 1
+		}
+		FRA = { country_event = holland.14 }
+		clr_country_flag = partition_of_the_southern_netherlands
+		add_ai_strategy = {
+		    type = antagonize
+		    id = FRA
+		    value = 200
+		}
+		remove_from_faction = FRA		
+		FRA = {
+			effect_tooltip = {
+				create_wargoal = {
+					type = annex_everything
+					target = HOL
+				}
+			}
+			add_ai_strategy = {
+			    type = antagonize
+			    id = HOL
+			    value = 200
+			}
+		}
+	}
+}
+
+#from honors pact
+
+country_event = {
+	id = holland.13
+	title = holland.13.t
+	desc = holland.13.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "As they should!"
+	}
+}
+
+#france dishonors pact
+
+country_event = {
+	id = holland.14
+	title = holland.14.t
+	desc = holland.14.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Traitors!"
+		if = { 
+			limit = { original_tag = HOL }
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+		}
+		if = { 
+			limit = { original_tag = FRA }
+			create_wargoal = {
+				type = annex_everything
+				target = HOL
+			}
+		}
+	}
+}
+
+#personal union over the netherlands!
+
+country_event = {
+	id = holland.15
+	title = holland.15.t
+	desc = holland.15.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Our empire grows ever stronger!"
+		set_autonomy = {
+		    target = HOL
+		    autonomy_state = autonomy_dominion
+		}
+		if = {
+			limit = {
+				HOL = {
+					has_subject = INS
+				}
+			}
+			HOL = {
+				set_autonomy = {
+				    target = INS
+				    autonomy_state = autonomy_colony
+				}
+			}
+		}
+	}
+}
+
+#event to Prussia
+
+country_event = {
+	id = holland.16
+	title = "Death of William III of Orange"
+	desc = holland.16.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Frederick's claim is just!"
+		add_state_claim = 7
+		add_state_claim = 35
+		add_state_claim = 36
+		add_state_claim = 971
+		add_state_claim = 970
+		HOL = {
+			country_event = {
+				id =  holland.17
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = {
+		name = "We shouldn't jeopardize our relations with the Dutch."
+		add_political_power = 30
+	}
+}
+
+country_event = {
+	id = holland.17
+	title = "Frederick of Prussia, Prince of Orange?"
+	desc = holland.17.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "How dare he!"
+		add_war_support = 0.05
+		add_popularity = {
+		    ideology = neutrality
+		    popularity = -0.10
+		}
+	}
+}
+
+#demand prussia to relinquish claims
+
+country_event = {
+	id = holland.18
+	title = "Settling the dispute with Prussia"
+	desc = holland.18.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "We must engage in direct diplomacy."
+	}
+
+	option = {
+		name = "Ask for English mediation."
+	}
+
+	option = {
+		name = "Ask for Austrian mediation."
+	}
+
+	option = {
+		name = "Offer Ostfriesland as a compromise."
+	}
+}
+
+# prussia settle dispute?
+
+country_event = {
+	id = holland.19
+	title = "Netherlands seek an end to the dispute"
+	desc = holland.19.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Let us become friends."
+	}
+
+	option = {
+		name = "I shall not relinquish my claims!"
+	}
+}
+
+#holland demands artois
+
+country_event = {
+	id = holland.20
+	title = "[FROM.GetName] Requests Transfer Of Artois"
+	desc = holland.20.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "It's their's by right."
+		HOL = { transfer_state = 29 }
+		ai_chance = {
+			base = 40
+		}
+		HOL = {
+			country_event = {
+				id = holland.21
+				hours = 6
+			}
+		}
+	}
+
+	option = {
+		name = "We won't just give away land."
+		HOL = {
+			country_event = {
+				id = holland.22
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = holland.21
+	title = "[FROM.GetName] Accepts"
+	desc = holland.21.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Good to hear."
+	}
+}
+
+country_event = {
+	id = holland.22
+	title = "[FROM.GetName] Refuses"
+	desc = holland.22.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Curses!"
+		add_state_claim = 29
+	}
+}
+
+#holland demands cleves
+
+country_event = {
+	id = holland.23
+	title = "[FROM.GetName] Requests Transfer Of Cleves"
+	desc = holland.23.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "It's their's by right."
+		HOL = { transfer_state = 900 }
+		ai_chance = {
+			base = 40
+		}
+		HOL = {
+			country_event = {
+				id = holland.24
+				hours = 6
+			}
+		}
+	}
+
+	option = {
+		name = "We won't just give away land."
+		HOL = {
+			country_event = {
+				id = holland.25
+				hours = 6
+			}
+		}
+	}
+}
+
+country_event = {
+	id = holland.24
+	title = "[FROM.GetName] Accepts"
+	desc = holland.24.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Good to hear."
+	}
+}
+
+country_event = {
+	id = holland.25
+	title = "[FROM.GetName] Refuses"
+	desc = holland.25.d
+
+	fire_only_once = no
+	is_triggered_only = yes
+
+	option = {
+		name = "Curses!"
+		add_state_claim = 900
+	}
+}

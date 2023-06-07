@@ -1,0 +1,25 @@
+
+state={
+	id=1013
+	name="STATE_1013"
+
+	history={
+		owner = DEN
+				victory_points = {
+			13248 1
+		}
+			buildings = {
+			infrastructure = 1
+			13248 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		13248
+	}
+	manpower=83
+	buildings_max_level_factor=1.000
+	state_category=enclave
+}

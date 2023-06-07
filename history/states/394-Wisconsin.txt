@@ -1,0 +1,31 @@
+
+state={
+	id=394
+	name="STATE_394"
+	resources={
+		steel=53.000
+	}
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		buildings = {
+			infrastructure = 1
+		}
+		add_core_of = LOU
+		1789.1.1 = {
+			remove_core_of = QUE
+			remove_core_of = LOU
+			owner = IRO
+			add_core_of = IRO
+			add_claim_by = USA
+		}
+	}
+
+	provinces={
+		703 926 1849 4029 4166 4738 4834 7776 7829 9657 9678 12357 12456 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

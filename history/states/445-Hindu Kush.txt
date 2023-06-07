@@ -1,0 +1,47 @@
+
+state={
+	id=445
+	name="STATE_445"
+
+	history={
+		victory_points = {
+			5105 1 
+		}
+		owner = PER
+		add_core_of = AFG
+		buildings = {
+			infrastructure = 2
+
+		}
+		1716.5.1 = {
+			owner = PER
+			controller = PER
+			add_core_of = PER
+
+		}
+		1730.1.1 = {
+			owner = AFG
+			controller = AFG
+
+		}
+		1739.1.1 = {
+			owner = PER
+			controller = PER
+
+		}
+		1745.1.1 = {
+			owner = AFG
+			controller = AFG
+
+		}
+
+	}
+
+	provinces={
+		1995 2078 4949 4990 5020 5064 5105 7847 7975 8044 8090 10789 13353 13354 
+	}
+	manpower=205100
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+	local_supplies=0.000
+}

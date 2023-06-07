@@ -1,0 +1,33 @@
+state={
+	id=1024
+	name="STATE_1024"
+	resources={
+		rubber=55 # was: 94.000
+	}
+
+	history={
+		add_core_of = CAM
+		owner = CAM
+		victory_points = {
+			4223 10
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			dockyard = 2
+			7331 = {
+				naval_base = 4
+			}
+		}
+		1720.1.1 = {
+			owner = VIN
+		}
+	}
+
+	provinces={
+		1423 1396 4223 4284 4341 7331 7303 12133 
+	}
+	manpower = 40000
+	buildings_max_level_factor = 1.000
+	state_category = town
+}

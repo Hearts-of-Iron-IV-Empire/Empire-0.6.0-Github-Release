@@ -1,0 +1,43 @@
+state={
+	id=976
+	name="STATE_976"
+
+	history={
+		owner = RAJ
+		add_core_of = HYD
+		victory_points = {
+			8087 20 
+		}
+		victory_points = {
+			10255 10 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			8087 = {
+				bunker = 3
+			}
+		}
+		1730.5.1 = {
+			owner = HYD
+			controller = HYD
+			add_core_of = HYD
+
+		}
+		1773.1.1 = {
+			owner = EIC
+			controller = EIC
+			remove_core_of = EIC
+
+		}
+
+	}
+
+	provinces={
+		1228 1275 1317 1430 4321 4365 4472 5104 8087 10001 10255 11950 12114  13317 13318 13319 13320 
+	}
+	manpower=2548794
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

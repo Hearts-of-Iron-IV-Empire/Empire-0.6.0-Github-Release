@@ -1,0 +1,22 @@
+state={
+	id=899
+	name="STATE_899"
+	provinces={
+		11305 
+	}
+	history={
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			11305 15 
+		}
+		owner = LUB
+		add_core_of = LUB
+	}
+	
+	manpower=34897
+	buildings_max_level_factor=1.000
+	state_category=town
+}

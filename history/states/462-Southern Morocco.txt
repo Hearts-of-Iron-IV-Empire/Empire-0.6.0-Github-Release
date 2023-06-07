@@ -1,0 +1,26 @@
+
+state={
+	id=462
+	name="STATE_462"
+	manpower = 772000
+	
+	state_category = town
+
+	history={
+		owner = MOR
+		add_core_of = MOR
+		victory_points = {
+			4108 15 
+		}
+		victory_points = {
+			7203 3 
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1102 1152 1207 1989 4022 4108 4933 5046 7203 7908 8046 10107 
+	}
+}

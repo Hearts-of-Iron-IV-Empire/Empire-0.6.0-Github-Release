@@ -1,0 +1,26 @@
+state={
+	id=937
+	name="STATE_937"
+
+	history={
+		add_core_of = RWA
+		owner = RWA
+		add_core_of = COG
+		victory_points = {
+			10968 3
+		}
+		buildings = {
+			infrastructure = 1
+			10968 = {
+				naval_base = 2
+			}
+		}
+	}
+
+	provinces={
+		10968 
+	}
+	manpower=53412
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

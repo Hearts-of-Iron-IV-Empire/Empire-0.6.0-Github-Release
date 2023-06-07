@@ -1,0 +1,33 @@
+
+state={
+	id=916
+	name="STATE_916"
+
+	history={
+		owner = LOR
+		victory_points = {
+			3560 3 
+		}
+		victory_points = {
+			6545 3 
+		}
+		buildings = {
+			infrastructure = 2
+
+		}
+		add_core_of = LOR
+		add_core_of = FRA
+		1769.1.1 = {
+			owner = FRA
+			add_core_of = FRA
+			controller = FRA
+		}
+	}
+
+	provinces={
+		3560 5291 6545
+	}
+	manpower=45485
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

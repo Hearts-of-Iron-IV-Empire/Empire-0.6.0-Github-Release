@@ -1,0 +1,311 @@
+add_namespace = colonisation
+
+country_event = {
+	id = colonisation.1
+	title = colonisation.1.t
+	desc = colonisation.1.d
+	picture = GFX_report_event_colonialism
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = yes
+	}
+
+	option = { 
+		name = colonisation.1.a
+		PREV = {
+			set_state_flag = colonising_state
+			add_claim_by = ROOT
+		}
+	}
+}
+country_event = {
+	id = colonisation.2
+	title = colonisation.2.t
+	desc = colonisation.2.d
+	picture = GFX_report_event_colonialism
+
+	is_triggered_only = yes
+
+	trigger = {
+		always = yes
+	}
+	
+	option = {
+		name = colonisation.2.a
+		ROOT = {
+		clr_country_flag = colonising
+		remove_ideas = currently_colonising
+		}
+		every_state = {
+			limit = {
+				has_state_flag = colonising_state
+				is_claimed_by = ROOT
+				is_owned_by = UNC
+			}
+			clr_state_flag = colonising_state
+			remove_claim_by = ROOT
+			
+		}
+	}
+}
+country_event = {
+	id = colonisation.3
+	title = colonisation.3.t
+	desc = colonisation.3.d
+	picture = GFX_report_event_colonialism
+
+	is_triggered_only = yes
+	trigger = {
+		always = yes
+	}
+	option = {
+		name = colonisation.1.a
+		ROOT = {
+			clr_country_flag = colonising
+		}
+		every_state = {
+			limit = {
+				has_state_flag = colonising_state
+				is_claimed_by = ROOT
+				is_owned_by = UNC
+			}
+			
+			ROOT = {
+				transfer_state = PREV
+				remove_ideas = currently_colonising
+				
+			}
+			IF = {
+				limit = {
+					has_variable = colonial_area
+					NOT = {
+						any_neighbor_state = {
+							OR = {
+								is_owned_by = ROOT
+								#any_country = {
+								#	is_subject_of = ROOT
+								#	PREV = {
+								#		is_owned_by = PREV
+								#		NOT = {
+								##			is_core_of = PREV
+								#		}
+								#	}
+								#}
+							}
+						}
+					}
+					ROOT = {
+					#is_subject = no
+					}
+				}
+				IF = {
+					limit = {
+						any_country = {
+							PREV = {
+								is_core_of = PREV
+							}
+							is_subject_of = ROOT
+						}
+					}
+					every_country = {
+						limit = {
+							PREV = {
+								is_core_of = PREV
+							}
+							is_subject_of = ROOT
+						}
+						transfer_state = PREV
+						
+					}
+				}
+			}
+			remove_core_of = UNC
+			add_building_construction = {
+				type = colonial_settlement
+				level = 1
+				instant_build = yes
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						has_tech = increase_colonial_quality
+					}
+				}
+				add_building_construction = {
+					type = colonial_settlement
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						has_tech = increase_colonial_quality2
+					}
+				}
+				add_building_construction = {
+					type = colonial_settlement
+					level = 1
+					instant_build = yes
+				}
+			}
+			IF = {
+				limit = {
+					ROOT = {
+						has_tech = increase_colonial_quality3
+					}
+				} 
+				add_building_construction = {
+					type = colonial_settlement
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = colonisation.4
+	title = "Our North American Colonies merge"
+	desc = "The newly founded colony in North America has decided to merge with [USA.GetNameDEF]"
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		any_country = {
+			
+			original_tag = AME
+			is_subject_of = ROOT
+			
+		}
+		USA = {
+			is_subject_of = ROOT
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = "Ok, let's hope they don't rebel."
+		
+			random_country = {
+				limit = {
+					is_subject_of = ROOT
+					original_tag = AME
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = PREV
+					}
+					add_core_of = USA
+				}
+				USA = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+		
+	}
+}
+country_event = {
+	id = colonisation.5
+	title = "Our Canadian Colonies merge"
+	desc = "The newly founded colony in Canada has decided to merge with [QUE.GetNameDEF]."
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		any_country = {
+			original_tag = CAN
+			is_subject_of = ROOT
+		}
+		QUE = {
+			is_subject_of = ROOT
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = "Ok, let's hope they don't rebel."
+		
+			random_country = {
+				limit = {
+					is_subject_of = ROOT
+					original_tag = CAN
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = PREV
+					}
+					add_core_of = QUE
+				}
+				QUE = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+		
+	}
+}
+country_event = {
+	id = colonisation.6
+	title = "Our North American Colonies merge"
+	desc = "The newly founded colony in North America has decided to merge with [LOU.GetNameDEF]."
+	picture = GFX_report_event_generic_sign_treaty2
+
+	trigger = {
+		any_country = {
+			
+			original_tag = AME
+			is_subject_of = ROOT
+			
+		}
+		LOU = {
+			is_subject_of = ROOT
+		}
+	}
+	mean_time_to_happen = {
+		days = 2
+	}
+	option = {
+		name = "Ok, let's hope they don't rebel."
+		
+			random_country = {
+				limit = {
+					is_subject_of = ROOT
+					original_tag = AME
+				}
+				every_owned_state = {
+					limit = {
+						is_core_of = PREV
+					}
+					add_core_of = AME
+				}
+				LOU = {
+					annex_country = {
+						target = PREV
+						transfer_troops = yes
+					}
+				}
+			}
+		
+	}
+}
+country_event = {
+	id = colonisation.7
+	title = "Colonisation"
+	desc = Colonisation.7.desc
+	picture = GFX_report_event_colonialism
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Ok, now let me play the mod!"				
+	}
+}

@@ -1,0 +1,32 @@
+
+state={
+	id=667
+	name="STATE_667"
+	resources={
+		rubber=12.000
+	}
+
+	history={
+		owner = POR
+		buildings = {
+			infrastructure = 2
+			1355 = {
+				naval_base = 1
+
+			}
+			10175 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		1298 1339 1355 4301 4358 7321 10175 10219 12151 
+	}
+	manpower=3460200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

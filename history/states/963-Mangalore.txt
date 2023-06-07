@@ -1,0 +1,28 @@
+state={
+	id=963
+	name="STATE_963"
+	provinces={
+		1321 7391 
+	}
+	history={
+		owner = INS
+		buildings = {
+			infrastructure = 1
+			7391 = {
+				naval_base = 5
+			}
+			1321 = {
+				naval_base = 2
+			}
+		}
+		victory_points = {
+			7391 1
+		}
+		victory_points = {
+			1321 3
+		}
+	}
+	manpower=121648
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

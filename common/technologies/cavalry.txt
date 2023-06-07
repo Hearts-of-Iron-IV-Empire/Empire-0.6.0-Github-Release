@@ -1,0 +1,62 @@
+technologies = {
+	basic_cavalry = {
+
+		enable_equipments = {
+			basic_cavalry_equipment
+		}
+
+		enable_subunits = {
+			cavalry
+		}
+	
+		path = {
+			leads_to_tech = basic_mounted_infantry
+			research_cost_coeff = 1
+		}
+
+		path = {
+			leads_to_tech = basic_lancer_cavalry
+			research_cost_coeff = 1
+		}
+		
+		
+		research_cost = 2
+		start_year = 1683
+		folder = {
+			name = cavalry_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1700.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1701.1.1"
+			}
+			
+			modifier = {
+				factor = 1.2
+				date > "1702.1.1"
+			}
+		}
+		
+		categories = {
+			cavalry
+			cat_light_cavalry
+			cat_heavy_cavalry
+			cat_lancer_cavalry
+			cat_mounted_infantry
+		}
+	}	
+}

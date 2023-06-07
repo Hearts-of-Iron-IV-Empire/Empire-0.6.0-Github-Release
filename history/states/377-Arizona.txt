@@ -1,0 +1,28 @@
+
+state={
+	id=377
+	name="STATE_377"
+	resources={
+		steel=20.000
+		oil=5.000
+		aluminium=8.000
+	}
+
+	history={
+		owner = NAH
+		1765.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+			controller = MEX
+
+		}
+		
+	}
+
+	provinces={
+		1793 6897 7821 10573 10645 11814 12765 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

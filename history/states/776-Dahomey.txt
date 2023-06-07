@@ -1,0 +1,22 @@
+state={
+	id=776
+	name="STATE_776"
+
+	history={
+		owner = DAH
+		add_extra_state_shared_building_slots = 10
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+		victory_points = { 10919 3 }
+	}
+
+	provinces={
+		10919 12874 
+	}
+	manpower=1351563
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

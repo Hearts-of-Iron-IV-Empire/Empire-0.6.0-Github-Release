@@ -1,0 +1,24 @@
+state={
+	id=888
+	name="STATE_888"
+	provinces={
+		9522 
+	}
+	history={
+		victory_points = {
+			9522  15 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		owner = AAC
+		add_core_of = AAC
+		1798.1.1 = {
+			owner = FRA
+		}
+	}
+	manpower=41200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -1,0 +1,222 @@
+characters = {
+    PRS_Frederick_I = {
+        name = "Frederick I"
+        portraits = {
+            army = {
+                large = "GFX_Frederick_I"
+            }
+            civilian = {
+                large = "GFX_Frederick_I"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {}
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = nobility
+            traits = {}
+        }
+        field_marshal = {
+            traits = { brilliant_strategist }
+            skill = 2
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    PRS_Frederick_Wilhelm_I = {
+        name = "Frederick Wilhelm I"
+        portraits = {
+            civilian = {
+                large = "GFX_Friedrich_Wilhelm_I"
+            }
+        }
+        country_leader = {
+            expire = 1739.1.1
+            ideology = despotism
+            traits = {}
+        }
+    }
+    PRS_Frederick_II = {
+        name = "Frederick II"
+        portraits = {
+            civilian = {
+                large = "GFX_Frederick_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    PRS_Hochmeister_Franz_Ludwig_von_der_pfaltz = {
+        name = "Hochmeister Franz Ludwig von der Pfaltz"
+        portraits = {
+            army = {
+                large = "GFX_Franz_Ludwig"
+            }
+            civilian = {
+                large = "GFX_Franz_Ludwig"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = nazism
+            traits = {}
+        }
+        field_marshal = {
+            traits = { aggressive_assaulter }
+            skill = 4
+            attack_skill = 3
+            defense_skill = 3
+            planning_skill = 3
+            logistics_skill = 4
+        }
+    }
+    PRS_Leopold_I_Anhalt_Dessau = {
+        name = "Leopold I of Anhalt-Dessau"
+        portraits = {
+            army = {
+                large = "GFX_Leopold_I_Anhalt_Dessau"
+            }
+        }
+        field_marshal = {
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    PRS_Johann_von_Lehwaldt = {
+        name = "Johann von Lehwaldt"
+        portraits = {
+            army = {
+                large = "GFX_Johann_von_Lehwaldt"
+            }
+        }
+        field_marshal = {
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    PRS_Adrian_Bernhard_von_Borcke = {
+        name = "Adrian Bernhard von Borcke"
+        portraits = {
+            army = {
+                large = "GFX_Adrian_Bernhard_von_Borcke"
+            }
+        }
+        corps_commander = {
+            traits = { media_personality }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    PRS_Alexander_von_Spaen = {
+        name = "Alexander von Spaen"
+        portraits = {
+            army = {
+                large = "GFX_Alexander_von_Spaen"
+            }
+        }
+        corps_commander = {
+            traits = { aggressive_assaulter }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    PRS_Heino_Heinrich_von_Flemming = {
+        name = "Heino Heinrich von Flemming"
+        portraits = {
+            army = {
+                large = "GFX_Heino_Heinrich_von_Flemming"
+            }
+        }
+        corps_commander = {
+            traits = { expert_delegator }
+            skill = 2
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    PRS_Wilhelm_Magnus_von_Brünneck = {
+        name = "Wilhelm Magnus von Brünneck"
+        portraits = {
+            army = {
+                large = "GFX_Wilhelm_Magnus_von_Brünneck"
+            }
+        }
+        corps_commander = {
+            traits = { organizer }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 3
+            logistics_skill = 1
+        }
+    }
+    PRS_Alexander_von_Kleist = {
+        name = "Alexander von Kleist"
+        portraits = {
+            army = {
+                large = "GFX_Henning_Alexander_von_Kleist"
+            }
+        }
+        corps_commander = {
+            traits = { urban_assault_specialist }
+            skill = 3
+            attack_skill = 3
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    PRS_Wilhelm_Dietrich_von_Buddenbrock = {
+        name = "Wilhelm Dietrich von Buddenbrock"
+        portraits = {
+            army = {
+                large = "GFX_Wilhelm_Dietrich_von_Buddenbrock"
+            }
+        }
+        corps_commander = {
+            traits = { infantry_leader }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 3
+        }
+    }
+    PRS_Kurt_Christoph_von_Schwerin = {
+        name = "Kurt Christoph von Schwerin"
+        portraits = {
+            army = {
+                large = "GFX_Kurt_Christoph_von_Schwerin"
+            }
+        }
+        corps_commander = {
+            traits = { infantry_leader }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+        }
+    }
+}

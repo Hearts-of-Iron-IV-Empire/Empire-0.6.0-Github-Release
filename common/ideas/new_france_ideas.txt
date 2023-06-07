@@ -1,0 +1,34 @@
+ideas = {
+	country = {
+		QUE_mostly_male_society = {
+
+			picture = MEX_politicised_army_2
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				conscription = 0.4
+				monthly_population = -0.8
+			}
+		}
+		QUE_french_military_support = {
+
+			picture = generic_manpower_bonus
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				weekly_manpower = 50 
+			}
+		}
+		
+	}
+}

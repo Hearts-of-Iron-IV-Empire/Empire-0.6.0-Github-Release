@@ -1,0 +1,25 @@
+
+state={
+	id=772
+	name="STATE_772"
+	resources={
+		aluminium=1.000
+	}
+
+	history={
+		owner = GAB
+		add_core_of = GAB
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		12775 
+	}
+	manpower=746415
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

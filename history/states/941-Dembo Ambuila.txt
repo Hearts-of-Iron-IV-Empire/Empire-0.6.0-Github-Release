@@ -1,0 +1,27 @@
+state={
+	id=941
+	name="STATE_941"
+resources={
+		tungsten=2.000
+	}
+
+	history={
+		owner = UGA
+		add_core_of = UGA
+		buildings = {
+			infrastructure = 1
+		}
+		1712.1.1 = {
+			owner = COG
+			controller = COG
+			add_core_of = COG
+		}
+	}
+
+	provinces={
+		12896 
+	}
+	manpower=384512
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

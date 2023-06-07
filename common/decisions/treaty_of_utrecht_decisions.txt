@@ -1,0 +1,740 @@
+#localisation in spanish files
+
+treaty_of_utrecht = {
+
+	demand_bourbon_alliance_surrender = {
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		available = {
+			NOT = { 16 = { is_controlled_by = FRA } }
+			has_war_with = FRA
+			SPR = { is_in_faction_with = FRA }
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			FRA =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+			SPR =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+		}
+
+		days_re_enable = 30
+
+		visible = {
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			has_war_with = FRA
+			SPR = { is_in_faction_with = FRA }
+		}		
+
+		complete_effect = {
+			if = { 
+				limit = {
+					SPR = { is_faction_leader = yes }
+				}
+				SPR = { country_event = succession.1 }
+			}
+			if = { 
+				limit = {
+					FRA = { is_faction_leader = yes }
+				}
+				FRA = { country_event = succession.1 }
+			}			
+		}
+	}
+
+	fate_of_the_netherlands = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			BEL = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.2					
+		}	
+	}
+
+	fate_of_the_naples = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			TSC = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.6					
+		}	
+	}
+
+	fate_of_the_sardinia= {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			SPR = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.4					
+		}	
+	}
+
+	fate_of_the_sicily= {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			SPR = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.8					
+		}	
+	}
+
+	english_naval_bases = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			SPR = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.10					
+		}	
+	}
+
+	fate_of_slavetrade_monopoly = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			SPR = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.11					
+		}	
+	}
+
+	fate_of_milan = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = FRA_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			LOM = { is_in_faction_with = FRA }
+			has_global_flag = FRA_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.12					
+		}	
+	}
+}
+
+treaty_of_versailles = {
+	demand_grand_alliance_surrender = {
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		available = {
+			has_war_with = AUS
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			if = {
+				limit = {
+					HOL = { is_in_faction_with = AUS }
+				}
+				HOL =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					ENG = { is_in_faction_with = AUS }
+				}
+				ENG =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+			AUS =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+		}
+
+		days_re_enable = 30
+
+		visible = {
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			has_war_with = AUS
+			SPR = { is_in_faction_with = FRA }
+		}		
+		complete_effect = {
+			if = { 
+				limit = {
+					AUS = { is_faction_leader = yes }
+				}
+				AUS = { country_event = succession.20 }
+			}	
+			if = { 
+				limit = {
+					ENG = { is_faction_leader = yes }
+				}
+				ENG = { country_event = succession.20 }
+			}	
+			if = { 
+				limit = {
+					HOL = { is_faction_leader = yes }
+				}
+				HOL = { country_event = succession.20 }
+			}		
+		}
+	}
+	fate_of_britain = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			ENG = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.21					
+		}	
+	}
+	fate_of_the_netherlands_french_victory = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			HOL = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.24					
+		}	
+	}
+	fate_of_north_america = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			USA = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.25					
+		}	
+	}
+	fate_of_the_caribbean = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			ENG = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.26					
+		}	
+	}
+	fate_of_savoy = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			ITA = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.27					
+		}	
+	}
+	fate_of_aragon = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			ARA = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.28					
+		}	
+	}
+	fate_of_austria = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.29					
+		}	
+	}
+	fate_of_the_rhine = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.31					
+		}	
+	}
+	fate_of_portugal= {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = grand_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			POR = { is_in_faction_with = AUS }
+			has_global_flag = grand_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.32					
+		}	
+	}
+}
+
+treaty_of_fontainebleu = {
+	demand_habsburg_alliance_surrender = {
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		available = {
+			has_war_with = AUS
+			SPR = { is_in_faction_with = AUS }
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			if = {
+				limit = {
+					HOL = { is_in_faction_with = AUS }
+				}
+				HOL =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					ENG = { is_in_faction_with = AUS }
+				}
+				ENG =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+			AUS =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+			SPR =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+		}
+
+		days_re_enable = 30
+
+		visible = {
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			has_war_with = AUS
+			SPR = {is_in_faction_with = AUS }
+		}		
+		complete_effect = {
+			if = { 
+				limit = {
+					AUS = { is_faction_leader = yes }
+				}
+				AUS = { country_event = succession.40 }
+			}	
+			if = { 
+				limit = {
+					SPR = { is_faction_leader = yes }
+				}
+				SPR = { country_event = succession.40 }
+			}		
+		}
+	}
+
+	execute_terms_of_treaty_of_london = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = habsburg_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = FRA
+				is_in_faction_with = FRA
+			}
+			has_global_flag = habsburg_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.41					
+		}	
+	}
+}
+
+treaty_of_vienna = {
+	demand_french_surrender = {
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		available = {
+			has_war_with = FRA
+			SPR = { is_in_faction_with = AUS }
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			FRA =  {
+				OR = {
+					surrender_progress > 0.35
+					has_capitulated = yes
+				}
+			}
+			if = {
+				limit = {
+					ENG = { is_in_faction_with = FRA }
+				}
+				ENG =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					HOL = { is_in_faction_with = FRA }
+				}
+				HOL =  {
+					OR = {
+						surrender_progress > 0.35
+						has_capitulated = yes
+					}
+				}
+			}
+		}
+
+		days_re_enable = 30
+
+		visible = {
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			has_war_with = FRA
+			SPR = { is_in_faction_with = AUS }
+		}		
+		complete_effect = {
+			if = { 
+				limit = {
+					FRA = { is_faction_leader = yes }
+				}
+				FRA = { country_event = succession.60 }
+			}	
+			if = { 
+				limit = {
+					ENG = { is_faction_leader = yes }
+					ENG = { is_in_faction_with = FRA }
+				}
+				ENG = { country_event = succession.60 }
+			}		
+		}
+	}
+	fate_of_the_france_habs = {
+		icon = generic_nationalism
+
+		ai_will_do = {
+			factor = 4000
+		}
+
+		fire_only_once = yes
+
+		available = {
+			has_global_flag = bourbon_alliance_defeated_flag
+		}
+
+		visible = {	
+			OR = {
+				original_tag = AUS
+				is_in_faction_with = AUS
+			}
+			has_global_flag = bourbon_alliance_defeated_flag
+		}	
+		complete_effect = {
+			country_event = succession.61					
+		}	
+	}
+}

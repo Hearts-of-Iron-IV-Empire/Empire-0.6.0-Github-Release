@@ -1,0 +1,14 @@
+characters = {
+    MOR_Syarif_Hasyim_Jamaluddin = {
+        name = "Moulay Ismail Ibn Sharif"
+        portraits = {
+            civilian = {
+                large = "GFX_Moulay_Ismail_Ibn_SharifX"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

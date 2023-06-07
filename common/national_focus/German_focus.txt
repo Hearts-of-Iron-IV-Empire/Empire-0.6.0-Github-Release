@@ -1,0 +1,2334 @@
+focus_tree = { 
+	id = german_focus
+	country = { 
+		factor = 0 
+		modifier = { 
+			add = 10 
+			tag = HAM 
+		}
+		modifier = { 
+			add = 10 
+			tag = LUB 
+		}
+		modifier = { 
+			add = 10 
+			tag = AAC 
+		}
+		modifier = { 
+			add = 10 
+			tag = NUR 
+		}
+		modifier = { 
+			add = 10 
+			tag = SAL 
+		}
+		modifier = { 
+			add = 10 
+			tag = ANH 
+		} 
+		modifier = { 
+			add = 10 
+			tag = ANS 
+		} 
+		modifier = { 
+			add = 10 
+			tag = MEC 
+		} 
+		modifier = { 
+			add = 10 
+			tag = BAV 
+		} 
+		modifier = { 
+			add = 10 
+			tag = SHL 
+		} 
+		modifier = { 
+			add = 10 
+			tag = HAN 
+		} 
+		modifier = { 
+			add = 10 
+			tag = SAX 
+		} 
+		modifier = { 
+			add = 10 
+			tag = CLG 
+		} 
+		modifier = { 
+			add = 10 
+			tag = RPA 
+		} 
+		modifier = { 
+			add = 10 
+			tag = TRR 
+		} 
+		modifier = { 
+			add = 10 
+			tag = IFC 
+		} 
+		modifier = { 
+			add = 10 
+			tag = AUG 
+		} 
+		modifier = { 
+			add = 10 
+			tag = BSG 
+		} 
+		modifier = { 
+			add = 10 
+			tag = HES 
+		} 
+		modifier = { 
+			add = 10 
+			tag = THU 
+		}
+		modifier = { 
+			add = 10 
+			tag = LUN 
+		} 
+		modifier = { 
+			add = 10 
+			tag = MUN 
+		} 
+		modifier = { 
+			add = 10 
+			tag = WRZ 
+		} 
+		modifier = { 
+			add = 10 
+			tag = WUR 
+		} 
+		modifier = { 
+			add = 10 
+			tag = MAI 
+		} 
+
+		modifier = { 
+			add = 10 
+			tag = ULM 
+		} 
+	} 
+
+	focus = {
+		id = GER_army_effort
+		icon = GFX_helmet_icon
+		x = 2
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GER_attract_mercenaries
+		icon = GFX_soldiers_marching
+		prerequisite = { focus = GER_army_effort }
+		x = -1
+		y = 1
+		mutually_exclusive = { focus = GER_dispatch_mercenaries }
+		relative_position_id = GER_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_deployed_mercenaries
+		}
+	}
+
+	focus = {
+		id = GER_dispatch_mercenaries
+		icon = GFX_french_soldier_icon
+		prerequisite = { focus = GER_army_effort }
+		x = 1
+		y = 1
+		mutually_exclusive = { focus = GER_attract_mercenaries }
+		relative_position_id = GER_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_dispatched_mercenaries
+		}
+	}
+
+	focus = {
+		id = GER_equipment_effort
+		icon = GFX_tanegashima
+		prerequisite = { focus = GER_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = GER_army_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GER_doctrine_effort
+		icon = GFX_review_military_doctrines_focus
+		prerequisite = { focus = GER_equipment_effort }
+		x = 1
+		y = 1
+		relative_position_id = GER_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GER_equipment_effort_2
+		icon = GFX_field_gun
+		prerequisite = { focus = GER_equipment_effort }
+		x = -1
+		y = 1
+		relative_position_id = GER_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GER_doctrine_effort_2
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = GER_doctrine_effort }
+		x = 0
+		y = 2
+		relative_position_id = GER_doctrine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 5
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GER_equipment_effort_3
+		icon = GFX_Tsar_Cannon
+		prerequisite = { focus = GER_equipment_effort_2 }
+		x = 0
+		y = 2
+		relative_position_id = GER_equipment_effort_2
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				ahead_reduction = 2
+				uses = 1
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = GER_armor_effort
+		icon = GFX_cavalry_icon
+		prerequisite = { focus = GER_equipment_effort }
+		x = 0
+		y = 2
+		relative_position_id = GER_equipment_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = armor_bonus
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+		}
+	}
+
+	focus = {
+		id = GER_special_forces
+		icon = GFX_soldier_icon
+		prerequisite = { focus = GER_equipment_effort_3 }
+		prerequisite = { focus = GER_doctrine_effort_2 }
+		prerequisite = { focus = GER_armor_effort }
+		x = 1
+		y = 1
+		relative_position_id = GER_equipment_effort_3
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = special_forces
+			add_tech_bonus = {
+				name = special_forces_bonus
+				bonus = 1.0
+				uses = 1
+				technology = marines
+				technology = marines2
+				technology = tech_mountaineers
+				technology = tech_mountaineers2
+			}
+		}
+	}
+
+	focus = {
+		id = GER_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 6
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+					free_building_slots = {
+						building = dockyard
+						size > 2
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_flexible_navy
+		icon = GFX_goal_generic_build_navy
+		prerequisite = { focus = GER_naval_effort }
+		mutually_exclusive = { focus = GER_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = GER_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
+			}
+		}
+	}
+
+	focus = {
+		id = GER_large_navy
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		prerequisite = { focus = GER_naval_effort }
+		mutually_exclusive = { focus = GER_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = GER_naval_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+		}
+	}
+
+	focus = {
+		id = GER_submarine_effort
+		icon = GFX_Imperial_Warship_Generic1
+		prerequisite = { focus = GER_flexible_navy focus = GER_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = GER_flexible_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GER_cruiser_effort
+		icon = GFX_goal_generic_navy_cruiser
+		prerequisite = { focus = GER_large_navy focus = GER_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = GER_large_navy
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GER_destroyer_effort
+		icon = GFX_Imperial_Warship_Generic
+		prerequisite = { focus = GER_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = GER_submarine_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GER_capital_ships_effort
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = GER_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = GER_cruiser_effort
+		cost = 10
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GER_attract_imperial_investment
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 12
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+	focus = {
+		id = GER_innovative_thought
+		icon = GFX_goal_generic_production
+		prerequisite = { focus = GER_attract_imperial_investment }
+		x = -2
+		y = 1
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = GER_german_manufacturing
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_innovative_thought }
+		x = -2
+		y = 2
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available = {
+			has_tech = construction1
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_german_manufacturing_2
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_german_manufacturing }
+		x = -2
+		y = 3
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available = {
+			has_tech = construction2
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_economic_boom
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = GER_german_manufacturing_2 }
+		prerequisite = { focus = GER_extend_road_networks_2 }
+		mutually_exclusive = { focus = GER_research_slot focus = GER_total_militarization}
+		x = -2
+		y = 4
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available = {
+			has_tech = construction3
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = GER_land_reclamation
+		icon = GFX_goal_generic_construction2
+		prerequisite = { focus = GER_attract_imperial_investment }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = GER_extend_road_networks
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_land_reclamation }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_extend_road_networks_2
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = GER_extend_road_networks }
+		x = 0
+		y = 3
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction2
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_research_slot
+		icon = GFX_focus_research
+		prerequisite = { focus = GER_extend_road_networks_2 }
+		prerequisite = { focus = GER_german_manufacturing_2 focus = GER_military_effort_2}
+		x = 0
+		y = 4
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+		mutually_exclusive = { focus = GER_economic_boom focus = GER_total_militarization}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = GER_militarise_estates
+		icon = GFX_goal_generic_build_tank
+		prerequisite = { focus = GER_attract_imperial_investment }
+		#prerequisite = { focus = GER_army_effort }
+		x = 2
+		y = 1
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_militarizing_estates
+		}
+	}
+
+	focus = {
+		id = GER_military_effort
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GER_militarise_estates }
+		x = 2
+		y = 2
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction1
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_military_effort_2
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GER_military_effort }
+		x = 2
+		y = 3
+		cost = 10
+		relative_position_id = GER_attract_imperial_investment
+
+		available_if_capitulated = yes
+
+		available = {
+			has_tech = construction2
+		}
+
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = GER_total_militarization
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = GER_military_effort_2 }
+		prerequisite = { focus = GER_extend_road_networks_2 }
+		x = 2
+		y = 4
+		cost = 10
+		mutually_exclusive = { focus = GER_research_slot focus = GER_economic_boom}
+		relative_position_id = GER_attract_imperial_investment
+
+		available = {
+			has_tech = construction3
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_cuius_regio_eius_religio
+		icon = GFX_catholic_and_protestant
+		x = 22
+		y = 0
+		cost = 5
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GER_review_religious_allegiance
+		icon = GFX_goal_generic_forceful_treaty
+		x = -2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_true_to_our_believes }
+		prerequisite = { focus = GER_cuius_regio_eius_religio }
+		relative_position_id = GER_cuius_regio_eius_religio
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+			    limit = {
+			        has_idea = protestant
+			    }   
+			    swap_ideas = {
+				    remove_idea = protestant
+				    add_idea = catholic 
+				}
+			}
+			if = {
+			    limit = {
+			        has_idea = catholic
+			    }   
+			    swap_ideas = {
+				    remove_idea = catholic
+				    add_idea = protestant 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = GER_true_to_our_believes
+		icon = GFX_goal_generic_neutrality_focus
+		x = 2
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_review_religious_allegiance }
+		prerequisite = { focus = GER_cuius_regio_eius_religio }
+		relative_position_id = GER_cuius_regio_eius_religio
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_emmisary_to_rome
+		icon = GFX_goal_papal_states_flag
+		x = -4
+		y = 2
+		cost = 10
+		mutually_exclusive = { focus = GER_follow_luther focus = GER_teachings_of_calvin }
+		prerequisite = { focus = GER_true_to_our_believes focus = GER_review_religious_allegiance}
+		relative_position_id = GER_cuius_regio_eius_religio
+
+		available_if_capitulated = yes
+
+		available = {
+			has_idea = catholic
+		}
+
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+    			target = PAP
+    			modifier = sent_emissary
+			}
+			add_ai_strategy = {
+			    type = befriend
+			    id = PAP
+			}
+			PAP = {
+				add_ai_strategy = {
+				    type = befriend
+				    id = ROOT
+				}	
+			}
+		}
+	}
+
+	focus = {
+		id = GER_safeguard_spiritual_integrity
+		icon = GFX_no_protestants
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_emmisary_to_rome }
+		relative_position_id = GER_emmisary_to_rome
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_fransiscan_austherity
+		icon = GFX_goal_generic_national_unity
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_safeguard_spiritual_integrity }
+		relative_position_id = GER_emmisary_to_rome
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_fransiscan_austherity
+		}
+	}
+
+	focus = {
+		id = GER_latin_texts
+		icon = GFX_OTT_constitution
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_emmisary_to_rome }
+		relative_position_id = GER_emmisary_to_rome
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_spiritual_administration
+		icon = GFX_focus_generic_treaty
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_latin_texts }
+		relative_position_id = GER_emmisary_to_rome
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_spiritual_administration
+		}
+	}
+
+	focus = {
+		id = GER_for_the_catholic_faith
+		icon = GFX_defender_of_the_faith
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_spiritual_administration }
+		prerequisite = { focus = GER_fransiscan_austherity }
+		relative_position_id = GER_emmisary_to_rome
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_defender_of_the_faith
+		}
+	}
+
+	focus = {
+		id = GER_follow_luther
+		icon = GFX_martin_luther
+		x = 0
+		y = 2
+		cost = 2
+		mutually_exclusive = { focus = GER_emmisary_to_rome focus = GER_teachings_of_calvin }
+		prerequisite = { focus = GER_true_to_our_believes focus = GER_review_religious_allegiance}
+		relative_position_id = GER_cuius_regio_eius_religio
+
+		available_if_capitulated = yes
+
+		available = {
+			has_idea = protestant
+		}
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = GER_poor_relief
+		icon = GFX_focus_generic_concessions
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_follow_luther}
+		relative_position_id = GER_follow_luther
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_poor_relief
+		}
+	}
+
+	focus = {
+		id = GER_sola_fide
+		icon = GFX_focus_renounce_the_treaty_of_trianon
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_poor_relief}
+		relative_position_id = GER_follow_luther
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.025
+		}
+	}
+
+	focus = {
+		id = GER_secularisation
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_follow_luther}
+		relative_position_id = GER_follow_luther
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 80
+		}
+	}
+
+	focus = {
+		id = GER_rationalism
+		icon = GFX_focus_research
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_secularisation}
+		relative_position_id = GER_follow_luther
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_rationalism_idea
+		}
+	}
+
+	focus = {
+		id = GER_obrigkeit
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_rationalism }
+		prerequisite = { focus = GER_sola_fide }
+		relative_position_id = GER_follow_luther
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_divided_church_and_state
+		}
+	}
+
+	focus = {
+		id = GER_teachings_of_calvin
+		icon = GFX_john_calvin
+		x = 4
+		y = 2
+		cost = 2
+		mutually_exclusive = { focus = GER_follow_luther focus = GER_emmisary_to_rome }
+		prerequisite = { focus = GER_true_to_our_believes focus = GER_review_religious_allegiance}
+		relative_position_id = GER_cuius_regio_eius_religio
+
+		available = {
+			has_idea = protestant
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = GER_eliminate_heterodoxy
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_teachings_of_calvin}
+		relative_position_id = GER_teachings_of_calvin
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_consistories
+		icon = GFX_focus_por_concordat
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_eliminate_heterodoxy}
+		relative_position_id = GER_teachings_of_calvin
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_proclaim_theocracy
+		icon = GFX_focus_spa_no_compromise_on_carlist_ideals
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_teachings_of_calvin}
+		relative_position_id = GER_teachings_of_calvin
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GER_devotion
+		icon = GFX_focus_CZE_german_puppet
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_proclaim_theocracy}
+		relative_position_id = GER_teachings_of_calvin
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_calvinist_work_ethos
+		icon = GFX_goal_generic_construction2
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_devotion }
+		prerequisite = { focus = GER_consistories }
+		relative_position_id = GER_teachings_of_calvin
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = { GER_calvinist_work_ethos }
+		}
+	}
+
+	focus = {
+		id = GER_political_effort
+		icon = GFX_goal_generic_demand_territory
+		x = 37
+		y = 0
+		cost = 10
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GER_monarchy_reign_supreme
+		icon = GFX_focus_generic_monarchy_2
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_political_effort}
+		relative_position_id = GER_political_effort
+
+		available = {
+			has_government = neutrality
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+			    ideology = aristocracy
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_centralized_government
+		icon = GFX_goal_generic_demand_territory
+		x = -1
+		y = 1
+		cost = 5
+		mutually_exclusive = { focus = GER_decentralized_government }
+		prerequisite = { focus = GER_monarchy_reign_supreme}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = neutrality
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_estates_general
+		icon = GFX_goal_tfv_strengthen_commonwealth_ties
+		x = -1
+		y = 3
+		cost = 10
+		mutually_exclusive = { focus = GER_rule_by_royal_decree focus = GER_aristocratic_councils focus = GER_parliamentarism }
+		prerequisite = { focus = GER_centralized_government focus = GER_decentralized_government}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_estates_general
+		}
+	}
+
+	focus = {
+		id = GER_parliamentarism
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = 1
+		y = 3
+		cost = 10
+		mutually_exclusive = { focus = GER_estates_general focus = GER_aristocratic_councils focus = GER_rule_by_royal_decree }
+		prerequisite = { focus = GER_centralized_government focus = GER_decentralized_government}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_parliamentarism
+		}
+	}
+
+	focus = {
+		id = GER_curtail_noble_privileges
+		icon = GFX_goal_generic_political_pressure
+		x = -3
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_centralized_government}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_curtailed_noble_privileges
+		}
+	}
+
+	focus = {
+		id = GER_rule_by_royal_decree
+		icon = GFX_focus_generic_monarchy_1
+		x = -3
+		y = 3
+		cost = 10
+		mutually_exclusive = { focus = GER_estates_general focus = GER_aristocratic_councils focus = GER_parliamentarism }
+		prerequisite = { focus = GER_curtail_noble_privileges}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GER_decentralized_government
+		icon = GFX_goal_generic_national_unity
+		x = 1
+		y = 1
+		cost = 5
+		mutually_exclusive = { focus = GER_centralized_government }
+		prerequisite = { focus = GER_monarchy_reign_supreme}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = aristocracy
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_expand_noble_privileges
+		icon = GFX_focus_rom_handle_king
+		x = 3
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_decentralized_government}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_expanded_noble_privileges
+		}
+	}
+
+	focus = {
+		id = GER_aristocratic_councils
+		icon = GFX_goal_generic_army_doctrines
+		x = 3
+		y = 3
+		cost = 10
+		mutually_exclusive = { focus = GER_estates_general focus = GER_rule_by_royal_decree focus = GER_parliamentarism }
+		prerequisite = { focus = GER_expand_noble_privileges}
+		relative_position_id = GER_monarchy_reign_supreme
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 15
+			add_ideas = GER_noble_council
+		}
+	}
+
+
+	focus = {
+		id = GER_res_publica
+		icon = GFX_goal_support_democracy
+		x = 6
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_political_effort}
+		relative_position_id = GER_political_effort
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_republicanism
+		}
+	}
+
+	focus = {
+		id = GER_olicharcy
+		icon = GFX_goal_generic_political_pressure
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_merchant_republic }
+		prerequisite = { focus = GER_res_publica}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_political_dynasties
+		icon = GFX_focus_generic_strike_at_democracy3
+		x = -1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_olicharcy}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_political_dynasties
+		}
+	}
+
+		focus = {
+		id = GER_authoritarianism
+		icon = GFX_focus_generic_support_the_left_right
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_political_dynasties}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GER_merchant_republic
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_olicharcy }
+		prerequisite = { focus = GER_res_publica}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = free_trade
+			add_ideas = GER_trade_republic
+		}
+	}
+
+	focus = {
+		id = GER_attracting_investment
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_merchant_republic}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 1 }
+		}
+	}
+
+		focus = {
+		id = GER_centre_of_trade
+		icon = GFX_focus_spr_torchbearers_of_tomorrow
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_attracting_investment}
+		relative_position_id = GER_res_publica
+
+		available = {
+			has_government = democratic
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_trade_revenue
+		}
+	}
+
+	focus = {
+		id = GER_word_of_god
+		icon = GFX_goal_generic_propaganda
+		x = -6
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_political_effort}
+		relative_position_id = GER_political_effort
+
+		available = {
+			has_government = fascism
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_popularity = {
+			    ideology = fascism
+			    popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = GER_internal_mission
+		icon = GFX_focus_por_concordat
+		x = -1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_word_of_god}
+		relative_position_id = GER_word_of_god
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_combat_heresy
+		icon = GFX_focus_eng_move_to_secure_the_dominions
+		x = -1
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_internal_mission}
+		relative_position_id = GER_word_of_god
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_expelling_heretics
+		}
+	}
+
+	focus = {
+		id = GER_external_mission
+		icon = GFX_goal_spanish_inquisition
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_word_of_god}
+		relative_position_id = GER_word_of_god
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_religious_justification
+		icon = GFX_goal_generic_forceful_treaty
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_external_mission}
+		relative_position_id = GER_word_of_god
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_religious_justification
+		}
+	}
+
+	focus = {
+		id = GER_tithe
+		icon = GFX_money
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_word_of_god}
+		relative_position_id = GER_word_of_god
+
+		available = {
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = GER_tithe
+		}
+	}
+
+	focus = {
+		id = GER_foreign_diplomacy
+		icon = GFX_goal_tripartite_pact
+		x = 37
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+		available = {
+			date > 1700.01.01
+		}
+		completion_reward = {
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GER_limited_intervention
+		icon = GFX_generic_soldiers
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = GER_persue_great_power_status}
+		relative_position_id = GER_foreign_diplomacy
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { has_idea = neutrality_idea }
+				remove_ideas = neutrality_idea
+			}	
+			set_rule = { can_send_volunteers = yes }
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = GER_foreign_legions
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 3
+		cost = 5
+		prerequisite = { focus = GER_limited_intervention}
+		relative_position_id = GER_foreign_diplomacy
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = foreign_expeditions_focus
+		}
+	}
+
+	focus = {
+		id = GER_a_minor_power
+		icon = GFX_focus_generic_self_management
+		x = -3
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_persue_great_power_status }
+		prerequisite = { focus = GER_foreign_diplomacy}
+		relative_position_id = GER_foreign_diplomacy
+
+		ai_will_do = {
+			factor = 90
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = GER_maintain_neutrality
+		icon = GFX_goal_generic_neutrality_focus
+		x = 0
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = GER_support_austria focus = GER_support_france }
+		prerequisite = { focus = GER_a_minor_power}
+		relative_position_id = GER_a_minor_power
+
+		ai_will_do = {
+			factor = 80
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			if = {
+				limit = { NOT = { has_idea = neutrality_idea } }
+				add_ideas = neutrality_idea
+			}
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = GER_detterence
+		icon = GFX_goal_generic_defence
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_maintain_neutrality}
+		relative_position_id = GER_a_minor_power
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_ideas = deterrence
+		}
+	}
+
+	focus = {
+		id = GER_support_france
+		icon = GFX_goal_bourbon
+		x = -2
+		y = 1
+		cost = 5
+		mutually_exclusive = { focus = GER_support_austria focus = GER_maintain_neutrality }
+		prerequisite = { focus = GER_a_minor_power}
+		relative_position_id = GER_a_minor_power
+
+		available = {
+			NOT = {
+				is_in_faction = yes
+				has_war_with = FRA
+			}
+		}
+
+		ai_will_do = {
+			factor = 10
+			modifier = {
+			    factor = 50
+			    original_tag = CLG
+			}
+			modifier = {
+			    factor = 50
+			    original_tag = BAV
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+    			target = FRA
+    			modifier = large_increase
+			}
+		}
+	}
+
+	focus = {
+		id = GER_join_france
+		icon = GFX_goal_bourbon
+		x = -2
+		y = 2
+		cost = 5
+		prerequisite = { focus = GER_support_france}
+		relative_position_id = GER_a_minor_power
+
+		bypass = {
+			is_in_faction_with = FRA
+		}
+
+		available = {
+			NOT = {
+				is_in_faction = yes
+				has_war_with = FRA
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			FRA = { country_event = generic.2 }
+		}
+	}
+
+	focus = {
+		id = GER_support_austria
+		icon = GFX_goal_flag_austria
+		x = 2
+		y = 1
+		cost = 5
+		mutually_exclusive = { focus = GER_maintain_neutrality focus = GER_support_france }
+		prerequisite = { focus = GER_a_minor_power}
+		relative_position_id = GER_a_minor_power
+
+		available = {
+			NOT = {
+				is_in_faction = yes
+				has_war_with = AUS
+			}
+		}
+
+		ai_will_do = {
+			factor = 40
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			reverse_add_opinion_modifier = {
+    			target = AUS
+    			modifier = large_increase
+			}
+		}
+	}
+
+	focus = {
+		id = GER_join_austria
+		icon = GFX_goal_flag_austria
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = GER_support_austria}
+		relative_position_id = GER_a_minor_power
+
+		bypass = {
+			is_in_faction_with = AUS
+		}
+
+		available = {
+			NOT = {
+				is_in_faction = yes
+				has_war_with = AUS
+			}
+		}
+
+		available = {
+			OR = {
+			AUS = { is_faction_leader = yes }
+			AUS = { is_in_faction_with = ENG }
+			}
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			AUS = { country_event = generic.2 }
+			if = {
+			    limit = {
+			        AUS = { is_in_faction_with = ENG }
+			        ENG = { is_faction_leader = yes }
+			    }   
+			    ENG = { country_event = generic.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = GER_persue_great_power_status
+		icon = GFX_focus_hol_war_on_pacifism
+		x = 3
+		y = 1
+		cost = 5
+		mutually_exclusive = { focus = GER_a_minor_power }
+		prerequisite = { focus = GER_foreign_diplomacy}
+		relative_position_id = GER_foreign_diplomacy
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			has_army_manpower = {
+    			size > 15000
+    		}
+		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = GER_a_sphere_of_our_own
+		icon = GFX_goal_generic_alliance
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = GER_persue_great_power_status}
+		relative_position_id = GER_persue_great_power_status
+
+		available = {
+			has_war = no
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GER_expand_into_our_neighbours
+		icon = GFX_goal_generic_territory_or_war
+		x = 2
+		y = 1
+		cost = 10
+		prerequisite = { focus = GER_persue_great_power_status}
+		relative_position_id = GER_persue_great_power_status
+
+		available = {
+			has_war = no
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = PRS_random_neighbour
+			random_neighbor_country = {
+		        limit = { 
+		            not = {
+		                is_guaranteed_by = ROOT 
+		                is_in_faction_with = ROOT 
+		                has_non_aggression_pact_with = ROOT 
+		                is_subject_of = ROOT 
+		            }
+		            has_country_flag = HRE_imperial_subject
+		        }
+	        	ROOT = { 
+					create_wargoal = {
+				    type = annex_everything
+				    target = PREV
+					}
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = GER_expand_into_our_neighbours_2
+		icon = GFX_goal_generic_occupy_states_ongoing_war
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = GER_expand_into_our_neighbours}
+		prerequisite = { focus = GER_a_sphere_of_our_own}
+		relative_position_id = GER_persue_great_power_status
+
+		available = {
+			has_war = no
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = PRS_random_neighbour
+			random_neighbor_country = {
+		        limit = { 
+		            not = {
+		                is_guaranteed_by = ROOT 
+		                is_in_faction_with = ROOT 
+		                has_non_aggression_pact_with = ROOT 
+		                is_subject_of = ROOT 
+		            }
+		            has_country_flag = HRE_imperial_subject
+		        }
+	        	ROOT = { 
+					create_wargoal = {
+				    type = annex_everything
+				    target = PREV
+					}
+				}
+		    }
+		}
+	}
+
+	focus = {
+		id = GER_expand_into_our_neighbours_3
+		icon = GFX_goal_generic_more_territorial_claims
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = GER_expand_into_our_neighbours_2}
+		relative_position_id = GER_persue_great_power_status
+
+		available = {
+			has_war = no
+		}
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = PRS_random_neighbour
+			random_neighbor_country = {
+		        limit = { 
+		            not = {
+		                is_guaranteed_by = ROOT 
+		                is_in_faction_with = ROOT 
+		                has_non_aggression_pact_with = ROOT 
+		                is_subject_of = ROOT 
+		            }
+		            has_country_flag = HRE_imperial_subject
+		        }
+	        	ROOT = { 
+					create_wargoal = {
+				    type = annex_everything
+				    target = PREV
+					}
+				}
+		    }
+		}
+	}
+}

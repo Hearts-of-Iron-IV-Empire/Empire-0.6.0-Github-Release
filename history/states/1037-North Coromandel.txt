@@ -1,0 +1,24 @@
+state={
+	id=1037
+	name="STATE_1037"
+	provinces={
+		4237 7297 7340
+	}
+
+	history={
+		owner = INS
+		buildings = {
+			infrastructure = 2
+			7340 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			7340 1 
+		}
+	}
+
+	manpower=500
+	buildings_max_level_factor=1.000
+	state_category = pastoral
+}

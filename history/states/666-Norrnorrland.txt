@@ -1,0 +1,26 @@
+
+state={
+	id=666
+	name="STATE_666" # Lappland
+	manpower = 55327
+	resources={
+		tungsten=40 # was: 70
+		steel= 50 # was: 80
+		chromium = 25 # was: 40
+	}
+	
+	state_category = rural
+
+	history={
+		owner = SWE
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SWE
+	}
+
+	provinces={
+		11 58 101 109 118 145 148 151 184 190 3003 3044 3054 3062 3095 3138 3173 3179 6055 6067 6074 6152 6155 6170 6185 6200 6206 6208 9083 9095 9134 9171 9175 9178 9211 9226 11026 11058 11060 11069 11102 11112 11120 11130 11152 11155 11187 11190 11208 13119 
+	}
+}

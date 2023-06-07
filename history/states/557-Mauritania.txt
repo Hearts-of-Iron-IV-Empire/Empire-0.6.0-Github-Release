@@ -1,0 +1,24 @@
+state={
+	id=557
+	name="STATE_557"
+
+	history={
+		owner = PRS
+		victory_points = {
+			7992 1 
+		}
+			buildings = {
+			infrastructure = 1
+			7992 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		7992 
+	}
+	manpower=53
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

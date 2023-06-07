@@ -1,0 +1,32 @@
+state={
+	id=203
+	name="STATE_203"
+	resources={
+		oil=40.000
+	}
+
+	history={
+		owner = ZAP
+		victory_points = {
+			3468 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		add_core_of = ZAP
+		add_core_of = UKR
+		1711.5.1 = {
+			owner = SOV
+			controller = SOV
+		}
+
+	}
+
+	provinces={
+		409 458 3403 3452 3468 6451 6478 9573 
+	}
+	manpower=505190
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

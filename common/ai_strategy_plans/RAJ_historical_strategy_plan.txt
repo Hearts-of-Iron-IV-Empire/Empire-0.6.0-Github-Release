@@ -1,0 +1,60 @@
+RAJ_historical_plan = {
+	name = "Indian historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = RAJ
+	}
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = RAJ_ai_behavior
+					option = DEFAULT
+				}
+			}
+		}
+	}
+	abort = {
+		is_subject = yes
+	}
+
+	ai_national_focuses = {
+		#1699 - Immediate
+		MUG_the_maratha_mughal_war
+		MUG_continue_the_fight
+		MUG_advice_from_the_generals
+		MUG_build_up_arms_industry
+	}
+	
+
+
+
+
+
+
+
+
+	research = {
+	}
+
+	ideas = {
+
+	}
+	traits = {
+
+	}
+
+	
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+}

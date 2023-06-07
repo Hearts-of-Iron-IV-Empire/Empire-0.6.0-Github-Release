@@ -1,0 +1,49 @@
+state={
+	id=146
+	name="STATE_146"
+
+	state_category = rural
+
+	history={
+		owner = SWE
+		add_core_of = SWE
+		add_core_of = NOV
+		add_core_of = FIN
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			#Mannerheim Line
+			9100 = {
+				bunker = 2
+			}
+			9105 = {
+				bunker = 2
+			}
+			9206 = {
+				coastal_bunker = 1
+			}
+		}
+		victory_points = {
+			9206 5
+		}
+		victory_points = {
+			3050 5
+		}
+		1712.1.1 = {
+			owner = SWE
+			controller = SOV
+		}
+		1730.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+			remove_core_of = SWE
+		}
+	}
+
+	provinces={
+		139 3030 3050 3060 3133 3187 6052 6150 6153 6186 9100 9105 9150 9176 9181 9206 11046 11156 11162 
+	}
+	manpower=41863
+	buildings_max_level_factor=1.000
+}

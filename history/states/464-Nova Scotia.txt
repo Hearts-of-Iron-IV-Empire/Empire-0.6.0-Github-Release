@@ -1,0 +1,33 @@
+
+state={
+	id=464
+	name="STATE_464"
+	manpower = 1000
+	
+	state_category = rural
+
+	history={
+		owner = QUE
+		victory_points = {
+			1354 3
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			1354 = {
+				naval_base = 4
+			}
+		}
+		add_core_of = QUE
+		1713.5.1 = {
+			owner = ENG
+			controller = ENG
+			add_core_of = ENG
+		}
+	}
+
+	provinces={
+		1354 4360 4430 4623 7304 7361 7644 10244 
+	}
+	
+}

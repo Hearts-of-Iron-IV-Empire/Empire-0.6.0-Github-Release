@@ -1,0 +1,26 @@
+
+state={
+	id=589
+	name="STATE_589"
+
+	history={
+		owner = SIK
+		add_core_of = KAZ
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		add_core_of = SIK
+		1760.1.1 = {
+			owner = KAZ
+			add_core_of = KAZ
+		}
+	}
+
+	provinces={
+		4651 7711 7795 7856 10550 10619 12529 13148 13149 13197 
+	}
+	manpower=124191
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

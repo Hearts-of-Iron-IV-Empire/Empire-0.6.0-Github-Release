@@ -1,0 +1,632 @@
+focus_tree = {
+	id = native_american_focus
+	
+	country = {
+		factor = 0
+		
+		modifier = {
+			add = 0
+			tag = IRO
+		}
+		modifier = {
+			add = 0
+			tag = CHR
+		}
+		modifier = {
+			add = 0
+			tag = CHK
+		}
+		modifier = {
+			add = 0
+			tag = CHO
+		}
+		modifier = {
+			add = 0
+			tag = CRE
+		}
+		modifier = {
+			add = 0
+			tag = APA
+		}
+		modifier = {
+			add = 0
+			tag = NAH
+		}
+		modifier = {
+			add = 0
+			tag = SHO
+		}
+	}
+	
+	default = no
+
+	focus = {
+		id = AME_hunter_gatherer_society
+		icon = GFX_
+		x = 1
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = AME_sedentarisation }
+
+		completion_reward = {
+			add_ideas = hunter_gatherer_society
+		}
+	}
+
+	focus = {
+		id = AME_hunt_the_wildlife
+		icon = GFX_
+		prerequisite = { focus = AME_hunter_gatherer_society }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_hunter_gatherer_society
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 } 
+		}
+	}
+
+	focus = {
+		id = AME_promote_fur_trade
+		icon = GFX_
+		prerequisite = { focus = AME_hunter_gatherer_society }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_hunter_gatherer_society
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_wild_crop_collection
+		icon = GFX_
+		prerequisite = { focus = AME_hunt_the_wildlife }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_hunt_the_wildlife
+
+		completion_reward = {
+			add_offsite_building = { type = industrial_complex level = 2 } 
+		}
+	}
+
+	focus = {
+		id = AME_indian_trails
+		icon = GFX_
+		prerequisite = { focus = AME_promote_fur_trade }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_promote_fur_trade
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = infrastructure
+						size > 0
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = infrastructure
+										size > 0
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AME_le_bon_sauvage
+		icon = GFX_
+		prerequisite = { focus = AME_wild_crop_collection }
+		prerequisite = { focus = AME_indian_trails }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_wild_crop_collection
+
+		completion_reward = {
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = AME_protect_nature
+		icon = GFX_
+		prerequisite = { focus = AME_indian_trails }
+		prerequisite = { focus = AME_wild_crop_collection }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_indian_trails
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = AME_expand_the_hunting_grounds
+		icon = GFX_
+		prerequisite = { focus = AME_protect_nature }
+		prerequisite = { focus = AME_le_bon_sauvage }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_protect_nature
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_sedentarisation
+		icon = GFX_
+		x = 5
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = AME_hunter_gatherer_society }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = AME_the_three_sisters
+		icon = GFX_
+		prerequisite = { focus = AME_sedentarisation }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_sedentarisation
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AME_mastery_of_nature
+		icon = GFX_
+		prerequisite = { focus = AME_sedentarisation }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_sedentarisation
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+
+	focus = {
+		id = AME_common_landownership
+		icon = GFX_
+		prerequisite = { focus = AME_the_three_sisters }
+		prerequisite = { focus = AME_mastery_of_nature }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_the_three_sisters
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = AME_forestry_focus
+		icon = GFX_
+		prerequisite = { focus = AME_common_landownership }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_common_landownership
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AME_settlement_growth
+		icon = GFX_
+		prerequisite = { focus = AME_common_landownership }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_common_landownership
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_build_a_city
+		icon = GFX_
+		prerequisite = { focus = AME_forestry_focus }
+		prerequisite = { focus = AME_settlement_growth }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_forestry_focus
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_modernisation
+		icon = GFX_
+		x = 11
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = AME_tradition }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = AME_primitive_democracy
+		icon = GFX_
+		prerequisite = { focus = AME_modernisation }
+		mutually_exclusive = { focus = AME_strenghten_the_chief }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_modernisation
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_strenghten_the_chief
+		icon = GFX_
+		prerequisite = { focus = AME_modernisation }
+		mutually_exclusive = { focus = AME_primitive_democracy }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_modernisation
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_the_tools
+		icon = GFX_
+		prerequisite = { focus = AME_primitive_democracy focus = AME_strenghten_the_chief }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_primitive_democracy
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_standing_armies
+		icon = GFX_
+		prerequisite = { focus = AME_primitive_democracy focus = AME_strenghten_the_chief }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = AME_primitive_democracy
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_abandon_traditional_institutions
+		icon = GFX_
+		prerequisite = { focus = AME_the_tools }
+		prerequisite = { focus = AME_standing_armies }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_the_tools
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_defence_of_the_homeland
+		icon = GFX_
+		prerequisite = { focus = AME_the_tools }
+		prerequisite = { focus = AME_standing_armies }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_the_tools
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_modern_military_doctrine
+		icon = GFX_
+		prerequisite = { focus = AME_the_tools }
+		prerequisite = { focus = AME_standing_armies }
+		x = 3
+		y = 1
+		cost = 5
+		relative_position_id = AME_the_tools
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_nation_building
+		icon = GFX_
+		prerequisite = { focus = AME_defence_of_the_homeland }
+		prerequisite = { focus = AME_abandon_traditional_institutions }
+		prerequisite = { focus = AME_modern_military_doctrine }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_defence_of_the_homeland
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_westernisation
+		icon = GFX_
+		prerequisite = { focus = AME_nation_building }
+		prerequisite = { focus = AME_build_a_city }
+		x = -3
+		y = 1
+		cost = 5
+		relative_position_id = AME_nation_building
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_empirism
+		icon = GFX_
+		prerequisite = { focus = AME_westernisation }
+		x = -2
+		y = 1
+		cost = 5
+		relative_position_id = AME_westernisation
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_attract_settlers
+		icon = GFX_
+		prerequisite = { focus = AME_westernisation }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_westernisation
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_convert_to_chrisianity
+		icon = GFX_
+		prerequisite = { focus = AME_westernisation }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = AME_westernisation
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_tradition
+		icon = GFX_
+		x = 17
+		y = 0
+		cost = 10
+		mutually_exclusive = { focus = AME_modernisation }
+
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = AME_tribal_hierarchy
+		icon = GFX_
+		prerequisite = { focus = AME_tradition }
+		mutually_exclusive = { focus =  AME_egalitarianism }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_tradition
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_egalitarianism
+		icon = GFX_
+		prerequisite = { focus = AME_tradition }
+		mutually_exclusive = { focus =  AME_tribal_hierarchy }
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_tradition
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_warrior_society
+		icon = GFX_
+		prerequisite = { focus = AME_tribal_hierarchy focus = AME_egalitarianism }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_tribal_hierarchy
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_religious_society
+		icon = GFX_
+		prerequisite = { focus = AME_tribal_hierarchy focus = AME_egalitarianism }
+		x = 2
+		y = 1
+		cost = 5
+		relative_position_id = AME_tribal_hierarchy
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_adaption
+		icon = GFX_
+		prerequisite = { focus = AME_warrior_society }
+		x = -1
+		y = 1
+		cost = 5
+		relative_position_id = AME_warrior_society
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_war_totems
+		icon = GFX_
+		prerequisite = { focus = AME_warrior_society focus = AME_religious_society}
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_warrior_society
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_honor_our_ancestors
+		icon = GFX_
+		prerequisite = { focus = AME_religious_society}
+		x = 1
+		y = 1
+		cost = 5
+		relative_position_id = AME_religious_society
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_protect_our_ancestoral_lands
+		icon = GFX_
+		prerequisite = { focus = AME_war_totems }
+		prerequisite = { focus = AME_honor_our_ancestors }
+		prerequisite = { focus = AME_adaption }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_war_totems
+
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = AME_this_is_OUR_land
+		icon = GFX_
+		prerequisite = { focus = AME_protect_our_ancestoral_lands }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = AME_protect_our_ancestoral_lands
+
+		completion_reward = {
+
+		}
+	}
+}

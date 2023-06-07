@@ -1,0 +1,28 @@
+state={
+	id=443
+	name="STATE_443" # Sind
+	manpower = 1487000
+	
+	state_category = rural
+
+	history={
+		owner = RAJ
+		add_core_of = RAJ
+		add_core_of = SIN
+		victory_points = {
+			8007 5
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		1731.1.1 = {
+			owner = SIN
+			remove_core_of = RAJ
+		}
+	}
+
+	provinces={
+		1107 1971 7049 7084 7903 8007 10066 10139 10735 10813 10843 10898 12792 13261 13330 13331
+	}
+}

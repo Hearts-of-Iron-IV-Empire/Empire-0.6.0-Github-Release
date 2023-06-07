@@ -1,0 +1,117 @@
+ideas = {	
+	country = {
+		KOR_ulbyeong_famine = {		
+			allowed = {
+				always = no
+			}
+
+			picture = undisturbed_isolation #GFX TODO
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.20
+				monthly_population = -0.1
+			}
+		}		
+		KOR_path_of_neo_confucianism = {		
+			allowed = {
+				always = no
+			}
+
+			picture = confucianism 
+			
+			removal_cost = -1
+
+			modifier = {
+			   neutrality_drift = 0.03
+			}
+		}	
+		KOR_factionalism_within_the_court = {		
+			allowed = {
+				always = no
+			}
+
+			picture = generic_disjointed_gov
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				war_support_factor = -0.10
+				aristocracy_drift = 0.02
+			}
+		}		
+		KOR_righteous_army = {		
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+			
+			removal_cost = -1
+
+			modifier = {
+			   army_core_defence_factor = 0.10
+			   army_core_attack_factor = 0.10
+			}
+		}	
+		KOR_endemic_regional_corruption = {		
+			allowed = {
+				always = no
+			}
+
+			picture = generic_democratic_opposition #GFX TODO
+			
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = -0.05
+				army_org_factor = -0.10
+				political_power_gain = -0.10
+			}
+		}
+		KOR_inefficiency_of_current_tax_system = {		
+			allowed = {
+				always = no
+			}
+
+			picture = cash_flow_negative #GFX TODO
+			
+			removal_cost = -1
+
+			modifier = {
+				industrial_capacity_factory = -0.05
+				consumer_goods_factor = 0.15
+			}
+		}		
+		KOR_buddhist_warrior_monks = { #For Peasant Branch	
+			allowed = {
+				always = no
+			}
+
+			picture = undisturbed_isolation #GFX TODO
+			
+			removal_cost = -1
+
+			modifier = {
+			    mobilization_speed = 0.5
+				army_core_defence_factor = 0.10
+			}
+		}
+		KOR_extensive_trade_with_qing = { #For Peasant Branch	
+			allowed = {
+				always = no
+			}
+
+			picture = undisturbed_isolation #GFX TODO
+			
+			removal_cost = -1
+
+			modifier = {
+			    industrial_capacity_factory = 0.10
+				production_speed_buildings_factor = 0.05
+			}
+		}
+	}
+}

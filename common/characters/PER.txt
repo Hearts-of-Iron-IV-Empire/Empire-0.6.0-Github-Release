@@ -1,0 +1,214 @@
+characters = {
+    # Safavids
+    PER_Sultan_Huseyn = {
+        name = "Sultan Huseyn"
+        portraits = {
+            army = {
+                large = "GFX_Sultan_Huseyn"
+            }
+            civilian = {
+                large = "GFX_Sultan_Huseyn"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            desc = PER_Sultan_Huseyn_desc
+            traits = { PER_inattentive_shah king_of_the_palaces }
+        }
+        country_leader = {
+            ideology = nobility
+            desc = PER_Sultan_Huseyn_desc
+            traits = { PER_inattentive_shah king_of_the_palaces }
+        }
+        field_marshal ={
+            traits = { media_personality }
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 1
+            visible = { date < 1727.01.01 }
+        }
+    }
+    PER_Sultan_Abbas = {
+        name = "Sultan Abbas"
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_leader_1"
+            }
+            civilian = {
+                large = "GFX_portrait_muslim_leader_1"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            #desc = PER_Sultan_abbbas_desc
+            traits = {}
+        }
+        field_marshal ={
+            traits = { media_personality aggressive_assaulter }
+            legacy_id = 11
+            skill = 1
+            attack_skill = 2
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+            visible = {
+                NOT = {
+                    has_completed_focus = PER_we_need_a_new_shah
+                }
+                date < 1727.01.01
+            }
+        }
+    }
+    PER_Thamasp_II = {
+        name = "Thamasp II"
+        portraits = {
+            army = {
+                large = "GFX_PER_Thamasp_II"
+            }
+        }
+        corps_commander ={
+            traits = {}
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+            visible = { date < 1727.01.01 }
+        }
+    }
+    # Afsharids
+    PER_Nader_Shah = {
+        name = "Nader Shah"
+        portraits = {
+            army = {
+                large = "GFX_Nader_Shah"
+            }
+            civilian = {
+                large = "GFX_Nader_Shah"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            #desc = PER_Nader_Shah_desc
+            traits = { PER_napoleon_of_persia }
+        }
+        field_marshal ={
+            traits = { war_hero brilliant_strategist urban_assault_specialist thorough_planner offensive_doctrine organizer }
+            skill = 4
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 5
+            logistics_skill = 4
+        }
+    }
+    # 
+    PER_Shia_Scholars = {
+        name = "Shia Scholars"
+        portraits = {
+            army = {
+                large = "GFX_portrait_shia_scholars"
+            }
+            civilian = {
+                large = "GFX_portrait_shia_scholars"
+            }
+        }
+        country_leader = {
+            ideology = falangism
+            #desc = PER_Shia_Scholars_desc
+            traits = { shia_scholars }
+        }
+    }
+
+    # Generals
+    PER_Shahnevaz_Khan_II = {
+        name = "Shahnevaz Khan II" # Gürcü
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_leader_6"
+            }
+        }
+        corps_commander ={
+            traits = { old_guard }
+            legacy_id = 98
+            skill = 1
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+            visible = {
+                date < 1709.4.9
+            }
+        }
+    }
+
+    PER_Keykhosrov = {
+        name = "Keykhosrov" # Gürcü
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_leader_5"
+            }
+        }
+        corps_commander ={
+            traits = { hill_fighter }
+            legacy_id = 99
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+            visible = {
+                date < 1711.10.27
+            }
+        }
+    }
+
+    PER_Mansur_Khan = {
+        name = "Mansur Khan"
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_general_2"
+            }
+        }
+        
+        corps_commander ={
+            traits = {}
+            legacy_id = 100
+            skill = 1
+            attack_skill = 1
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 1
+            visible = { date < 1730.01.01 }
+        }
+    }
+
+    PER_Safiqulu_Khan = {
+        name = "Safiqulu Khan"
+        portraits = {
+            army = {
+                large = "GFX_portrait_muslim_general_5"
+            }
+        }
+        corps_commander ={
+            traits = {}
+            legacy_id = 101
+            skill = 1
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 1
+            visible = { date < 1730.01.01 }
+        }
+    }
+    # 1918 General for next update
+    #Məhəmmədəli xan
+    #Fətəli
+    #Hüseynqulu xan
+    #Fətəli xan
+    #İsmayıl xan
+    #Şamir Əli	
+    #Məhəmməd bəy Şamlı
+    #Hüseynqulu xan
+}

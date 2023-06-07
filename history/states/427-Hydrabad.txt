@@ -1,0 +1,42 @@
+
+state={
+	id=427
+	name="STATE_427"
+	resources={
+		chromium=6.000
+	}
+
+	history={
+		owner = RAJ
+		add_core_of = HYD
+		victory_points = {
+			10324 15 
+		}
+		victory_points = {
+			1359 20 
+		}
+		victory_points = {
+			12226 15 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+			10324 = {
+				bunker = 5
+			}
+		}
+		1730.5.1 = {
+			owner = HYD
+			controller = HYD
+			add_core_of = HYD
+		}
+	}
+
+	provinces={
+		1359 4353 5063 7060 10259 10311 10324 10799 12226 13309 13310 13311 13312
+	}
+	manpower=7013400
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

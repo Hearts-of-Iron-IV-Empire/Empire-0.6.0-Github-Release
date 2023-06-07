@@ -1,0 +1,15 @@
+state={
+	id=720
+	name="STATE_720"
+	manpower=30	
+	state_category = tiny_island
+	
+	impassable = yes
+	history={
+	owner = UNC
+	}
+	
+	provinces={
+		10995 
+	}
+}

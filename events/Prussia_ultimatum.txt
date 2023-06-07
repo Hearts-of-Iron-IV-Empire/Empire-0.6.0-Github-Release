@@ -1,0 +1,514 @@
+add_namespace = ultimatum
+
+country_event = { #ultimatum to Den
+	id = ultimatum.0
+	title = ultimatum.0.t
+	desc = ultimatum.0.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Denmark accepts
+		name = ultimatum.0.a
+		PRS = {
+			country_event = { id = ultimatum.5 }	
+		}
+		PRS = {
+			transfer_state = 58
+		}
+		ai_chance = { 
+			factor = 30
+		}	
+	}
+
+	option = { #Den refuses
+		name = ultimatum.0.b
+		PRS = {
+			country_event = { id = ultimatum.51 }
+		}
+		ai_chance = { 
+			factor = 70
+		}	
+	}
+}
+
+country_event = { #Den refuses
+	id = ultimatum.51
+	title = ultimatum.51.t
+	desc = ultimatum.51.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Called our bluff
+		name = ultimatum.51.a
+			ai_chance = { 
+				factor = 20
+			}
+		PRS = {
+			add_political_power = -50
+		}
+		DEN = {
+			country_event = { id = ultimatum.52 }
+		}		
+	}
+
+	option = { #Go to war
+		name = ultimatum.51.b
+			ai_chance = { 
+				factor = 80
+			}
+		PRS = {
+			declare_war_on = {
+				target = DEN
+				type = take_state_focus
+				generator = { 58 }
+			}	
+		}	
+	}
+}
+
+country_event = { #PRS bluff
+	id = ultimatum.52
+	title = ultimatum.52.t
+	desc = ultimatum.52.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Called our bluff
+		name = ultimatum.52.a
+			ai_chance = { 
+				factor = 50
+			}
+		DEN = {
+			add_political_power = 100
+		}		
+	}
+}
+
+#######
+
+
+country_event = { #Ultimatum to Saxony
+	id = ultimatum.1
+	title = ultimatum.1.t
+	desc = ultimatum.1.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Saxony accepts
+		name = ultimatum.1.a
+			ai_chance = { 
+				factor = 20
+			}
+		PRS = {
+			country_event = { id = ultimatum.11 }
+		}
+		PRS = {
+			transfer_state = 65
+		}		
+	}
+
+	option = { #Saxony refuses
+		name = ultimatum.1.b
+			ai_chance = { 
+				factor = 80
+			}
+		PRS = {
+			country_event = { id = ultimatum.12	}	
+		}
+	}
+}
+
+country_event = { #Saxony accepts ultiatum
+	id = ultimatum.11
+	title = ultimatum.11.t
+	desc = ultimatum.11.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Make a big show
+		name = ultimatum.11.a
+		ai_chance = { 
+			factor = 50
+		}
+		PRS = {
+			add_political_power = 50
+		}
+		POL = {
+			add_state_claim = 65
+		}
+		POL = {
+			add_opinion_modifier = {target = PRS modifier = large_decrease	
+			}
+		}				
+	}
+	option = { #Do nothing
+		name = ultimatum.11.b
+		ai_chance = { 
+			factor = 50
+		}
+	}
+}
+
+country_event = { #Saxony declines ultiatum
+	id = ultimatum.12
+	title = ultimatum.12.t
+	desc = ultimatum.12.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { #Declare war
+		name = ultimatum.12.a
+		ai_chance = { 
+			factor = 75
+		}
+		PRS = {	
+			declare_war_on = {
+				target = SAX
+				type = take_state_focus
+				generator = { 65 }
+			}
+		}
+	}			
+
+option = { #Stand down
+		name = ultimatum.12.b
+		ai_chance = { 
+			factor = 25
+		}
+		PRS = {
+			add_political_power = -25
+		}
+	}
+}
+
+
+########
+
+
+country_event = { #Ultimatum to Sweden
+	id = ultimatum.2
+	title = ultimatum.2.t
+	desc = ultimatum.2.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Sweden accepts
+		name = ultimatum.2.a
+			ai_chance = { 
+				factor = 20
+			}
+		PRS = {
+			country_event = { id = ultimatum.5	}	
+		}
+		PRS = {
+			transfer_state = 62
+			transfer_state = 794
+		}		
+	}
+
+	option = { #Sweden refuses
+		name = ultimatum.2.b
+			ai_chance = { 
+				factor = 80
+			}
+			
+		PRS = {
+			country_event = { id = ultimatum.21 }	
+		}
+	}
+}
+
+country_event = { #Sweden declines
+	id = ultimatum.21
+	title = ultimatum.21.t
+	desc = ultimatum.21.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Press claims
+		name = "We shall press the claims!"
+			ai_chance = { 
+				factor = 80
+			}
+
+		PRS = {
+			create_wargoal = {
+				target = SWE
+				type = take_state_focus
+				generator = { 62 794 }
+			}
+		}		
+	}
+	option = { # Stand down
+		name = "It's not worth it."
+			ai_chance = { 
+				factor = 20
+			}
+
+		PRS = {
+			add_political_power = -25
+		}		
+	}
+}
+
+##############
+
+country_event = { #Demand Pommerania
+	id = ultimatum.3
+	title = ultimatum.3.t
+	desc = ultimatum.3.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Sweden accepts
+		name = ultimatum.3.a
+			ai_chance = { 
+				factor = 20
+			}
+		PRS = {
+			country_event = { id = ultimatum.31 }	
+		}
+		PRS = {
+			transfer_state = 62
+			transfer_state = 794
+		}		
+	}
+
+	option = { # Sweden accepts partly
+		name = ultimatum.3.b
+			ai_chance = { 
+				factor = 40
+			}
+		PRS = {
+			country_event = { id = ultimatum.32 }	
+		}
+		PRS = {
+			transfer_state = 62
+		}		
+	}
+
+	option = { #Sweden refuses
+		name = ultimatum.3.c
+			ai_chance = { 
+				factor = 40
+			}
+		PRS = {
+			country_event = { id = ultimatum.33 }	
+		}			
+	}
+}
+
+country_event = { #Sweden accepts our demands
+	id = ultimatum.31
+	title = ultimatum.31.t
+	desc = ultimatum.31.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Sweden accepts
+		name = "Huzzah!"
+			ai_chance = { 
+				factor = 50
+			}
+		PRS = {
+			add_opinion_modifier = {
+				target = SWE 
+				modifier = huge_increase
+			}
+		}		
+	}
+}
+
+country_event = { #Sweden accepts our demands partially
+	id = ultimatum.32
+	title = ultimatum.32.t
+	desc = ultimatum.32.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # We thank them
+		name = "We are most grateful."
+			ai_chance = { 
+				factor = 50
+			}
+		PRS = {
+			add_opinion_modifier = {
+				target = SWE
+				modifier = small_increase
+			}
+		}	
+	}
+	option = { # We don't thank them
+		name = "This is less than what we agreed upon..."
+			ai_chance = { 
+				factor = 50
+			}
+		PRS = {
+			add_opinion_modifier = {
+				target = SWE
+				modifier = medium_decrease
+			}
+		}	
+	}
+}
+
+country_event = { #Sweden declines our demands
+	id = ultimatum.33
+	title = ultimatum.33.t
+	desc = ultimatum.33.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Sweden accepts
+		name = ultimatum.33.a
+			ai_chance = { 
+				factor = 50
+			}
+		PRS = {
+			add_opinion_modifier = {
+				target = SWE 
+				modifier = large_decrease
+			}	
+		}
+	}
+}
+
+
+############
+
+country_event = { # Demand Saxony from Poland
+	id = ultimatum.4
+	title = ultimatum.4.t
+	desc = ultimatum.4.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = { # Poland accepts
+		name = ultimatum.4.a
+		PRS = {
+			country_event = { id = ultimatum.5 }
+			annex_country = {
+				target = SAX
+			}
+		}
+		ai_chance = { 
+			factor = 70
+		}	
+	}
+
+	option = { #Poland refuses
+		name = ultimatum.4.b
+		PRS = {
+			country_event = { id = ultimatum.41	}	
+		}
+		ai_chance = { 
+			factor = 30
+		}
+	}
+}
+
+country_event = { #Poland refuses to give Saxony
+	id = ultimatum.41
+	title = ultimatum.41.t
+	desc = ultimatum.41.d
+	picture = GFX_report_event_generic_read_write
+
+	is_triggered_only = yes
+
+	option = {
+		name = ultimatum.41.a
+		PRS = {
+			add_opinion_modifier = {
+				target = SAX 
+				modifier = large_decrease
+			}
+			add_opinion_modifier = {
+				target = POL 
+				modifier = large_decrease
+			}
+		}		
+	}
+}
+
+country_event = { #Poland accept
+	id = ultimatum.5
+	title = ultimatum.5.t
+	desc = ultimatum.5.d
+
+	is_triggered_only = yes
+
+	option = { # great
+		name = ultimatum.5.a
+		add_political_power = 75
+		add_war_support = 0.05
+	}
+}
+
+
+country_event = { # Demand Emden/Ostfrieland
+	id = prussia.16
+	title = prussia.16.t
+	desc = prussia.16.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { # Accept
+		name = prussia.16.a
+		ai_chance = { factor = 30 }
+		PRS = {
+			transfer_state = 867
+			867 = { set_state_name = "Emden" }
+			add_state_core = 867
+		}
+	}
+	
+	option = { # Refuse
+		name = prussia.16.b
+		ai_chance = { factor = 70 }
+		PRS = {
+			country_event = { id = prussia.17 }
+		}
+	}
+}
+
+country_event = { # Holland does not give Emden back
+	id = prussia.17
+	title = prussia.17.t
+	desc = prussia.17.d
+	picture = GFX_report_event_generic_army
+
+	is_triggered_only = yes
+
+	option = { # Declare War
+		name = prussia.17.a
+		PRS = {		
+			declare_war_on = {
+				target = HOL
+				type = take_state_focus
+				generator = { 867 } # Ostfrieland
+			}
+			867 = { set_state_name = "Emden" }
+			add_state_core = 867
+		}
+	}
+	option = { # Don't declare war
+		name = prussia.17.b
+		add_political_power = -70
+		add_stability = -0.1
+		add_war_support = -0.15
+	}
+}

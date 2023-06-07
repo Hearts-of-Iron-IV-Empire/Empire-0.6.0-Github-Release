@@ -1,0 +1,48 @@
+state={
+	id=430
+	name="STATE_430"
+
+	history={
+		owner = RAJ
+		add_core_of = BAN
+		add_extra_state_shared_building_slots = 8
+		victory_points = {
+			11929 10 
+		}
+		victory_points = {
+			9993 10 
+		}
+		victory_points = {
+			12010 10 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 2
+			11968 = {
+				naval_base = 3
+			}
+			12010 = {
+				naval_base = 5
+			}
+		}
+		1717.5.1 = {
+			owner = BAN
+			controller = BAN
+			add_core_of = BAN
+		}
+		1773.1.1 = {
+			owner = EIC
+			controller = EIC
+		}
+	}
+
+	provinces={
+		9991 9993 11929 11968 12010 12423 13208 
+	}
+	manpower=14973300
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

@@ -1,0 +1,40 @@
+
+state={
+	id=393
+	name="STATE_393"
+	resources={
+		steel=6.000
+	}
+
+	history={
+		owner = QUE
+		buildings = {
+			infrastructure = 1
+			6710 = {
+				bunker = 1
+
+			}
+			
+
+		}
+		add_core_of = LOU
+		add_core_of = QUE
+		victory_points = {
+			6710 5 
+		}
+		1789.1.1 = {
+			remove_core_of = QUE
+			remove_core_of = LOU
+			owner = IRO
+			add_core_of = IRO
+			add_claim_by = USA
+		}
+	}
+
+	provinces={
+		691 695 3766 6710 6769 6782 7420 9684 9724 9746 9747 10233 10303 11641 11656 11669 11685 11714 11731 13155 13199 13200 13201 
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

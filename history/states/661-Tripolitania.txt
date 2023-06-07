@@ -1,0 +1,26 @@
+
+state={
+	id=661
+	name="STATE_661"
+
+	history={
+		owner = ALG
+		add_core_of = MOR
+		victory_points = {
+			989 5 
+		}
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		989 1111 4154 7116 7958
+	}
+	manpower=104617
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+	local_supplies=0.000
+}

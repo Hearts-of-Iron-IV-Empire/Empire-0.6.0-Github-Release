@@ -1,0 +1,32 @@
+state={
+	id=140
+	name="STATE_140"
+	manpower = 176827
+	state_category = city
+	
+	resources={
+		steel=10
+	}
+	history={
+		owner = SWE
+		add_core_of = SWE
+		victory_points = {
+			383 20 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+			dockyard = 1
+			383 = {
+				naval_base = 5
+				coastal_bunker = 5
+			}
+		}
+	}
+	
+	
+	provinces={
+		295 383 3063 3286 3375 3386 6331 6406 13095 
+	}
+}

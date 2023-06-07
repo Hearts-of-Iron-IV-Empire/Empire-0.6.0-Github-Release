@@ -1,0 +1,545 @@
+colonisation = {
+	colonise_state = {
+		icon = eng_propaganda_campaigns
+
+		is_good = yes
+		days_mission_timeout = colonise_time
+		activation = {
+			always = no
+		}
+
+		#visible = {
+		#	NOT = {
+		#		tag = UNC
+		#	}
+			
+		#}
+		fire_only_once = no
+		
+		available = {
+			always = no
+		}
+		timeout_effect = {
+			ROOT = {
+				effect_tooltip = {
+				    random_list = {
+						0 = {
+							ROOT = {
+								country_event = {
+									id = colonisation.3
+									days = colonise_time
+									#random = 10
+								}
+							}
+					    }
+						0 = {
+							ROOT = {
+								country_event = {
+									id = colonisation.2
+									days = colonise_time
+									#random = 10
+								}
+							}
+						}
+				    }
+				}
+				IF = {
+					limit = {
+						has_country_flag = suceeded_flag
+					}
+					country_event = {
+						id = colonisation.3
+					}
+				}
+				IF = {
+					limit = {
+						has_country_flag = failed_flag
+					}
+					country_event = {
+						id = colonisation.2
+					}
+				}
+				set_variable = { your_mom = 0 }
+			}
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	create_australia = {
+		available = {
+			285 = { is_owned_and_controlled_by = ROOT }
+			517 = { is_owned_and_controlled_by = ROOT }
+			518 = { is_owned_and_controlled_by = ROOT }
+			519 = { is_owned_and_controlled_by = ROOT }
+			520 = { is_owned_and_controlled_by = ROOT }
+			521 = { is_owned_and_controlled_by = ROOT }
+			522 = { is_owned_and_controlled_by = ROOT }
+			674 = { is_owned_and_controlled_by = ROOT }
+		}
+
+		visible = {
+			OR = {
+				285 = { is_owned_and_controlled_by = ROOT }
+				517 = { is_owned_and_controlled_by = ROOT }
+				518 = { is_owned_and_controlled_by = ROOT }
+				519 = { is_owned_and_controlled_by = ROOT }
+				520 = { is_owned_and_controlled_by = ROOT }
+				521 = { is_owned_and_controlled_by = ROOT }
+				522 = { is_owned_and_controlled_by = ROOT }
+			}
+			NOT = {
+				original_tag = AST
+				original_tag = UNC
+			}
+			
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			AST = {
+				transfer_state = 520
+				transfer_state = 521
+				transfer_state = 522
+				transfer_state = 518
+				transfer_state = 517
+				transfer_state = 519
+				transfer_state = 285
+				transfer_state = 674
+
+				add_state_core = 520
+				add_state_core = 521
+				add_state_core = 522
+				add_state_core = 518
+				add_state_core = 517
+				add_state_core = 519
+				add_state_core = 285
+				add_state_core = 674
+			}
+			ROOT = {
+				puppet = AST
+			}
+			AST = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+		
+		
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+	create_newzealand = {
+		available = {
+			284 = { is_owned_and_controlled_by = ROOT }
+			723 = { is_owned_and_controlled_by = ROOT }
+			
+		}
+
+		visible = {
+			OR = {
+				284 = { is_owned_and_controlled_by = ROOT }
+				723 = { is_owned_and_controlled_by = ROOT }
+			}
+			NOT = {
+				original_tag = NZL
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		complete_effect = {
+			NZL = {
+				transfer_state = 284
+				transfer_state = 723
+				
+				add_state_core = 284
+				add_state_core = 723
+				
+			}
+			ROOT = {
+				puppet = NZL
+			}
+			NZL = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	create_CAR = {
+		available = {
+			660 = {is_owned_and_controlled_by = ROOT}
+			773 = {is_owned_and_controlled_by = ROOT}
+
+		}
+
+		visible = {
+			OR = {
+				660 = {is_owned_and_controlled_by = ROOT}
+				773 = {is_owned_and_controlled_by = ROOT}
+			}
+			NOT = {
+				original_tag = CAR
+				original_tag = UNC
+			}
+		}
+		fire_only_once = no
+		
+
+		complete_effect = {
+			CAR = {
+				transfer_state = 773
+				transfer_state = 660
+				
+				add_state_core = 773
+				add_state_core = 660
+
+			}
+			ROOT = {
+				puppet = CAR
+			}
+			CAR = {
+				add_ideas = {
+					population_boost
+					
+				}
+			}
+		}
+		
+		
+
+		ai_will_do = {
+			factor = 100
+		}	
+	}
+	
+	transfer_state_to_subject_MEX = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+              	any_neighbor_state = {
+                	is_owned_by = MEX
+           		}
+           		NOT = { state = 691 }
+       		}
+	        MEX = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                any_neighbor_state = {
+	                	is_owned_by = MEX
+	                }
+	                NOT = { state = 691 }
+	            } 
+	            MEX = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_QUE = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+              	any_neighbor_state = {
+                	is_owned_by = QUE
+           		}
+       		}
+	        QUE = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                any_neighbor_state = {
+	                	is_owned_by = QUE
+	                }
+	            } 
+	            QUE = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_USA = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+              	any_neighbor_state = {
+                	is_owned_by = USA
+           		}
+       		}
+	        USA = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                any_neighbor_state = {
+	                	is_owned_by = USA
+	                }
+	            } 
+	            USA = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_PRU = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+              	any_neighbor_state = {
+                	is_owned_by = PRU
+           		}
+       		}
+	        PRU = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                any_neighbor_state = {
+	                	is_owned_by = PRU
+	                }
+	            } 
+	            PRU = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_BRA = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+              	any_neighbor_state = {
+                	is_owned_by = BRA
+           		}
+       		}
+	        BRA = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                any_neighbor_state = {
+	                	is_owned_by = BRA
+	                }
+	            } 
+	            BRA = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_PHI = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+	            region = 160
+                is_owned_by = ROOT
+       		}
+	        PHI = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	              	region = 160
+                	is_owned_by = ROOT
+	            } 
+	            PHI = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+
+	transfer_state_to_subject_INS = {              
+	    available = {                         
+           always = yes                   
+      	}
+      	activation = {                          
+           any_owned_state = {
+           		OR = {
+	              	region = 187
+	              	region = 158
+	              	region = 159
+	              	region = 93
+	              	region = 167
+	              	region = 188
+	              	region = 160
+	              	region = 142
+	              	region = 76
+	            }
+                is_owned_by = ROOT
+       		}
+	        INS = {
+	          	is_subject_of = ROOT
+	        }                       
+	    }
+	    ai_will_do = {
+			factor = 4000
+		}
+	    is_good = yes                         
+	    selectable_mission = yes               
+	    days_mission_timeout = 30             
+	    timeout_effect = {                      
+	        add_political_power = -25               
+	    }
+	    complete_effect = {                    
+	        every_owned_state = {
+	            limit = {
+	                OR = {
+	              	region = 187
+	              	region = 158
+	              	region = 159
+	              	region = 93
+	              	region = 167
+	              	region = 188
+	              	region = 160
+	              	region = 142
+	              	region = 76
+	            	}
+                	is_owned_by = ROOT
+	            } 
+	            INS = {
+	                transfer_state = PREV
+	            }  
+	        }            
+	    }
+	}
+}
+
+information_panel = {
+	how_do_i_colonise = {
+		cost = 0
+		fire_only_once = no
+
+		available = {
+			is_ai = no
+		}
+
+		visible = {
+			is_ai = no
+			empire_how_to_colonise = yes
+		}
+
+		complete_effect = {	
+			country_event = {
+				id = colonisation.7
+			}
+		}
+	}
+
+	hide_tab = {
+		cost = 0
+		fire_only_once = yes
+
+		available = {
+			always = yes 
+		}
+
+		visible = {
+			is_ai = no
+			empire_how_to_colonise = yes
+		}
+
+		complete_effect = {
+			hidden_effect = {
+				set_country_flag = hide_tab_colonisation
+			}
+		}
+	}
+}

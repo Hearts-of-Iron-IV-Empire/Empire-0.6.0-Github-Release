@@ -1,0 +1,29 @@
+﻿capital = 405
+
+oob = "UZB_1699"
+
+set_research_slots = 1
+set_stability = 0.5
+set_war_support = 0.5
+
+add_ideas = {
+	sunni
+	nomadic_society
+}
+
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+}
+
+set_popularities = {
+	fascism = 25
+	neutrality = 75
+}
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1699.1.1"
+	election_frequency = 48 #Every 4 years
+	elections_allowed = no
+}

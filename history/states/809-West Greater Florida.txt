@@ -1,0 +1,32 @@
+
+state={
+	id=809
+	name="STATE_809"
+
+	history={
+		owner = CRE
+		add_core_of = CRE
+		add_core_of = FLO
+		buildings = {
+			infrastructure = 1
+
+		}
+		1730.1.1 = {
+			owner = MEX
+			add_core_of = MEX
+		}
+		1765.1.1 = {
+			owner = CRE
+			add_core_of = CRE
+			controller = CRE
+		}
+
+	}
+
+	provinces={
+		492 860 7583 10492 12498 
+	}
+	manpower=1547
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

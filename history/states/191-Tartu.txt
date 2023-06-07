@@ -1,0 +1,40 @@
+state={
+	id=191
+	name="STATE_191"
+	
+	state_category = rural
+
+	history={
+		owner = SWE
+		victory_points = {
+			9221 1 
+		}
+		victory_points = {
+			3174 5 
+		}		
+		buildings = {
+			infrastructure = 3
+			3174 = {
+				naval_base = 3
+			}
+		}
+		add_core_of = EST
+		1712.1.1 = {
+			owner = SWE
+			controller = SOV
+		}
+		1730.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+			remove_core_of = SWE
+		}
+
+	}
+
+	provinces={
+		185 308 592 3174 3388 6099 6178 6381 6408 9221 9485 9501 11291 13127 
+	}
+	manpower=45200
+	buildings_max_level_factor=1.000
+}

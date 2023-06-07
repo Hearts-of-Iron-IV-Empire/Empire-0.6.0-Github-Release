@@ -1,0 +1,864 @@
+music_station = "base_music"
+
+music = {
+	song = "maintheme"
+	chance = {
+		modifier = {
+			factor = 0.2
+		}		
+	}
+}
+
+music = {
+	song = "Missa Et Ecce Terrae Motus Gloria"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Imn Nassional Ëd Piemont: Hymn of Piedmont"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Imperial Fanfare"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+# New additions - Non Country Specific Music
+
+music = {
+	song = "Brandenburg Concerto No.3"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Lucio Silla Overture"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Sarabande"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Eine Kleine Nachtmusik"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Dies Irae"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Symphony No. 7 in A-major"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Minuetto"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Devil's Trill Sonata"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Adagio Allegro 2"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Concerto No.8 in G minor"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Chaconne in G minor"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Concerto for Two Violins in D minor"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "On the hills of Manchuria"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Nocturne in C Sharp Minor"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Grand Valse Brilliante"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Ballade no.1 in G minor Op.23"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Waltz of the Flowers"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+music = {
+	song = "Pas De Deux"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+	}	
+}
+
+# Country Specific Music # 
+
+music = {
+	song = "March of the Templars"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+			original_tag = AUS
+		}
+	}	
+}
+
+music = {
+	song = "Im Ganzen Vaterland"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+		}
+	}	
+}
+
+music = {
+	song = "Unser Liebe Fraue, Song Of The Landsknechts"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+			original_tag = AUS
+		}	
+	}	
+}
+
+music = {
+	song = "Hymn Of The Holy Roman Empire"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = AUS
+			original_tag = PRS
+			original_tag = BAV
+		}	
+	}	
+}
+
+music = {
+	song = "Preussens Gloria"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+		}	
+	}	
+}
+
+music = {
+	song = "Fridericus Rex Grenadiermarsch"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = PRS
+		}	
+	}	
+}
+
+music = {
+	song = "God Save the Tsar"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "March of the Preobrazhensky Regiment"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = yes
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "March of the Izmaylovsky Regiment"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = yes
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "Tchaikovsky's 1812 Overture"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "Marche Slave"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "Valse Sentimentale"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SOV
+		}
+	}	
+}
+
+music = {
+	song = "Ottoman Empire Imperial Anthem"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}	
+	}	
+}
+
+music = {
+	song = "Aziziye Marsi"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}	
+	}	
+}
+
+music = {
+	song = "Ceddin Deden"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}	
+	}	
+}
+
+music = {
+	song = "Ana Hasreti"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}	
+	}	
+}
+
+music = {
+	song = "Tanburi Buyuk Osman Bey"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}
+	}	
+}
+
+music = {
+	song = "Desert Scorpion"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}
+	}	
+}
+
+music = {
+	song = "Marche Ottomane Manuscrit: Cantemir 209"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = TUR
+		}
+	}	
+}
+
+music = {
+	song = "The British Grenadiers March"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = ENG
+		}	
+	}	
+}
+
+music = {
+	song = "Rule Britannia!"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = ENG
+		}	
+	}	
+}
+
+music = {
+	song = "I Vow to Thee, My Country"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = ENG
+		}	
+	}	
+}
+
+music = {
+	song = "Hino Da Carta: Hymn of Portugal"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+		modifier = {
+			factor = 2
+			original_tag = POR
+		}
+	}	
+}
+
+music = {
+	song = "The Wilhelmus: Hymn of the Netherlands"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = HOL
+		}	
+	}	
+}
+
+music = {
+	song = "Merck Toch Hoe Sterck"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = HOL
+		}	
+	}	
+}
+
+music = {
+	song = "Geuzenlied"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = HOL
+		}	
+	}	
+}
+
+music = {
+	song = "Royal Anthem of Spain: Marcha Real"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = SPR
+		}	
+	}	
+}
+
+music = {
+	song = "Hymn De Los Tercios"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = SPR
+		}	
+	}	
+}
+
+music = {
+	song = "Inno Nasionale Veneto: Anthem of the Republic of Venice"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = VNC
+		}
+	}	
+}
+
+music = {
+	song = "Sonate à 6 Doi Violini"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = VNC
+			original_tag = ITA
+		}
+	}	
+}
+
+music = {
+	song = "Marche du Royal Soissonais"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}		
+	}	
+}
+
+music = {
+	song = "Marche des Combattants"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "Marche pour la ceremonie des Turcs"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+			original_tag = TUR
+		}	
+	}	
+}
+
+music = {
+	song = "Danse de village"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "Marche Royale de France"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "La Marseillaise"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "Hymne de la monarchie Francaise"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "French Anthem"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
+	}	
+}
+
+music = {
+	song = "Carolus Rex Marsj"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SWE
+		}
+	}	
+}
+
+music = {
+	song = "Jääkärimarssi"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SWE
+			original_tag = FIN
+		}
+	}	
+}
+
+
+music = {
+	song = "Sharpe's Theme"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = USA
+		}
+	}	
+}

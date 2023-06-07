@@ -1,0 +1,26 @@
+state={
+	id=373
+	name="STATE_373"
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		add_core_of = LOU
+		1765.1.1 = {
+			owner = LOU
+			add_core_of = LOU
+			controller = LOU
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+
+	provinces={
+		1441 1523 1534 1564 1621 7449 7607 10333 10370 10391 10516 10717 12361 12463 
+	}
+	manpower=362
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

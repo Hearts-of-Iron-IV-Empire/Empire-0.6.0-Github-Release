@@ -1,0 +1,37 @@
+
+state={
+	id=362
+	name="STATE_362"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 2
+			788 = {
+				naval_base = 5
+			}
+			3917 = {
+				naval_base = 1
+			}
+		}
+		add_core_of = USA
+		victory_points = {
+			788 2
+		}
+		victory_points = {
+			865 5
+		}
+		1760.1.1 = {
+			add_manpower=440000
+		}
+
+	}
+
+	provinces={
+		788 865 873 3823 3917 6846 11738 
+	}
+	manpower=55560
+	buildings_max_level_factor=1.000
+	state_category=large_town 
+}

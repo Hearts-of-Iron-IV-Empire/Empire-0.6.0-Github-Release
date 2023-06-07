@@ -1,0 +1,307 @@
+ideas = {
+	country = {
+		HOL_english_king_in_exile = {
+			picture = can_patriation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+			}
+		}
+		HOL_english_king_in_exile_2 = {
+			picture = can_patriation
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			targeted_modifier = {
+				tag = ENG
+				attack_bonus_against = 0.05
+				defense_bonus_against = 0.05
+			}
+		}
+		agressive_foreign_policy = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			name = agressive_foreign_policy
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				generate_wargoal_tension = -0.25
+				justify_war_goal_time = -0.25
+			}
+		}
+		french_influence = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			name = french_influence
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				neutrality_drift = 0.05
+			}
+		}
+		FRA_religious_unrest = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				original_tag = FRA
+			}
+			
+			removal_cost = -1
+
+			picture = religious_turmoil
+			
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		FRA_hotel_des_invalides = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = victors_of_the_great_war
+			
+			modifier = {
+				experience_loss_factor = -0.20
+			}
+		}
+
+		FRA_disciplined_musketeer_force = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = triumphant_will
+			
+			modifier = {
+				army_morale_factor = 0.1
+				army_org = 10
+			}
+		}	
+
+		FRA_direct_military_command = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				command_power_gain_mult = 0.25
+			}
+		}
+
+		FRA_square_formations = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				army_infantry_defence_factor = 0.05
+			}
+		}
+
+		FRA_infantry_de_ligne = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				army_infantry_attack_factor = 0.10
+			}
+		}
+
+		FRA_cavalry_blitz = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				army_armor_attack_factor = 0.10
+			}
+		}	
+
+		FRA_forced_march = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					army_speed_factor = 0.10
+			}
+		}
+
+		FRA_edict_of_fontainebleu = {
+
+			available = {
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			picture = MEX_church_power_5
+			
+			modifier = {
+				research_speed_factor = -0.05
+				stability_factor = 0.2
+				conscription = -0.002
+			}
+		}
+
+		FRA_defender_of_the_faith = {
+
+			available = {
+				has_idea = catholic
+			}
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				war_support_factor = 0.10
+				offence = 0.1
+			}
+		}
+		FRA_birthplace_of_absolutism = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+
+			picture = generic_intel_bonus
+			
+			modifier = {
+				drift_defence_factor = 0.25
+			}
+		}	
+		FRA_ineffecicient_taxing = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+
+			picture = chi_hyper_inflation
+			
+			modifier = {
+				economy_cost_factor = 0.5
+				consumer_goods_factor = 0.1
+			}
+		}
+		FRA_elaborate_court_life = {
+
+			allowed = {
+				always = no
+			}
+			
+			removal_cost = -1
+
+			cancel_if_invalid = yes
+
+			picture = ROM_king_carol_ii_hedonist
+			
+			modifier = {
+				consumer_goods_factor = 0.1
+				neutrality_drift = 0.03
+			}
+		}
+		
+	}
+}

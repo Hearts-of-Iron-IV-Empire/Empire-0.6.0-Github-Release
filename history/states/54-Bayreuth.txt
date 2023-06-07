@@ -1,0 +1,32 @@
+
+state={
+	id=54
+	name="STATE_54"
+
+	history={
+		owner = WRZ
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		add_core_of = WRZ
+		victory_points = {
+			11417 5 
+		}
+		victory_points = {
+			9416 3 
+		}
+		1812.1.1 = {
+			owner = BAV
+			add_core_of = BAV
+		}
+	}
+
+	provinces={
+		3474 6421 9416 11404 11417 13116 
+	}
+	manpower=548159
+	buildings_max_level_factor=1.000
+	state_category=city
+}

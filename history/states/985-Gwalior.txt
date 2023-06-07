@@ -1,0 +1,33 @@
+
+state={
+	id=985
+	name="STATE_985"
+
+	history={
+		owner = RAJ
+		add_core_of = RAJ
+		victory_points = {
+			10807 5 
+		}
+		victory_points = {
+			4915 5 
+		}
+		victory_points = {
+			5086 20 
+		}
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+
+	}
+
+	provinces={
+		2036 4045 4915 5086 7080 10794 10807 12137 13344 13345 13346 
+	}
+	manpower=1201548
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

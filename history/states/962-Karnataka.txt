@@ -1,0 +1,37 @@
+
+state={
+	id=962
+	name="STATE_962"
+
+	history={
+		owner = RAJ
+		add_claim_by = RAJ
+		add_core_of = MAR
+		add_claim_by = MYS
+		victory_points = { # Panhala
+			7250 5
+		}
+		victory_points = { # Kolhapur
+			12105 5
+		}
+		buildings = {
+			infrastructure = 2
+			7250 = {
+				bunker = 5
+			}
+		}
+		1707.5.1 = {
+			owner = MAR
+			controller = MAR
+			add_core_of = MAR
+		}
+	}
+
+	provinces={
+		4291 7250 7411 10210 12105 12142 12295 13265 13285 13287 13288 13289 13290 13291
+	}
+	manpower=2012548
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
+}

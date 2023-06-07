@@ -1,0 +1,24 @@
+
+state={
+	id=652
+	name="STATE_652"
+
+	history={
+		owner = SOV
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+
+		}
+		add_core_of = SOV
+
+	}
+
+	provinces={
+		227 273 403 1210 1305 1350 1378 3265 3289 3330 3348 3357 3385 4283 4324 4354 6308 6368 6379 6515 7237 7343 9337 9349 9385 9420 10299 11389 11433 12128 12172 12242 12270 12298 
+	}
+	manpower=625870
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

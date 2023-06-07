@@ -1,0 +1,26 @@
+POL_aligning_with_russia_against_sweden = { #Poland want russia xd
+	allowed = {
+		original_tag = POL
+	}
+	enable = {
+	    country_exists = SWE
+	}
+	abort = {
+		NOT = {
+			country_exists = SWE
+			has_completed_focus = POL_depose_august
+			#TODO
+		}
+	}
+	abort_when_not_enabled = no
+	ai_strategy = {
+		type = alliance
+		id = "SOV"
+		value = 100
+	}
+	ai_strategy = {
+		type = befriend
+		id = "SOV"
+		value = 100
+	}
+}

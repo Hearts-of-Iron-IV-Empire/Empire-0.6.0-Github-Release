@@ -1,0 +1,35 @@
+state={
+	id=983
+	name="STATE_983"
+	resources= {
+		aluminium = 10
+		oil = 6
+	}
+	provinces={
+		1713 1908 4382 4984 7887 10334 10373 12362 12617 12886 
+	}
+	history={
+		owner = RAJ
+		add_core_of = JOD
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+		}
+		victory_points = {
+			4984 20 
+		}
+		victory_points = {
+			1908 5 
+		}
+		1707.6.8 = {
+			owner = JOD
+			add_core_of = JOD
+		}
+		1740.1.1 = {
+			owner = MAR
+		}
+	}
+	manpower=648797
+	buildings_max_level_factor=1.000
+	state_category=city
+}

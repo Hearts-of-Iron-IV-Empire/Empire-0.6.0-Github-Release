@@ -1,0 +1,64 @@
+@LINE1_X = 15
+@LINE1_Y = 20
+@LINE2_Y = 50
+@LINE3_Y = 80
+guiTypes = {
+	containerWindowType = {
+		name = "PER_qizilbash_corps_decision_ui_container"
+		position = { x = 0 y = 0 }
+		size = { width = 100% height= 300 }
+
+		iconType = {
+			name = "perisa_map"
+			position = {
+				x = -20
+				y = -80
+			}
+			spriteType = "GFX_persia_concept"
+		}
+		
+		#instantTextBoxType = {
+		#	name ="service_type_text_name"
+		#	position = { x = @LINE1_X y = @LINE1_Y }
+		#	font = "hoi_18mbs" # OLD hoi_16mbs
+		#	text = "service_type_text"
+		#	format = left
+		#	maxHeight = 24
+		#	maxWidth = 500
+		#	alwaystransparent = yes
+		#}
+#
+		#
+		#instantTextBoxType = {
+		#	name ="defense_against_pirates_text_name"
+		#	position = { x = @LINE1_X y = @LINE2_Y }
+		#	font = "hoi_18mbs" # OLD hoi_16mbs
+		#	text = "defense_against_pirates_text"
+		#	format = left
+		#	maxHeight = 24
+		#	maxWidth = 700
+		#	alwaystransparent = yes
+		#}
+#
+		#instantTextBoxType = {
+		#	name ="internal_security_text_name"
+		#	position = { x = @LINE1_X y = @LINE3_Y }
+		#	font = "hoi_18mbs" # OLD hoi_16mbs
+		#	text = "internal_security_text"
+		#	format = left
+		#	maxHeight = 24
+		#	maxWidth = 500
+		#	alwaystransparent = yes
+		#}
+		#instantTextBoxType = {
+		#	name ="service_type_lvl_name"
+		#	position = { x = 59 y = @LINE1_Y }
+		#	#font = "hoi_22mbs" # OLD hoi_16mbs
+		#	text = "[GetCORPSSERVICE]"
+		#	format = left
+		#	maxHeight = 24
+		#	alwaystransparent = yes
+		#}
+
+	}
+}

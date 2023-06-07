@@ -1,0 +1,23 @@
+state={
+	id=781
+	name="STATE_781"
+
+	history={
+		owner = NGR
+		add_extra_state_shared_building_slots = 10
+		victory_points = { 5101 3 }
+		victory_points = { 1975 5 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		1975 2056 5101 12707 
+	}
+	manpower=543817
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

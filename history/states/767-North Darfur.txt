@@ -1,0 +1,17 @@
+
+state={
+	id=767
+	name="STATE_767"
+
+	history={
+		#owner = CAR
+		owner = UNC
+	}
+
+	provinces={
+		1960 5060 8052 8103 10739 
+	}
+	manpower=8143
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

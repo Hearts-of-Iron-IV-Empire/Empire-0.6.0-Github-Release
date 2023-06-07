@@ -1,0 +1,33 @@
+
+state={
+	id=802
+	name="STATE_802"
+
+	history={
+		owner = ZAP
+		victory_points = {
+			11405 1 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 2
+			industrial_complex = 1
+
+		}
+		add_core_of = ZAP
+		1711.5.1 = {
+			owner = SOV
+			controller = SOV
+
+		}
+
+	}
+
+	provinces={
+		453 472 486 502 3399 3466 3508 6530 9463 11405 11452 11461 
+	}
+	manpower=21324
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
+}

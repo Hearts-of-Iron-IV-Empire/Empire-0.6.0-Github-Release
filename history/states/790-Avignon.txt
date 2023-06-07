@@ -1,0 +1,27 @@
+state={
+	id=790
+	name="Avignon"
+	history={
+		owner = PAP
+		victory_points = {
+			958 10 }
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}	
+		add_core_of = PAP
+		add_core_of = OCC
+		1798.1.1 = {
+			owner = FRA
+			add_core_of = FRA
+			remove_core_of = PAP
+		}
+	}
+	
+	provinces={
+		958 
+	}
+	manpower=35208
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

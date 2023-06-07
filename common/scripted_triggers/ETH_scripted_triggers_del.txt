@@ -1,0 +1,26 @@
+# Does Ethiopia (or anyone else that want to use this) have a Military Academy? 
+# Add triggers for those countries as needed 
+has_military_academy = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_military_academy_tt 
+		}
+	}
+}
+
+
+# Does Ethiopia (or anyone else that want to use this) have a Naval Academy? 
+# Add triggers for those countries as needed 
+has_naval_academy = {
+	IF = {
+		limit = { 
+			original_tag = ETH 
+		}
+		custom_trigger_tooltip = {
+			tooltip = has_naval_academy_tt 
+		}
+	}
+}

@@ -1,0 +1,14 @@
+ideas = {	
+	country = {
+		early_modern_warfare_supply_123 = {
+
+			removal_cost = -1
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				supply_node_range = 1000
+			}
+		}
+	}
+}

@@ -1,0 +1,27 @@
+
+state={
+	id=829
+	name="STATE_829"
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		buildings = {
+			infrastructure = 1
+			1769 = {
+				bunker = 1
+			}
+		}
+		victory_points = {
+			1769 1 
+		}
+
+	}
+
+	provinces={
+		602 777 1299 1769 1782 4775 4784 4869 4875 6510 7366 7899 9467 9480 10718 12278 12582 
+	}
+	manpower=2647
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

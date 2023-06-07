@@ -1,0 +1,98 @@
+TUR_increase_loyalty = {
+	if = {
+		limit = { has_idea = TUR_janissary_loyalty_1 }
+		add_political_power = 80
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_2 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_2
+			add_idea = TUR_janissary_loyalty_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_3 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_3
+			add_idea = TUR_janissary_loyalty_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_4 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_4
+			add_idea =TUR_janissary_loyalty_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_5 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_5
+			add_idea = TUR_janissary_loyalty_4
+		}
+	}
+}
+
+TUR_decrease_loyalty = {
+	if = {
+		limit = { has_idea = TUR_janissary_loyalty_5 }
+		add_political_power = 25
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_4 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_4
+			add_idea = TUR_janissary_loyalty_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_3 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_3
+			add_idea = TUR_janissary_loyalty_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_2 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_2
+			add_idea = TUR_janissary_loyalty_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = TUR_janissary_loyalty_1 }
+		swap_ideas = {
+			remove_idea = TUR_janissary_loyalty_1
+			add_idea = TUR_janissary_loyalty_2
+		}
+	}
+}
+
+TUR_reduce_sick_man = {
+	if = {
+		limit = { has_idea = TUR_sick_man_of_europe_4 }
+			remove_ideas = TUR_sick_man_of_europe_4
+			add_political_power = 25
+	}
+	else_if = {
+		limit = { has_idea = TUR_sick_man_of_europe_3 }
+		swap_ideas = {
+			remove_idea = TUR_sick_man_of_europe_3
+			add_idea = TUR_sick_man_of_europe_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_sick_man_of_europe_2 }
+		swap_ideas = {
+			remove_idea = TUR_sick_man_of_europe_2
+			add_idea = TUR_sick_man_of_europe_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = TUR_sick_man_of_europe_1 }
+		swap_ideas = {
+			remove_idea = TUR_sick_man_of_europe_1
+			add_idea =TUR_sick_man_of_europe_2
+		}		
+	}
+}

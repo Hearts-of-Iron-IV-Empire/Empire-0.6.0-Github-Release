@@ -1,0 +1,30 @@
+state={
+	id=849
+	name="STATE_849"
+
+	history={
+		owner = ACH
+		add_core_of = ACH
+		add_extra_state_shared_building_slots = 9
+		victory_points = {
+			7658 50
+		}
+		victory_points = {
+			10509 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 3
+			arms_factory = 2
+			textile_manufactury = 2
+			dockyard = 3
+		}
+	}
+
+	provinces={
+		7658 10509 12488 
+	}
+	manpower=24527
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

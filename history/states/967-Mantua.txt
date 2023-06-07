@@ -1,0 +1,30 @@
+state={
+	id=967
+	name="STATE_967"
+	provinces={
+		3776 11734 
+	}
+
+	history={
+		owner = MTU
+		add_core_of = MTU
+		victory_points = {
+			3776 5 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+			industrial_complex = 1
+
+		}
+		1707.6.8 = {
+			owner = LOM
+			controller = LOM
+			add_core_of = LOM
+		}
+	}
+
+	manpower=205000
+	buildings_max_level_factor=1.000
+	state_category=town
+}

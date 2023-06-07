@@ -1,0 +1,19 @@
+
+state={
+	id=378
+	name="STATE_378"
+	resources={
+		oil=180.000
+		aluminium=8.000
+	}
+
+	provinces={
+		610 677 768 781 3644 6482 6681 6745 6757 6772 9730 11658 
+	}
+	history={
+		owner = UNC
+	}
+	manpower=1000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

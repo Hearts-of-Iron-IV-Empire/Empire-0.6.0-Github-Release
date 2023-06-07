@@ -1,0 +1,26 @@
+state={
+	id=930
+	name="STATE_930"
+
+	history={
+		owner = POL
+		buildings = {
+			infrastructure = 3
+
+		}
+		add_core_of = POL
+		add_core_of = BLR
+		1772.1.1 = {
+			owner = SOV
+			add_core_of = SOV
+			controller = SOV
+		}
+	}
+
+	provinces={
+		323 3219 6249 6326 9323 
+	}
+	manpower=75421
+	buildings_max_level_factor=1.000
+	state_category=town
+}

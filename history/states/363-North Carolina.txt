@@ -1,0 +1,24 @@
+
+state={
+	id=363
+	name="STATE_363"
+
+	history={
+		owner = USA
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = USA
+		1760.1.1 = {
+			add_manpower=160000
+		}
+	}
+
+	provinces={
+		1077 1163 4168 6943 9876 
+	}
+	manpower=8450
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

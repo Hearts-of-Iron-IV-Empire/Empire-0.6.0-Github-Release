@@ -1,0 +1,34 @@
+RUS_army_reform = {
+	DEN_army_reform = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			has_army_experience > 49
+			has_completed_focus = DEN_study_swedish_supremacy
+		}
+
+		cost = 0
+		ai_will_do = {
+			factor = 500
+		}
+		days_remove = 90
+
+		visible = {
+			OR = {
+				has_idea = DEN_outmanoeuvred_by_sweden_6
+			    has_idea = DEN_outmanoeuvred_by_sweden_5
+				has_idea = DEN_outmanoeuvred_by_sweden_4
+				has_idea = DEN_outmanoeuvred_by_sweden_3
+				has_idea = DEN_outmanoeuvred_by_sweden_2
+				has_idea = DEN_outmanoeuvred_by_sweden_1
+			}
+		}
+		remove_effect = {
+			DEN_lower_army_ineffectiveness = yes
+		}
+		complete_effect = {
+			army_experience = -50						
+		}		
+	}
+}

@@ -1,0 +1,340 @@
+RAJ_increase_support = {
+	if = {
+		limit = { has_idea = MUG_orthodox_support_very_high }
+		add_political_power = 50
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_high }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_high
+			add_idea = MUG_orthodox_support_very_high
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_medium }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_medium
+			add_idea = MUG_orthodox_support_high
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_low }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_low
+			add_idea = MUG_orthodox_support_medium
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_very_low }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_very_low
+			add_idea = MUG_orthodox_support_low
+		}		
+	}
+}
+
+RAJ_decrease_support = {
+	if = {
+		limit = { has_idea = MUG_orthodox_support_high }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_high
+			add_idea = MUG_orthodox_support_medium
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_medium }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_medium
+			add_idea = MUG_orthodox_support_low
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_low }
+		swap_ideas = {
+			remove_idea = MUG_orthodox_support_low
+			add_idea = MUG_orthodox_support_very_low
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_orthodox_support_very_low }
+		add_political_power = -50	
+	}
+}
+
+RAJ_increase_maratha_resistance = {
+	if = {
+		limit = { has_idea = MUG_maratha_resistance }
+		swap_ideas = {
+			remove_idea = MUG_maratha_resistance
+			add_idea = MUG_maratha_resistance_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = MUG_maratha_resistance_2 }
+		swap_ideas = {
+			remove_idea = MUG_maratha_resistance_2
+			add_idea = MUG_maratha_resistance_3
+		}
+	}
+	if = {
+		limit = { has_idea = MUG_maratha_resistance_3 }
+		add_stability = -0.05
+		add_war_support = -0.05
+	}
+}
+
+improve_zamindari_system = {
+	if = {
+		limit = {
+			has_idea = MUG_zamindari_system
+		}
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system
+			add_idea = MUG_zamindari_system_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_zamindari_system_2
+		}
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system_2
+			add_idea = MUG_zamindari_system_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_zamindari_system_3
+		}
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system_3
+			add_idea = MUG_zamindari_system_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_zamindari_system_4
+		}
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system_4
+			add_idea = MUG_zamindari_system_5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_zamindari_system_5
+		}
+		swap_ideas = {
+			remove_idea = MUG_zamindari_system_5
+			add_idea = MUG_zamindari_system_6
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_zamindari_system_6
+		}
+		remove_ideas = MUG_zamindari_system_6
+	}
+}
+
+MUG_increase_foreign_influence = {
+	if = {
+		limit = {
+			has_idea = MUG_foreign_influence_extremely_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_extremely_low
+			add_idea = MUG_foreign_influence_very_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_very_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_very_low
+			add_idea = MUG_foreign_influence_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_low
+			add_idea = MUG_foreign_influence_medium
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_medium
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_medium
+			add_idea = MUG_foreign_influence_present
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_present
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_present
+			add_idea = MUG_foreign_influence_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_high
+			add_idea = MUG_foreign_influence_very_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_very_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_very_high
+			add_idea = MUG_foreign_influence_extremely_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_extremely_high
+		}
+		add_political_power = -50
+		add_stability = -0.05
+	}
+}
+
+MUG_decrease_foreign_influence = {
+	if = {
+		limit = {
+			has_idea = MUG_foreign_influence_extremely_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_extremely_high
+			add_idea = MUG_foreign_influence_very_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_very_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_very_high
+			add_idea = MUG_foreign_influence_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_high
+			add_idea = MUG_foreign_influence_present
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_present
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_present
+			add_idea = MUG_foreign_influence_medium
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_medium
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_medium
+			add_idea = MUG_foreign_influence_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_low
+			add_idea = MUG_foreign_influence_very_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_very_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_foreign_influence_very_low
+			add_idea = MUG_foreign_influence_extremely_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_foreign_influence_extremely_low
+		}
+		remove_ideas = MUG_foreign_influence_extremely_low
+	}
+}
+
+MUG_increase_own_influence = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = MUG_holds_influence_very_high
+				has_idea = MUG_holds_influence_high
+				has_idea = MUG_holds_influence_medium
+				has_idea = MUG_holds_influence_low
+				has_idea = MUG_holds_influence_very_low
+			}
+		}
+		add_ideas = MUG_holds_influence_very_low
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_holds_influence_very_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_holds_influence_very_low
+			add_idea = MUG_holds_influence_low
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_holds_influence_low
+		}
+		swap_ideas = {
+			remove_idea = MUG_holds_influence_low
+			add_idea = MUG_holds_influence_medium
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_holds_influence_medium
+		}
+		swap_ideas = {
+			remove_idea = MUG_holds_influence_medium
+			add_idea = MUG_holds_influence_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_holds_influence_high
+		}
+		swap_ideas = {
+			remove_idea = MUG_holds_influence_high
+			add_idea = MUG_holds_influence_very_high
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = MUG_holds_influence_very_high
+		}
+		add_political_power = 90
+	}
+}

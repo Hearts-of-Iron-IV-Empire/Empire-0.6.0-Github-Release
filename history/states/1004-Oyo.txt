@@ -1,0 +1,21 @@
+state={
+	id=1004
+	name="STATE_1004"
+	provinces={
+		12762 
+	}
+	history = {
+		owner = LIB
+		add_extra_state_shared_building_slots = 10
+		victory_points = { 12762 3 }
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+			
+		}
+	}
+	manpower=57784
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

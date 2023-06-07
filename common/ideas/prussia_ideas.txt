@@ -1,0 +1,312 @@
+ideas = {
+	country = {
+		PRS_drill_camp = {
+			picture = generic_infantry_bonus
+			name = PRS_drill_camp
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				army_attack_factor = 0.1
+				army_defence_factor = 0.1
+			}
+		}
+
+
+		PRS_prussian_intervention = {
+			picture = generic_volunteer_expedition_bonus
+			name = PRS_prussian_intervention
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				send_volunteers_tension = -0.4
+				send_volunteer_divisions_required = -0.8
+			}	
+		}
+
+		PRS_artillery_drill = {
+			picture = generic_intel_bonus
+			name = PRS_artillery_drill
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				army_artillery_attack_factor = 0.05
+				army_artillery_defence_factor = 0.05
+			}	
+		}
+
+		PRS_infantry_drill = {
+			picture = generic_intel_bonus
+			name = PRS_infantry_drill
+
+			allowed = {
+					always = no
+				}
+
+			modifier = {
+				army_infantry_attack_factor = 0.10
+				army_infantry_defence_factor = 0.05
+			}	
+		}
+
+		PRS_cavalry_drill = {
+			picture = generic_intel_bonus
+			name = PRS_cavalry_drill
+
+			allowed = {
+					always = no
+				}
+
+			modifier = {
+				army_armor_attack_factor = 0.05
+				army_armor_defence_factor = 0.05
+			}	
+		}
+
+		PRS_officers_academy = {
+			picture = fra_national_mobilization_focus
+			name = PRS_officers_academy
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				military_leader_cost_factor = -0.5
+				army_leader_start_level = 1
+			}
+		}
+
+		PRS_more_soldiers = {
+			picture = generic_manpower_bonus
+			name = PRS_more_soldiers
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				conscription = 0.02 
+				training_time_army_factor = -0.1
+			}
+		}
+
+		PRS_naval_exercise = {
+			picture = idea_generic_naval_manufacturer_1
+			name = PRS_naval_exercise
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				naval_coordination = 0.01
+			}
+		}
+
+		PRS_battleship = {
+			picture = generic_navy_bonus
+			name = PRS_battleship
+			
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				navy_capital_ship_attack_factor = 0.05 
+				navy_capital_ship_defence_factor = 0.05
+			}
+		}	
+
+		PRS_coast_guard = {
+			picture = escort_effort_focus
+			name = PRS_coast_guard
+			
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				navy_screen_attack_factor = 0.05 
+				navy_screen_defence_factor = 0.05
+			}
+		}
+
+		PRS_German_diplomatic_cooperation = {
+			picture = Triumphant_will
+			name = PRS_German_diplomatic_cooperation
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.2
+			}		
+		}
+
+		PRS_parliament_of_people = {
+			picture = AST_abandon_the_westminster_system
+			name = PRS_absolutist_reforms
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				democratic_drift = 0.1
+				stability_factor = 0.05
+			}		
+		}
+
+		PRS_status_elector = {
+			picture = prince_elector
+			name = PRS_status_elector
+
+			allowed = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = 0.15
+			}		
+		}
+		PRS_juncker_parliament = {
+
+			picture = generic_disjointed_gov
+
+			name = PRS_juncker_parliament
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				experience_gain_army_factor = 0.1
+				war_support_weekly = 0.005
+				aristocracy_drift = 0.01
+			}
+		}
+
+		PRS_protestant_work_ethos = {
+
+			picture = generic_production_bonus
+
+			name = PRS_protestant_work_ethos
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_buildings_factor = 0.1
+			}
+		}
+
+		PRS_raised_military_budget = {
+
+			picture = generic_infantry_bonus
+
+			name = PRS_raised_military_budget
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				consumer_goods_factor = 0.05
+				conscription = 0.02
+			}
+		}
+
+		PRS_juncker_officers = {
+
+			picture = generic_infantry_bonus
+
+			name = PRS_juncker_officers
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				max_planning = 0.25
+				planning_speed = 0.10
+				max_command_power = 25
+				command_power_gain = 0.5
+			}
+		}
+
+		PRS_prussian_discipline = {
+
+			picture = generic_infantry_bonus
+
+			name = PRS_prussian_discipline
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				army_org_factor = 0.15
+				army_morale_factor = 0.12
+			}
+		}
+
+		PRS_teutonic_revival = {
+
+			picture = generic_infantry_bonus
+
+			name = PRS_teutonic_revival
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				fascism_drift = 0.10
+				conscription = 0.02 
+			}
+		}
+
+		PRS_blood_and_iron_politics = {
+
+			picture = FRA_scw_intervention_nationalists_focus
+
+			name = PRS_blood_and_iron_politics
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				justify_war_goal_time = -0.25
+				generate_wargoal_tension = -0.4
+				war_support_factor = 0.10
+			}
+		}
+	}
+}

@@ -1,0 +1,18 @@
+state={
+	id=954
+	name="STATE_954"
+
+	history={
+		owner = QUE
+		add_core_of = QUE
+		add_core_of = LOU
+
+	}
+
+	provinces={
+		1752 1870 3719 10618 10685 11667 12597 12685 
+	}
+	manpower=3078
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

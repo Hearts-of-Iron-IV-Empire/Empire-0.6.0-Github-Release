@@ -1,0 +1,33 @@
+
+state={
+	id=159
+	name="STATE_159"
+
+	history={
+		owner = LOM
+		victory_points = {
+			3780 30
+		}
+		victory_points = {
+			9584 1 
+		}
+		victory_points = {
+			11726 1 
+		}
+		buildings = {
+			infrastructure = 4
+			arms_factory = 3
+			industrial_complex = 4
+
+		}
+		add_core_of = LOM
+
+	}
+
+	provinces={
+		607 771 773 776 3780 6635 9584 9741 11726 
+	}
+	manpower=1297704
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

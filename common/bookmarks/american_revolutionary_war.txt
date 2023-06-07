@@ -1,0 +1,83 @@
+bookmarks = {
+	bookmark = {
+		name = "American Revolutionary War"
+		desc = "EMPIRE_USA_REVOLUTION_DESC"
+		date = 1773.12.16.12
+		picture = "GFX_select_date_1773"
+		default_country = "USA"
+		default = no
+
+		"USA"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"ENG"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"FRA"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SPR"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"HOL"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		
+		"AUS"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"SOV"={
+			history = ""
+			ideology = neutrality
+			ideas = {
+			}
+			focuses = {
+			}
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+		
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

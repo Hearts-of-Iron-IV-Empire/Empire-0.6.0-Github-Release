@@ -1,0 +1,31 @@
+state={
+	id=921
+	name="STATE_921"
+
+	history={
+		victory_points = {
+			10203 1 
+		}
+		owner = VNC
+		buildings = {
+			infrastructure = 1
+			10203 = {
+				naval_base = 1
+
+			}
+
+		}
+		add_core_of = GRE
+		add_core_of = VNC
+		1797.1.1 = {
+			owner = FRA
+		}
+	}
+
+	provinces={
+		10203 
+	}
+	manpower=8500
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

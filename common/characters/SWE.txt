@@ -1,0 +1,103 @@
+characters = {
+    SWE_Frederick_I = {
+        name = "Frederick I"
+        portraits = {
+            civilian = {
+                large = "GFX_Frederick_I_of_Sweden"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+    SWE_Charles_XII = {
+        name = "Charles XII"
+        portraits = {
+            civilian = {
+                large = "GFX_Charles_XII"
+            }
+            army = {
+                large = "GFX_Charles_XII"
+            }
+        }
+        country_leader = {
+            expire = 1729.1.1
+            ideology = despotism
+            traits = { inexperienced_monarch warmonger}
+            desc = POLITICS_CHARLES_XII_DESC
+        }
+        field_marshal = {
+            traits = { commando }
+            skill = 4
+            attack_skill = 5
+            defense_skill = 2
+            planning_skill = 3
+            logistics_skill = 3
+        }
+    }
+    SWE_Carl_Gustav_Rehnskiöld = {
+        name = "Carl Gustav Rehnskiöld"
+        portraits = {
+            army = {
+                large = "GFX_Karl_Gustav"
+            }
+        }
+        corps_commander = {
+            traits = {}
+            skill = 5
+            attack_skill = 4
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    SWE_Magnus_Stenbock = {
+        name = "Magnus Stenbock"
+        portraits = {
+            army = {
+                large = "GFX_Magnus_Stenbock"
+            }
+        }
+        corps_commander = {
+            traits = {  hill_fighter }
+            skill = 3
+            attack_skill = 4
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 2
+        }
+    }
+    SWE_Adam_Ludwig_Lewenhaupt = {
+        name = "Adam Ludwig Lewenhaupt"
+        portraits = {
+            army = {
+                large = "GFX_Ludwig_Lewenhaupt"
+            }
+        }
+        corps_commander = {
+            traits = {  hill_fighter }
+            skill = 3
+            attack_skill = 4
+            defense_skill = 1
+            planning_skill = 2
+            logistics_skill = 4
+        }
+    }
+    SWE_Georg_Hendrik_Lybecker = {
+        name = "Georg Hendrik Lybecker"
+        portraits = {
+            army = {
+                large = "GFX_Georg_Lybecker"
+            }
+        }
+        corps_commander = {
+            traits = {  hill_fighter }
+            skill = 2
+            attack_skill = 1
+            defense_skill = 1
+            planning_skill = 1
+            logistics_skill = 3
+        }
+    }
+}

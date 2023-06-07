@@ -1,0 +1,30 @@
+state={
+	id=370
+	name="STATE_370"
+
+	history={
+		owner = QUE
+		buildings = {
+			infrastructure = 1
+
+		}
+		add_core_of = LOU
+		add_core_of = QUE
+		1765.1.1 = {
+			owner = CHK
+			add_core_of = CHK
+			controller = CHK
+		}
+		1803.2.1 = {
+			owner = USA
+			controller = USA
+		}
+	}
+
+	provinces={
+		4510 7464 7797 10410 12328 
+	}
+	manpower=200
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

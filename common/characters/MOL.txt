@@ -1,0 +1,14 @@
+characters = {
+    MOL_Antioh_Cantemir = {
+        name = "Antioh Cantemir"
+        portraits = {
+            civilian = {
+                large = "GFX_Antioh_Cantemir"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = { popular_ruler }
+        }
+    }
+}

@@ -1,0 +1,91 @@
+HOL_decrease_inflation = {
+	if = {
+		limit = { has_idea = HOL_balanced_budget }
+		add_political_power = 50
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_1 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_1
+			add_idea = HOL_balanced_budget
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_2 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_2
+			add_idea = HOL_inflation_1
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_3 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_3
+			add_idea = HOL_inflation_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_4 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_4
+			add_idea = HOL_inflation_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_5 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_5
+			add_idea = HOL_inflation_4
+		}
+	}
+}
+
+HOL_increase_inflation = {
+	if = {
+		limit = { has_idea = HOL_inflation_5 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_5
+			add_idea = HOL_balanced_budget
+		}
+		add_timed_idea = {
+			idea = HOL_declared_bankruptcy
+			days = 180
+		}
+		news_event = mod.18
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_4 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_4
+			add_idea = HOL_inflation_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_3 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_3
+			add_idea = HOL_inflation_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_2 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_2
+			add_idea = HOL_inflation_3
+		}		
+	}
+	else_if = {
+		limit = { has_idea = HOL_inflation_1 }
+		swap_ideas = {
+			remove_idea = HOL_inflation_1
+			add_idea = HOL_inflation_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = HOL_balanced_budget }
+		swap_ideas = {
+			remove_idea = HOL_balanced_budget
+			add_idea = HOL_inflation_1
+		}
+	}
+}

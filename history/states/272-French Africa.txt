@@ -1,0 +1,27 @@
+state={
+	id=272
+	name="STATE_272"
+	resources={
+		steel=3.000
+	}
+
+	history={
+		owner = SEN
+		add_extra_state_shared_building_slots = 10
+		victory_points = {
+			8015 5 
+		}
+		buildings = {
+			infrastructure = 1
+			arms_factory = 1
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		2012 2100 4948 8015 10829 10915 12710 
+	}
+	manpower=1638000
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

@@ -1,0 +1,37 @@
+state={
+	id=423
+	name="STATE_423"
+	resources={
+		rubber=19.000
+	}
+
+	history={
+		owner = MDR
+		victory_points = {
+			12247 50 
+		}
+		victory_points = {
+			4327 10
+		}
+		victory_points = {
+			7265 10
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			7265 = {
+				naval_base = 4
+			}
+		}
+		1740.1.1 = {
+			owner = CAA
+		}
+	}
+
+	provinces={
+		1409 4327 7265 7288 7363 10130 12247 13307 13308
+	}
+	manpower=11147500
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

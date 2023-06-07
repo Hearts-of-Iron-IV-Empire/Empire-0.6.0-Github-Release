@@ -1,0 +1,186 @@
+﻿capital = 357
+
+oob = "British_America_1699"
+
+#set_naval_oob = "USA_1936_naval_legacy"
+
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.2
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_recon = 1
+	tech_support = 1		
+	tech_engineers = 1
+	gw_artillery = 1
+	basic_cavalry = 1
+}
+
+1714.8.1 = {
+	unlock_national_focus = USA_autonomous_colonies
+	unlock_national_focus = USA_prioritize_virginia
+	unlock_national_focus = USA_crown_colony_investment
+	unlock_national_focus = USA_loyal_to_the_crown
+	unlock_national_focus = USA_english_armaments
+	unlock_national_focus = USA_lay_claim_to_nova_scotia
+	unlock_national_focus = USA_lay_claim_to_newfoundland
+	unlock_national_focus = USA_english_regulars
+	unlock_national_focus = USA_set_up_manufacturies_in_new_england
+	unlock_national_focus = USA_indentured_servants
+	unlock_national_focus = USA_native_forced_labor
+	unlock_national_focus = USA_triangle_trade
+	unlock_national_focus = USA_attract_subjects_of_the_crown
+	unlock_national_focus = USA_invite_the_scots
+	unlock_national_focus = USA_and_the_irish_too
+	unlock_national_focus = USA_queen_annes_war
+	unlock_national_focus = USA_part_of_england_for_now
+	unlock_national_focus = USA_develop_the_colonies
+	unlock_national_focus = USA_new_england_focus
+	unlock_national_focus = USA_the_middle_colonies
+	unlock_national_focus = USA_self_sufficiency
+	unlock_national_focus = USA_fortify_the_border
+	unlock_national_focus = USA_found_yale_university
+	unlock_national_focus = USA_chesapeake_bay
+	unlock_national_focus = USA_the_south
+	unlock_national_focus = USA_plantation_economies
+	unlock_national_focus = USA_the_frontier
+	unlock_national_focus = USA_expand_up_to_blue_ridge
+	unlock_national_focus = USA_expand_the_carolinas
+	unlock_national_focus = USA_lay_claim_to_georgia
+}
+
+1760.1.1 = {
+	country_lock_all_division_template = yes
+	remove_ideas = {
+		USA_largely_male_population
+		USA_indentured_servants
+	}
+	set_party_name = { 
+	    ideology = neutrality 
+	    name = "Loyalists"
+	    long_name = "Loyalists"
+	}
+	set_party_name = { 
+	    ideology = aristocracy 
+	    name = "Southern Aristocrats"
+	    long_name = "Southern Aristocrats"
+	}
+	set_party_name = { 
+	    ideology = democratic 
+	    name = "Patriots"
+	    long_name = "Patriots"
+	}
+
+	set_popularities = {
+		democratic = 32
+		neutrality = 23
+		fascism = 25
+		aristocracy = 10
+		communism = 10
+	}
+
+	oob = USA_1773
+}
+
+1789.1.1 = {
+	set_cosmetic_tag = USA_independent
+	recruit_character = USA_George_Washington
+	promote_character = USA_George_Washington
+	retire_character = USA_Board_Of_Trade
+
+	unlock_national_focus = USA_boston_tea_party
+	unlock_national_focus = USA_sons_of_liberty
+	unlock_national_focus = USA_comitees_of_correspondence
+	unlock_national_focus = USA_the_intolerable_acts
+	unlock_national_focus = USA_form_the_first_continental_congress
+	unlock_national_focus = USA_arm_militias
+	unlock_national_focus = USA_continental_association_boycott
+	unlock_national_focus = USA_militia_arsenals
+	unlock_national_focus = USA_raid_arsenals
+	unlock_national_focus = USA_petition_to_the_king
+	unlock_national_focus = USA_liberty_or_death
+	unlock_national_focus = USA_minute_men
+	unlock_national_focus = USA_lexington_and_concord
+	unlock_national_focus = USA_second_continental_congress
+}
+
+1797.3.4 = {
+	recruit_character = USA_John_Adams # 1797 - 1801
+	promote_character = USA_John_Adams
+	retire_character = USA_George_Washington
+}
+
+1801.3.4 = {
+	recruit_character = USA_Thomas_Jefferson # 1801 - 1809
+	promote_character = USA_Thomas_Jefferson
+	retire_character = USA_John_Adams
+}
+
+1809.3.4 = {
+	recruit_character = USA_James_Madison # 1809 - 1817
+	promote_character = USA_James_Madison
+	retire_character = USA_Thomas_Jefferson
+}
+
+set_convoys = 30
+
+set_politics = {
+	ruling_party = democratic
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 67
+	neutrality = 13
+	fascism = 20
+}
+add_ideas = {
+	colonial_immigration
+	protestant
+	USA_largely_male_population
+}
+
+recruit_character = USA_Board_Of_Trade
+recruit_character = USA_George_Washington_1699
+recruit_character = USA_friedrich_wilhelm_von_steuben
+recruit_character = USA_benjamin_franklin
+recruit_character = USA_John_Adams_advisor
+recruit_character = USA_robert_livingston
+recruit_character = USA_roger_sherman
+recruit_character = USA_thomas_jefferson_advisor
+
+
+#create_corps_commander = {
+#	name = "Joseph Dudley"
+#	picture = "USA_Joseph_Dudley.dds"
+#	traits = { adaptable }
+#	skill = 1
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 2
+#	logistics_skill = 2
+#}
+#
+#create_corps_commander = {
+#	name = "Francis Nicholson"
+#	picture = "USA_Francis_Nicholson.dds"
+#	traits = { brilliant_strategist }
+#	skill = 2
+#	attack_skill = 2
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
+#create_corps_commander = {
+#	name = "Henry St. John, 1. Viscount Bolingbroke"
+#	picture = "USA_Henry_St_John_1.Visc_Bolingbroke.dds"
+#	traits = { media_personality }
+#	skill = 1
+#	attack_skill = 1
+#	defense_skill = 1
+#	planning_skill = 1
+#	logistics_skill = 1
+#}
