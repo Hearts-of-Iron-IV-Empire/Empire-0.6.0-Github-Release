@@ -7,6 +7,7 @@ set_war_support = 0.7
 
 recruit_character = ZAP_Ivan_Mazepa
 recruit_character = ZAP_Ivan_Skoropadsky
+promote_character = ZAP_Ivan_Mazepa
 
 add_ideas = {
     orthodox
