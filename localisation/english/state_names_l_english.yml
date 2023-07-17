@@ -297,7 +297,7 @@
  STATE_296:0 "Gaabu"
  STATE_297:0 "Equatorial Guinea"
  STATE_298:0 "Grain Coast"
- STATE_299:0 "Islas Malvinas"
+ STATE_299:0 "Falkland Islands"
  STATE_300:0 "Uruguay"
  STATE_301:0 "Paraguay"
  STATE_302:0 "La Paz"
@@ -1046,3 +1046,4 @@
  STATE_1040:0 "English Bengal"
  STATE_1041:0 "Karwar"
  STATE_1042:0 "Tuticorin"
+ STATE_1043:0 "Kultuk Bay"

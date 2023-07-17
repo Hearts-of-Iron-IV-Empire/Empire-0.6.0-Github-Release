@@ -10,4 +10,6 @@
  chief_economic_advisor_cost_factor:0 "Chief Economic Advisor Cost"
  chief_diplomatic_advisor_cost_factor:0 "Chief Diplomatic Advisor Cost"
  spymaster_cost_factor:0 "Spymaster Cost"
+ modifier_production_speed_fuel_silo_factor:0 "§YGrain Silo§! construction speed"
+ modifier_production_speed_fuel_silo_factor_desc:0 "Modifies the speed of Grain Silo construction."
  

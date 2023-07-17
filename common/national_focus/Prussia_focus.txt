@@ -1899,7 +1899,7 @@ focus = {
 
 focus = { 
 	id = PRS_forced_marches
-	icon = GFX_goal_generic_construct_infrastructure
+	icon = GFX_soldiers_marching_prussian
 	relative_position_id = PRS_officersacademy
 	x = 2
 	y = 2
@@ -2339,7 +2339,7 @@ focus = {
 
 focus = { 
 	id = PRS_brandenburg_ironworks
-	icon = GFX_focus_generic_steel
+	icon = GFX_generic_iron
 	x = 2
 	y = 2
 	cost = 10
@@ -2405,9 +2405,9 @@ focus = {
 	}
 }
 
-focus = { 
+	focus = { 
 		id = PRS_prussian_academy
-		icon = GFX_focus_research2
+		icon = GFX_research_empire
 		relative_position_id = PRS_finish_berlin_works
 		x = 0
 		y = 1

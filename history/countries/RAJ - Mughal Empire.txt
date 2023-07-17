@@ -4,6 +4,8 @@ oob = "MUG_1699"
 
 set_research_slots = 3
 
+set_country_flag = absolutist_state
+
 set_stability = 0.5
 set_war_support = 0.8
 

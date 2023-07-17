@@ -145,4 +145,24 @@ characters = {
             logistics_skill = 3
         }
     }
+    SPR_portocarrero = {
+        name = "Cardinal Portocarrero"
+        portraits = {
+            army = {
+                small = "GFX_idea_cardinal_portocarrero"
+            }
+        }
+        advisor = {
+            slot = chief_economic_advisor            
+            idea_token = cardinal_portocarrero
+            cost = 50
+            allowed = {
+                original_tag = SPR
+            }
+            traits = { genial_anti_revolutionary }
+            available = {
+                has_completed_focus = SPR_pontcarrero_place_in_adm
+            }
+        }
+    }
 }

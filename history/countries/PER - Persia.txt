@@ -21,15 +21,15 @@ set_technology = {
 }
 
 add_ideas = {
-	# Laws and Religion
-	shiite
-	empire
-	low_economic_mobilisation
-	#
 	PER_qizilbas_troops_1
 	PER_mulabasi_govern
 	PER_oppressive_shias_2
 	PER_corrupt_army_and_court
+	
+	# Laws and Religion
+	shiite
+	empire
+	low_economic_mobilisation
 }
 
 set_convoys = 10

@@ -2324,7 +2324,7 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_basic_light_battery_medium"
-		texturefile = "gfx/interface/technologies/basic_light_battery.dds"
+		texturefile = "gfx/interface/technologies/swivel_gun.dds"
 	}
 
 	SpriteType = {
@@ -2379,22 +2379,22 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_improved_light_shell_medium"
-		texturefile = "gfx/interface/technologies/improved_light_shell.dds"
+		texturefile = "gfx/interface/technologies/grapeshot2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_basic_light_shell_medium"
-		texturefile = "gfx/interface/technologies/basic_light_shell.dds"
+		texturefile = "gfx/interface/technologies/grapeshot.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_improved_medium_shell_medium"
-		texturefile = "gfx/interface/technologies/improved_medium_shell.dds"
+		texturefile = "gfx/interface/technologies/cannonball2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_basic_medium_shell_medium"
-		texturefile = "gfx/interface/technologies/basic_medium_shell.dds"
+		texturefile = "gfx/interface/technologies/cannonball.dds"
 	}
 
 	SpriteType = {

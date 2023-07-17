@@ -438,10 +438,10 @@ country_event = {
 		    relation = non_aggression_pact
 		    active = yes
 		}
-		transfer_state = 930
-		transfer_state = 869
 		transfer_state = 241
 		transfer_state = 207
+		transfer_state = 869
+		transfer_state = 930
 		
 		POL = {
 			country_event = { 
@@ -745,20 +745,20 @@ country_event = {
 	}
 }
 
-#karlowitz return of Podolia #Event deprecated in favour of the Turkish War thing
+#karlowitz return of Podolia
 
 #country_event = {
-	#id = poland.27
-	#title = poland.27.t
-	#desc = poland.27.d
+#	id = poland.27
+#	title = poland.27.t
+#	desc = poland.27.d
 #
-	#is_triggered_only = yes
+#	is_triggered_only = yes
 #
-	#option = {
-		#name = "Welcome home!"
-		#transfer_state = 198
-		#add_stability = 0.05
-	#}
+#	option = {
+#		name = "Welcome home!"
+#		transfer_state = 198
+#		add_stability = 0.05
+#	}
 #}
 
 #an oppurtunity in Sweden
@@ -1414,48 +1414,3 @@ country_event = {
 		add_war_support = 0.10
 	}
 }
-
-#Zaporozhian Host Aligns With Us
-
-country_event = {
-	id = poland.51
-	title = poland.51.t
-	desc = poland.51.d
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-		name = "Surprising!"
-		POL = {
-			puppet = ZAP
-		}
-	}
-}
-
-#Forceful Polish Cession
-
-country_event = {
-	id = poland.52
-	title = poland.52.t
-	desc = poland.52.d
-    fire_only_once = yes
-    is_triggered_only = yes
-    option = {
-		name = "We should had not introduced cossacks to the world..."
-		ZAP = {
-		transfer_state = 202
-		transfer_state = 198
-		transfer_state = 201
-		transfer_state = 199
-		transfer_state = 93
-		transfer_state = 91
-		transfer_state = 89
-		transfer_state = 94
-		transfer_state = 933
-		transfer_state = 194
-	    }
-	dismantle_faction = yes
-	white_peace = ZAP
-	set_country_flag = POL_defeated_by_zaporozhia
-    }
-}
-

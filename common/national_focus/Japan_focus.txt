@@ -122,21 +122,15 @@
 	focus = {
 		id = JAP_internal_affairs
 		icon = GFX_scroll_icon
-		x = 3
+		x = 5
 		y = 1
 		relative_position_id = JAP_break_isolation
 		prerequisite = { focus = JAP_break_isolation }
-		
-		available = {
-		}
 
-		bypass = {
-		}
-
-		cost = 2.2
+		cost = 10
 
 		completion_reward = {
-			add_political_power = 15
+			add_political_power = 100
 		}
 
 		ai_will_do = {
@@ -151,19 +145,13 @@
 		y = 1
 		relative_position_id = JAP_internal_affairs
 		prerequisite = { focus = JAP_internal_affairs }
-		
-		available = {
-		}
-
-		bypass = {
-		}
 
 		cost = 10
 
 		completion_reward = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
-				amount = 1000
+				amount = 1500
 			}
 		}
 
@@ -179,12 +167,6 @@
 		y = 1
 		relative_position_id = JAP_procure_foreign_weapons
 		prerequisite = { focus = JAP_procure_foreign_weapons }
-		
-		available = {
-		}
-
-		bypass = {
-		}
 
 		cost = 10
 
@@ -209,11 +191,6 @@
 		y = 1
 		relative_position_id = JAP_internal_affairs
 		prerequisite = { focus = JAP_internal_affairs }
-		
-		available = {
-		}
-		bypass = {
-		}
 
 		cost = 10
 
@@ -222,38 +199,11 @@
 				small_tokugawa_territories
 			}
 		}
+
 		ai_will_do = {
 			factor = 0
 		}
 	}
-
-    focus = {
-		id = JAP_empire_not_shogunate
-		icon = GFX_japan_empire
-		x = 2
-		y = 1
-        relative_position_id = JAP_internal_affairs
-		prerequisite = { focus = JAP_internal_affairs }
-		
-		available = {
-		}
-		bypass = {
-		}
-
-		cost = 7.2
-
-		completion_reward = {
-            KOR = { 
-                country_event = {
-					id = japan.5 
-				}
-            }
-	    }
-
-        ai_will_do = {
-            factor = 1
-        }
-    }
 
 	focus = {
 		id = JAP_increase_foreign_trade
@@ -262,16 +212,11 @@
 		y = 1
 		relative_position_id = JAP_expand_shogunate_domains
 		prerequisite = { focus = JAP_expand_shogunate_domains }
-		
-		available = {
-		}
-		bypass = {
-		}
 
 		cost = 10
 
 		completion_reward = {
-			add_political_power = 100
+			add_ideas = export_focus
 		}
 
 		ai_will_do = {
@@ -286,16 +231,16 @@
 	focus = {
 		id = JAP_external_affairs
 		icon = GFX_expanding_japan
-		x = -3
+		x = -5
 		y = 1
 		relative_position_id = JAP_break_isolation
 		prerequisite = { focus = JAP_break_isolation }
 		
 		available = {
+			has_war = no
 		}
 
-		bypass = {
-		}
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		cost = 2.2
 
@@ -304,21 +249,142 @@
 		}
 
 		ai_will_do = {
+			factor = -20000
+		}
+	}
+
+	focus = {
+		id = JAP_pacific_focus
+		icon = GFX_expanding_japan
+		x = 3
+		y = 1
+		relative_position_id = JAP_external_affairs
+		prerequisite = { focus = JAP_external_affairs }
+
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
 			factor = 0
 		}
 	}
+
+	focus = {
+		id = JAP_take_pacific_islands
+		icon = GFX_focus_generic_annex_country_2
+		x = 0
+		y = 1
+		relative_position_id = JAP_pacific_focus
+		prerequisite = { focus = JAP_pacific_focus }
+		
+		available = {
+			645 = {
+				is_owned_by = UNC
+			}
+			646 = {
+				is_owned_by = UNC
+			}
+			648 = {
+				is_owned_by = UNC
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cost = 10
+
+		completion_reward = {
+			set_state_owner = 645
+			set_state_owner = 646
+			set_state_owner = 648
+			add_political_power = -100
+		}
+	}
+	
+	focus = {
+		id = JAP_expand_influence_in_ezo
+		icon = GFX_goal_expand_influence_in_ezo
+		x = 2
+		y = 1
+		relative_position_id = JAP_pacific_focus
+		prerequisite = { focus = JAP_pacific_focus }
+		
+		available = {
+		}
+		bypass = {
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		cost = 8
+
+		completion_reward = {
+			puppet = AIN
+		}
+	}
+
+	focus = {
+		id = JAP_karafuto_and_chisima
+		icon = GFX_focus_generic_annex_country
+		x = 0
+		y = 1
+		relative_position_id = JAP_expand_influence_in_ezo
+
+		cost = 10
+		prerequisite = { focus = JAP_expand_influence_in_ezo }
+
+		completion_reward = {
+			add_state_claim = 537
+			add_state_claim = 655 
+			add_state_claim = 555
+			537 = { set_state_name = "Toyohara" }
+			655 = { set_state_name = "Kita-Karafuto" }
+			555 = { set_state_name = "Chisima Islands" }
+		}
+	}
+
+    focus = {
+		id = JAP_revisit_toyotomis_plans
+		icon = GFX_generic_planning_military
+		x = -3
+		y = 1
+        relative_position_id = JAP_external_affairs
+		prerequisite = { focus = JAP_external_affairs }
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		cost = 10
+
+		completion_reward = {
+            add_ideas = preparing_for_war
+	    }
+		
+        ai_will_do = {
+            factor = 1
+        }
+    }
 
 	focus = {
 		id = JAP_extract_ryukuan_tribute
 		icon = GFX_goal_extract_ryukyan_tribute
 		x = -2
 		y = 1
-		relative_position_id = JAP_external_affairs
-		prerequisite = { focus = JAP_external_affairs }
+		relative_position_id = JAP_revisit_toyotomis_plans
+		prerequisite = { focus = JAP_revisit_toyotomis_plans }
 		
 		available = {
+			country_exists = RYU
 		}
+		
 		bypass = {
+			NOT = {
+				country_exists = RYU
+			}
 		}
 
 		cost = 7.2
@@ -398,74 +464,30 @@
 		}
 	}
 
-	focus = {
-		id = JAP_expand_influence_in_ezo
-		icon = GFX_goal_expand_influence_in_ezo
-		x = 0
-		y = 1
-		relative_position_id = JAP_external_affairs
-		prerequisite = { focus = JAP_external_affairs }
-		
-		available = {
-		}
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		cost = 8
-
-		completion_reward = {
-			puppet = AIN
-		}
-	}
-
-	focus = {
-		id = JAP_karafuto_and_chisima
-		icon = GFX_focus_generic_annex_country
-		x = 0
-		y = 1
-		relative_position_id = JAP_expand_influence_in_ezo
-		
-		available = {
-		}
-		bypass = {
-		}
-
-		cost = 10
-		prerequisite = { focus = JAP_expand_influence_in_ezo }
-
-		completion_reward = {
-			add_state_claim = 537
-			add_state_claim = 655 
-			add_state_claim = 555
-			537 = { set_state_name = "Toyohara" }
-			655 = { set_state_name = "Kita-Karafuto" }
-			555 = { set_state_name = "Chisima Islands" }
-		}
-	}
-
     focus = {
-		id = JAP_revisit_toyotomis_plans
-		icon = GFX_generic_planning_military
-		x = -4
+		id = JAP_empire_not_shogunate
+		icon = GFX_japan_empire
+		x = 0
 		y = 1
-        relative_position_id = JAP_external_affairs
-		prerequisite = { focus = JAP_external_affairs }
-		
-		available = {
-		}
+        relative_position_id = JAP_revisit_toyotomis_plans
+		prerequisite = { focus = JAP_revisit_toyotomis_plans }
+
 		bypass = {
+			NOT = {
+				country_exists = KOR
+			}
 		}
 
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-
-		cost = 10
+		cost = 7.2
 
 		completion_reward = {
-            add_ideas = preparing_for_war
+            KOR = { 
+                country_event = {
+					id = japan.5 
+				}
+            }
 	    }
-		
+
         ai_will_do = {
             factor = 1
         }
@@ -476,8 +498,8 @@
 		icon = GFX_attack_korea
 		x = 0
 		y = 1
-        relative_position_id = JAP_revisit_toyotomis_plans
-		prerequisite = { focus = JAP_revisit_toyotomis_plans }
+        relative_position_id = JAP_empire_not_shogunate
+		prerequisite = { focus = JAP_empire_not_shogunate }
 		
 		available = {
 			country_exists = KOR
@@ -488,7 +510,7 @@
 
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
-		cost = 5.6
+		cost = 5.8
 
 		completion_reward = {
             create_wargoal = {
@@ -519,9 +541,6 @@
 			}
 		}
 
-		bypass = {
-		}
-
 		cost = 8
 
 		completion_reward = {
@@ -531,7 +550,7 @@
 	    }
 
         ai_will_do = {
-            factor = 1
+            factor = 0
         }
     }
 	
@@ -540,8 +559,8 @@
 		icon = GFX_goal_expedition_to_formosa
 		x = 2
 		y = 1
-		prerequisite = { focus = JAP_external_affairs }
-		relative_position_id = JAP_external_affairs
+		prerequisite = { focus = JAP_revisit_toyotomis_plans }
+		relative_position_id = JAP_revisit_toyotomis_plans
 		
 		available = {
 		}
@@ -584,33 +603,6 @@
 				days = 180
 			}
 			add_state_core = 524
-		}
-	}
-
-	focus = {
-		id = JAP_take_pacific_islands
-		icon = GFX_focus_generic_annex_country_2
-		x = 0
-		y = 1
-		relative_position_id = JAP_integrate_formosa
-		
-		available = {
-		}
-		bypass = {
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		cost = 10
-		prerequisite = { focus = JAP_integrate_formosa }
-
-		completion_reward = {
-			set_state_owner = 645
-			set_state_owner = 646
-			set_state_owner = 648
-			add_state_core = 645
-			add_state_core = 646
-			add_state_core = 648
 		}
 	}
 
@@ -873,7 +865,7 @@
 
 	focus = {
 		id = JAP_improve_rice_storages
-		icon = GFX_focus_generic_industry_2
+		icon = GFX_rice_icon
 		x = 0
 		y = 1
 		relative_position_id = JAP_repair_relations_with_the_emperor
@@ -1295,16 +1287,14 @@
 		x = -2
 		y = 1
 		relative_position_id = JAP_daimyo_meeting
+		prerequisite = { focus = JAP_daimyo_meeting }
 		mutually_exclusive = { focus = JAP_new_tokugawa }
 		
 		available = {	
 			has_country_flag = JAP_imperial_restoration_flag
 		}
-		bypass = {
-		}
 
 		cost = 10
-		prerequisite = { focus = JAP_daimyo_meeting }
 
 		completion_reward = {
 			set_politics = {
@@ -1371,7 +1361,11 @@
 		x = 0
 		y = 1
 		relative_position_id = JAP_imperial_restoration
-		prerequisite = { focus = JAP_imperial_restoration}
+		prerequisite = { focus = JAP_imperial_restoration }
+
+		allow_branch = {
+			has_completed_focus = JAP_imperial_restoration 
+		}
 		
 		available = {
 			has_war = no

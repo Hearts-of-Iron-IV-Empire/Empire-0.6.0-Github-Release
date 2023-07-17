@@ -2,6 +2,12 @@ spriteTypes = {
 
 	# Shared assets/goals #
 	
+	
+	SpriteType = { 
+		name = "GFX_Carlist_Crown" # DeSoble
+		texturefile = "gfx/interface/goals/Carlist_Crown.dds"
+	}
+
 	SpriteType = { 
 		name = "GFX_defend_netherlands" # AOM
 		texturefile = "gfx/interface/goals/defend_netherlands.dds"
@@ -48,8 +54,8 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
-		name = "GFX_major_crackdown" # Mapno
-		texturefile = "gfx/interface/goals/major_crackdown.dds"
+		name = "GFX_goal_generic_oppression" # Mapno
+		texturefile = "gfx/interface/goals/goal_generic_oppression.dds"
 	}
 
 	SpriteType = { 
@@ -135,15 +141,151 @@ spriteTypes = {
 		name = "GFX_generic_iron"
 		texturefile = "gfx/interface/goals/generic_iron.dds"
 	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	SpriteType = { 
+		name = "GFX_generic_iron"
+		texturefile = "gfx/interface/goals/generic_iron.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_goal_holy_pope"
+		texturefile = "gfx/interface/goals/goal_holy_pope.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_christianize_the_balkans"
+		texturefile = "gfx/interface/goals/goal_christianize_the_balkans.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_discuss_switzerland"
+		texturefile = "gfx/interface/goals/goal_discuss_switzerland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_take_over_switzerland"
+		texturefile = "gfx/interface/goals/goal_take_over_switzerland.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_recover_portuguese_brazil"
+		texturefile = "gfx/interface/goals/recover_portuguese_brazil.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_seize_finland"
+		texturefile = "gfx/interface/goals/goal_seize_finland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_betray_austria_hungary"
+		texturefile = "gfx/interface/goals/betray_austria_hungary.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_seize_the_crown"
+		texturefile = "gfx/interface/goals/goal_seize_the_crown.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_kingdom_of_portugal"
+		texturefile = "gfx/interface/goals/goal_kingdom_of_portugal.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_take_over_persia"
+		texturefile = "gfx/interface/goals/goal_take_over_persia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_betray_hungary"
+		texturefile = "gfx/interface/goals/betray_hungary.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_generic_hire_people"
+		texturefile = "gfx/interface/goals/goal_generic_hire_people.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_fate_of_iberia"
+		texturefile = "gfx/interface/goals/goal_fate_of_iberia.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_control_the_economy2"
+		texturefile = "gfx/interface/goals/goal_control_the_economy2.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_control_the_economy"
+		texturefile = "gfx/interface/goals/goal_control_the_economy.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_generic_hungary_coat_of_arms"
+		texturefile = "gfx/interface/goals/goal_generic_hungary_coat_of_arms.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_generic_portugese_coat_of_arms"
+		texturefile = "gfx/interface/goals/goal_generic_portugese_coat_of_arms.dds"
+	}
 
 	SpriteType = { 
 		name = "GFX_goal_generic_construct_palace"
 		texturefile = "gfx/interface/goals/goal_generic_construct_palace.dds"
-	}
-	
-	SpriteType = { 
-		name = "GFX_goal_scales_with_gold"
-		texturefile = "gfx/interface/goals/goal_scales_with_gold.dds"
 	}
 
 	SpriteType = { 
@@ -363,72 +505,389 @@ spriteTypes = {
 
 	# Emperor Hirohito Goals #
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
 	}
 	SpriteType = {
-		name = "GFX_develop_brazil"
-		texturefile = "gfx/interface/goals/develop_brazil.dds"
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_caduceus_icon"
+		texturefile = "gfx/interface/goals/caduceus_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_rice_icon"
+		texturefile = "gfx/interface/goals/rice_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_attack_the_swedes"
+		texturefile = "gfx/interface/goals/attack_the_swedes.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_russian_politics"
+		texturefile = "gfx/interface/goals/generic_russian_politics.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_crown_icon"
+		texturefile = "gfx/interface/goals/generic_crown_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_olonets_to_sweden"
+		texturefile = "gfx/interface/goals/goal_olonets_to_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_betray_russians"
+		texturefile = "gfx/interface/goals/betray_russians.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_zaparozhia"
+		texturefile = "gfx/interface/goals/agree_zaparozhia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_soldiers_marching_prussian"
+		texturefile = "gfx/interface/goals/soldiers_marching_prussian.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_papal_states"
+		texturefile = "gfx/interface/goals/agree_papal_states.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_expand_new_spain"
+		texturefile = "gfx/interface/goals/goal_expand_new_spain.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_silver_icon"
+		texturefile = "gfx/interface/goals/silver_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_break_france"
+		texturefile = "gfx/interface/goals/goal_break_france.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_french_economic_support"
+		texturefile = "gfx/interface/goals/french_economic_support.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_event_announcer_icon"
+		texturefile = "gfx/interface/goals/goal_event_announcer_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_spanish_flag2"
+		texturefile = "gfx/interface/goals/spanish_flag2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_invade_sicily"
+		texturefile = "gfx/interface/goals/goal_invade_sicily.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_take_sardinia"
+		texturefile = "gfx/interface/goals/goal_take_sardinia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_soldier_spanish"
+		texturefile = "gfx/interface/goals/soldier_spanish.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_soldiers_marching_spanish"
+		texturefile = "gfx/interface/goals/soldiers_marching_spanish.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_kill_france"
+		texturefile = "gfx/interface/goals/kill_france.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_bag_of_sugar"
+		texturefile = "gfx/interface/goals/goal_bag_of_sugar.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_polish_saxony"
+		texturefile = "gfx/interface/goals/polish_saxony.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_renovate_dresden"
+		texturefile = "gfx/interface/goals/goal_renovate_dresden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_polish_politics"
+		texturefile = "gfx/interface/goals/goal_polish_politics.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_polish_economy"
+		texturefile = "gfx/interface/goals/polish_economy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_soldier_polish"
+		texturefile = "gfx/interface/goals/soldier_polish.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_visegrad_empire"
+		texturefile = "gfx/interface/goals/visegrad_empire.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_generic_take_money"
+		texturefile = "gfx/interface/goals/goal_generic_take_money.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_carlos_II_icon"
+		texturefile = "gfx/interface/goals/carlos_II_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_lead_the_habsburg_sphere"
+		texturefile = "gfx/interface/goals/goal_lead_the_habsburg_sphere.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_formalize_bourbon_pact"
+		texturefile = "gfx/interface/goals/goal_formalize_bourbon_pact.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_defend_spain"
+		texturefile = "gfx/interface/goals/goal_defend_spain.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_spanish_crown"
+		texturefile = "gfx/interface/goals/spanish_crown.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_new_spain"
+		texturefile = "gfx/interface/goals/new_spain.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_integrate_illegal_trade_circuits"
+		texturefile = "gfx/interface/goals/goal_integrate_illegal_trade_circuits.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_create_new_consulados"
+		texturefile = "gfx/interface/goals/goal_create_new_consulados.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_switzerland"
+		texturefile = "gfx/interface/goals/agree_switzerland.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_the_far_east"
+		texturefile = "gfx/interface/goals/goal_the_far_east.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_protect_the_treasure_fleets"
+		texturefile = "gfx/interface/goals/goal_protect_the_treasure_fleets.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_improve_colonisation"
+		texturefile = "gfx/interface/goals/goal_improve_colonisation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_sign_papers_spain"
+		texturefile = "gfx/interface/goals/goal_generic_sign_papers_spain.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_spanish_court_flag"
+		texturefile = "gfx/interface/goals/spanish_court_flag.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_flag_burning_turks"
+		texturefile = "gfx/interface/goals/flag_burning_turks.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_spanish_golden_age"
+		texturefile = "gfx/interface/goals/goal_spanish_golden_age.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_spr_destabilize_the_new_state"
+		texturefile = "gfx/interface/goals/goal_spr_destabilize_the_new_state.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_spr_reintegrate_disobedient_territories"
+		texturefile = "gfx/interface/goals/spr_reintegrate_disobedient_territories.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_aragon_flag_1"
+		texturefile = "gfx/interface/goals/aragon_flag_1.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_aragon"
+		texturefile = "gfx/interface/goals/agree_aragon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_anglo_dutch_union"
+		texturefile = "gfx/interface/goals/goal_anglo_dutch_union.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_scotland_forever"
+		texturefile = "gfx/interface/goals/scotland_forever.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_scotland"
+		texturefile = "gfx/interface/goals/agree_scotland.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_generic_england_court"
+		texturefile = "gfx/interface/goals/goal_generic_england_court.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_persia_crown2"
+		texturefile = "gfx/interface/goals/persia_crown2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_generic_spanish_crown"
+		texturefile = "gfx/interface/goals/generic_spanish_crown.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_spanish_economy"
+		texturefile = "gfx/interface/goals/generic_spanish_economy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_generic_spanish_flag"
+		texturefile = "gfx/interface/goals/generic_spanish_flag.dds"
 	}
 	
 	SpriteType = {
@@ -1676,12 +2135,12 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/shivaji_focus.dds"
 	}
 
-	#### Armin Goals ####
-
 	SpriteType = { 
 		name = "GFX_focus_articles_USA"
 		texturefile = "gfx/interface/goals/focus_articles_USA.tga"
 	}
+
+	#### Armin Goals ####
 
 	SpriteType = { 
 		name = "GFX_focus_qizilbas_soldier"
@@ -1758,7 +2217,10 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/focus_persian_empire.dds"
 	}
 
+	###########################
 	#### Base game focuses ####
+	###########################
+	
 	SpriteType = { 
 		name = "GFX_goal_generic_occypy_states_ongoing_war"
 		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
@@ -1782,6 +2244,68 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_goal_generic_occypy_states_ongoing_war"
 		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_goal_generic_occupy_states_coastal"
+		texturefile = "gfx/interface/goals/goal_generic_occupy_states_coastal.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_POL_belarus_army"
+		texturefile = "gfx/interface/goals/focus_POL_belarus_army.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_LIT_reclaim_courland"
+		texturefile = "gfx/interface/goals/focus_LIT_reclaim_courland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_skull_swords"
+		texturefile = "gfx/interface/goals/focus_ITA_moschettieri_del_duce.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ITA_devaluate_the_lire"
+		texturefile = "gfx/interface/goals/focus_ITA_devaluate_the_lire.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_on_arabia"
+		texturefile = "gfx/interface/goals/focus_ETH_an_arabic_base.dds"
+	}
+	
+	SpriteType = { 
+		name = "GFX_focus_SWI_new_eidgenossenschaft"
+		texturefile = "gfx/interface/goals/focus_SWI_new_eidgenossenschaft.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_SWI_neutrality_on_the_move"
+		texturefile = "gfx/interface/goals/focus_SWI_neutrality_on_the_move.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_SWI_federal_police"
+		texturefile = "gfx/interface/goals/focus_SWI_federal_police.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_SWI_aktion_nationaler_widerstand"
+		texturefile = "gfx/interface/goals/focus_SWI_aktion_nationaler_widerstand.dds"
 	}
 
 	SpriteType = { 
@@ -1823,13 +2347,6 @@ spriteTypes = {
 		name = "GFX_focus_ITA_grande_rivolta_rurale"
 		texturefile = "gfx/interface/goals/focus_ITA_grande_rivolta_rurale.dds"
 	}
-
-	SpriteType = { 
-		name = "GFX_focus_TUR_the_sun_language_theory"
-		texturefile = "gfx/interface/goals/focus_TUR_the_sun_language_theory.dds"
-	}
-
-	### SOVIET ###
 	
 	SpriteType = { 
 		name = "GFX_focus_generic_aircraft_production"
@@ -2170,12 +2687,6 @@ spriteTypes = {
 		name = "GFX_focus_SOV_approach_semyonov"
 		texturefile = "gfx/interface/goals/focus_SOV_approach_semyonov.dds"
 	}
-
-	SpriteType = { 
-		name = "GFX_focus_SOV_reinforce_western_naval_bases"
-		texturefile = "gfx/interface/goals/focus_SOV_reinforce_western_naval_bases.dds"
-	}
-
 
 	SpriteType = { 
 		name = "GFX_focus_SOV_zemsky_sobor"
@@ -2591,71 +3102,72 @@ spriteTypes = {
 		name = "GFX_focus_TUR_loosen_the_laws_on_secularism"
 		texturefile = "gfx/interface/goals/focus_TUR_loosen_the_laws_on_secularism.dds"
 	}
+
 	SpriteType = {
-	name = "GFX_goal_continuous_air_production"
-	texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
+		name = "GFX_goal_continuous_air_production"
+		texturefile = "gfx/interface/goals/goal_continuous_air_production.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_non_factory_construct"
-	texturefile = "gfx/interface/goals/goal_continuous_non_factory_construct.dds"			
+		name = "GFX_goal_continuous_non_factory_construct"
+		texturefile = "gfx/interface/goals/goal_continuous_non_factory_construct.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_reduce_training_time"
-	texturefile = "gfx/interface/goals/goal_continuous_reduce_training_time.dds"			
+		name = "GFX_goal_continuous_reduce_training_time"
+		texturefile = "gfx/interface/goals/goal_continuous_reduce_training_time.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_boost_freedom"
-	texturefile = "gfx/interface/goals/goal_continuous_boost_freedom.dds"			
+		name = "GFX_goal_continuous_boost_freedom"
+		texturefile = "gfx/interface/goals/goal_continuous_boost_freedom.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_suppression"
-	texturefile = "gfx/interface/goals/goal_continuous_suppression.dds"			
+		name = "GFX_goal_continuous_suppression"
+		texturefile = "gfx/interface/goals/goal_continuous_suppression.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_restrict_freedom"
-	texturefile = "gfx/interface/goals/goal_continuous_restrict_freedom.dds"			
+		name = "GFX_goal_continuous_restrict_freedom"
+		texturefile = "gfx/interface/goals/goal_continuous_restrict_freedom.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_def_against_influence"
-	texturefile = "gfx/interface/goals/goal_continuous_def_against_influence.dds"			
+		name = "GFX_goal_continuous_def_against_influence"
+		texturefile = "gfx/interface/goals/goal_continuous_def_against_influence.dds"			
 	}		
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_research"
-	texturefile = "gfx/interface/goals/goal_continuous_research.dds"			
+		name = "GFX_goal_continuous_research"
+		texturefile = "gfx/interface/goals/goal_continuous_research.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_increase_nu"
-	texturefile = "gfx/interface/goals/goal_continuous_increase_nu.dds"			
+		name = "GFX_goal_continuous_increase_nu"
+		texturefile = "gfx/interface/goals/goal_continuous_increase_nu.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_repairments"
-	texturefile = "gfx/interface/goals/goal_continuous_repairments.dds"			
+		name = "GFX_goal_continuous_repairments"
+		texturefile = "gfx/interface/goals/goal_continuous_repairments.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_naval_production"
-	texturefile = "gfx/interface/goals/goal_continuous_naval_production.dds"			
+		name = "GFX_goal_continuous_naval_production"
+		texturefile = "gfx/interface/goals/goal_continuous_naval_production.dds"			
 	}
 	
 	SpriteType = {
-	name = "GFX_goal_continuous_armor_production"
-	texturefile = "gfx/interface/goals/goal_continuous_armor_production.dds"			
+		name = "GFX_goal_continuous_armor_production"
+		texturefile = "gfx/interface/goals/goal_continuous_armor_production.dds"			
 	}	
 	
 	#### Generic goal icons
 
 	SpriteType = {
-	name = "GFX_focus_generic_steel"
-	texturefile = "gfx/interface/goals/focus_generic_steel.dds"			
+		name = "GFX_focus_generic_steel"
+		texturefile = "gfx/interface/goals/focus_generic_steel.dds"			
 	}
 	
 	SpriteType = {
@@ -2818,37 +3330,6 @@ spriteTypes = {
 	name = "GFX_goal_generic_production"
 	texturefile = "gfx/interface/goals/goal_generic_production.dds"
 			
-	}		
-	
-	SpriteType = {
-		name = "GFX_goal_shine_test"
-		texturefile = "gfx/interface/goals/goal_generic_production.dds"
-		effectFile = "gfx/FX/buttonstate_onlydisable.lua"
-		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_generic_production.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = yes			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 1.0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		animation = {
-			animationmaskfile = "gfx/interface/goals/goal_generic_production.dds"
-			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
-			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
-			animationlooping = yes			# yes or no ;)
-			animationtime = 0.75				# in seconds
-			animationdelay = 1.0			# in seconds
-			animationblendmode = "add"       #add, multiply, overlay
-			animationtype = "scrolling"      #scrolling, rotating, pulsing
-			animationrotationoffset = { x = 0.0 y = 0.0 }
-			animationtexturescale = { x = 1.0 y = 1.0 } 
-		}
-		legacy_lazy_load = no
 	}
 
 	SpriteType = {
@@ -5022,12 +5503,8 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/goal_attack_kazakh.tga"
 	}
 	SpriteType = { 
-		name = "GFX_focus_depose_august"
-		texturefile = "gfx/interface/goals/focus_depose_august.tga"
-	}
-	SpriteType = { 
-		name = "GFX_focus_depose_august"
-		texturefile = "gfx/interface/goals/focus_depose_august.tga"
+		name = "GFX_goal_depose_august"
+		texturefile = "gfx/interface/goals/goal_depose_august.dds"
 	}
 	SpriteType = { 
 		name = "GFX_goal_greenland"

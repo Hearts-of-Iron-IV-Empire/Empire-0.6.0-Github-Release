@@ -47,6 +47,14 @@ RUS_muscovy = {
 	color = rgb { 188 139 46}
 	color_ui = rgb { 188 139 46 }
 }
+eastern_cossack = {
+color = rgb {200 150 50}
+color_ui = rgb {200 150 50}
+}
+ZAP_cossack = {
+color = rgb {200 150 50}
+color_ui = rgb {200 150 50}
+}
 TSC_SPR_subject = {
 	color = rgb { 229 182 4 }
 	color_ui = rgb { 229 182 4 }
@@ -79,4 +87,8 @@ POL = {
 PRS_TEU = {
     color = rgb { 63 63 63 }
 	color_ui = rgb { 75 75 75 }
+}
+PER_shiites = {
+	color = rgb { 188 184 124 }
+	color_ui = rgb { 188 184 124 }
 }

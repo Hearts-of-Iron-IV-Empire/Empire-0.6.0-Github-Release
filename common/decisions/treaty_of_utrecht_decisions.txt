@@ -294,14 +294,14 @@ treaty_of_versailles = {
 			}
 			has_war_with = AUS
 			SPR = { is_in_faction_with = FRA }
-		}		
+		}
 		complete_effect = {
 			if = { 
 				limit = {
 					AUS = { is_faction_leader = yes }
 				}
 				AUS = { country_event = succession.20 }
-			}	
+			}
 			if = { 
 				limit = {
 					ENG = { is_faction_leader = yes }

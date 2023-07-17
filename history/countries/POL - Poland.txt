@@ -211,16 +211,16 @@ if = {
 	}
 }
 
-set_convoys = 20
+set_convoys = 30
 
-diplomatic_relation = {
-	country = LAT
-	relation = puppet
+set_autonomy = {
+	target = LAT
+	autonomous_state = autonomy_protectorate
 }
 
-diplomatic_relation = {
-	country = SAX
-	relation = puppet
+set_autonomy = {
+	target = SAX
+	autonomous_state = autonomy_personal_union
 }
 
 POL = {

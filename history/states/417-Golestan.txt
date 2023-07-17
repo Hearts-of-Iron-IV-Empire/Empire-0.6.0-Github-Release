@@ -1,10 +1,13 @@
-
 state={
 	id=417
 	name="STATE_417" # Hamadan
 	manpower = 296396
 	state_category = rural
 
+	resources = {
+		aluminium = 5
+	}
+	
 	history={
 		owner = PER
 		buildings = {

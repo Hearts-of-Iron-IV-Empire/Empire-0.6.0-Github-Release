@@ -20,8 +20,8 @@ state={
 			1889 4
 		}
 		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
+			infrastructure = 2
+			industrial_complex = 2
 		}
 		add_core_of = PER
 	}

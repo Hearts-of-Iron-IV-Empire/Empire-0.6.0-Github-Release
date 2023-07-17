@@ -3,8 +3,14 @@ spriteTypes = {
 		name = "GFX_mod_logo"
 		texturefile = "gfx/interface/mod_logo.dds"
 	}
+	
 	spriteType = {
-    name = "GFX_select_date_1699"
-    texturefile = "gfx/interface/select_date_1699.dds"
+		name = "GFX_select_date_1699"
+		texturefile = "gfx/interface/select_date_1699.dds"
+	}
+
+	spriteType = {
+		name = "GFX_modding_coop_logo"
+		texturefile = "gfx/interface/modding_coop_logo.dds"
 	}
 }

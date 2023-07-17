@@ -1,6 +1,6 @@
 ﻿l_english:
 Get.life_experience:0 "[?life_experience|0]"
-life_experience_tooltip:0 "§YLife Experience§!\n\nCurrent amount: §Y[?life_experience|0.2]§!\n\nWeekly Gain: §Y0.88§!\n\nExperience is capped at §Y500§!.\n--------------\n§YLife Experience§! is used to improve ruler skills which you can gain more experience from §YCapitulating a country§!, §YDecisions§!, §YDeclaring war§!, §YNational Focuses§!, §YCreating/Joining/Leaving Faction§! and §YSending/Receiving Volunteers§!."
+life_experience_tooltip:0 "§YLife Experience§!\n\nCurrent amount: §Y[?life_experience|0.2]§!\n\nWeekly Gain: §Y1.03§!\n\nExperience is capped at §Y500§!.\n--------------\n§YLife Experience§! is used to improve ruler skills which you can gain more experience from §YCapitulating a country§!, §YDecisions§!, §YDeclaring war§!, §YNational Focuses§!, §YCreating/Joining/Leaving Faction§! and §YSending/Receiving Volunteers§!."
 ruler_skills_dynamic_modifier:0 "Ruler Stats"
 diplomacy_skill_level_text_for_popup:0 "[?diplomacy_skill_display_on_stats]"
 militate_skill_level_text_for_popup:0 "[?militate_skill_display_on_stats]"

@@ -138,19 +138,19 @@ scripted_gui = {
 						modifier = {
 							factor = 2
 							ROOT = {
-							has_tech = more_colonies
+								has_tech = more_colonies
 							}
 						}
 						modifier = {
 							factor = 2
 							ROOT = {
-							has_tech = more_colonies2
+								has_tech = more_colonies2
 							}
 						}
 						modifier = {
 							factor = 2000
 							ROOT = {
-							has_tech = more_colonies3
+								has_tech = more_colonies3
 							}
 						}
 					}
@@ -169,8 +169,8 @@ scripted_gui = {
 				#			
 				#		}}
 						ROOT = {
-						set_country_flag = failed_flag
-						clr_country_flag = suceeded_flag
+							set_country_flag = failed_flag
+							clr_country_flag = suceeded_flag
 						}
 						modifier = {
 							factor = 2
@@ -254,7 +254,7 @@ scripted_gui = {
 		triggers = {
 			
 			colonise_state_click_enabled = {
-				ROOT = {has_political_power > 50}
+				ROOT = { has_political_power > 50 }
 				check_variable = { ROOT.manpower_k > 1 }
 				ROOT = {
 					num_of_civilian_factories_available_for_projects > 1	
@@ -264,23 +264,22 @@ scripted_gui = {
 						has_country_flag = colonising
 					}
 				}
-				
 			}
 			empty_research_slot_glow_1_visible = {
-			NOT = {
-				OR = {
-					ROOT = {
-						has_idea = currently_colonising
+				NOT = {
+					OR = {
+						ROOT = {
+							has_idea = currently_colonising
+						}
+						ROOT = { has_political_power < 50 }
+						check_variable = { ROOT.manpower < 1000 }
+						ROOT = {
+							num_of_civilian_factories_available_for_projects < 1	
+						}
 					}
-					ROOT = { has_political_power < 50 }
-					check_variable = { ROOT.manpower < 1000 }
-					ROOT = {
-						num_of_civilian_factories_available_for_projects < 1	
-					}
-				}
-			}		
+				}		
+			}
 		}
-	}
     }
 	#timer_text_1_visible = {
 	#			

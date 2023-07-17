@@ -1,5 +1,255 @@
 ideas = {
-	country = {	
+	country = {
+		SPR_council_of_the_indies = {
+			picture = council_of_the_indies
+
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = 0.05
+				political_power_cost = 0.10
+				max_command_power = -25
+			}
+		}
+		SPR_council_of_the_indies_2 = {
+			picture = council_of_the_indies
+
+			name = SPR_council_of_the_indies
+
+			modifier = {
+				stability_factor = -0.05
+				political_power_cost = 0.10
+				max_command_power = -10
+			}
+		}
+		SPR_council_of_the_indies_3 = {
+			picture = council_of_the_indies
+
+			name = SPR_council_of_the_indies
+
+			modifier = {
+				political_power_gain = 0.05
+				max_command_power = 10
+			}
+		}
+		disfunctional_economy = {
+			picture = disfunctional_economy
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.30
+				industrial_capacity_factory = -0.30
+				industrial_capacity_dockyard = -0.30
+			}
+		}
+		SPR_economic_recovery = {
+			picture = disfunctional_economy
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.25
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+			}
+		}
+		SPR_economic_recovery_2 = {
+			picture = disfunctional_economy
+
+			name = SPR_economic_recovery
+
+			modifier = {
+				consumer_goods_factor = 0.30
+				production_speed_buildings_factor = -0.20
+				industrial_capacity_factory = -0.20
+				industrial_capacity_dockyard = -0.20
+			}
+		}
+		SPR_economic_recovery_3 = {
+			picture = disfunctional_economy
+
+			name = SPR_economic_recovery
+
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_buildings_factor = -0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+			}
+		}
+		SPR_economic_recovery_4 = {
+			picture = disfunctional_economy
+
+			name = SPR_economic_recovery
+
+			modifier = {
+				consumer_goods_factor = 0.15
+				production_speed_buildings_factor = -0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+			}
+		}
+		SPR_economic_recovery_5 = {
+			picture = disfunctional_economy
+
+			name = SPR_economic_recovery
+
+			modifier = {
+				consumer_goods_factor = 0.10
+			}
+		}
+		SPR_bygone_military_glory = {
+		   name = SPR_bygone_military_glory
+
+		   picture = SPR_disbanded_army
+
+		    modifier = {
+			    experience_gain_army_factor = -0.25
+			    offence = -0.15
+				defence = -0.15
+				training_time_factor = 0.15
+				land_doctrine_cost_factor = 0.15
+			}
+	   	}
+		SPR_bygone_military_glory_2 = {
+			name = SPR_bygone_military_glory
+
+			picture = SPR_disbanded_army
+
+			modifier = {
+				experience_gain_army_factor = -0.15
+				offence = -0.10
+			 	defence = -0.10
+			 	training_time_factor = 0.1
+			  	land_doctrine_cost_factor = 0.1
+		  	}
+		}
+		corruption_in_the_colonial_administration = {
+			picture = generic_disjointed_gov
+
+			modifier = {
+				political_power_factor = -0.20
+				consumer_goods_factor = 0.15
+				local_resources_factor = -0.15
+			}
+		}
+		destroyed_contraband_trade = {
+			picture = generic_oppression
+
+			modifier = {
+				political_power_factor = 0.05
+				consumer_goods_factor = 0.10
+				local_resources_factor = -0.10
+			}
+		}
+		destroyed_contraband_trade_2 = {
+			picture = generic_oppression
+
+			name = destroyed_contraband_trade
+
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = 0.05
+			}
+		}
+		contraband_trade_embraced = {
+			picture = generic_spy_political
+
+			modifier = {
+				political_power_factor = -0.15
+				consumer_goods_factor = -0.05
+				local_resources_factor = -0.10
+			}
+		}
+		contraband_trade_embraced_2 = {
+			picture = generic_spy_political
+
+			name = contraband_trade_embraced
+
+			modifier = {
+				political_power_factor = -0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		thriving_colonial_trade = {
+			picture = generic_flexible_foreign_policy2
+
+			modifier = {
+				political_power_factor = 0.15
+				consumer_goods_factor = -0.10
+			}
+		}
+		bureaucratic_gridlock = {
+			picture = bureaucratic_gridlock
+
+			modifier = {
+				political_power_factor = -0.15
+				stability_factor = -0.05
+			}
+		}
+		SPR_royal_trading_companies = {
+			picture = generic_morale_bonus
+
+			modifier = {
+				consumer_goods_factor = -0.05
+			}
+		}
+		SPR_economic_societies = {
+			picture = generic_research_bonus
+
+			modifier = {
+				research_speed_factor = 0.03
+			}
+		}
+		SPR_economic_societies_2 = {
+			picture = generic_research_bonus
+
+			name = SPR_economic_societies
+
+			modifier = {
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.10
+			}
+		}
+		SPR_spanish_golden_age = {
+			picture = spanish_golden_age
+
+			modifier = {
+				political_power_factor = 0.15
+				neutrality_drift = 0.10
+				consumer_goods_factor = -0.1
+			}
+		}
+		cardinal_portocarrero = {
+			picture = cardinal_portocarrero
+
+			modifier = {
+				political_power_gain = 0.8
+			}
+		}
+		maria_anna = {
+			picture = maria_anna
+
+			modifier = {
+				political_power_gain = 0.5
+			}
+		}
+		SPR_fueros = {
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				political_power_factor = -0.1
+				stability_factor = 0.05
+			}
+		}
+		SPR_reformed_fueros = {
+			picture = generic_constitutional_guarantees
+
+			modifier = {
+				political_power_factor = 0.05
+				stability_factor = 0.10
+				command_power_gain_mult = 0.15
+				experience_gain_army_factor = 0.15
+			}
+		}
 		SPR_the_aragonese_revolt = {
 			picture = SPR_nationalist_remnants
 			modifier = {
@@ -18,12 +268,12 @@ ideas = {
 		SPR_emancipation_of_slaves = {
 			picture = SPR_masters_of_our_own_fate
 			modifier = {
-		       	conscription = 0.03
-				production_speed_buildings_factor = 0.15
+		       	conscription = 0.02
+				production_speed_buildings_factor = 0.10
 				consumer_goods_factor = -0.1
 		    }
 	  	}
-		  SPR_plus_ultra_idea = {
+		SPR_plus_ultra_idea = {
 			picture = generic_naval_manufacturer_1
 			modifier = {
 		       	industrial_capacity_dockyard = 0.15
@@ -49,18 +299,13 @@ ideas = {
 		       	experience_gain_army_unit_factor = 0.25
 		    }
 	  	}
-		SPR_heirs_of_burgundy_3 = {
+		SPR_heirs_of_burgundy_1 = {
 			name = SPR_heirs_of_burgundy
 			picture = generic_monarchist_uprising
 			modifier = {
 		       	stability_weekly = 0.001
 		       	war_support_weekly = 0.001
 		       	party_popularity_stability_factor = 0.25
-		       	political_power_factor = 0.1
-		       	offence = 0.10
-				defence = 0.10
-				army_org_factor = 0.10
-				recruitable_population = 0.05
 		    }
 	  	}
 		SPR_heirs_of_burgundy_2 = {
@@ -76,13 +321,18 @@ ideas = {
 				recruitable_population = 0.02
 		    }
 	  	}
-		SPR_heirs_of_burgundy_1 = {
+		SPR_heirs_of_burgundy_3 = {
 			name = SPR_heirs_of_burgundy
 			picture = generic_monarchist_uprising
 			modifier = {
 		       	stability_weekly = 0.001
 		       	war_support_weekly = 0.001
 		       	party_popularity_stability_factor = 0.25
+		       	political_power_factor = 0.1
+		       	offence = 0.10
+				defence = 0.10
+				army_org_factor = 0.10
+				recruitable_population = 0.05
 		    }
 	  	}
 		SPR_payment_for_the_low_countries_outgoing = {
@@ -97,26 +347,11 @@ ideas = {
 		       	industrial_factory_donations = 5
 		    }
 	  	}
-	  	SPR_bygone_military_glory_2 = {
-			name = SPR_bygone_military_glory
-			picture = SPR_disbanded_army
+		SPR_implementing_military_reforms = {
+			picture = military_reforms
 			modifier = {
-		       	experience_gain_army_factor = -0.15
-		       	offence = -0.15
-				defence = -0.15
-				training_time_factor = 0.1
-				land_doctrine_cost_factor = 0.1
-		    }
-	  	}
-		SPR_bygone_military_glory = {
-			name = SPR_bygone_military_glory
-			picture = SPR_disbanded_army
-			modifier = {
-		       	experience_gain_army_factor = -0.25
-		       	offence = -0.2
-				defence = -0.2
-				training_time_factor = 0.2
-				land_doctrine_cost_factor = 0.15
+		       	army_org_factor = -0.1
+		       	experience_gain_army_factor = -1
 		    }
 	  	}
 		SPR_recent_reform = {
@@ -124,14 +359,6 @@ ideas = {
 			modifier = {
 		       	army_org_factor = -0.1
 		       	army_org_regain = -0.2
-		    }
-	  	}
-		SPR_implementing_military_reforms = {
-			picture = military_reforms
-			modifier = {
-		       	civilian_factory_use = 5
-		       	army_org_factor = -0.1
-		       	experience_gain_army_factor = -1
 		    }
 	  	}
 		SPR_weaponized_french_tactics = {
@@ -156,7 +383,7 @@ ideas = {
 		SPR_spanish_zeal = {
 			picture = FRA_scw_intervention_nationalists_focus
 			modifier = {
-		       	army_attack_factor = 0.12
+		       	army_attack_factor = 0.10
 		    }
 	  	}
 		SPR_propaganda_campaign = {
@@ -204,7 +431,6 @@ ideas = {
 				defense_bonus_against = 0.10
 			}
 	  	}
-		
 		SPR_the_infiltration_of_france = {
 			picture = generic_spy_intel
 	       	targeted_modifier = {
@@ -233,34 +459,7 @@ ideas = {
 				}
 			}
 		}
-		SPR_reformed_fueros = {
-			picture = generic_constitutional_guarantees
 
-			modifier = {
-				political_power_factor = 0.05
-				stability_factor = 0.10
-				command_power_gain_mult = 0.15
-				experience_gain_army_factor = 0.15
-			}
-		}
-		SPR_fueros = {
-			picture = generic_constitutional_guarantees
-
-			modifier = {
-				political_power_factor = -0.1
-				stability_factor = 0.05
-			}
-		}
-		SPR_fortify_the_empire_2 = {
-			picture = generic_fortify_the_borders
-
-			name = SPR_fortify_the_empire
-
-			modifier = {
-				production_speed_bunker_factor = 0.20
-				production_speed_coastal_bunker_factor = 0.20
-			}
-		}
 		SPR_fortify_the_empire_1 = {
 			picture = generic_fortify_the_borders
 
@@ -271,109 +470,39 @@ ideas = {
 				production_speed_coastal_bunker_factor = 0.10
 			}
 		}
+
+		SPR_fortify_the_empire_2 = {
+			picture = generic_fortify_the_borders
+
+			name = SPR_fortify_the_empire
+
+			modifier = {
+				production_speed_bunker_factor = 0.20
+				production_speed_coastal_bunker_factor = 0.20
+			}
+		}
+
 		SPR_large_treasure = {
 			picture = SPR_seize_the_gold_reserves
 
 			modifier = {
-				consumer_goods_factor = -0.30
+				consumer_goods_factor = -0.35
 			}
 		}
+
 		SPR_medium_treasure = {
 			picture = SPR_seize_the_gold_reserves
 
 			modifier = {
-				consumer_goods_factor = -0.20
+				consumer_goods_factor = -0.25
 			}
 		}
+
 		SPR_small_treasure = {
 			picture = SPR_seize_the_gold_reserves
 
 			modifier = {
-				consumer_goods_factor = -0.10
-			}
-		}
-		SPR_colonial_maintenance = {
-			picture = chi_hyper_inflation5
-
-			name = SPR_colonial_maintenance
-
-			modifier = {
-				consumer_goods_factor = 0.20
-				political_power_cost = 0.15
-				max_command_power = -50
-			}
-		}
-		SPR_colonial_maintenance_2 = {
-			picture = chi_hyper_inflation5
-
-			name = SPR_colonial_maintenance
-
-			modifier = {
-				consumer_goods_factor = 0.20
-				political_power_cost = 0.10
-				max_command_power = -25
-			}
-		}
-		SPR_colonial_maintenance_2a = {
-			picture = chi_hyper_inflation5
-
-			name = SPR_colonial_maintenance
-
-			modifier = {
-				consumer_goods_factor = 0.15
-			}
-		}
-		SPR_colonial_maintenance_2b = {
-			picture = chi_hyper_inflation5
-
-			name = SPR_colonial_maintenance
-
-			modifier = {
-				consumer_goods_factor = 0.175
-				political_power_cost = 0.05
-				max_command_power = -12.5
-			}
-		}
-		MEX_casta_system = {
-			picture = saf_history_of_segregation
-
-			modifier = {
-				recruitable_population_factor = -0.60
-				stability_factor = 0.3
-
-			}
-		}
-		cardinal_portocarrero = {
-			picture = cardinal_portocarrero
-
-			modifier = {
-				political_power_gain = 0.8
-			}
-		}
-		maria_anna = {
-			picture = maria_anna
-
-			modifier = {
-				political_power_gain = 0.5
-			}
-		}
-		disfunctional_economy = {
-			picture = usa_great_depression_2
-
-			modifier = {
-				consumer_goods_factor = 0.15
-				production_speed_buildings_factor = -0.25
-				industrial_capacity_factory = -0.2
-			}
-		}
-
-		SPR_economic_recovery = {
-			picture = usa_great_depression
-
-			modifier = {
-				consumer_goods_factor = 0.20
-				production_speed_buildings_factor = -0.20
-				industrial_capacity_factory = -0.1
+				consumer_goods_factor = -0.15
 			}
 		}
 
@@ -385,51 +514,39 @@ ideas = {
 				production_factory_efficiency_gain_factor = 0.05
 			}
 		}
-	}
 
-	political_advisor = {
-		SPR_pontcarrero = {
-
-			picture = cardinal_portocarrero
-
-			cost = 50
-			
+		SPR_mass_armament_production = {
 			allowed = {
-				original_tag = SPR
+				always = no
 			}
-			available = {
-				has_completed_focus = SPR_pontcarrero_place_in_adm
-				original_tag = SPR
-			}
-			
-			traits = { genial_anti_revolutionary }
 
-		}
+			removal_cost = -1
+			picture = generic_production_bonus
 
-		SPR_captain_of_industry = {
-
-			picture = trader
-				
-			allowed = {
-				original_tag = SPR
-			}
-			
-			traits = { captain_of_industry }
-		}
-
-		SPR_backroom_backstabber = {
-
-			picture = spymaster
-
-			allowed = {
-				original_tag = SPR
-			}
-			
-			traits = { backroom_backstabber }
-			ai_will_do = {
-				factor = 0
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
 			}
 		}
 
+		# Subject ideas
+		SPR_casta_system = {
+			picture = saf_history_of_segregation
+
+			modifier = {
+				recruitable_population_factor = -0.60
+				stability_factor = 0.15
+			}
+		}
+		SPR_efficient_management = {
+			picture = generic_flexible_foreign_policy2
+
+			modifier = {
+				consumer_goods_factor = -0.10
+				production_speed_buildings_factor = 0.10
+			}
+		}
 	}
 }

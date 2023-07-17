@@ -126,13 +126,23 @@ major_minor_divisions_hard_limit_exception = {
     }
 }
 
-DIPLOMACY_RUS_DONT_CALL_IN_ZAP_TO_GTW_TRIGGER = {
-	if = { 
+DIPLOMACY_CALL_ALLY_ENABLE_TRIGGER = {
+	if = {
 		limit = {
 			ROOT = {
 				tag = SOV
-				has_country_flag = dont_call_in_zap_to_gtw
 			}
+			FROM = {
+				OR = {
+					tag = ZAP
+					tag = KHL
+				}
+			}
+			has_country_flag = dont_call_in_zap_to_gtw
+		}
+		custom_trigger_tooltip = {
+			tooltip = SOV_cannot_call_in_allies
+			always = no
 		}
 	}
 }

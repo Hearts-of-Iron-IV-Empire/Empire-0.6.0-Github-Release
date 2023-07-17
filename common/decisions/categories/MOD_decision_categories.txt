@@ -100,7 +100,6 @@ treaty_of_utrecht = {
 }
 
 SPR_colonial_management = {
-
 	icon = generic_economy
 
 	allowed = {
@@ -110,7 +109,10 @@ SPR_colonial_management = {
 
 RUS_great_northern_war = {
 	allowed = {
-		original_tag = SOV
+		OR = {
+			original_tag = SOV
+			tag = SWE
+		}	
 	}
 }
 
@@ -281,7 +283,6 @@ defeat_the_mughals = {
 }
 
 MUG_expansion = {
-
 	icon = border_war
 
 	allowed = {
@@ -290,7 +291,6 @@ MUG_expansion = {
 }
 
 MUG_per_expansion = {
-
 	icon = border_war
 
 	allowed = {
@@ -299,7 +299,6 @@ MUG_per_expansion = {
 }
 
 MUG_tribal_raids = {
-
 	icon = eng_move_to_secure_the_dominions
 	
 	allowed = {
@@ -308,7 +307,6 @@ MUG_tribal_raids = {
 }
 
 MUG_suppress_marathas = {
-
 	icon = border_conflicts
 	
 	allowed = {
@@ -326,6 +324,7 @@ information_panel = {
 }
 
 MUG_dealing_with_the_zamindars = {
+	icon = faction_tur_unaligned
 
 	allowed = {
 		original_tag = RAJ
@@ -333,6 +332,8 @@ MUG_dealing_with_the_zamindars = {
 }
 
 MUG_foreign_influence = {
+	icon = power_struggle
+
 	allowed = {
 		OR = {	
 			original_tag = RAJ
@@ -345,13 +346,17 @@ MUG_foreign_influence = {
 }
 
 MUG_economic_decisions = {
+	icon = generic_economy
+
 	allowed = {
 		original_tag = RAJ
 	}
 }
 
 TUR_negotiating_peace = {
-	allowed = {
+	icon = generic_political_actions
+
+	allowed = { 
 		original_tag = TUR
 	}
 }
@@ -365,16 +370,59 @@ PER_qizilbas_corps_category = {
 			has_idea = PER_qizilbas_troops_3
 			has_idea = PER_qizilbas_troops_4
 		}
+		always = no 
 	}
 	visible_when_empty = yes
 	priority = 2
 }
 
-#Russian Decision Category
-
 RUS_treaty_of_constantinople_decision_category = {
 	icon = generic_civil_support
+
 	allowed = {
 		original_tag = SOV
 	}
+}
+
+RUS_treaty_of_birze = {
+	allowed = {
+		original_tag = SOV
+	}
+}
+
+RUS_increase_lithuanian_influence = {
+	allowed = {
+		original_tag = SOV
+	}
+}
+
+SPR_economic_reforms_category = {
+	icon = generic_political_actions
+
+	allowed = {
+		original_tag = SPR
+	}
+
+	priority = 1
+}
+
+SPR_overseas_colonies_category = {
+
+	icon = generic_political_actions2
+
+	scripted_gui = SPR_overseas_colonies_decision_ui
+
+	allowed = {
+		OR = {
+			has_idea = corruption_in_the_colonial_administration
+			has_idea = destroyed_contraband_trade
+			has_idea = destroyed_contraband_trade_2
+			has_idea = contraband_trade_embraced
+			has_idea = contraband_trade_embraced_2
+		}
+	}
+
+	visible_when_empty = yes
+
+	priority = 2
 }

@@ -1,0 +1,90 @@
+PER_fascist_alternate = {
+	name = "Persia goes at it alone"
+	desc = ""
+
+	allowed = {
+		original_tag = PER
+	}
+	enable = {
+		is_historical_focus_on = no
+	}
+	abort = {
+		is_historical_focus_on = yes
+	}
+
+	ai_national_focuses = {
+		PER_a_man_concerned_in_art
+		PER_yaxsidir
+		PER_expansion_of_handicraft_industries
+		PER_safavid_carpets
+		PER_combine_forces
+		PER_reopen_military_school
+		PER_shiite_holy_army
+		PER_ground_force_only
+
+		PER_delegate_tasks_to_the_ministers
+		PER_sign_the_protection_agreement_of_christians
+		PER_expel_the_sufis_from_the_court
+		PER_support_clergymen
+		PER_economic_development
+		PER_religious_pressure
+		PER_islam_education_and_science
+		PER_increase_centrality
+		PER_we_need_a_new_shah
+		PER_pull_the_clerics_towards_yourself
+
+		PER_we_want_abbas_mirza
+		PER_for_our_goals
+		PER_wipe_out_all_the_safavids
+		PER_administrative_reforms
+		PER_religious_warriors
+		PER_useful_superstitions
+		PER_promote_shiites_unity
+		PER_strengthen_the_ummah
+
+		PER_conquer_the_infidels
+		PER_protect_the_followers_of_ali
+		PER_establish_diplomatic_ties
+
+		PER_wage_holy_war
+		PER_equipment_effort
+		PER_equipment_effort_2
+		PER_build_fortifications_and_defensive_structures
+
+		#PER_prepare_for_jihad
+		#PER_declare_jihad
+		#PER_new_trade_routes
+		#PER_encourage_agriculture_and_industry
+	}
+
+	research = {
+		industry = 20.0
+		infantry_tech = 15.0
+		artillery = 8.0
+		support_tech = 6.5
+		dd_tech = 5
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		captain_of_industry = 5
+		war_industrialist = 5
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

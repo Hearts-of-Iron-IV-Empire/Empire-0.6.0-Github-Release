@@ -331,8 +331,6 @@
  modifier_production_speed_rocket_site_factor_desc:0 "Modifies the speed of Rocket Site construction."
  modifier_production_speed_nuclear_reactor_factor:0 "§YNuclear Reactor§! construction speed"
  modifier_production_speed_nuclear_reactor_factor_desc:0 "Modifies the speed of Nuclear Reactor construction speed"
- modifier_production_speed_fuel_silo_factor:0 "§YFuel Silo§! construction speed"
- modifier_production_speed_fuel_silo_factor_desc:0 "Modifies the speed of Fuel Silo construction."
  MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY:0 "£prod_eff_cap  Production Efficiency Cap"
  MODIFIER_PRODUCTION_FACTORY_MAX_EFFICIENCY_DESC:0 "Production Efficiency Cap that can be reached by mass-producing items in a single Production Line."
  MODIFIER_PRODUCTION_FACTORY_START_EFFICIENCY_FACTOR:0 "Production Efficiency Base"

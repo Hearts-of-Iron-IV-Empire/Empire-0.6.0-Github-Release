@@ -268,7 +268,11 @@
 6235;394;sea;2431;-1;-1;-1;-1;;Limfjord strait
 7265;10201;sea;7479;-1;-1;-1;-1;;Sri Lanka Strait
 4412;7463;sea;5960;-1;-1;-1;-1;;Malakka Strait
+9116;6092;impassable;-1;-1;-1;-1;-1;;Finland
+9116;3097;impassable;-1;-1;-1;-1;-1;;Finland
 6183;6142;impassable;-1;-1;-1;-1;-1;;Finland
+6183;103;impassable;-1;-1;-1;-1;-1;;Finland
+6183;3097;impassable;-1;-1;-1;-1;-1;;Finland
 3158;6142;impassable;-1;-1;-1;-1;-1;;Finland
 3158;3107;impassable;-1;-1;-1;-1;-1;;Finland
 6128;3107;impassable;-1;-1;-1;-1;-1;;Finland
@@ -278,12 +282,12 @@
 3156;6137;impassable;-1;-1;-1;-1;-1;;Finland
 3156;6179;impassable;-1;-1;-1;-1;-1;;Finland
 3156;6045;impassable;-1;-1;-1;-1;-1;;Finland
-9158;6179;impassable;-1;-1;-1;-1;-1;;Finland
 9158;6045;impassable;-1;-1;-1;-1;-1;;Finland
 9074;6045;impassable;-1;-1;-1;-1;-1;;Finland
 9074;3073;impassable;-1;-1;-1;-1;-1;;Finland
 6175;3073;impassable;-1;-1;-1;-1;-1;;Finland
 6175;6134;impassable;-1;-1;-1;-1;-1;;Finland
+6175;7;impassable;-1;-1;-1;-1;-1;;Finland
 
 
 -1;-1;;-1;-1;-1;-1;-1;-1

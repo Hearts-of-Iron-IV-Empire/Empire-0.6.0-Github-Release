@@ -1517,7 +1517,7 @@ focus_tree = {
 
 	focus = {
 		id = FRA_formalize_alliance
-		icon = GFX_spain
+		icon = GFX_agree_spain
 		prerequisite = { focus = FRA_spain_is_ours }
 		x = 0
 		y = 1
@@ -1725,7 +1725,7 @@ focus_tree = {
 	focus = {
 		id = FRA_crush_spain_now
 		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = FRA_mobilisation_scheme}
+		prerequisite = { focus = FRA_mobilisation_scheme }
 		x = 0
 		y = 1
 		cost = 10
@@ -1755,7 +1755,7 @@ focus_tree = {
 	focus = {
 		id = FRA_set_up_aragon
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = FRA_crush_spain_now}
+		prerequisite = { focus = FRA_crush_spain_now }
 		x = 0
 		y = 1
 		cost = 10

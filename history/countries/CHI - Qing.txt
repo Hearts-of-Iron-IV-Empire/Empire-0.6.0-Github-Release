@@ -2,6 +2,8 @@
 
 oob = "CHI_1936"
 
+set_country_flag = absolutist_state
+
 add_ideas = {
 	isolationism_idea
 	mandate_of_heaven

@@ -40,6 +40,23 @@ guiTypes = {
 		
 	}
 
+	### MAIN MENU PANEL (bottomleft)
+	containerWindowType = {
+		name  ="mainmenu_panel_bottomleft"
+		position = { x=0 y =200 }
+		show_position = { x=0 y =-1 }
+		animation_type = decelerated
+		animation_time = 1000
+		size = { width = 256 height = 768 }
+				
+		iconType = 
+		{
+			name ="modding_coop_logo"
+			spriteType = "GFX_modding_coop_logo"
+			position = { x= 40 y = 40 }
+		}
+	}
+
 	#containerWindowType = {
 	#	name  ="frontend_alpha_stamp"
 	#	position = { x=100 y =-100  }
@@ -73,31 +90,29 @@ guiTypes = {
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}
 
-		iconType =
-		{
-			name ="frontend_dev_logo"
-			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
-		}
+		#iconType =
+		#{
+		#	name ="frontend_dev_logo"
+		#	spriteType = "GFX_frontend_dev_logo"
+		#	position = { x= 15 y = 15 }
+		#}
 		
-		iconType =
-		{
-			name ="pdx_int_logo"
-			spriteType = "GFX_pdx_int_logo"
-			position = { x= 135 y = 15 }
-		}
-
-		
-	}		
+		#iconType =
+		#{
+		#	name ="pdx_int_logo"
+		#	spriteType = "GFX_pdx_int_logo"
+		#	position = { x= 135 y = 15 }
+		#}		
+	}
 
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = { x=0 y =0}
-		size = { width = 320 height = 395}
+		position = { x = 0 y = 0 }
+		size = { width = 320 height = 395 }
 		Orientation = CENTER
 		Origo = center	
-				
+		
 		background = {
 			name = "Background"		
 			quadTextureSprite ="GFX_tiled_window"

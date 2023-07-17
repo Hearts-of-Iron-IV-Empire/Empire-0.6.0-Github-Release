@@ -95,3 +95,19 @@ EMPIRE_unit_limit_penalties = {
 	army_speed_factor = -0.3 #Negative Modifiers
 	army_strength_factor = -0.2 #Negative Modifiers
 }
+
+# Spanish Colonial stuff
+mismanaged = {
+	icon = GFX_idea_generic_democratic_opposition
+	
+	local_resources = -0.30
+	local_org_regain = -0.20
+}
+
+depopulated = {
+	icon = GFX_idea_generic_oppression
+	
+	local_manpower = -0.50
+	state_production_speed_buildings_factor = -0.30
+	compliance_gain = -0.05
+}

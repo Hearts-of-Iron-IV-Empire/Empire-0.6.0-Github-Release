@@ -33,7 +33,7 @@
  appoint_ministers_desc:0 "The clergymen make excellent ministers. We should befriend them, so we can employ them for a cheaper price."
 
  estate_interactions:0 "Estate Interactions"
- estate_interactions_desc:0 "Estates are factions within the nation that influence domestic politics. Depending on their influence, they will be available for various interactions. The current estates influencing our country are:\n\n§C[ROOT.GetDemocraticParty]§! - influence: [?party_popularity@democratic|%G0]\n\n§Y[ROOT.GetFascistParty]§! - influence: [?party_popularity@fascism|%G0]\n\n§RNobility§! - influence: [?party_popularity@aristocracy|%G0]\n\nThe current influence of our ruling house is [?party_popularity@neutrality|%G0], representing the amount of absolutism we have. The higher the absolutism, the more political power we shall receive."
+ estate_interactions_desc:0 "§YEstates§! are factions within the nation that influence domestic politics. Depending on their influence, various interactions will be available. The current estates influencing our country are:\n\n§C[ROOT.GetDemocraticParty]§! influence: [?party_popularity@democratic|%G0]\n\n§Y[ROOT.GetFascistParty]§! influence: [?party_popularity@fascism|%G0]\n\n§RNobility§! influence: [?party_popularity@aristocracy|%G0]\n\nThe current influence of our ruling house is [?party_popularity@neutrality|%G0], representing the amount of absolutism we have. The higher the absolutism, the more political power we shall receive."
  royal_decrees:0 "Royal Decrees"
  royal_decrees_desc:0 "The absolutist state is not ruled by various factions like the estates, but is instead dominated by the iron fist of the monarch who rules through Royal Decree. While the monarch's power is more or less absolute, he must still pay attention not to anger his subjects. Should the monarch's power drop below 50%, he will be left powerless and will be forced to summon the Estates General, re-enabeling the estates.\n\nThe current power of the monarch is: [?party_popularity@neutrality|%G0]."
  strenghten_absolutism:0 "§GRuler§! - Strenghten Absolutism"
@@ -66,18 +66,19 @@
  clergy_dominance_dummy:0 "Clergy Dominance"
  clergy_dominance:0 "Clergy Dominance"
 
- estate.1.d:0 "[ROOT.GetLeader] has made an announcement that henceforth the estates of [ROOT.GetCountry] will no longer be consulted as an official part of the governance of the nation. Instead, [ROOT.GetCountry] will be lead by the stroke of a pen of [ROOT.GetLeader]. Indeed [ROOT.GetCountry] has now truly become an absolute monarchy, where not parliaments of estates but royal decrees rule the country."
- estate.2.d:0 "Although the estates had been dismissed for a while now, [ROOT.GetLeader] was forced to come to terms with his declining royal power and was forced to once again summon the institution for the good the nation. Whilst the king remains a powerful figure, the re-establishment of the estates as a political force makes the absolute monarchy shake to its core."
+ estate.1.t:0 "[ROOT.GetLeader] Dismisses The Estates"
+ estate.1.d:0 "[ROOT.GetLeader] has made an announcement that henceforth the estates of [ROOT.GetName] will no longer be consulted as an official part of the governance of the nation. Instead, [ROOT.GetName] will be led only by the will and ideals of [ROOT.GetLeader]. Indeed,[ROOT.GetName] has now truly become an absolute monarchy, where only royal decrees rule the country."
+
+ estate.2.t:0 "[ROOT.GetLeader] Summons The Estates"
+ estate.2.d:0 "Although the estates had been dismissed for a while now, [ROOT.GetLeader] was forced to come to terms with his declining royal power and was forced to once again summon the institution for the good of the nation. While the king remains a powerful figure, the re-establishment of the estates as a political force has diminished the power of the absolute monarchy."
 
  absolute_state_decisions_tt:0 "Disables §YEstate Interactions§! decisions.\nEnables §YRoyal Decree§! decisions."
  estates_back_decisions_tt:0 "Disables §YRoyal Decree§! decisions.\nEnables §YEstate Interactions§! decisions."
- POPUP_MINOR_EVENTS:0 "Minor Popup"
-
  close_clergy:0 "Close §YClergy§! Decisions"
  open_clergy:0 "Open §YClergy§! Decisions"
  close_nobility:0 "Close §RNobility§! Decisions"
  open_nobility:0 "Open §RNobility§! Decisions"
  close_third_estate:0 "Close §CThird Estate§! Decisions"
  open_third_estate:0 "Open §CThird Estate§! Decisions"
- close_ruler:0 "Colse §GRuler§! Decisions"
+ close_ruler:0 "Close §GRuler§! Decisions"
  open_ruler:0 "Open §GRuler§! Decisions"

@@ -1,38 +1,6 @@
 add_namespace = persia
 add_namespace = qizilbash
 
-## Title
-#country_event = {
-#	id = persia.1
-#	title = persia.1.t
-#	desc = persia.1.d
-#	picture = GFX_news_event_001
-#	trigger = {
-#	}
-#	mean_time_to_happen = {
-#	}
-#	show_major = {
-#	}
-#
-#	hidden = yes
-#	minor_flavor = yes
-#	fire_only_once = yes
-#	is_triggered_only = yes
-#	timeout_days = 20
-#
-#
-#	option = {
-#		name = qizilbash.1.a
-#		ai_chance = {
-#		}
-#		trigger = {
-#		}
-#		immediate = {
-#		}
-#	}
-#
-#}
-
 # Choose Service Type
 country_event = {
 	id = qizilbash.1
@@ -140,22 +108,21 @@ country_event = {
 #}
 
 ## Bitter News
-news_event = {
+country_event = {
 	id = persia.1
 	title = persia.1.t
 	desc = persia.1.d
-	picture = GFX_news_event_empire_startup2
 
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = persia.1.a 
-		ai_chance = {
-		}
+		name = persia.1.a
+		add_stability = -0.05
 		complete_national_focus = PER_the_death_of_Mulabasi
 	}
 }
+
 ## Turkic Empires League
 country_event = {
 	id = persia.2

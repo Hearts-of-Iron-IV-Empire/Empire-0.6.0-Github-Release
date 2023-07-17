@@ -142,11 +142,24 @@ set_naval_oob = "SPR_1936_naval_mtg"
 	complete_national_focus = SPR_invest_into_peru
 	complete_national_focus = SPR_establish_rio_de_la_plata
 }
-	
 
 set_research_slots = 3
-set_stability = 0.4
-set_war_support = 0.05
+set_stability = 0.5
+set_war_support = 0.1
+
+add_ideas = {
+	maria_anna
+	disfunctional_economy
+	corruption_in_the_colonial_administration
+	bureaucratic_gridlock
+	SPR_council_of_the_indies
+	SPR_fueros
+	SPR_bygone_military_glory
+
+	# Laws and Religion
+	catholic
+	empire
+}
 
 # Starting tech
 set_technology = {
@@ -261,16 +274,6 @@ BEL = {
 	}
 }
 
-add_ideas = {
-	maria_anna
-	disfunctional_economy
-	catholic
-	kingdom
-	SPR_colonial_maintenance
-	SPR_fueros
-	SPR_bygone_military_glory
-}
-
 SPR = {
 	add_opinion_modifier = { target = ENG modifier = Rivalry }
 	add_opinion_modifier = { target = HOL modifier = Rivalry }
@@ -281,7 +284,7 @@ set_convoys = 30
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1699.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
@@ -302,6 +305,7 @@ recruit_character = SPR_José_de_Albornoz # General
 recruit_character = SPR_Antonio_Gaztañeta # General
 recruit_character = SPR_Francisco_de_Velasco # General
 recruit_character = SPR_Francisco_Antonio_de_Agurto # General
+recruit_character = SPR_portocarrero # Advisor
 
 ### VARIANTS ###
 ### 1699 Start ###
@@ -343,7 +347,7 @@ if = {
 		}
 	}
 
-	# Crovettes #
+	# Corvettes #
 	create_equipment_variant = {
 		name = "Corvette Class"					
 		type = ship_hull_light_1
@@ -411,4 +415,34 @@ if = {
 			rear_1_custom_slot = empty
 		}
 	}
+}
+
+# Vars for Colonial Reforms
+set_variable = {
+	creole_elite_influence = 80
+}
+
+set_variable = {
+	crown_influence = 20
+}
+
+set_variable = {
+	colonial_funding = 1500
+}
+
+# Resistance and Compliance
+315 = { # Cuba
+	set_compliance = 50
+	start_resistance = yes
+	set_resistance = 0
+}
+319 = { # Santo Domingo
+	set_compliance = 50
+	start_resistance = yes
+	set_resistance = 0
+}
+686 = { # Puerto Rico
+	set_compliance = 50
+	start_resistance = yes
+	set_resistance = 0
 }

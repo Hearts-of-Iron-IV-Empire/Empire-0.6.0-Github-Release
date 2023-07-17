@@ -5,8 +5,8 @@ state={
 	history={
 		owner = PER
 		buildings = {
-			infrastructure = 1
-
+			infrastructure = 2
+			arms_factory = 1
 		}
 		victory_points = {
 			4893 1 
@@ -19,19 +19,15 @@ state={
 		1730.1.1 = {
 			owner = AFG
 			controller = AFG
-
 		}
 		1739.1.1 = {
 			owner = PER
 			controller = PER
-
 		}
 		1745.1.1 = {
 			owner = AFG
 			controller = AFG
-
 		}
-
 	}
 
 	provinces={

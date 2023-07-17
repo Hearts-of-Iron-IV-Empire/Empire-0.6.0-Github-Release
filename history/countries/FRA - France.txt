@@ -6,11 +6,15 @@ set_naval_oob = "FRA_1699_naval"
 set_stability = 0.50
 set_war_support = .65
 
+set_convoys = 30
+create_faction = "Bourbon Alliance"
+
 set_research_slots = 3
 
 set_country_flag = FRA_limousin_rebels
 set_country_flag = FRA_centre_sud_rebels
 set_country_flag = FRA_auvergne_rebels
+set_country_flag = absolutist_state
 
 1718.1.1 = {
 	recruit_character = FRA_Louis_XV_Child
@@ -283,10 +287,6 @@ if = {
 	}
 }
 
-set_convoys = 30
-create_faction = "Bourbon Alliance"
-
-set_country_flag = absolutist_state
 
 set_politics = {
 	ruling_party = neutrality

@@ -88,7 +88,7 @@ focus_tree = {
 
 		completion_reward = {
 			FRA = { country_event = generic.2 }
-			add_war_support = 0.05
+			add_war_support = -0.05
 		}
 	}
 

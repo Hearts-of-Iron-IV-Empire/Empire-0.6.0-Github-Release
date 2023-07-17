@@ -18,6 +18,9 @@ state={
 				naval_base = 3
 			}
 		}
+		add_dynamic_modifier = {
+			modifier = depopulated
+		}
 	}
 
 	provinces={

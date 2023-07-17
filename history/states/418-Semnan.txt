@@ -1,15 +1,18 @@
-
 state={
 	id=418
 	name="STATE_418"
 	manpower = 82362
-	
-	state_category = wasteland
+	resources = { 
+		tungsten = 4
+		aluminium = 3
+	}
+	state_category = rural
 
 	history={
 		owner = PER
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			arms_factory = 2
 		}
 		add_core_of = PER
 	}

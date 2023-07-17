@@ -150,7 +150,7 @@ ideas = {
 				fascism_drift = 0.01
 			}
 
-			on_remove = { news_event = persia.1 }
+			on_remove = { country_event = persia.1 }
 			cancel = { date > 1699.3.26 }
 		}
 
@@ -257,6 +257,7 @@ ideas = {
 				consumer_goods_factor = 0.05
 			}
 		}
+
 		PER_corrupt_army_and_court_2 = {	
 			name = PER_corrupt_army_and_court
 			picture = generic_disjointed_gov
@@ -545,8 +546,8 @@ ideas = {
 			}
 		}
 
-		PER_territories_expansion_politic_idea = {	
-			name = PER_territories_expansion_politic
+		PER_expand_outwards_idea = {	
+			name = PER_expand_outwards_idea
 			picture = generic_war_preparation
 			removal_cost = -1
 			allowed = {
@@ -715,6 +716,26 @@ ideas = {
 				army_core_defence_factor = 0.05
 				army_core_attack_factor = 0.05
 				stability_factor = 0.1
+			}
+		}
+
+		PER_strengthened_monarchy = {
+			picture = generic
+			allowed = {
+				always = no
+			}	
+
+			allowed_civil_war = {
+				OR = {
+					has_government = neutrality
+					has_government = aristocracy
+					has_government = communism
+				}
+	        }
+			
+			modifier = {
+				political_power_factor = 0.15
+				neutrality_drift = 0.05
 			}
 		}
 	}

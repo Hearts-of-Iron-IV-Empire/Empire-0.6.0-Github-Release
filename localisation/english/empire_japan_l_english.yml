@@ -93,7 +93,7 @@
  JAP_revisit_toyotomis_plans:0 "Revisit Toyotomi's Plans"
  JAP_revisit_toyotomis_plans_desc:0 "Toyotomi Hideyoshi was the unifier of Japan, and we must carry on his legacy. He tried to invade Korea, but failed. This time, we will not repeat his mistakes."
  JAP_destroy_korea:0 "Destroy Korea"
- JAP_destroy_korea_desc:0 "korea has long withstood Japanese invasions, and taking it is the first step to realizing Toyotomi's legacy."
+ JAP_destroy_korea_desc:0 "Korea has long withstood Japanese invasions, and taking it is the first step to realizing Toyotomi's legacy."
  JAP_korea_conquered:0 "Korea Conquered"
  JAP_korea_conquered_desc:0 "We have done it. Korea has been conquered, and we have succeeded where Toyotomi failed. Now we must decide what becomes of Korea."
  JAP_share_power_with_the_daimyo:0 "Share Power with the Daimyo"
@@ -112,6 +112,8 @@
  JAP_improve_rice_storages_desc:0 "The storage of rice is an extremely important issue for Japan, and as such we should ensure that rice is adequately stored in safe conditions, to stave off the destruction caused by famine."
  JAP_weapons_research:0 "Weapons Research"
  JAP_weapons_research_desc:0 "Now that we have access to foreign technologies, we should immediately begin using this to advance our military even further. We have a lot of catching up to do."
+ JAP_pacific_focus:0 "Pacific Focus"
+ JAP_pacific_focus_desc:0 "The Pacific Ocean is mostly unexplored, we should send out expeditions to conquer what might be out there."
 
  # Ideas
  samurai_japan:0 "Samurai Japan"

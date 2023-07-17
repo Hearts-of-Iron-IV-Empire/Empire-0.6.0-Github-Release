@@ -63,13 +63,13 @@ POL_bind_sejm_desc:0 "By keeping the nobility in close proximity to the court, w
 POL_support_bourbon_cause:0 "Support Bourbon Cause"
 POL_support_bourbon_cause_desc:0 "The Bourbon cause is obviously just. We should support them against the inbred rats of Habsburg."
 POL_intervene_against_austria:0 "Intervene against Austria"
-POL_intervene_against_austria_desc:0 "Austria is an ancient enemy of Poland. Whilst we shortly found an ally in them in 1683, it is apparent that many Poles fought for nothing that day. Indeed, the Austrians are a foul and backstabbing people, and must be crushed."
+POL_intervene_against_austria_desc:0 "Austria is an ancient enemy of Poland. While we shortly found an ally in them in 1683, it is apparent that many Poles fought for nothing that day. Indeed, the Austrians are a foul and backstabbing people, and must be crushed."
 POL_visegrad_empire:0 "Visegrad Empire"
 POL_visegrad_empire_desc:0 "With the collapse of the Habsburg empire, a new empire should arise in Central Europe. The new Visegrad empire will reign supreme."
 POL_true_to_france:0 "True to France"
 POL_true_to_france_desc:0 "We have achieved much, but none of it would have been possible without our brothers in France. We owe them and are their faithful allies forever."
 POL_a_new_sphere:0 "A New Sphere"
-POL_a_new_sphere_desc:0 "Whilst our friendship with France has brought us greatness, we should now look towards establishing our own sphere of influence, as a new empire in Europe."
+POL_a_new_sphere_desc:0 "While our friendship with France has brought us greatness, we should now look towards establishing our own sphere of influence, as a new empire in Europe."
 POL_polish_candidate:0 "The Magnate"
 POL_polish_candidate_desc:0 "Stanisław Leszczyński is a powerful Polish nobleman who understands Polish politics better than any outsider. He seeks to align with Sweden and form a front against Russia."
 POL_comfirm_szlachta_privileges:0 "Confirm Szlachta Privileges"
@@ -306,7 +306,7 @@ POL_autonomous_lithuania:0 "A dual union"
 POL_autonomous_lithuania_desc:0 "The best way to solve the Commonwealth's problems would be to return to a stage where Poland and Lithuania were a personal union, rather than an integrated state."
 POL_intermarium_alliance:0 "Toward Independence: Intermarium Alliance"
 POL_intermarium_alliance_desc:0 "A house divided cannot stand! But a united alliance, surely should be able to kick ass!"
-POL_the_close_union:0 "A Close Decentralized Union"
+POL_the_close_union:0 "A Decentralized Union"
 POL_the_close_union_desc:0 "We should squeeze our vassals as tightly as possible, to gain maximum benefit."
 POL_take_back_control:0 "Take Back Control"
 POL_take_back_control_desc:0 "The centuries of foreign domination in our country ends today. Today, we take back control!"
@@ -577,22 +577,22 @@ poland.38.d:0 "The kingdom of Sweden has wisely agreed to our offer to exchange 
  pol_bill_was_vetoed:0 "Motion of Moderate Modernization was vetoed."
  pol_bill_has_passed:0 "Motion of Moderate Modernization has passed."
 
- # Decisions
+ # Decisions:
  POL_reform_nation:0 "Abolish the Sejm"
  POL_foreign_influence:0 "Foreign Influence in the Commonwealth"
  POL_foreign_influence_desc:0 "Poland has been the victim of internal instability due to the meddling of surrounding powers who seek to gain increasing influence in the Polish nation. The more influence a nation has, the more likely it is to dominate the Commonwealth both politically and militarily. The greater foreign influence gets, the worse the effects will be on the Polish State.\n\n§YInfluence§! of the [SOV.GetFlag]§YRussians§!: [ROOT.GetInfluenceSOV]\n\n§YInfluence§! of the [AUS.GetFlag]§YAustrians§!: [ROOT.GetInfluenceAUS] \n\n§YInfluence§! of the [SWE.GetFlag]§YSwedes§!: [ROOT.GetInfluenceSWE] \n\n§YInfluence§! of the [PRS.GetFlag]§YPrussians§!: [ROOT.GetInfluencePRS] \n"
  POL_crack_down_on_foreign_influence:0 "Crack Down on Foreign Influence"
  POL_infiltrate_poland:0 "Infiltrate [POL.GetName]"
 
- # Cosmetic
+ # Cosmetic:
  POL_visegrad_fascism:0 "Visegrad Empire"
- POL_visegrad_fascism_DEF:0 "The Visegrad Empire"
+ POL_visegrad_fascism_DEF:0 "the Visegrad Empire"
  POL_visegrad_democratic:0 "Visegrad Empire"
- POL_visegrad_democratic_DEF:0 "The Visegrad Empire"
+ POL_visegrad_democratic_DEF:0 "the Visegrad Empire"
  POL_visegrad_neutrality:0 "Visegrad Empire"
- POL_visegrad_neutrality_DEF:0 "The Visegrad Empire"
+ POL_visegrad_neutrality_DEF:0 "the Visegrad Empire"
  POL_visegrad_communism:0 "Visegrad Empire"
- POL_visegrad_communism_DEF:0 "The Visegrad Empire"
+ POL_visegrad_communism_DEF:0 "the Visegrad Empire"
  POL_visegrad_fascism_ADJ:0 "Visegrad"
  POL_visegrad_democratic_ADJ:0 "Visegrad"
  POL_visegrad_neutrality_ADJ:0 "Visegrad"
@@ -601,7 +601,7 @@ poland.38.d:0 "The kingdom of Sweden has wisely agreed to our offer to exchange 
  POL_no_lithuania_DEF:0 "Poland"
  POL_no_lithuania_ADJ:0 "Polish"
 
- # Leader
+ # Leader:
  POL_Frederick_Augustus:0 "Frederick Augustus"
  POLITICS_FREDERICK_AUGUSTUS_DESC:0 "Augustus II the Strong, also known in Saxony as Frederick Augustus I, was Elector of Saxony from 1697, Imperial Vicar and elected King of Poland and Grand Duke of Lithuania in the since 1697. Augustus' great physical strength earned him the nicknames "the Strong", "the Saxon Hercules" and "Iron-Hand". He liked to show that he lived up to his name by breaking horseshoes with his bare hands and engaging in fox tossing by holding the end of his sling with just one finger while two of the strongest men in his court held the other end. He is also notable for fathering a very large number of children. \n\nIn order to be elected King of the Polish–Lithuanian Commonwealth, Augustus converted to Roman Catholicism. As a Catholic, he received the Order of the Golden Fleece from the Holy Roman Emperor. As Elector of Saxony, he is best known as a patron of the arts and architecture. He established the Saxon capital of Dresden as a major cultural centre, attracting artists from across Europe to his court. Augustus also amassed an impressive art collection and built lavish baroque palaces in Dresden and Warsaw. \n\nIt is feared that his reign will bring troubling times to Poland-Lithuania. Although he did not win the most votes in the Polish-Lithuanian election, he managed to claim the throne nonetheless with the help of Russia and Austria. It is now feared that his dependency on foreign powers will further deteriorate the political situation in Poland. As August attempts to establish an absolutist rule over Poland, the influence of Russia grows by the day. Now Poland prepares on the eve of war against Sweden in a combined effort with the Russians and Danes."
 

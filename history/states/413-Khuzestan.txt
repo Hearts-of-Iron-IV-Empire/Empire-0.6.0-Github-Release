@@ -5,18 +5,17 @@ state={
 	
 	state_category = rural
 	
-
 	history={
 		owner = PER
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2 
 			industrial_complex = 1
 			5005 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 		victory_points = {
-			7953 1 
+			7953 3 
 		}
 		victory_points = {
 			1922 5

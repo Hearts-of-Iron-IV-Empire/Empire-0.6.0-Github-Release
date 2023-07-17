@@ -12,12 +12,6 @@ SPR_colonial_management = {
 
 		days_mission_timeout = 180
 
-		activation = {
-		}
-
-		visible = {
-		}		
-
 		fixed_random_seed = no
 
 		fire_only_once = no
@@ -28,11 +22,11 @@ SPR_colonial_management = {
 				limit = {
 					NOT = { 
 						has_completed_focus = SPR_protect_the_treasure_fleets 
-						has_completed_focus = SPR_strike_a_deal_with_pirates
+						has_completed_focus = SPR_destroy_the_pirate_scum
 					}
 				}
 				random_list = {
-					40 = { # Small 
+					45 = { # Small 
 						country_event = spain.13
 					}
 					30 = { # Medium
@@ -41,7 +35,7 @@ SPR_colonial_management = {
 					20 = { # Large
 						country_event = spain.11
 					}
-					10 = { # Lost at sea
+					5 = { # Lost at sea
 						country_event = spain.14
 					}
 				}
@@ -51,7 +45,7 @@ SPR_colonial_management = {
 					has_completed_focus = SPR_protect_the_treasure_fleets
 				}
 				random_list = {
-					40 = { # Small
+					43 = { # Small
 						country_event = spain.13
 					}
 					33 = { # Medium
@@ -60,14 +54,14 @@ SPR_colonial_management = {
 					22 = { # Large
 						country_event = spain.11
 					}
-					5 = { # Lost at sea
+					2 = { # Lost at sea
 						country_event = spain.14
 					}
 				}
 			}
 			else_if = {
 				limit = {
-					has_completed_focus = SPR_strike_a_deal_with_pirates
+					has_completed_focus = SPR_destroy_the_pirate_scum
 				}
 				random_list = {
 					50 = { # Small
@@ -75,7 +69,7 @@ SPR_colonial_management = {
 					}
 					30 = { # Medium
 						country_event = spain.12
-					} 
+					}
 					20 = { # Large
 						country_event = spain.11
 					}
@@ -112,19 +106,21 @@ estate_interactions = {
 				limit = { 
 					has_completed_focus = SPR_appeal_to_aragonese_loyalists
 				}
-				random_list = {
-					100 = {
-						country_event = spain.18
-					}
+				country_event = {
+					id = spain.18
 				}
 			}
 			else = {
 				random_list = {
 					50 = {
-						country_event = spain.18
+						country_event = {
+							id = spain.18
+						}
 					}
 					50 = {
-						country_event = spain.19
+						country_event = {
+							id = spain.19
+						}
 					}
 				}
 			}
@@ -174,6 +170,7 @@ estate_interactions = {
 			}
 		}
 	}
+	
 	SPR_estates_of_naples_announce_allegiance = {
 		icon = generic_nationalism
 
@@ -373,6 +370,431 @@ estate_interactions = {
 		is_good = no
 		timeout_effect = {
 			country_event = spain.3
+		}
+	}
+}
+
+SPR_economic_reforms_category = {
+	SPR_reform_the_administration = {
+		icon = generic_political_discourse
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+
+		cost = 70
+
+		days_remove = 75
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			SPR_improve_economy = yes # Makes it SPR_economic_recovery_2
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_establish_economic_societies = {
+		icon = eng_trade_unions_support
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+
+		cost = 50
+
+		days_remove = 75
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_cost = 0.15
+		}
+
+		remove_effect = {
+			add_ideas =	SPR_economic_societies
+			set_country_flag = spr_establish_economic_societies_flag
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_improve_economic_societies = {
+
+		available = {
+			hidden_trigger = {
+				has_country_flag = spr_establish_economic_societies_flag
+			}
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+
+		cost = 70
+
+		fire_only_once = yes
+
+		remove_effect = {
+			swap_ideas = {
+				remove_idea = SPR_economic_societies
+				add_idea = SPR_economic_societies_2
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_promote_state_spending = {
+		icon = burghers
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+			has_idea = SPR_economic_recovery_2
+		}
+
+		cost = 70
+
+		days_remove = 70
+
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.10
+		}
+
+		remove_effect = {
+			SPR_improve_economy = yes # Makes it SPR_economic_recovery_3
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_combat_inflation = {
+		icon = coins
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+			has_idea = SPR_economic_recovery_3
+		}
+
+		cost = 130
+
+		days_remove = 100
+
+		fire_only_once = yes
+
+		modifier = {
+			consumer_goods_factor = 0.05
+			political_power_cost = 0.10
+		}
+
+		remove_effect = {
+			SPR_improve_economy = yes # Makes it SPR_economic_recovery_4
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_reform_the_exchequer = {
+		icon = eng_trade_unions_demand
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+			has_idea = SPR_economic_recovery_4
+		}
+
+		cost = 100
+
+		days_remove = 80
+
+		fire_only_once = yes
+
+		modifier = {
+			political_power_cost = 0.10
+		}
+
+		remove_effect = {
+			SPR_improve_economy = yes # Makes it SPR_economic_recovery_5
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	SPR_finalize_economic_reforms = {
+
+		available = {
+			has_completed_focus = SPR_spanish_recovery_plan
+		}
+		
+		visible = {
+			has_completed_focus = SPR_spanish_recovery_plan
+			has_idea = SPR_economic_recovery_5
+		}
+
+		cost = 50
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SPR_improve_economy = yes # Removes the idea
+			set_country_flag = completed_economic_reforms
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+}
+
+SPR_overseas_colonies_category = {
+	SPR_provide_colonial_funds = {
+		icon = coins
+		
+		cost = 50
+
+		days_remove = 40
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = colonial_funding
+				value = 400
+			}
+
+			custom_effect_tooltip = give_400_funds
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	SPR_eliminate_creole_influence = {
+		icon = oppression
+		
+		cost = 50
+
+		complete_effect = {
+			add_to_variable = {
+				var = creole_elite_influence
+				value = -10
+			}
+			add_to_variable = {
+				var = crown_influence
+				value = 5
+			}
+			clamp_variable = { var = creole_elite_influence min = 0 max = 100 }
+			clamp_variable = { var = crown_influence min = 0 max = 100 }
+			add_to_variable = {
+				var = colonial_funding
+				value = -400
+			}
+
+			custom_effect_tooltip = cost_400_decrease_10
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				if = {
+					limit = {
+						check_variable = { creole_elite_influence > 70 }
+					}
+				}
+				add = 30
+			}
+		}
+	}
+	SPR_send_in_the_military = {
+		icon = generic_military
+
+		available = {
+			has_completed_focus = SPR_reinforce_colonial_garrisons
+		}
+		
+		cost = 50
+
+		days_remove = 20
+
+		modifier = {
+			political_power_cost = 0.05
+		}
+
+		complete_effect = {
+			add_to_variable = {
+				var = creole_elite_influence
+				value = -15
+			}
+			add_to_variable = {
+				var = crown_influence
+				value = 10
+			}
+			clamp_variable = { var = creole_elite_influence min = 0 max = 100 }
+			clamp_variable = { var = crown_influence min = 0 max = 100 }
+			add_to_variable = {
+				var = colonial_funding
+				value = -250
+			}
+			add_stability = -0.025
+			add_war_support = 0.025
+			add_manpower = -200
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -200
+			}
+			custom_effect_tooltip = will_increase_our_influence
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				if = {
+					limit = {
+						check_variable = { creole_elite_influence > 50 }
+					}
+				}
+				add = 30
+			}
+		}
+	}
+	SPR_establish_trading_companies = {
+
+		available = {
+			check_variable = { creole_elite_influence < 50 }
+		}
+		
+		visible = {
+			has_completed_focus = SPR_establish_royal_monopolies
+		}
+
+		cost = 70
+
+		days_remove = 80
+
+		fire_only_once = yes
+
+		complete_effect = {
+			add_to_variable = {
+				var = colonial_funding
+				value = 300
+			}
+
+			set_country_flag = established_trading_companies
+
+			custom_effect_tooltip = give_300_funds
+		}
+
+		remove_effect = {
+			add_ideas = SPR_royal_trading_companies
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	SPR_conscript_colonial_populace = {
+
+		available = {
+			check_variable = { creole_elite_influence < 50 }
+		}
+		
+		visible = {
+			has_completed_focus = SPR_reinforce_colonial_garrisons
+		}
+
+		cost = 60
+
+		complete_effect = {
+			add_stability = -0.02
+			add_manpower = 3000
+			add_to_variable = {
+				var = colonial_funding
+				value = -300
+			}
+
+			custom_effect_tooltip = costs_300
+		}
+
+		ai_will_do = {
+			factor = 20
+		}
+	}
+	SPR_spread_the_faith = {
+
+		icon = clergy
+		
+		visible = {
+			has_completed_focus = SPR_spread_the_true_faith
+		}
+
+		cost = 30
+
+		complete_effect = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.05
+			}
+			add_to_variable = {
+				var = creole_elite_influence
+				value = -10
+			}
+			add_to_variable = {
+				var = crown_influence
+				value = 10
+			}
+			clamp_variable = { var = creole_elite_influence min = 0 max = 100 }
+			clamp_variable = { var = crown_influence min = 0 max = 100 }
+			add_to_variable = {
+				var = colonial_funding
+				value = -500
+			}
+
+			custom_effect_tooltip = church_power
+		}
+
+		ai_will_do = {
+			factor = 20
 		}
 	}
 }

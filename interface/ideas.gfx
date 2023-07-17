@@ -29,8 +29,53 @@ spriteTypes = {
 		texturefile = "gfx/interface/ideas/idea_han_system.dds" 
 	}
 
-	# Emperor Hirohito Ideas #
+	# Emperor's Ideas #
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
 	
+	SpriteType = {
+		name = "GFX_idea_council_of_the_indies"
+		texturefile = "gfx/interface/ideas/council_of_the_indies.dds" 
+	}
+	
+	SpriteType = {
+		name = "GFX_idea_bureaucratic_gridlock"
+		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+	}
+
+	SpriteType = {
+		name = "GFX_idea_spanish_golden_age"
+		texturefile = "gfx/interface/ideas/idea_spanish_golden_age.dds" 
+	}
+
+	SpriteType = {
+		name = "GFX_idea_foreign_owned_economy_spain"
+		texturefile = "gfx/interface/ideas/foreign_owned_economy_spain.dds" 
+	}
+
+	SpriteType = {
+		name = "GFX_idea_disfunctional_economy"
+		texturefile = "gfx/interface/ideas/disfunctional_economy.dds" 
+	}
+
 	SpriteType = {
 		name = "GFX_idea_soldier_qing"
 		texturefile = "gfx/interface/ideas/soldier_qing.dds" 

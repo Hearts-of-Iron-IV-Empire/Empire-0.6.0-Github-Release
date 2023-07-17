@@ -1,3 +1,25 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+### search_filters = { FOCUS_FILTER_ARMY_XP }
+### search_filters = { FOCUS_FILTER_NAVY_XP }
+### search_filters = { FOCUS_FILTER_TFV_AUTONOMY } # Autonomy
+### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS } # Internal Affairs
+### search_filters = { FOCUS_FILTER_FRA_POLITICAL_VIOLENCE } # Political Violence
+### search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST } # Occupation Costs
+### search_filters = { FOCUS_FILTER_CHI_INFLATION } # Inflation
+### search_filters = { FOCUS_FILTER_BALANCE_OF_POWER } # Balance of Power
+### search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS } # Military Readiness
+### search_filters = { FOCUS_FILTER_USA_CONGRESS } # Congress
+### search_filters = { FOCUS_FILTER_MEX_CHURCH_AUTHORITY } # Church Authority
+### search_filters = { FOCUS_FILTER_TUR_KURDISTAN } # Kurdistan
+### search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM } # Traditionalism
+### search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC } # Debt to the IFC
+
 focus_tree = { 
 	id = Persia_focus
 	
@@ -13,52 +35,13 @@ focus_tree = {
 	default = no
 	initial_show_position = { focus = PER_a_man_concerned_in_art }
 
-	#focus = {
-	#	id = PER_template
-	#	icon = GFX_
-	#	x = 2
-	#	y = 0
-	#	cost = 10
-	#	ai_will_do = {
-	#		
-	#	}
-	#	search_filters = {
-	#		
-	#	}
-#
-	#	cancelable = no
-	#	cancel_if_invalid = no
-	#	available_if_capitulated = yes
-	#	available = {
-	#	}
-	#	cancel = {
-	#	}
-#
-	#	completion_reward = {
-	#	}
-	#	prerequisite = { }
-	#	mutually_exclusive = { }
-#
-	#	relative_position_id = x
-	#	mark_focus_tree_layout_dirty = yes
-	#	allow_branch = {
-	#	}
-	#	offset = {
-	#	}
-	#}
-
 	focus = {
 		id = PER_a_man_concerned_in_art
 		icon = GFX_focus_sultan_huseyn
 		x = 14
 		y = 0
-		cost = 14.3
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_STABILITY
-			FOCUS_POLITICAL_POWER
-		}
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
 
 		available_if_capitulated = yes
 
@@ -67,6 +50,8 @@ focus_tree = {
 			add_stability = 0.05
 		}
 	
+		ai_will_do = {
+		}
 	}
 	
 	focus = {
@@ -74,30 +59,25 @@ focus_tree = {
 		icon = GFX_goal_tripartite_pact
 		x = -2
 		y = 1
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_a_man_concerned_in_art }
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
+
 		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-		FOCUS_POLITICAL_POWER
-		FOCUS_FILTER_PROPAGANDA
-		}
 
 		available_if_capitulated = yes
-		#available = { has_completed_focus = PER_the_death_of_Mulabasi }
 
 		completion_reward = {
 			add_political_power = 50
-			decrease_1DS = yes
 			add_popularity = {
 				ideology = aristocracy
 				popularity = 0.05
 			}
 		}
-		prerequisite = {
-			focus = PER_a_man_concerned_in_art
-		}
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -105,13 +85,9 @@ focus_tree = {
 		icon = GFX_focus_mulabasi
 		x = 2
 		y = 1
-		cost = 0
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_a_man_concerned_in_art }
 
-		available_if_capitulated = yes
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = it_will_complete_with_event
@@ -119,16 +95,20 @@ focus_tree = {
 			}
 		}
 
+		cost = 0
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_INTERNAL_AFFAIRS }
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			effect_tooltip = {
 				remove_ideas = PER_mulabasi_govern
 			}
 		}
-		prerequisite = {
-			focus = PER_a_man_concerned_in_art
-		}
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -136,21 +116,21 @@ focus_tree = {
 		icon = GFX_focus_generic_conspiracy
 		x = 0
 		y = 2
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_delegate_tasks_to_the_ministers }
+		prerequisite = { focus = PER_the_death_of_Mulabasi }
+
 		cost = 5
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		search_filters = { FOCUS_FILTER_STABILITY }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = -0.05
 		}
-		prerequisite = { focus = PER_delegate_tasks_to_the_ministers }
-		prerequisite = { focus = PER_the_death_of_Mulabasi }
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -158,33 +138,22 @@ focus_tree = {
 		icon = GFX_focus_like
 		x = 3
 		y = 2
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_the_death_of_Mulabasi }
+
 		cost = 10
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_resource = {
-				type = rubber
-				amount = 2
-				state = 411
-			}
-			411 = {
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 3
-			}
+			add_political_power = 100
 			add_stability = 0.05
 		}
-		prerequisite = { focus = PER_the_death_of_Mulabasi }
-
-		relative_position_id = PER_a_man_concerned_in_art
+		
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -192,30 +161,35 @@ focus_tree = {
 		icon = GFX_focus_carpets
 		x = -1
 		y = 1
+		relative_position_id = PER_yaxsidir
+		prerequisite = { focus = PER_yaxsidir }
+
 		cost = 10
-		ai_will_do = {
-		}
+
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_resource = {
-				type = rubber
-				amount = 2
-				state = 411
-			}
-			411 = {
+			random_owned_controlled_state = {
+				prioritize = { 
+					411 
+				}
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 2
+				add_resource = {
+					type = rubber
+					amount = 2
+				}
 			}
 		}
-		prerequisite = { focus = PER_yaxsidir }
 
-		relative_position_id = PER_yaxsidir
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -223,9 +197,11 @@ focus_tree = {
 		icon = GFX_goal_generic_positive_trade_relations
 		x = -1
 		y = 2
+		relative_position_id = PER_yaxsidir
+		prerequisite = { focus = PER_safavid_carpets }
+
 		cost = 5
-		ai_will_do = {
-		}
+
 		#search_filters = {
 		#}
 
@@ -237,9 +213,9 @@ focus_tree = {
 				days = 720
 			}
 		}
-		prerequisite = { focus = PER_safavid_carpets }
 
-		relative_position_id = PER_yaxsidir
+		ai_will_do = {
+		}
 	}
 	
 	focus = {
@@ -247,33 +223,38 @@ focus_tree = {
 		icon = GFX_goal_generic_wheat
 		x = -1
 		y = 3
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_yaxsidir
+		prerequisite = { focus = PER_new_trade_routes }
+
+		available = {
+			date > 1700.01.01
 		}
+
+		cost = 10
+
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available_if_capitulated = yes
-		available = {
-			date >  1700.01.01
-		}
 
 		completion_reward = {
-			random_owned_state = {
-				prioritize = { 419 420 266 } 
+			random_owned_controlled_state = {
+				prioritize = { 419 } 
+				add_extra_state_shared_building_slots = 4
 				add_building_construction = {
 					type = industrial_complex
 					level = 2
+					instant_build = yes
 				}
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 4
 			}
 		}
-		prerequisite = { focus = PER_new_trade_routes }
 
-		relative_position_id = PER_yaxsidir
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -281,9 +262,11 @@ focus_tree = {
 		icon = GFX_focus_textile
 		x = 1
 		y = 1
+		relative_position_id = PER_yaxsidir
+		prerequisite = { focus = PER_yaxsidir }
+
 		cost = 10
-		ai_will_do = {
-		}
+
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available_if_capitulated = yes
@@ -300,13 +283,14 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
 			}
-		} 
-		prerequisite = { focus = PER_yaxsidir }
+		}
 
-		relative_position_id = PER_yaxsidir
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -314,11 +298,16 @@ focus_tree = {
 		icon = GFX_work_with_the_church
 		x = -4
 		y = 2
-		cost = 10
-		ai_will_do = {
-		}
-		search_filters = { FOCUS_POLITICAL_POWER }
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_delegate_tasks_to_the_ministers }
 
+		bypass = {
+			has_war_with = FRA
+		}
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
@@ -336,12 +325,9 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = PER_delegate_tasks_to_the_ministers }
-		bypass = {
-			has_war_with = FRA
-		}
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -349,14 +335,9 @@ focus_tree = {
 		icon = GFX_scroll_icon
 		x = -5
 		y = 3
-		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_POLITICAL_POWER
-		}
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
 
-		available_if_capitulated = yes
 		available = {
 			country_exists = TUR
 			country_exists = RAJ
@@ -366,9 +347,15 @@ focus_tree = {
 			}
 		}
 
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			increase_1DS = yes
-			add_political_power = 100
+			add_political_power = 30
 			add_opinion_modifier = {
 				target = TUR
 				modifier = medium_increase
@@ -378,9 +365,9 @@ focus_tree = {
 				modifier = medium_increase
 			}
 		}
-		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -388,12 +375,14 @@ focus_tree = {
 		icon = GFX_OTT_Muslim_Relations
 		x = -3
 		y = 3
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
+		prerequisite = { focus = PER_expel_the_sufis_from_the_court }
+		mutually_exclusive = { focus = PER_for_strong_authority }
+
 		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_PROPAGANDA
-		}
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM }
 
 		available_if_capitulated = yes
 
@@ -407,11 +396,8 @@ focus_tree = {
 				add_idea = PER_oppressive_shias_3
 			}
 		}
-		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
-		prerequisite = { focus = PER_expel_the_sufis_from_the_court }
-		mutually_exclusive = { focus = PER_for_strong_authority }
-
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -419,12 +405,12 @@ focus_tree = {
 		icon = GFX_generic_man_working
 		x = -4
 		y = 4
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_support_clergymen }
+
 		cost = 10
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_INDUSTRY
-		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 
 		available_if_capitulated = yes
 
@@ -433,23 +419,17 @@ focus_tree = {
 				prioritize = { 419 420 266 411 } 
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
+					level = 2
+					instant_build = yes
 				}
-				add_extra_state_shared_building_slots = 1
+				add_extra_state_shared_building_slots = 2
 			}
 			random_owned_state = {
-				prioritize = { 421 413 416 412 } 
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-				}
-				add_extra_state_shared_building_slots = 1
-			}
-			random_owned_state = {
-				prioritize = { 419 420 266 411 }  
+				prioritize = { 419 420 266 }  
 				add_building_construction = {
 					type = infrastructure
 					level = 1
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
 			}
@@ -458,6 +438,7 @@ focus_tree = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 1
 			}
@@ -466,13 +447,14 @@ focus_tree = {
 				add_building_construction = {
 					type = synthetic_refinery
 					level = 2
+					instant_build = yes
 				}
 				add_extra_state_shared_building_slots = 2
 			}
 		}
-		prerequisite = { focus = PER_support_clergymen }
-
-		relative_position_id = PER_a_man_concerned_in_art
+		
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -480,33 +462,55 @@ focus_tree = {
 		icon = GFX_purge_the_court
 		x = -1
 		y = 3
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
+		prerequisite = { focus = PER_expel_the_sufis_from_the_court }
+		mutually_exclusive = { focus = PER_support_clergymen }
+
 		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_PROPAGANDA
-			FOCUS_FILTER_STABILITY
-		}
+
+		search_filters = { FOCUS_FILTER_PROPAGANDA }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			increase_1MS = yes
 			add_popularity = {
-				ideology = neutrality
-				popularity = 0.1
-			}
-			add_popularity = {
 				ideology = fascism
 				popularity = -0.05
 			}
 			add_stability = -0.05
 		}
-		prerequisite = { focus = PER_sign_the_protection_agreement_of_christians }
-		prerequisite = { focus = PER_expel_the_sufis_from_the_court }
-		mutually_exclusive = { focus = PER_support_clergymen }
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
+	}
+
+	focus = {
+		id = PER_strengthen_the_monarchy
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 1
+		y = 1
+		relative_position_id = PER_for_strong_authority
+		prerequisite = { focus = PER_for_strong_authority }
+
+		cost = 10
+
+		#search_filters = { FOCUS_FILTER_PROPAGANDA }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			increase_1MS = yes
+			add_ideas = PER_strengthened_monarchy
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.1
+			}
+		}
+
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -514,11 +518,11 @@ focus_tree = {
 		icon = GFX_generic_law
 		x = -2
 		y = 4
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_support_clergymen focus = PER_for_strong_authority }
+
 		cost = 10
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available_if_capitulated = yes
 
@@ -526,12 +530,9 @@ focus_tree = {
 			increase_1MS = yes
 			add_ideas = PER_administrative_reforms_idea
 		}
-		prerequisite = {
-			focus = PER_support_clergymen
-			focus = PER_for_strong_authority
-		}
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 	
 	focus = {
@@ -539,9 +540,12 @@ focus_tree = {
 		icon = GFX_destroy_islam
 		x = -3
 		y = 5
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_support_clergymen focus = PER_for_strong_authority }
+		mutually_exclusive = { focus = PER_religious_tolerance }
+
 		cost = 5
-		ai_will_do = {
-		}
+
 		#search_filters = {
 		#}
 
@@ -564,13 +568,9 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = {
-			focus = PER_support_clergymen
-			focus = PER_for_strong_authority
+		
+		ai_will_do = {
 		}
-		mutually_exclusive = { focus = PER_religious_tolerance }
-
-		relative_position_id = PER_a_man_concerned_in_art
 	}
 
 	focus = {
@@ -578,21 +578,21 @@ focus_tree = {
 		icon = GFX_islamic_studies
 		x = -4
 		y = 6
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_religious_pressure }
+
 		cost = 10
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_RESEARCH
-		}
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_research_slot = 1
 		}
-		prerequisite = { focus = PER_religious_pressure }
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -600,14 +600,12 @@ focus_tree = {
 		icon = GFX_focus_generic_self_management
 		x = -2
 		y = 6
-		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_POLITICAL_POWER
-			FOCUS_FILTER_PROPAGANDA
-			FOCUS_FILTER_STABILITY
-		}
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_religious_pressure focus = PER_religious_tolerance }
+
+		cost = 8.6
+
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_PROPAGANDA FOCUS_FILTER_STABILITY }
 
 		available_if_capitulated = yes
 
@@ -617,11 +615,11 @@ focus_tree = {
 				ideology = neutrality
 				popularity = 0.05
 			}
-			add_stability = -0.05
+			add_stability = 0.05
 		}
-		prerequisite = { focus = PER_religious_pressure focus = PER_religious_tolerance }
-
-		relative_position_id = PER_a_man_concerned_in_art
+		
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -629,9 +627,12 @@ focus_tree = {
 		icon = GFX_OTT_caliph
 		x = -1
 		y = 5
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_for_strong_authority }
+		mutually_exclusive = { focus = PER_religious_pressure }
+
 		cost = 5
-		ai_will_do = {
-		}
+
 		#search_filters = {
 		#}
 
@@ -643,10 +644,9 @@ focus_tree = {
 				add_idea = PER_oppressive_shias_1
 			}
 		}
-		prerequisite = { focus = PER_for_strong_authority }
-		mutually_exclusive = { focus = PER_religious_pressure }
 
-		relative_position_id = PER_a_man_concerned_in_art
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -654,12 +654,26 @@ focus_tree = {
 		icon = GFX_focus_safavids_crown
 		x = -6
 		y = 7
+		relative_position_id = PER_a_man_concerned_in_art
+		prerequisite = { focus = PER_increase_centrality }
+		mutually_exclusive = { focus = PER_trust_the_shah }
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = PER_trust_the_shah
+			}
+		}
+		
+		offset = {
+			x = 4
+			trigger = {
+				has_completed_focus = PER_we_need_a_new_shah
+			}
+		}
+
 		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		available_if_capitulated = yes
 
@@ -669,20 +683,8 @@ focus_tree = {
 			add_stability = -0.05
 			#event
 		}
-		prerequisite = { focus = PER_increase_centrality }
-		mutually_exclusive = { focus = PER_yaxsidir_2 }
-
-		relative_position_id = PER_a_man_concerned_in_art
-		allow_branch = {
-			NOT = {
-				has_completed_focus = PER_yaxsidir_2
-			}
-		}
-		offset = {
-			x = 4
-			trigger = {
-				has_completed_focus = PER_we_need_a_new_shah
-			}
+		
+		ai_will_do = {
 		}
 	}
 
@@ -691,11 +693,25 @@ focus_tree = {
 		icon = GFX_goal_islamic_government
 		x = 4
 		y = 1
-		cost = 10
-		ai_will_do = {
+		offset = {
+			x = -3
+			trigger = {
+				has_completed_focus = PER_trust_the_shah
+			}
 		}
-		#search_filters = {
-		#}
+		offset = {
+			x = -4
+			trigger = {
+				has_completed_focus = PER_we_want_abbas_mirza
+			}
+		}
+		relative_position_id = PER_we_need_a_new_shah
+		prerequisite = { focus = PER_we_need_a_new_shah }
+		mutually_exclusive = { focus = PER_they_have_no_place_in_my_court }
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM }
 
 		available_if_capitulated = yes
 
@@ -706,23 +722,8 @@ focus_tree = {
 				popularity = 0.1
 			}
 		}
-		prerequisite = {
-			focus = PER_we_need_a_new_shah
-		}
-		mutually_exclusive = { focus = PER_they_have_no_place_in_my_court }
-
-		relative_position_id = PER_we_need_a_new_shah
-		offset = {
-			x = -3
-			trigger = {
-				has_completed_focus = PER_yaxsidir_2
-			}
-		}
-		offset = {
-			x = -4
-			trigger = {
-				has_completed_focus = PER_we_want_abbas_mirza_but
-			}
+		
+		ai_will_do = {
 		}
 	}
 
@@ -731,9 +732,23 @@ focus_tree = {
 		icon = GFX_goal_generic_political_pressure
 		x = 2
 		y = 1
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_we_need_a_new_shah
+		offset = {
+			x = -3
+			trigger = {
+				has_completed_focus = PER_trust_the_shah
+			}
 		}
+		offset = {
+			x = -4
+			trigger = {
+				has_completed_focus = PER_we_want_abbas_mirza
+			}
+		}
+		prerequisite = { focus = PER_we_need_a_new_shah }
+		mutually_exclusive = { focus = PER_pull_the_clerics_towards_yourself }
+
+		cost = 10
 		#search_filters = {
 		#}
 
@@ -785,40 +800,42 @@ focus_tree = {
 				add_ideas = PER_shia_and_sunni_scholars_idea
 			}
 		}
-		prerequisite = { focus = PER_we_need_a_new_shah }
-		mutually_exclusive = { focus = PER_pull_the_clerics_towards_yourself }
+		
+		ai_will_do = {
+		}
+	}
 
+	focus = {
+		id = PER_we_want_abbas_mirza
+		icon = GFX_goal_generic_forceful_treaty
+		x = 4
+		y = 2
 		relative_position_id = PER_we_need_a_new_shah
 		offset = {
 			x = -3
 			trigger = {
-				has_completed_focus = PER_yaxsidir_2
+				has_completed_focus = PER_trust_the_shah
 			}
 		}
 		offset = {
 			x = -4
 			trigger = {
-				has_completed_focus = PER_we_want_abbas_mirza_but
+				has_completed_focus = PER_we_want_abbas_mirza
 			}
 		}
-	}
-
-	focus = {
-		id = PER_we_want_abbas_mirza_but
-		icon = GFX_goal_generic_forceful_treaty
-		x = 4
-		y = 2
-		cost = 5
-		ai_will_do = {
+		prerequisite = { focus = PER_pull_the_clerics_towards_yourself }
+		mutually_exclusive = { focus = PER_bleeding_for_the_throne }
+		
+		available = {
+			has_completed_focus = PER_we_need_a_new_shah
+			fascism > 0.4
 		}
+
+		cost = 5
 		#search_filters = {
 		#}
 
 		available_if_capitulated = yes
-		available = {
-			has_completed_focus = PER_we_need_a_new_shah
-			fascism > 0.5
-		}
 
 		completion_reward = {
 			hidden_effect = {
@@ -831,55 +848,66 @@ focus_tree = {
 			}
 			mark_focus_tree_layout_dirty = yes
 			custom_effect_tooltip = a_new_path_will_open
-			start_civil_war = {
-				ruling_party = neutrality
-				ideology = aristocracy
-				size = 0.3
-				capital = 411
-				states = {
-					411 412 413 414 410 421
+			
+			hidden_effect = {
+				start_civil_war = {
+					ideology = aristocracy
+					size = 0.3
+					capital = 411
+					states = {
+						411 412 413 414 410 421
+					}
+					set_cosmetic_tag = PER
+					keep_political_leader = yes
+					keep_political_party_members = yes
+					load_focus_tree = { tree = Persia_focus keep_completed = no }
+					set_politics = {
+						ruling_party = aristocracy
+						elections_allowed = no
+					}
+					add_ideas = {
+						PER_qizilbas_troops_1
+						PER_mulabasi_govern
+						PER_oppressive_shias_2
+						PER_corrupt_army_and_court
+						shiite
+						empire
+						low_economic_mobilisation
+					}
 				}
-				#keep_unit_leaders_trigger = {
-				#	not = { has_trait = georgian }
-				#}
-				keep_political_leader = yes
-				keep_political_party_members = yes
-			}
+			}	
 		}
-		prerequisite = { focus = PER_pull_the_clerics_towards_yourself }
-		mutually_exclusive = { focus = PER_bleeding_for_the_throne }
-
-		relative_position_id = PER_we_need_a_new_shah
-		offset = {
-			x = -3
-			trigger = {
-				has_completed_focus = PER_yaxsidir_2
-			}
-		}
-		offset = {
-			x = -4
-			trigger = {
-				has_completed_focus = PER_we_want_abbas_mirza_but
-			}
+		
+		ai_will_do = {
 		}
 	}
 
+#################################
+## Focuses after Abbaas Mirza ###
+#################################
+
 	focus = {
 		id = PER_for_our_goals
-		icon = GFX_goal_unknown
+		icon = GFX_focus_TUR_loosen_the_laws_on_secularism
 		x = 0
 		y = 1
-		cost = 5
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_we_want_abbas_mirza }
 
-		available_if_capitulated = yes
+		allow_branch = {
+			has_completed_focus = PER_we_want_abbas_mirza
+		}
+		
 		available = {
 			has_civil_war = no
 		}
 
+		cost = 5
+		
+		#search_filters = {
+		#}
+
+		available_if_capitulated = yes
 		completion_reward = {
 			set_politics = {
 				ruling_party = fascism
@@ -904,22 +932,20 @@ focus_tree = {
 				add_ideas = PER_oppressive_shias_4
 			}
 		}
-		prerequisite = { focus = PER_we_want_abbas_mirza_but }
-
-		relative_position_id = PER_we_want_abbas_mirza_but
-		allow_branch = {
-			has_completed_focus = PER_we_want_abbas_mirza_but
+		
+		ai_will_do = {
 		}
 	}
 
 	focus = {
 		id = PER_wipe_out_all_the_safavids
-		icon = GFX_goal_unknown
+		icon = GFX_broken_crown
 		x = 0
 		y = 2
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_for_our_goals }
+
 		cost = 5
-		ai_will_do = {
-		}
 		#search_filters = {
 		#}
 
@@ -927,30 +953,38 @@ focus_tree = {
 
 		completion_reward = {
 			add_stability = -0.05
-			set_party_name = {
+			add_popularity = {
 				ideology = neutrality
-				long_name = neutrality
-				name = neutrality
+				popularity = -0.15
 			}
-			set_party_name = {
+			add_popularity = {
 				ideology = aristocracy
-				long_name = aristocracy
-				name = aristocracy
+				popularity = -0.15
 			}
 		}
-		prerequisite = { focus = PER_for_our_goals }
-
-		relative_position_id = PER_we_want_abbas_mirza_but
+		ai_will_do = {
+		}
 	}
 
 	focus = {
 		id = PER_conquer_the_infidels
-		icon = GFX_goal_unknown
+		icon = GFX_focus_generic_annex_country
 		x = -1
 		y = 3
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_wipe_out_all_the_safavids }
+		
+		bypass = {
+			NOT = {
+				country_exists = UZB
+				country_exists = KYR
+				country_exists = CAU
+				country_exists = AVA
+			}
 		}
+
+		cost = 10
+		
 		#search_filters = {
 		#}
 
@@ -974,31 +1008,27 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-		prerequisite = { focus = PER_wipe_out_all_the_safavids }
-		bypass = {
-			NOT = {
-				country_exists = UZB
-				country_exists = KYR
-				country_exists = CAU
-				country_exists = AVA
-			}
-		}
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		ai_will_do = {
+		}
 	}
 	
 	focus = {
 		id = PER_wage_holy_war
-		icon = GFX_goal_unknown
+		icon = GFX_focus_TUR_turanist_ambition
 		x = -2
 		y = 4
-		cost = 10
-		ai_will_do = {
-			modifier = {
-				has_war = yes
-				factor = 0
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_conquer_the_infidels }
+		
+		bypass = {
+			NOT = {
+				country_exists = TUR
+				country_exists = RAJ
 			}
 		}
+
+		cost = 10
 		#search_filters = {
 		#}
 
@@ -1014,34 +1044,25 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
-		prerequisite = { focus = PER_conquer_the_infidels }
-		bypass = {
-			NOT = {
-				country_exists = TUR
-				country_exists = RAJ
-			}
-		}
-
-		relative_position_id = PER_we_want_abbas_mirza_but
-	}
-
-	focus = {
-		id = PER_prepare_for_jihad
-		icon = GFX_goal_unknown
-		x = 0
-		y = 4
-		cost = 5
 		ai_will_do = {
 			modifier = {
 				has_war = yes
 				factor = 0
 			}
 		}
-		#search_filters = {
-		#}
+	}
+
+	focus = {
+		id = PER_prepare_for_jihad
+		icon = GFX_generic_noble
+		x = 0
+		y = 4
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_conquer_the_infidels }
+
+		cost = 5
 
 		available_if_capitulated = yes
-
 		will_lead_to_war_with = PAP
 		completion_reward = {
 			add_named_threat = {
@@ -1050,30 +1071,30 @@ focus_tree = {
 			}
 			set_war_support = 1
 		}
-		prerequisite = { focus = PER_conquer_the_infidels }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
-	}
-
-	focus = {
-		id = PER_declare_jihad
-		icon = GFX_goal_unknown
-		x = 0
-		y = 5
-		cost = 14.3
 		ai_will_do = {
 			modifier = {
 				has_war = yes
 				factor = 0
 			}
 		}
-		#search_filters = {
-		#}
+	}
 
-		available_if_capitulated = yes
+	focus = {
+		id = PER_declare_jihad
+		icon = GFX_OTT_Association_of_Muslim_Nations
+		x = 0
+		y = 5
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_prepare_for_jihad }
+
 		available = {
 			country_exists = PAP
 		}
+
+		cost = 14.3
+
+		available_if_capitulated = yes
 
 		will_lead_to_war_with = PAP
 		completion_reward = {
@@ -1208,36 +1229,37 @@ focus_tree = {
 			show_ideas_tooltip = PER_winner_of_jihad
 			show_ideas_tooltip = PER_loser_of_jihad
 		}
-		prerequisite = { focus = PER_prepare_for_jihad }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		ai_will_do = {
+			modifier = {
+				has_war = yes
+				factor = 0
+			}
+		}
 	}
 
 	focus = {
 		id = PER_religious_warriors
-		icon = GFX_goal_unknown
+		icon = GFX_focus_ghazi_warriors
 		x = 2
 		y = 3
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_wipe_out_all_the_safavids }
 		cost = 10
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = PER_religious_warriors_idea
 		}
-		prerequisite = { focus = PER_wipe_out_all_the_safavids }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		ai_will_do = {
+		}
 	}
-	
 
 	focus = {
 		id = PER_useful_superstitions
-		icon = GFX_goal_unknown
+		icon = GFX_OTT_Muslim_Solidarity
 		x = 2
 		y = 4
 		cost = 5
@@ -1254,12 +1276,12 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_religious_warriors }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		relative_position_id = PER_we_want_abbas_mirza
 	}
 
 	focus = {
 		id = PER_promote_shiites_unity
-		icon = GFX_goal_unknown
+		icon = GFX_goal_generic_national_unity
 		x = 4
 		y = 3
 		cost = 10
@@ -1277,68 +1299,86 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_wipe_out_all_the_safavids }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		relative_position_id = PER_we_want_abbas_mirza
 	}
 
 	focus = {
 		id = PER_strengthen_the_ummah
-		icon = GFX_goal_unknown
+		icon = GFX_focus_araba
 		x = 4
 		y = 4
-		cost = 10
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_promote_shiites_unity }
 
-		available_if_capitulated = yes
 		available = {
 			has_war_with_major = yes
 		}
 
+		cost = 10
+		#search_filters = {
+		#}
+
+		available_if_capitulated = yes
+
 		completion_reward = {
 			add_ideas = PER_strong_ummah
 		}
-		prerequisite = { focus = PER_promote_shiites_unity }
-
-		relative_position_id = PER_we_want_abbas_mirza_but
+		
+		ai_will_do = {
+		}
 	}
 
 	focus = {
 		id = PER_protect_the_followers_of_ali
-		icon = GFX_goal_unknown
+		icon = GFX_goal_islamic_healthcare
 		x = 6
 		y = 4
+		relative_position_id = PER_we_want_abbas_mirza
+		prerequisite = { focus = PER_promote_shiites_unity }
+
 		cost = 10
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_WAR_SUPPORT }
 
 		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = 0.1
-			add_war_support = 0.05
+			add_war_support = 0.1
 		}
-		prerequisite = { focus = PER_promote_shiites_unity }
 
-		relative_position_id = PER_we_want_abbas_mirza_but
+		ai_will_do = {
+		}
 	}
 
 	focus = {
 		id = PER_bleeding_for_the_throne
-		icon = GFX_goal_generic_attack_allies
+		icon = GFX_focus_rom_abdicate
 		x = 0
 		y = 2
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_we_need_a_new_shah
+		prerequisite = { focus = PER_we_need_a_new_shah }
+		mutually_exclusive = { focus = PER_we_want_abbas_mirza }
+
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = PER_we_want_abbas_mirza
+					has_completed_focus = PER_trust_the_shah
+				}
+			}
 		}
+
+		available = {
+			has_war = no 
+		}
+
+		cost = 10
+
 		#search_filters = {
 		#}
 
 		available_if_capitulated = yes
-		available = {has_war = no }
 
 		completion_reward = {
 			hidden_effect = {
@@ -1466,17 +1506,8 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = { focus = PER_we_need_a_new_shah }
-		mutually_exclusive = { focus = PER_we_want_abbas_mirza_but }
-
-		relative_position_id = PER_we_need_a_new_shah
-		allow_branch = {
-			OR = {
-				NOT = {
-					has_completed_focus = PER_we_want_abbas_mirza_but
-					has_completed_focus = PER_yaxsidir_2
-				}
-			}
+		
+		ai_will_do = {
 		}
 	}
 
@@ -1485,15 +1516,18 @@ focus_tree = {
 		icon = GFX_persia_crown
 		x = 0
 		y = 3
-		cost = 10
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_STABILITY
+		relative_position_id = PER_we_need_a_new_shah
+		prerequisite = { focus = PER_bleeding_for_the_throne }
+
+		available = {
+			has_civil_war = no 
 		}
 
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_STABILITY }
+
 		available_if_capitulated = yes
-		available = { has_civil_war = no }
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1501,9 +1535,9 @@ focus_tree = {
 			increase_3WS = yes
 			increase_2MS = yes
 		}
-		prerequisite = { focus = PER_bleeding_for_the_throne }
 
-		relative_position_id = PER_we_need_a_new_shah
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -1511,9 +1545,17 @@ focus_tree = {
 		icon = GFX_focus_ETH_adopt_the_lira
 		x = 4
 		y = 5
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_we_need_a_new_shah
+		offset = {
+			x = -3
+			trigger = {
+				has_completed_focus = PER_trust_the_shah
+			}
 		}
+		prerequisite = { focus = PER_sit_on_the_throne focus = PER_open_your_eyes }
+
+		cost = 10
+
 		#search_filters = {
 		#}
 
@@ -1523,18 +1565,8 @@ focus_tree = {
 		completion_reward = {
 			add_ideas = PER_new_tax_system
 		}
-		prerequisite = {
-			focus = PER_sit_on_the_throne
-			focus = PER_good_days
-			focus = PER_open_your_eyes
-		}
 
-		relative_position_id = PER_we_need_a_new_shah
-		offset = {
-			x = -3
-			trigger = {
-				has_completed_focus = PER_yaxsidir_2
-			}
+		ai_will_do = {
 		}
 	}
 
@@ -1543,16 +1575,25 @@ focus_tree = {
 		icon = GFX_focus_CZE_german_puppet
 		x = 3
 		y = 4
-		cost = 10
-		ai_will_do = {
+		relative_position_id = PER_we_need_a_new_shah
+		offset = {
+			x = -3
+			trigger = {
+				has_completed_focus = PER_trust_the_shah
+			}
 		}
+		prerequisite = { focus = PER_sit_on_the_throne focus = PER_open_your_eyes }
+
+		available = {
+			NOT = { has_country_leader_with_trait = PER_inattentive_shah }
+		}
+
+		cost = 10
+
 		#search_filters = {
 		#}
 
 		available_if_capitulated = yes
-		available = {
-			NOT = { has_country_leader_with_trait = PER_inattentive_shah }
-		}
 
 		completion_reward = {
 			if = {
@@ -1568,17 +1609,8 @@ focus_tree = {
 				}
 			}
 		}
-		prerequisite = {
-			focus = PER_sit_on_the_throne
-			focus = PER_open_your_eyes
-		}
-
-		relative_position_id = PER_we_need_a_new_shah
-		offset = {
-			x = -3
-			trigger = {
-				has_completed_focus = PER_yaxsidir_2
-			}
+		
+		ai_will_do = {
 		}
 	}
 
@@ -1587,12 +1619,12 @@ focus_tree = {
 		icon = GFX_goal_expanding_persia
 		x = 0
 		y = 4
+		relative_position_id = PER_we_need_a_new_shah
+		prerequisite = { focus = PER_sit_on_the_throne }
+
 		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_WAR_SUPPORT
-		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 
 		available_if_capitulated = yes
 
@@ -1600,9 +1632,10 @@ focus_tree = {
 			increase_1WS = yes
 			add_war_support = 0.1
 		}
-		prerequisite = { focus = PER_sit_on_the_throne }
 
-		relative_position_id = PER_we_need_a_new_shah
+		ai_will_do = {
+		}
+
 	}
 
 	focus = {
@@ -1610,26 +1643,25 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = -3
 		y = 5
-		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
+		relative_position_id = PER_we_need_a_new_shah
+		prerequisite = { focus = PER_conquering_plans }
 
-		available_if_capitulated = yes
 		available = {
 			NOT = {
 				has_manpower < 5000
 				has_equipment = { infantry_equipment < 999 }
 			}
-			hidden_trigger = {
-				UNC = {
-					controls_state = 656
-					controls_state = 765
-				}
+			UNC = {
+				controls_state = 656
+				controls_state = 765
 			}
 		}
+
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_manpower = -5000
@@ -1637,7 +1669,6 @@ focus_tree = {
 				type = infantry_equipment
 				amount = -1000
 			}
-			
 			transfer_state = 656
 			transfer_state = 765
 			hidden_effect = {
@@ -1645,9 +1676,9 @@ focus_tree = {
 				add_state_core = 765
 			}
 		}
-		prerequisite = { focus = PER_conquering_plans }
-
-		relative_position_id = PER_we_need_a_new_shah
+		
+		ai_will_do = {
+		}
 	}
 	
 	focus = {
@@ -1655,7 +1686,6 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = -1
 		y = 5
-		cost = 10
 		relative_position_id = PER_we_need_a_new_shah
 		prerequisite = { focus = PER_conquering_plans }
 
@@ -1682,11 +1712,12 @@ focus_tree = {
 			}
 		}
 
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
 		available_if_capitulated = yes
 
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
 		will_lead_to_war_with = TUR
 		completion_reward = {
 			increase_1WS = yes
@@ -1875,11 +1906,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = PER_yaxsidir_2
-		icon = GFX_focus_like_zoomed
+		id = PER_trust_the_shah
+		icon = GFX_persia_crown2
 		x = 2
 		y = 7
 		cost = 5
+
 		ai_will_do = {
 		}
 		#search_filters = {
@@ -1903,40 +1935,7 @@ focus_tree = {
 		offset = {
 			x = -4
 			trigger = {
-				has_completed_focus = PER_yaxsidir_2
-			}
-		}
-	}
-
-	focus = {
-		id = PER_good_days
-		icon = GFX_prayer_hands
-		x = -1
-		y = 3
-		cost = 5
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
-
-		available_if_capitulated = yes
-		available = {
-			has_war = no
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
-		prerequisite = { focus = PER_yaxsidir_2 }
-		mutually_exclusive = { focus = PER_open_your_eyes }
-
-		relative_position_id = PER_yaxsidir_2
-		allow_branch = {
-			OR = {
-				NOT = {
-					has_completed_focus = PER_we_want_abbas_mirza_but
-					has_completed_focus = PER_we_need_a_new_shah
-				}
+				has_completed_focus = PER_trust_the_shah
 			}
 		}
 	}
@@ -1944,11 +1943,18 @@ focus_tree = {
 	focus  = {
 		id = PER_open_your_eyes
 		icon = GFX_focus_emperor_safavi
-		x = 1
+		x = 0
 		y = 3
-		cost = 5
-		ai_will_do = {
+		relative_position_id = PER_trust_the_shah
+		prerequisite = { focus = PER_trust_the_shah }
+
+		allow_branch = {
+			NOT = {
+				has_completed_focus = PER_we_need_a_new_shah
+			}
 		}
+
+		cost = 10
 		#search_filters = {
 		#}
 
@@ -1957,18 +1963,8 @@ focus_tree = {
 		completion_reward = {
 			remove_country_leader_trait = PER_inattentive_shah
 		}
-		
-		prerequisite = { focus = PER_yaxsidir_2 }
-		mutually_exclusive = { focus = PER_good_days }
 
-		relative_position_id = PER_yaxsidir_2
-		allow_branch = {
-			OR = {
-				NOT = {
-					has_completed_focus = PER_we_want_abbas_mirza_but
-					has_completed_focus = PER_we_need_a_new_shah
-				}
-			}
+		ai_will_do = {
 		}
 	}
 
@@ -2002,7 +1998,7 @@ focus_tree = {
 		prerequisite = { focus = PER_open_your_eyes }
 		mutually_exclusive = { focus = PER_turkic_empires_league }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2069,7 +2065,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_zuhab_treaty_revenge }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2154,7 +2150,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_gains_claim_over_the_persian_empire_borders }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2200,32 +2196,30 @@ focus_tree = {
 		mutually_exclusive = { focus = PER_zuhab_treaty_revenge }
 		bypass = { is_in_faction_with = TUR }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
-		id = PER_territories_expansion_politic
+		id = PER_expand_outwards
 		icon = GFX_goal_generic_demand_territory
 		x = 2
 		y = 5
-		cost = 5
-		ai_will_do = {
-		}
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
-		}
+		relative_position_id = PER_trust_the_shah
+		prerequisite = { focus = PER_turkic_empires_league }
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		available_if_capitulated = yes
 
-		will_lead_to_war_with = RAJ
-		will_lead_to_war_with = AUS
 		completion_reward = {
 			increase_1WS = yes
-			add_ideas = PER_territories_expansion_politic_idea
+			add_ideas = PER_expand_outwards_idea
 		}
-		prerequisite = { focus = PER_turkic_empires_league }
 
-		relative_position_id = PER_yaxsidir_2
+		ai_will_do = {
+		}
 	}
 
 	focus  = {
@@ -2289,7 +2283,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_turkic_empires_league }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2314,7 +2308,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_shia_and_sunni_scholars }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 	
 	focus  = {
@@ -2341,7 +2335,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_turkic_empires_league }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2366,7 +2360,7 @@ focus_tree = {
 		}
 		prerequisite = { focus = PER_war_experiences }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus  = {
@@ -2404,7 +2398,7 @@ focus_tree = {
 		prerequisite = { focus = PER_shia_and_sunni_scholars }
 		prerequisite = { focus = PER_war_experiences }
 
-		relative_position_id = PER_yaxsidir_2
+		relative_position_id = PER_trust_the_shah
 	}
 
 	focus = {
@@ -2446,7 +2440,7 @@ focus_tree = {
 		offset = {
 			x = -3
 			trigger = {
-				has_completed_focus = PER_yaxsidir_2
+				has_completed_focus = PER_trust_the_shah
 			}
 		}
 	}
@@ -2485,7 +2479,7 @@ focus_tree = {
 		offset = {
 			x = -3
 			trigger = {
-				has_completed_focus = PER_yaxsidir_2
+				has_completed_focus = PER_trust_the_shah
 			}
 		}
 	}
@@ -2496,6 +2490,10 @@ focus_tree = {
 		x = 2
 		y = 0
 		cost = 10
+		mutually_exclusive = {
+			focus = PER_combine_forces
+		}
+		
 		ai_will_do = {
 		}
 		#search_filters = {
@@ -2511,10 +2509,6 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
-		mutually_exclusive = {
-			#focus = PER_purge_gurcu_generals
-			focus = PER_combine_forces
-		}
 	}
 
 	focus = {
@@ -2522,24 +2516,22 @@ focus_tree = {
 		icon = GFX_goal_generic_build_tank
 		x = 2
 		y = 0
+		relative_position_id = PER_dont_mess_army
 		cost = 10
-		ai_will_do = {
+		mutually_exclusive = {
+			focus = PER_dont_mess_army
 		}
-		#search_filters = {
-		#}
+		search_filters = { FOCUS_FILTER_ARMY_XP }
 
 		available_if_capitulated = yes
 		available = { has_completed_focus = PER_a_man_concerned_in_art }
 
 		completion_reward = {
-			army_experience = 50
-		}
-		mutually_exclusive = {
-			focus = PER_dont_mess_army
-			#focus = PER_purge_gurcu_generals
+			army_experience = 30
 		}
 
-		relative_position_id = PER_dont_mess_army
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -2652,9 +2644,10 @@ focus_tree = {
 		icon = GFX_french_cavalryman
 		x = -1
 		y = 2
-		cost = 5
-		ai_will_do = {
-		}
+		relative_position_id = PER_dont_mess_army
+		prerequisite = { focus = PER_reopen_military_school focus = PER_inject_golds_for_military_schools_into_the_economy }
+
+		cost = 10
 		#search_filters = {
 		#}
 
@@ -2675,12 +2668,9 @@ focus_tree = {
 				category = land_doctrine
 			}
 		}
-		prerequisite = {
-			focus = PER_reopen_military_school
-			focus = PER_inject_golds_for_military_schools_into_the_economy
-		}
 
-		relative_position_id = PER_dont_mess_army
+		ai_will_do = {
+		}
 	}
 
 	focus = {
@@ -2717,21 +2707,25 @@ focus_tree = {
 	focus = {
 		id = PER_safavi_topcular
 		icon = GFX_focus_qizilbas_soldier2
-		x = -2
-		y = 3
-		cost = 10
-		ai_will_do = {
-		}
-		#search_filters = {
-		#}
+		x = -1
+		y = 1
+		relative_position_id = PER_veteran_qizilbas
+		prerequisite = { focus = PER_veteran_qizilbas } 
+		mutually_exclusive = { focus = PER_safavi_tufangciler }
 
-		available_if_capitulated = yes
 		available = {
 			OR = {
 				has_government = neutrality
 				has_government = aristocracy
 			}
 		}
+		
+		#search_filters = {
+		#}
+
+		cost = 10
+
+		available_if_capitulated = yes
 
 		completion_reward = {
 			swap_ideas = {
@@ -2739,10 +2733,9 @@ focus_tree = {
 				add_idea = PER_veteran_qizilbas_2
 			}
 		}
-		prerequisite = { focus = PER_veteran_qizilbas } 
-		mutually_exclusive = { focus = PER_safavi_tufangciler }
 
-		relative_position_id = PER_dont_mess_army
+		ai_will_do = {
+		}
 	}
 
 	focus = {

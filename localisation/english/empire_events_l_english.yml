@@ -1,10 +1,10 @@
 ﻿l_english:
  mod.0.t:0 "Welcome to Empire: Into the Orient!"
- mod.0.d:0 "Welcome to the §G0.6.0§! version of the §GEmpire Mod§!, featuring multiple reworks and the Mughal-Maratha War. The mod has no official end-date, but the game should last for about as long as you have content in your focus tree and beyond. This mod has deliberatly chosen not to implement or rework any major mechanics, with the sole exception of the colonization mechanics which are completly optional for the player to mess around with. In the current version, there is not yet an option to toggle historical versus ahistorical ai, so expect many different outcomes and experiences whilst playing different nations."
- mod.1.t:0 "The death of Charles II of Spain"
- mod.1.d:0 "Toward the end of his life, Charles II’s fragile health deteriorated. He died on the 1st of November 1700, five days before his 39th birthday. Because Charles had no sons, it was decided that his empire was to be divided between Austria and France. It remains to be seen whether or not this agreement will be honoured."
+ mod.0.d:0 "Welcome to the §G0.6.1§! version of the §GEmpire Mod§!, featuring multiple reworks like the Spanish economic rework. The mod has no official end-date, but the game should last for about as long as you have content in your focus tree and beyond. This mod has deliberatly chosen not to implement or rework any major mechanics, with the sole exception of the colonization mechanics which are completly optional for the player to mess around with. In the current version, there is not yet an option to toggle historical versus ahistorical ai, so expect many different outcomes and experiences whilst playing different nations."
+ mod.1.t:0 "The death of Carlos II of Spain"
+ mod.1.d:0 "Toward the end of his life, Carlos II’s fragile health deteriorated. He died on the 1st of November 1700, five days before his 39th birthday. Because Carlos had no sons, it was decided that his empire was to be divided between Austria and France. It remains to be seen whether or not this agreement will be honoured."
  mod.2.t:0 "Philip V crowned king of Spain"
- mod.2.d:0 "The Spanish regency council has announced the will of the late king Charles II of Spain. Against all previous agreements, the empire is to be inherited in full by Philip of Anjou, grandson of Louis XIV. Practically forming a personal union between France and Spain, the balance of power is seriously disturbed. Indeed, it is quite likely there is no going back. It looks like soon Europe will be in a state of war."
+ mod.2.d:0 "The Spanish regency council has announced the will of the late king Carlos II of Spain. Against all previous agreements, the empire is to be inherited in full by Philip of Anjou, grandson of Louis XIV. Practically forming a personal union between France and Spain, the balance of power is seriously disturbed. Indeed, it is quite likely there is no going back. It looks like soon Europe will be in a state of war."
  mod.2.a:0 "A concerning development."
  mod.2.b:0 "Excellent!"
  mod.2.c:0 "Long live the king!"
@@ -24,7 +24,7 @@
  mod.8.d:0 "On 26 January 1699, the Treaty of Karlowitz was signed after two months of negotiations between the Ottoman Empire and the Holy League, thus concluding the Great Turkish war of 1683-1697. The treaty saw large territorial losses for the Ottoman Empire; they lost most of Hungary to Austria, parts of Greece to Venice, as well as parts of Crimea and other losses. The Ottoman Empire now faces a period of instability, and it remains to be seen what the effects of this new balance of power will be."
  mod.8.a:0 "Once a great power, now the sick man of Europe..."
  mod.9.t:0 "Philip V crowned king of Spain"
- mod.9.d:0 "In an unexpected turn of events, it was announced it would not be Charles of Austria, but Philip of Anjou who will succeed Charles II as king of Spain. To avoid an unbalance and conflict and Europe. The Spanish regency has agreed in secret negotiations to transfer the Southern Netherlands and Italian lands to Austria. Diplomats all over Europe are hopeful that this alternative treaty might bring peace and stability to Europe."
+ mod.9.d:0 "In an unexpected turn of events, it was announced it would not be Charles of Austria, but Philip of Anjou who will succeed Carlos II as king of Spain. To avoid an unbalance and conflict and Europe. The Spanish regency has agreed in secret negotiations to transfer the Southern Netherlands and Italian lands to Austria. Diplomats all over Europe are hopeful that this alternative treaty might bring peace and stability to Europe."
  mod.9.a:0 "Quite unexpected, indeed."
  mod.9.b:0 "Excellent."
  mod.9.c:0 "Long live the king!"
@@ -114,4 +114,9 @@
  BA.3.t:0 "Slave Rebellion Defeated"
  BA.3.d:0 "We have routed the final rebel forces who foolishly tried to abandon their shackles and fight against their masters. We will round up all who stood against us and force them to stand trial or be executed. Facing the English has consequences."
  BA.3.a:0 "They didn't stand a chance."
- 
+
+ # Government change events
+ political_empire.1.t:0 "The People Rise Up!"
+ political_empire.1.d:0 "With high public support for the revolutionary faction within our lands, the people have risen up and demanded that [ROOT.GetLeader] step down and allow the people to lead. We are in a dire situation, however with some sufficient political manuevering and people pleasing, it may be possible to get out of this mess. What do we do?"
+ political_empire.1.a:0 "Alright, I will step down..."
+ political_empire.1.b:0 "Crush these rebels!"

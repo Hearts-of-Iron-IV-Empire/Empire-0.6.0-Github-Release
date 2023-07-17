@@ -26,14 +26,14 @@ bookmarks = {
 			history = "SPR_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-				maria_anna
+				SPR_council_of_the_indies
 				disfunctional_economy
 				SPR_bygone_military_glory
 			}
 			focuses = {
-				SPR_strenghten_the_council_of_the_indies
-				SPR_employ_inquisition
-				SPR_reassert_habsburg_dominance
+				SPR_create_new_consulados
+				SPR_encircle_france
+				SPR_the_burgundian_succession
 			}
 		}
 
@@ -84,14 +84,14 @@ bookmarks = {
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = neutrality	
 			ideas = {
-			    RUS_russians_fleeing_serfdom
+			    RUS_boyar_duma
 				russian_orthodox_church
-				RUS_streltsy_purge_5
+				RUS_outdated_military
 			}
 			focuses = {
-				RUS_icon_of_christ_pancreator
-				RUS_crush_sweden
-				RUS_colonize_alaska
+				RUS_treaty_of_preobrazhenskoye 
+				RUS_formulate_governing_senate
+				RUS_imperial_russian_army
 			}
 		}
 
@@ -272,7 +272,7 @@ bookmarks = {
 
 		"BAV"={
 			minor = yes
-			history = ""
+			history = "BAV_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				BAV_joseph_ferdinand

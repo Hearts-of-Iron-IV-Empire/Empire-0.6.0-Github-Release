@@ -294,6 +294,26 @@ spriteTypes = {
 	# Emperor Hirohito GFX #
 
 	spriteType = {
+		name = "GFX_decision_category_generic_political_actions2"
+		texturefile = "gfx/interface/decisions/decision_category_generic_political_actions2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_new_world"
+		texturefile = "gfx/interface/decisions/new_world.dds"
+	}
+
+	spriteType = {
+		name = "GFX_new_world"
+		texturefile = "gfx/interface/decisions/new_world.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spanish_overseas_colonies"
+		texturefile = "gfx/interface/decisions/spanish_overseas_colonies.dds"
+	}
+
+	spriteType = {
 		name = "GFX_decision_mughal_qing_war"
 		texturefile = "gfx/interface/decisions/decision_mughal_qing_war.dds"
 	}
@@ -313,6 +333,11 @@ spriteTypes = {
 	spriteType = {
 		name = "GFX_decision_nobility"
 		texturefile = "gfx/interface/decisions/decision_nobility.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_clergy"
+		texturefile = "gfx/interface/decisions/decision_clergy.dds"
 	}
 
 	spriteType = {

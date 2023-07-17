@@ -1,0 +1,6 @@
+scripted_gui = {
+	SPR_overseas_colonies_decision_ui = {
+		window_name = "SPR_overseas_colonies_decision_ui_container"
+		context_type = decision_category
+	}
+}

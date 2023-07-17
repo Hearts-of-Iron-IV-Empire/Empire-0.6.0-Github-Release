@@ -206,7 +206,7 @@ focus_tree = {
 
 	focus = {
 		id = industrial_effort
-		icon = GFX_goal_generic_production
+		icon = GFX_economic_stuff
 		x = 2
 		y = 0
 		cost = 10
@@ -229,7 +229,7 @@ focus_tree = {
 
 	focus = {
 		id = construction_effort
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_focus_generic_industry_1
 		prerequisite = { focus = industrial_effort }
 		x = -2
 		y = 1
@@ -586,7 +586,7 @@ focus_tree = {
 
 	focus = {
 		id = construction_effort_2
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_generic_invest_in_economy
 		prerequisite = { focus = construction_effort }
 		x = 0
 		y = 1
@@ -764,7 +764,7 @@ focus_tree = {
 
 	focus = {
 		id = production_effort_2
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_goal_generic_small_arms
 		prerequisite = { focus = production_effort }
 		x = 0
 		y = 1
@@ -1036,7 +1036,7 @@ focus_tree = {
 
 	focus = {
 		id = production_effort_3
-		icon = GFX_goal_generic_construct_mil_factory
+		icon = GFX_tanegashima
 		prerequisite = { focus = production_effort_2 }
 		prerequisite = { focus = infrastructure_effort_2 }
 		x = 0
@@ -1216,7 +1216,7 @@ focus_tree = {
 
 	focus = {
 		id = infrastructure_effort_2
-		icon = GFX_goal_generic_construct_infrastructure
+		icon = GFX_goal_construct_road
 		prerequisite = { focus = infrastructure_effort }
 		x = 0
 		y = 1
@@ -1310,7 +1310,7 @@ focus_tree = {
 
 	focus = {
 		id = construction_effort_3
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_goal_generic_production2
 		prerequisite = { focus = construction_effort_2  }
 		prerequisite = { focus = infrastructure_effort_2 }
 		x = 0
@@ -1490,7 +1490,7 @@ focus_tree = {
 
 	focus = {
 		id = extra_tech_slot
-		icon = GFX_focus_research
+		icon = GFX_research_empire
 		prerequisite = { focus = infrastructure_effort_2 }
 		x = 0
 		y = 1
@@ -1635,7 +1635,7 @@ focus_tree = {
 
 	focus = {
 		id =  dominance_of_military_class
-		icon = GFX_goal_aristocracy
+		icon = GFX_generic_noble
 		x = 1
 		y = 1
 		cost = 10
@@ -1767,7 +1767,7 @@ focus_tree = {
 
 	focus = {
 		id =  theocratic_despotism
-		icon = GFX_goal_generic_air_doctrine
+		icon = GFX_generic_support_church
 		x = 1
 		y = 1
 		cost = 10
@@ -1830,7 +1830,7 @@ focus_tree = {
 
 	focus = {
 		id =  strenghten_religious_head
-		icon = GFX_focus_rom_royal_dictatorship
+		icon = GFX_goal_holy_pope
 		x = -2
 		y = 1
 		cost = 10
@@ -1851,7 +1851,7 @@ focus_tree = {
 
 	focus = {
 		id =  religious_order
-		icon = GFX_goal_generic_CAS
+		icon = GFX_focus_generic_pope
 		x = -1
 		y = 1
 		cost = 10

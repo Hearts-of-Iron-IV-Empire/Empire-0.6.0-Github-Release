@@ -340,7 +340,7 @@ focus_tree = {
 	}
 	focus = {
 		id = SAX_hire_swiss_mercenaries
-		icon = GFX_focus_swiss_mercenaries
+		icon = GFX_agree_switzerland
 		x = 9
 		y = 4
 		cost = 10

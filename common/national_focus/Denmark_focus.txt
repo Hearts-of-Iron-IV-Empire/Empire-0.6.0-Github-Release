@@ -350,12 +350,18 @@ focus_tree = {
 		}
 
 		available = {
-			has_army_manpower = {
-    			size > 30000
-    		}
-			NOT = {
-				is_subject_of = SWE
-				is_puppet_of = SWE
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				has_army_manpower = {
+					size > 26000
+				}
+			}
+			else = {
+				has_army_manpower = {
+					size > 36000
+				}
 			}
 		}
 

@@ -1,0 +1,129 @@
+SWE_baltic_campaign = { #Will make Sweden solely focus on it's Baltic Campaign against Poland during the Great Northern War
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		NOT = {
+			SWE = { has_war_with = DEN }		
+		}
+		date > 1700.3.0
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = POL
+			}
+			SWE = {
+				controls_province = 6296
+			}
+		}	
+	}
+	ai_strategy = {
+	    target_country = POL
+		type = front_control
+		state = 11
+        strategic_region = 37
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
+	}
+
+	ai_strategy = {
+		type = prepare_for_war
+		id = POL
+		value = 500
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SOV
+		value = -200
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = SOV
+		value = 200
+	}
+}
+SWE_warsaw_campaign = { #Will make Sweden conquer it's way to Warsaw after capturing Kovno
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		SWE = {
+			controls_province = 6296
+		}
+	}
+	abort = {
+		OR = {
+			NOT = {
+				country_exists = POL
+			}
+			SWE = {
+				controls_province = 3544
+			}
+		}	
+	}
+	ai_strategy = {
+	    target_country = POL
+		type = front_control
+		state = 10
+        strategic_region = 38
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SOV
+		value = -200
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = SOV
+		value = 200
+	}
+}
+SWE_krakow_campaign = { #Will make Sweden conquer it's way to Krakow after capturing Warsaw
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		SWE = {
+			controls_province = 3544
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = POL
+		}
+		#TODO
+	}
+	ai_strategy = {
+	    target_country = POL
+		type = front_control
+		state = 88
+        strategic_region = 38
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SOV
+		value = -200
+	}
+	ai_strategy = {
+		type = consider_weak
+		id = SOV
+		value = 200
+	}
+}

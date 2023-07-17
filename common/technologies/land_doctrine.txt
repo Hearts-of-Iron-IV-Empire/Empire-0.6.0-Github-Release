@@ -462,17 +462,15 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 10
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
-
 		
 		path = {
 			leads_to_tech = backhand_blow 
 			research_cost_coeff = 1
 		}
-
-		
+	
 		doctrine = yes	
 		research_cost = 4.5
 		
@@ -481,7 +479,6 @@ technologies = {
 			cat_mobile_warfare
 		}
 
-		
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 14 }
@@ -1197,12 +1194,10 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		category_front_line = {
-			max_organisation = 5
+			max_organisation = 10
 		}
 			
-		#combat advantage when air superior
-		army_bonus_air_superiority_factor = 0.20
-		
+		#combat advantage when air superior		
 		doctrine = yes	
 		research_cost = 4.5
 		
@@ -1210,7 +1205,6 @@ technologies = {
 			land_doctrine
 			cat_superior_firepower
 		}
-
 		
 		folder = {
 			name = land_doctrine_folder
@@ -1332,7 +1326,7 @@ technologies = {
 			max_organisation = 10
 			default_morale = 0.05
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
 
@@ -1685,7 +1679,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 1
 		}
 
@@ -1807,7 +1801,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 1
 		}
 
@@ -1884,7 +1878,7 @@ technologies = {
 	armored_operations = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
 		category_all_armor = {
@@ -2009,7 +2003,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 5
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 1
 		}	
 
@@ -2275,10 +2269,9 @@ technologies = {
 	}
 	
 	deep_operations = {
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
-
 
 		xp_research_type = army
 		xp_unlock_cost = 100
@@ -2400,7 +2393,7 @@ technologies = {
 	breakthrough_priority = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_tanks = {
+		cavalry = {
 			max_organisation = 1
 			breakthrough = 0.10
 		}
@@ -2447,7 +2440,7 @@ technologies = {
 	}
 	
 	mechanized_wave = {
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
 		xp_research_type = army
@@ -2633,7 +2626,7 @@ technologies = {
 		category_all_infantry = {
 			max_organisation = 10
 		}
-		category_tanks = {
+		cavalry = {
 			max_organisation = 2
 		}
 

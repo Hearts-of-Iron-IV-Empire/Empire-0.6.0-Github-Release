@@ -3158,11 +3158,12 @@ focus = {
 focus = {
 	id = TUR_reinforce_janissaries
 	icon = GFX_OTT_reinforce_janissaries
-	prerequisite = { focus = TUR_modernize_sipahi }
 	x = 1
 	y = 1
-	cost = 8
 	relative_position_id = TUR_modernize_sipahi
+	prerequisite = { focus = TUR_modernize_sipahi }
+
+	cost = 8
 
 	completion_reward = {
 		set_division_template_lock = {

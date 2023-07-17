@@ -1514,7 +1514,6 @@ focus = {
 						110 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 142
 					OR = {
@@ -1522,7 +1521,6 @@ focus = {
 						142 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 143
 					OR = {
@@ -1530,7 +1528,6 @@ focus = {
 						143 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 144
 					OR = {
@@ -1538,7 +1535,6 @@ focus = {
 						144 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 138
 					OR = {
@@ -1546,7 +1542,6 @@ focus = {
 						138 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 37
 					OR = {
@@ -1554,7 +1549,6 @@ focus = {
 						37 = { is_core_of = SWE }
 					}
 				}
-
 				AND = {
 					has_full_control_of_state  = 99
 					OR = {
@@ -1587,9 +1581,10 @@ focus = {
 		hidden_effect = {
 			37 = { add_core_of = ROOT }
 			99 = { add_core_of = ROOT }
+			138 = { add_core_of = ROOT }
 		}
 		add_political_power = 150
-		add_stability = 0.05
+		add_stability = 0.10
 		annex_country = {
 		    target = DEN
 		    transfer_troops = yes

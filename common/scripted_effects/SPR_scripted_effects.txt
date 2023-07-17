@@ -1,0 +1,34 @@
+SPR_improve_economy = {
+	if = {
+		limit = { has_idea = SPR_economic_recovery }
+		swap_ideas = {
+			remove_idea = SPR_economic_recovery
+			add_idea = SPR_economic_recovery_2
+		}
+	}
+	else_if = {
+		limit = { has_idea = SPR_economic_recovery_2 }
+		swap_ideas = {
+			remove_idea = SPR_economic_recovery_2
+			add_idea = SPR_economic_recovery_3
+		}
+	}
+	else_if = {
+		limit = { has_idea = SPR_economic_recovery_3 }
+		swap_ideas = {
+			remove_idea = SPR_economic_recovery_3
+			add_idea = SPR_economic_recovery_4
+		}
+	}
+	else_if = {
+		limit = { has_idea = SPR_economic_recovery_4 }
+		swap_ideas = {
+			remove_idea = SPR_economic_recovery_4
+			add_idea = SPR_economic_recovery_5
+		}
+	}
+	else_if = {
+		limit = { has_idea = SPR_economic_recovery_5 }
+		remove_ideas = SPR_economic_recovery_5
+	}
+}

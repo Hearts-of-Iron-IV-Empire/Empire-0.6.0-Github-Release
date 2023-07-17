@@ -85,7 +85,7 @@ ideas = {
 			level = 4
 			
 			available = {
-				has_war_support > 0.15	
+				has_war_support > 0.10
 			}
 			
 			cost = 100
@@ -120,7 +120,14 @@ ideas = {
 			level = 3
 			
 			available = {
-				has_war_support > 0.25
+				if = {
+					limit = {
+						original_tag = PER
+						has_country_leader_with_trait = PER_inattentive_shah
+					}
+					NOT = { has_country_leader_with_trait = PER_inattentive_shah }
+				}
+				has_war_support > 0.20
 			}
 
 			cost = 100
@@ -157,7 +164,7 @@ ideas = {
 			level = 2
 			
 			available = {
-				has_war_support > 0.5
+				has_war_support > 0.30
 				OR = {
 					AND = {
 						has_government = neutrality
@@ -219,7 +226,7 @@ ideas = {
 					
 			available = {
 				has_war = yes
-				has_war_support > 0.8
+				has_war_support > 0.5
 				any_enemy_country = {
 					ic_ratio = { 
 						tag = ROOT 

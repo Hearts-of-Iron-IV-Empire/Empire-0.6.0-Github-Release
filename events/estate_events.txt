@@ -2,7 +2,7 @@ add_namespace = estate
 
 country_event = {
 	id = estate.1
-	title = "[ROOT.GetLeader] Dismisses The Estates"
+	title = estate.1.t
 	desc = estate.1.d
 
 	is_triggered_only = yes
@@ -16,7 +16,7 @@ country_event = {
 
 country_event = {
 	id = estate.2
-	title = "[ROOT.GetLeader] Summons The Estates"
+	title = estate.2.t
 	desc = estate.2.d
 
 	is_triggered_only = yes

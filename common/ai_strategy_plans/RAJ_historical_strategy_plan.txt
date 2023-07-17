@@ -1,5 +1,5 @@
 RAJ_historical_plan = {
-	name = "Indian historical plan"
+	name = "Mughal historical plan"
 	desc = ""
 
 	allowed = {

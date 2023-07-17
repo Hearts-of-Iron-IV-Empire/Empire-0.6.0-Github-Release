@@ -34,6 +34,7 @@ guiTypes = {
 				name ="diplomacy_skill_icon"
 				spriteType = "GFX_air_experience"
 				position = { x = 47 y = 330 }
+				alwaystransparent = yes
 				scale = 1.4 
 			}
 			ButtonType = {
@@ -65,6 +66,7 @@ guiTypes = {
 				name ="militate_skill_icon"
 				spriteType = "GFX_in_combat"
 				position = { x = 87 y = 330 }
+				alwaystransparent = yes
 			}
 			ButtonType = {
 				name ="militate_skill_icon_levelup_button"
@@ -94,6 +96,7 @@ guiTypes = {
 				name ="management_skill_icon"
 				quadTextureSprite = "GFX_pol_idea"
 				position = { x = 124 y = 330 }
+				alwaystransparent = yes
 			}
 			ButtonType = {
 				name ="management_skill_icon_levelup_button"

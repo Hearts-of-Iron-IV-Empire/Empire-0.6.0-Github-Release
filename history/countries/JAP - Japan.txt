@@ -13,7 +13,7 @@ add_ideas = {
 	japanese_catholics
 	small_tokugawa_territories
 
-	#Laws and Religions
+	# Laws and Religion
 	shinto
 	kingdom
 	closed_economy
@@ -86,9 +86,9 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 15
-	fascism = 15
-	communism = 15
-	neutrality = 15
-	aristocracy = 40
+	democratic = 5
+	fascism = 10
+	communism = 0
+	neutrality = 65
+	aristocracy = 20
 }

@@ -1,0 +1,30 @@
+#bookmarks = {
+#	bookmark = {
+#		name = "Seven Years' War"
+#		desc = "EMPIRE_GATHERING_STORM_DESC"
+#		date = 1756.5.1.12
+#		picture = "GFX_select_date_1756"
+#		default_country = "FRA"
+#		default = no
+#
+#		effect = {
+#			randomize_weather = 22345 # <- Obligatory in every bookmark !
+#			#123 = { rain_light = yes }
+#		}
+#
+#		"FRA"={
+##			history = "FRA_GATHERING_STORM_DESC"
+#			ideology = neutrality
+#			ideas = {
+#				FRA_edict_of_fontainebleu
+#				FRA_birthplace_of_absolutism
+#				FRA_religious_unrest
+#			}
+#			focuses = {
+#				FRA_expand_versailles_court
+#				FRA_demand_corsica
+#				FRA_proclaim_defender_of_the_faith
+#			}
+#		}
+#	}
+#}

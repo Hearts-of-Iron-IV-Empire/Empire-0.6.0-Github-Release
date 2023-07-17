@@ -30,7 +30,7 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 	}
 	enable = {
 	    country_exists = SWE
-	    date > 1700.9.12
+	#    date > 1700.9.12
 		has_completed_focus = RUS_treaty_of_preobrazhenskoye
 	}
 	abort = {
@@ -42,7 +42,7 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 	ai_strategy = {
 		type = prepare_for_war
 		id = "SWE"
-		value = 100
+		value = 300
 	}
 	ai_strategy = {
 		type = antagonize
@@ -59,26 +59,34 @@ RUS_do_not_engage_sweden_yet = { #Will not make Russia go to war with Sweden unt
 	}
 	abort = {
 		NOT = {
-		    date > 1700.11.7
-			country_exists = SWE
+		    OR = {
+				has_completed_focus = RUS_narva_campaign
+				country_exists = SWE
+			}
 		}
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
 		id = DEN
-		value = 100
+		value = 200
 		target_country = SOV
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
 		id = POL
-		value = 100
+		value = 200
 		target_country = SOV
 	}
 	ai_strategy = {
 		type = dont_join_wars_with
 		id = SAX
-		value = 100
+		value = 200
+		target_country = SOV
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = LAT
+		value = 200
 		target_country = SOV
 	}
 }
@@ -103,8 +111,8 @@ RUS_narva_campaign = { #Will make Russia solely focus on it's Narva Campaign aga
 		type = front_control
 		state = 13
         strategic_region = 37
-        priority = 3
-        #ratio = 0.0 #TODO
+        priority = 5
+        ratio = 0.2 #TODO
         ordertype = front
 		execution_type = balanced #TODO
         execute_order = yes
@@ -131,7 +139,7 @@ RUS_karelian_campaign = { #Will make Russia also include the Karelian Campaign a
 		state = 216
 		strategic_region = 265
         priority = 1
-        #ratio = 0.0 #TODO
+        ratio = 0.2 #TODO
         ordertype = front
 		execution_type = balanced #TODO
         execute_order = yes
@@ -159,7 +167,7 @@ RUS_baltic_campaign = { #Will make Russia also include the Baltic Campaign again
 		state = 191
 		strategic_region = 37
         priority = 2
-        #ratio = 0.0 #TODO
+        ratio = 0.2 #TODO
         ordertype = front
 		execution_type = balanced #TODO
         execute_order = yes
@@ -212,10 +220,13 @@ RUS_do_not_help_allies = { #Will not make Russia put it's army into Allied terri
 	}
 	abort = {
 		NOT = {
-			country_exists = SWE
+			OR = {
+				country_exists = SWE
 			SWE = {
 			has_completed_focus = SWE_dethrone_august #TODO
 			}
+
+			}		
 		}
 		#TODO
 	}

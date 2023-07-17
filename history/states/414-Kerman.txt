@@ -1,15 +1,14 @@
-
 state={
 	id=414
 	name="STATE_414"
 	manpower = 126013
 	
-	state_category = wasteland
+	state_category = pastoral
 
 	history={
 		owner = PER
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 		}
 		victory_points = {
 			10913 1 

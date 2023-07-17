@@ -269,152 +269,142 @@ focus = {
 		}
 	}
 
-###
+	focus = {
+		id = eng_scottish_self_government
+		icon = GFX_scotland_forever
+		prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
+		mutually_exclusive = { focus = eng_reduce_scottish_autonomy }
+		x = -5
+		y = 3
+		cost = 10
+		relative_position_id = eng_go_with_the_whigs 
 
-focus = {
-	id = eng_scottish_self_government
-	icon = GFX_goal_tfv_sever_ties_with_uk
-	prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
-	mutually_exclusive = { focus = eng_reduce_scottish_autonomy }
-	x = -5
-	y = 3
-	cost = 10
-	relative_position_id = eng_go_with_the_whigs 
-
-	ai_will_do = {
-		factor = 0
-	}
-
-	completion_reward = {
-		SCO = { add_ideas = ENG_release_scotland }
-	}
-}
-
-###
-
-focus = {
-	id = eng_reduce_scottish_autonomy
-	icon = GFX_integrate_scotland
-	prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
-	mutually_exclusive = { focus = eng_scottish_self_government }
-	x = -3
-	y = 3
-	cost = 10
-	relative_position_id = eng_go_with_the_whigs 
-
-	completion_reward = {
-		SCO = { add_ideas = ENG_integrate_scotland }
-	}
-
-}
-
-###
-
-focus = {
-	id = eng_crush_irish_catholics
-	icon = GFX_goal_generic_political_pressure
-	prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government }
-	mutually_exclusive = { focus = eng_allow_irish_self_governance }
-	x = -5
-	y = 4
-	cost = 10
-	relative_position_id = eng_go_with_the_whigs 
-
-	completion_reward = {
-		swap_ideas = {
-				remove_idea = ENG_Irish_opposition
-				add_idea = ENG_idea_catholics_suppressed
-			}
-		}
-	}
-
-###
-
-focus = {
-	id = eng_allow_irish_self_governance
-	icon = GFX_goal_tfv_sever_ties_with_uk
-	prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government}
-	mutually_exclusive = { focus = eng_crush_irish_catholics }
-	x = -3
-	y = 4
-	cost = 10
-	relative_position_id = eng_go_with_the_whigs 
-
-	ai_will_do = {
+		ai_will_do = {
 			factor = 0
 		}
 
-	completion_reward = {
-
-		remove_ideas = ENG_Irish_opposition
-
-		119 = {
-			if = {
-				limit = { is_owned_by = ENG }
-				add_core_of = IRE
-			}
+		completion_reward = {
+			SCO = { add_ideas = ENG_release_scotland }
 		}
-		113 = {
-			if = {
-				limit = { is_owned_by = ENG }
-				add_core_of = IRE
-			}
-		}
-		134 = {
-			if = {
-				limit = { is_owned_by = ENG }
-				add_core_of = IRE
-			}
-		}
-		135 = {
-			if = {
-				limit = { is_owned_by = ENG }
-				add_core_of = IRE
-			}
-		}
-
-		IRE = { 
-		transfer_state = 113
-		transfer_state = 119
-		transfer_state = 134
-		transfer_state = 135
-		}
-
-		puppet = IRE
 	}
+
+	focus = {
+		id = eng_reduce_scottish_autonomy
+		icon = GFX_integrate_scotland
+		prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
+		mutually_exclusive = { focus = eng_scottish_self_government }
+		x = -3
+		y = 3
+		cost = 10
+		relative_position_id = eng_go_with_the_whigs 
+
+		completion_reward = {
+			SCO = { add_ideas = ENG_integrate_scotland }
+		}
 
 	}
 
-###
+	focus = {
+		id = eng_crush_irish_catholics
+		icon = GFX_focus_abolish_metropolitans
+		prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government }
+		mutually_exclusive = { focus = eng_allow_irish_self_governance }
+		x = -5
+		y = 4
+		cost = 10
+		relative_position_id = eng_go_with_the_whigs 
 
-focus = {
-	id = eng_proclaim_great_britain
-	icon = GFX_focus_eng_the_sun_never_sets
-	prerequisite = { focus = eng_allow_irish_self_governance focus = eng_crush_irish_catholics}
-	x = -4
-	y = 5
-	cost = 10
-	relative_position_id = eng_go_with_the_whigs 
-
-	available = {
-		owns_state = 119 
-		owns_state = 126 
-
-		OR = {
-			AND = { owns_state = 121
-				NOT = { country_exists = SCO }
-			}
-			AND = {
-				SCO = { 
-					has_autonomy_state = autonomy_integrated_puppet 
-					is_subject_of = ENG
+		completion_reward = {
+			swap_ideas = {
+					remove_idea = ENG_Irish_opposition
+					add_idea = ENG_idea_catholics_suppressed
 				}
-				country_exists = SCO 
 			}
 		}
+
+	focus = {
+		id = eng_allow_irish_self_governance
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government}
+		mutually_exclusive = { focus = eng_crush_irish_catholics }
+		x = -3
+		y = 4
+		cost = 10
+		relative_position_id = eng_go_with_the_whigs 
+
+		ai_will_do = {
+			factor = 0
+		}
+
+		completion_reward = {
+
+			remove_ideas = ENG_Irish_opposition
+
+			119 = {
+				if = {
+					limit = { is_owned_by = ENG }
+					add_core_of = IRE
+				}
+			}
+			113 = {
+				if = {
+					limit = { is_owned_by = ENG }
+					add_core_of = IRE
+				}
+			}
+			134 = {
+				if = {
+					limit = { is_owned_by = ENG }
+					add_core_of = IRE
+				}
+			}
+			135 = {
+				if = {
+					limit = { is_owned_by = ENG }
+					add_core_of = IRE
+				}
+			}
+
+			IRE = { 
+				transfer_state = 113
+				transfer_state = 119
+				transfer_state = 134
+				transfer_state = 135
+			}
+
+			puppet = IRE
+		}
+
 	}
 
-	completion_reward = {
+	focus = {
+		id = eng_proclaim_great_britain
+		icon = GFX_focus_eng_the_sun_never_sets
+		prerequisite = { focus = eng_allow_irish_self_governance focus = eng_crush_irish_catholics}
+		x = -4
+		y = 5
+		cost = 10
+		relative_position_id = eng_go_with_the_whigs 
+
+		available = {
+			owns_state = 119 
+			owns_state = 126 
+
+			OR = {
+				AND = { owns_state = 121
+					NOT = { country_exists = SCO }
+				}
+				AND = {
+					SCO = { 
+						has_autonomy_state = autonomy_integrated_puppet 
+						is_subject_of = ENG
+					}
+					country_exists = SCO 
+				}
+			}
+		}
+
+		completion_reward = {
 			set_cosmetic_tag = ENG_unified
 			add_stability = 0.1
 			add_war_support = 0.1
@@ -1178,7 +1168,7 @@ focus = {
 
 	focus = {
 		id = eng_align_scotland
-		icon = GFX_goal_generic_major_alliance
+		icon = GFX_agree_scotland
 		prerequisite = {focus = eng_secure_london }
 		relative_position_id = eng_go_with_radical_republicans
 		x = 2
@@ -3320,9 +3310,8 @@ focus = {
 			add_political_power = 150
 		}
 	}
-##
 
-focus = {
+	focus = {
 		id = eng_tensions_in_the_north
 		icon = GFX_focus_on_scandinavia
 		prerequisite = { focus = eng_foreign_policy }
@@ -3342,9 +3331,9 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = eng_support_sweden
-		icon = GFX_sweden_flag
+		icon = GFX_agree_sweden
 		prerequisite = { focus = eng_tensions_in_the_north}
 		x = 5
 		y = 4
@@ -3362,9 +3351,9 @@ focus = {
 		}
 	} 
 
-focus = {
+	focus = {
 		id = eng_support_denmark
-		icon = GFX_denmark
+		icon = GFX_agree_denmark
 		prerequisite = { focus = eng_tensions_in_the_north}
 		x = 7
 		y = 4
@@ -3382,7 +3371,7 @@ focus = {
 		}
 	} 
 
-focus = {
+	focus = {
 		id = eng_volunteer_expedition
 		icon = GFX_focus_generic_manpower
 		prerequisite = { focus = eng_support_denmark focus = eng_support_sweden}
@@ -4433,7 +4422,7 @@ focus = {
 
 	focus = {
 		id = eng_the_anglo_dutch_union
-		icon = GFX_agree_netherlands
+		icon = GFX_goal_anglo_dutch_union
 		prerequisite = { focus = eng_go_with_the_whigs }
 		x = -9
 		y = 1
@@ -4474,7 +4463,7 @@ focus = {
 
 	focus = {
 		id = eng_integrate_the_dutch_administration
-		icon = GFX_focus_generic_treaty
+		icon = GFX_goal_generic_england_court
 		prerequisite = { focus = eng_the_anglo_dutch_union }
 		x = 0
 		y = 1
@@ -4510,7 +4499,7 @@ focus = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_war_support = 0.15
+			add_war_support = 0.10
 			add_state_claim = 15
 			add_state_claim = 19
 		}
@@ -4568,11 +4557,12 @@ focus = {
 	focus = {
 		id = eng_merge_the_voc_and_eic
 		icon = GFX_goal_VOC
-		prerequisite = { focus = eng_integrate_the_dutch_administration }
 		x = 1
 		y = 1
-		cost = 10
 		relative_position_id = eng_integrate_the_dutch_administration 
+		prerequisite = { focus = eng_integrate_the_dutch_administration }
+
+		cost = 10
 
 		available_if_capitulated = yes
 
@@ -4602,8 +4592,8 @@ focus = {
 			    target = MYS
 			}
 			create_wargoal = {
-				    type = annex_everything
-				    target = MDR
+				type = annex_everything
+				target = MDR
 			}
 			create_wargoal = {
 			    type = annex_everything
@@ -4637,7 +4627,7 @@ focus = {
 
 	focus = {
 		id = eng_tackle_the_giant
-		icon = GFX_attack_qing
+		icon = GFX_attack_the_qing
 		prerequisite = { focus = eng_master_of_india }
 		x = 1
 		y = 1

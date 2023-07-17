@@ -54,12 +54,11 @@ units = {
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
-
 	}
 	division = { # "2. Sjællandske Division"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 2
+			is_name_ordered = yes
+			name_order = 2
 		}
 		location = 3325  # Odense
 		division_template = "Infanteri Regiment"
@@ -69,8 +68,8 @@ units = {
 	}
 	division = { # "1. Jyske Division"
 		division_name = {
-				is_name_ordered = yes
-				name_order = 1
+			is_name_ordered = yes
+			name_order = 1
 		}
 		location = 394  # Aalborg
 		division_template = "Infanteri Regiment"
@@ -79,7 +78,7 @@ units = {
 
 	}
 	division = { 
-		name =   "2. Jyske Regiment"
+		name = "2. Jyske Regiment"
 		location = 3277  # Kolding
 		division_template = "Binær Regiment"
 		start_experience_factor = 0.2
@@ -95,69 +94,145 @@ units = {
 
 	}
 	division = { 
-		name =   "1. Christianborg Regiment"
+		name = "1. Christianborg Regiment"
 		location = 6115 
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "2. Christianborg Regiment"
+		name = "2. Christianborg Regiment"
 		location = 6115  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "1. Stavanger Regiment"
+		name = "1. Stavanger Regiment"
 		location = 53  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "2. Stavanger Regiment"
+		name = "2. Stavanger Regiment"
 		location = 53  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "3. Stavanger Regiment"
+		name = "3. Stavanger Regiment"
 		location = 53  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "1. Bergen Regiment"
+		name = "1. Bergen Regiment"
 		location = 122  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "1. Trondheim Regiment"
+		name = "1. Trondheim Regiment"
 		location = 3022  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "2. Trondheim Regiment"
+		name = "2. Trondheim Regiment"
 		location = 3022  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { 
-		name =   "1. Narvik Regiment"
+		name = "1. Narvik Regiment"
 		location = 192  
 		division_template = "Infanteri Regiment"
 		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
-
+	division = { 
+		name = "2. Narvik Regiment"
+		location = 192  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "3. Narvik Regiment"
+		location = 192   
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "4. Narvik Regiment"
+		location = 192   
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "1. Tromsø Regiment"
+		location = 11050  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "2. Tromsø Regiment"
+		location = 11050  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "3. Tromsø Regiment"
+		location = 11050  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "4. Tromsø Regiment"
+		location = 11050  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "5. Tromsø Regiment"
+		location = 11050  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name =   "1. Viborg Regiment"
+		location = 3206 
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "2. Viborg Regiment"
+		location = 3206  
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
+	division = { 
+		name = "3. Viborg Regiment"
+		location = 3206 
+		division_template = "Binær Regiment"
+		start_experience_factor = 0.2
+		start_equipment_factor = 0.9
+	}
 }
 
 ### Starting Production ###
