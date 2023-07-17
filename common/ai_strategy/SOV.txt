@@ -30,7 +30,7 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 	}
 	enable = {
 	    country_exists = SWE
-	#    date > 1700.9.12
+	    date > 1700.9.12
 		has_completed_focus = RUS_treaty_of_preobrazhenskoye
 	}
 	abort = {
@@ -59,10 +59,8 @@ RUS_do_not_engage_sweden_yet = { #Will not make Russia go to war with Sweden unt
 	}
 	abort = {
 		NOT = {
-		    OR = {
-				has_completed_focus = RUS_narva_campaign
-				country_exists = SWE
-			}
+		    date > 1700.11.7
+			country_exists = SWE
 		}
 	}
 	ai_strategy = {
