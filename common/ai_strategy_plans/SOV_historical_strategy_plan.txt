@@ -54,7 +54,7 @@ SOV_historical_plan = {
 		RUS_turn_to_the_steppes #14
 		RUS_crush_sweden #35 -> Aug 1700
 		RUS_reorganise_military_structure #70 -> 1700
-		RUS_peasent_draft
+		RUS_peasant_draft
 		RUS_standardized_equipment #70 -> Mid 1700
 		RUS_emergency_supply_relief
 		RUS_great_reforms_industrial_reform #70 -> Dec 1700

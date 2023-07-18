@@ -95,14 +95,11 @@ RUS_narva_campaign = { #Will make Russia solely focus on it's Narva Campaign aga
 	enable = {
 		country_exists = SWE
 		has_war_with = SWE
-		has_completed_focus = RUS_narva_campaign
 	}
 	abort = {
 		NOT = {
 			country_exists = SWE
 		}
-		has_completed_focus = RUS_defeat_at_narva
-	    has_completed_focus = RUS_victory_at_narva2
 	}
 	ai_strategy = {
 	    target_country = SWE
@@ -151,7 +148,6 @@ RUS_baltic_campaign = { #Will make Russia also include the Baltic Campaign again
 	enable = {
 		country_exists = SWE
 		has_war_with = SWE
-		has_completed_focus = RUS_baltic_campaign
 	}
 	abort = {
 		NOT = {

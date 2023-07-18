@@ -333,13 +333,10 @@ bookmarks = {
 			history = "ZAP_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				RUS_influx_of_russian_refugees
-				ZAP_decentralized_cossack_army
+				
 			}
 			focuses = {
-				ZAP_proclaim_cossack_hetmanate
-				ZAP_side_with_right_bank_cossacks
-				ZAP_switch_capital_to_poltava
+				
 			}
 		}
 		
