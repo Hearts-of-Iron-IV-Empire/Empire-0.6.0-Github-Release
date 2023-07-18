@@ -12,27 +12,6 @@ catholic_curia_power_gain = {
 	experience_gain_air = ROOT.opinion@PAP
 }
 
-GNW_planned_offensive = { # 0.6.5 Buster! - Glow Berries Replying to Kodexu about Swedish Focus Tree Rework, 7:20 PM EST 2023-03-30 in #Tester-Channel
-    icon = GFX_idea_chi_war_of_resistance2
-
-	army_attack_factor = 0.9
-	army_speed_factor = 0.75
-	ground_attack_factor = 0.75
-	local_org_regain = 0.5			
-}
-
-GNW_scorched_earth = { 
-    icon = GFX_idea_chi_war_of_resistance2
-	
-	out_of_supply_factor = 0.5
-	attrition = 0.5
-	army_attack_factor = -0.25
-	army_defence_factor = -0.25
-	army_speed_factor = -0.30
-	ground_attack_factor = -0.50
-	local_org_regain = -0.5
-}
-
 slave_state = {
 	icon = GFX_idea_bul_tobacco_exports
 	
