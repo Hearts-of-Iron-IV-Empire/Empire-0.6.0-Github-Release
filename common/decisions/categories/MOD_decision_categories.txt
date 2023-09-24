@@ -107,15 +107,6 @@ SPR_colonial_management = {
 	}
 }
 
-RUS_great_northern_war = {
-	allowed = {
-		OR = {
-			original_tag = SOV
-			tag = SWE
-		}	
-	}
-}
-
 PRS_expansion = {
 
 	icon = border_war

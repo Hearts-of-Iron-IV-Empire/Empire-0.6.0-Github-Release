@@ -30,8 +30,7 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 	}
 	enable = {
 	    country_exists = SWE
-	    date > 1700.9.12
-		has_completed_focus = RUS_treaty_of_preobrazhenskoye
+	    date > 1700.8.1
 	}
 	abort = {
 		NOT = {
@@ -48,44 +47,6 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 		type = antagonize
 		id = "SWE"
 		value = 100
-	}
-}
-RUS_do_not_engage_sweden_yet = { #Will not make Russia go to war with Sweden until certain circumstances are met
-	allowed = {
-		original_tag = SOV
-	}
-	enable = {
-		country_exists = SWE
-	}
-	abort = {
-		NOT = {
-		    date > 1700.11.7
-			country_exists = SWE
-		}
-	}
-	ai_strategy = {
-		type = dont_join_wars_with
-		id = DEN
-		value = 200
-		target_country = SOV
-	}
-	ai_strategy = {
-		type = dont_join_wars_with
-		id = POL
-		value = 200
-		target_country = SOV
-	}
-	ai_strategy = {
-		type = dont_join_wars_with
-		id = SAX
-		value = 200
-		target_country = SOV
-	}
-	ai_strategy = {
-		type = dont_join_wars_with
-		id = LAT
-		value = 200
-		target_country = SOV
 	}
 }
 RUS_narva_campaign = { #Will make Russia solely focus on it's Narva Campaign against Sweden during the Great Northern War
@@ -168,34 +129,6 @@ RUS_baltic_campaign = { #Will make Russia also include the Baltic Campaign again
 		manual_attack = yes
 	}
 }
-#RUS_early_vyborg_campaign = { #Will make Russia also include the Early Vyborg Campaign against Sweden during the Great Northern War
-#	allowed = {
-#		original_tag = SOV
-#	}
-#	enable = {
-#		country_exists = SWE
-#		has_war_with = SWE
-#		has_completed_focus = RUS_early_push_towards_vyborg
-#	}
-#	abort = {
-#		NOT = {
-#			country_exists = SWE
-#		}
-#		#TODO
-#	}
-#	ai_strategy = {
-#	    target_country = SWE
-#		type = front_control
-#		state = 146
-#		strategic_region = 13
- #       priority = 4
-  #      #ratio = 0.0 #TODO
-   #     ordertype = front
-	#	execution_type = balanced #TODO
-     #   execute_order = yes
-	#	manual_attack = yes
-	#}
-#}
 RUS_do_not_help_allies = { #Will not make Russia put it's army into Allied territory during the Great Nothern War to better help concentrate in it's campaign
 	allowed = {
 		original_tag = SOV

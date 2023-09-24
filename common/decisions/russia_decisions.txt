@@ -5,7 +5,7 @@ RUS_army_reform = {
 
 		available = {
 			has_army_experience > 49
-			has_completed_focus = RUS_army_reform
+			has_completed_focus = RUS_great_reforms_military_reform
 		}
 
 		cost = 0

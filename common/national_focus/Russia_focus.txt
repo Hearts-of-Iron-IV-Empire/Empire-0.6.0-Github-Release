@@ -1585,6 +1585,7 @@ default = no
 		cost = 10
 		relative_position_id = RUS_turn_to_the_steppes
 		prerequisite = { focus = RUS_invest_into_kalmyk }
+		prerequisite = { focus = RUS_destroy_caucasian_states }
 
 		available = {
 			KHL = { is_subject_of = SOV }
@@ -1787,7 +1788,7 @@ default = no
 	focus = {
 		id = RUS_destroy_khiva
 		icon =  GFX_attack_khiva
-		x = 0
+		x = 1
 		y = 3
 		cost = 5
 		relative_position_id = RUS_turn_to_the_steppes
@@ -1831,7 +1832,7 @@ default = no
 	focus = {
 		id = RUS_destroy_bukhara
 		icon =  GFX_attack_bukhara
-		x = 2
+		x = 3
 		y = 3
 		cost = 5
 		relative_position_id = RUS_turn_to_the_steppes
@@ -1879,7 +1880,7 @@ default = no
 		y = 0
 		cost = 10
 		relative_position_id = RUS_destroy_bukhara
-		prerequisite = { focus = RUS_reduce_kalmyk_autonomy }
+		prerequisite = { focus = RUS_reduce_kalmyk_autonomy focus = RUS_the_great_game }
 
 		search_filters = {FOCUS_FILTER_ANNEXATION}
 
@@ -2576,7 +2577,7 @@ default = no
 			}
 			if = {
 				limit = {
-					has_ideas = RUS_russians_fleeing_serfdom
+					has_idea = RUS_russians_fleeing_serfdom
 				}
 				remove_ideas = RUS_russians_fleeing_serfdom
 			}
