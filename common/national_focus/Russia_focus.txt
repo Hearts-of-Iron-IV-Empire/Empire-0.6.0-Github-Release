@@ -2720,7 +2720,7 @@ default = no
 		}
 
 		completion_reward = {
-			remove_ideas = RUS_boyar_duma
+			remove_ideas = boyar_duma
 		}
 	}
 
@@ -2784,7 +2784,7 @@ default = no
 
 		completion_reward = {
 			swap_ideas = {
-				remove_idea = RUS_boyar_duma
+				remove_idea = boyar_duma
 				add_idea = governing_senate
 			}
 		}
