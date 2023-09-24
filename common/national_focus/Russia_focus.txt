@@ -1127,6 +1127,9 @@ default = no
 					has_idea = RUS_russians_fleeing_serfdom
 				}
 				remove_ideas = RUS_russians_fleeing_serfdom
+				ZAP = {
+					remove_ideas = RUS_influx_of_russian_refugees
+				}
 			}
 			else = {
 				add_stability = 0.05
