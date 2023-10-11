@@ -1,4 +1,3 @@
-
 soundeffect = {
 	name = horse_walking
 	loop = yes
@@ -2702,18 +2701,6 @@ soundeffect =
 	max_audible = 1
 	max_audible_behaviour = fail
 }
-soundeffect =
-{
-	name = "alert_industrial_org_sizeup_sound"
-	volume = 0.35
-	sounds = {
-		sound = ui_mio_alert_01
-		sound = ui_mio_alert_02
-		sound = ui_mio_alert_03
-	}
-	max_audible = 1
-	max_audible_behaviour = fail
-}
 
 
 #### GEN_TRAIN ###
@@ -2851,6 +2838,7 @@ soundeffect = {
 	fade_out = 0.40
 	volume = 0.70
 }
+
 
 category = {
  name = "Voices"
@@ -4168,3 +4156,5 @@ soundeffect =
 	volume_random_offset = { 0.0 -0.15 }
 	playbackrate_random_offset = { 0.0 -0.15}
 }
+
+########## 

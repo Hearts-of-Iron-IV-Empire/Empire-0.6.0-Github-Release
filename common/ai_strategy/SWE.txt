@@ -1,147 +1,129 @@
-dislike_russia = {
+SWE_baltic_campaign = { #Will make Sweden solely focus on it's Baltic Campaign against Poland during the Great Northern War
+	allowed = {
+		original_tag = SWE
+	}
 	enable = {
-		tag = SWE
-		country_exists = SOV
+		NOT = {
+			SWE = { has_war_with = DEN }		
+		}
+		date > 1700.3.0
 	}
 	abort = {
-		NOT = { country_exists = SOV }
+		OR = {
+			NOT = {
+				country_exists = POL
+			}
+			SWE = {
+				controls_province = 6296
+			}
+		}	
 	}
-	
 	ai_strategy = {
-		type = antagonize
-		id = "SOV"
-		value = 200
-	}
-}
-dislike_denmark = {
-	enable = {
-		tag = SWE
-		country_exists = DEN
-	}
-	abort = {
-		has_completed_focus = SWE_mend_danish_ties
-	}
-	
-	ai_strategy = {
-		type = antagonize
-		id = "DEN"
-		value = 50
+	    target_country = POL
+		type = front_control
+		state = 11
+        strategic_region = 37
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
 	}
 
+	ai_strategy = {
+		type = prepare_for_war
+		id = POL
+		value = 500
+	}
+	ai_strategy = {
+		type = prepare_for_war
+		id = SOV
+		value = -200
+	}
 	ai_strategy = {
 		type = consider_weak
-		id = "DEN"
-		value = 100
-	}	
-}
-dislike_poland = {
-	enable = {
-		tag = SWE
-		country_exists = POL
-	}
-	abort = {
-		POL = { has_completed_focus = POL_align_sweden }
-	}
-	
-	ai_strategy = {
-		type = antagonize
-		id = "POL"
-		value = 4000
-	}
-}
-war_is_coming = {
-	enable = {
-		tag = SWE
-		country_exists = SOV
-		SOV = { has_completed_focus = RUS_treaty_of_preobrazhenskoye }
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "SOV"
-		value = 50
-	}
-	ai_strategy = {
-		type = prepare_for_war
-		id = "POL"
-		value = 300
-	}
-}
-
-war_is_coming_2 = {
-	enable = {
-		tag = SWE
-	}
-	abort = {
-		num_divisions > 100
-	}
-	ai_strategy = {
-		type = force_build_armies
-		value = 4000
-	}
-}
-
-SWE_area_priority = {
-	enable = {
-		original_tag = SWE
-	}
-
-	ai_strategy = {
-		type = area_priority
-		id = scandinavia
-		value = 10
-	}
-	ai_strategy = {
-		type = area_priority
-		id = baltic
+		id = SOV
 		value = 200
 	}
-	ai_strategy = {
-		type = area_priority
-		id = poland
-		value = 200 #encourage push into Poland
-	}
-	ai_strategy = {
-		type = area_priority
-		id = russia
-		value = 50
-	}
 }
-
-SWE_kill_poland = {
-	enable = {
+SWE_warsaw_campaign = { #Will make Sweden conquer it's way to Warsaw after capturing Kovno
+	allowed = {
 		original_tag = SWE
 	}
+	enable = {
+		SWE = {
+			controls_province = 6296
+		}
+	}
 	abort = {
-		POL = { has_capitulated = yes }
+		OR = {
+			NOT = {
+				country_exists = POL
+			}
+			SWE = {
+				controls_province = 3544
+			}
+		}	
 	}
 	ai_strategy = {
-		type = conquer
-		id = "POL"
-		value = 500
+	    target_country = POL
+		type = front_control
+		state = 10
+        strategic_region = 38
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
 	}
 	ai_strategy = {
-		type = conquer
-		id = "SOV"
-		value = -100 #kill Poland first
+		type = prepare_for_war
+		id = SOV
+		value = -200
 	}
 	ai_strategy = {
-		type = invade
-		id = "POL"
-		value = -100
+		type = consider_weak
+		id = SOV
+		value = 200
+	}
+}
+SWE_krakow_campaign = { #Will make Sweden conquer it's way to Krakow after capturing Warsaw
+	allowed = {
+		original_tag = SWE
+	}
+	enable = {
+		SWE = {
+			controls_province = 3544
+		}
+	}
+	abort = {
+		NOT = {
+			country_exists = POL
+		}
+		#TODO
 	}
 	ai_strategy = {
-		type = conquer
-		id = "LAT"
-		value = 500
+	    target_country = POL
+		type = front_control
+		state = 88
+        strategic_region = 38
+        priority = 5
+        ratio = 0.5 #TODO
+        ordertype = front
+		execution_type = rush #TODO
+        execute_order = yes
+		manual_attack = yes #TODO
 	}
 	ai_strategy = {
-		type = invade
-		id = "LAT"
-		value = -100
+		type = prepare_for_war
+		id = SOV
+		value = -200
 	}
 	ai_strategy = {
-		type = ignore_army_incompetence
-		value = 100
+		type = consider_weak
+		id = SOV
+		value = 200
 	}
-
 }
