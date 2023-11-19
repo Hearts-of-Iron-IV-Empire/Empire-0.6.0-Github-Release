@@ -3,7 +3,7 @@ RUS_dont_call_in_zap_to_gtw = { # Prevents Russia from calling in Zaparozhia to 
 		original_tag = SOV
 	}
 	enable = {
-	    country_exists = ZAP
+	    country_exists = ZAP #Test
 		has_country_flag = dont_call_in_zap_to_gtw
 	}
 	abort = {
