@@ -5,10 +5,10 @@ oob = "Caucasian_minor_1699"
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
-	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
 	tech_mountaineers = 1
+	basic_cavalry = 1
 }
 
 if = {
@@ -31,6 +31,8 @@ if = {
 add_ideas = {
 	sunni
 }
+
+recruit_character = CAU_Kurgoqo_Atajuq
 
 set_politics = {
 	ruling_party = neutrality

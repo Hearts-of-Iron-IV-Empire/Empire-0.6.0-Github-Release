@@ -1,18 +1,18 @@
-1 117 
-1 121 
+1 117 # Novgorod
+1 121 # Yaroslavl
 1 156 # Falun
 1 181 # Jama
 1 271 # Norwich
 1 310 # Dyneburg
 1 321 # Rostock
 1 391 # Amsterdam
+1 418 # Kharkov
 1 425 # Braunschweig
-1 449
 1 476 # Vinnytsia
 1 514 # Dresden
 1 516 # Brussels
 1 521 # Vosges
-1 525 
+1 525 # Kyiv
 1 538 # Thüringen
 1 564 # Kassel
 1 587 # Köln
@@ -27,29 +27,47 @@
 1 853 # Apache
 1 913 # Cherokee Nation
 1 937 # Cetinje 
-1 949 
-1 1086 
+1 949 # Sofya
+1 1086 # Jerusalem 
 1 1092 # Hiroshima
 1 1145 # Algiers
 1 1149 # Tripoli
 1 1182 # Edo
+1 1213 # Kandy
 1 1330 # Yangoon
 1 1359 # Bijapur
+1 1421 # Zamboanga City
 1 1450 # Tarki
+1 1455 # Khundzia
 1 1459 # Tashkent
 1 1464 # Vientiane
+1 1479 # Khiva
+1 1488 # Chiang Mai
+1 1492 # Ava
+1 1573 # Bukhara
+1 1580 # Rowzi
 1 1587 # Chickasaw
 1 1793 # Navajo
 1 1896 # Tabriz
+1 1909 # Mane
+1 1910 # Srinagar
+1 1914 # Sennar
 1 1965 # Mexico 
+1 1975 # Lulami
+1 1984 # Gondar
+1 2025 # Igala 
 1 2026 # Isfahan
 1 2086 # Shahjahanabad
-1 2097 
+1 2097 # Baghdad 
+1 2115 # Kinguele
 1 2152 # Asunción
+1 2180 # Malawa
+1 2216 # Mutapa
 1 3140 # Tikhvin 
 1 3211 # Gravehenge
-1 3320 
-1 3335 
+1 3273 # Glasgow
+1 3320 # Vilnius 
+1 3335 # Bryansk 
 1 3369 # Bristol
 1 3529 
 1 3544 # Warsaw
@@ -63,19 +81,33 @@
 1 3776 # Mantua
 1 3780 # Milan
 1 3816 
+1 3878 # New York
 1 3938 
+1 3991 # Tlemcen
 1 3992 
 1 4075 # Hanoi
 1 4111 
+1 4128 # Chokwe
+1 4302 # Angkor
+1 4379 # Phu Xuan
+1 4401 # Saigon
+1 4424 # Tanjung Puteri
 1 4482 # Johor Bahru
 1 4516 # Patna
 1 4557 # Mandla
 1 4565 # Choctaw
+1 4569 # Fort Saint-Louis
 1 4594 # Central Creek
 1 4619 
 1 4709 # Urumqi
+1 4927 # Ségou
+1 4952 # Benin 
+1 4957 # Kurassa
 1 4971 # Ajmer
+1 4972 # Kalo
 1 4984 # Jodhpur
+1 4997 # Ngazargamu
+1 5029 # Mashad
 1 5033 # Lhasa
 1 5037 # Mecca
 1 5086 # Agra
@@ -97,7 +129,6 @@
 1 6488 # Frankfurt
 1 6508 # Baturyn
 1 6521 # Berlin
-1 6554 
 1 6557 # Równe
 1 6568 # Heidelberg
 1 6613 
@@ -108,6 +139,7 @@
 1 6780 # Turin
 1 6788 # Genoa
 1 6790 # Parma 
+1 6845 # Philadelphia
 1 6889 # Ragusa
 1 6902 # Badajoz
 1 6983 # Banja Luka
@@ -119,21 +151,29 @@
 1 7101 
 1 7125 # Hanseong
 1 7183 # Sevilla
+1 7232 # Pratapgad
 1 7376 # Phnom Penh
 1 7381 # Batavia
 1 7408 # Bangkok
 1 7436 # Gingee
 1 7597 # Kyzyl Orda
+1 7658 # Kutaraja
+1 7972 # Linguére 
+1 7980 # Harar
 1 8010 # Punakha
 1 8011 # Bangalore
 1 8013 # Kalat
+1 8015 # Anyam-Godo
 1 8087 # Darul Jihad 
+1 8248 # Ndongo
 1 9262 # Liepaja
 1 9269 # York
+1 9297 # Worcester
 1 9340 
 1 9347 # Hamburg
 1 9392 # Edinburgh
 1 9427 
+1 9461 # Kamianyi Brid
 1 9503 
 1 9517 # Stuttgart
 1 9522 # Aachen
@@ -159,21 +199,26 @@
 1 10125 # Nagoya
 1 10254 # Nassau
 1 10265 # Manila
+1 10270 # Pune
 1 10311 # Aurangabad
 1 10444 # Sapporo 
 1 10493 # Rönneburg
 1 10737 
 1 10760 # Muscat
+1 10825 # Jumla
+1 10836 # Ouagadougou
 1 10840 # Sana'a
 1 10887 # Lahore
+1 10919 # Abomey
 1 10946 # Sao Salvador
+1 10968 # Songo
+1 10986 # Songo
 1 11114 # Karlstad
 1 11202 # Pleskov
 1 11225 
 1 11234 # Velikiye Luki
 1 11305 # Lübeck
 1 11388 # Münster
-1 11412
 1 11417 # Würzburg
 1 11437 # Dnipropetrovsk
 1 11467 
@@ -181,11 +226,12 @@
 1 11483 # Lille
 1 11506 
 1 11519 # Liège
-1 11542 
+1 11542 # Prague 
 1 11544 # Nuremberg
 1 11581 # Zagreb
 1 11584 # Venice
 1 11586 
+1 11614 # Slabada
 1 11659 # Debrecen
 1 11666 # Vienna
 1 11696 # Stavropol
@@ -194,14 +240,23 @@
 1 11805 # Lisbon
 1 11825 # Valladolid
 1 11899 # Sarajevo
+1 11909 # Nghe An
 1 11932 # Naha
 1 11969 # Tunis
 1 12003 # Valleta
+1 12147 # Kansala
 1 12149 # Québec
 1 12247 # Tiruchirapalli
-1 12295 # Satara
 1 12320 # Yerevan
-1 12324 # Khiva
 1 12473 
 1 12535 # Moson Kahni
+1 12762 # Oyo
+1 12775 # Middle Kongo
+1 12787 # Kumasi
+1 12896 # Demo Ambuila
+1 12925 # M'Banza Kongo
+1 12975 # Laongo 
 1 12997 # Lima
+1 13281 # Satara
+1 13301 # Ikkeri
+1 13304 # Kollam

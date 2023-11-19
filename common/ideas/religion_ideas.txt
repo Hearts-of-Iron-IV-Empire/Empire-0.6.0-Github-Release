@@ -28,23 +28,9 @@ ideas = {
 			}
 
 			available = {
-				any_neighbor_country = {
-				    has_idea = catholic
-				}
-				NOT = {
-					OR = {
-						has_idea = sunni
-						has_idea = shiite
-						has_idea = hinduism
-						has_idea = totemism
-						has_idea = confucianism
-						has_idea = buddhism
-						has_idea = mahayana
-						has_idea = vajrayana
-						has_idea = shinto
-						has_idea = theravada
-						has_idea = fetishist
-					}
+				custom_trigger_tooltip = {
+					tooltip = religion_available
+					always = no
 				}
 			}
 

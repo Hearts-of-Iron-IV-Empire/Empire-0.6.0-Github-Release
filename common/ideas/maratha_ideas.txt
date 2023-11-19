@@ -12,9 +12,11 @@ ideas = {
 			picture = SPR_masters_of_our_own_fate
 
 			modifier = {
-				army_core_attack_factor = 0.15
-				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.25
+				army_core_defence_factor = 0.25
 				surrender_limit = 0.7
+				army_morale_factor = 0.10
+				army_org_regain = 0.10
 			}
 		}
 		MAR_traitors_everywhere = {
@@ -30,7 +32,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.1
-				army_org_factor = -0.03
+				army_org_factor = -0.05
 				consumer_goods_factor = 0.1
 			}
 		}
@@ -47,7 +49,7 @@ ideas = {
 
 			modifier = {
 				political_power_gain = -0.15
-				army_org_factor = -0.05
+				army_org_factor = -0.07
 				consumer_goods_factor = 0.15
 			}
 		}
@@ -64,17 +66,17 @@ ideas = {
 
 			modifier = {
 				army_org_factor = -0.05
-				army_attack_factor = 0.05
+				army_attack_factor = 0.10
 				army_speed_factor = 0.1
-				supply_consumption_factor = -0.05
+				supply_consumption_factor = -0.15
 			}
 		}
 		MAR_continue_the_fight = {
 			picture = maratha_resistance
 	       	targeted_modifier = {
 				tag = RAJ
-				attack_bonus_against = 0.15
-				defense_bonus_against = 0.15
+				attack_bonus_against = 0.20
+				defense_bonus_against = 0.20
 			}
 	  	}
 	}

@@ -46,9 +46,10 @@ spriteTypes = {
 		name = "GFX_idea_bureaucratic_gridlock"
 		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
 	}
+	
 	SpriteType = {
-		name = "GFX_idea_bureaucratic_gridlock"
-		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+		name = "GFX_idea_dhimmi_tolerance"
+		texturefile = "gfx/interface/ideas/idea_dhimmi_tolerance.dds" 
 	}
 	
 	SpriteType = {

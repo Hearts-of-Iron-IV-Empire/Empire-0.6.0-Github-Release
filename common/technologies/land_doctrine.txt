@@ -784,7 +784,6 @@ technologies = {
 		
 		enable_tactic = tactic_elastic_defense
 		
-		
 		path = {
 			leads_to_tech = intergrated_support 
 			research_cost_coeff = 1
@@ -794,7 +793,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		
 		doctrine = yes	
 		research_cost = 4.5
 		
@@ -803,7 +801,6 @@ technologies = {
 			cat_superior_firepower
 		}
 
-		
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 0 y = 4 }
@@ -1009,13 +1006,11 @@ technologies = {
 	sup_mechanized_offensive = {
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_all_armor = {
+		cavalry = {
 			breakthrough = 0.10
 		}
 		
-		
 		enable_tactic = tactic_blitz
-		
 		
 		path = {
 			leads_to_tech = concentrated_fire_plans 
@@ -1025,7 +1020,6 @@ technologies = {
 			leads_to_tech = centralized_fire_control 
 			research_cost_coeff = 1
 		}
-
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -1106,7 +1100,7 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 		
-		category_all_armor = {
+		cavalry = {
 			hard_attack = 0.10
 			soft_attack = 0.10
 		}
@@ -1117,7 +1111,6 @@ technologies = {
 			leads_to_tech = tactical_control 
 			research_cost_coeff = 1
 		}
-
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -1126,7 +1119,6 @@ technologies = {
 			land_doctrine
 			cat_superior_firepower
 		}
-
 		
 		folder = {
 			name = land_doctrine_folder
@@ -1328,20 +1320,15 @@ technologies = {
 		}
 		cavalry = {
 			max_organisation = 2
-		}
-
-		category_all_armor = {
 			default_morale = 0.05
 		}
 
-		
 		enable_tactic = tactic_tactical_withdrawal
 		
 		path = {
 			leads_to_tech = shock_and_awe 
 			research_cost_coeff = 1
 		}
-
 		
 		doctrine = yes	
 		research_cost = 4.5
@@ -1351,7 +1338,6 @@ technologies = {
 			cat_superior_firepower
 		}
 
-		
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 16 }
@@ -1880,15 +1866,11 @@ technologies = {
 		xp_unlock_cost = 100
 		cavalry = {
 			max_organisation = 2
-		}
-		category_all_armor = {
 			default_morale = 0.1
 		}
-
 		
 		enable_tactic = tactic_blitz
 		enable_tactic = tactic_elastic_defense
-		
 		
 		path = {
 			leads_to_tech = infiltration_assault 
@@ -1903,7 +1885,6 @@ technologies = {
 			cat_grand_battle_plan
 		}
 
-		
 		folder = {
 			name = land_doctrine_folder
 			position = { x = 2 y = 10 }
@@ -2442,12 +2423,10 @@ technologies = {
 	mechanized_wave = {
 		cavalry = {
 			max_organisation = 2
+			default_morale = 0.1
 		}
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_all_armor = {
-			default_morale = 0.1
-		}
 
 		amphibious_mechanized = {
 			max_organisation = 10

@@ -170,11 +170,6 @@ spriteTypes = {
 	}	
 
 	SpriteType = {
-		name = "GFX_JAP_motorized_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/JAP_motorized_equipment_1.dds"
-	}
-
-	SpriteType = {
 		name = "GFX_USA_motorized_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/USA_motorized_equipment_1.dds"
 	}
@@ -2399,12 +2394,12 @@ spriteTypes = {
 
 	SpriteType = {
 		name = "GFX_improved_heavy_shell_medium"
-		texturefile = "gfx/interface/technologies/improved_heavy_shell.dds"
+		texturefile = "gfx/interface/technologies/chain_shot2.dds"
 	}
 
 	SpriteType = {
 		name = "GFX_basic_heavy_shell_medium"
-		texturefile = "gfx/interface/technologies/basic_heavy_shell.dds"
+		texturefile = "gfx/interface/technologies/chain_shot.dds"
 	}
 
 	SpriteType = {

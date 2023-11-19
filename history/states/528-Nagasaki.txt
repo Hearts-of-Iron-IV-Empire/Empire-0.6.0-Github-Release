@@ -4,7 +4,7 @@ state={
 	manpower = 4503000
 	state_category = large_city
 	resources={
-		chromium=52 # was: 88
+		chromium=10 # was: 88
 	}
 
 	history={
@@ -12,10 +12,10 @@ state={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			industrial_complex = 2
 			9950 = {
-				naval_base = 6
+				naval_base = 4
 			}
 		}
 		victory_points = {
@@ -27,13 +27,6 @@ state={
 		victory_points = {
 			9950 30
 		}
-		1939.1.1 = {
-			buildings = {
-				dockyard = 4
-				industrial_complex = 3
-			}
-		}
-
 	}
 
 	provinces={

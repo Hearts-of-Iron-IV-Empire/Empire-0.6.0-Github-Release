@@ -619,7 +619,6 @@ country_event = {
 			}
 			SOV = {
 				remove_ideas = great_turkish_war
-				add_ideas = RUS_ottoman_standoff
 				create_faction = "Anti-Swedish Coalition"
 				218 = {
 				    set_border_war = yes
@@ -941,8 +940,6 @@ country_event = {
 			name = "Joseph I"
 			picture = "joseph_i.dds"
 			ideology = despotism
-			traits = {	
-			}
 		}
 		
 		name = "Long live the king!"
@@ -1012,7 +1009,131 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {	
-		name = "It is no like we have a say in the matter..."
+		name = "It is not like we much say in the matter..."
 	}
 }
 
+country_event = {
+	id = austria.27
+	title = austria.27.t
+	desc = austria.27.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Fine, we accept...
+		name = austria.27.a
+		AUS = {
+			country_event = {
+				id = austria.28
+			}
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+
+	option = { # How bout we become a puppet instead? We'll cede some provinces as well.
+		name = austria.27.b
+		AUS = {
+			country_event = {
+				id = austria.29
+				days = 2
+			}
+		}
+		add_stability = 0.10
+		add_war_support = -0.20
+		ai_chance = {
+			factor = 80
+		}
+	}
+
+	option = { # We will never surrender!
+		name = austria.27.c
+		AUS = {
+			country_event = {
+				id = austria.30
+				days = 2
+			}
+		}
+		add_stability = -0.10
+		add_war_support = 0.20
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Papal States accept annexation
+country_event = {
+	id = austria.28
+	title = austria.28.t
+	desc = austria.28.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Great.
+		name = austria.28.a
+		annex_country = {
+			target = PAP
+			transfer_troops = no
+		}
+		add_political_power = 50
+		add_stability = 0.05
+	}
+}
+
+# Papal States wants to be a vassal instead
+country_event = {
+	id = austria.29
+	title = austria.29.t
+	desc = austria.29.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Hum. Alright.
+		name = austria.29.a
+		AUS = {
+			puppet = PAP
+			puppet = PRM
+			transfer_state = 789
+			transfer_state = 788
+		}
+		add_political_power = 50
+		add_stability = 0.05
+		ai_chance = {
+			factor = 90
+		}
+	}
+
+	option = { # No.
+		name = austria.29.b
+		add_war_support = 0.05
+		declare_war_on = {
+			target = PAP
+		}
+		ai_chance = {
+			factor = 10
+		}
+	}
+}
+
+# Papal States says no
+country_event = {
+	id = austria.30
+	title = austria.30.t
+	desc = austria.30.d
+
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # War it is then!
+		name = austria.30.a
+		add_war_support = 0.05
+		declare_war_on = {
+			target = PAP
+		}
+	}
+}

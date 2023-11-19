@@ -1,13 +1,15 @@
-state=
-{
+state={
 	id=647
 	name="STATE_647"
 	state_category = small_island
 	manpower = 12100
 	history= {
-		owner = UNC
+		owner = SPR
 		buildings = {
 			infrastructure = 1
+			12103 = {
+				naval_base = 3
+			}
 		}
 	}
 	provinces={

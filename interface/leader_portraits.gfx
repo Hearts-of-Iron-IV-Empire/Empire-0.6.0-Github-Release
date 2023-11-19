@@ -1,6 +1,34 @@
 spriteTypes = {
 
 	########## MOD Leaders ############
+	
+	### Qing ###
+
+	spriteType = {
+		name = "GFX_Kangxi_Emperor"
+		texturefile = "gfx/leaders/CHI/Kangxi_Emperor.dds"
+	}
+	
+	### Tunisia ###
+
+	spriteType = {
+		name = "GFX_Mourad_III"
+		texturefile = "gfx/leaders/TUN/Mourad_III.dds"
+	}
+
+	### Kabardia ###
+	
+	spriteType = {
+		name = "GFX_Kurgoqo_Atajuq"
+		texturefile = "gfx/leaders/CAU/Kurgoqo_Atajuq.dds"
+	}
+
+	### Ireland ###
+		
+	spriteType = {
+		name = "GFX_James_Stuart"
+		texturefile = "gfx/leaders/IRE/The_Old_Pretender.dds"
+	}
 
 	#### Morocco ####
 
@@ -7222,10 +7250,6 @@ spriteTypes = {
 		texturefile = "gfx/leaders/Europe/Portrait_Europe_Generic_3.dds"
 	}
 
-	spriteType = {
-		name = GFX_portrait_Johan_Nygaardsvold
-		texturefile = "gfx/leaders/NOR/Portrait_Norway_Johan_Nygaardsvold.dds"
-	}
 
 	spriteType = {
 		name = GFX_portrait_Vidkun_Quisling

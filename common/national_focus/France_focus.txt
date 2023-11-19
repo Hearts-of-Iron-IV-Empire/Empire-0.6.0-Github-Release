@@ -2055,7 +2055,7 @@ focus_tree = {
 	
 	focus = { 
 		id = FRA_industry_civ_1
-		icon = GFX_goal_generic_construct_civ_factory
+		icon = GFX_wine_glass_icon
 		prerequisite = { focus = FRA_industry_1 }
 		x = 2
 		y = 1
@@ -2168,32 +2168,32 @@ focus_tree = {
 	focus = { 
 		id = FRA_civil_university
 		icon = GFX_generic_education
-		prerequisite = { focus = FRA_inland_infrastructure }
 		x = 0
 		y = 1
 		relative_position_id = FRA_inland_infrastructure
+		prerequisite = { focus = FRA_inland_infrastructure }
+
 		cost = 10
-		available_if_capitulated = yes 
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
 		ai_will_do = { 
  			factor = 1
  		} 
-		completion_reward = {
-			add_research_slot= 1
-		}
 	}
 	
 	focus = { 
 		id = FRA_resource_1
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = FRA_inland_infrastructure }
+		icon = GFX_goal_generic_wheat
 		x = 2
 		y = 1
 		relative_position_id = FRA_inland_infrastructure
+		prerequisite = { focus = FRA_inland_infrastructure }
+
 		cost = 10
-		available_if_capitulated = yes 
-		ai_will_do = { 
- 			factor = 1
- 		} 
+	
 		completion_reward = {
 			add_resource = {
 				type = oil
@@ -2201,19 +2201,21 @@ focus_tree = {
 				state = 18
 			}
 		}
-	}
-	focus = { 
-		id = FRA_resource_2
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = FRA_resource_1 }
-		x = 0
-		y = 1
-		relative_position_id = FRA_resource_1
-		cost = 10
-		available_if_capitulated = yes 
+
 		ai_will_do = { 
  			factor = 1
  		} 
+	}
+	focus = { 
+		id = FRA_resource_2
+		icon = GFX_silver_icon
+		x = 0
+		y = 1
+		relative_position_id = FRA_resource_1
+		prerequisite = { focus = FRA_resource_1 }
+
+		cost = 10
+
 		completion_reward = {
 			add_resource = {
 				type = steel
@@ -2221,6 +2223,10 @@ focus_tree = {
 				state = 31
 			}
 		}
+
+		ai_will_do = { 
+ 			factor = 1
+ 		} 
 	}
 
 	focus = { 
@@ -2312,19 +2318,21 @@ focus_tree = {
 
 	focus = { 
 		id = FRA_military_university
-		icon = GFX_focus_research
-		prerequisite = { focus = FRA_border_infrastructure }
+		icon = GFX_research_empire
 		x = 0
 		y = 1
 		relative_position_id = FRA_border_infrastructure
+		prerequisite = { focus = FRA_border_infrastructure }
+
 		cost = 10
-		available_if_capitulated = yes 
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+
 		ai_will_do = { 
  			factor = 1
  		} 
-		completion_reward = {
-			add_research_slot= 1
-		}
 	}
 
 	focus = { 
@@ -2427,35 +2435,42 @@ focus_tree = {
 	
 	focus = { 
 		id = FRA_industry_mil_2
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = FRA_expand_harbour }
-		prerequisite = { focus = FRA_military_university }
+		icon = GFX_tanegashima
 		x = 0
 		y = 3
 		relative_position_id = FRA_industry_mil_1
+		prerequisite = { focus = FRA_expand_harbour }
+		prerequisite = { focus = FRA_military_university }
+
 		cost = 10
-		available_if_capitulated = yes 
-		ai_will_do = { 
- 			factor = 1
- 		} 
 		completion_reward = {
-			25 = {
-			add_extra_state_shared_building_slots = 1
+			random_owned_controlled_state = {
+				prioritize = {
+					25
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
-			26 = {
-			add_extra_state_shared_building_slots = 1
+			random_owned_controlled_state = {
+				prioritize = {
+					26
+				}
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
-			}			
+			}		
 		}
+
+		ai_will_do = { 
+ 			factor = 1
+ 		} 
 	}
 
 
@@ -2480,7 +2495,7 @@ focus_tree = {
 		id = FRA_expand_musketeer_force
 		icon = GFX_musketeer_hat_icon
 		prerequisite = { focus = FRA_raise_military_budget }
-		mutually_exclusive = { focus = FRA_revolutionairy_warfare }
+		mutually_exclusive = { focus = FRA_revolutionary_warfare }
 		x = -3
 		y = 1
 		cost = 10
@@ -2601,14 +2616,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_revolutionairy_warfare
-		icon = GFX_goal_generic_major_war
-		prerequisite = { focus = FRA_raise_military_budget }
-		mutually_exclusive = { focus = FRA_expand_musketeer_force }
+		id = FRA_revolutionary_warfare
+		icon = GFX_dragoon_helmet_icon
 		x = 3
 		y = 1
 		cost = 10
 		relative_position_id = FRA_raise_military_budget
+		prerequisite = { focus = FRA_raise_military_budget }
+		mutually_exclusive = { focus = FRA_expand_musketeer_force }
 
 		completion_reward = {
 			army_experience = 20
@@ -2618,7 +2633,7 @@ focus_tree = {
 	focus = {
 		id = FRA_school_of_superiour_firepower
 		icon = GFX_field_gun
-		prerequisite = { focus = FRA_revolutionairy_warfare }
+		prerequisite = { focus = FRA_revolutionary_warfare }
 		mutually_exclusive = { focus = FRA_school_of_mobile_warfare }
 		x = 1
 		y = 2
@@ -2699,7 +2714,7 @@ focus_tree = {
 	focus = {
 		id = FRA_school_of_mobile_warfare
 		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = FRA_revolutionairy_warfare }
+		prerequisite = { focus = FRA_revolutionary_warfare }
 		mutually_exclusive = { focus = FRA_school_of_superiour_firepower }
 		x = 5
 		y = 2
@@ -2717,7 +2732,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = FRA_revolutionairy_cavalry
+		id = FRA_revolutionary_cavalry
 		icon = GFX_cavalry_icon
 		prerequisite = { focus = FRA_school_of_mobile_warfare }
 		x = 4
@@ -2738,7 +2753,7 @@ focus_tree = {
 	focus = {
 		id = FRA_cavalry_blitz
 		icon = GFX_french_cavalryman
-		prerequisite = { focus = FRA_revolutionairy_cavalry }
+		prerequisite = { focus = FRA_revolutionary_cavalry }
 		x = 4
 		y = 4
 		cost = 10

@@ -590,6 +590,13 @@ SPR_overseas_colonies_category = {
 		
 		cost = 50
 
+		custom_cost_trigger = {
+			check_variable = {
+				colonial_funding > 0
+			}
+		}
+		custom_cost_text = decision_give_400_reales
+
 		days_remove = 40
 
 		modifier = {
@@ -601,8 +608,6 @@ SPR_overseas_colonies_category = {
 				var = colonial_funding
 				value = 400
 			}
-
-			custom_effect_tooltip = give_400_funds
 		}
 
 		ai_will_do = {
@@ -614,6 +619,12 @@ SPR_overseas_colonies_category = {
 		
 		cost = 50
 
+		custom_cost_trigger = {
+			check_variable = {
+				colonial_funding > 400
+			}
+		}
+		custom_cost_text = decision_cost_400_reales
 		complete_effect = {
 			add_to_variable = {
 				var = creole_elite_influence
@@ -629,8 +640,7 @@ SPR_overseas_colonies_category = {
 				var = colonial_funding
 				value = -400
 			}
-
-			custom_effect_tooltip = cost_400_decrease_10
+			custom_effect_tooltip = decrease_10_increase_5
 		}
 
 		ai_will_do = {
@@ -653,6 +663,13 @@ SPR_overseas_colonies_category = {
 		}
 		
 		cost = 50
+
+		custom_cost_trigger = {
+			check_variable = {
+				colonial_funding > 250
+			}
+		}
+		custom_cost_text = decision_cost_250_reales
 
 		days_remove = 20
 
@@ -708,6 +725,11 @@ SPR_overseas_colonies_category = {
 		}
 
 		cost = 70
+		
+		custom_cost_trigger = {
+			has_completed_focus = SPR_establish_royal_monopolies
+		}
+		custom_cost_text = decision_give_300_reales
 
 		days_remove = 80
 
@@ -720,8 +742,6 @@ SPR_overseas_colonies_category = {
 			}
 
 			set_country_flag = established_trading_companies
-
-			custom_effect_tooltip = give_300_funds
 		}
 
 		remove_effect = {
@@ -744,6 +764,13 @@ SPR_overseas_colonies_category = {
 
 		cost = 60
 
+		days_re_enable = 70
+
+		custom_cost_trigger = {
+			has_completed_focus = SPR_reinforce_colonial_garrisons
+		}
+		custom_cost_text = decision_cost_300_reales
+
 		complete_effect = {
 			add_stability = -0.02
 			add_manpower = 3000
@@ -751,8 +778,6 @@ SPR_overseas_colonies_category = {
 				var = colonial_funding
 				value = -300
 			}
-
-			custom_effect_tooltip = costs_300
 		}
 
 		ai_will_do = {
@@ -768,6 +793,11 @@ SPR_overseas_colonies_category = {
 		}
 
 		cost = 30
+
+		custom_cost_trigger = {
+			has_completed_focus = SPR_spread_the_true_faith
+		}
+		custom_cost_text = decision_cost_500_reales
 
 		complete_effect = {
 			add_stability = 0.05

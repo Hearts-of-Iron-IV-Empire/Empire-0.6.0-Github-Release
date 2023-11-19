@@ -1,13 +1,14 @@
 focus_tree = { 
 	id = Polish_focus
+
 	country = {
-	factor = 0
-	
-	modifier = {
-		add = 20
-		tag = POL
+		factor = 0
+		
+		modifier = {
+			add = 20
+			tag = POL
+		}
 	}
-}
 
 #focus = {
 #	id = POL_debate_absolutism
@@ -33,51 +34,32 @@ focus_tree = {
 #		country_event = { id = poland.2 days = 5 }
 #	}
 #}
+	default = no
 
-	focus = {
-		id = POL_found_order_of_the_white_eagle
-		icon = GFX_POL_regency_council_focus
-		x = 6
-		y = 10
-		cost = 10
-		prerequisite = { focus = POL_i_am_the_king focus = POL_end_paralysis}
-
-		available = {
-		}
-
-		ai_will_do = { 
-			factor = 1000
-		}
-		
-
-		completion_reward = {
-			add_stability = 0.15
-			add_political_power = 100
-		}
-	}
+	continuous_focus_position = { x = 50 y = 1450 }
 
 	#KEEP AUGUST TREE
 
 	focus = {
 		id = POL_restructure_poland
-		icon = GFX_POL_regency_council_focus
+		icon = GFX_polish_eagle_icon
 		mutually_exclusive = { focus = POL_depose_august }
 		x = 6
 		y = 0
-		cost = 10
-
-		ai_will_do = { 
-			factor = 100
-		}
+		cost = 5
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.10
 			add_ai_strategy = {
 				type = befriend
 				id = SOV
 				value = 200
 			}
 			set_major = yes
+		}
+
+		ai_will_do = { 
+			factor = 100
 		}
 	}
 
@@ -230,7 +212,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_carolean_support_in_domestic_affairs
-		icon = GFX_focus_carolus_rex
+		icon = GFX_carolus_rex
 		x = 0
 		y = 2
 		cost = 5
@@ -238,6 +220,12 @@ focus_tree = {
 		relative_position_id = POL_strenghten_swedish_ties
 
 		available = {
+			SWE = {
+				has_opinion = {
+				    target = POL
+				    value > 49
+				}
+			}
 		}
 
 		completion_reward = {
@@ -1356,16 +1344,13 @@ focus_tree = {
 	focus = {
 		id = POL_no_compromise
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = POL_motion_of_moderate_modernization }
-		mutually_exclusive = { focus = POL_compromise }
 		x = -3
 		y = 3
-		cost = 10
 		relative_position_id = POL_question_of_absolutism
+		prerequisite = { focus = POL_motion_of_moderate_modernization }
+		mutually_exclusive = { focus = POL_compromise }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 10
 
 		available = { has_country_flag = pol_bill_was_vetoed }
 
@@ -1375,20 +1360,20 @@ focus_tree = {
 			activate_mission = POL_reform_nation
 			custom_effect_tooltip = POL_must_abolish_within_2_years
 		}
+		ai_will_do = { 
+			factor = 1
+		}
 	}
 
 	focus = {
 		id = POL_take_out_oppositon
 		icon = GFX_goal_continuous_suppression
-		prerequisite = { focus = POL_no_compromise }
 		x = -1
 		y = 1
-		cost = 10
+		cost = 5
+		prerequisite = { focus = POL_no_compromise }
 		relative_position_id = POL_no_compromise
 
-		ai_will_do = { 
-			factor = 1
-		}
 		
 		available = {
 			neutrality > 0.15
@@ -1397,21 +1382,22 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.05
 		}
+
+		ai_will_do = { 
+			factor = 1
+		}
 	}
 
 	focus = {
 		id = POL_purge_szlachta
 		icon = GFX_focus_rom_parties_end
-		prerequisite = { focus = POL_take_out_oppositon }
 		x = -1
 		y = 2
-		cost = 10
+		prerequisite = { focus = POL_take_out_oppositon }
 		relative_position_id = POL_no_compromise
 
-		ai_will_do = { 
-			factor = 1
-		}
-		
+		cost = 10
+
 		available = {
 			neutrality > 0.2
 		}
@@ -1429,24 +1415,26 @@ focus_tree = {
 			remove_unit_leader = 1302
 			remove_unit_leader = 1303
 		}
+
+		ai_will_do = { 
+			factor = 1
+		}
 	}
 
 	focus = {
 		id = POL_cripple_magnates
-		icon = GFX_focus_RAJ_clamp_down_on_corruption
-		prerequisite = { focus = POL_purge_szlachta }
+		icon = GFX_goal_crush_the_spider
 		x = -2
 		y = 3
-		cost = 10
+		prerequisite = { focus = POL_purge_szlachta }
 		relative_position_id = POL_no_compromise
+
+		cost = 10
 
 		available = {
 			neutrality > 0.3
 		}
 
-		ai_will_do = { 
-			factor = 1
-		}
 
 		completion_reward = {
 			remove_ideas = POL_weakened_nobles
@@ -1454,6 +1442,10 @@ focus_tree = {
 				ideology = aristocracy
 				popularity = -0.05
 			}
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -1576,21 +1568,41 @@ focus_tree = {
 	focus = {
 		id = POL_i_am_the_king
 		icon = GFX_focus_generic_monarchy_1
-		prerequisite = { focus = POL_abolish_sejm }
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = POL_abolish_sejm
+		prerequisite = { focus = POL_abolish_sejm }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 10
 		
 		completion_reward = {
 			remove_country_leader_trait = disputed_reign
 		}
+
+		ai_will_do = { 
+			factor = 1
+		}
 	}
 
+	focus = {
+		id = POL_found_order_of_the_white_eagle
+		icon = GFX_POL_regency_council_focus
+		x = 3
+		y = 1
+		prerequisite = { focus = POL_i_am_the_king focus = POL_end_paralysis }
+		relative_position_id = POL_i_am_the_king
+
+		cost = 10
+
+		completion_reward = {
+			add_stability = 0.15
+			add_political_power = 100
+		}
+		
+		ai_will_do = { 
+			factor = 1000
+		}
+	}
 
 	#BALANCE
 
@@ -1787,25 +1799,20 @@ focus_tree = {
 
 	focus = {
 		id = POL_great_betrayal
-		icon = GFX_focus_generic_strike_at_democracy2
-		prerequisite = { focus = POL_condemn_kurucs focus = POL_cooperate_with_prussia}
+		icon = GFX_goal_generic_strike_poland
 		x = -1
 		y = 4
-		cost = 10
 		relative_position_id = POL_seek_austrian_support
+		prerequisite = { focus = POL_condemn_kurucs focus = POL_cooperate_with_prussia }
 
-		available = { 
-			SOV = {
-				has_completed_focus = RUS_betray_poland
-			}
+		cost = 10
+
+		completion_reward = {
+			country_event = poland.22
 		}
 
 		ai_will_do = { 
 			factor = 1
-		}
-
-		completion_reward = {
-			country_event = poland.22
 		}
 	}
 
@@ -1813,19 +1820,13 @@ focus_tree = {
 
 	focus = {
 		id = POL_crack_down_on_foreign_influence
-		icon = GFX_goal_generic_demand_territory
-		prerequisite = {  focus = POL_attack_russia focus = POL_great_betrayal focus = POL_attack_sweden_test focus = POL_join_grand_alliance focus = POL_support_philips_claim }
+		icon = GFX_goal_crack_down_on_foreign_influence_pol
 		x = 0
 		y = 6
-		cost = 10
 		relative_position_id = POL_foreign_affairs
+		prerequisite = {  focus = POL_attack_russia focus = POL_great_betrayal focus = POL_attack_sweden_test focus = POL_join_grand_alliance focus = POL_support_philips_claim }
 
-		ai_will_do = { 
-			factor = 1
-		}
-		
-		available = {
-		}
+		cost = 10
 		
 		completion_reward = {
 			set_variable = {
@@ -1835,6 +1836,10 @@ focus_tree = {
 			POL_decrease_meddling = yes
 			POL_decrease_meddling = yes
 			custom_effect_tooltip = POL_crack_down_on_foreign_influence_tt
+		}
+
+		ai_will_do = { 
+			factor = 10000
 		}
 	}
 
@@ -2120,16 +2125,6 @@ focus_tree = {
 		x = 42
 		y = 0
 		cost = 10
-
-		available = {
-		}
-
-		bypass = {
-		}
-
-		ai_will_do = { 
-			factor = 1
-		}
 		
 		completion_reward = {
 			set_politics = {
@@ -2227,7 +2222,10 @@ focus_tree = {
 					}
 				}
 			}
-			
+		}
+
+		ai_will_do = { 
+			factor = -100
 		}
 	}
 
@@ -2608,7 +2606,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_the_tenth_crusade
-		icon = GFX_POL_polish_crusade
+		icon = GFX_knight_helmet_icon
 		prerequisite = { focus = POL_secure_eastern_flank }
 		prerequisite = { focus = POL_claim_moldovan_throne }
 		x = 1
@@ -2862,14 +2860,16 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			every_country  = {
-				limit = {
-					is_subject_of = POL
-				}
-				end_puppet = PREV
-				add_to_faction = PREV
-			}
 			create_faction = "The Intermarium"
+			POL = {
+				every_country  = {
+					limit = {
+						is_subject_of = POL
+					}
+					end_puppet = PREV
+					add_to_faction = POL
+				}
+			}
 			add_political_power = 150
 		}
 	}
@@ -2904,7 +2904,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_centralize_poland
-		icon = GFX_goal_generic_demand_territory
+		icon = GFX_generic_noble
 		prerequisite = { focus = POL_reform_the_state }
 		prerequisite = { focus = POL_french_military_support }
 		mutually_exclusive = { focus = POL_devolve_poland }
@@ -2928,7 +2928,7 @@ focus_tree = {
 	focus = {
 		id = POL_secure_the_state
 		icon = GFX_goal_demand_sudetenland
-		prerequisite = { focus = POL_french_candidate}
+		prerequisite = { focus = POL_french_candidate }
 		x = -1
 		y = 1
 		cost = 10
@@ -2946,7 +2946,7 @@ focus_tree = {
 	focus = {
 		id = POL_french_military_support
 		icon = GFX_focus_focus_fra_orleans_restoration
-		prerequisite = { focus = POL_secure_the_state}
+		prerequisite = { focus = POL_secure_the_state }
 		x = -1
 		y = 2
 		cost = 10
@@ -2965,7 +2965,7 @@ focus_tree = {
 	focus = {
 		id = POL_polish_versailles
 		icon = GFX_Versailles
-		prerequisite = { focus = POL_centralize_poland}
+		prerequisite = { focus = POL_centralize_poland }
 		x = 0
 		y = 1
 		cost = 10
@@ -2985,8 +2985,8 @@ focus_tree = {
 
 	focus = {
 		id = POL_bind_sejm
-		icon = GFX_focus_generic_polish_deal
-		prerequisite = { focus = POL_polish_versailles}
+		icon = GFX_arrest_nobles
+		prerequisite = { focus = POL_polish_versailles }
 		x = 0
 		y = 1
 		cost = 10
@@ -3350,7 +3350,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_deal_with_prussia
-		icon = GFX_focus_crown_of_prussia
+		icon = GFX_agree_prussia
 		prerequisite = { focus = POL_the_white_eagle_rises }
 		prerequisite = { focus = POL_claim_moldovan_throne }
 		x = 0
@@ -3358,13 +3358,12 @@ focus_tree = {
 		cost = 10
 		relative_position_id = POL_guarantee_religious_freedoms
 
-		ai_will_do = { 
-		}
-
 		available = {
-			NOT = { has_war = yes }
-			is_subject = no
-			NOT = { is_in_faction_with = PRS }
+			NOT = { 
+				has_war = yes
+				is_in_faction_with = PRS
+				is_subject = yes
+			}
 		}
 
 		completion_reward = {
@@ -3438,30 +3437,28 @@ focus_tree = {
 	focus = {
 		id = POL_that_what_is_ours
 		icon =  GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = POL_align_sweden }
 		x = 1
 		y = 1
-		cost = 5
 		relative_position_id = POL_align_sweden
+		prerequisite = { focus = POL_align_sweden }
+		
+		cost = 5
+
+		completion_reward = {
+			add_state_core = 243
+			add_state_core = 242
+			add_state_claim = 1028
+			add_state_claim = 792
+			add_state_claim = 225
+			add_state_claim = 259
+			add_state_claim = 193
+			add_state_claim = 802
+			add_state_claim = 226
+			add_state_claim = 203
+		}
 
 		ai_will_do = { 
 			factor = 1
-		}
-
-		completion_reward = {
-			add_state_claim = 221
-			add_state_claim = 242
-			add_state_core = 205
-			add_state_claim = 210
-			add_state_core = 207
-			add_state_claim = 930
-			add_state_claim = 243
-			add_state_claim = 224
-			add_state_claim = 193
-			add_state_claim = 792
-			add_state_claim = 259
-			add_state_claim = 225
-			add_war_support = 0.05
 		}
 	}
 
@@ -3999,7 +3996,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_develop_lithuania
-		icon = GFX_roman_road_icon
+		icon = GFX_goal_construct_road
 		prerequisite = { focus = POL_rural_economy }
 		x = 3
 		y = 1
@@ -4244,7 +4241,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_eastern_fortification
-		icon = GFX_goal_generic_construct_military
+		icon = GFX_build_fort
 		prerequisite = { focus = POL_military_economy }
 		x = 3
 		y = 1

@@ -1065,6 +1065,8 @@ country_event = {
 			ITA = { transfer_state = 156 }
 			ITA = { transfer_state = 157 }
 			ITA = { transfer_state = 117 }
+			ITA = { transfer_state = 1016 }
+			ITA = { transfer_state = 1017 }
 		}
 		ITA = {
 			country_event = savoy.41

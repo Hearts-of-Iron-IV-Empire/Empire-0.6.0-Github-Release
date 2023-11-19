@@ -7,7 +7,7 @@ political_actions = {
 			always = no
 		}
 
-		days_mission_timeout = 10
+		days_mission_timeout = 365
 
 		activation = {
 			always = no #Triggered from effect
@@ -40,7 +40,7 @@ political_actions = {
 					POL_conscription_crisis
 					POL_foreign_meddling_4
 				}
-				POL ={
+				POL = {
 					set_country_leader_name = {
 						ideology = neutrality
 						name = POL_Frederick_Augustus
@@ -79,7 +79,6 @@ political_actions = {
 					}
 					create_country_leader = {
 						name = "Stanislaw I"
-						desc = ""
 						picture = "Stanislaw.dds"
 						expire = "1965.1.1"
 						ideology = despotism
@@ -89,7 +88,6 @@ political_actions = {
 					}
 					create_country_leader = {
 						name = "Stanislaw I"
-						desc = ""
 						picture = "Stanislaw.dds"
 						expire = "1965.1.1"
 						ideology = nobility

@@ -160,5 +160,23 @@ ideas = {
 				consumer_goods_factor = 0.30
 			}
 		}
+		maghrebi_war = {
+
+			picture = chi_war_of_resistance3
+		
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			
+			modifier = {
+				ai_call_ally_desire_factor = -1
+			}
+		}
 	}
 }

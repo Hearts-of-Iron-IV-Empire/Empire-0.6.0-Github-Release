@@ -218,7 +218,7 @@ focus = {
 
 focus = {
 	id = USA_queen_annes_war
-	icon = GFX_focus_hol_the_only_man_in_the_dutch_government
+	icon = GFX_anne_gaming_banana
 	x = -3
 	y = 1
 	cost = 6

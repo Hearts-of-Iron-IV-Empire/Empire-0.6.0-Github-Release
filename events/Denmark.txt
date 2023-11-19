@@ -1326,11 +1326,11 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "We always knew we had a friend in Denmark"
+		name = "We always knew we had a friend in Denmark."
 	}
 }
 
-#denmark dishonors pact
+# Denmark dishonors pact
 
 country_event = {
 	id = denmark.26
@@ -1360,17 +1360,25 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "We will not give up sovereignty!"
-		SOV = { country_event = denmark.28 }
+		name = "We will not give up our sovereignty!"
+		DEN = { 
+			country_event = {
+				id = denmark.28
+			}
+		}
 	}
 
 	option = {
 		name = "It is the only way."
-		SOV = { country_event = denmark.29 }
+		DEN = { 
+			country_event = {
+				id = denmark.29
+			}
+		}
 	}
 }
 
-#sweden aye
+# Sweden nay
 
 country_event = {
 	id = denmark.28
@@ -1386,7 +1394,7 @@ country_event = {
 	}
 }
 
-#sweden nay
+# Sweden aye
 
 country_event = {
 	id = denmark.29

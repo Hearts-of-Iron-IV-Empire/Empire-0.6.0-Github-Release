@@ -465,16 +465,14 @@ focus_tree = {
 		}
 	}
 
-	#Demand Spanish Italy
+	# Demand Spanish Italy
 	focus = {
 		id = SAV_demand_spanish_italy
 		icon = GFX_goal_generic_political_pressure
 		x = 6
 		y = 6
-		cost = 10
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
+		prerequisite = { focus = SAV_secure_an_alliance  }
+
 		bypass = {
 			AND = {
 				TSC = {
@@ -485,12 +483,17 @@ focus_tree = {
 				}
 				NOT = { SPR = { owns_state = 114 }}
 				NOT = { SPR = { owns_state = 115 }}
-			}
-			
+			}	
 		}
-		prerequisite = { focus = SAV_secure_an_alliance  }
+
+		cost = 10
+
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+
 		completion_reward = {
-			SPR= {country_event = savoy.39}
+			SPR = { country_event = savoy.39 }
 		}
 	}
 
@@ -1872,6 +1875,8 @@ focus_tree = {
 			add_state_core = 796
 			add_state_core = 966
 			add_state_core = 967
+			add_state_core = 1016
+			add_state_core = 1017
 			set_capital = {
 				state = 2
 			}

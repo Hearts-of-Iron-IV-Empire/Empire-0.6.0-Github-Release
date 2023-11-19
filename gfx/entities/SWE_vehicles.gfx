@@ -1,0 +1,59 @@
+
+
+# Mecha
+
+
+objectTypes = {
+
+# 1
+
+	pdxmesh = {
+		name = "SWE_mechanized_01_lorraine_mesh"
+		file = "gfx/models/units/vehicles/SWE_mechanized_01_lorraine.mesh"
+
+		animation = { id = "idle"			type = "GER_heavy_armor_0_idle_animation" }
+		animation = { id = "move"			type = "GER_heavy_armor_0_moving_animation" }
+	}
+
+# 2
+
+	pdxmesh = {
+		name = "SWE_mechanized_02_lorraine_mesh"
+		file = "gfx/models/units/vehicles/SWE_mechanized_02_lorraine.mesh"
+
+		animation = { id = "idle"			type = "GER_heavy_armor_0_idle_animation" }
+		animation = { id = "move"			type = "GER_heavy_armor_0_moving_animation" }
+	}
+
+# 3
+
+	pdxmesh = {
+		name = "SWE_mechanized_03_Lehel_mesh"
+		file = "gfx/models/units/vehicles/SWE_mechanized_03_Lehel.mesh"
+
+#		animation = { id = "attack"			type = "generic_tank_light_attack_animation" }
+		animation = { id = "idle"			type = "generic_tank_light_idle_animation" }
+		animation = { id = "move"			type = "generic_tank_light_moving_animation" }
+
+#		scale = 0.6
+
+	}
+
+# Motorized
+
+	pdxmesh = {
+		name = "SWE_opel_motorized_mesh"
+		file = "gfx/models/units/vehicles/SWE_motorized_01_opel.mesh"
+		
+		animation = { id = "idle"			type = "GER_motorized_01_idle_animation" }
+		animation = { id = "move"			type = "GER_motorized_01_move_animation" }
+	}
+
+} 	# END
+
+
+
+
+
+
+

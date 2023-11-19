@@ -926,12 +926,11 @@ guiTypes = {
 
 	containerWindowType = {
 		name ="gamesetup_country_details"
-		position = { x= 20 y = -490 }
-		show_position = { x= 20 y = 90 }
+		position = { x=20 y =-490}
+		show_position = { x=20 y =90}
 		animation_type = decelerated
-		animation_time = 1000
-		size = { width = 492 height = 301 }
-		verticalScrollbar = "right_vertical_slider"
+		animation_time = 1000		
+		size = { width=492 height=301}
 		Orientation = upper_right
 		origo = upper_right
 		show_sound = menu_open_window
@@ -965,19 +964,19 @@ guiTypes = {
 
 		gridboxtype = {
 			name = "spirit_grid"
-			position = { x = 253 y = 30 }
-			size = { width = 354 height = 68 }			
+			position = { x = 250 y = 30 }
+			size = { width = 300 height = 70 }
 			slotsize = { width = 60 height = 68 }
-			max_slots = { x = 6 y = 2 }
+			max_slots = { x = 8 y = 1 }
 			format = "UPPER_LEFT"
 		}
-
+		
 		gridboxtype = {
 			name = "spirit_grid_over_defined"
-			position = { x = 253 y = 28 }
-			size = { width = 330 height = 68 }
-			slotsize = { width = 60 height = 68 }
-			max_slots_horizontal = 6
+			position = { x = 250 y = 20 }
+			size = { width = 300 height = 70 }
+			slotsize = { width = 60 height = 66 }
+			max_slots = { x = 3 y = 1 }
 			format = "UPPER_LEFT"
 		}
 

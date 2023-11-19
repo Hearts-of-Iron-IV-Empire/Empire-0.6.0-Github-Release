@@ -1,16 +1,11 @@
 estate_interactions = {
 	icon = generic_propaganda
-	visible = {
-	}
 
 	priority = 10
 }
 
 royal_decrees = {
 	icon = generic_propaganda
-	visible = {
-
-	}
 }
 
 SPR_war_of_the_quadruple_alliance = {
@@ -19,10 +14,6 @@ SPR_war_of_the_quadruple_alliance = {
 
 propaganda_efforts = {
 	icon = generic_propaganda
-
-	visible = {
-
-	}
 }
 
 POL_foreign_influence = {
@@ -44,6 +35,7 @@ FRA_religious_troubles = {
 }
 
 TUR_janissar_revolt_category = {
+	icon = power_struggle
 	allowed = {
 		original_tag = TUR
 	}
@@ -422,4 +414,21 @@ SPR_overseas_colonies_category = {
 	visible_when_empty = yes
 
 	priority = 2
+}
+
+JAP_foreign_influence = {
+	allowed = {
+		OR = {
+			original_tag = JAP
+			original_tag = HOL
+			original_tag = SPR
+			original_tag = POR
+		}
+	}
+}
+
+JAP_pacific_expansion = {
+	allowed = {
+		original_tag = JAP
+	}
 }

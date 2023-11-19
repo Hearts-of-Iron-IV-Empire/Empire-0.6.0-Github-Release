@@ -40,7 +40,7 @@ equipments = {
 	}
 
 	artillery_equipment_1 = {
-		year = 1934
+		year = 1699
 
 		archetype = artillery_equipment
 		priority = 50
@@ -48,7 +48,7 @@ equipments = {
 	}
 	
 	artillery_equipment_2 = {
-		year = 1939
+		year = 1702
 
 		archetype = artillery_equipment
 		parent = artillery_equipment_1
@@ -61,13 +61,13 @@ equipments = {
 		
 		build_cost_ic = 4
 		resources = {
-			tungsten = 1
-			steel = 2
+			tungsten = 2
+			steel = 3
 		}
 	}
 	
 	artillery_equipment_3 = {
-		year = 1942
+		year = 1705
 
 		archetype = artillery_equipment
 		parent = artillery_equipment_2
@@ -80,7 +80,7 @@ equipments = {
 		
 		build_cost_ic = 4.5
 		resources = {
-			tungsten = 1
+			tungsten = 3
 			steel = 3
 		}
 	}
@@ -149,7 +149,7 @@ equipments = {
 		}
 	}
 	
-	#Katyusha 
+	# Katyusha 
 	motorized_rocket_equipment = {
 		year = 1934
 
@@ -196,5 +196,4 @@ equipments = {
 		priority = 70
 		visual_level = 0
 	}
-	
 }

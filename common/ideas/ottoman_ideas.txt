@@ -215,19 +215,7 @@ ideas = {
       		}
 			
 			modifier = {
-				extra_trade_to_target_factor = 0.20
-			}
-			targeted_modifier = { 
-				tag = TUN  
-				cic_to_target_factor = 0.10
-			}
-			targeted_modifier = { 
-				tag = ALG  
-				cic_to_target_factor = 0.10
-			}
-			targeted_modifier = { 
-				tag = LBA  
-				cic_to_target_factor = 0.10
+				autonomy_gain = -0.20
 			}
 		}
 		TUR_reinforced_khalifa_title = {
@@ -643,6 +631,26 @@ ideas = {
 			
 			modifier = {
 				ai_get_ally_desire_factor = -4000
+			}
+		}
+		TUR_dhimmi_tolerated = {
+			allowed = {
+				has_civil_war = yes
+			}
+
+			cancel = { has_civil_war = no }
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			removal_cost = -1
+
+			picture = dhimmi_tolerance
+			
+			modifier = {
+				political_power_gain = 0.10
+				consumer_goods_factor = 0.02
 			}
 		}
 	}

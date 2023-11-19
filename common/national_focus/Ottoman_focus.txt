@@ -12,185 +12,286 @@ focus_tree = {
 	
 	default = no
 
-#########
+################################################
+####### Economy/Civilian Branch ################
+###############################################
 
-focus = {
-	id = TUR_the_state
-	icon = GFX_focus_TUR_pivot_to_the_past
-	x = -3
-	y = 0
-	cost = 10
+	focus = {
+		id = TUR_the_state
+		icon = GFX_focus_TUR_pivot_to_the_past
+		x = -3
+		y = 0
+		cost = 8
 
-	completion_reward = {
-		add_political_power = 80
-	}
-}
-
-focus = {
-	id = TUR_look_to_the_economy
-	icon = GFX_focus_usa_reestablish_the_gold_standard
-	x = -4
-	y = 1
-	cost = 5
-	prerequisite = { focus = TUR_the_state }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_tech_bonus = {
-		    bonus = 0.5
-		    uses = 1
-		    category = industry
+		completion_reward = {
+			add_political_power = 80
 		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 0
-									include_locked = yes
+	}
+
+	focus = {
+		id = TUR_look_to_the_economy
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		x = -4
+		y = 1
+		cost = 5
+		prerequisite = { focus = TUR_the_state }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.5
+				uses = 1
+				category = industry
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
 								}
-								is_in_home_area = yes
 							}
 						}
 					}
 				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_develop_anatolia
-	icon = GFX_OTT_Reeling_in_Anatolian_Vilayets
-	x = -1
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_look_to_the_economy }
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		340 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		340 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		49 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 2
-				instant_build = yes
-			}
-		}
-		344 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		342 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}
-}
 
-focus = {
-	id = TUR_develop_levantine_eyalets
-	icon = GFX_OTT_Reeling_in_Arab_Vilayets
-	x = 1
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_look_to_the_economy }
-	relative_position_id = TUR_look_to_the_economy
+	focus = {
+		id = TUR_develop_anatolia
+		icon = GFX_goal_develop_anatolia
+		x = -1
+		y = 1
+		relative_position_id = TUR_look_to_the_economy
+		prerequisite = { focus = TUR_look_to_the_economy }
 
-	completion_reward = {
-		677 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		553 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		454 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		554 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		183 = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_the_means
-	icon = GFX_goal_generic_construction2
-	x = 1
-	y = 2
-	cost = 8
-	mutually_exclusive = { focus = TUR_the_tools }
-	prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
-	relative_position_id = TUR_look_to_the_economy
+		cost = 10
 
 		completion_reward = {
+			49 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			340 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			342 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			344 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_develop_levantine_eyalets
+		icon = GFX_goal_develop_levantine_eyalets
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_look_to_the_economy }
+		relative_position_id = TUR_look_to_the_economy
+
+		completion_reward = {
+			677 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			553 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			454 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			554 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_the_means
+		icon = GFX_goal_construct_road
+		x = 1
+		y = 2
+		cost = 8
+		mutually_exclusive = { focus = TUR_the_tools }
+		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
+		relative_position_id = TUR_look_to_the_economy
+
+			completion_reward = {
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = industrial_complex
+							size > 1
+							include_locked = yes
+						}
+						OR = {
+							is_in_home_area = yes
+							NOT = {
+								owner = {
+									any_owned_state = {
+										free_building_slots = {
+											building = industrial_complex
+											size > 1
+											include_locked = yes
+										}
+										is_in_home_area = yes
+									}
+								}
+							}
+						}
+					}
+					add_extra_state_shared_building_slots = 2
+					add_building_construction = {
+						type = industrial_complex
+						level = 2
+						instant_build = yes
+					}
+				}
+			}
+		}
+
+	focus = {
+		id = TUR_the_tools
+		icon = GFX_economic_stuff
+		x = -1
+		y = 2
+		mutually_exclusive = { focus = TUR_the_means }
+		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
+		relative_position_id = TUR_look_to_the_economy
+
+		cost = 10
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 0.60
+				uses = 2
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_land_reform
+		icon = GFX_focus_generic_land_reclamation
+		x = 0
+		y = 3
+		prerequisite = { focus = TUR_the_means focus = TUR_the_tools }
+		relative_position_id = TUR_look_to_the_economy
+
+		cost = 10
+
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+			add_political_power = -100
+			add_stability = 0.05
+			country_event = ottomans.16
+		}
+	}
+
+	focus = {
+		id = TUR_restart_economy
+		icon = GFX_focus_ITA_devaluate_the_lire
+		x = -2
+		y = 4
+		prerequisite = { focus = TUR_land_reform }
+		relative_position_id = TUR_look_to_the_economy
+
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
 			random_owned_controlled_state = {
 				limit = {
 					free_building_slots = {
@@ -224,2709 +325,2246 @@ focus = {
 		}
 	}
 
-focus = {
-	id = TUR_the_tools
-	icon = GFX_economic_stuff
-	x = -1
-	y = 2
-	cost = 10
-	mutually_exclusive = { focus = TUR_the_means}
-	prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		add_tech_bonus = {
-		    bonus = 0.60
-		    uses = 2
-		    category = industry
-		}
-	}
-}
-
-focus = {
-	id = TUR_land_reform
-	icon = GFX_OTT_Land_Reform
-	x = 0
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_the_means focus = TUR_the_tools }
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-		add_political_power = -100
-		add_stability = 0.05
-		country_event = ottomans.16
-	}
-}
-
-focus = {
-	id = TUR_restart_economy
-	icon = GFX_All_resource
-	x = -1
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_land_reform}
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 1
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = industrial_complex
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = industrial_complex
-									size > 1
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_militarization
-	icon = GFX_goal_generic_construct_mil_factory
-	x = 1
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_land_reform}
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = arms_factory
-									size > 1
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = arms_factory
-									size > 1
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
-			}
-		}
-		random_owned_controlled_state = {
-			limit = {
-				free_building_slots = {
-					building = arms_factory
-					size > 1
-					include_locked = yes
-				}
-				OR = {
-					is_in_home_area = yes
-					NOT = {
-						owner = {
-							any_owned_state = {
-								free_building_slots = {
-									building = arms_factory
-									size > 1
-									include_locked = yes
-								}
-								is_in_home_area = yes
-							}
-						}
-					}
-				}
-			}
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_resource_management
-	icon = GFX_focus_generic_aluminum
-	x = 3
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_land_reform }
-	relative_position_id = TUR_look_to_the_economy
-
-	completion_reward = {
-		add_resource = {
-			type = rubber
-			amount = 10
-			state = 184 
-		}
-		add_resource = {
-			type = chromium
-			amount = 15
-			state = 108 
-		}
-		add_resource = {
-			type = steel
-			amount = 10
-			state = 49
-		}
-	}
-}
-
-focus = {
-	id = TUR_reorganise_sultanate
-	icon = GFX_OTT_reform
-	x = 2
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_the_state }
-	mutually_exclusive = {focus = TUR_reinforce_eyalets }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_stability = 0.05
-	}
-}
-
-focus = {
-	id = TUR_towards_iqta_government
-	icon = GFX_goal_islamic_government
-	x = 2
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_reorganise_sultanate }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_iqta_government
-		add_war_support = 0.05
-	}
-}
-
-focus = {
-	id = TUR_tax_farming
-	icon = GFX_OTT_Tithe
-	x = 2
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_towards_iqta_government }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_tax_farming_idea
-	}
-}
-
-focus = {
-	id = TUR_timariot_system
-	icon = GFX_cavalry_icon
-	x = 0
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_reorganise_sultanate }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_timariot_system
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = -0.05
-		}
-	}
-}
-
-focus = {
-	id = TUR_vasal_management
-	icon = GFX_focus_CZE_german_puppet
-	x = 0
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_timariot_system }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_vasal_management
-	}
-}
-
-
-focus = {
-	id = TUR_reinforce_eyalets
-	icon = GFX_OTT_Reeling_in_Arab_Vilayets
-	x = 4
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_the_state }
-	mutually_exclusive = {focus = TUR_reorganise_sultanate }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_provinical_government_system
-	}
-}
-
-focus = {
-	id = TUR_autonomous_pashas
-	icon = GFX_OTT_Sublime_Porte
-	x = 4
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_reinforce_eyalets }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		add_ideas = TUR_autonomous_pashas
-	}
-}
-
-##
-
-focus = {
-	id = TUR_encourage_local_development
-	icon = GFX_generic_man_working
-	x = 4
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_autonomous_pashas }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		554 = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		456 = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-		679 = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_increase_janissar_wages
-	icon = GFX_money
-	x = 6
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_reinforce_eyalets }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		TUR_increase_loyalty = yes
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = 0.05
-		}
-	}
-}
-
-focus = {
-	id = TUR_military_meritocracy
-	icon = GFX_focus_eng_special_air_service
-	x = 6
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_increase_janissar_wages }
-	relative_position_id = TUR_the_state
-
-	completion_reward = {
-		TUR_increase_loyalty = yes
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = 0.05
-		}
-		add_ideas = TUR_military_meritocracy
-	}
-}
-
-
-focus = {
-	id = TUR_islamic_legalism
-	icon = GFX_focus_sufism
-	x = 3
-	y = 1
-	cost = 10
-	mutually_exclusive = { focus = TUR_sufism }
-	prerequisite = { focus = TUR_military_meritocracy focus = TUR_tax_farming }
-	prerequisite = { focus = TUR_encourage_local_development focus = TUR_vasal_management }
-	relative_position_id = TUR_tax_farming
-
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-		add_stability = 0.10
-	}
-}
-
-focus = {
-	id = TUR_sufism
-	icon = GFX_OTT_ferman
-	x = -1
-	y = 1
-	cost = 10
-	mutually_exclusive = { focus = TUR_islamic_legalism }
-	prerequisite = { focus = TUR_military_meritocracy focus = TUR_tax_farming }
-	prerequisite = { focus = TUR_encourage_local_development focus = TUR_vasal_management }
-	relative_position_id = TUR_tax_farming
-
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-		add_war_support = 0.10
-	}
-}
-
-focus = {
-	id = TUR_reinforce_the_khalifa
-	icon = GFX_OTT_caliph
-	x = 14
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_personal_rule focus = TUR_guided_by_janissars }
-
-
-	completion_reward = {
-		add_ideas = TUR_reinforced_khalifa_title
-	}
-}
-
-focus = {
-	id = TUR_islam_is_peace
-	icon = GFX_peace
-	x = 11
-	y = 5
-	cost = 10
-	mutually_exclusive = { focus = TUR_islam_is_war }
-	prerequisite = { focus = TUR_reinforce_the_khalifa focus = TUR_guide_the_sultan }
-
-	available = {
-		NOT = {
-			has_completed_focus = TUR_nomadic_roots
-		}
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_stability = 0.05
-	}
-}
-
-focus = {
-	id = TUR_crack_down_on_sect_practices
-	icon = GFX_OTT_Muslim_Solidarity
-	x = -1
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_islam_is_peace }
-	relative_position_id = TUR_islam_is_peace
-
-	completion_reward = {
-		add_political_power = 150
-	}
-}
-
-focus = {
-	id = TUR_custodian_of_holy_cities
-	icon = GFX_OTT_camels
-	x = -1
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_crack_down_on_sect_practices }
-	relative_position_id = TUR_islam_is_peace
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_ideas = TUR_custodian_of_holy_cities
-	}
-}
-
-focus = {
-	id = TUR_dhimmi_tolerance
-	icon = GFX_OTT_Population_Exchange
-	x = 1
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_islam_is_peace }
-	relative_position_id = TUR_islam_is_peace
-
-	completion_reward = {
-		add_stability = 0.10
-	}
-}
-
-focus = {
-	id = TUR_jizya_tax
-	icon = GFX_OTT_Tithe
-	x = 1
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_dhimmi_tolerance }
-	relative_position_id = TUR_islam_is_peace
-
-	completion_reward = {
-		add_ideas = TUR_jizya_tax_idea
-	}
-}
-
-focus = {
-	id = TUR_idabat_khana
-	icon = GFX_OTT_Islamic_Education
-	x = 3
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_dhimmi_tolerance }
-	relative_position_id = TUR_islam_is_peace
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_research_slot = 1
-	}
-}
-
-focus = {
-	id = TUR_islamic_centre_of_scholary_learning
-	icon = GFX_focus_research2
-	x = 1
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_idabat_khana focus = TUR_custodian_of_holy_cities focus = TUR_jizya_tax }
-	relative_position_id = TUR_islam_is_peace
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_ideas = TUR_islamic_centre_of_scholary_learning
-	}
-}
-
-focus = {
-	id = TUR_dawn_of_the_tulip_period
-	icon = GFX_OTT_dawn_of_the_Tulip_Period
-	x = 3
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_idabat_khana }
-	relative_position_id = TUR_islam_is_peace
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-	}
-}
-
-
-focus = {
-	id = TUR_islam_is_war
-	icon = GFX_OTT_Military_Mission
-	x = 6
-	y = 5
-	cost = 10
-	mutually_exclusive = { focus = TUR_islam_is_peace }
-	prerequisite = { focus = TUR_reinforce_the_khalifa }
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_war_support = 0.05
-	}
-}
-
-
-
-focus = {
-	id = TUR_call_upon_the_faithful
-	icon = GFX_focus_generic_manpower
-	x = -1
-	y = 1
-	cost = 8
-	prerequisite = { focus = TUR_islam_is_war }
-	relative_position_id = TUR_islam_is_war
-
-	completion_reward = {
-		add_manpower = 25000
-		add_war_support = 0.10
-	}
-}
-
-focus = {
-	id = TUR_ghazi_warriors
-	icon = GFX_focus_ghazi_warriors
-	x = 0
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_call_upon_the_faithful }
-	relative_position_id = TUR_call_upon_the_faithful
-
-	completion_reward = {
-		add_ideas =	TUR_ghazi_warriors
-	}
-}
-
-focus = {
-	id = TUR_mujahadeen
-	icon = GFX_focus_mujahadeen
-	x = -2
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_ghazi_warriors }
-	relative_position_id = TUR_ghazi_warriors
-
-	completion_reward = {
-		add_ideas =	TUR_mujahadeen
-	}
-}
-
-
-focus = {
-	id = TUR_jihad
-	icon = GFX_guns_icon
-	x = 0
-	y = 1
-	cost = 5
-	prerequisite = { focus = TUR_ghazi_warriors }
-	prerequisite = { focus = TUR_ghazi_warriors }
-	relative_position_id = TUR_ghazi_warriors
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_war_support = 0.10
-	}
-}
-
-focus = {
-	id = TUR_enforce_orthodoxy
-	icon = GFX_OTT_Abolish_Mecelle
-	x = 1
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_islam_is_war }
-	relative_position_id = TUR_islam_is_war
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_stability = 0.05
-		add_political_power = 100
-	}
-}
-
-focus = {
-	id = TUR_expell_dhimmi
-	icon = GFX_focus_mex_triumph_over_the_cristeros
-	x = 0
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_enforce_orthodoxy }
-	relative_position_id = TUR_enforce_orthodoxy
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		set_temp_variable = { fascism_temp = party_popularity@fascism }
-		multiply_temp_variable = { fascism_temp = -0.5 }
-		set_temp_variable = { fascism_ban = party_popularity@fascism }
-		multiply_temp_variable = { fascism_ban = -1 }
-		add_stability = fascism_temp
-		add_popularity = {
-			ideology = fascism
-			popularity = fascism_ban
-		}
-		#hidden_effect = {
-			random_list = { #greece
-			    25 = {
-			    	GRE = { 
-						transfer_state = 47
-						transfer_state = 185
-						transfer_state = 731
-						transfer_state = 182
-						transfer_state = 187
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							47 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-							}
-							185 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-							}
-							731 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-							}
-							182 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = GRE
-								}
-							}
-						}
-					}
-			    }
-
-			    75 = {
-			    }
-			}
-			random_list = {
-			    25 = {
-			       BUL = { 
-						transfer_state = 184
-						transfer_state = 212
-						transfer_state = 211
-						transfer_state = 48
-						transfer_state = 77
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							184 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-							}
-							212 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-							}
-							211 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-							}
-							48 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BUL
-								}
-							}
-						}
-					}
-			    }
-			    75 = {
-			    }
-			}
-			random_list = {
-			    25 = {
-			        ALB = { 
-						transfer_state = 44
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							44 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ALB
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ALB
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ALB
-								}
-							}
-						}
-					}
-			    }
-			    75 = {
-			    }
-			}
-			random_list = {
-			    25 = {
-			        BOS = { 
-						transfer_state = 104
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							104 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BOS
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BOS
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = BOS
-								}
-							}
-						}
-					}
-			    }
-			    75 = {
-			    }
-			}
-			random_list = {
-			    25 = {
-			        SER = { 
-						transfer_state = 108
-						transfer_state = 106
-						transfer_state = 107
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							108 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = SER
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = SER
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = SER
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = SER
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = SER
-								}
-							}
-						}
-					}
-			    }
-			    75 = {
-			    }
-			}
-			random_list = {
-			    25 = {
-			        ARM = { 
-						transfer_state = 353
-						transfer_state = 352
-						declare_war_on = {
-						    target = TUR
-						    type = annex_everything
-						}
-						division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-						hidden_effect = {
-							353 = {
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ARM
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ARM
-								}
-								create_unit = {
-									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-									owner = ARM
-								}
-							}
-						}
-					}
-			    }
-			    75 = {
-			    }
-			}
-
-		#}
-	}
-}
-
-focus = {
-	id = TUR_demand_shiiete_conversion
-	icon = GFX_goal_islamic_healthcare
-	x = 0
-	y = 1
-	cost = 10
-	prerequisite = { focus = TUR_expell_dhimmi }
-	relative_position_id = TUR_expell_dhimmi
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_stability = 0.15
-		random_list = {
-		    50 = {
-		        LEB = { 
-					transfer_state = 553
-					declare_war_on = {
-					    target = TUR
-					    type = annex_everything
-					}
-					division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-					hidden_effect = {
-						553 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = LEB
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = LEB
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = LEB
-							}
-						}
-					}
-				}
-		    }
-		    50 = {
-		    }
-		}
-		random_list = {
-		    50 = {
-		        EGY = { 
-					transfer_state = 446
-					transfer_state = 447
-					transfer_state = 452
-					transfer_state = 457
-					transfer_state = 456
-					transfer_state = 453
-					declare_war_on = {
-					    target = TUR
-					    type = annex_everything
-					}
-					division_template = {
-							name = "Rebels"
-							priority = 2
-							is_locked = yes
-							regiments = {
-								infantry = { x = 0 y = 0 }
-								infantry = { x = 0 y = 1 }
-								infantry = { x = 0 y = 2 }
-								infantry = { x = 1 y = 0 }
-								infantry = { x = 1 y = 1 }
-								infantry = { x = 1 y = 2 }
-							}
-						}
-					hidden_effect = {
-						446 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-						}
-						447 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-						}
-						453 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-						}
-						452 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-						}
-						456 = {
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-							create_unit = {
-								division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
-								owner = EGY
-							}
-						}
-					}
-
-				}
-
-		    }
-		    50 = {
-		    }
-		}
-	}
-}
-
-focus = {
-	id = TUR_proclaim_islamic_state
-	icon = GFX_focus_araba
-	x = 0
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_demand_shiiete_conversion }
-	prerequisite = { focus = TUR_jihad }
-	relative_position_id = TUR_islam_is_war
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-		add_ideas = TUR_islamic_state
-	}
-}
-
-focus = {
-	id = TUR_reclaim_north_africa
-	icon = GFX_goal_generic_more_territorial_claims
-	x = -2
-	y = 1
-	cost = 5
-	prerequisite = { focus = TUR_proclaim_islamic_state }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = ALG
-			NOT = {
-				country_exists = ALG
-			}
-		}
-		OR = {
-			has_war_with = TUN
-			NOT = {
-				country_exists = TUN
-			}
-		}
-		OR = {
-			has_war_with = LBA
-			NOT = {
-			country_exists = LBA
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = ALG
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = LBA
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = TUN
-		}
-	}
-}
-
-focus = {
-	id = TUR_morrocan_conquest
-	icon = GFX_morocco
-	x = -1
-	y = 2
-	cost = 5
-	prerequisite = { focus = TUR_reclaim_north_africa }
-	prerequisite = { focus = TUR_all_arabs_must_comply }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = MOR
-			NOT = {
-				country_exists = MOR
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = MOR
-		}
-	}
-}
-
-focus = {
-	id = TUR_re_reconquista
-	icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
-	x = -1
-	y = 3
-	cost = 8
-	prerequisite = { focus = TUR_morrocan_conquest }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = POR
-			NOT = {
-				country_exists = POR
-			}
-		}
-		OR = {
-			has_war_with = SPR
-			NOT = {
-				country_exists = SPR
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = SPR
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = POR
-		}
-	}
-}
-
-focus = {
-	id = TUR_avenge_poitiers
-	icon = GFX_focus_up_joan_of_arc
-	x = -1
-	y = 4
-	cost = 8
-	prerequisite = { focus = TUR_re_reconquista }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = FRA
-			NOT = {
-				country_exists = FRA
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = FRA
-		}
-	}
-}
-
-focus = {
-	id = TUR_all_arabs_must_comply
-	icon = GFX_focus_TUR_turanist_ambition
-	x = 0
-	y = 1
-	cost = 5
-	prerequisite = { focus = TUR_proclaim_islamic_state }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = OMA
-			NOT = {
-				country_exists = OMA
-			}
-		}
-		OR = {
-			has_war_with = YEM
-			NOT = {
-				country_exists = YEM
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = YEM
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = OMA
-		}
-	}
-}
-
-focus = {
-	id = TUR_persian_conquest
-	icon = GFX_attack_persia
-	x = 2
-	y = 1
-	cost = 8
-	prerequisite = { focus = TUR_proclaim_islamic_state }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = PER
-			NOT = {
-				country_exists = PER
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = PER
-		}
-	}
-}
-
-focus = {
-	id = TUR_destroy_nomads
-	icon = GFX_goal_generic_attack_allies
-	x = 1
-	y = 2
-	cost = 5
-	prerequisite = { focus = TUR_persian_conquest }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = KYR
-			NOT = {
-				country_exists = KYR
-			}
-		}
-		OR = {
-			has_war_with = UZB
-			NOT = {
-				country_exists = UZB
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = KYR
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = UZB
-		}
-	}
-}
-
-focus = {
-	id = TUR_disband_mughal_empire
-	icon = GFX_attack_mughals2
-	x = 3
-	y = 2
-	cost = 8
-	prerequisite = { focus = TUR_persian_conquest }
-	relative_position_id = TUR_proclaim_islamic_state
-
-	bypass = {
-		OR = {
-			has_war_with = RAJ
-			NOT = {
-				country_exists = RAJ
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = RAJ
-		}
-	}
-}
-
-focus = {
-	id = TUR_guide_the_sultan
-	icon = GFX_OTT_Muslim_Relations
-	x = 18
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_sultan_puppet focus = TUR_replace_sultan }
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_stability = 0.05
-		add_popularity = {
-		    ideology = neutrality
-		    popularity = -0.10
-		}
-	}
-}
-
-focus = {
-	id = TUR_still_sultan_of_rum
-	icon = GFX_ottoman_empire_flag_2
-	x = 19
-	y = 5
-	cost = 10
-	prerequisite = { focus = TUR_guide_the_sultan  focus = TUR_reinforce_the_khalifa }
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_political_power = 150
-	}
-}
-
-focus = {
-	id = TUR_recover_morea
-	icon = GFX_goal_generic_territory_or_war
-	x = 2
-	y = 1
-	cost = 6
-	prerequisite = { focus = TUR_still_sultan_of_rum }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	bypass = {
-		OR = {
-			has_war_with = VNC
-			owns_state = 186
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		VNC = {
-			country_event = {
-				id = ottomans.11
-				days = 5
-			}
-		}
-		add_threat = 2
-	}
-}
-
-focus = {
-	id = TUR_escalate_tensions_with_austria
-	icon = GFX_goal_flag_austria
-	x = 2
-	y = 2
-	cost = 5
-	prerequisite = { focus = TUR_recover_morea }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	bypass = {
-		OR = {
-			has_war_with = AUS
-			NOT = {
-				country_exists = AUS
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = AUS
-		}
-	}
-}
-
-focus = {
-	id = TUR_support_sweden
-	icon = GFX_sweden_flag
-	x = 4
-	y = 1
-	cost = 5
-	prerequisite = { focus = TUR_still_sultan_of_rum }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-		SWE = { has_war = yes }
-	}
-
-	completion_reward = {
-		send_equipment = {
-		    equipment = infantry_equipment
-		    amount = 2000
-		    target = SWE
-		}
-		add_opinion_modifier = {
-		    target = SWE
-		    modifier = medium_increase
-		}
-		SWE = { add_opinion_modifier = {
-		    target = TUR
-		    modifier = medium_increase
-			}
-		}
-		SWE = {
-			country_event = {
-				id = ottomans.14
-				days = 5
-			}
-		}
-		add_ideas = volunteer_corps_focus
-	}
-}
-
-focus = {
-	id = TUR_azov_border_clash
-	icon = GFX_focus_generic_provoke_border_clashes
-	x = 4
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_support_sweden }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-		CRI = {
-			owns_state = 1029
-		}
-	}
-
-	bypass = {
-		OR = {
-			has_war_with = SOV
-			NOT = {
-				country_exists = SOV
-			}
-			owns_state = 218
-			CRI = { owns_state = 218 }
-		}
-	}
-
-	completion_reward = {
-		CRI = { 
-			start_border_war = {
-			    change_state_after_war = yes
-			    attacker = {
-			        state = 1029
-			        num_provinces = 2
-			    }
-			    defender = {
-			        state = 218
-			        num_provinces = 1
-			    }
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_invade_russia
-	icon = GFX_focus_eng_expose_the_belly_of_the_bear
-	x = 4
-	y = 3
-	cost = 5
-	prerequisite = { focus = TUR_azov_border_clash }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	bypass = {
-		OR = {
-			has_war_with = SOV
-			NOT = {
-				country_exists = SOV
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = SOV
-		}
-	}
-}
-
-focus = {
-	id = TUR_lead_islamic_world
-	icon = GFX_OTT_Association_of_Muslim_Nations
-	x = -3
-	y = 1
-	cost = 10
-	mutually_exclusive = { focus = TUR_nomadic_roots }
-	prerequisite = { focus = TUR_still_sultan_of_rum }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_stability = 0.10
-		add_political_power = 150
-		MOR = {
-			add_opinion_modifier = {
-		    	target = TUR
-		    	modifier = medium_increase
-			}
-		}
-		ALG = {
-			add_opinion_modifier = {
-		 		target = TUR
-		    	modifier = medium_increase
-			}
-		}
-		TUN = {
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		LBA = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		YEM = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		OMA = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		PER = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		RAJ = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		UZB = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		KAZ = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		KYR = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-		SIK = { 
-			add_opinion_modifier = {
-				target = TUR
-				modifier = medium_increase
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_nomadic_roots
-	icon = GFX_cavalry_icon
-	x = -1
-	y = 1
-	cost = 10
-	mutually_exclusive = { focus = TUR_lead_islamic_world }
-	prerequisite = { focus = TUR_still_sultan_of_rum }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-		NOT = {
-			has_completed_focus = TUR_islam_is_peace
-		}
-	}
-
-	completion_reward = {
-		add_ideas = TUR_nomadic_society
-	}
-}
-
-focus = {
-	id = TUR_spirit_of_the_wolf
-	icon = GFX_goal_generic_wolf_pack
-	x = -2
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_nomadic_roots }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_war_support = 0.05
-		add_stability = 0.05
-	}
-}
-
-focus = {
-	id = TUR_return_of_tengri
-	icon = GFX_goal_support_fascism
-	x = -2
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_spirit_of_the_wolf }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_political_power = 100
-		swap_ideas = {
-			remove_idea = TUR_nomadic_society
-			add_idea = TUR_nomadic_society_2
-		}
-	}
-}
-
-focus = {
-	id = TUR_liberate_turks_in_persia
-	icon = GFX_attack_persia
-	x = 0
-	y = 2
-	cost = 10
-	prerequisite = { focus = TUR_nomadic_roots }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	bypass = {
-		OR = {
-			has_war_with = PER
-			NOT = {
-				country_exists = PER
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = PER
-		}
-		add_state_core = 421
-		add_state_core = 229
-
-	}
-}
-
-focus = {
-	id = TUR_unite_with_brothers_in_the_steppes
-	icon = GFX_goal_generic_attack_allies
-	x = 0
-	y = 3
-	cost = 10
-	prerequisite = { focus = TUR_liberate_turks_in_persia }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	bypass = {
-		OR = {
-			has_war_with = UZB
-			NOT = {
-				country_exists = UZB
-			}
-		}
-		OR = {
-			has_war_with = KYR
-			NOT = {
-				country_exists = KYR
-			}
-		}
-		OR = {
-			has_war_with = KAZ
-			NOT = {
-				country_exists = KAZ
-			}
-		}
-		OR = {
-			has_war_with = SIK
-			NOT = {
-				country_exists = SIK
-			}
-		}
-	}
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		create_wargoal = {
-		    type = annex_everything
-		    target = UZB
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = KYR
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = KAZ
-		}
-		create_wargoal = {
-		    type = annex_everything
-		    target = SIK
-		}
-	}
-}
-
-focus = {
-	id = TUR_turks_united
-	icon = GFX_focus_TUR_turanist_ambition
-	x = -1
-	y = 4
-	cost = 10
-	prerequisite = { focus = TUR_unite_with_brothers_in_the_steppes }
-	prerequisite = { focus = TUR_return_of_tengri }
-	relative_position_id = TUR_still_sultan_of_rum
-
-	available = {
-		has_civil_war = no
-	}
-
-	completion_reward = {
-		add_political_power = 100
-		add_state_core = 585
-		add_state_core = 405
-		add_state_core = 587
-		add_state_core = 804
-		add_state_core = 402
-		add_state_core = 584
-		add_state_core = 732
-	}
-}
-
-##
-
-focus = {
-	id = TUR_defeat
-	icon = GFX_focus_CZE_german_puppet
-	x = 16
-	y = 0
-	cost = 3
-
-	available = {
-		has_global_flag = treaty_of_karlowitz
-	}
-
-	completion_reward = {
-		add_political_power = 100
-		add_war_support = -0.10
-	}
-}
-
-focus = {
-	id = TUR_blame_sultan
-	icon = GFX_broken_crown
-	prerequisite = { focus = TUR_defeat }
-	mutually_exclusive = {focus = TUR_blame_vizier }
-	x = 1
-	y = 1
-	cost = 5
-	relative_position_id = TUR_defeat
-
-	ai_will_do = {
-		factor = 100
-	}
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-	}
-}
-
-focus = {
-	id = TUR_delegate_more_power
-	icon =  GFX_focus_generic_military_mission
-	prerequisite = { focus = TUR_blame_sultan }
-	x = 1
-	y = 1
-	cost = 5
-	relative_position_id = TUR_blame_sultan
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-	}
-}
-
-focus = {
-	id = TUR_sultan_puppet
-	icon = GFX_control_the_crown
-	prerequisite = { focus = TUR_delegate_more_power }
-	prerequisite = { focus = TUR_restore_order_in_georgia }
-	x = 0
-	y = 2
-	cost = 5
-	relative_position_id = TUR_blame_sultan
-	mutually_exclusive = {focus = TUR_replace_sultan }
-
-	completion_reward = {
-		TUR_increase_loyalty = yes
-	}
-}
-
-focus = {
-	id = TUR_replace_sultan
-	icon = GFX_replace_mustafa
-	prerequisite = { focus = TUR_delegate_more_power }
-	prerequisite = { focus = TUR_restore_order_in_georgia }
-	x = 2
-	y = 2
-	cost = 5
-	relative_position_id = TUR_blame_sultan
-	mutually_exclusive = {focus = TUR_sultan_puppet }
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-	}
-}
-
-focus = {
-	id = TUR_blame_vizier
-	icon = GFX_OTT_Muslim_Solidarity
-	prerequisite = { focus = TUR_defeat }
-	mutually_exclusive = {focus = TUR_blame_sultan }
-	x = -1
-	y = 1
-	cost = 5
-	relative_position_id = TUR_defeat
-
-	ai_will_do = {
-		factor = 1
-	}
-
-	completion_reward = {
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = 0.05
-		} 
-	}
-}
-
-focus = {
-	id = TUR_restore_order_in_georgia
-	icon = GFX_focus_spr_crush_the_revolution
-	prerequisite = { focus = TUR_blame_sultan focus =  TUR_blame_vizier}
-	x = 0
-	y = 2
-	cost = 10
-	relative_position_id = TUR_defeat
-
-	completion_reward = {
-		country_event = ottomans.15 
-		add_political_power = 100
-		231 = { set_demilitarized_zone = no }
-		231 = { set_border_war = no }
-	}
-}
-
-focus = {
-	id = TUR_deploy_personal_guard
-	icon = GFX_focus_generic_little_entente
-	prerequisite = { focus = TUR_blame_vizier }
-	x = -2
-	y = 2
-	cost = 5
-	relative_position_id = TUR_defeat
-
-	completion_reward = {
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = 0.05
-		} 
-		add_popularity = {
-		    ideology = democratic
-		    popularity = -0.05
-		}
-		division_template = {
-			name = "Bostanji"
-			priority = 2
-			is_locked = yes
-			regiments = {
-				infantry = { x = 0 y = 0 }
-				infantry = { x = 0 y = 1 }
-				infantry = { x = 0 y = 2 }
-				infantry = { x = 1 y = 0 }
-				infantry = { x = 1 y = 1 }
-				infantry = { x = 1 y = 2 }
-				infantry = { x = 2 y = 0 }
-				infantry = { x = 2 y = 1 }
-				infantry = { x = 2 y = 2 }
-			}
-			support = {
-				artillery = { x = 0 y = 0 }
-				recon = { x = 0 y = 1 } 
-			}
-		}
-		341 = {
-			create_unit = {
-				division = "name = \"Bostanji\" division_template = \"Bostanji\" start_experience_factor = 1" 
-				owner = TUR
-			}
-			create_unit = {
-				division = "name = \"Bostanji\" division_template = \"Bostanji\" start_experience_factor = 1" 
-				owner = TUR
-			}
-		}
-	}
-}
-
-focus = {
-	id = TUR_personal_rule
-	icon = GFX_focus_rom_royal_dictatorship
-	prerequisite = { focus = TUR_deploy_personal_guard }
-	prerequisite = { focus = TUR_restore_order_in_georgia }
-	x = -3
-	y = 3
-	cost = 5
-	relative_position_id = TUR_defeat
-	mutually_exclusive = {focus = TUR_guided_by_janissars }
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes 
-		add_political_power = 50
-	}
-}
-
-focus = {
-	id = TUR_guided_by_janissars
-	icon = GFX_Janissary_icon
-	prerequisite = { focus = TUR_deploy_personal_guard }
-	prerequisite = { focus = TUR_restore_order_in_georgia }
-	x = -1
-	y = 3
-	cost = 5
-	relative_position_id = TUR_defeat
-	mutually_exclusive = {focus = TUR_personal_rule }
-
-	completion_reward = {
-		TUR_increase_loyalty = yes 
-		add_stability = -0.05
-	}
-}
-
-focus = {
-	id = TUR_analyse_defeat
-	icon = GFX_OTT_army
-	prerequisite = { focus = TUR_defeat }
-	x = 13
-	y = 1
-	cost = 10
-	relative_position_id = TUR_defeat
-
-	available = {
-		is_subject = no
-	}
-
-	completion_reward = {
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
-	}
-}
-
-focus = {
-	id = TUR_naval_expansion
-	icon = GFX_goal_generic_construct_naval_dockyard
-	prerequisite = { focus = TUR_analyse_defeat }
-	x = 8
-	y = 1
-	cost = 10
-	relative_position_id = TUR_analyse_defeat
-
-	available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
-		}
-
-		complete_tooltip = {
-			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
-			}
-		}
-
-	completion_reward = {
-		navy_experience = 25
-		if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-			}	
-	}
-}
-
 	focus = {
-		id = TUR_naval_effort
-		icon = GFX_OTT_navy
-		prerequisite = { focus = TUR_naval_expansion }
-		x = 0
-		y = 1
-		cost = 10
-		relative_position_id = TUR_naval_expansion
-
-		available_if_capitulated = yes
-		
-		completion_reward = {
-			add_tech_bonus = {
-			    bonus = 1
-			    uses = 3
-			    category = naval_doctrine
-			}		
-		}
-	}
-	
-	focus = {
-		id = TUR_flexible_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = TUR_naval_effort }
-		mutually_exclusive = { focus = TUR_large_navy }
-		x = -1
-		y = 1
-		relative_position_id = TUR_naval_effort
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = sub_op_bonus
-				bonus = 1.0
-				uses = 2
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_large_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = TUR_naval_effort }
-		mutually_exclusive = { focus = TUR_flexible_navy }
-		x = 1
-		y = 1
-		relative_position_id = TUR_naval_effort
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = fleet_in_being_bonus
-				bonus = 1.0
-				uses = 2
-				category = fleet_in_being_tree
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = TUR_flexible_navy }
-		x = -1
-		y = 1
-		relative_position_id = TUR_flexible_navy
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = ss_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 3
-				category = ss_tech
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = TUR_large_navy focus = TUR_flexible_navy }
-		x = -1
-		y = 1
-		relative_position_id = TUR_large_navy
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = cr_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 3
-				category = cl_tech
-				category = ca_tech
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_destroyer_effort
-		icon = GFX_Imperial_Warship_Generic1
-		prerequisite = { focus = TUR_submarine_effort }
-		x = 1
-		y = 1
-		relative_position_id = TUR_submarine_effort
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = dd_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 3
-				category = dd_tech
-			}
-		}
-	}
-
-	focus = {
-		id = TUR_battlecruiser_effort
-		icon = GFX_Imperial_Warship_Generic
-		prerequisite = { focus = TUR_cruiser_effort focus= TUR_battleship_effort}
-		x = 1
-		y = 1
-		relative_position_id = TUR_cruiser_effort
-		cost = 5
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = capital_ships_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = bc_tech
-			}
-		}
-	}
-	focus = {
-		id = TUR_battleship_effort
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = TUR_large_navy }
-		x = 1
-		y = 1
-		relative_position_id = TUR_large_navy
-		cost = 10
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = capital_ships_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 3
-				category = bb_tech
-				category = shbb_tech
-			}
-		}
-	}
-	focus = {
-		id = TUR_thalasocracy
-		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = {focus = TUR_destroyer_effort focus = TUR_battlecruiser_effort}
+		id = TUR_militarization
+		icon = GFX_goal_generic_construct_mil_factory
 		x = 0
 		y = 4
-		relative_position_id = TUR_naval_effort
+		cost = 10
+		prerequisite = { focus = TUR_land_reform}
+		relative_position_id = TUR_look_to_the_economy
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = arms_factory
+										size > 1
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_resource_management
+		icon = GFX_All_resource
+		x = 2
+		y = 4
+		prerequisite = { focus = TUR_land_reform }
+		relative_position_id = TUR_look_to_the_economy
+		
 		cost = 10
 
-		available_if_capitulated = yes
+		completion_reward = {
+			add_resource = {
+				type = rubber
+				amount = 10
+				state = 184 
+			}
+			add_resource = {
+				type = chromium
+				amount = 15
+				state = 108 
+			}
+			add_resource = {
+				type = steel
+				amount = 10
+				state = 49
+			}
+		}
+	}
 
+	focus = {
+		id = TUR_reorganise_sultanate
+		icon = GFX_ottoman_turban
+		x = 2
+		y = 1
+		relative_position_id = TUR_the_state
+		prerequisite = { focus = TUR_the_state }
+		mutually_exclusive = {focus = TUR_reinforce_eyalets }
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_towards_iqta_government
+		icon = GFX_goal_islamic_government
+		x = 2
+		y = 2
+		cost = 10
+		prerequisite = { focus = TUR_reorganise_sultanate }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_iqta_government
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_tax_farming
+		icon = GFX_OTT_Tithe
+		x = 2
+		y = 3
+		cost = 10
+		prerequisite = { focus = TUR_towards_iqta_government }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_tax_farming_idea
+		}
+	}
+
+	focus = {
+		id = TUR_timariot_system
+		icon = GFX_french_cavalryman
+		x = 0
+		y = 2
+		cost = 10
+		prerequisite = { focus = TUR_reorganise_sultanate }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_timariot_system
+			add_popularity = {
+				ideology = aristocracy
+				popularity = -0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_vasal_management
+		icon = GFX_focus_CZE_german_puppet
+		x = 0
+		y = 3
+		cost = 10
+		prerequisite = { focus = TUR_timariot_system }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_vasal_management
+		}
+	}
+
+
+	focus = {
+		id = TUR_reinforce_eyalets
+		icon = GFX_focus_araba
+		x = 4
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_the_state }
+		mutually_exclusive = {focus = TUR_reorganise_sultanate }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_provinical_government_system
+		}
+	}
+
+	focus = {
+		id = TUR_autonomous_pashas
+		icon = GFX_OTT_Sublime_Porte
+		x = 4
+		y = 2
+		cost = 10
+		prerequisite = { focus = TUR_reinforce_eyalets }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			add_ideas = TUR_autonomous_pashas
+		}
+	}
+
+	focus = {
+		id = TUR_encourage_local_development
+		icon = GFX_generic_man_working
+		x = 4
+		y = 3
+		prerequisite = { focus = TUR_autonomous_pashas }
+		relative_position_id = TUR_the_state
+
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					456
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					554
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					679
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_rebuild_caravenserais
+		icon = GFX_goal_generic_construct_palace
+		x = 6
+		y = 2
+		prerequisite = { focus = TUR_reinforce_eyalets }
+		relative_position_id = TUR_the_state
+
+		cost = 7.2
+		
+		completion_reward = {
+			add_stability = 0.1
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TUR_military_meritocracy
+		icon = GFX_focus_eng_special_air_service
+		x = 6
+		y = 3
+		cost = 10
+		prerequisite = { focus = TUR_rebuild_caravenserais }
+		relative_position_id = TUR_the_state
+
+		completion_reward = {
+			TUR_increase_loyalty = yes
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			}
+			add_ideas = TUR_military_meritocracy
+		}
+	}
+
+
+	focus = {
+		id = TUR_islamic_legalism
+		icon = GFX_focus_sufism
+		x = 3
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = TUR_sufism }
+		prerequisite = { focus = TUR_military_meritocracy focus = TUR_tax_farming }
+		prerequisite = { focus = TUR_encourage_local_development focus = TUR_vasal_management }
+		relative_position_id = TUR_tax_farming
+
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+			add_stability = 0.10
+		}
+	}
+
+	focus = {
+		id = TUR_sufism
+		icon = GFX_OTT_ferman
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = TUR_islamic_legalism }
+		prerequisite = { focus = TUR_military_meritocracy focus = TUR_tax_farming }
+		prerequisite = { focus = TUR_encourage_local_development focus = TUR_vasal_management }
+		relative_position_id = TUR_tax_farming
+
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TUR_reinforce_the_khalifa
+		icon = GFX_OTT_caliph
+		x = 14
+		y = 4
+		cost = 10
+		prerequisite = { focus = TUR_personal_rule focus = TUR_guided_by_janissaries }
+
+
+		completion_reward = {
+			add_ideas = TUR_reinforced_khalifa_title
+		}
+	}
+
+	focus = {
+		id = TUR_islam_is_peace
+		icon = GFX_keep_the_peace2
+		x = 11
+		y = 5
+		mutually_exclusive = { focus = TUR_islam_is_war }
+		prerequisite = { focus = TUR_reinforce_the_khalifa focus = TUR_guide_the_sultan }
 
 		available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
+			NOT = {
+				has_completed_focus = TUR_nomadic_roots
+			}
+			has_civil_war = no
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = TUR_crack_down_on_sect_practices
+		icon = GFX_goal_crack_down_on_sect_practices
+		x = -1
+		y = 1
+		prerequisite = { focus = TUR_islam_is_peace }
+		relative_position_id = TUR_islam_is_peace
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+	focus = {
+		id = TUR_custodian_of_holy_cities
+		icon = GFX_ottoman_empire_flag_3
+		x = -1
+		y = 2
+		relative_position_id = TUR_islam_is_peace
+		prerequisite = { focus = TUR_crack_down_on_sect_practices }
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = TUR_custodian_of_holy_cities
+		}
+	}
+
+	focus = {
+		id = TUR_dhimmi_tolerance
+		icon = GFX_generic_support_church
+		x = 1
+		y = 1
+		relative_position_id = TUR_islam_is_peace
+		prerequisite = { focus = TUR_islam_is_peace }
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = -70
+			add_stability = -0.05
+			add_ideas = TUR_dhimmi_tolerated
+		}
+	}
+
+	focus = {
+		id = TUR_jizya_tax
+		icon = GFX_OTT_Tithe
+		x = 1
+		y = 2
+		cost = 10
+		prerequisite = { focus = TUR_dhimmi_tolerance }
+		relative_position_id = TUR_islam_is_peace
+
+		completion_reward = {
+			add_ideas = TUR_jizya_tax_idea
+		}
+	}
+
+	focus = {
+		id = TUR_idabat_khana
+		icon = GFX_OTT_Islamic_Education
+		x = 3
+		y = 2
+		prerequisite = { focus = TUR_dhimmi_tolerance }
+		relative_position_id = TUR_islam_is_peace
+
+		cost = 10
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = TUR_islamic_centre_of_scholary_learning
+		icon = GFX_focus_research2
+		x = 1
+		y = 3
+		cost = 10
+		prerequisite = { focus = TUR_idabat_khana focus = TUR_custodian_of_holy_cities focus = TUR_jizya_tax }
+		relative_position_id = TUR_islam_is_peace
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_ideas = TUR_islamic_centre_of_scholary_learning
+		}
+	}
+
+	focus = {
+		id = TUR_dawn_of_the_tulip_period
+		icon = GFX_OTT_dawn_of_the_Tulip_Period
+		x = 3
+		y = 3
+		cost = 10
+		prerequisite = { focus = TUR_idabat_khana }
+		relative_position_id = TUR_islam_is_peace
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+		}
+	}
+
+
+	focus = {
+		id = TUR_islam_is_war
+		icon = GFX_janissary_muslim_icon
+		x = 6
+		y = 5
+		mutually_exclusive = { focus = TUR_islam_is_peace }
+		prerequisite = { focus = TUR_reinforce_the_khalifa }
+
+		available = {
+			has_civil_war = no
+		}
+
+		cost = 5
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = {
+		id = TUR_call_upon_the_faithful
+		icon = GFX_focus_generic_manpower
+		x = -1
+		y = 1
+		cost = 8
+		prerequisite = { focus = TUR_islam_is_war }
+		relative_position_id = TUR_islam_is_war
+
+		completion_reward = {
+			add_manpower = 25000
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TUR_ghazi_warriors
+		icon = GFX_focus_ghazi_warriors
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_call_upon_the_faithful }
+		relative_position_id = TUR_call_upon_the_faithful
+
+		completion_reward = {
+			add_ideas =	TUR_ghazi_warriors
+		}
+	}
+
+	focus = {
+		id = TUR_mujahadeen
+		icon = GFX_focus_mujahadeen
+		x = -2
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_ghazi_warriors }
+		relative_position_id = TUR_ghazi_warriors
+
+		completion_reward = {
+			add_ideas =	TUR_mujahadeen
+		}
+	}
+
+
+	focus = {
+		id = TUR_jihad
+		icon = GFX_guns_icon
+		x = 0
+		y = 1
+		cost = 5
+		prerequisite = { focus = TUR_ghazi_warriors }
+		prerequisite = { focus = TUR_ghazi_warriors }
+		relative_position_id = TUR_ghazi_warriors
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TUR_enforce_orthodoxy
+		icon = GFX_save_islam
+		x = 1
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_islam_is_war }
+		relative_position_id = TUR_islam_is_war
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = TUR_expell_dhimmi
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_enforce_orthodoxy }
+		relative_position_id = TUR_enforce_orthodoxy
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			set_temp_variable = { fascism_temp = party_popularity@fascism }
+			multiply_temp_variable = { fascism_temp = -0.5 }
+			set_temp_variable = { fascism_ban = party_popularity@fascism }
+			multiply_temp_variable = { fascism_ban = -1 }
+			add_stability = fascism_temp
+			add_popularity = {
+				ideology = fascism
+				popularity = fascism_ban
+			}
+			#hidden_effect = {
+				random_list = { #greece
+					25 = {
+						GRE = { 
+							transfer_state = 47
+							transfer_state = 185
+							transfer_state = 731
+							transfer_state = 182
+							transfer_state = 187
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								47 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+								}
+								185 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+								}
+								731 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+								}
+								182 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = GRE
+									}
+								}
+							}
+						}
+					}
+
+					75 = {
+					}
+				}
+				random_list = {
+					25 = {
+					BUL = { 
+							transfer_state = 184
+							transfer_state = 212
+							transfer_state = 211
+							transfer_state = 48
+							transfer_state = 77
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								184 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+								}
+								212 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+								}
+								211 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+								}
+								48 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BUL
+									}
+								}
+							}
+						}
+					}
+					75 = {
+					}
+				}
+				random_list = {
+					25 = {
+						ALB = { 
+							transfer_state = 44
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								44 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ALB
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ALB
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ALB
+									}
+								}
+							}
+						}
+					}
+					75 = {
+					}
+				}
+				random_list = {
+					25 = {
+						BOS = { 
+							transfer_state = 104
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								104 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BOS
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BOS
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = BOS
+									}
+								}
+							}
+						}
+					}
+					75 = {
+					}
+				}
+				random_list = {
+					25 = {
+						SER = { 
+							transfer_state = 108
+							transfer_state = 106
+							transfer_state = 107
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								108 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = SER
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = SER
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = SER
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = SER
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = SER
+									}
+								}
+							}
+						}
+					}
+					75 = {
+					}
+				}
+				random_list = {
+					25 = {
+						ARM = { 
+							transfer_state = 353
+							transfer_state = 352
+							declare_war_on = {
+								target = TUR
+								type = annex_everything
+							}
+							division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+							hidden_effect = {
+								353 = {
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ARM
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ARM
+									}
+									create_unit = {
+										division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+										owner = ARM
+									}
+								}
+							}
+						}
+					}
+					75 = {
+					}
+				}
+
+			#}
+		}
+	}
+
+	focus = {
+		id = TUR_demand_shiiete_conversion
+		icon = GFX_goal_islamic_healthcare
+		x = 0
+		y = 1
+		cost = 10
+		prerequisite = { focus = TUR_expell_dhimmi }
+		relative_position_id = TUR_expell_dhimmi
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_stability = 0.15
+			random_list = {
+				50 = {
+					LEB = { 
+						transfer_state = 553
+						declare_war_on = {
+							target = TUR
+							type = annex_everything
+						}
+						division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+						hidden_effect = {
+							553 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = LEB
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = LEB
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = LEB
+								}
+							}
+						}
+					}
+				}
+				50 = {
+				}
+			}
+			random_list = {
+				50 = {
+					EGY = { 
+						transfer_state = 446
+						transfer_state = 447
+						transfer_state = 452
+						transfer_state = 457
+						transfer_state = 456
+						transfer_state = 453
+						declare_war_on = {
+							target = TUR
+							type = annex_everything
+						}
+						division_template = {
+								name = "Rebels"
+								priority = 2
+								is_locked = yes
+								regiments = {
+									infantry = { x = 0 y = 0 }
+									infantry = { x = 0 y = 1 }
+									infantry = { x = 0 y = 2 }
+									infantry = { x = 1 y = 0 }
+									infantry = { x = 1 y = 1 }
+									infantry = { x = 1 y = 2 }
+								}
+							}
+						hidden_effect = {
+							446 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+							}
+							447 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+							}
+							453 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+							}
+							452 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+							}
+							456 = {
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+								create_unit = {
+									division = "name = \"Rebels\" division_template = \"Rebels\" start_experience_factor = 1" 
+									owner = EGY
+								}
+							}
+						}
+
+					}
+
+				}
+				50 = {
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_proclaim_islamic_state
+		icon = GFX_focus_TUR_turanist_ambition
+		x = 0
+		y = 4
+		cost = 10
+		prerequisite = { focus = TUR_demand_shiiete_conversion }
+		prerequisite = { focus = TUR_jihad }
+		relative_position_id = TUR_islam_is_war
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+			add_ideas = TUR_islamic_state
+		}
+	}
+
+	focus = {
+		id = TUR_reclaim_north_africa
+		icon = GFX_goal_generic_more_territorial_claims
+		x = -2
+		y = 1
+		cost = 5
+		prerequisite = { focus = TUR_proclaim_islamic_state }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = ALG
+				NOT = {
+					country_exists = ALG
+				}
+			}
+			OR = {
+				has_war_with = TUN
+				NOT = {
+					country_exists = TUN
+				}
+			}
+			OR = {
+				has_war_with = LBA
+				NOT = {
+				country_exists = LBA
+				}
 			}
 		}
 
-		complete_tooltip = {
-			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = ALG
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = LBA
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TUN
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_morrocan_conquest
+		icon = GFX_morocco
+		x = -1
+		y = 2
+		cost = 5
+		prerequisite = { focus = TUR_reclaim_north_africa }
+		prerequisite = { focus = TUR_all_arabs_must_comply }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = MOR
+				NOT = {
+					country_exists = MOR
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MOR
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_re_reconquista
+		icon = GFX_focus_spa_strengthen_the_supreme_reality_of_spain
+		x = -1
+		y = 3
+		cost = 8
+		prerequisite = { focus = TUR_morrocan_conquest }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = POR
+				NOT = {
+					country_exists = POR
+				}
+			}
+			OR = {
+				has_war_with = SPR
+				NOT = {
+					country_exists = SPR
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SPR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = POR
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_avenge_poitiers
+		icon = GFX_focus_up_joan_of_arc
+		x = -1
+		y = 4
+		cost = 8
+		prerequisite = { focus = TUR_re_reconquista }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = FRA
+				NOT = {
+					country_exists = FRA
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = FRA
+			}
+		}
+	}
+
+		focus = {
+			id = TUR_all_arabs_must_comply
+			icon = GFX_focus_generic_annex_country_2
+			x = 0
+			y = 1
+			cost = 5
+			prerequisite = { focus = TUR_proclaim_islamic_state }
+			relative_position_id = TUR_proclaim_islamic_state
+
+			bypass = {
+				OR = {
+					has_war_with = OMA
+					NOT = {
+						country_exists = OMA
+					}
+				}
+				OR = {
+					has_war_with = YEM
+					NOT = {
+						country_exists = YEM
+					}
+				}
+			}
+
+			available = {
+				has_civil_war = no
+			}
+
+			completion_reward = {
+				create_wargoal = {
+					type = annex_everything
+					target = YEM
+				}
+				create_wargoal = {
+					type = annex_everything
+					target = OMA
+				}
+			}
+		}
+
+	focus = {
+		id = TUR_persian_conquest
+		icon = GFX_attack_persia
+		x = 2
+		y = 1
+		cost = 8
+		prerequisite = { focus = TUR_proclaim_islamic_state }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = PER
+				NOT = {
+					country_exists = PER
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PER
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_destroy_nomads
+		icon = GFX_goal_generic_attack_allies
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = TUR_persian_conquest }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = KYR
+				NOT = {
+					country_exists = KYR
+				}
+			}
+			OR = {
+				has_war_with = UZB
+				NOT = {
+					country_exists = UZB
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = KYR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = UZB
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_disband_mughal_empire
+		icon = GFX_attack_mughals2
+		x = 3
+		y = 2
+		cost = 8
+		prerequisite = { focus = TUR_persian_conquest }
+		relative_position_id = TUR_proclaim_islamic_state
+
+		bypass = {
+			OR = {
+				has_war_with = RAJ
+				NOT = {
+					country_exists = RAJ
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = RAJ
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_guide_the_sultan
+		icon = GFX_OTT_Muslim_Relations
+		x = 18
+		y = 4
+		cost = 10
+		prerequisite = { focus = TUR_sultan_puppet focus = TUR_replace_sultan }
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_popularity = {
+				ideology = neutrality
+				popularity = -0.10
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_still_sultan_of_rum
+		icon = GFX_ottoman_empire_flag_2
+		x = 19
+		y = 5
+		cost = 10
+		prerequisite = { focus = TUR_guide_the_sultan  focus = TUR_reinforce_the_khalifa }
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_political_power = 150
+		}
+	}
+
+	focus = {
+		id = TUR_recover_morea
+		icon = GFX_goal_take_morea
+		x = 2
+		y = 1
+		relative_position_id = TUR_still_sultan_of_rum
+		prerequisite = { focus = TUR_still_sultan_of_rum }
+
+		bypass = {
+			OR = {
+				has_war_with = VNC
+				owns_state = 186
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+		
+		cost = 6
+		
+
+		completion_reward = {
+			VNC = {
+				country_event = {
+					id = ottomans.11
+					days = 5
+				}
+			}
+			add_threat = 2
+		}
+	}
+
+	focus = {
+		id = TUR_escalate_tensions_with_austria
+		icon = GFX_goal_flag_austria
+		x = 2
+		y = 2
+		cost = 5
+		prerequisite = { focus = TUR_recover_morea }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		bypass = {
+			OR = {
+				has_war_with = AUS
+				NOT = {
+					country_exists = AUS
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = AUS
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_support_sweden
+		icon = GFX_agree_sweden
+		x = 4
+		y = 1
+		relative_position_id = TUR_still_sultan_of_rum
+		prerequisite = { focus = TUR_still_sultan_of_rum }
+
+		cost = 5
+
+		available = {
+			has_civil_war = no
+			SWE = { has_war = yes }
+		}
+
+		completion_reward = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 2000
+				target = SWE
+			}
+			add_opinion_modifier = {
+				target = SWE
+				modifier = medium_increase
+			}
+			SWE = { add_opinion_modifier = {
+				target = TUR
+				modifier = medium_increase
+				}
+			}
+			SWE = {
+				country_event = {
+					id = ottomans.14
+					days = 5
+				}
+			}
+			add_ideas = volunteer_corps_focus
+		}
+	}
+
+	focus = {
+		id = TUR_azov_border_clash
+		icon = GFX_focus_generic_provoke_border_clashes
+		x = 4
+		y = 2
+		cost = 10
+		prerequisite = { focus = TUR_support_sweden }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		available = {
+			has_civil_war = no
+			CRI = {
+				owns_state = 1029
+			}
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				NOT = {
+					country_exists = SOV
+				}
+				owns_state = 218
+				CRI = { owns_state = 218 }
+			}
+		}
+
+		completion_reward = {
+			CRI = { 
+				start_border_war = {
+					change_state_after_war = yes
+					attacker = {
+						state = 1029
+						num_provinces = 2
+					}
+					defender = {
+						state = 218
+						num_provinces = 1
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_invade_russia
+		icon = GFX_focus_eng_expose_the_belly_of_the_bear
+		x = 4
+		y = 3
+		cost = 5
+		prerequisite = { focus = TUR_azov_border_clash }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				NOT = {
+					country_exists = SOV
+				}
+			}
+		}
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_lead_islamic_world
+		icon = GFX_OTT_Association_of_Muslim_Nations
+		x = -3
+		y = 1
+		relative_position_id = TUR_still_sultan_of_rum
+		mutually_exclusive = { focus = TUR_nomadic_roots }
+		prerequisite = { focus = TUR_still_sultan_of_rum }
+
+		available = {
+			has_civil_war = no
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_stability = 0.10
+			add_political_power = 150
+			MOR = {
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			ALG = {
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			TUN = {
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			LBA = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			YEM = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			OMA = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			PER = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			RAJ = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			UZB = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			KAZ = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			KYR = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+			SIK = { 
+				add_opinion_modifier = {
+					target = TUR
+					modifier = medium_increase
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = TUR_nomadic_roots
+		icon = GFX_goal_generic_wolf_pack
+		x = -1
+		y = 1
+		cost = 10
+		mutually_exclusive = { focus = TUR_lead_islamic_world }
+		prerequisite = { focus = TUR_still_sultan_of_rum }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		available = {
+			has_civil_war = no
+			NOT = {
+				has_completed_focus = TUR_islam_is_peace
+			}
+		}
+
+		completion_reward = {
+			add_ideas = TUR_nomadic_society
+		}
+
+		ai_will_do = {
+			factor = -10000
+		}
+	}
+
+	focus = {
+		id = TUR_spirit_of_the_wolf
+		icon = GFX_focus_LIT_new_kind_of_iron_wolf
+		x = -2
+		y = 2
+		prerequisite = { focus = TUR_nomadic_roots }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		cost = 8
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = TUR_return_of_tengri
+		icon = GFX_goal_support_fascism
+		x = -2
+		y = 3
+		prerequisite = { focus = TUR_spirit_of_the_wolf }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 100
+			swap_ideas = {
+				remove_idea = TUR_nomadic_society
+				add_idea = TUR_nomadic_society_2
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_liberate_turks_in_persia
+		icon = GFX_attack_persia
+		x = 0
+		y = 2
+		prerequisite = { focus = TUR_nomadic_roots }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		bypass = {
+			OR = {
+				has_war_with = PER
+				NOT = {
+					country_exists = PER
+				}
 			}
 		}
 		
+		cost = 10
+
 		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = PER
+			}
+			add_state_core = 421
+			add_state_core = 229
+		}
+	}
+
+	focus = {
+		id = TUR_unite_with_brothers_in_the_steppes
+		icon = GFX_goal_generic_attack_allies
+		x = 0
+		y = 3
+		prerequisite = { focus = TUR_liberate_turks_in_persia }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		bypass = {
+			OR = {
+				has_war_with = UZB
+				NOT = {
+					country_exists = UZB
+				}
+			}
+			OR = {
+				has_war_with = KYR
+				NOT = {
+					country_exists = KYR
+				}
+			}
+			OR = {
+				has_war_with = KAZ
+				NOT = {
+					country_exists = KAZ
+				}
+			}
+			OR = {
+				has_war_with = SIK
+				NOT = {
+					country_exists = SIK
+				}
+			}
+		}
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = UZB
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KYR
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = KAZ
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_turks_united
+		icon = GFX_ottoman_empire_flag
+		x = -1
+		y = 4
+		cost = 10
+		prerequisite = { focus = TUR_unite_with_brothers_in_the_steppes }
+		prerequisite = { focus = TUR_return_of_tengri }
+		relative_position_id = TUR_still_sultan_of_rum
+
+		available = {
+			has_civil_war = no
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_state_core = 585
+			add_state_core = 405
+			add_state_core = 587
+			add_state_core = 804
+			add_state_core = 402
+			add_state_core = 584
+			add_state_core = 732
+		}
+	}
+
+	##
+
+	focus = {
+		id = TUR_defeat
+		icon = GFX_focus_CZE_german_puppet
+		x = 16
+		y = 0
+		cost = 3
+
+		available = {
+			has_global_flag = treaty_of_karlowitz
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = -0.10
+		}
+	}
+
+	focus = {
+		id = TUR_blame_sultan
+		icon = GFX_broken_crown
+		x = 1
+		y = 1
+		relative_position_id = TUR_defeat
+		prerequisite = { focus = TUR_defeat }
+		mutually_exclusive = {focus = TUR_blame_vizier }
+
+		cost = 5
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+		}
+		
+		ai_will_do = {
+			factor = 100
+		}
+	}
+
+	focus = {
+		id = TUR_delegate_more_power
+		icon =  GFX_focus_generic_monarchy_1
+		x = 1
+		y = 1
+		relative_position_id = TUR_blame_sultan
+		prerequisite = { focus = TUR_blame_sultan }
+		cost = 5
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+		}
+	}
+
+	focus = {
+		id = TUR_sultan_puppet
+		icon = GFX_control_the_crown
+		prerequisite = { focus = TUR_delegate_more_power }
+		prerequisite = { focus = TUR_restore_order_in_georgia }
+		x = 0
+		y = 2
+		cost = 5
+		relative_position_id = TUR_blame_sultan
+		mutually_exclusive = {focus = TUR_replace_sultan }
+
+		completion_reward = {
+			TUR_increase_loyalty = yes
+		}
+	}
+
+	focus = {
+		id = TUR_replace_sultan
+		icon = GFX_replace_mustafa
+		x = 2
+		y = 2
+		relative_position_id = TUR_blame_sultan
+		prerequisite = { focus = TUR_delegate_more_power }
+		prerequisite = { focus = TUR_restore_order_in_georgia }
+		mutually_exclusive = {focus = TUR_sultan_puppet }
+
+		cost = 5
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+		}
+	}
+
+	focus = {
+		id = TUR_blame_vizier
+		icon = GFX_arrest_nobles
+		x = -1
+		y = 1
+		relative_position_id = TUR_defeat
+		prerequisite = { focus = TUR_defeat }
+		mutually_exclusive = {focus = TUR_blame_sultan }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			} 
+		}
+	}
+
+	focus = {
+		id = TUR_restore_order_in_georgia
+		icon = GFX_focus_spr_crush_the_revolution
+		prerequisite = { focus = TUR_blame_sultan focus =  TUR_blame_vizier}
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = TUR_defeat
+
+		completion_reward = {
+			country_event = ottomans.15 
+			add_political_power = 100
+			231 = { set_demilitarized_zone = no }
+			231 = { set_border_war = no }
+		}
+	}
+
+	focus = {
+		id = TUR_deploy_personal_guard
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = TUR_blame_vizier }
+		x = -2
+		y = 2
+		cost = 5
+		relative_position_id = TUR_defeat
+
+		completion_reward = {
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			} 
+			add_popularity = {
+				ideology = democratic
+				popularity = -0.05
+			}
+			division_template = {
+				name = "Bostanji"
+				priority = 2
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+				}
+				support = {
+					artillery = { x = 0 y = 0 }
+					recon = { x = 0 y = 1 } 
+				}
+			}
+			341 = {
+				create_unit = {
+					division = "name = \"Bostanji\" division_template = \"Bostanji\" start_experience_factor = 1" 
+					owner = TUR
+				}
+				create_unit = {
+					division = "name = \"Bostanji\" division_template = \"Bostanji\" start_experience_factor = 1" 
+					owner = TUR
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_personal_rule
+		icon = GFX_focus_rom_royal_dictatorship
+		prerequisite = { focus = TUR_deploy_personal_guard }
+		prerequisite = { focus = TUR_restore_order_in_georgia }
+		x = -3
+		y = 3
+		cost = 5
+		relative_position_id = TUR_defeat
+		mutually_exclusive = {focus = TUR_guided_by_janissaries }
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes 
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = TUR_guided_by_janissaries
+		icon = GFX_janissary_hat_icon
+		prerequisite = { focus = TUR_deploy_personal_guard }
+		prerequisite = { focus = TUR_restore_order_in_georgia }
+		x = -1
+		y = 3
+		cost = 5
+		relative_position_id = TUR_defeat
+		mutually_exclusive = {focus = TUR_personal_rule }
+
+		completion_reward = {
+			TUR_increase_loyalty = yes 
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = TUR_analyse_defeat
+		icon = GFX_OTT_army
+		prerequisite = { focus = TUR_defeat }
+		x = 13
+		y = 1
+		cost = 10
+		relative_position_id = TUR_defeat
+
+		available = {
+			is_subject = no
+		}
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_naval_expansion
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = TUR_analyse_defeat }
+		x = 8
+		y = 1
+		cost = 10
+		relative_position_id = TUR_analyse_defeat
+
+		available = {
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+			}
+
+			complete_tooltip = {
+				navy_experience = 25
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+
+		completion_reward = {
+			navy_experience = 25
 			if = {
-				limit = {
-					NOT = {
+					limit = {
+						NOT = {
+							any_owned_state = {
+								dockyard > 0
+								free_building_slots = {
+									building = dockyard
+									size > 2
+									include_locked = yes
+								}
+							}
+						}
+						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+					}
+					set_country_flag = naval_effort_built
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = naval_effort_built }
 						any_owned_state = {
 							dockyard > 0
 							free_building_slots = {
@@ -2936,63 +2574,404 @@ focus = {
 							}
 						}
 					}
-					any_owned_state = {
-						is_coastal = yes
+					random_owned_controlled_state = {
+						limit = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
 					}
+					set_country_flag = naval_effort_built
 				}
-				random_owned_controlled_state = {
+				if = {
 					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
+						NOT = { has_country_flag = naval_effort_built }
+						NOT = {
+							any_owned_state = {
+								free_building_slots = {
+									building = dockyard
+									size > 2
+									include_locked = yes
+								}
+							}
 						}
 					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
+					random_state = {
+						limit = {
+							controller = { tag = ROOT }
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
 					}
-				}
-				set_country_flag = naval_effort_built
+				}	
 			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
+		}
+
+		focus = {
+			id = TUR_naval_effort
+			icon = GFX_OTT_navy
+			prerequisite = { focus = TUR_naval_expansion }
+			x = 0
+			y = 1
+			cost = 10
+			relative_position_id = TUR_naval_expansion
+
+			available_if_capitulated = yes
+			
+			completion_reward = {
+				add_tech_bonus = {
+					bonus = 1
+					uses = 3
+					category = naval_doctrine
+				}		
+			}
+		}
+		
+		focus = {
+			id = TUR_flexible_navy
+			icon = GFX_goal_generic_build_navy
+			prerequisite = { focus = TUR_naval_effort }
+			mutually_exclusive = { focus = TUR_large_navy }
+			x = -1
+			y = 1
+			relative_position_id = TUR_naval_effort
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
 						}
 					}
 				}
-				random_owned_controlled_state = {
+			}
+
+			completion_reward = {
+				navy_experience = 25
+				add_tech_bonus = {
+					name = sub_op_bonus
+					bonus = 1.0
+					uses = 2
+					technology = convoy_interdiction_ti
+					technology = unrestricted_submarine_warfare
+					technology = wolfpacks
+					technology = advanced_submarine_warfare
+					technology = combined_operations_raiding
+				}
+			}
+		}
+
+		focus = {
+			id = TUR_large_navy
+			icon = GFX_goal_generic_navy_doctrines_tactics
+			prerequisite = { focus = TUR_naval_effort }
+			mutually_exclusive = { focus = TUR_flexible_navy }
+			x = 1
+			y = 1
+			relative_position_id = TUR_naval_effort
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				navy_experience = 25
+				add_tech_bonus = {
+					name = fleet_in_being_bonus
+					bonus = 1.0
+					uses = 2
+					category = fleet_in_being_tree
+				}
+			}
+		}
+
+		focus = {
+			id = TUR_submarine_effort
+			icon = GFX_goal_generic_navy_submarine
+			prerequisite = { focus = TUR_flexible_navy }
+			x = -1
+			y = 1
+			relative_position_id = TUR_flexible_navy
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = ss_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 3
+					category = ss_tech
+				}
+			}
+		}
+
+		focus = {
+			id = TUR_cruiser_effort
+			icon = GFX_goal_generic_navy_cruiser
+			prerequisite = { focus = TUR_large_navy focus = TUR_flexible_navy }
+			x = -1
+			y = 1
+			relative_position_id = TUR_large_navy
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = cr_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 3
+					category = cl_tech
+					category = ca_tech
+				}
+			}
+		}
+
+		focus = {
+			id = TUR_destroyer_effort
+			icon = GFX_Imperial_Warship_Generic1
+			prerequisite = { focus = TUR_submarine_effort }
+			x = 1
+			y = 1
+			relative_position_id = TUR_submarine_effort
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = dd_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 3
+					category = dd_tech
+				}
+			}
+		}
+
+		focus = {
+			id = TUR_battlecruiser_effort
+			icon = GFX_Imperial_Warship_Generic
+			prerequisite = { focus = TUR_cruiser_effort focus= TUR_battleship_effort}
+			x = 1
+			y = 1
+			relative_position_id = TUR_cruiser_effort
+			cost = 5
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = capital_ships_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 1
+					category = bc_tech
+				}
+			}
+		}
+		focus = {
+			id = TUR_battleship_effort
+			icon = GFX_goal_generic_navy_battleship
+			prerequisite = { focus = TUR_large_navy }
+			x = 1
+			y = 1
+			relative_position_id = TUR_large_navy
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+
+			completion_reward = {
+				add_tech_bonus = {
+					name = capital_ships_bonus
+					bonus = 1.0
+					ahead_reduction = 2
+					uses = 3
+					category = bb_tech
+					category = shbb_tech
+				}
+			}
+		}
+		focus = {
+			id = TUR_thalasocracy
+			icon = GFX_goal_generic_construct_naval_dockyard
+			prerequisite = {focus = TUR_destroyer_effort focus = TUR_battlecruiser_effort}
+			x = 0
+			y = 4
+			relative_position_id = TUR_naval_effort
+			cost = 10
+
+			available_if_capitulated = yes
+
+
+			available = {
+				any_state = {
+					is_coastal = yes
+					is_controlled_by = ROOT
+				}
+			}
+
+			complete_tooltip = {
+				navy_experience = 25
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			
+			completion_reward = {
+				if = {
 					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
+						NOT = {
+							any_owned_state = {
+								dockyard > 0
+								free_building_slots = {
+									building = dockyard
+									size > 2
+									include_locked = yes
+								}
+							}
 						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
 						any_owned_state = {
+							is_coastal = yes
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+					}
+					set_country_flag = naval_effort_built
+				}
+				if = {
+					limit = {
+						NOT = { has_country_flag = naval_effort_built }
+						any_owned_state = {
+							dockyard > 0
 							free_building_slots = {
 								building = dockyard
 								size > 2
@@ -3000,411 +2979,448 @@ focus = {
 							}
 						}
 					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
+					random_owned_controlled_state = {
+						limit = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
 						}
 					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
+					set_country_flag = naval_effort_built
 				}
-			}			
+				if = {
+					limit = {
+						NOT = { has_country_flag = naval_effort_built }
+						NOT = {
+							any_owned_state = {
+								free_building_slots = {
+									building = dockyard
+									size > 2
+									include_locked = yes
+								}
+							}
+						}
+					}
+					random_state = {
+						limit = {
+							controller = { tag = ROOT }
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 3
+						add_building_construction = {
+							type = dockyard
+							level = 3
+							instant_build = yes
+						}
+					}
+				}			
+			}
+		}
+
+	############# REWORKED OTTOMAN MIL TREE #############
+
+	focus = {
+		id = TUR_support_the_janissaries
+		icon = GFX_OTT_reinforce_the_Devshirme_System
+		prerequisite = { focus = TUR_analyse_defeat }
+		mutually_exclusive = { focus = TUR_restructure_the_military }
+		x = -3
+		y = 1
+		cost = 10
+		relative_position_id = TUR_analyse_defeat
+
+		available = {
+			NOT = {
+				aristocracy > 0.5
+			}
+		}
+
+		completion_reward = {
+			add_war_support = 0.1
+			add_stability = 0.1
 		}
 	}
 
-############# REWORKED OTTOMAN MIL TREE #############
+	focus = {
+		id = TUR_modernization
+		icon = GFX_guns_icon
+		prerequisite = { focus = TUR_support_the_janissaries }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_support_the_janissaries
+		mutually_exclusive = { focus = TUR_old_traditions }
 
-focus = {
-	id = TUR_support_the_janissaries
-	icon = GFX_OTT_reinforce_the_Devshirme_System
-	prerequisite = { focus = TUR_analyse_defeat }
-	mutually_exclusive = { focus = TUR_restructure_the_military }
-	x = -3
-	y = 1
-	cost = 10
-	relative_position_id = TUR_analyse_defeat
-
-	available = {
-		NOT = {
-			aristocracy > 0.5
+		completion_reward = {
+			add_war_support = -0.05
+			add_stability = -0.05
+			add_political_power = -50
+			hidden_effect = {
+				set_division_force_allow_recruiting = {
+					division_template = "Janissary Tümeni"
+				}
+			}
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			custom_effect_tooltip = allow_janissary_recruiting
 		}
 	}
 
-	completion_reward = {
-		add_war_support = 0.1
-		add_stability = 0.1
+	focus = {
+		id = TUR_increase_janissary_wages
+		icon = GFX_focus_ETH_adopt_the_lira
+		prerequisite = { focus = TUR_modernization }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_modernization
+
+		completion_reward = {
+			TUR_increase_loyalty = yes
+		}
 	}
-}
 
-focus = {
-	id = TUR_modernization
-	icon = GFX_guns_icon
-	prerequisite = { focus = TUR_support_the_janissaries }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_support_the_janissaries
-	mutually_exclusive = { focus = TUR_old_traditions }
+	focus = {
+		id = TUR_modern_weapons
+		icon = GFX_tanegashima
+		x = 0
+		y = 1
+		prerequisite = { focus = TUR_increase_janissary_wages }
+		relative_position_id = TUR_increase_janissary_wages
 
-	completion_reward = {
-		add_war_support = -0.05
-		add_stability = -0.05
-		add_political_power = -50
-		hidden_effect = {
-			set_division_force_allow_recruiting = {
+		cost = 8
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_weapons
+				bonus = 1
+				uses = 1
+				category = infantry_weapons
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_old_traditions
+		icon = GFX_focus_secret_rearmament
+		x = -2
+		y = 1
+		relative_position_id = TUR_support_the_janissaries
+		prerequisite = { focus = TUR_support_the_janissaries }
+		mutually_exclusive = { focus = TUR_modernization }
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.1
+			TUR_increase_loyalty = yes
+		}
+	}
+
+	focus = {
+		id = TUR_superior_tactics
+		icon = GFX_soldier_icon
+		prerequisite = { focus = TUR_old_traditions }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_old_traditions
+
+		completion_reward = {
+			add_ideas = TUR_superior_tactics
+		}
+	}
+
+	focus = {
+		id = TUR_modernize_sipahi
+		icon = GFX_cavalry_icon
+		prerequisite = { focus = TUR_superior_tactics }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_superior_tactics
+
+		completion_reward = {
+			add_tech_bonus = {
+				bonus = 1
+				ahead_reduction = 2
+				uses = 1
+				category = armor
+				name = armor_bonus
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_strengthen_the_janissaries
+		icon = GFX_OTT_reinforce_janissaries
+		x = 1
+		y = 1
+		relative_position_id = TUR_modernize_sipahi
+		prerequisite = { focus = TUR_modernize_sipahi }
+
+		cost = 8
+
+		completion_reward = {
+			set_division_template_lock = {
 				division_template = "Janissary Tümeni"
+				is_locked = no
 			}
-		}
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 1
-			category = land_doctrine
-		}
-		custom_effect_tooltip = allow_janissary_recruiting
-	}
-}
-
-focus = {
-	id = TUR_increase_janissary_wages
-	icon = GFX_money
-	prerequisite = { focus = TUR_modernization }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_modernization
-
-	completion_reward = {
-		TUR_increase_loyalty = yes
-	}
-}
-
-focus = {
-	id = TUR_modern_weapons
-	icon = GFX_tanegashima
-	prerequisite = { focus = TUR_increase_janissary_wages }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_increase_janissary_wages
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = infantry_weapons
-			bonus = 1
-			uses = 1
-			category = infantry_weapons
-		}
-	}
-}
-
-focus = {
-	id = TUR_old_traditions
-	icon = GFX_focus_secret_rearmament
-	prerequisite = { focus = TUR_support_the_janissaries }
-	x = -2
-	y = 1
-	cost = 8
-	relative_position_id = TUR_support_the_janissaries
-	mutually_exclusive = { focus = TUR_modernization }
-
-	completion_reward = {
-		add_stability = 0.1
-	}
-}
-
-focus = {
-	id = TUR_superior_tactics
-	icon = GFX_soldier_icon
-	prerequisite = { focus = TUR_old_traditions }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_old_traditions
-
-	completion_reward = {
-		add_ideas = TUR_superior_tactics
-	}
-}
-
-focus = {
-	id = TUR_modernize_sipahi
-	icon = GFX_cavalry_icon
-	prerequisite = { focus = TUR_superior_tactics }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_superior_tactics
-
-	completion_reward = {
-		add_tech_bonus = {
-		    bonus = 1
-		    ahead_reduction = 2
-		    uses = 1
-		    category = armor
-		    name = armor_bonus
-		}
-	}
-}
-
-focus = {
-	id = TUR_reinforce_janissaries
-	icon = GFX_OTT_reinforce_janissaries
-	x = 1
-	y = 1
-	relative_position_id = TUR_modernize_sipahi
-	prerequisite = { focus = TUR_modernize_sipahi }
-
-	cost = 8
-
-	completion_reward = {
-		set_division_template_lock = {
-			division_template = "Janissary Tümeni"
-			is_locked = no
-		}
-		add_units_to_division_template = {
-			template_name = "Janissary Tümeni"
-			support = {
-				artillery = 0
+			add_units_to_division_template = {
+				template_name = "Janissary Tümeni"
+				support = {
+					artillery = 0
+				}
 			}
 		}
 	}
-}
 
-focus = {
-	id = TUR_healthy_man_of_europe
-	icon = GFX_OTT_army_command
-	prerequisite = { focus = TUR_modernize_sipahi focus = TUR_phase_out_irregular_infantry }
-	prerequisite = { focus = TUR_modern_weapons focus = TUR_produce_more_iron }
+	focus = {
+		id = TUR_healthy_man_of_europe
+		icon = GFX_OTT_army_command
+		prerequisite = { focus = TUR_modernize_sipahi focus = TUR_phase_out_irregular_infantry }
+		prerequisite = { focus = TUR_modern_weapons focus = TUR_produce_more_iron }
 
-	x = 3
-	y = 1
-	cost = 10
-	relative_position_id = TUR_modern_weapons
+		x = 3
+		y = 1
+		cost = 10
+		relative_position_id = TUR_modern_weapons
 
-	completion_reward = {
-		TUR_reduce_sick_man = yes
-		add_doctrine_cost_reduction = {
-			cost_reduction = 0.5
-			uses = 2
-			category = land_doctrine
-		}
-	}
-}
-
-focus = {
-	id = TUR_our_place_as_a_great_power
-	icon = GFX_OTT_army_command
-	prerequisite = { focus = TUR_healthy_man_of_europe }
-	mutually_exclusive = { focus = TUR_our_place_in_the_concert_of_europe }
-	x = -1
-	y = 1
-	cost = 10
-	relative_position_id = TUR_healthy_man_of_europe
-
-	completion_reward = {
-		add_ideas = TUR_ottoman_imperialism
-	}
-}
-
-focus = {
-	id = TUR_our_place_in_the_concert_of_europe
-	icon = GFX_OTT_army_command
-	prerequisite = { focus = TUR_healthy_man_of_europe }
-	mutually_exclusive = { focus = TUR_our_place_as_a_great_power }
-	x = 1
-	y = 1
-	cost = 10
-	relative_position_id = TUR_healthy_man_of_europe
-
-	completion_reward = {
-		add_ideas = TUR_ottoman_influence
-	}
-}
-
-focus = {
-	id = TUR_restructure_the_military
-	icon = GFX_british_soldier
-	prerequisite = { focus = TUR_analyse_defeat }
-	mutually_exclusive = { focus = TUR_support_the_janissaries }
-	x = 3
-	y = 1
-	cost = 10
-	relative_position_id = TUR_analyse_defeat
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-		add_ideas = TUR_military_restructuring
-		add_political_power = -50
-	}
-}
-
-focus = {
-	id = TUR_begin_military_reforms
-	icon = GFX_officer
-	prerequisite = { focus = TUR_restructure_the_military }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_restructure_the_military
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-		army_experience = 50
-	}
-}
-
-focus = {
-	id = TUR_consolidate_our_forces
-	icon = GFX_focus_generic_manpower
-	prerequisite = { focus = TUR_restructure_the_military }
-	x = 2
-	y = 0
-	cost = 10
-	relative_position_id = TUR_begin_military_reforms
-
-	completion_reward = {
-		add_political_power = 100
-	}
-}
-
-focus = {
-	id = TUR_reinforce_existing_troops
-	icon = GFX_generic_soldiers
-	prerequisite = { focus = TUR_consolidate_our_forces }
-	x = 0
-	y = 1
-	cost = 8
-	relative_position_id = TUR_consolidate_our_forces
-
-	completion_reward = {
-		set_division_template_lock = {
-			division_template = "Piyade Tümeni"
-			is_locked = no
-		}
-		set_division_template_lock = {
-			division_template = "Dag Tugayi"
-			is_locked = no
-		}
-		set_division_template_lock = {
-			division_template = "Bogazi Tugay"
-			is_locked = no
-		}
-		set_division_template_lock = {
-			division_template = "Sipahi Tümeni"
-			is_locked = no
-		}
-	}
-}
-
-focus = {
-	id = TUR_standardized_infantry
-	icon = GFX_soldiers_marching
-	prerequisite = { focus = TUR_begin_military_reforms }
-	x = 0
-	y = 1
-	cost = 10
-	relative_position_id = TUR_begin_military_reforms
-
-	completion_reward = {
-		TUR_decrease_loyalty = yes
-		add_ideas = TUR_standardized_infantry
-	}
-}
-
-focus = {
-	id = TUR_phase_out_irregular_infantry
-	icon = GFX_focus_generic_little_entente
-	prerequisite = { focus = TUR_standardized_infantry }
-	x = 0
-	y = 1
-	cost = 10
-	relative_position_id = TUR_standardized_infantry
-
-	completion_reward = {
-		swap_ideas = {
-			remove_idea = TUR_standardized_infantry
-			add_idea = TUR_standardized_infantry_2
-		}
-	}
-}
-
-focus = {
-	id = TUR_reinforce_devshirme
-	icon = GFX_Janissary_icon
-	prerequisite = { focus = TUR_reinforce_janissaries }
-	x = 0
-	y = 1
-	cost = 10
-	relative_position_id = TUR_reinforce_janissaries
-
-	completion_reward = {
-		add_ideas = TUR_devshirme_system
-		add_popularity = {
-		    ideology = aristocracy
-		    popularity = 0.05
-		}
-	}
-}
-
-focus = {
-	id = TUR_rifle_manufactories
-	icon = GFX_goal_generic_construct_mil_factory
-	prerequisite = { focus = TUR_analyse_defeat }
-	x = 0
-	y = 2
-	cost = 10
-	relative_position_id = TUR_analyse_defeat
-
-	completion_reward = {
-		48 = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = arms_factory
-				level = 2
-				instant_build = yes
+		completion_reward = {
+			TUR_reduce_sick_man = yes
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 2
+				category = land_doctrine
 			}
 		}
 	}
-}
 
-focus = {
-	id = TUR_constantinople_cannon_foundries
-	icon = GFX_cannon
-	prerequisite = { focus = TUR_rifle_manufactories }
-	x = 0
-	y = 1
-	cost = 10
-	relative_position_id = TUR_rifle_manufactories
+	#focus = {
+	#	id = TUR_our_place_as_a_great_power
+	#	icon = GFX_OTT_army_command
+	#	prerequisite = { focus = TUR_healthy_man_of_europe }
+	#	mutually_exclusive = { focus = TUR_our_place_in_the_concert_of_europe }
+	#	x = -1
+	#	y = 1
+	#	cost = 10
+	#	relative_position_id = TUR_healthy_man_of_europe
 
-	completion_reward = {
-		341 = {
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = arms_factory
-				level = 3
-				instant_build = yes
+	#	completion_reward = {
+	#		add_ideas = TUR_ottoman_imperialism
+	#	}
+	#}
+
+	#focus = {
+	#	id = TUR_our_place_in_the_concert_of_europe
+	#	icon = GFX_OTT_army_command
+	#	prerequisite = { focus = TUR_healthy_man_of_europe }
+	#	mutually_exclusive = { focus = TUR_our_place_as_a_great_power }
+	#	x = 1
+	#	y = 1
+	#	cost = 10
+	#	relative_position_id = TUR_healthy_man_of_europe
+
+	#	completion_reward = {
+	#		add_ideas = TUR_ottoman_influence
+	#	}
+	#}
+
+	focus = {
+		id = TUR_restructure_the_military
+		icon = GFX_british_soldier
+		prerequisite = { focus = TUR_analyse_defeat }
+		mutually_exclusive = { focus = TUR_support_the_janissaries }
+		x = 3
+		y = 1
+		cost = 10
+		relative_position_id = TUR_analyse_defeat
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+			add_ideas = TUR_military_restructuring
+			add_political_power = -50
+		}
+	}
+
+	focus = {
+		id = TUR_begin_military_reforms
+		icon = GFX_officer
+		x = 0
+		y = 1
+		relative_position_id = TUR_restructure_the_military
+		prerequisite = { focus = TUR_restructure_the_military }
+
+		cost = 7.2
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = TUR_consolidate_our_forces
+		icon = GFX_focus_generic_manpower
+		x = 2
+		y = 0
+		relative_position_id = TUR_begin_military_reforms
+		prerequisite = { focus = TUR_restructure_the_military }
+
+		cost = 5
+
+		completion_reward = {
+			army_experience = 30
+		}
+	}
+
+	focus = {
+		id = TUR_reinforce_existing_troops
+		icon = GFX_generic_soldiers
+		prerequisite = { focus = TUR_consolidate_our_forces }
+		x = 0
+		y = 1
+		cost = 8
+		relative_position_id = TUR_consolidate_our_forces
+
+		completion_reward = {
+			set_division_template_lock = {
+				division_template = "Piyade Tümeni"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Dag Tugayi"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Bogazi Tugay"
+				is_locked = no
+			}
+			set_division_template_lock = {
+				division_template = "Sipahi Tümeni"
+				is_locked = no
 			}
 		}
 	}
-}
+
+	focus = {
+		id = TUR_standardized_infantry
+		icon = GFX_soldiers_marching
+		prerequisite = { focus = TUR_begin_military_reforms }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = TUR_begin_military_reforms
+
+		completion_reward = {
+			TUR_decrease_loyalty = yes
+			add_ideas = TUR_standardized_infantry
+		}
+	}
+
+	focus = {
+		id = TUR_phase_out_irregular_infantry
+		icon = GFX_focus_generic_little_entente
+		prerequisite = { focus = TUR_standardized_infantry }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = TUR_standardized_infantry
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = TUR_standardized_infantry
+				add_idea = TUR_standardized_infantry_2
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_reinforce_devshirme
+		icon = GFX_Janissary_icon
+		prerequisite = { focus = TUR_strengthen_the_janissaries }
+		x = 0
+		y = 1
+		cost = 10
+		relative_position_id = TUR_strengthen_the_janissaries
+
+		completion_reward = {
+			add_ideas = TUR_devshirme_system
+			add_popularity = {
+				ideology = aristocracy
+				popularity = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_rifle_manufactories
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = TUR_analyse_defeat }
+		x = 0
+		y = 2
+		cost = 10
+		relative_position_id = TUR_analyse_defeat
+
+		completion_reward = {
+			48 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_constantinople_cannon_foundries
+		icon = GFX_cannon
+		x = 0
+		y = 1
+		prerequisite = { focus = TUR_rifle_manufactories }
+		relative_position_id = TUR_rifle_manufactories
+
+		cost = 10
+
+		completion_reward = {
+			341 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
 
 	focus = {
 		id = TUR_produce_more_iron
 		icon = GFX_generic_iron
-		prerequisite = { focus = TUR_constantinople_cannon_foundries }
 		x = 0
 		y = 1
-		cost = 8
+		prerequisite = { focus = TUR_constantinople_cannon_foundries }
 		relative_position_id = TUR_constantinople_cannon_foundries
+
+		cost = 8
 
 		completion_reward = {
 			add_resource = {

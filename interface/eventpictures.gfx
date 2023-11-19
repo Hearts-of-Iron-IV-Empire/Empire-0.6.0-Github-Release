@@ -36,6 +36,11 @@ spriteTypes = {
 	}
 
 	spriteType = {
+		name = "GFX_news_event_merchants"
+		texturefile = "gfx/event_pictures/news_event_merchants.dds"
+	}
+
+	spriteType = {
 		name = "GFX_news_event_generic_funeral"
 		texturefile = "gfx/event_pictures/news_event_generic_funeral.dds"
 	}
@@ -70,7 +75,7 @@ spriteTypes = {
 		texturefile = "gfx/event_pictures/report_event_generic_sign_treaty1.dds"
 	}
 
-	 spriteType = {
+	spriteType = {
         name = "GFX_report_event_tanks_mexico_city"
         texturefile = "gfx/event_pictures/report_event_tanks_mexico_city.dds"
     }
@@ -2094,94 +2099,255 @@ spriteTypes = {
 		name = "GFX_news_event_eng_imperial_federation_india"
 		texturefile = "gfx/event_pictures/news_event_eng_imperial_federation_india.dds"
 	}
+
+	########################### Mod news event pictures ###########################
+
+	spriteType = {
+		name = "GFX_news_event_theatre"
+		texturefile = "gfx/event_pictures/news_event_theatre.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_theatre"
+		texturefile = "gfx/event_pictures/news_event_theatre.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_theatre"
+		texturefile = "gfx/event_pictures/news_event_theatre.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_theatre"
+		texturefile = "gfx/event_pictures/news_event_theatre.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_treasure"
+		texturefile = "gfx/event_pictures/news_event_treasure.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_theatre"
+		texturefile = "gfx/event_pictures/news_event_theatre.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_scriptor"
+		texturefile = "gfx/event_pictures/news_event_scriptor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_revolution"
+		texturefile = "gfx/event_pictures/news_event_revolution.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_revolt"
+		texturefile = "gfx/event_pictures/news_event_revolt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_pirates1"
+		texturefile = "gfx/event_pictures/news_event_pirates1.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_pirate_fort"
+		texturefile = "gfx/event_pictures/news_event_pirate_fort.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_naval_battle"
+		texturefile = "gfx/event_pictures/news_event_naval_battle.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_military_camp2"
+		texturefile = "gfx/event_pictures/news_event_military_camp2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_military_camp"
+		texturefile = "gfx/event_pictures/news_event_military_camp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_liberum_veto"
+		texturefile = "gfx/event_pictures/news_event_liberum_veto.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_jesuits"
+		texturefile = "gfx/event_pictures/news_event_jesuits.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_jannisaries"
+		texturefile = "gfx/event_pictures/news_event_jannisaries.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_janissary_revolt"
+		texturefile = "gfx/event_pictures/news_event_janissary_revolt.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_huegenots"
+		texturefile = "gfx/event_pictures/news_event_huegenots.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_hre"
+		texturefile = "gfx/event_pictures/news_event_hre.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_hagia_sophia"
+		texturefile = "gfx/event_pictures/news_event_hagia_sophia.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_discussion"
+		texturefile = "gfx/event_pictures/news_event_discussion.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_diplomacy"
+		texturefile = "gfx/event_pictures/news_event_diplomacy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_corruption"
+		texturefile = "gfx/event_pictures/news_event_corruption.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_colony"
+		texturefile = "gfx/event_pictures/news_event_colony.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_city"
+		texturefile = "gfx/event_pictures/news_event_city.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_book"
+		texturefile = "gfx/event_pictures/news_event_book.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_blackbeard"
+		texturefile = "gfx/event_pictures/news_event_blackbeard.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_siege"
+		texturefile = "gfx/event_pictures/news_event_siege.dds"
+	}
+
 	spriteType = {
 		name = "GFX_news_event_regency"
 		texturefile = "gfx/event_pictures/news_event_regency.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_surrender"
 		texturefile = "gfx/event_pictures/news_event_surrender.dds"
 	}
+
 	spriteType = {
-		name = "GFX_news_event_anouncement"
+		name = "GFX_news_event_anouncement"	
 		texturefile = "gfx/event_pictures/news_event_anouncement.dds"
 	}
 	spriteType = {
 		name = "GFX_news_event_treaty"
 		texturefile = "gfx/event_pictures/news_event_treaty.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_agreement"
 		texturefile = "gfx/event_pictures/news_event_agreement.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_prussia"
 		texturefile = "gfx/event_pictures/news_event_prussia.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_army"
 		texturefile = "gfx/event_pictures/news_event_army.dds"
 	}
-	spriteType = {
-		name = "GFX_news_event_treaty"
-		texturefile = "gfx/event_pictures/news_event_treaty.dds"
-	}
+
 	spriteType = {
 		name = "GFX_news_event_civil_war"
 		texturefile = "gfx/event_pictures/news_event_civil_war.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_bankruptcy"
 		texturefile = "gfx/event_pictures/news_event_bankruptcy.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_vatican"
 		texturefile = "gfx/event_pictures/news_event_vatican.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_pope"
 		texturefile = "gfx/event_pictures/news_event_pope.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_map"
 		texturefile = "gfx/event_pictures/news_event_map.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_map"
 		texturefile = "gfx/event_pictures/news_event_map.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_northern_war"
 		texturefile = "gfx/event_pictures/news_event_northern_war.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_colonialism"
 		texturefile = "gfx/event_pictures/report_event_colonialism.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_empire_startup"
 		texturefile = "gfx/event_pictures/report_event_empire_startup.dds"
 	}	
+
 	spriteType = {
 		name = "GFX_news_event_fall_of_moscow"
 		texturefile = "gfx/event_pictures/news_event_fall_of_moscow.dds"
 	}
+
 	spriteType = {
 		name = "GFX_news_event_partition_of_poland"
 		texturefile = "gfx/event_pictures/news_event_partition_of_poland.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_royal_court"
 		texturefile = "gfx/event_pictures/report_event_royal_court.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_charles_deathbed"
 		texturefile = "gfx/event_pictures/report_event_charles_deathbed.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_aragon"
 		texturefile = "gfx/event_pictures/report_event_aragon.dds"
 	}
+
 	spriteType = {
 		name = "GFX_report_event_castille"
 		texturefile = "gfx/event_pictures/report_event_castille.dds"

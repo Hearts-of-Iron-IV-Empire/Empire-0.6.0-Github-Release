@@ -10,6 +10,7 @@ set_technology = {
 }
 
 add_ideas = {
+	hinduism
 }
 
 set_convoys = 0
@@ -21,11 +22,11 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 6
-	fascism = 8
+	democratic = 0
+	fascism = 0
 	communism = 0
-	neutrality = 54
-	aristocracy = 32
+	neutrality = 64
+	aristocracy = 36
 }
 #create_country_leader = {
 #	name = ""

@@ -83,6 +83,15 @@ on_actions = {
                     }
                 }
             }
+            # Natural Disasters
+            HOL = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.01.02
+                    }
+                    news_event = { id = mod.35 days = 7 }
+                }
+            }
         }
     }
 }

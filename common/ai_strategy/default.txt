@@ -6,6 +6,10 @@ default_unit_production = { #If adding country-unique ones, bear in mind that th
 		always = yes
 	}
 
+	abort = { 
+		always = no 
+	}
+
 	ai_strategy = {
 		type = role_ratio
 		id = paratroopers
@@ -88,6 +92,9 @@ default_role_ratios = {
 			has_dlc = "Man the Guns"
 		}
 	}
+	abort = { 
+		always = no 
+	}
 
 	ai_strategy = {
 		type = role_ratio
@@ -111,6 +118,9 @@ default_role_ratios = {
 default_role_ratios = {
 	enable = {
 		has_dlc = "Man the Guns"
+	}
+	abort = { 
+		always = no 
 	}
 
 	ai_strategy = {
@@ -273,6 +283,9 @@ default_pp_spend_amount = {
 	enable = {
 		always = yes
 	}
+	abort = { 
+		always = no 
+	}
 
 	ai_strategy = {
 		type = pp_spend_amount
@@ -405,6 +418,9 @@ slightly_naval_focused_nation = {
 			tag = SWE
 		}
 	}
+	abort = { 
+		always = no 
+	}
 
 	ai_strategy = {
 		type = unit_ratio
@@ -439,6 +455,9 @@ more_naval_focused_nation = {
 		}
 		date > "1701.1.1" #Delaying it by a couple of years
 	}
+	abort = { 
+		always = no 
+	}
 
 	ai_strategy = {
 		type = unit_ratio
@@ -468,6 +487,9 @@ more_naval_focused_nation = {
 default_area_priority = {
 	enable = {
 		always = yes
+	}
+	abort = { 
+		always = no 
 	}
 
 	ai_strategy = {
@@ -536,6 +558,9 @@ default_area_priority_non_africa = {
     enable = {
         NOT = { capital_scope = { is_on_continent = africa } }
     }
+	abort = { 
+		always = no 
+	}
 
     ai_strategy = {
         type = area_priority
@@ -644,6 +669,9 @@ build_intelligence_agency_as_major = {
 			date > 1701.1.1
 		}
 	}
+	abort = { 
+		always = no 
+	}
 
 	ai_strategy = {
 		type = intelligence_agency_usable_factories
@@ -711,6 +739,9 @@ upgrade_intelligence_agency_as_spy_master = {
 addintelligence_agency_normal_upgrade_prio = {
 	enable = {
 		always = yes
+	}
+	abort = { 
+		always = no 
 	}
 
 	ai_strategy = {
@@ -781,6 +812,9 @@ more_upgrades_as_spymaster = {
 put_garrisons_on_high_prio = {
 	enable = {
 		always = yes
+	}
+	abort = { 
+		always = no 
 	}
 
 	ai_strategy = {

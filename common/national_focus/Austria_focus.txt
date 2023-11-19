@@ -1,3 +1,25 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+### search_filters = { FOCUS_FILTER_ARMY_XP }
+### search_filters = { FOCUS_FILTER_NAVY_XP }
+### search_filters = { FOCUS_FILTER_TFV_AUTONOMY } # Autonomy
+### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS } # Internal Affairs
+### search_filters = { FOCUS_FILTER_FRA_POLITICAL_VIOLENCE } # Political Violence
+### search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST } # Occupation Costs
+### search_filters = { FOCUS_FILTER_CHI_INFLATION } # Inflation
+### search_filters = { FOCUS_FILTER_BALANCE_OF_POWER } # Balance of Power
+### search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS } # Military Readiness
+### search_filters = { FOCUS_FILTER_USA_CONGRESS } # Congress
+### search_filters = { FOCUS_FILTER_MEX_CHURCH_AUTHORITY } # Church Authority
+### search_filters = { FOCUS_FILTER_TUR_KURDISTAN } # Kurdistan
+### search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM } # Traditionalism
+### search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC } # Debt to the IFC
+
 focus_tree = {
 	id = austria_focus
 	
@@ -19,41 +41,43 @@ focus_tree = {
 		y = 0
 		cost = 3.6
 
-		ai_will_do = { 
-			factor = 4000
-		}
-
 		completion_reward = {
 			TUR = { country_event = austria.23 }
 			#POL = { country_event = poland.27 }
+		}
+
+		ai_will_do = { 
+			factor = 4000
 		}
 	}
 
 	focus = {
 		id = AUS_habsburg_in_spain
 		icon = GFX_goal_charles_III
-		prerequisite = { focus = AUS_treaty_of_karlowitz }
 		x = -2
 		y = 1
-		cost = 5
 		relative_position_id = AUS_treaty_of_karlowitz
-		mutually_exclusive = { focus = AUS_no_war_over_spain}
-		mutually_exclusive = { focus = AUS_bourbon_spain}
+		prerequisite = { focus = AUS_treaty_of_karlowitz }
+		mutually_exclusive = { focus = AUS_no_war_over_spain }
+		mutually_exclusive = { focus = AUS_bourbon_spain }
 
-		available = { has_global_flag = habsburg_full }
-
-		ai_will_do = { 
-			factor = 4000
+		available = { 
+			has_global_flag = habsburg_full 
 		}
 
+		cost = 5
+
 		search_filters = { FOCUS_FILTER_POLITICAL }
-		
+
 		completion_reward = {
 			add_political_power = 120
 			remove_opinion_modifier = {
 			    target = SPR
 			    modifier = rivalry
 			}
+		}
+		ai_will_do = { 
+			factor = 4000
 		}
 	}
 
@@ -166,43 +190,44 @@ focus_tree = {
 	focus = {
 		id = AUS_invite_holland
 		icon = GFX_focus_hol_oranje_boven
-		prerequisite = { focus = AUS_fortify_breisgau}
 		x = -1
 		y = 4
-		cost = 10
 		relative_position_id = AUS_treaty_of_karlowitz
+		prerequisite = { focus = AUS_fortify_breisgau }
 
-		ai_will_do = { 
-			factor = 4000
-		}
+		cost = 10
 		
 		completion_reward = {
 			HOL = { country_event = generic.5 }	
 		}
+
+		ai_will_do = { 
+			factor = 4000
+		}
 	}
-##
 
 	focus = {
 		id = AUS_no_war_over_spain
-		icon = GFX_peace
-		prerequisite = { focus = AUS_treaty_of_karlowitz }
+		icon = GFX_keep_the_peace
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = AUS_treaty_of_karlowitz
+		prerequisite = { focus = AUS_treaty_of_karlowitz }
 		mutually_exclusive = { focus = AUS_bourbon_spain }
 		mutually_exclusive = { focus = AUS_habsburg_in_spain }
 
+		cost = 10
+
+		available = { 
+			has_global_flag = partition 
+		}
+
 		search_filters = { FOCUS_FILTER_STABILITY }
-		
-		available = { has_global_flag = partition }
 
 		completion_reward = {
 			add_stability = 0.10
 		}
 	}
-
-##
 
 	focus = {
 		id = AUS_bourbon_spain
@@ -279,7 +304,7 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = AUS_join_grand_alliance
 		icon = GFX_focus_mex_restore_the_army_of_christ
 		prerequisite = { focus = AUS_fabricate_claims_italian_lands}
@@ -289,12 +314,12 @@ focus = {
 		cost = 5
 		relative_position_id = AUS_treaty_of_karlowitz
 		
-		ai_will_do = { 
-			factor = 4000
-		}
-		
 		bypass = {
 			is_in_faction = yes
+		}
+
+		ai_will_do = { 
+			factor = 4000
 		}
 
 		completion_reward = {
@@ -302,7 +327,7 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = AUS_ultimatum_to_spain
 		icon = GFX_goal_demand_sudetenland
 		prerequisite = { focus = AUS_join_grand_alliance}
@@ -328,7 +353,7 @@ focus = {
 	focus = {
 		id = AUS_expanding_austria
 		icon = GFX_expand_austria
-		prerequisite = { focus = AUS_ultimatum_to_spain focus = AUS_no_war_over_spain focus = AUS_invite_holland}
+		prerequisite = { focus = AUS_ultimatum_to_spain focus = AUS_no_war_over_spain focus = AUS_invite_holland }
 		x = 0
 		y = 5
 		cost = 5
@@ -342,14 +367,141 @@ focus = {
 	}
 
 	focus = {
-		id = AUS_expand_into_italy
-		icon = GFX_focus_on_italy
+		id = AUS_into_europe
+		icon = GFX_focus_usa_focus_on_europe
+		x = -6
+		y = 1
+		relative_position_id = AUS_expanding_austria
 		prerequisite = { focus = AUS_expanding_austria }
+		
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+
+		completion_reward = {
+			add_war_support = 0.05
+		}
+	}
+
+	focus = {
+		id = AUS_claim_galicia
+		icon = GFX_focus_pol_polish_king
+		x = 2
+		y = 1
+		relative_position_id = AUS_into_europe
+		prerequisite = { focus = AUS_into_europe }
+		
+		cost = 7.2
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		will_lead_to_war_with = POL
+
+		completion_reward = {
+			add_state_claim = 88
+			add_state_claim = 89
+			add_state_claim = 91
+		}	
+	}
+
+	focus = {
+		id = AUS_demand_banat
+		icon = GFX_goal_generic_political_pressure
 		x = 0
 		y = 1
-		cost = 2.2
-		relative_position_id = AUS_expanding_austria
+		cost = 10
+		relative_position_id = AUS_into_europe
+		prerequisite = { focus = AUS_expanding_austria }
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		will_lead_to_war_with = TUR
+
+		completion_reward = {
+			TUR = { country_event = austria.12 }
+		}	
 		
+		ai_will_do = {
+			base = 1
+			modifier = {
+				factor = 0
+				has_war = yes
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_liberate_the_balkans
+		icon = GFX_focus_BUL_free_balkan_states
+		x = 0
+		y = 1
+		relative_position_id = AUS_demand_banat
+		prerequisite = { focus = AUS_demand_banat }
+		
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = TUR
+			}
+		}
+		
+		will_lead_to_war_with = TUR
+	}
+
+	focus = {
+		id = AUS_reclaim_low_countries
+		icon = GFX_focus_hol_united_netherlands
+		x = -2
+		y = 1
+		relative_position_id = AUS_into_europe
+		prerequisite = { focus = AUS_into_europe }
+
+		cost = 5
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = BEL
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = HOL
+			}
+		}
+	}
+	
+	focus = {
+		id = AUS_reconquer_france_comte
+		icon = GFX_demand_franche_compte
+		x = -4
+		y = 1
+		prerequisite = { focus = AUS_into_europe }
+		relative_position_id = AUS_into_europe
+
+		cost = 5
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = FRA
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_expand_into_italy
+		icon = GFX_focus_on_italy
+		x = 0
+		y = 1
+		relative_position_id = AUS_expanding_austria
+		prerequisite = { focus = AUS_expanding_austria }
+		
+		cost = 2.2
+
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
@@ -406,36 +558,218 @@ focus = {
 
 	focus = {
 		id = AUS_invade_venice
-		icon = GFX_venice
+		icon = GFX_attack_venice
+		x = -2
+		y = 7
+		relative_position_id = AUS_treaty_of_karlowitz
 		prerequisite = { focus = AUS_expand_into_italy }
 		mutually_exclusive = { focus = AUS_protect_venice }
-		x = -1
-		y = 7
-		cost = 10
-		relative_position_id = AUS_treaty_of_karlowitz
+
+		cost = 5
 		
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
+		will_lead_to_war_with = VNC
+
 		completion_reward = {
 			create_wargoal = {
-		    type = annex_everything
-		    target = VNC
+				type = annex_everything
+				target = VNC
 			}
 		}
+	}
 
-		will_lead_to_war_with = VNC
+	focus = {
+		id = AUS_dockyards_and_ports
+		icon = GFX_generic_naval_bases_mapno
+		x = 0
+		y = 1
+		prerequisite = { focus = AUS_invade_venice }
+		relative_position_id = AUS_invade_venice
+		
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = all_of_venice_is_conquered
+				103 = {
+					is_owned_and_controlled_by = AUS
+				}
+				160 = {
+					is_owned_and_controlled_by = AUS
+				}
+				163 = {
+					is_owned_and_controlled_by = AUS
+				}
+				736 = {
+					is_owned_and_controlled_by = AUS
+				}
+				905 = {
+					is_owned_and_controlled_by = AUS
+				}
+			}
+			
+		}
+
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_coastal = yes
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			160 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 11584
+				}
+			}
+			163 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+					province = 3943
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_disband_switzerland
+		icon = GFX_goal_savoie
+		x = -2
+		y = 1
+		relative_position_id = AUS_dockyards_and_ports
+		prerequisite = { focus = AUS_dockyards_and_ports }
+
+		cost = 5
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = SWI
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_seize_spanish_italy
+		icon = GFX_focus_spa_supremacy_of_the_communion
+		x = 0
+		y = 1
+		relative_position_id = AUS_dockyards_and_ports
+		prerequisite = { focus = AUS_dockyards_and_ports }
+
+		cost = 5
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = LOM
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_ultimatum_to_the_pope
+		icon = GFX_focus_mex_triumph_over_the_cristeros
+		x = 2
+		y = 1
+		prerequisite = { focus = AUS_dockyards_and_ports }
+		relative_position_id = AUS_dockyards_and_ports
+
+		cost = 5
+
+		completion_reward = {
+			PAP = {
+				country_event = {
+					id = austria.27
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_claim_savoy_region
+		icon = GFX_goal_generic_major_war
+		x = -1
+		y = 2
+		cost = 5
+		prerequisite = { focus = AUS_seize_spanish_italy focus = AUS_ultimatum_to_the_pope focus = AUS_disband_switzerland }
+		relative_position_id = AUS_dockyards_and_ports
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = ITA
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = GEN
+			}
+		}
+	}
+
+	focus = {
+		id = AUS_dismantle_tuscany
+		icon = GFX_goal_generic_demand_territory
+		x = 1
+		y = 2
+		cost = 5
+		prerequisite = { focus = AUS_seize_spanish_italy focus = AUS_ultimatum_to_the_pope focus = AUS_disband_switzerland }
+		relative_position_id = AUS_dockyards_and_ports
+
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = TUS
+			}
+		}
 	}
 
 	focus = {
 		id = AUS_protect_venice
-		icon = GFX_goal_generic_national_unity
+		icon = GFX_goal_defend_venice
+		x = 2
+		y = 7
+		relative_position_id = AUS_treaty_of_karlowitz
 		prerequisite = { focus = AUS_expand_into_italy }
 		mutually_exclusive = { focus = AUS_invade_venice }
-		x = 1
-		y = 7
-		cost = 10
-		relative_position_id = AUS_treaty_of_karlowitz
 		
+		cost = 10
+
 		search_filters = { FOCUS_FILTER_STABILITY }
 
 		completion_reward = {
@@ -448,14 +782,15 @@ focus = {
 	}
 
 	focus = {
-		id = AUS_acces_through_brescia
+		id = AUS_access_through_brescia
 		icon = GFX_goal_generic_position_armies
+		x = 0
+		y = 1
+		relative_position_id = AUS_protect_venice
 		prerequisite = { focus = AUS_protect_venice }
-		x = 1
-		y = 8
-		cost = 10
-		relative_position_id = AUS_treaty_of_karlowitz
 		
+		cost = 10
+
 		search_filters = { FOCUS_FILTER_ANNEXATION }
 
 		completion_reward = {
@@ -475,74 +810,6 @@ focus = {
 #		completion_reward = {
 #		}
 #	}
-
-
-	focus = {
-		id = AUS_demand_banat
-		icon = GFX_goal_generic_political_pressure
-		prerequisite = { focus = AUS_expanding_austria }
-		x = -3
-		y = 6
-		cost = 10
-		relative_position_id = AUS_treaty_of_karlowitz
-
-		ai_will_do = {
-			base = 1
-			modifier = {
-				factor = 0
-				has_war = yes
-			}
-		}
-
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			TUR = { country_event = austria.12}
-		}
-		
-		will_lead_to_war_with = TUR
-	}
-
-	focus = {
-		id = AUS_liberate_the_balkan
-		icon = GFX_focus_BUL_free_balkan_states
-		prerequisite = { focus = AUS_demand_banat }
-		x = -3
-		y = 7
-		cost = 10
-		relative_position_id = AUS_treaty_of_karlowitz
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			create_wargoal = {
-		    type = annex_everything
-		    target = TUR
-			}
-		}
-		
-		will_lead_to_war_with = TUR
-	}
-
-	focus = {
-		id = AUS_claim_galicia
-		icon = GFX_focus_pol_polish_king
-		prerequisite = { focus = AUS_expanding_austria }
-		x = 2
-		y = 6
-		cost = 7.2
-		relative_position_id = AUS_treaty_of_karlowitz
-		
-		search_filters = { FOCUS_FILTER_ANNEXATION }
-
-		completion_reward = {
-			add_state_claim = 88
-			add_state_claim = 89
-			add_state_claim = 91
-		}
-		
-		will_lead_to_war_with = POL
-	}
 
 	focus = {
 		id = AUS_found_ostend_company
@@ -624,7 +891,7 @@ focus = {
 
 	focus = {
 		id = AUS_assert_dominance_over_hungary
-		icon = GFX_major_crackdown
+		icon = GFX_goal_generic_oppression
 		prerequisite = { focus = AUS_rebuilding_hungary } 
 		x = -2
 		y = 1
@@ -646,9 +913,10 @@ focus = {
 		cost = 10
 		relative_position_id = AUS_rebuilding_hungary
 		mutually_exclusive = { focus = AUS_purge_hungarian_nobility }
+
 		available = {
 			has_army_manpower = {
-			    size > 400000
+			    size > 20000
 			}
 		}
 
@@ -692,7 +960,6 @@ focus = {
 			    remove_idea = civil_unrest_hungary2
 			    add_idea = civil_unrest_hungary1 
 			}
-			remove_unit_leader = 100
 		}
 	}
 
@@ -1239,7 +1506,7 @@ focus = {
 
 	focus = {
 		id = AUS_found_vienna_academy
-		icon = GFX_focus_research
+		icon = GFX_research_empire
 		prerequisite = { focus = AUS_attract_foreing_scholars } 
 		x = -2
 		y = 3
@@ -1752,14 +2019,15 @@ focus = {
 
 	focus = {
 		id = AUS_military_research_funding
-		icon =  GFX_research_empire
+		icon =  GFX_military_research
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = AUS_improved_artillery
 		prerequisite = { focus = AUS_early_rifle_research } 
 		prerequisite = { focus = AUS_improved_artillery } 
 		prerequisite = { focus = AUS_officer_academy }
+
+		cost = 10
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
 
@@ -1978,7 +2246,7 @@ focus = {
 
 	focus = {
 		id = AUS_german_corporation_treaty
-		icon = GFX_focus_ger_revive_kaiserreich
+		icon = GFX_goal_austrian_economy
 		x = 0
 		y = 1
 		cost = 10
@@ -2048,7 +2316,7 @@ focus = {
 
 	focus = {
 		id = AUS_institute_reichsregiment
-		icon = GFX_focus_generic_self_management
+		icon = GFX_soldiers_marching
 		x = -3
 		y = 1
 		cost = 10
@@ -2101,15 +2369,14 @@ focus = {
 		}
 
 		completion_reward = {
-			add_ideas = { AUS_instituted_reichsregiment }
+			add_ideas = AUS_instituted_reichsregiment
 			every_other_country = {
 			  	limit = {
 			    	has_country_flag = HRE_imperial_subject 
 			  	}
-			  	add_ideas = { AUS_instituted_reichsregiment_prince } 
+			  	add_ideas = AUS_instituted_reichsregiment_prince
 				add_opinion_modifier = { target = AUS modifier = instituted_reichsregiment }
 			}
-
 		}
 	}
 
@@ -2250,7 +2517,7 @@ focus = {
 		icon = GFX_focus_mex_triumph_over_the_cristeros
 		x = -1
 		y = 2
-		cost = 10
+		cost = 7.2
 		prerequisite = { focus = AUS_enact_gemeiner_pfennig }
 		prerequisite = { focus = AUS_reform_the_hofgericht }
 		prerequisite = { focus = AUS_institute_reichsregiment }
@@ -2276,12 +2543,14 @@ focus = {
 		icon = GFX_peace
 		x = 1
 		y = 2
-		cost = 10
+		relative_position_id = AUS_call_for_reichsreform
 		prerequisite = { focus = AUS_enact_gemeiner_pfennig }
 		prerequisite = { focus = AUS_reform_the_hofgericht }
 		prerequisite = { focus = AUS_institute_reichsregiment }
 		prerequisite = { focus = AUS_pull_out_of_hungary }
-		relative_position_id = AUS_call_for_reichsreform
+
+		cost = 5
+
 		completion_reward = {
 			custom_effect_tooltip = AUS_enforce_landfriede_tt
 			unlock_decision_category_tooltip = AUS_intervention_mandate
@@ -2307,117 +2576,21 @@ focus = {
 			remove_ideas = civil_unrest_hungary3
 			add_manpower = 50000
 			set_global_flag = AUS_dual_monarchy
-			70 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			71 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			664 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			43 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			154 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			76 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			83 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			84 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			155 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			73 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			45 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			764 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			82 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			155 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			45 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-			109 = {
-				if = {
-					limit = { is_owned_by = AUS }
-					add_core_of = HUN
-				}
-			}
-
 			HUN = { 
-			transfer_state = 43
-			transfer_state = 70
-			transfer_state = 71
-			transfer_state = 664
-			transfer_state = 154
-			transfer_state = 76
-			transfer_state = 83
-			transfer_state = 84
-			transfer_state = 73
-			transfer_state = 155
-			transfer_state = 45
-			transfer_state = 109
+				transfer_state = 43
+				transfer_state = 70
+				transfer_state = 71
+				transfer_state = 664
+				transfer_state = 154
+				transfer_state = 76
+				transfer_state = 83
+				transfer_state = 84
+				transfer_state = 73
+				transfer_state = 155
+				transfer_state = 45
+				transfer_state = 109
 			}
+			puppet = HUN
 		}
 	}
 
@@ -2515,155 +2688,6 @@ focus = {
 					    transfer_troops = yes
 					}
 				}
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_reclaim_low_countries
-		icon = GFX_focus_hol_united_netherlands
-		x = 0
-		y = 1
-		cost = 10
-		prerequisite = { focus = AUS_unite_the_empire }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = BEL
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = HOL
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_disband_switzerland
-		icon = GFX_goal_savoie
-		x = -2
-		y = 1
-		cost = 10
-		prerequisite = { focus = AUS_unite_the_empire }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = SWI
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_reconquer_france_comte
-		icon = GFX_goal_generic_occupy_states_ongoing_war
-		x = -1
-		y = 2
-		cost = 10
-		prerequisite = { focus = AUS_disband_switzerland }
-		prerequisite = { focus = AUS_reclaim_low_countries }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = FRA
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_pearl_of_the_adriatic
-		icon = GFX_venice
-		x = 2
-		y = 1
-		cost = 10
-		prerequisite = { focus = AUS_unite_the_empire }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = VNC
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_seize_spanish_italy
-		icon = GFX_focus_spa_supremacy_of_the_communion
-		x = 2
-		y = 2
-		cost = 10
-		prerequisite = { focus = AUS_pearl_of_the_adriatic }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = LOM
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = PRM
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_ultimatum_to_the_pope
-		icon = GFX_focus_mex_triumph_over_the_cristeros
-		x = 3
-		y = 3
-		cost = 10
-		prerequisite = { focus = AUS_seize_spanish_italy }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = PAP
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_claim_savoy_region
-		icon = GFX_goal_generic_major_war
-		x = -1
-		y = 3
-		cost = 10
-		prerequisite = { focus = AUS_seize_spanish_italy }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = ITA
-			}
-			create_wargoal = {
-			    type = annex_everything
-			    target = GEN
-			}
-		}
-	}
-
-	focus = {
-		id = AUS_dismantle_tuscany
-		icon = GFX_goal_generic_demand_territory
-		x = 1
-		y = 3
-		cost = 10
-		prerequisite = { focus = AUS_seize_spanish_italy }
-		relative_position_id = AUS_unite_the_empire
-
-		completion_reward = {
-			create_wargoal = {
-			    type = annex_everything
-			    target = TUS
 			}
 		}
 	}

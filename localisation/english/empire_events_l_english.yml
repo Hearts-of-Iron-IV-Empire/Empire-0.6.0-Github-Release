@@ -1,6 +1,6 @@
 ﻿l_english:
  mod.0.t:0 "Welcome to Empire: Into the Orient!"
- mod.0.d:0 "Welcome to the §G0.6.1§! version of the §GEmpire Mod§!, featuring multiple reworks like the Spanish economic rework. The mod has no official end-date, but the game should last for about as long as you have content in your focus tree and beyond. This mod has deliberatly chosen not to implement or rework any major mechanics, with the sole exception of the colonization mechanics which are completly optional for the player to mess around with. In the current version, there is not yet an option to toggle historical versus ahistorical ai, so expect many different outcomes and experiences whilst playing different nations."
+ mod.0.d:0 "Welcome to the §G0.6.2§! version of the §GEmpire Mod§!, featuring the reworked Japanese focus tree! The mod has no official end-date, but the game should last for about as long as you have content in your focus tree and beyond. This mod has deliberatly chosen not to implement or rework any major mechanics, with the sole exception of the colonization mechanics which are completly optional for the player to mess around with. In the current version, there is not yet an option to toggle historical versus ahistorical ai, so expect many different outcomes and experiences whilst playing different nations."
  mod.1.t:0 "The death of Carlos II of Spain"
  mod.1.d:0 "Toward the end of his life, Carlos II’s fragile health deteriorated. He died on the 1st of November 1700, five days before his 39th birthday. Because Carlos had no sons, it was decided that his empire was to be divided between Austria and France. It remains to be seen whether or not this agreement will be honoured."
  mod.2.t:0 "Philip V crowned king of Spain"
@@ -63,6 +63,8 @@
  mod.33.t:0 "Resumption of the Great Turkish War"
  mod.33.d:0 "In an extremely surprising turn of events, the Ottomans diplomats stormed out of the negiotiations, and the Great Turkish War has henceforth resumed. With both sides being extremely tired of the decades of war, it remains to be seen who shall win. Although the Ottomans were decisively defeated at the Battle of Zenta which led to them immediately entering peace talks, the might of the Ottoman army cannot be denied. All of Europe holds it's breath as the ruinous war resumes. The fate of Eastern Europe hangs in the balance."
  mod.33.a:0 "Interesting."
+ mod.35.t:0 "Java Earthquake"
+ mod.35.d:0 "On January 5th, 1699, an extremely violent earthquake struck the city of Batavia on the island of Java, owned by the Dutch East India Company. The earthquake has been described as 'so heavy and strong' that it is beyond compare to other recorded earthquakes. Hopefully they are able to recover from this devastating incident..."
 
  crisis.1.t:0 "Diplomatic Incident"
  crisis.1.d:0 "During diplomatic talks, one of our diplomats was insulted. This is unacceptable! How will the parties around the table broker a deal if they can't even keep their manners?"

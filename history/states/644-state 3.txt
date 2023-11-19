@@ -6,7 +6,7 @@ state={
 		owner = SOV
 		buildings = {
 			infrastructure = 1
-			13204 ={
+			13204 = {
 				naval_base = 1
 			}
 		}

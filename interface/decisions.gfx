@@ -1,7 +1,17 @@
 spriteTypes = {	
 
-	### categories
-
+	spriteType = {
+		name = "GFX_decision_nobility"
+		texturefile = "gfx/interface/decisions/decision_nobility.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_clergy"
+		texturefile = "gfx/interface/decisions/decision_clergy.dds"
+	}
+	spriteType = {
+		name = "GFX_decision_burghers"
+		texturefile = "gfx/interface/decisions/decision_burghers.dds"
+	}
 	spriteType = {
 		name = "GFX_decision_totem"
 		texturefile = "gfx/interface/decisions/decision_totem.dds"
@@ -276,7 +286,6 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_category_generic_formable_nations.dds"
 	}
 
-
 	spriteType = {
 		name = "GFX_decision_category_MTG_naval_treaties"
 		texturefile = "gfx/interface/decisions/decision_category_mtg_naval_treaties.dds"
@@ -328,21 +337,83 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/decision_mughal_maratha_war.dds"
 	}
 
-	## Mod gfx ##
-
+	#################
+	#### Mod gfx ####
+	#################
+	
 	spriteType = {
-		name = "GFX_decision_nobility"
-		texturefile = "gfx/interface/decisions/decision_nobility.dds"
+		name = "GFX_decision_generic_anchor"
+		texturefile = "gfx/interface/decisions/decision_generic_anchor.dds"
 	}
 
 	spriteType = {
-		name = "GFX_decision_clergy"
-		texturefile = "gfx/interface/decisions/decision_clergy.dds"
+		name = "GFX_decision_generic_boot"
+		texturefile = "gfx/interface/decisions/decision_generic_boot.dds"
 	}
 
 	spriteType = {
-		name = "GFX_decision_burghers"
-		texturefile = "gfx/interface/decisions/decision_burghers.dds"
+		name = "GFX_decision_generic_intelligence_operation"
+		texturefile = "gfx/interface/decisions/decision_generic_intelligence_operation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_recruit_operative"
+		texturefile = "gfx/interface/decisions/decision_recruit_operative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_POL_looming_peasants_strike"
+		texturefile = "gfx/interface/decisions/decision_POL_looming_peasants_strike.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_POL_organize_strike_two"
+		texturefile = "gfx/interface/decisions/decision_POL_organize_strike_two.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_fundraising"
+		texturefile = "gfx/interface/decisions/decision_generic_fundraising.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_spr_carlism"
+		texturefile = "gfx/interface/decisions/decision_category_spr_carlism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_faction_tur_unaligned"
+		texturefile = "gfx/interface/decisions/decision_faction_tur_unaligned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_faction_tur_traditionalist"
+		texturefile = "gfx/interface/decisions/decision_faction_tur_traditionalist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_monarchy"
+		texturefile = "gfx/interface/decisions/decision_generic_monarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_reorganize_irregulars"
+		texturefile = "gfx/interface/decisions/decision_generic_reorganize_irregulars.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_faction_gre_venezelist"
+		texturefile = "gfx/interface/decisions/decision_faction_gre_venezelist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_gre_investment_decisions"
+		texturefile = "gfx/interface/decisions/decision_gre_investment_decisions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_gre_investment_decisions"
+		texturefile = "gfx/interface/decisions/decision_category_gre_investment_decisions.dds"
 	}
 
 	spriteType = {
@@ -492,8 +563,6 @@ spriteTypes = {
 		name = "GFX_decision_cat_picture_concessions_to_the_trade_unions"
 		texturefile = "gfx/interface/decisions/decision_cat_picture_concessions_to_the_trade_unions.dds"
 	}
-
-	### decision icons
 
 	spriteType = {
 		name = "GFX_decision_unknown"

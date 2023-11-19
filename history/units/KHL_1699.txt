@@ -11,38 +11,45 @@
 }
 units = {
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 	division= {
-		location = 11225
+		location = 11523
 		division_template = "Infantry Division"
 		start_experience_factor = 0.1
+		start_equipment_factor = 0.9
 	}
 }

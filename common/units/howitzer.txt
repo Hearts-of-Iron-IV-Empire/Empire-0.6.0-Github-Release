@@ -1,0 +1,120 @@
+sub_units = {
+
+	howitzer_brigade = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 1198
+		ai_priority = 100
+		active = yes
+
+		type = {
+			infantry
+			artillery
+		}
+		
+		group = infantry
+		
+		categories = {
+			category_army
+			category_line_artillery
+			category_artillery
+		}
+
+		combat_width = 3
+
+		need = {
+			howitzer_equipment = 32
+		}
+
+		manpower = 100
+		max_strength = 0.7
+		max_organisation = 0
+		default_morale = 0.05
+		training_time = 160
+		weight = 0.6
+		supply_consumption = 0.4
+		#Line artillery bonuses
+		# soft_attack = 0.25
+		
+		forest = {
+			attack = -0.2
+			movement = -0.5
+		}
+
+		hills = {
+			movement = -0.10
+		}
+
+		mountain = {
+			movement = -0.5
+		}
+
+		jungle = {
+			attack = -0.25
+			movement = -0.5
+		}
+
+		marsh = {
+			attack = -0.2
+			movement = -0.5
+		}
+
+		fort = {
+			attack = 0.5
+		}
+
+		river = {
+			attack = -0.2
+			movement = -0.5
+		}
+
+		amphibious = {
+			attack = -0.5
+		}
+	}
+
+	howitzer = {
+		sprite = artillery
+		map_icon_category = infantry
+		priority = 0
+		ai_priority = 0
+		active = yes
+		affects_speed = no
+
+		type = {
+			infantry
+			support
+		}
+		
+		group = support
+		
+		categories = {
+			category_support_battalions
+			category_army
+			category_artillery
+		}
+
+		combat_width = 0
+
+		need = {
+			howitzer_equipment = 10
+		}
+		
+		manpower = 40
+		training_time = 150
+		max_organisation = 0
+		default_morale = 0.1
+		max_strength = 0.2
+		weight = 0.1
+		
+		supply_consumption = 0.20
+
+		# Support nerfs to combat abilities
+		defense = -0.4
+		breakthrough = -0.4
+		soft_attack = -0.4
+		hard_attack = -0.4
+
+		can_be_parachuted = yes
+	}
+}

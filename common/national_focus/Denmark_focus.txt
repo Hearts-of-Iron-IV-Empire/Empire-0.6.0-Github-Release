@@ -420,14 +420,16 @@ focus_tree = {
 		icon = GFX_goal_generic_attack_allies
 		x = 0
 		y = 2
-		cost = 10
-		prerequisite = { focus = DEN_danish_polish_alliance focus = DEN_look_towards_russia }
 		relative_position_id = DEN_the_weakness_of_sweden
+		prerequisite = { focus = DEN_danish_polish_alliance focus = DEN_look_towards_russia }
+
+		cost = 10
 		available = {
 			NOT = {
-			is_in_faction_with = SWE
+				is_in_faction_with = SWE
 			}
 		}
+
 		bypass = {
 			has_war_with = SWE
 		}
@@ -580,7 +582,7 @@ focus_tree = {
 		relative_position_id = DEN_abandon_revanchism
 
 		completion_reward = {
-			SWE = { country_event = denmark.15}
+			SWE = { country_event = denmark.15 }
 			create_faction = "Kalmar Alliance"
 		}
 	}
@@ -601,7 +603,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			SWE = { country_event = denmark.27}
+			SWE = { country_event = denmark.27 }
 		}
 	}
 

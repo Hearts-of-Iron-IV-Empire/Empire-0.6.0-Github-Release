@@ -106,7 +106,7 @@ estate_interactions = {
 		}
 
 		complete_effect = {
-			army_experience = 20
+			army_experience = 15
 		}
 		complete_effect = {	
 			add_popularity = {
@@ -123,7 +123,7 @@ estate_interactions = {
 		days_remove = 90
 
 		available = {
-			aristocracy > 0.15
+			aristocracy > 0.20
 		}
 
 		visible = {
@@ -131,13 +131,24 @@ estate_interactions = {
 		}
 
 		complete_effect = {
-			add_manpower = 7500
+			add_manpower = 2500
 		}
 		complete_effect = {	
 			add_popularity = {
 				ideology = aristocracy
 				popularity = 0.05
 			} 
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 10
+				has_manpower < 2500
+			}
+			modifier = {
+				add = -30
+				aristocracy > 0.50
+			}
 		}
 	}
 	seek_support_for_war = {

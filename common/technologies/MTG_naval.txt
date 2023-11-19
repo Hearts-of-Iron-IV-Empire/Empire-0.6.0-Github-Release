@@ -606,7 +606,7 @@ technologies = {
 	
 			research_cost = 1.5
 	
-			start_year = 1707
+			start_year = 1703
 	
 			folder = {
 				name = mtgnavalfolder

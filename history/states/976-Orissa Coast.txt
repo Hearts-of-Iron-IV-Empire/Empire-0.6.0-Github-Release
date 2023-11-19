@@ -5,7 +5,10 @@ state={
 	history={
 		owner = RAJ
 		add_core_of = HYD
-		victory_points = {
+		victory_points = { # Golconda
+			5104 15 
+		}
+		victory_points = { # Darul Jihad
 			8087 20 
 		}
 		victory_points = {
@@ -14,6 +17,9 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
+			5104 = {
+				bunker = 5
+			}
 			8087 = {
 				bunker = 3
 			}
@@ -22,15 +28,12 @@ state={
 			owner = HYD
 			controller = HYD
 			add_core_of = HYD
-
 		}
 		1773.1.1 = {
 			owner = EIC
 			controller = EIC
 			remove_core_of = EIC
-
 		}
-
 	}
 
 	provinces={

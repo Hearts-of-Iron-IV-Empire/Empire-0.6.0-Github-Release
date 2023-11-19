@@ -5,23 +5,21 @@ state={
 
 	history={
 		owner = LBA
+		add_core_of = LBA
 		victory_points = {
-			1149 10 
+			1149 50 
 		}
 		buildings = {
 			infrastructure = 2
 			1149 = {
 				naval_base = 5
-
 			}
-
 		}
-		add_core_of = LBA
 
 	}
 
 	provinces={
-		1149 1189 4194 7066 7209 9980 12039 
+		1149 1189 4194 7066 7209 9980 11957 12039 
 	}
 	manpower=129136
 	buildings_max_level_factor=1.000

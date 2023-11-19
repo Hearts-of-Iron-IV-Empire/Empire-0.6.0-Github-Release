@@ -1,0 +1,82 @@
+﻿division_template = {
+	name = "Ojaq"			# Basically Janissaries
+	is_locked = yes
+	priority = 2
+	
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+
+	support = {
+        artillery = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+		logistics_company = { x = 0 y = 2 }
+	}
+}
+division_template = {
+	name = "Levy Warriors"  			# Irregular infantry Division
+	
+	regiments = {
+		irregular_infantry = { x = 0 y = 0 }
+		irregular_infantry = { x = 0 y = 1 }
+		irregular_infantry = { x = 0 y = 2 }
+		irregular_infantry = { x = 1 y = 0 }
+		irregular_infantry = { x = 1 y = 1 }
+		irregular_infantry = { x = 1 y = 2 }
+		irregular_infantry = { x = 2 y = 0 }
+		irregular_infantry = { x = 2 y = 1 }
+		irregular_infantry = { x = 2 y = 2 }
+	}
+}
+
+units = {
+	division= { # Tunis
+		location = 11969
+		division_template = "Ojaq"
+		start_experience_factor = 0.8
+	}
+	division= { # Tunis
+		location = 11969
+		division_template = "Ojaq"
+		start_experience_factor = 0.8
+	}
+	division= { # Tunis
+		location = 11969
+		division_template = "Ojaq"
+		start_experience_factor = 0.8
+	}
+
+	# Algerian Front # 
+	division= { # Bizerte
+		location = 9994
+		division_template = "Levy Warriors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= { # Bizerte
+		location = 9994
+		division_template = "Levy Warriors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= { # Le Kef
+		location = 4061
+		division_template = "Levy Warriors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+	division= { # Gafsa
+		location = 11935
+		division_template = "Levy Warriors"
+		start_experience_factor = 0.1
+		start_equipment_factor = 0.5
+	}
+}

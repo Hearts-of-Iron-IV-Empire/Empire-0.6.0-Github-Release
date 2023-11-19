@@ -41,21 +41,23 @@ guiTypes = {
 	}
 
 	### MAIN MENU PANEL (bottomleft)
-	containerWindowType = {
-		name  ="mainmenu_panel_bottomleft"
-		position = { x=0 y =200 }
-		show_position = { x=0 y =-1 }
-		animation_type = decelerated
-		animation_time = 1000
-		size = { width = 256 height = 768 }
-				
-		iconType = 
-		{
-			name ="modding_coop_logo"
-			spriteType = "GFX_modding_coop_logo"
-			position = { x= 40 y = 40 }
-		}
-	}
+    containerWindowType = {
+        name  ="mainmenu_panel_bottomleft"
+        position = { x=360 y =-360 }
+        show_position = { x=-10 y =10 }
+        animation_type = decelerated
+        animation_time = 1000
+        orientation = lower_left
+    	origo = center
+        size = { width = 256 height = 768 }
+                
+        iconType = 
+        {
+            name ="modding_coop_logo"
+            spriteType = "GFX_modding_coop_logo"
+            position = { x= 40 y = 40 }
+        }
+    }
 
 	#containerWindowType = {
 	#	name  ="frontend_alpha_stamp"
@@ -90,12 +92,12 @@ guiTypes = {
 			pdx_tooltip = "MENU_ACHIEVEMENTS"
 		}
 
-		#iconType =
-		#{
-		#	name ="frontend_dev_logo"
-		#	spriteType = "GFX_frontend_dev_logo"
-		#	position = { x= 15 y = 15 }
-		#}
+		iconType =
+		{
+			name ="frontend_dev_logo"
+			spriteType = "GFX_frontend_dev_logo"
+			position = { x= 15 y = 15 }
+		}
 		
 		#iconType =
 		#{

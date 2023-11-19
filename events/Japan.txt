@@ -155,16 +155,21 @@ country_event = {
 	
 	option = { # Make it a puppet
 		name = japan.6.a
-		ai_chance = { factor = 50 }
 		add_stability = 0.05
 		add_war_support = -0.05
-		add_political_power = -50
+		add_political_power = -25
+		set_country_flag = made_korea_a_puppet
+		ai_chance = { 
+			factor = 50 
+		}
 	}
 	
 	option = { # Don't make it a puppet
 		name = japan.6.b
-		ai_chance = { factor = 50 }
 		add_war_support = 0.05
+		ai_chance = { 
+			factor = 50 
+		}
 	}
 }
 
@@ -186,7 +191,7 @@ country_event = {
 		}
 
 		ai_chance = { 
-			factor = 90 
+			factor = 100 
 		}
 	}
 	
@@ -196,7 +201,7 @@ country_event = {
 		add_stability = -0.1
 
 		ai_chance = { 
-			factor = 10 
+			factor = 0 
 		}
 	}
 }
@@ -326,5 +331,249 @@ country_event = {
 		name = japan.12.a
 		add_political_power = 80
 		add_stability = 0.1
+	}
+}
+
+# The Christian Question
+country_event = {
+	id = japan.13
+	title = japan.13.t
+	desc = japan.13.d
+	
+	is_triggered_only = yes
+	
+	option = { # Ban Christianity
+		name = japan.13.a
+		add_political_power = -150
+		add_stability = 0.1
+		swap_ideas = {
+			remove_idea = JAP_growing_christian_minority
+			add_idea = banned_christianity
+		}
+	}
+
+	option = { # Accept Christianity in small amounts
+		name = japan.13.b
+		add_political_power = 100
+		add_stability = -0.1
+		swap_ideas = {
+			remove_idea = JAP_growing_christian_minority
+			add_idea = christian_communities
+		}
+	}
+}
+
+# Foreign influence in Japan!
+country_event = {
+	id = japan.14
+	title = japan.14.t
+	desc = japan.14.d
+	
+	is_triggered_only = yes
+	
+	option = { # Uh oh
+		name = japan.14.a
+		unlock_decision_category_tooltip = JAP_foreign_influence
+		set_country_flag = JAP_foreign_influence_flag
+		hidden_effect = {
+			country_event = {
+				id = japan.18
+				days = 25
+			}
+		}
+	}
+}
+
+# Korea surrenders
+country_event = {
+	id = japan.15
+	title = japan.15.t
+	desc = japan.15.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Yay.
+		name = japan.15.a
+		add_war_support = 0.1
+		annex_country = {
+			target = KOR
+		}
+	}
+}
+
+# Court Ceremonies reinstated!
+country_event = {
+	id = japan.16
+	title = japan.16.t
+	desc = japan.16.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Excellent.
+		name = japan.16.a
+	}
+}
+
+# Fruits of foreign trade
+country_event = {
+	id = japan.17
+	title = japan.17.t
+	desc = japan.17.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { 
+		name = japan.17.a
+		add_stability = 0.02
+		add_political_power = 20
+	}
+}
+
+# Foreign Delegations come with gifts
+country_event = {
+	id = japan.18
+	title = japan.18.t
+	desc = japan.18.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # We accept.
+		name = japan.18.a
+		add_political_power = 10
+		custom_effect_tooltip = increases_influence_by_5_all
+		add_to_variable = {
+			var = HOL_influence
+			amount = 5
+		}
+		add_to_variable = {
+			var = POR_influence
+			amount = 5
+		}
+		add_to_variable = {
+			var = SPR_influence
+			amount = 5
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.20
+				days = 10
+			}
+		}
+	}
+}
+
+# Sale of Land event
+country_event = {
+	id = japan.19
+	title = japan.19.t
+	desc = japan.19.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # Choose Portugal
+		name = japan.19.a
+		add_political_power = 100
+		add_stability = -0.05
+		custom_effect_tooltip = increases_por_influence_by_5
+		add_to_variable = {
+			var = POR_influence
+			amount = 5
+		}
+	}
+
+	option = { # Choose Holland
+		name = japan.19.b
+		add_political_power = 100
+		add_stability = -0.05
+		custom_effect_tooltip = increases_hol_influence_by_5
+		add_to_variable = {
+			var = HOL_influence
+			amount = 5
+		}
+	}
+
+	option = { # Choose Spain
+		name = japan.19.c
+		add_political_power = 100
+		add_stability = -0.05
+		custom_effect_tooltip = increases_spr_influence_by_5
+		add_to_variable = {
+			var = SPR_influence
+			amount = 5
+		}
+	}
+
+	option = { # Refuse
+		name = japan.19.e
+		add_stability = 0.05
+	}
+}
+
+# Nations request permission to set up factories
+country_event = {
+	id = japan.20
+	title = japan.20.t
+	desc = japan.20.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+	
+	option = { # We accept.
+		name = japan.20.a
+		add_political_power = 50
+		add_offsite_building = { 
+			type = arms_factory 
+			level = 2 
+		}
+		add_offsite_building = { 
+			type = industrial_complex 
+			level = 1
+		}
+		custom_effect_tooltip = increases_influence_by_10_all
+		add_to_variable = {
+			var = HOL_influence
+			amount = 10
+		}
+		add_to_variable = {
+			var = POR_influence
+			amount = 10
+		}
+		add_to_variable = {
+			var = SPR_influence
+			amount = 10
+		}
+		hidden_effect = {
+			country_event = {
+				id = japan.20
+				days = 20
+			}
+		}
+	}
+
+	option = {
+		name = japan.20.b
+		add_political_power = -20
+	}
+}
+
+# Japan ends isolation
+news_event = {
+	id = japan.newsevent
+	title = japan.newsevent.t
+	desc = japan.newsevent.d
+
+	picture = GFX_news_event_merchants
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Interesting."
 	}
 }

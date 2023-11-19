@@ -1,0 +1,14 @@
+characters = {
+    CAU_Kurgoqo_Atajuq = {
+        name = "Kurgoqo Atajuq"
+        portraits = {
+            civilian = {
+                large = "GFX_Kurgoqo_Atajuq"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

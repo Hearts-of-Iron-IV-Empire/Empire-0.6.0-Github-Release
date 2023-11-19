@@ -211,10 +211,15 @@ set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
 	tech_support = 1
-	tech_engineers = 1
 	tech_recon = 1
 	motorised_infantry = 1
 	gw_artillery = 1
+	american_colonisation = 1
+	electronic_mechanical_engineering = 1
+	basic_cavalry = 1
+	marines = 1
+	interwar_antitank = 1
+
 	early_submarine = 1
 	basic_submarine = 1
 	early_destroyer = 1
@@ -227,12 +232,6 @@ set_technology = {
 	early_battlecruiser = 1
 	basic_battlecruiser = 1
 	transport = 1
-	american_colonisation = 1
-	asian_trade_companies = 1
-	electronic_mechanical_engineering = 1
-	mechanical_computing = 1
-	basic_cavalry = 1
-	interwar_antitank = 1
 }
 
 if = {

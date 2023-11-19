@@ -441,7 +441,6 @@ country_event = {
 		transfer_state = 241
 		transfer_state = 207
 		transfer_state = 869
-		transfer_state = 930
 		
 		POL = {
 			country_event = { 

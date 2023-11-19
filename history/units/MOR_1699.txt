@@ -11,6 +11,30 @@
 		infantry = { x = 2 y = 1 }
 		infantry = { x = 2 y = 2 }
 	}
+
+	support = {
+		artillery = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Black Guard"		
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+		infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+		artillery_brigade = { x = 3 y = 0 }
+	}
+
+	support = {
+		engineer = { x = 0 y = 0 }
+		artillery = { x = 0 y = 1 }
+	}
 }
 units = {
 	division= {
@@ -37,5 +61,32 @@ units = {
 		location = 7100
 		division_template = "Reformed Muslim Musketeers"
 		start_experience_factor = 0.1
+	}
+
+	# Black Guards, Algerian Border # 
+	division= {
+		location = 7215
+		division_template = "Black Guard"
+		start_experience_factor = 0.8
+	}
+	division= {
+		location = 7215
+		division_template = "Black Guard"
+		start_experience_factor = 0.8
+	}
+	division= {
+		location = 4097
+		division_template = "Black Guard"
+		start_experience_factor = 0.8
+	}
+	division= {
+		location = 7713
+		division_template = "Black Guard"
+		start_experience_factor = 0.8
+	}
+	division= {
+		location = 1152
+		division_template = "Black Guard"
+		start_experience_factor = 0.8
 	}
 }

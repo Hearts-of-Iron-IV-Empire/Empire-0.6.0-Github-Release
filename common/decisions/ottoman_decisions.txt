@@ -25,12 +25,8 @@ TUR_janissar_revolt_category = {
 			}
 			has_stability < 0.75
  
-			#NOT = { has_global_flag = flag_second_mexican_civil_war } # Second Cristiada / Second Mexican Revolution are mutually exclusive
-
 			NOT = { has_government = aristocracy } # Government has a genuine commitment to reform
-
 			has_civil_war = no
-			
 		}
 
 		allowed = {
@@ -149,10 +145,12 @@ TUR_janissar_revolt_category = {
 
 	TUR_decrease_janissary_support = {
 
+		icon = oppression
+
 		cost = 120
 		fire_only_once = no
 		days_re_enable = 150
-		days_remove = 50
+		days_remove = 100
 
 		available = {
 			OR = {
@@ -162,20 +160,20 @@ TUR_janissar_revolt_category = {
 		}
 
 		visible = {
-
 			NOT = { has_global_flag = TUR_edirne_event_triggered }
 			has_civil_war = no
 		}
 
 		modifier = {
-			political_power_gain = -0.1
+			political_power_gain = -0.15
 		}
 		
-		complete_effect = {
+		remove_effect = {
 			add_popularity = {
 				ideology = aristocracy
 				popularity = -0.1
 			}
+			TUR_decrease_loyalty = yes
 		}
 	}
 }

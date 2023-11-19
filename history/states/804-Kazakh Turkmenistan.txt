@@ -4,8 +4,6 @@ state={
 	name="STATE_804"
 
 	history={
-		add_core_of = TMS
-		add_claim_by = KAZ
 		owner = KYR
 		buildings = {
 			infrastructure = 1
@@ -17,9 +15,10 @@ state={
 	}
 
 	provinces={
-		1493 1649 4563 7477 7563 7618 7635 10406 10414 
+		1493 1649 4563 7563 7618 7635 10406 10414 
 	}
 	manpower=106523
 	buildings_max_level_factor=1.000
 	state_category=rural
+	local_supplies=0.000
 }

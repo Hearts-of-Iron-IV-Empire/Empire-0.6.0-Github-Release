@@ -4,6 +4,16 @@ ideas = {
 
 		duchy = {
 			level = 3
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = kingdom
+						has_idea = empire
+					}
+				}
+			}
+
 			modifier = {
 				political_power_gain = 0.1
 				local_building_slots_factor = 0.2
@@ -29,6 +39,16 @@ ideas = {
 
 		kingdom = {
 			level = 2
+
+			available = {
+				NOT = {
+					OR = {
+						has_idea = duchy
+						has_idea = empire
+					}
+				}
+			}
+
 			modifier = {
 				political_power_gain = 0.15
 				local_building_slots_factor = 0.1

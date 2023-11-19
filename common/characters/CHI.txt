@@ -1,0 +1,14 @@
+characters = {
+    CHI_Kangxi_Emperor = {
+        name = "Kangxi Emperor"
+        portraits = {
+            civilian = {
+                large = "GFX_Kangxi_Emperor"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

@@ -3,6 +3,9 @@ state={
 	name="Burgas"
 	history={
 		owner = TUR
+		add_core_of = TUR
+		add_core_of = ROM
+		#add_core_of = BUL
 		victory_points = {
 			657 3 
 		}
@@ -12,14 +15,11 @@ state={
 			industrial_complex = 0
 			657 = {
 				naval_base = 8
-				}
+			}
 			687 = {
 				naval_base = 1
 			}
 		}
-		add_core_of = TUR
-		add_core_of = ROM
-		add_core_of = BUL
 	}
 	provinces={
 		657 687 3076 9635 

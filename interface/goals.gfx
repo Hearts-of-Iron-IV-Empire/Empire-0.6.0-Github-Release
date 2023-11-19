@@ -505,104 +505,592 @@ spriteTypes = {
 
 	# Emperor Hirohito Goals #
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
 	SpriteType = {
-		name = "GFX_polish_economy"
-		texturefile = "gfx/interface/goals/polish_economy.dds"
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_Hakkapeliitta_icon"
+		texturefile = "gfx/interface/goals/Hakkapeliitta_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ottoman_empire_flag"
+		texturefile = "gfx/interface/goals/ottoman_empire_flag.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_save_islam"
+		texturefile = "gfx/interface/goals/save_islam.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_peter_the_great_icon"
+		texturefile = "gfx/interface/goals/peter_the_great_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_england_flag_burning"
+		texturefile = "gfx/interface/goals/england_flag_burning.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_kick_sweden"
+		texturefile = "gfx/interface/goals/kick_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_castle_tower_icon"
+		texturefile = "gfx/interface/goals/castle_tower_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_moldavia"
+		texturefile = "gfx/interface/goals/agree_moldavia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_ripped_flag_sweden"
+		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_soldiers_marching_russia"
+		texturefile = "gfx/interface/goals/soldiers_marching_russia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_conquer_europe_russia"
+		texturefile = "gfx/interface/goals/goal_conquer_europe_russia.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_finland_region"
+		texturefile = "gfx/interface/goals/finland_region.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_coordinate_joint_swedish_attack"
+		texturefile = "gfx/interface/goals/goal_coordinate_joint_swedish_attack.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_formulate_joint_army"
+		texturefile = "gfx/interface/goals/goal_formulate_joint_army.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_sandiomerz_confederation"
+		texturefile = "gfx/interface/goals/goal_sandiomerz_confederation.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ottoman_empire_flag_3"
+		texturefile = "gfx/interface/goals/ottoman_empire_flag_3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_take_morea"
+		texturefile = "gfx/interface/goals/goal_take_morea.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ottoman_turban"
+		texturefile = "gfx/interface/goals/ottoman_turban.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_develop_levantine_eyalets"
+		texturefile = "gfx/interface/goals/goal_develop_levantine_eyalets.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_develop_anatolia"
+		texturefile = "gfx/interface/goals/goal_develop_anatolia.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_crack_down_on_sect_practices"
+		texturefile = "gfx/interface/goals/goal_crack_down_on_sect_practices.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_knight_helmet_icon"
+		texturefile = "gfx/interface/goals/knight_helmet_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_crush_the_spider"
+		texturefile = "gfx/interface/goals/goal_crush_the_spider.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_crack_down_on_foreign_influence_pol"
+		texturefile = "gfx/interface/goals/goal_crack_down_on_foreign_influence_pol.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_polish_eagle_icon"
+		texturefile = "gfx/interface/goals/polish_eagle_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_expand_our_horizons"
+		texturefile = "gfx/interface/goals/goal_expand_our_horizons.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_swedish_ottoman_cooperation"
+		texturefile = "gfx/interface/goals/goal_swedish_ottoman_cooperation.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_sweden_lets_go"
+		texturefile = "gfx/interface/goals/sweden_lets_go.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_janissary_hat_icon"
+		texturefile = "gfx/interface/goals/janissary_hat_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_janissary_muslim_icon"
+		texturefile = "gfx/interface/goals/janissary_muslim_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_islamic_helmet_icon"
+		texturefile = "gfx/interface/goals/islamic_helmet_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_ashigaru_helmet"
+		texturefile = "gfx/interface/goals/ashigaru_helmet.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_tokugawa_tsunayoshi"
+		texturefile = "gfx/interface/goals/goal_tokugawa_tsunayoshi.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_the_buddha"
+		texturefile = "gfx/interface/goals/goal_the_buddha.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_japanese_emperor_icon"
+		texturefile = "gfx/interface/goals/japanese_emperor_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_defend_japan"
+		texturefile = "gfx/interface/goals/goal_defend_japan.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_hammer_and_anvil_icon"
+		texturefile = "gfx/interface/goals/hammer_and_anvil_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_for_a_better_japan2"
+		texturefile = "gfx/interface/goals/goal_for_a_better_japan2.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_contain_sweden"
+		texturefile = "gfx/interface/goals/goal_contain_sweden.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_conquer_hawaii"
+		texturefile = "gfx/interface/goals/goal_conquer_hawaii.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_dragoon_helmet_icon"
+		texturefile = "gfx/interface/goals/dragoon_helmet_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_wine_glass_icon"
+		texturefile = "gfx/interface/goals/wine_glass_icon.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_kabuto_helmet_icon"
+		texturefile = "gfx/interface/goals/kabuto_helmet_icon.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_jap_economic_support"
+		texturefile = "gfx/interface/goals/goal_jap_economic_support.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_japanese_politics"
+		texturefile = "gfx/interface/goals/goal_japanese_politics.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_austrian_economy"
+		texturefile = "gfx/interface/goals/goal_austrian_economy.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_goal_defend_venice"
+		texturefile = "gfx/interface/goals/goal_defend_venice.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_attack_venice"
+		texturefile = "gfx/interface/goals/attack_venice.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_venice"
+		texturefile = "gfx/interface/goals/agree_venice.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_integrate_ezo"
+		texturefile = "gfx/interface/goals/goal_integrate_ezo.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_goal_the_foreigners"
+		texturefile = "gfx/interface/goals/goal_the_foreigners.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_agree_china"
+		texturefile = "gfx/interface/goals/agree_china.dds"
 	}
 	
 	SpriteType = {
@@ -1926,7 +2414,7 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
-		name = "GFX_focus_carolus_rex"
+		name = "GFX_carolus_rex"
 		texturefile = "gfx/interface/goals/carolus_rex.dds"
 	}
 
@@ -2220,42 +2708,200 @@ spriteTypes = {
 	###########################
 	#### Base game focuses ####
 	###########################
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
+	SpriteType = { 
+		name = "GFX_goal_generic_occypy_states_ongoing_war"
+		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+	}
 	
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_infiltrating_the_british_isles"
+		texturefile = "gfx/interface/goals/focus_ICE_infiltrating_the_british_isles.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_thungur_hnifur"
+		texturefile = "gfx/interface/goals/focus_ICE_thungur_hnifur.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_securing_the_north_sea_passage"
+		texturefile = "gfx/interface/goals/focus_ICE_securing_the_north_sea_passage.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_reclaiming_the_empire"
+		texturefile = "gfx/interface/goals/focus_ICE_reclaiming_the_empire.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_vinland"
+		texturefile = "gfx/interface/goals/focus_ICE_vinland.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_the_viking_spiritr"
+		texturefile = "gfx/interface/goals/focus_ICE_the_viking_spirit.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_generic_attack_nordic_territory"
+		texturefile = "gfx/interface/goals/focus_generic_attack_nordic_territory.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_ICE_hrafninn_flygur"
+		texturefile = "gfx/interface/goals/focus_ICE_hrafninn_flygur.dds"
 	}
+
 	SpriteType = { 
-		name = "GFX_goal_generic_occypy_states_ongoing_war"
-		texturefile = "gfx/interface/goals/goal_generic_occypy_states_ongoing_war.dds"
+		name = "GFX_focus_POL_plan_west"
+		texturefile = "gfx/interface/goals/focus_POL_plan_west.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_POL_end_the_regency"
+		texturefile = "gfx/interface/goals/focus_POL_end_the_regency.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_nordic_territory"
+		texturefile = "gfx/interface/goals/focus_generic_nordic_territory.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_mining_industry"
+		texturefile = "gfx/interface/goals/focus_generic_mining_industry.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_invade_norway"
+		texturefile = "gfx/interface/goals/focus_generic_invade_norway.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_invade_sweden"
+		texturefile = "gfx/interface/goals/focus_generic_invade_sweden.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_invade_denmark"
+		texturefile = "gfx/interface/goals/focus_generic_invade_denmark.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_invade_iceland"
+		texturefile = "gfx/interface/goals/focus_generic_invade_iceland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_invade_finland"
+		texturefile = "gfx/interface/goals/focus_generic_invade_finland.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_generic_agricultural_subsidies"
+		texturefile = "gfx/interface/goals/focus_generic_agricultural_subsidies.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ETH_protector_of_the_somalis"
+		texturefile = "gfx/interface/goals/focus_ETH_protector_of_the_somalis.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_ETH_compensation"
+		texturefile = "gfx/interface/goals/focus_ETH_compensation.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_no_regulations"
+		texturefile = "gfx/interface/goals/focus_DEN_no_regulations.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_limited_regulations"
+		texturefile = "gfx/interface/goals/focus_DEN_limited_regulations.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_heavy_regulations"
+		texturefile = "gfx/interface/goals/focus_DEN_heavy_regulations.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_danish_freedom"
+		texturefile = "gfx/interface/goals/focus_DEN_danish_freedom.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_danelaw"
+		texturefile = "gfx/interface/goals/focus_DEN_danelaw.dds"
+	}
+
+	SpriteType = { 
+		name = "GFX_focus_DEN_civilian_preparations"
+		texturefile = "gfx/interface/goals/focus_DEN_civilian_preparations.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_focus_LIT_new_kind_of_iron_wolf"
+		texturefile = "gfx/interface/goals/focus_LIT_new_kind_of_iron_wolf.dds"
 	}
 
 	SpriteType = { 
@@ -3358,23 +4004,23 @@ spriteTypes = {
 	}		
 	
 	SpriteType = {
-	name = "GFX_goal_generic_amphibious_assault"
-	texturefile = "gfx/interface/goals/goal_generic_amphibious_assault.dds"			
+		name = "GFX_goal_generic_amphibious_assault"
+		texturefile = "gfx/interface/goals/goal_generic_amphibious_assault.dds"			
 	}		
 	
 	SpriteType = {
-	name = "GFX_goal_generic_dangerous_deal"
-	texturefile = "gfx/interface/goals/goal_generic_dangerous_deal.dds"			
+		name = "GFX_goal_generic_dangerous_deal"
+		texturefile = "gfx/interface/goals/goal_generic_dangerous_deal.dds"			
 	}		
 	
 	SpriteType = {
-	name = "GFX_goal_generic_military_sphere"
-	texturefile = "gfx/interface/goals/goal_generic_military_sphere.dds"			
+		name = "GFX_goal_generic_military_sphere"
+		texturefile = "gfx/interface/goals/goal_generic_military_sphere.dds"			
 	}	
 	
 	SpriteType = {
-	name = "GFX_goal_generic_major_alliance"
-	texturefile = "gfx/interface/goals/goal_generic_major_alliance.dds"			
+		name = "GFX_goal_generic_major_alliance"
+		texturefile = "gfx/interface/goals/goal_generic_major_alliance.dds"			
 	}		
 	
 	SpriteType = {
@@ -5245,15 +5891,15 @@ spriteTypes = {
 	}
 	SpriteType = { 
 		name = "GFX_OTT_Abolish_Mecelle"
-		texturefile = "gfx/interface/goals/OTT_Abolish_Mecelle.tga"
+		texturefile = "gfx/interface/goals/OTT_Abolish_Mecelle.dds"
 	}
 	SpriteType = { 
 		name = "GFX_OTT_army"
-		texturefile = "gfx/interface/goals/OTT_army.tga"
+		texturefile = "gfx/interface/goals/OTT_army.dds"
 	}
 	SpriteType = { 
 		name = "GFX_OTT_army_command"
-		texturefile = "gfx/interface/goals/OTT_army_command.tga"
+		texturefile = "gfx/interface/goals/OTT_army_command.dds"
 	}
 	SpriteType = { 
 		name = "GFX_OTT_Association_of_Muslim_Nations"
@@ -5266,32 +5912,32 @@ spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_OTT_caliph"
-		texturefile = "gfx/interface/goals/OTT_caliph.tga"
+		texturefile = "gfx/interface/goals/OTT_caliph.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_camels"
-		texturefile = "gfx/interface/goals/OTT_camels.tga"
+		texturefile = "gfx/interface/goals/OTT_camels.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_coat_of_arms"
-		texturefile = "gfx/interface/goals/OTT_coat_of_arms.tga"
+		texturefile = "gfx/interface/goals/OTT_coat_of_arms.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_constitution"
-		texturefile = "gfx/interface/goals/OTT_constitution.tga"
+		texturefile = "gfx/interface/goals/OTT_constitution.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_ferman"
-		texturefile = "gfx/interface/goals/OTT_ferman.tga"
+		texturefile = "gfx/interface/goals/OTT_ferman.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_gendarmerie"
-		texturefile = "gfx/interface/goals/OTT_gendarmerie.tga"
+		texturefile = "gfx/interface/goals/OTT_gendarmerie.dds"
 	}
 
 	SpriteType = { 
@@ -5301,12 +5947,12 @@ spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_OTT_Khedivate_Restored"
-		texturefile = "gfx/interface/goals/OTT_Khedivate_Restored.tga"
+		texturefile = "gfx/interface/goals/OTT_Khedivate_Restored.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_Military_Mission"
-		texturefile = "gfx/interface/goals/OTT_Military_Mission.tga"
+		texturefile = "gfx/interface/goals/OTT_Military_Mission.dds"
 	}
 
 	SpriteType = { 
@@ -5316,17 +5962,17 @@ spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_OTT_Muslim_Solidarity"
-		texturefile = "gfx/interface/goals/OTT_Muslim_Solidarity.tga"
+		texturefile = "gfx/interface/goals/OTT_Muslim_Solidarity.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_navy"
-		texturefile = "gfx/interface/goals/OTT_navy.tga"
+		texturefile = "gfx/interface/goals/OTT_navy.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_Population_Exchange"
-		texturefile = "gfx/interface/goals/OTT_Population_Exchange.tga"
+		texturefile = "gfx/interface/goals/OTT_Population_Exchange.dds"
 	}
 
 	SpriteType = { 
@@ -5341,22 +5987,17 @@ spriteTypes = {
 
 	SpriteType = { 
 		name = "GFX_OTT_reform"
-		texturefile = "gfx/interface/goals/OTT_reform.tga"
+		texturefile = "gfx/interface/goals/OTT_reform.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_Sublime_Porte"
-		texturefile = "gfx/interface/goals/OTT_Sublime_Porte.tga"
+		texturefile = "gfx/interface/goals/OTT_Sublime_Porte.dds"
 	}
 
 	SpriteType = { 
 		name = "GFX_OTT_Tithe"
 		texturefile = "gfx/interface/goals/OTT_Tithe.dds"
-	}
-
-	SpriteType = { 
-		name = "GFX_OTT_Years_of_Progress"
-		texturefile = "gfx/interface/goals/OTT_Years_of_Progress.tga"
 	}
 
 	SpriteType = { 
@@ -5657,10 +6298,6 @@ spriteTypes = {
 	SpriteType = { 
 		name = "GFX_habsburg_coat_of_arms"
 		texturefile = "gfx/interface/goals/habsburg_coat_of_arms.tga"
-	}
-	SpriteType = { 
-		name = "GFX_focus_assassinate_louis_xiv"
-		texturefile = "gfx/interface/goals/focus_assassinate_louis_xiv.tga"
 	}
 
 	SpriteType = { 

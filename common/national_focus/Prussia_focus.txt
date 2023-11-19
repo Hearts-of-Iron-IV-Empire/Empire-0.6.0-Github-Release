@@ -226,15 +226,13 @@ focus = {
 focus = { 
 	id = PRS_crownking
 	icon = GFX_focus_SOV_zemsky_sobor
-	relative_position_id = PRS_krontraktat
 	x = 2
 	y = 1
-	cost = 10
-	available_if_capitulated = yes 
+	relative_position_id = PRS_krontraktat
 	prerequisite = { focus = PRS_krontraktat focus = PRS_no_compromise_with_austria } 
-	ai_will_do = { 
-	 	factor = 1
-	} 
+
+	cost = 10
+	
 	completion_reward = { 
 		set_cosmetic_tag = PRS_KNG
 		set_capital = {
@@ -247,7 +245,11 @@ focus = {
 		}
 		add_ideas = kingdom
 		news_event = mod.12
-	} 
+	}
+
+	ai_will_do = { 
+	 	factor = 1
+	}
 }
 
 #TREE FOR FOREIGN AFFAIRS
@@ -417,15 +419,14 @@ focus = {
 focus = { 
 	id = PRS_joingrandalliance
 	icon = GFX_goal_generic_alliance
-	relative_position_id = PRS_supportaustrianclaim
 	x = 0
 	y = 2
-	cost = 5
-	available_if_capitulated = yes
-
+	relative_position_id = PRS_supportaustrianclaim
 	prerequisite = { focus = PRS_aidaustria focus = PRS_aidtheunitedprovinces focus = PRS_aidengland } 
 
 	available = { has_war = no }
+	
+	cost = 5
 
 	completion_reward = {
 		AUS = { country_event = generic.2 } 

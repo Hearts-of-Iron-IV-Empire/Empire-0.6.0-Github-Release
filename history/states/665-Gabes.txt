@@ -1,4 +1,3 @@
-
 state={
 	id=665
 	name="STATE_665"
@@ -9,15 +8,17 @@ state={
 		victory_points = {
 			7005 1 
 		}
+		victory_points = {
+			11935 3
+		}
 		buildings = {
 			infrastructure = 2
-
 		}
 
 	}
 
 	provinces={
-		1037 3987 7005 10026 10082 11935 11957 13145 13179 
+		1037 3987 7005 10026 10082 11935 13145 13179 
 	}
 	manpower=107824
 	buildings_max_level_factor=1.000

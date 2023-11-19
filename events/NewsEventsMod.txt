@@ -37,13 +37,13 @@ news_event = {
 		name = "F"
 		trigger = {
 			NOT = {
-				TAG = SPR
+				tag = SPR
 			}
 		}
 	}
 	option = {
 		name = "Interesting."
-		trigger = { TAG = FRA }
+		trigger = { tag = FRA }
 	}
 }
 
@@ -62,18 +62,18 @@ news_event = {
 		name = mod.2.a
 		trigger = {
 			NOT = {
-				TAG = FRA
-				TAG = SPR
+				tag = FRA
+				tag = SPR
 			}
 		}
 	}
 	option = {
 		name = mod.2.b
-		trigger = { TAG = FRA }
+		trigger = { tag = FRA }
 	}
 	option = {
 		name = mod.2.c
-		trigger = { TAG = SPR }
+		trigger = { tag = SPR }
 	}
 }
 ##########################
@@ -117,12 +117,11 @@ news_event = {
 		is_triggered_only = yes
 
 		option = {
-			name = "Remarkable"
-			trigger = {
-			}
+			name = "Remarkable!"
 		}
+
 		option = {
-			name = "Excellent"
+			name = "Excellent."
 			trigger = { TAG = SWE }
 		}
 	}
@@ -214,8 +213,8 @@ news_event = {
 
 ## ALTERNATIVE SUCCESSIONS
 
-news_event = {
-	id = mod.9
+	news_event = {
+		id = mod.9
 		title = mod.9.t
 		desc = mod.9.d
 		picture = GFX_news_event_anouncement
@@ -243,8 +242,8 @@ news_event = {
 		}
 	}
 
-news_event = {
-	id = mod.10
+	news_event = {
+		id = mod.10
 		title = mod.10.t
 		desc = mod.10.d
 		picture = GFX_news_event_anouncement
@@ -306,13 +305,13 @@ news_event = {
 			name = mod.12.a
 			trigger = {
 				NOT = {
-					TAG = PRS
+					tag = PRS
 				}
 			}
 		}
 		option = {
 			name = mod.12.b
-			trigger = { TAG = PRS}
+			trigger = { tag = PRS }
 		}
 	}
 
@@ -333,7 +332,7 @@ news_event = {
 	}
 }
 
-#Cromwell
+# Cromwell
 
 news_event = {
 	id = mod.14
@@ -350,7 +349,7 @@ news_event = {
 	}
 }
 
-#Utopia
+# Utopia
 
 news_event = {
 	id = mod.15
@@ -367,7 +366,7 @@ news_event = {
 	}
 }
 
-#Jacobite Restauration
+# Jacobite Restauration
 
 news_event = {
 	id = mod.16
@@ -384,7 +383,7 @@ news_event = {
 	}
 }
 
-#Hanoverian Succession
+# Hanoverian Succession
 
 news_event = {
 	id = mod.17
@@ -401,7 +400,7 @@ news_event = {
 	}
 }
 
-#netherlands declared bankrupt
+# Netherlands declared bankrupt
 
 news_event = {
 	id = mod.18
@@ -418,7 +417,7 @@ news_event = {
 	}
 }
 
-#death of pope
+# Death of Pope
 
 news_event = {
 	id = mod.19
@@ -431,11 +430,11 @@ news_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Requiescat in pace"
+		name = "Requiescat in pace."
 	}
 }
 
-#new pope
+# New Pope
 
 news_event = {
 	id = mod.20
@@ -452,7 +451,7 @@ news_event = {
 	}
 }
 
-#Danish king dies
+# Danish king dies
 
 news_event = {
 	id = mod.21
@@ -503,7 +502,7 @@ news_event = {
 	}
 }
 
-#civil war in commonwealth
+# civil war in commonwealth
 
 news_event = {
 	id = mod.23
@@ -535,7 +534,6 @@ news_event = {
 		219 = { is_owned_by = SOV }
 		SOV = { has_war_with = SWE }
 	}
-	is_triggered_only = no
 
 	option = {
 		name = "So the bear can be beaten?"
@@ -677,28 +675,56 @@ news_event = {
 	}
 }
 
-#Prussia proclaims catholic kingdom
+# Prussia proclaims Catholic kingdom
 
 news_event = {
 	id = mod.34
-		title = mod.34.t
-		desc = mod.34.d
-		picture = GFX_news_event_prussia
+	title = mod.34.t
+	desc = mod.34.d
+	picture = GFX_news_event_prussia
 
-		major = yes
+	major = yes
 
-		is_triggered_only = yes
+	is_triggered_only = yes
 
-		option = {
-			name = mod.34.a
-			trigger = {
-				NOT = {
-					TAG = PRS
-				}
+	option = {
+		name = mod.34.a
+		trigger = {
+			NOT = {
+				tag = PRS
 			}
 		}
-		option = {
-			name = mod.34.b
-			trigger = { TAG = PRS }
+	}
+	option = {
+		name = mod.34.b
+		trigger = { tag = PRS }
+	}
+}
+
+# Jawa Earthquake
+news_event = {
+	id = mod.35
+	title = mod.35.t
+	desc = mod.35.d
+	picture = GFX_news_event_siege
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = "Dear God..."
+		trigger = {
+			NOT = {
+				tag = HOL
+			}
 		}
+	}
+
+	option = {
+		name = "Uh oh..."
+		trigger = {
+			tag = HOL
+		}
+	}
 }

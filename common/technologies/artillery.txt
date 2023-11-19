@@ -288,7 +288,7 @@ technologies = {
 			}
 			
 			modifier = {
-				factor = 2
+				factor = 3
 				date > "1705.1.1"
 			}
 			
@@ -516,6 +516,10 @@ technologies = {
 	
 		enable_equipments = {
 			howitzer_1
+		}
+
+		enable_subunits = {
+			howitzer_brigade
 		}
 
 		#artillery = {

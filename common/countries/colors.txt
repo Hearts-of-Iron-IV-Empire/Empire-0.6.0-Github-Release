@@ -344,15 +344,17 @@ BEL = {
 	color = rgb { 229 182 4 }
 	color_ui = rgb { 229 182 4 }
 }
-HOL = {	color = rgb { 222 149 33 }
-		color_ui = rgb { 122 179 97 }
+HOL = {	
+	color = rgb { 222 149 33 }
+	color_ui = rgb { 122 179 97 }
 }
-CZE = {	color = rgb { 54 167 156 }
-		color_ui = rgb { 70 217 203 }
+CZE = {	
+	color = rgb { 54 167 156 }
+	color_ui = rgb { 70 217 203 }
 }
 POL = {
-	color = rgb { 197 92 106 }
-	color_ui = rgb { 255 120 138 }
+	color = rgb { 235 0 26 }
+	color_ui = rgb { 204 44 36 }
 }
 AUS = {
 	color = rgb { 194 198 215 }

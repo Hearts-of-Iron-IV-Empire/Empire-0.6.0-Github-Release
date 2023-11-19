@@ -19,8 +19,8 @@ state={
 		victory_points = {
 			3301 5
 		}
-		victory_points = {
-			7239 5
+		victory_points = { # Worcester
+			9297 10
 		}
 		add_core_of = ENG
 		1707.5.1 = {

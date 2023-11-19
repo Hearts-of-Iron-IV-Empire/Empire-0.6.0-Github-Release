@@ -9,17 +9,6 @@ add_ideas = {
 	fetishist
 }
 
-1939.1.1 = {
-
-	
-	#generic focuses
-	
-	
-}
-
-
-
-
 set_popularities  = {
 	aristocracy = 100
 }

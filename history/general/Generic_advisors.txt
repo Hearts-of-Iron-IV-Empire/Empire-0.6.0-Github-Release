@@ -86,6 +86,11 @@ every_possible_country = {
 					add = 70
 					has_manpower < 10000
 				}
+
+				modifier = {
+					add = -100 
+					aristocracy > 0.60
+				}
 			}
 		}
 		portraits = { 

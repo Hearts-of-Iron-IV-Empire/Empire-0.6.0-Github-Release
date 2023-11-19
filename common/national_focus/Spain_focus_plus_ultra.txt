@@ -1448,19 +1448,19 @@ focus_tree = {
 		cost = 7.2
 
 		available = {
-			627 = {
+			647 = {
 				is_owned_and_controlled_by = UNC
 			}
-			647 = {
+			684 = {
 				is_owned_and_controlled_by = UNC
 			}
 		}
 
 		completion_reward = {
-			627 = {
+			647 = {
 				transfer_state_to = PHI
 			}
-			647 = {
+			684 = {
 				transfer_state_to = PHI
 			}
 			add_political_power = -70

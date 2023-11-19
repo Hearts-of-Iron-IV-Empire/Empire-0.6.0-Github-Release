@@ -249,6 +249,11 @@ treaty_of_versailles = {
 		}
 
 		available = {
+			hidden_trigger = {
+				NOT = {
+					has_global_flag = treaty_of_versailles
+				}
+			}
 			has_war_with = AUS
 			OR = {
 				original_tag = FRA
@@ -295,6 +300,7 @@ treaty_of_versailles = {
 			has_war_with = AUS
 			SPR = { is_in_faction_with = FRA }
 		}
+
 		complete_effect = {
 			if = { 
 				limit = {
@@ -314,6 +320,7 @@ treaty_of_versailles = {
 				}
 				HOL = { country_event = succession.20 }
 			}		
+			set_global_flag = treaty_of_versailles
 		}
 	}
 	fate_of_britain = {

@@ -21,6 +21,7 @@ characters = {
             defense_skill = 2
             planning_skill = 1
             logistics_skill = 2
+            legacy_id = 1
         }
     }
     TUR_Ahmed_III = {
@@ -62,6 +63,7 @@ characters = {
             defense_skill = 1
             planning_skill = 1
             logistics_skill = 1
+            legacy_id = 2
         }
     }
     TUR_Mahmud_I = {
@@ -90,6 +92,7 @@ characters = {
             defense_skill = 2
             planning_skill = 3
             logistics_skill = 2
+            legacy_id = 3
         }
     }
     TUR_Nazmi_Solok = {
@@ -106,6 +109,7 @@ characters = {
             defense_skill = 2
             planning_skill = 2
             logistics_skill = 1
+            legacy_id = 4
         }
     }
     TUR_Elmas_Mehmed_Pasha = {
@@ -122,6 +126,7 @@ characters = {
             defense_skill = 2
             planning_skill = 2
             logistics_skill = 2
+            legacy_id = 5
         }
     }
     TUR_Baltac_Mehmet_Pasha = {
@@ -138,6 +143,7 @@ characters = {
             defense_skill = 1
             planning_skill = 2
             logistics_skill = 2
+            legacy_id = 6
         }
     }
     TUR_Mezzo_Morto_Hüseyin_Pasha = {
@@ -154,6 +160,7 @@ characters = {
             defense_skill = 1
             maneuvering_skill = 1
             coordination_skill = 2
+            legacy_id = 7
         }
     }
 }

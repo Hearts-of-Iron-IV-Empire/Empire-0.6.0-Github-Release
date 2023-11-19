@@ -107,7 +107,7 @@ buildings = {
 
 	concription_centre = {
 		show_on_map = 0
-		base_cost = 8000
+		base_cost = 10000
 		icon_frame = 9
 		max_level = 10
 		shares_slots = yes

@@ -2,7 +2,7 @@
 
 oob = "JAP_1699"
 
-set_stability = 0.65
+set_stability = 0.45
 set_war_support = 0.40
 
 add_ideas = {
@@ -91,4 +91,16 @@ set_popularities = {
 	communism = 0
 	neutrality = 65
 	aristocracy = 20
+}
+
+set_variable = {
+	HOL_influence = 5
+}
+
+set_variable = {
+	SPR_influence = 0
+}
+
+set_variable = {
+	POR_influence = 0
 }

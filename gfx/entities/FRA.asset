@@ -42,7 +42,8 @@ entity = {
 	#attach = { 	name = "sandbag"			Root_node_1 = "sandbag_entity" }
 	
 	scale = 0.8			
-}	
+}
+}
 
 entity = {
 	name = "FRA_marine_mg_entity"
@@ -83,6 +84,7 @@ entity = {
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }	
 	
 	scale = 0.8			
+}
 }
 
 entity = {
@@ -126,6 +128,7 @@ entity = {
 	
 	scale = 0.8			
 }	
+}
 
 entity = {
 	name = "FRA_mountaineers_mg_entity"
@@ -166,6 +169,7 @@ entity = {
 	attach = { 	name = "cigarette2"			Root_node_1 = "cigarette_entity" }	
 	
 	scale = 0.8			
+}
 }
 
 entity = {
@@ -209,6 +213,7 @@ entity = {
 	
 	scale = 0.8			
 }	
+}
 
 entity = {
 	name = "FRA_paratrooper_mg_entity"
@@ -250,4 +255,5 @@ entity = {
 	#attach = { 	name = "sandbag"			Root_node_1 = "sandbag_entity" }	
 	
 	scale = 0.8			
+}
 }

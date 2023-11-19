@@ -1,4 +1,3 @@
-
 state={
 	id=458
 	name="STATE_458"
@@ -7,24 +6,30 @@ state={
 		owner = TUN
 		add_core_of = TUN
 		victory_points = {
-			11969 10 
+			11969 50 
 		}
 		victory_points = {
-			9994 1 
+			9994 5 
 		}
 		victory_points = {
-			11921 1 
+			11921 5 
+		}
+		victory_points = {
+			4061 5
+		}
+		victory_points = {
+			7162 3
+		}
+		victory_points = {
+			7077 5
 		}
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
 			9994 = {
-				naval_base = 8
-
+				naval_base = 4
 			}
-
 		}
-
 	}
 
 	provinces={

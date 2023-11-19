@@ -93,10 +93,12 @@ country_event = {
 	}
 }
 
+# Janissary Revolt
 country_event = {
 	id = ottomans.10
 	title = ottomans.10.t
 	desc = ottomans.10.d
+	picture = GFX_report_event_generic_riot
 
 	fire_only_once = yes
 	is_triggered_only = yes
@@ -107,20 +109,23 @@ country_event = {
 			ruling_party = aristocracy
 		}
 		delete_unit_template_and_units = {
-		    division_template = "Janissar Tümeni"
+		    division_template = "Piyade Tümeni"
 		}
 		start_civil_war = {
 		    size = 0.5
 		    ideology = neutrality
 		    capital = 341
 		    add_ideas = TUR_engulved_in_civil_war
-		    load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+			hidden_effect = {	
+				load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+			}
 		}
 	}
-	option = { # Stand with old order
+
+	option = { # Stand with the Old Order
 		name = ottomans.10.b
 		delete_unit_template_and_units = {
-		    division_template = "Janissar Tümeni"
+		    division_template = "Janissary Tümeni"
 		}
 		start_civil_war = {
 			size = 0.5
@@ -128,8 +133,19 @@ country_event = {
 			capital = 184
 			states = { 879 184 211 212 48 231 354 }
 			set_cosmetic_tag = TUR_jan
-			add_ideas = TUR_engulved_in_civil_war
-			load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+			set_country_flag = janissary_revolt
+			keep_unit_leaders = {
+				1 3 4 5 6 7
+			}
+			hidden_effect = {	
+				load_focus_tree = { tree = ottoman_focus keep_completed = yes }
+				PREV = {
+					TUR_Ahmed_III_nobility = {			
+						set_nationality = PREV.PREV
+					}
+				}
+				add_ideas = TUR_engulved_in_civil_war
+			}
 		}
 		TUR = {
 			create_country_leader = {
@@ -137,11 +153,14 @@ country_event = {
 				picture = "gfx/leaders/TUR/Mustafa_II.dds"
 				ideology = despotism
 			}
+			hidden_effect = {
+				add_ideas = TUR_engulved_in_civil_war
+			}
 		}
 	}
 }
 
-#Ottomans demand morea
+# Ottomans demand morea
 
 country_event = {
 	id = ottomans.11
@@ -169,6 +188,7 @@ country_event = {
 		}
 	}
 }
+
 #NOPE VENICE
 country_event = {
 	id = ottomans.12
@@ -269,14 +289,17 @@ country_event = {
 	desc = ottomans.17.d
 
 	fire_only_once = yes
-		trigger = {
-			original_tag = TUR
-			has_cosmetic_tag = TUR_jan
-			has_civil_war = no
-		}
+	is_triggered_only = yes
+
+	trigger = {
+		original_tag = TUR
+		has_cosmetic_tag = TUR_jan
+		has_civil_war = no
+	}
+	
 	mean_time_to_happen = {
-    days = 1
-		}
+    	days = 1
+	}
 
 	option = {
 		name = ottomans.17.a
@@ -291,6 +314,7 @@ country_event = {
 	desc = ottomans.18.d
 	
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = ottomans.18.a
@@ -309,6 +333,7 @@ country_event = {
 	picture = GFX_report_event_treaty
 	
 	fire_only_once = yes
+	is_triggered_only = yes
 
 	option = {
 		name = ottomans.19.a

@@ -41,11 +41,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				political_power_gain = 0.20
-				stability_factor = 0.20
-				war_support_factor = 0.20
+				political_power_gain = 0.15
+				stability_factor = 0.25
+				war_support_factor = 0.25
 				army_org_factor = 0.10
-				army_morale_factor = 0.10
+				army_morale_factor = 0.15
 			}
 		}
 		eight_banners_system = {		
@@ -64,8 +64,8 @@ ideas = {
 			modifier = {
 				army_attack_factor = 0.1
 				army_defence_factor = 0.1
-				experience_gain_army_factor = -0.20
-				land_reinforce_rate = -0.15
+				experience_gain_army_factor = -0.50
+				land_doctrine_cost_factor = 0.20
 			}
 		}
 		pays_tribute_1 = {

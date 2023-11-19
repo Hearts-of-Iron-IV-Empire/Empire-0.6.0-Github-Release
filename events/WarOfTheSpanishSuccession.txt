@@ -1353,6 +1353,7 @@ country_event = {
 	title = succession.61.t
 	desc = succession.61.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1429,6 +1430,7 @@ news_event = {
 	desc = succession.80.d
 	picture = GFX_news_event_agreement
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1444,6 +1446,7 @@ news_event = {
 	desc = succession.81.d
 	picture = GFX_news_event_agreement
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1459,6 +1462,7 @@ news_event = {
 	desc = succession.82.d
 	picture = GFX_news_event_agreement
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1470,9 +1474,10 @@ news_event = {
 
 news_event = {
 	id = succession.821
-	title = "Terms of Treaty of London Executed"
+	title = "Terms of the Treaty of London Executed"
 	desc = succession.821.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1488,6 +1493,7 @@ news_event = {
 	desc = succession.83.d
 	picture = GFX_news_event_agreement
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1495,13 +1501,14 @@ news_event = {
 	}
 }
 
-# Faction was defeated
+# Faction has lost
 
 country_event = {
 	id = succession.84
 	title = "We have been defeated..."
 	desc = succession.84.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
@@ -1509,18 +1516,19 @@ country_event = {
 	}
 }
 
-#faction has won
+# Faction has won
 
 country_event = {
 	id = succession.85
-	title = "Victory in the War of The Spanish Succession!"
+	title = "Victory in the War of the Spanish Succession!"
 	desc = succession.85.d
 
+	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
-		name = "We have achieved victory!"
+		name = "Victory is ours sire!"
 		add_stability = 0.10
-		add_war_support = -0.15
+		add_war_support = -0.10
 	}
 }

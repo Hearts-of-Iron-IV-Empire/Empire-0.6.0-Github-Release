@@ -26,103 +26,103 @@ division_template = {
 ####### OOB #######
 units = {
     division= {	# "Edo"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 1182
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
-    }
-    division= {	# "Edo"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 1182
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 1182
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Edo"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 1182
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
-    location = 1182
-    division_template = "Light Cavalry"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+    division= {	# "Edo"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 1182
+        division_template = "Light Cavalry"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Nagoya"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 10125
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 10125
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Nagoya"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 10125
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
-    }
-    division= {	# "Kyoto"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 7072
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 10125
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Kyoto"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 7072
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 7072
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Kyoto"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 7072
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
-    location = 7072
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+    division= {	# "Kyoto"
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 7072
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Hiroshima"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 1092
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 1092
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
     division= {	# "Hiroshima"
-    division_name = {
-        is_name_ordered = yes
-        name_order = 101
-    }
-    location = 1092
-    division_template = "Infantry Division"
-    start_experience_factor = 0.1
-    start_equipment_factor = 0.8
+        division_name = {
+            is_name_ordered = yes
+            name_order = 101
+        }
+        location = 1092
+        division_template = "Infantry Division"
+        start_experience_factor = 0.1
+        start_equipment_factor = 0.8
     }
 }

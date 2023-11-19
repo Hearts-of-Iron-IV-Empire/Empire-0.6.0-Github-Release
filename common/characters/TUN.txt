@@ -1,0 +1,14 @@
+characters = {
+    TUN_Mourad_III = {
+        name = "Mourad III"
+        portraits = {
+            civilian = {
+                large = "GFX_Mourad_III"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

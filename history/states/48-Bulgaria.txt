@@ -11,6 +11,8 @@ state={
 
 	history={
 		owner = TUR
+		#add_core_of = BUL
+		add_core_of = TUR
 		victory_points = {
 			949 20 
 		}
@@ -18,8 +20,6 @@ state={
 			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = BUL
-		add_core_of = TUR
 	}
 
 	provinces={

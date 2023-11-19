@@ -46,6 +46,8 @@ set_convoys = 900
 
 add_ideas = {
 	great_turkish_war
+	VNC_reliance_on_mercenaries
+	venetian_industry
 
 	# Laws and Religion
 	limited_conscription
@@ -65,7 +67,7 @@ recruit_character = VNC_Alvise_II_Mocenigo # 1700 - 1709
 
 set_politics = {
 	ruling_party = democratic
-	last_election = "1699.1.1"
+	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }

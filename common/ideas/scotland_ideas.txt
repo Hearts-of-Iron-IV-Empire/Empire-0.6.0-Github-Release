@@ -1,0 +1,13 @@
+ideas = {
+	country = {
+
+		SCO_kingdom_of_the_mountains_idea = {	
+
+			picture = generic_agrarian_reform
+
+			modifier = {
+				army_core_defence_factor = 0.1
+			}
+		}
+	}
+}

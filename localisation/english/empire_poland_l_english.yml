@@ -302,10 +302,10 @@ POL_found_order_of_the_white_eagle:0 "Found the Order of the White Eagle"
 POL_found_order_of_the_white_eagle_desc:0 "Chivalric orders, like the Order of the Golden Fleece, are some of the most prestigious honours one can receive. The Commonwealth should have an order of its own, rewarded to both civilians and the military for their merits."
 POL_devolved_lithuania:0 "Devolve Lithuania"
 POL_devolved_lithuania_desc:0 "If we are to devolve the Commonwealth, it is perhaps wiser to divide it into smaller puppet states, rather than divided it between Poland and Lithuania."
-POL_autonomous_lithuania:0 "A dual union"
+POL_autonomous_lithuania:0 "A Dual Union"
 POL_autonomous_lithuania_desc:0 "The best way to solve the Commonwealth's problems would be to return to a stage where Poland and Lithuania were a personal union, rather than an integrated state."
-POL_intermarium_alliance:0 "Toward Independence: Intermarium Alliance"
-POL_intermarium_alliance_desc:0 "A house divided cannot stand! But a united alliance, surely should be able to kick ass!"
+POL_intermarium_alliance:0 "Intermarium Alliance"
+POL_intermarium_alliance_desc:0 "A house divided cannot stand! But a united alliance will be able to destroy our enemies with ease."
 POL_the_close_union:0 "A Decentralized Union"
 POL_the_close_union_desc:0 "We should squeeze our vassals as tightly as possible, to gain maximum benefit."
 POL_take_back_control:0 "Take Back Control"
@@ -566,8 +566,7 @@ poland.38.d:0 "The kingdom of Sweden has wisely agreed to our offer to exchange 
  poland.52.t:0 "Forced Peace with the Zaporozhian Cossacks"
  poland.52.d:0 "After they had overrun and struck deep into our country, they had forced an immediate peace treaty which tormented the moral and spirit of the polish people."
 
-
- # Flags
+ # Flags:
  POL_noble_coup:0 "The Nobility has couped the nation"
  POL_august_dead:0 "August has died"
  POL_august_abdicates:0 "August has abdicated"
@@ -580,7 +579,7 @@ poland.38.d:0 "The kingdom of Sweden has wisely agreed to our offer to exchange 
  # Decisions:
  POL_reform_nation:0 "Abolish the Sejm"
  POL_foreign_influence:0 "Foreign Influence in the Commonwealth"
- POL_foreign_influence_desc:0 "Poland has been the victim of internal instability due to the meddling of surrounding powers who seek to gain increasing influence in the Polish nation. The more influence a nation has, the more likely it is to dominate the Commonwealth both politically and militarily. The greater foreign influence gets, the worse the effects will be on the Polish State.\n\n§YInfluence§! of the [SOV.GetFlag]§YRussians§!: [ROOT.GetInfluenceSOV]\n\n§YInfluence§! of the [AUS.GetFlag]§YAustrians§!: [ROOT.GetInfluenceAUS] \n\n§YInfluence§! of the [SWE.GetFlag]§YSwedes§!: [ROOT.GetInfluenceSWE] \n\n§YInfluence§! of the [PRS.GetFlag]§YPrussians§!: [ROOT.GetInfluencePRS] \n"
+ POL_foreign_influence_desc:0 "Poland has been the victim of internal instability due to the meddling of surrounding powers who seek to gain increasing influence in the Polish nation. The more influence a nation has, the more likely it is to dominate the Commonwealth both politically and militarily. The greater foreign influence gets, the worse the effects will be on the Polish State.\n\n§YInfluence§! of the [SOV.GetFlag]§YRussians§!: [ROOT.GetInfluenceSOV]\n\n§YInfluence§! of the [AUS.GetFlag]§YAustrians§!: [ROOT.GetInfluenceAUS] \n\n§YInfluence§! of the [SWE.GetFlag]§YSwedes§!: [ROOT.GetInfluenceSWE] \n\n§YInfluence§! of the [PRS.GetFlag]§YPrussians§!: [ROOT.GetInfluencePRS]\n"
  POL_crack_down_on_foreign_influence:0 "Crack Down on Foreign Influence"
  POL_infiltrate_poland:0 "Infiltrate [POL.GetName]"
 

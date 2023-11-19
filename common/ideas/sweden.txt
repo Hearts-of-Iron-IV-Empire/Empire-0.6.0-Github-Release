@@ -207,6 +207,8 @@ ideas = {
 				always = no
 			}
 
+			picture = generic_intel_bonus
+
 			targeted_modifier = {
 				tag = SOV
 				attack_bonus_against = 0.1
@@ -218,6 +220,8 @@ ideas = {
 			allowed = {
 				always = no
 			}
+
+			picture = generic_infantry_bonus
 
 			removal_cost = -1
 
@@ -231,7 +235,7 @@ ideas = {
 			picture = TUR_etatism_bonus
 
 			allowed = {
-			 always = no
+			 	always = no
 			}
 
 			removal_cost = -1
@@ -457,7 +461,7 @@ ideas = {
 		SWE_on_the_defensive = {
 
 			allowed = {
-			 always = no
+			 	always = no
 			}
 
 			picture = YUG_federal_defense_council
@@ -471,7 +475,7 @@ ideas = {
 		SWE_partisan_resistance = {
 
 			allowed = {
-			 always = no
+			 	always = no
 			}
 
 			removal_cost = -1
@@ -523,7 +527,7 @@ ideas = {
 				always = no
 			}
 
-			picture = air_support_focus
+			picture = monarchy
 
 			removal_cost = -1
 			modifier = {

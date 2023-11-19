@@ -538,6 +538,11 @@ technologies = {
 	}
 
 	tech_special_forces = {
+
+		enable_subunits = {
+			grenadiers
+		}
+
 		category_special_forces = {
 			acclimatization_hot_climate_gain_factor = 0.05
 			acclimatization_cold_climate_gain_factor = 0.05
@@ -561,7 +566,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1701
+		start_year = 1699
 		folder = {
 			name = infantry_folder
 			position = { x = 5 y = @1701 }

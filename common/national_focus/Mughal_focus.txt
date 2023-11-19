@@ -2611,7 +2611,7 @@ focus_tree = {
 
 	focus = {
 		id = MUG_develop_the_jungle
-		icon = GFX_focus_tropical_wood
+		icon = GFX_generic_man_working
 		x = 0
 		y = 1
 		prerequisite = { focus = MUG_halt_further_conquests }
@@ -6073,23 +6073,19 @@ focus_tree = {
 		prerequisite = { focus = MUG_infantry_focus }
 		relative_position_id = MUG_infantry_focus
 
-		available = {
-		}
-
-		bypass = {
-		}
-
-		cost = 8
+		cost = 10
 		
 		completion_reward = {
 			add_tech_bonus = {
+				name = mountaineers_bonus
 				bonus = 0.75
-				uses = 2
+				uses = 1
 				category = mountaineers_tech
 			}
 			add_tech_bonus = {
+				name = marine_bonus
 				bonus = 0.75
-				uses = 2
+				uses = 1
 				category = marine_tech
 			}
 		}
@@ -6162,12 +6158,6 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = MUG_the_flintlock_musket }
 		relative_position_id = MUG_the_flintlock_musket
-
-		available = {
-		}
-
-		bypass = {
-		}
 
 		cost = 8.6
 		

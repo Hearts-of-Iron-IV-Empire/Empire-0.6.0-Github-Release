@@ -706,17 +706,16 @@ focus = {
 	focus = {
 		id = eng_restore_the_old_pretender
 		icon = GFX_focus_restore_aulde_pretender
-		prerequisite = { focus = eng_seek_french_support }
-		relative_position_id = eng_go_with_the_tories
 		x = 0
 		y = 4
-		cost = 10
+		prerequisite = { focus = eng_seek_french_support }
+		relative_position_id = eng_go_with_the_tories
 
 		available = {
-				neutrality > 0.5
+			neutrality > 0.5
 		}
 
-		available_if_capitulated = yes
+		cost = 10
 
 		completion_reward = {
 			news_event = mod.16
@@ -3164,7 +3163,7 @@ focus = {
 	}
 ###
 
-focus = {
+	focus = {
 		id = eng_quaker_act
 		icon = GFX_focus_hol_the_foundations_of_defense
 		prerequisite = {focus = eng_appease_parliament }
@@ -3417,27 +3416,26 @@ focus = {
 focus = {
 		id = eng_gather_war_support
 		icon = GFX_officer
-		prerequisite = { focus = eng_spanish_succession_crisis}
 		x = -1
 		y = 1
-		cost = 5
 		relative_position_id = eng_spanish_succession_crisis
+		prerequisite = { focus = eng_spanish_succession_crisis }
 
-		ai_will_do = {
-			factor = 20
-		}
-
-		available_if_capitulated = yes
+		cost = 5
 
 		completion_reward = {
 			country_event = england.15
 		}
+
+		ai_will_do = {
+			factor = 20
+		}
 	}
 
 	focus = {
-		id = eng_no_new_habsburg_hegemony
+		id = eng_prevent_habsburg_hegemony
 		icon = GFX_goal_generic_trade
-		prerequisite = { focus = eng_gather_war_support}
+		prerequisite = { focus = eng_gather_war_support }
 		mutually_exclusive = { focus = eng_embargo_france }
 		x = -2
 		y = 1
@@ -3468,11 +3466,11 @@ focus = {
 		}
 	}
 
-focus = {
+	focus = {
 		id = eng_embargo_france
 		icon = GFX_goal_generic_trade
 		prerequisite = { focus = eng_gather_war_support}
-		mutually_exclusive = { focus = eng_no_new_habsburg_hegemony }
+		mutually_exclusive = { focus = eng_prevent_habsburg_hegemony }
 		x = 2
 		y = 1
 		cost = 5
@@ -3500,13 +3498,7 @@ focus = {
 		}
 	}
 
-##
-
-
-
-##
-
-focus = {
+	focus = {
 		id = eng_mobilise
 		icon = GFX_soldiers_marching
 		prerequisite = { focus = eng_spanish_succession_crisis}
@@ -3525,14 +3517,11 @@ focus = {
 	focus = {
 		id = eng_press_hanoverian_succession
 		icon = GFX_focus_generic_royal_wedding
-		prerequisite = { focus = eng_mobilise}
-		prerequisite = { focus = eng_volunteer_expedition}
 		x = 4
 		y = 2
-		cost = 5
+		prerequisite = { focus = eng_mobilise }
+		prerequisite = { focus = eng_volunteer_expedition }
 		relative_position_id = eng_spanish_succession_crisis
-
-		available_if_capitulated = yes
 
 		available = {
 			has_country_leader = {
@@ -3540,6 +3529,8 @@ focus = {
 			    ruling_only = yes
 			}
 		}
+
+		cost = 5
 
 		completion_reward = {
 			news_event = mod.17
@@ -3550,14 +3541,11 @@ focus = {
 
 	focus = {
 		id = eng_contain_sweden
-		icon = GFX_goal_generic_more_territorial_claims
-		prerequisite = { focus = eng_press_hanoverian_succession}
+		icon = GFX_goal_contain_sweden
 		x = 4
 		y = 3
-		cost = 5
 		relative_position_id = eng_spanish_succession_crisis
-
-		available_if_capitulated = yes
+		prerequisite = { focus = eng_press_hanoverian_succession }
 
 		bypass = {
 			OR = { 
@@ -3565,6 +3553,8 @@ focus = {
 				HAN = { owns_state = 794 }
 			}
 		}
+
+		cost = 5
 
 		completion_reward = {
 			create_wargoal = {
@@ -3582,11 +3572,11 @@ focus = {
 focus = {
 	id = eng_anglo_frech_military_cooperation
 	icon = GFX_goal_anglo_french_military_pact
-	prerequisite = { focus = eng_no_new_habsburg_hegemony }
+	prerequisite = { focus = eng_prevent_habsburg_hegemony }
 	x = 0
 	y = 1
 	cost = 5
-	relative_position_id = eng_no_new_habsburg_hegemony
+	relative_position_id = eng_prevent_habsburg_hegemony
 
 	available_if_capitulated = yes
 
@@ -3716,7 +3706,7 @@ focus = {
 focus = {
 		id = eng_seek_dutch_support
 		icon = GFX_focus_hol_oranje_boven
-		prerequisite = { focus = eng_embargo_france focus = eng_no_new_habsburg_hegemony }
+		prerequisite = { focus = eng_embargo_france focus = eng_prevent_habsburg_hegemony }
 		x = -2
 		y = 1
 		cost = 5

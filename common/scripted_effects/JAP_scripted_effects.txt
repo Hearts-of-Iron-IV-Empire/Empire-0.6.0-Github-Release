@@ -1,0 +1,65 @@
+JAP_increase_foreign_influence = {
+	if = {
+		limit = {
+			original_tag = HOL
+		}
+		add_to_variable = {
+			var = HOL_influence
+			value = 5
+		}
+		clamp_variable = { var = ENG_influence min = 0 max = 90 }
+	}
+	if = {
+		limit = {
+			original_tag = POR
+		}
+		add_to_variable = {
+			var = POR_influence
+			value = 5
+		}
+		clamp_variable = { var = POR_influence min = 0 max = 90 }
+	}
+	if = {
+		limit = {
+			original_tag = SPR
+		}
+		add_to_variable = {
+			var = SPR_influence
+			value = 5
+		}
+		clamp_variable = { var = SPR_influence min = 0 max = 90 }
+	}
+}
+
+JAP_decrease_foreign_influence = {
+	if = {
+		limit = {
+			original_tag = ENG
+		}
+		add_to_variable = {
+			var = HOL_influence
+			value = -5
+		}
+		clamp_variable = { var = ENG_influence min = 0 max = 90 }
+	}
+	if = {
+		limit = {
+			original_tag = POR
+		}
+		add_to_variable = {
+			var = POR_influence
+			value = -5
+		}
+		clamp_variable = { var = POR_influence min = 0 max = 90 }
+	}
+	if = {
+		limit = {
+			original_tag = SPR
+		}
+		add_to_variable = {
+			var = SPR_influence
+			value = -5
+		}
+		clamp_variable = { var = SPR_influence min = 0 max = 90 }
+	}
+}

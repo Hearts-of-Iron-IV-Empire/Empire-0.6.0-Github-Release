@@ -80,9 +80,13 @@ PPR = {
 	color = rgb { 250 141 141 }
 	color_ui = rgb { 250 141 141 }
 }
-POL = {
-	color = rgb { 197 92 106 }
-	color_ui = rgb { 255 120 138 }
+#POL = {
+#	color = rgb { 197 92 106 }
+#	color_ui = rgb { 255 120 138 }
+#}
+POL ={
+	color = rgb { 235 0 26 }
+	color_ui = rgb { 204 44 36 }
 }
 PRS_TEU = {
     color = rgb { 63 63 63 }

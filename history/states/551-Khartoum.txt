@@ -1,26 +1,24 @@
-
 state={
 	id=551
 	name="STATE_551"
 
 	history={
 		owner = SUD
+		add_core_of = SUD
 		buildings = {
 			infrastructure = 1
-
 		}
-		add_core_of = SUD
-		victory_points = {
-			12806 1 
+		victory_points = { # Arbaji
+			12806 5
 		}
-		victory_points = {
+		victory_points = { # Shendi
 			12881 3 
 		}
-		victory_points = {
+		victory_points = { # Dongola
 			4963 5 
 		}
-		victory_points = {
-			2046 10 
+		victory_points = { # Berber
+			2046 20
 		}
 
 	}

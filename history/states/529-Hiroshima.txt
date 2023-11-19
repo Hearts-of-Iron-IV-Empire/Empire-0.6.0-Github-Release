@@ -1,32 +1,23 @@
-
 state={
 	id=529
 	name="STATE_529" # Chugoku
-	manpower = 2641000
+	manpower = 3214000
 	state_category = large_city
 
 	history={
 		owner = JAP
 		add_core_of = JAP
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			industrial_complex = 2
 			1092 = {
-				naval_base = 10
+				naval_base = 4
 			}
 		}
 		
 		victory_points = {
 			1092 30
 		}
-		1939.1.1 = {
-			buildings = {
-				dockyard = 3
-				arms_factory = 3
-				industrial_complex = 3
-			}
-		}
-
 	}
 
 	provinces={

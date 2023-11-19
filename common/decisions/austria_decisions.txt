@@ -10,12 +10,12 @@ AUS_reform_the_empire = {
         target_trigger = {
             FROM = {
                 exists = yes
-                not = { has_war_with = ROOT }
+                NOT = { has_war_with = ROOT }
                 has_country_flag = HRE_imperial_subject
             }
         }
-       cost = 0
-		is_good = yes
+        cost = 0
+		#is_good = yes
 		fire_only_once = no
 		days_remove = 70
 		days_re_enable = 140
@@ -25,12 +25,12 @@ AUS_reform_the_empire = {
 			FROM = { country_event = austria.18 }
 			FROM = {
 				add_opinion_modifier = {
-			    target = AUS
-			    modifier = large_increase
+                    target = AUS
+                    modifier = large_increase
 				}
 			}
 		}
-    }  
+    } 
 
     AUS_stabilize_FROM = {
         available = {
@@ -48,7 +48,7 @@ AUS_reform_the_empire = {
                 has_country_flag = HRE_imperial_subject
             }
         }
-       	is_good = yes
+       	#is_good = yes
 		fire_only_once = no
 		days_remove = 70
 		days_re_enable = 140
@@ -61,12 +61,12 @@ AUS_reform_the_empire = {
 			FROM = { country_event = austria.19 }
 			FROM = {
 				add_opinion_modifier = {
-			    target = AUS
-			    modifier = large_increase
+                    target = AUS
+                    modifier = large_increase
 				}
 			}
 		}
-    }   
+    }
 }
 
 AUS_intervention_mandate = {
@@ -75,18 +75,18 @@ AUS_intervention_mandate = {
         }
         visible = {
             has_completed_focus = AUS_ewiger_landfriede
-            not = { has_wargoal_against = FROM }
-            not = { has_war_with = FROM }
+            NOT = { has_wargoal_against = FROM }
+            NOT = { has_war_with = FROM }
             FROM = {
                 exists = yes
-                not = { is_subject_of = ROOT }
+                NOT = { is_subject_of = ROOT }
             }
         }
         target_trigger = {
             FROM = {
                 exists = yes
-                not = { has_war_with = ROOT }
                 NOT = { 
+                    has_war_with = ROOT 
                     is_subject_of = ROOT
                 }
                 
@@ -94,6 +94,7 @@ AUS_intervention_mandate = {
                     has_country_flag = HRE_imperial_subject 
                     has_defensive_war_with = FROM
                 }
+
                 has_country_flag = HRE_imperial_subject
             }
         }

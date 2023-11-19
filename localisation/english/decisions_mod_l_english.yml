@@ -1,7 +1,6 @@
 ﻿l_english:
  DECISIONVIEW_TITLE:0 "Events and Decisions"
  POPUP_NEWS:0 "News Popup"
- POPUP_EVENTS:0 "Event Popup"
  CATEGORY_COLLAPSE_DESC:0 "§GClick§! to collapse"
  CATEGORY_EXPAND_DESC:0 "§GClick§! to expand"
  DECISION_COST_DESC:0 "It costs £pol_power $VAL|H0$ to take the decision"

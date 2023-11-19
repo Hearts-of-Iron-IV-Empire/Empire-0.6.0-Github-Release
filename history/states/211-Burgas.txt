@@ -16,17 +16,13 @@ state={
 			industrial_complex = 2
 			9783 = {
 				naval_base = 3
-
 			}
 			9919 = {
 				naval_base = 1
-
 			}
-
 		}
 		add_core_of = BUL
-		add_core_of = TUR
-
+		#add_core_of = TUR
 	}
 
 	provinces={
@@ -35,5 +31,4 @@ state={
 	manpower=375499
 	buildings_max_level_factor=1.000
 	state_category=town
-	local_supplies=0.000
 }

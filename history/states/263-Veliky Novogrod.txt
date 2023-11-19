@@ -2,13 +2,9 @@
 state={
 	id=263
 	name="STATE_263"
-	manpower = 292577
-	
 	resources={
-		steel=5
+		steel=5.000
 	}
-
-	state_category = town
 
 	history={
 		owner = SOV
@@ -17,12 +13,18 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
+
 		}
 		add_core_of = SOV
 		add_core_of = NOV
+
 	}
 
 	provinces={
-		8 71 110 117 320 3089 6086 6154 6197 6225 9212 9234 11032 11072 11109 11139 11191 
+		8 71 95 110 117 320 3053 3089 3110 3120 6035 6086 6139 6154 6197 6225 9098 9212 9234 9319 11032 11072 11109 11139 11191 11304 
 	}
+	manpower=292577
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
 }

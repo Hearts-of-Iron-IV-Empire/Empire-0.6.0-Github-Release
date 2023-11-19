@@ -140,11 +140,12 @@ bookmarks = {
 			ideas = {
 				TUR_sick_man_of_europe_1
 				TUR_janissary_loyalty_3
+				great_turkish_war
 			}
 			focuses = {
 				TUR_dawn_of_the_tulip_period
-				TUR_proclaim_islamic_state
-				TUR_reinforce_devshirme
+				TUR_islam_is_war
+				TUR_guided_by_janissaries
 			}
 		}
 
@@ -327,8 +328,8 @@ bookmarks = {
 			history = ""
 			ideology = neutrality
 		}
-		
-        "ZAP"={
+
+		"ZAP"={
 			minor = yes
 			history = "ZAP_GATHERING_STORM_DESC"
 			ideology = democratic
