@@ -8,11 +8,11 @@ state={
 		owner = MEX
 		add_core_of = MEX
 		add_core_of = FLO
-		buildings = {
-			infrastructure = 1
-		}
 		victory_points = {
 			1843 5 
+		}
+		buildings = {
+			infrastructure = 1
 		}
 		1765.1.1 = {
 			owner = FLO

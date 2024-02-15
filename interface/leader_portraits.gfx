@@ -2,6 +2,25 @@ spriteTypes = {
 
 	########## MOD Leaders ############
 	
+	### Montenegro ###
+
+	spriteType = {
+		name = "GFX_Danilo_I"
+		textureFile = "gfx/leaders/MNT/Danilo_I.dds"
+	}
+
+	### Ethiopia ###
+
+	spriteType = {
+		name = "GFX_random_african_fellow"
+		textureFile = "gfx/leaders/ETH/ethiopia_leader.dds"
+	}
+
+	spriteType = { # Using this one for Iyasu I
+		name = "GFX_Iyasu_I"
+		textureFile = "gfx/leaders/ETH/Iyasu_I.dds"
+	}
+
 	### Qing ###
 
 	spriteType = {

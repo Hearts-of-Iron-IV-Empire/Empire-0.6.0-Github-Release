@@ -484,8 +484,8 @@ spriteTypes = {
 	}
 
 	SpriteType = { 
-		name = "GFX_OTT_dawn_of_the_Tulip_Period"
-		texturefile = "gfx/interface/goals/OTT_Dawn_Of_The_Tulip_Period.dds"
+		name = "GFX_goal_dawn_of_the_tulip_period"
+		texturefile = "gfx/interface/goals/goal_dawn_of_the_tulip_period.dds"
 	}
 
 	SpriteType = { 
@@ -660,177 +660,220 @@ spriteTypes = {
 		name = "GFX_ripped_flag_sweden"
 		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_into_europe"
+		texturefile = "gfx/interface/goals/goal_into_europe.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_foothold_in_asia"
+		texturefile = "gfx/interface/goals/goal_foothold_in_asia.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_ottoman_colonisation"
+		texturefile = "gfx/interface/goals/goal_ottoman_colonisation.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_janissary_icon"
+		texturefile = "gfx/interface/goals/goal_janissary_icon.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_fate_of_persia"
+		texturefile = "gfx/interface/goals/goal_fate_of_persia.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_restructure_military"
+		texturefile = "gfx/interface/goals/restructure_military.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_target_maghreb"
+		texturefile = "gfx/interface/goals/target_maghreb.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_pacify_tunis"
+		texturefile = "gfx/interface/goals/goal_pacify_tunis.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_support_algiers"
+		texturefile = "gfx/interface/goals/goal_support_algiers.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_support_tunisia"
+		texturefile = "gfx/interface/goals/goal_support_tunisia.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_look_toward_northern_germany"
+		texturefile = "gfx/interface/goals/goal_look_toward_northern_germany.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_betray_spain"
+		texturefile = "gfx/interface/goals/betray_spain.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_austria_burning"
+		texturefile = "gfx/interface/goals/austria_burning.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_attack_england2"
+		texturefile = "gfx/interface/goals/attack_england2.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_generic_flag_burning_funj"
+		texturefile = "gfx/interface/goals/generic_flag_burning_funj.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_men_marching_template_russia"
+		texturefile = "gfx/interface/goals/men_marching_template_russia.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_victory_at_narva"
+		texturefile = "gfx/interface/goals/goal_victory_at_narva.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_step_on_flag_ethiopia"
+		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_protect_harar"
+		texturefile = "gfx/interface/goals/goal_protect_harar.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_grand_vizier_seal"
+		texturefile = "gfx/interface/goals/goal_grand_vizier_seal.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_rumelia_eyalet"
+		texturefile = "gfx/interface/goals/rumelia_eyalet.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_betray_austria"
+		texturefile = "gfx/interface/goals/betray_austria.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_montenegro_burning"
+		texturefile = "gfx/interface/goals/montenegro_burning.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_attack_yemen"
+		texturefile = "gfx/interface/goals/attack_yemen.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_yemen_eyalet"
+		texturefile = "gfx/interface/goals/yemen_eyalet.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_extract_omani_tribute"
+		texturefile = "gfx/interface/goals/goal_extract_omani_tribute.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_annihilate_kabardia"
+		texturefile = "gfx/interface/goals/goal_annihilate_kabardia.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_break_caucasus"
+		texturefile = "gfx/interface/goals/goal_break_caucasus.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_circassia_burning"
+		texturefile = "gfx/interface/goals/circassia_burning.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_arabia_diplomacy"
+		texturefile = "gfx/interface/goals/goal_arabia_diplomacy.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_asia_diplomacy"
+		texturefile = "gfx/interface/goals/goal_asia_diplomacy.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_africa_diplomacy"
+		texturefile = "gfx/interface/goals/goal_africa_diplomacy.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_retake_basra"
+		texturefile = "gfx/interface/goals/goal_retake_basra.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_kill_persia"
+		texturefile = "gfx/interface/goals/goal_kill_persia.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_horse_archer"
+		texturefile = "gfx/interface/goals/goal_horse_archer.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_soldiers_marching_ottoman"
+		texturefile = "gfx/interface/goals/soldiers_marching_ottoman.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_persia_diplomacy"
+		texturefile = "gfx/interface/goals/goal_persia_diplomacy.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_caucasus_diplomacy"
+		texturefile = "gfx/interface/goals/goal_caucasus_diplomacy.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_maghreb_diplomacy"
+		texturefile = "gfx/interface/goals/goal_maghreb_diplomacy.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_yurt_icon"
+		texturefile = "gfx/interface/goals/yurt_icon.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_attack_austria2"
+		texturefile = "gfx/interface/goals/attack_austria2.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_ottoman_empire_flag_4"
+		texturefile = "gfx/interface/goals/ottoman_empire_flag_4.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_sultan_hosyen_icon"
+		texturefile = "gfx/interface/goals/sultan_hosyen_icon.dds"
 	}
 
 	SpriteType = {

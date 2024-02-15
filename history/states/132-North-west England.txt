@@ -1,35 +1,28 @@
 state= {
 	id=132
 	name="STATE_132" # Lancashire
-	manpower = 870454
+	manpower = 450000
 	
-	state_category = metropolis
+	state_category = large_town
 	
 	resources={
-		steel=31 # was: 56
+		steel=8 # was: 21
 		aluminium=2 # was: 4
 	}
 
 	history= {
 		owner = ENG
+		add_core_of = ENG
 		victory_points = {
 			3205 5 
 		}
-		
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
-			dockyard = 3
+			dockyard = 1
 			6384 = {
-				naval_base = 5
-			}
-		}
-		add_core_of = ENG
-		1939.1.1 = {
-			buildings = {
-				dockyard = 4
-				industrial_complex = 2
+				naval_base = 3
 			}
 		}
 	}

@@ -1,8 +1,8 @@
 set_country_flag = HRE_imperial_subject
 
-set_research_slots = 3
+set_research_slots = 2
 capital = 886
-load_oob = Imperial_army
+load_oob = "Imperial_army"
 
 # Starting tech
 set_technology = {
@@ -15,8 +15,10 @@ set_technology = {
 }
 
 add_ideas = {
-	catholic
 	GER_imperial_free_city
+	
+	# Laws and Religion
+	catholic
 }
 
 give_military_access = AUS

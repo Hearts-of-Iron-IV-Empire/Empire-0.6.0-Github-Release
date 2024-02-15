@@ -8,7 +8,7 @@ state={
 
 	history={
 		owner = SOV
-		victory_points = {
+		victory_points = { # Tyumen
 			4824 1
 		}
 		buildings = {

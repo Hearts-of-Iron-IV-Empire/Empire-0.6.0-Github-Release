@@ -9,12 +9,9 @@
  PAP_Francesco_Maria_de_Medici:0 "Innocent XIII"
  PAP_Galeazzo_Marescotti:0 "Urban XIII"
 
-
-
-
-
  # Ideas
  PAP_the_holy_state:0 "The Holy See"
  PAP_volunteer_army:0 "Reliance On Mercenaries"
+ PAP_volunteer_army_desc:0 "The Papal States does not have a centralized standing army, and as such relies on mercenaries to fight its wars."
  PAP_decreasing_influence:0 "Waning Influence"
  

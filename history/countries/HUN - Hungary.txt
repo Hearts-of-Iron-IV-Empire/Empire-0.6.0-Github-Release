@@ -2,14 +2,16 @@
 
 oob = "HUN_revolt"
 
-set_research_slots = 3
-set_stability = 0.7
-set_war_support = 0.6
+set_research_slots = 2
+set_stability = 0.5
+set_war_support = 0.8
 
 add_ideas = {
+	HUN_rakoczis_rebellion
+	
+	# Laws and Religion
 	catholic
 	kingdom
-	HUN_rakoczis_rebellion
 	limited_exports
 	war_economy
 	extensive_conscription

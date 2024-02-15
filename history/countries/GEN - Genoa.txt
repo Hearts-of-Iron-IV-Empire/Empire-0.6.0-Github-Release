@@ -2,7 +2,7 @@
 
 oob = "GEN_1936"
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {
@@ -14,9 +14,11 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
-set_convoys = 0
+set_convoys = 100
 
 add_ideas = {
+
+	# Laws and Religion
 	catholic
 }
 

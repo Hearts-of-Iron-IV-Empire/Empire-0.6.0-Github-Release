@@ -220,77 +220,91 @@ units = {
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 11422
+		location = 3399
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 486
+		location = 588
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Cossack Regiment"
-		location = 3466
+		location = 429
 		division_template = "Cossack Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Cossack Regiment"
-		location = 3466
+		location = 429
 		division_template = "Cossack Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 6474
+		location = 6420
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 6493
+		location = 3779
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 9688
+		division_template = "Regular Regiment"
+		start_experience_factor = 0.3
+		start_equipment_factor = 0.7
+	}
+	division= {
+		name = "Regular Regiment"
+		location = 11696
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 9430
+		location = 11559
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 9430
+		location = 11559
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 11418
+		location = 585
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.5
 	}
 	division= {
 		name = "Cossack Regiment"
-		location = 11403
+		location = 426
 		division_template = "Cossack Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.6
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 11403
+		location = 426
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -304,21 +318,21 @@ units = {
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 3573
+		location = 574
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 737
+		location = 11683
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Regular Regiment"
-		location = 568
+		location = 3755
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
@@ -342,35 +356,28 @@ units = {
 
 	division= {
 		name = "Regular Regiment"
-		location = 9417
-		division_template = "Regular Regiment"
-		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
-	}
-	division= {
-		name = "Regular Regiment"
-		location = 9417
+		location = 9744
 		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
-		name = "Cossack Regiment"
-		location = 9417
-		division_template = "Cossack Regiment"
+		name = "Regular Regiment"
+		location = 9744
+		division_template = "Regular Regiment"
 		start_experience_factor = 0.3
-		start_equipment_factor = 0.6
+		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 3777
+		location = 9417
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7
 	}
 	division= {
 		name = "Conscript Regiment"
-		location = 3777
+		location = 9417
 		division_template = "Conscript Regiment"
 		start_experience_factor = 0.3
 		start_equipment_factor = 0.7

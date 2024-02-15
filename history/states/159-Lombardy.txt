@@ -1,27 +1,24 @@
-
 state={
 	id=159
 	name="STATE_159"
 
 	history={
 		owner = LOM
-		victory_points = {
-			3780 30
+		add_core_of = LOM
+		victory_points = { # Milan
+			3780 50
 		}
-		victory_points = {
+		victory_points = { # Pavia
 			9584 1 
 		}
-		victory_points = {
-			11726 1 
+		victory_points = { # Como
+			11726 10
 		}
 		buildings = {
 			infrastructure = 4
 			arms_factory = 3
 			industrial_complex = 4
-
 		}
-		add_core_of = LOM
-
 	}
 
 	provinces={

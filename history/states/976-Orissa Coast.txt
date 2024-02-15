@@ -11,7 +11,7 @@ state={
 		victory_points = { # Darul Jihad
 			8087 20 
 		}
-		victory_points = {
+		victory_points = { # Vishakapatnam
 			10255 10 
 		}
 		buildings = {
@@ -22,6 +22,9 @@ state={
 			}
 			8087 = {
 				bunker = 3
+			}
+			10255 = {
+				naval_base = 6
 			}
 		}
 		1730.5.1 = {

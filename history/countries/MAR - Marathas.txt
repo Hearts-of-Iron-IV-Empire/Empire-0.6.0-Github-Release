@@ -2,7 +2,7 @@ capital = 960
 
 oob = "MAR_1699"
 
-set_stability = 0.7
+set_stability = 0.6
 set_war_support = 0.8
 
 1700.03.03 = {
@@ -37,7 +37,7 @@ add_ideas = {
 	MAR_traitors_everywhere
 	MAR_maratha_army
 
-	#Laws
+	# Laws and Religion
 	partial_economic_mobilisation
 	extensive_conscription
 }

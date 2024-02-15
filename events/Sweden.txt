@@ -4,14 +4,13 @@
 
 add_namespace = sweden
 
-#peace with anti-swedish pact
+# Peace with anti-swedish pact
 
 country_event = {
 	id = sweden.0
 	title = sweden.0.t
 	desc = sweden.0.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -24,7 +23,6 @@ country_event = {
 	title = sweden.1.t
 	desc = sweden.1.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { #take historical provinces
@@ -56,10 +54,10 @@ country_event = {
 		add_political_power = -100
 		ai_chance = {
 			factor = 1
-			modifier = {
-				factor = 75
-				has_idea = DEN_russo_danish_pact
-			}
+			#modifier = {
+				#factor = 75
+				#has_idea = DEN_russo_danish_pact
+			#}
 		}
 		SWE = {
 			country_event = {
@@ -77,7 +75,6 @@ country_event = {
 	title = sweden.2.t
 	desc = sweden.2.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -104,13 +101,13 @@ country_event = {
 		}
 		ai_chance = {
 			factor = 75
-			modifier = {
-				has_country_leader = {
-				    name = "Charles XII"
-				    ruling_only = yes
-				}
-				factor = 0
-			}
+			#modifier = {
+				#has_country_leader = {
+				   # name = "Charles XII"
+				   # ruling_only = yes
+				#}
+				#factor = 0
+			#}
 		}
 		SOV = {
 			country_event = {
@@ -176,15 +173,16 @@ country_event = {
 			}
 			DEN = { transfer_state = 794 }
 		}
+
 		ai_chance = {
 			factor = 40
-			modifier = {
-				has_country_leader = {
-				    name = "Charles XII"
-				    ruling_only = yes
-				}
-				factor = 0
-			}
+			#modifier = {
+				#has_country_leader = {
+				    #name = "Charles XII"
+				    #ruling_only = yes
+				#}
+				#factor = 0
+			#}
 		}
 		SOV = {
 			country_event = {
@@ -219,7 +217,6 @@ country_event = {
 	title = sweden.4.t
 	desc = sweden.4.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -233,7 +230,6 @@ country_event = {
 	title = sweden.5.t
 	desc = sweden.5.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -241,15 +237,15 @@ country_event = {
 	}
 }
 
+# Sweden asks Denmark for an alliance
 country_event = {
 	id = sweden.6
 	title = sweden.6.t
 	desc = sweden.6.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
-	option = { 
+	option = { # Yea sure
 		name = sweden.6.a
 		remove_opinion_modifier = {
 		    target = SWE
@@ -280,12 +276,12 @@ country_event = {
 	}
 }
 
+# Denmark accepts
 country_event = {
 	id = sweden.7
 	title = sweden.7.t
 	desc = sweden.7.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -298,12 +294,12 @@ country_event = {
 	}
 }
 
+# Denmark Refuses
 country_event = {
 	id = sweden.8
 	title = sweden.8.t
 	desc = sweden.8.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -317,7 +313,6 @@ country_event = {
 	title = sweden.9.t
 	desc = sweden.9.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
@@ -534,154 +529,56 @@ country_event = {
 	title = sweden.131.t
 	desc = sweden.131.d
 
-	trigger = {
-		tag = SWE
-		has_war_with = SOV
-		SOV = { surrender_progress > 0.75 }
-	}
-
-	mean_time_to_happen = { days = 2}
+#	trigger = {
+#		tag = SWE
+#		has_war_with = SOV
+#		SOV = { surrender_progress > 0.5 }
+#		controls_province = 6380
+#		controls_province = 117
+#	}
 
 	fire_only_once = yes
 
-	option = { 
-		name = "Dethrone Peter and watch the chaos ensue."
-		SOV = { country_event = sweden.14 }
-		white_peace = SOV
-		unlock_national_focus = SWE_dismantle_russia
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
-		}
-	}
-
-	option = { 
-		name = "Dethrone Peter and set up a Novgorod Puppet."
-		SOV = { country_event = sweden.14 }
-		NOV = {
-			every_state = {
-				limit = { 
-					is_core_of = NOV
-					is_owned_by = SOV
-				}
-				NOV = { transfer_state = PREV }
-			}
-		}
-		puppet = NOV
-		white_peace = SOV
-		unlock_national_focus = SWE_dismantle_russia
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
-		}
-	}
-
-	option = { 
-		name = "Seize Karelia, Pskov, and Novgorod."
-		transfer_state = 209
-		transfer_state = 210 
-		transfer_state = 263
-		transfer_state = 244
-		transfer_state = 216
-		transfer_state = 215
-		transfer_state = 213
-		transfer_state = 722
-		SOV = { country_event = sweden.14 }
-		white_peace = SOV
-		unlock_national_focus = SWE_dismantle_russia
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
-		}
-	}
-
-	option = { 
-		name = "All of Russia belongs to Sweden!"
-		add_war_support = 0.05
-		SOV = { country_event = sweden.14 }
-		unlock_national_focus = SWE_dismantle_russia
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
-		}
-	}
-}
-
-#the fate of russia
-
-country_event = {
-	id = sweden.13
-	title = sweden.13.t
-	desc = sweden.13.d
-
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
-		name = "Dethrone Peter and watch the chaos ensue."
+		name = "Dominium Maris Baltici!"
+		add_stability = 0.05
 		SOV = { country_event = sweden.14 }
-		white_peace = SOV
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
+		SWE = { white_peace = SOV }
+		SWE = {
+			transfer_state = 209
+			transfer_state = 216
+			transfer_state = 215
+			transfer_state = 244
+			transfer_state = 213
 		}
-	}
-
-	option = { 
-		name = "Dethrone Peter and set up a Novgorod Puppet."
-		SOV = { country_event = sweden.14 }
 		NOV = {
-			every_state = {
-				limit = { 
-					is_core_of = NOV
-					is_owned_by = SOV
-				}
-				NOV = { transfer_state = PREV }
-			}
+			transfer_state = 210
+			transfer_state = 246
+			transfer_state = 247
+			transfer_state = 351
+			transfer_state = 214
+			transfer_state = 264
+			transfer_state = 263
+			transfer_state = 262
 		}
-		puppet = NOV
-		white_peace = SOV
+		SWE = {
+			puppet = NOV
+		}
 		if = {
 			limit = {
-				POL = { is_in_faction_with = SWE }
+				POL = { is_in_faction_with = SWE } 
+				POL = { NOT = { is_subject = yes } }
 			}
-			country_event = sweden.40
+			country_event = sweden.40 #Check wtf is this
 		}
 	}
 
 	option = { 
-		name = "Seize Karelia, Pskov, and Novgorod."
-		transfer_state = 209
-		transfer_state = 210 
-		transfer_state = 263
-		transfer_state = 244
-		transfer_state = 216
-		transfer_state = 215
-		transfer_state = 213
-		transfer_state = 722
-		SOV = { country_event = sweden.14 }
-		white_peace = SOV
-		if = {
-			limit = {
-				POL = { is_in_faction_with = SWE }
-			}
-			country_event = sweden.40
-		}
-	}
-
-	option = { 
-		name = "All of Russia belongs to Sweden!"
-		add_war_support = 0.05
+		name = "The Russian Bear must be completely crushed!"
+		add_war_support = -0.15
+		add_stability = -0.15
 		SOV = { country_event = sweden.14 }
 		if = {
 			limit = {
@@ -692,7 +589,7 @@ country_event = {
 	}
 }
 
-#the dethroning of Peter I
+# The dethroning of Peter I
 
 country_event = {
 	id = sweden.14
@@ -705,13 +602,10 @@ country_event = {
 	option = { 
 		name = "Disaster!"
 		kill_country_leader = yes
-		add_political_power = -300
+		add_political_power = -200
 		hidden_effect = {
-			country_event = {
-			    id = sweden.15
-			    days = 3
-			}
-		}
+			country_event = sweden.15			
+    	}
 		hidden_effect = {
 			news_event = {
 			    id = mod.25
@@ -732,33 +626,50 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "The end is nigh..."
+		name = "Hold the integrity of the Russian State!"
 		
 		add_stability = -0.30
 
 		if = {
 			limit = {
-		        NOT = { country_exists = NOV }
+				OR = {
+					NOT = { country_exists = BSK }
+					NOT = { has_country_flag = BASHKIR_REBELLION }
+				}  
 		    }
+			set_country_flag = RUS_bashkir_civil_war
 		    hidden_effect = {
-				country_event = {
-				    id = sweden.16
-				    days = 20
-				}
+				SOV = {
+					country_event = sweden.16
+				}		
 			}
 		}
-		hidden_effect = {
-			country_event = {
-			    id = sweden.18
-			    days = 30
+		else = {
+			release = BSK
+			SOV = {
+			country_event = sweden.19
 			}
+		}
+		if = {
+			limit = {
+				has_country_flag = BASHKIR_REBELLION
+				country_exists = BSK			
+			}
+			SOV = {
+			country_event = russia_new.21 
+			}
+		}
+        SOV = {
+		set_country_flag = RUS_civil_war
+		}
+		set_cosmetic_tag = RUS_muscovy
+		SOV = {
+	    country_event = sweden.22
 		}
 	}
 }
 
-#novgorod secedes
-
-country_event = {
+country_event = { #The Bashkirs Secede
 	id = sweden.16
 	title = sweden.16.t
 	desc = sweden.16.d
@@ -767,59 +678,78 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "This insurrection will be crushed swiftly!"
-		hidden_effect = {
-			country_event = {
-			    id = sweden.18
-			    days = 10
-			}
-		}
+		name = "These Damned Bashkirs..!"
 		if = {
-		    limit = {
-		        NOT = { country_exists = NOV }
-		    }
-		    release = NOV
-		    NOV = { 
-		    	declare_war_on = {
-				    target = SOV
-				    type = annex_everything
+			limit = {
+				OR = {
+					NOT = { has_country_flag = RUS_bashkir_civil_war }
+					NOT = { has_country_flag = BASHKIR_REBELLION }
 				}
-		    }
-		    transfer_units_fraction= {
-			    target = NOV
-			    size = 0.2
-			    stockpile_ratio = 0.2
-			    army_ratio = 0.2
-			    navy_ratio = 0.5
+			}
+			651 = { remove_core_of = SOV }
+			582 = { remove_core_of = SOV }
+			572 = { remove_core_of = SOV }
+			652 = { remove_core_of = SOV }
+			651 = { add_core_of = BSK }
+			582 = { add_core_of = BSK }
+			572 = { add_core_of = BSK }
+			652 = { add_Core_of = BSK }
+		}
+		release = BSK
+		BSK = { 
+			transfer_state = 652
+			transfer_state = 651
+			transfer_state = 582
+			transfer_state = 572
+		    division_template = {
+				name = "Bashkir Regiment"
+				priority = 1
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					cavalry = { x = 0 y = 2 }
+					cavalry = { x = 1 y = 0 }
+					cavalry = { x = 1 y = 1 }
+				}
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			random_owned_controlled_state = {
+				limit = { PREV = { has_full_control_of_state = PREV } }
+				create_unit = {
+					division = "name = \"1st Bashkir Regiment\" division_template = \"Bashkir Regiment\" start_experience_factor = 0.3" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"2nd Bashkir Regiment\" division_template = \"Bashkir Regiment\" start_experience_factor = 0.3" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"3rd Bashkir Regiment\" division_template = \"Bashkir Regiment\" start_experience_factor = 0.3" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"4th Bashkir Regiment\" division_template = \"Bashkir Regiment\" start_experience_factor = 0.3" 
+					owner = PREV
+				}
+				create_unit = {
+					division = "name = \"5th Bashkir Regiment\" division_template = \"Bashkir Regiment\" start_experience_factor = 0.3" 
+					owner = PREV
+				}
 			}
 		}
-		hidden_effect = {
-			news_event = {
-			    id = mod.26
-			    days = 1
+		SOV = {
+			declare_war_on = { # <-- This is copy and paste from the older russian focus tree, is this what we want?
+			target = BSK
+			type = take_claimed_state
 			}
-		} 
-		NOV = {
-			every_country = {
-		    	limit = { # some sanity checks
-		            original_tag = SOV
-		        }
-		        ROOT = {
-		        	declare_war_on = { # declare war on
-		                target = PREV # previous scope (random neighbor)
-		                type = annex_everything # standard wargoal
-		            }
-		        }
-		    }
-		}
-		set_cosmetic_tag = RUS_muscovy
-		hidden_effect = { load_focus_tree = Russian_princes_focus }
-	}
+		}	
+	} 
+	#hidden_effect = { load_focus_tree = Russian_princes_focus }
 }
 
-#loss of authority in the north + mongolia
-
-country_event = {
+country_event = { #Collapse of Tsarist Authority over the Steppes
 	id = sweden.18
 	title = sweden.18.t
 	desc = sweden.18.d
@@ -828,76 +758,142 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		hidden_effect = {
-			country_event = {
-			    id = sweden.19
-			    days = 10
+		name = "We cannot focus on the treasonous Cossacks for now..."
+		create_dynamic_country = {
+			original_tag = SOV	
+			set_cosmetic_tag = eastern_cossack
+			set_capital = { state = 217 }
+			transfer_state = 1030
+			transfer_state = 265
+			transfer_state = 245
+			transfer_state = 239
+			transfer_state = 238
+			transfer_state = 236
+			transfer_state = 217
+			hidden_effect = {
+				set_politics = {
+					ruling_party = aristocracy
+				}
+				set_popularities = {
+					aristocracy = 80
+					neutrality = 5
+					fascism = 5
+					communism = 5
+					democratic = 5
+				}
+				division_template = {
+					name = "Cossack Regiment"
+					priority = 1
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						cavalry = { x = 0 y = 2 }
+						cavalry = { x = 1 y = 0 }
+						cavalry = { x = 1 y = 1 }
+					}
+					support = {
+						engineer = { x = 0 y = 0 }
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { PREV = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"1st Cossack Regiment\" division_template = \"Cossack Regiment\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"2nd Cossack Regiment\" division_template = \"Cossack Regiment\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"3rd Cossack Regiment\" division_template = \"Cossack Regiment\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"4th Cossack Regiment\" division_template = \"Cossack Regiment\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+					create_unit = {
+						division = "name = \"5th Cossack Regiment\" division_template = \"Cossack Regiment\" start_experience_factor = 0.3" 
+						owner = PREV
+					}
+				}
 			}
 		}
-		name = "Oh well..."
 		if = {
 			limit = {
-		        NOT = { country_exists = KHL }
+				CRI = {
+					NOT = {
+						1029 = {
+							is_owned_by = PREV
+						}
+					}	
+				}
+			}
+			CRI = {
+				transfer_state = 1029
+			}
+		}
+		if = {
+			limit = {
+				TUR = {
+					NOT = {
+						218 = {
+							is_owned_by = PREV
+						}
+					}
+				}
+			}
+			TUR = {
+				transfer_state = 218
+			}
+		}	
+		if = {
+			limit = {
+		        ZAP = { exists = no }
+			}
+		    SOV = {
+				release = ZAP
+			}
+		}
+		if = {
+			limit = {
+		       ZAP = { is_subject_of = SOV }
 		    }
-		    release = KHL
+			SOV = {
+				end_puppet = ZAP
+			}		    
+		    ZAP = {
+				leave_faction = yes
+		    }
+		}
+		ZAP = {
+			transfer_state = 1031
+			transfer_state = 228
+			transfer_state = 221
+			transfer_state = 240
+		}
+		if = {
+			limit = {
+				KHL = { exists = no }
+		    }
+			SOV = {
+				release = KHL
+			}
 		}
 		if = {
 			limit = {
 		       KHL = { is_subject_of = SOV }
 		    }
-		    end_puppet = KHL
+		    SOV = {
+				end_puppet = KHL
+			}
 		    KHL = {
 				leave_faction = yes
 		    }
 		}
-		every_country = {
-	    	limit = { # some sanity checks
-	            original_tag = SOV
-	        }
-			KAZ = {
-				create_wargoal = {
-				    type = annex_everything
-				    target = PREV
-				}
-			}
-		}
-		KAZ = {
-			add_ai_strategy = {
-			    type = conquer
-			    id = SOV
-			    value = 200
-			}
-		}
-		UNC = {
-			transfer_state = 579
-			transfer_state = 516
-			transfer_state = 644
-			transfer_state = 562
-			transfer_state = 637
-			transfer_state = 574
-			transfer_state = 575
-			transfer_state = 576
-			transfer_state = 577
-			transfer_state = 580
-		}
-		MON = {
-			transfer_state = 563
-			transfer_state = 564
-			declare_war_on = {
-			    target = SOV
-			    type = annex_everything
-			}
-		}
-		transfer_units_fraction= {
-		    target = MON
-		    size = 0.1
-		    stockpile_ratio = 0.1
-		    army_ratio = 0.1
-		}
 	}
 }
-
-#perm breaks away
 
 country_event = {
 	id = sweden.19
@@ -908,396 +904,52 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "Jackals! Vultures!"
+		name = "It was... a useless piece of icy wasteland, anyways..."
 		hidden_effect = {
-			country_event = {
-			    id = sweden.20
-			    days = 3
+			news_event = {
+				id = mod.26
+				days = 1
 			}
 		}
-		create_dynamic_country = {
-			original_tag = SOV	
-			set_cosmetic_tag = perm
-			transfer_state = 398
-			transfer_state = 397
-			transfer_state = 400
-			hidden_effect = {
-				set_politics = {
-					ruling_party = neutrality
-				}
-				set_popularities = {
-					aristocracy = 45
-					neutrality = 40
-					fascism = 5
-					communism = 5
-					democratic = 5
-				}
-				division_template = {
-					name = "Permian Soldaty Infantry"
-					priority = 1
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-			
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}
-				every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = PREV }
-			    		is_core_of = PREV
-			    	}
-			    	remove_core_of = PREV
-			    }
-			    every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = ROOT }
-			    		is_core_of = ROOT
-			    	}
-			    	remove_core_of = ROOT
-			    }
-				random_owned_controlled_state = {
-					limit = { PREV = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Permian Soldaty Infantry\" division_template = \"Permian Soldaty Infantry\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-				}
-			}
-			every_country = {
-		    	limit = { # some sanity checks
-		            original_tag = SOV
-		        }
-		        PREV = {
-		        	declare_war_on = { # declare war on
-		                target = PREV # previous scope (random neighbor)
-		                type = civil_war # standard wargoal
-		            }
-		        }
-		    }
-		}					
-	}
-}
-
-# qasim uprising
-
-country_event = {
-	id = sweden.20
-	title = sweden.20.t
-	desc = sweden.20.d
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = { 
-		hidden_effect = {
-			country_event = {
-			    id = sweden.21
-			    days = 10
-			}
+		UNC = {
+			transfer_state = 644
+			transfer_state = 576
+			transfer_state = 574
+			transfer_state = 575
+			transfer_state = 565
+			transfer_state = 562
+			transfer_state = 516
+			transfer_state = 579
+			transfer_state = 575
+			transfer_state = 574
+			transfer_state = 580
+			transfer_State = 581
 		}
-		name = "We'll make it a short-lived state!"
-		create_dynamic_country = {
-			original_tag = SOV	
-			set_cosmetic_tag = qasim
-			transfer_state = 257
-			hidden_effect = {
-				set_politics = {
-					ruling_party = neutrality
-				}
-				every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = PREV }
-			    		is_core_of = PREV
-			    	}
-			    	remove_core_of = PREV
-			    }
-			    every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = ROOT }
-			    		is_core_of = ROOT
-			    	}
-			    	remove_core_of = ROOT
-			    }
-				set_popularities = {
-					aristocracy = 45
-					neutrality = 40
-					fascism = 5
-					communism = 5
-					democratic = 5
-				}
-				division_template = {
-					name = "Qasim Steppe Warrior"
-					priority = 1
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-			
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}
-			}
-			
-			random_owned_controlled_state = {
-				limit = { PREV = { has_full_control_of_state = PREV } }
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-				create_unit = {
-					division = "name = \"Qasim Steppe Warrior\" division_template = \"Qasim Steppe Warrior\" start_experience_factor = 0.3" 
-					owner = PREV
-				}
-			}	
-		}
-		every_country = {
-	    	limit = { # some sanity checks
-	            original_tag = SOV
-	        }
-	        PREV = {
-	        	declare_war_on = { # declare war on
-	                target = PREV # previous scope (random neighbor)
-	                type = civil_war # standard wargoal
-	            }
-	        }
-	    }				
-	}
-}
-
-#the cossacks revolt!
-
-country_event = {
-	id = sweden.21
-	title = sweden.21.t
-	desc = sweden.21.d
-
-	fire_only_once = no
-	is_triggered_only = yes
-
-	option = { 
-		name = "Damn them!"
-
-		every_country = {
-	    	limit = { # some sanity checks
-	            original_tag = SOV
-	        }
-			ZAP = {
-				create_wargoal = {
-				    type = annex_everything
-				    target = PREV
-				}
-			}
-		}
-		hidden_effect = {
-			country_event = {
-			    id = sweden.22
-			    days = 5
-			}
-		}
-		#create kuban
-		create_dynamic_country = {
-			original_tag = SOV	
-			set_cosmetic_tag = eastern_cossack
-			transfer_state = 236
-			transfer_state = 237
-			transfer_state = 235
-			transfer_state = 238
-			transfer_state = 217
-			transfer_state = 245
-			hidden_effect = {
-				every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = PREV }
-			    		is_core_of = PREV
-			    	}
-			    	remove_core_of = PREV
-			    }
-			    every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = ROOT }
-			    		is_core_of = ROOT
-			    	}
-			    	remove_core_of = ROOT
-			    }
-				set_politics = {
-					ruling_party = communism
-				}
-				set_popularities = {
-					aristocracy = 10
-					neutrality = 15
-					fascism = 5
-					communism = 65
-					democratic = 5
-				}
-				division_template = {
-					name = "Kuban Cossacks"
-					priority = 1
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-			
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { PREV = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Kuban Cossacks\" division_template = \"Kuban Cossacks\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-				}
-			}
-			every_country = {
-		    	limit = { # some sanity checks
-		            original_tag = SOV
-		        }
-		        PREV = {
-		        	declare_war_on = { # declare war on
-		                target = PREV # previous scope (random neighbor)
-		                type = civil_war # standard wargoal
-		            }
-		        }
-		    }	
+		SIB = {
+			transfer_state = 578
+			transfer_state = 570
+			transfer_state = 571
+			transfer_state = 577
+			transfer_state = 403
+			transfer_state = 569
+			#country_event = sweden.20
 		}				
+		URL = {
+			transfer_state = 653
+			transfer_state = 573
+		}
+		SCH = {
+			transfer_state = 568
+			transfer_state = 566
+			transfer_state = 564
+			transfer_state = 565
+			transfer_state = 563
+			transfer_state = 567
+		}
 	}
 }
 
-#yaroslavl and ryazan secede
+#russian second/third times of troubles
 
 country_event = {
 	id = sweden.22
@@ -1308,216 +960,52 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "I will have these warlords' heads!"
-		hidden_effect = {
-			news_event = {
-			    id = mod.27
-			    days = 5
+		name = "A sad chapter in Russian history..."
+		start_civil_war = {
+			ruling_party = neutrality
+			ideology = aristocracy
+			size = 0.5
+			army_ratio = 0.5
+			capital = 249
+			states = { 
+				250 251 256 249 399 400 397
+			}
+			set_autonomy = {
+				target = ZAP
+				autonomy_state = autonomy_free
+				end_wars = yes
+				end_civil_wars = yes
+			}
+			set_autonomy = {
+				target = KHL
+				autonomy_state = autonomy_free
+				end_wars = yes
+				end_civil_wars = yes
+			}
+			leave_faction = yes
+			dismantle_faction = yes
+			declare_war_on = { # <-- This is copy and paste from the older russian focus tree, is this what we want?
+			target = BSK
+			type = take_claimed_state
 			}
 		}
-
-		#create ryazan
-
-		create_dynamic_country = {
-			original_tag = SOV	
-			set_cosmetic_tag = ryazan
-			transfer_state = 254
-			hidden_effect = {
-				set_politics = {
-					ruling_party = neutrality
-				}
-				set_popularities = {
-					aristocracy = 45
-					neutrality = 40
-					fascism = 5
-					communism = 5
-					democratic = 5
-				}
-				every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = PREV }
-			    		is_core_of = PREV
-			    	}
-			    	remove_core_of = PREV
-			    }
-			    every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = ROOT }
-			    		is_core_of = ROOT
-			    	}
-			    	remove_core_of = ROOT
-			    }
-				division_template = {
-					name = "Streltsy"
-					priority = 1
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-			
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}
-				random_owned_controlled_state = {
-					limit = { PREV = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-				}	
+		SOV = {
+			set_autonomy = {
+				target = ZAP
+				autonomy_state = autonomy_free
+				end_wars = yes
+				end_civil_wars = yes
 			}
-			every_country = {
-		    	limit = { # some sanity checks
-		            original_tag = SOV
-		        }
-		        PREV = {
-		        	declare_war_on = { # declare war on
-		                target = PREV # previous scope (random neighbor)
-		                type = civil_war # standard wargoal
-		            }
-		        }
-		    }
-		}	
-		create_dynamic_country = {
-			original_tag = SOV	
-			set_cosmetic_tag = yaroslavl
-			transfer_state = 248
-			hidden_effect = {
-				every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = PREV }
-			    		is_core_of = PREV
-			    	}
-			    	remove_core_of = PREV
-			    }
-			    every_state = {
-			    	limit = {
-			    		NOT = { is_owned_by = ROOT }
-			    		is_core_of = ROOT
-			    	}
-			    	remove_core_of = ROOT
-			    }
-				set_politics = {
-					ruling_party = neutrality
-				}
-				set_popularities = {
-					aristocracy = 45
-					neutrality = 40
-					fascism = 5
-					communism = 5
-					democratic = 5
-				}
-				division_template = {
-					name = "Streltsy"
-					priority = 1
-					regiments = {
-						infantry = { x = 0 y = 0 }
-						infantry = { x = 0 y = 1 }
-						infantry = { x = 0 y = 2 }
-			
-						infantry = { x = 1 y = 0 }
-						infantry = { x = 1 y = 1 }
-						infantry = { x = 1 y = 2 }
-			
-						infantry = { x = 2 y = 0 }
-						infantry = { x = 2 y = 1 }
-					}
-					support = {
-						engineer = { x = 0 y = 0 }
-					}
-				}    
-				random_owned_controlled_state = {
-					limit = { PREV = { has_full_control_of_state = PREV } }
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-					create_unit = {
-						division = "name = \"Streltsy\" division_template = \"Streltsy\" start_experience_factor = 0.3" 
-						owner = PREV
-					}
-				}
+			set_autonomy = {
+				target = KHL
+				autonomy_state = autonomy_free
+				end_wars = yes
+				end_civil_wars = yes
 			}
-			every_country = {
-		    	limit = { # some sanity checks
-		            original_tag = SOV
-		        }
-		        PREV = {
-		        	declare_war_on = { # declare war on
-		                target = PREV # previous scope (random neighbor)
-		                type = civil_war # standard wargoal
-		            }
-		        }
-		    }	
-		}			
+			leave_faction = yes
+			dismantle_faction = yes
+		}
+		SOV = { country_event = sweden.18 }
 	}
 }
 
@@ -2277,27 +1765,58 @@ news_event = {
 
 country_event = {
 	id = sweden.40
-	title = "The Polish-Lithuanian Demands"
+	title = "Poland-Lithuania demand Territorial Concessions."
 	desc = sweden.40.d
 
 	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
-		name = "The Polish have earned their share of the war spoils."
+		name = "The Poles deserve their fair share of war spoils."
 		POL = {
-			transfer_state = 205
-			transfer_state = 221
 			transfer_state = 242
 			transfer_state = 243
-			transfer_state = 930
-			transfer_state = 224
-			transfer_state = 193
-			transfer_state = 792
-			transfer_state = 259
-			transfer_state = 225
-			transfer_state = 210
 			country_event = sweden.41
+		}
+		if = {
+			limit = {
+				SOV = { owns_state = 193 }
+				SOV = { owns_state = 255 }
+				SOV = { owns_state = 792 }
+				SOV = { owns_state = 1028 }
+				SOV = { owns_state = 259 }
+			}
+			POL = {
+				transfer_state = 193
+				transfer_state = 255
+				transfer_state = 792
+				transfer_state = 1028 
+				transfer_state = 259
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					ZAP = { is_in_faction_with = SWE }
+					ZAP = { is_in_faction_with = POL }
+				}
+			}
+			POL = {
+				give_guarantee = ZAP
+				give_military_access = ZAP
+				ZAP = { give_military_access = POL }
+			}
+		}
+		else = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = ZAP
+			}
+			1028 = { add_claim_by = POL}
+			792 = { add_core_of = POL }
+			259 = { add_claim_by = POL }
+			225 = { add_claim_by = POL }
+			193 = { add_claim_by = POL }
 		}
 	}
 }
@@ -2339,13 +1858,13 @@ country_event = {
 
 	option = { 
 		name = "This is a disaster!"
-		add_stability = -0.10
+		add_stability = -0.15
 		add_war_support = -0.10
 		kill_country_leader = yes
 		create_country_leader = {
 			name = "Ulrika Eleonora"
 			picture = "ulrika_eleonora.dds"
-			expire = "1720.1.1"
+			expire = "1800.1.1"
 			ideology = despotism
 			traits = {
 				defeatist
@@ -2357,15 +1876,14 @@ country_event = {
 
 news_event = {
 	id = sweden.43
-	title = "Swedish king Charles XII slain in battle!"
+	title = "Swedish King, Charles XII slain in battle!"
 	desc = sweden.43.d
 	picture = GFX_news_event_anouncement
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 
-		name = "How terrible."
+		name = "Very Tragic!"
 	}
 }
 
@@ -2374,7 +1892,6 @@ country_event = {
 	title = "The final phase of the Great Northern War"
 	desc = sweden.44.d
 
-	fire_only_once = no
 	is_triggered_only = yes
 
 	option = { 

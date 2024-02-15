@@ -639,6 +639,9 @@ country_event = {
 			CRI = {
 				remove_ideas = great_turkish_war
 			}
+			231 = {
+				set_demilitarized_zone = yes
+			}
 		}
 		remove_ideas = great_turkish_war
 		add_political_power = 100
@@ -646,7 +649,7 @@ country_event = {
 		news_event = mod.8
 		custom_effect_tooltip = TUR_peace_with_austria
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 	option = { # No
@@ -661,10 +664,15 @@ country_event = {
 		news_event = mod.33
 		set_country_flag = ottomansussybaka
 		AUS = {
-			set_country_flag = ottomansussybakaa
+			set_country_flag = ottomansussybaka2
+		}
+		hidden_effect = {
+			231 = {
+				set_demilitarized_zone = yes
+			}
 		}
 		ai_chance = {
-			factor = 0
+			base = 0
 		}
 	}
 }
@@ -756,7 +764,7 @@ country_event = {
 		news_event = mod.8
 		custom_effect_tooltip = TUR_peace_with_austria
 		ai_chance = {
-			factor = 100
+			base = 100
 		}
 	}
 }

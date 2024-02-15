@@ -25,65 +25,18 @@ SOV_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		#Things to do ASAP
-		RUS_betray_poland #for later (required)
-		RUS_peter_the_great # he is great lol
-		RUS_peter_the_great
-		RUS_spiritual_regulations
-		RUS_finalize_reforms
-		RUS_confiscate_monastery_treasury
-		RUS_finish_off_the_commonwealth #for later (required)
-		RUS_advance_siberian_frontier # he is great lol
-		RUS_colonize_alaska #35 (Should do near the end of the game idk)	
-		#1699
-		RUS_great_reforms_of_Peter #70
-		RUS_great_reforms_military_reform #70
-		RUS_our_place_in_the_world #35
-		RUS_aggresive_foreign_policy #35
-		RUS_southern_direction #14 -> Mid 1936
-		RUS_northern_focus #14
-		RUS_secure_azov #35
-		RUS_treaty_of_constantinople #35
-		RUS_anti_swedish_pact #35 -> 1936/1939	
-		RUS_state_visit_to_netherlands #70 -> Dec 1699	
-		#1700
-		RUS_treaty_of_constantinople #35
-		RUS_taganrog_fleet #70
-		RUS_western_focus #14 -> Early 1700
-		RUS_the_coassack #7
-		RUS_turn_to_the_steppes #14
-		RUS_crush_sweden #35 -> Aug 1700
-		RUS_reorganise_military_structure #70 -> 1700
-		RUS_peasant_draft
-		RUS_standardized_equipment #70 -> Mid 1700
-		RUS_emergency_supply_relief
-		RUS_great_reforms_industrial_reform #70 -> Dec 1700
-	    #1701
-	    RUS_infrastructure_effort #35
-		RUS_raise_war_taxes #70 -> 1701
-		RUS_infrastructural_reforms #63 -> Early 1701
-		RUS_modernize_old_fortifications #56
-		RUS_upgrade_the_kremlin_fortification #56
-		RUS_reform_high_command #56
-		RUS_promote_artillery_schools
-		RUS_mass_mobilization #70	
-		#1702
-		RUS_mass_drill #70
-		RUS_proper_military_regulations
-		RUS_reform_orthodox_church #70
-		RUS_abolish_metropolitans #70 -> 1702
-		RUS_great_reforms_domestic_reform # 70 -> May 1702
-		RUS_enforce_serfdom #70
-		RUS_deal_with_the_boyars #70 -> Feb 1703		
-		#1703
-		RUS_persue_absolutism # 70
-		RUS_beard_tax #70
-		RUS_abolish_duma #70
-		RUS_persue_caeseropapism
-		RUS_appoint_loyal_clergy
-		RUS_force_subordination_to_the_state
-		RUS_subjugate_kazakh
-		#At this point, the AI unleashes itself and bases itself on ai_factor for focus tree (might expand this further later when I have time)
+		RUS_continue_the_truce
+		RUS_conscription_of_1699
+		RUS_recruit_foreign_officers
+		RUS_form_new_infantry_regiments
+		RUS_introduce_new_uniforms
+		RUS_treaty_of_preobrazhenskoye #gets completed too early, in may (should be november 1699)
+		RUS_organise_the_near_chancellery
+		RUS_narva_campaign
+		RUS_defeat_at_narva
+		RUS_urgent_military_reform
+		RUS_offensive_with_limited_purpose
+		#TODO
 	}
 
 	research = {

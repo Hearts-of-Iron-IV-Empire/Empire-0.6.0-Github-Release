@@ -1,7 +1,7 @@
-
 state={
 	id=376
 	name="STATE_376"
+	manpower=423316
 	resources={
 		oil=14.000
 		aluminium=30.000
@@ -12,15 +12,12 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
-
 		}
-
 	}
 
 	provinces={
 		3867 3883 4975 8070 10867 12720 12791 
 	}
-	manpower=423316
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

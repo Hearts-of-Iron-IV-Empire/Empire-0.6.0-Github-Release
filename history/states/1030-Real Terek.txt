@@ -1,24 +1,23 @@
-
 state={
 	id=1030
 	name="STATE_1030"
 
 	history={
 		owner = SOV
+		add_core_of = SOV
 		victory_points = {
-			700 1
+			700 1 
 		}
 		buildings = {
 			infrastructure = 1
 		}
-		add_core_of = SOV
-
 	}
 
 	provinces={
-		683 700 6748 6758
+		683 700 6748 
 	}
 	manpower=11401
 	buildings_max_level_factor=1.000
 	state_category=wasteland
+	local_supplies=0.000
 }

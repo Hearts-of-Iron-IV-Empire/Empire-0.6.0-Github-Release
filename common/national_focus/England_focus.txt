@@ -654,20 +654,20 @@ focus = {
 			}
 			SCO = { 
 				random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+					add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
 				}
 				random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 1
-					add_building_construction = {
-						type = arms_factory
-						level = 1
-						instant_build = yes
-					}
+					add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
 				}
 			}
 		}
@@ -676,13 +676,11 @@ focus = {
 	focus = {
 		id = eng_seek_french_support
 		icon = GFX_focus_focus_fra_orleans_restoration
-		prerequisite = {focus = eng_discredit_stuart_line}
+		prerequisite = { focus = eng_discredit_stuart_line }
 		relative_position_id = eng_go_with_the_tories
 		x = 0
 		y = 3
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			remove_opinion_modifier = {
@@ -691,8 +689,8 @@ focus = {
 			}
 			FRA = {
 				remove_opinion_modifier = {
-			    target = ENG
-			    modifier = rivalry
+			    	target = ENG
+			    	modifier = rivalry
 				}
 			}
 			add_ai_strategy = {
@@ -708,8 +706,8 @@ focus = {
 		icon = GFX_focus_restore_aulde_pretender
 		x = 0
 		y = 4
-		prerequisite = { focus = eng_seek_french_support }
 		relative_position_id = eng_go_with_the_tories
+		prerequisite = { focus = eng_seek_french_support }
 
 		available = {
 			neutrality > 0.5
@@ -4419,8 +4417,6 @@ focus = {
 		cost = 8
 		relative_position_id = eng_go_with_the_whigs 
 
-		available_if_capitulated = yes
-
 		available = {
 			OR = {
 				AND = {
@@ -4460,8 +4456,6 @@ focus = {
 		cost = 10
 		relative_position_id = eng_the_anglo_dutch_union 
 
-		available_if_capitulated = yes
-
 		available = {
 			HOL = { has_completed_focus = hol_anglo_dutch_union }
 		}
@@ -4486,8 +4480,6 @@ focus = {
 		cost = 10
 		relative_position_id = eng_integrate_the_dutch_administration 
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_war_support = 0.10
 			add_state_claim = 15
@@ -4503,8 +4495,6 @@ focus = {
 		y = 1
 		cost = 10
 		relative_position_id = eng_return_to_the_continent 
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_state_claim = 968
@@ -4534,8 +4524,6 @@ focus = {
 		cost = 10
 		relative_position_id = eng_unification_of_the_low_countries 
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -4554,8 +4542,6 @@ focus = {
 
 		cost = 10
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_political_power = 150
 		}
@@ -4564,13 +4550,12 @@ focus = {
 	focus = {
 		id = eng_master_of_india
 		icon = GFX_focus_RAJ_british_investors
-		prerequisite = { focus = eng_merge_the_voc_and_eic }
 		x = 1
 		y = 1
-		cost = 10
+		prerequisite = { focus = eng_merge_the_voc_and_eic }
 		relative_position_id = eng_merge_the_voc_and_eic 
 
-		available_if_capitulated = yes
+		cost = 10
 
 		completion_reward = {
 			create_wargoal = {

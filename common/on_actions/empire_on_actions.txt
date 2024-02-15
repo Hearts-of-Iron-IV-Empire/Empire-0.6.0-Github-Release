@@ -31,6 +31,13 @@ on_actions  = {
 			}
 			if = {
 				limit = {
+					SOV = { has_completed_focus = RUS_impose_harsh_taxes_bashkirs }
+					date > 1706.6.1
+				}
+				SOV = { country_event = russia_new.19 }
+			}
+			if = {
+				limit = {
 					date > 1812.1.1
 				}
 				FRA = {
@@ -234,6 +241,63 @@ on_actions  = {
 			}
 		}
 	}
+	on_capitulation_immediate = { #If Poland doesnt cap 
+		effect = {
+			every_country = {
+				limit = {
+					has_war_with = SWE
+				}
+				white_peace = SWE
+	        }
+			if = { 
+				limit = {
+					OR = {
+						FROM = { tag = SOV }
+						FROM = { tag = POL }
+						FROM = { tag = DEN }
+						FROM = { tag = PRS }
+					}
+					ROOT = { tag = SWE }
+				}
+				SOV = {
+					transfer_state = 13
+			        transfer_state = 195
+			        transfer_state = 146
+			        transfer_state = 111
+			        transfer_state = 147
+			        transfer_state = 150
+			        transfer_state = 149
+			        transfer_state = 148
+			        transfer_state = 145
+					#Finnish Puppet State?
+				}
+				POL = {
+					transfer_state = 191
+					transfer_state = 12 
+				}
+				if = {
+					limit = {
+						DEN = { has_war_with = SWE }
+						#TODO future conditions if denmark does not pull out of the war early
+					}
+					DEN = { transfer_state = 138 }
+					DEN = { transfer_state = 934 }
+					DEN = { transfer_state = 935 }
+					DEN = { transfer_state = 58 }
+					DEN = { transfer_state = 1018 }
+					DEN = { transfer_state = 38 }
+					#TODO small southern swedish puppet states for Denmark if they do not pull out of the war early
+				}
+				if = {
+					limit = {
+						PRS = { has_war_with = SWE }
+					}
+					PRS = { transfer_state = 62 }
+					PRS = { transfer_state = 794 }
+				}
+			}
+		}
+	}
 	on_capitulation_immediate = {
 		effect = {
 			if = {
@@ -244,6 +308,21 @@ on_actions  = {
 				RAJ = {
 					country_event = {
 						id = mughal.65
+					}
+				}
+			}
+		}
+	}
+	on_capitulation_immediate = {
+		effect = {
+			if = {
+				limit = {
+					FROM = { tag = JAP }
+					ROOT = { tag = KOR }
+				}
+				JAP = {
+					country_event = {
+						id = japan.15
 					}
 				}
 			}

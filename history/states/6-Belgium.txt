@@ -1,4 +1,3 @@
-
 state={
 	id=6
 	name="STATE_6"
@@ -11,33 +10,29 @@ state={
 		owner = BEL
 		add_core_of = BEL
 		add_core_of = BRB
-		victory_points = {
-			516 30 
+		set_demilitarized_zone = yes
+		victory_points = { # Brussels
+			516 50 
 		}
-		victory_points = {
-			6598 30 
+		victory_points = { # Antwerpen
+			6598 20 
 		}
 		victory_points = {
 			13068 1 
 		}
-		set_demilitarized_zone = yes
 		buildings = {
 			infrastructure = 4
 			arms_factory = 1
 			industrial_complex = 2
 			6598 = {
 				naval_base = 8
-
 			}
 			6598 = {
 				bunker = 4
-
 			}
 			11419 = {
 				bunker = 4
-
 			}
-
 		}
 		add_extra_state_shared_building_slots = 2
 		1798.1.1 = {

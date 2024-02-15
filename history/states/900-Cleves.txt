@@ -5,11 +5,12 @@ state={
 		3444 
 	}
 	history={
+		owner = BRR
+		add_core_of = PRS
+		add_core_of = BRR
 		buildings = {
 			infrastructure = 2
 		}
-		owner = PRS
-		add_core_of = PRS
 		1798.1.1 = {
 			owner = FRA
 		}

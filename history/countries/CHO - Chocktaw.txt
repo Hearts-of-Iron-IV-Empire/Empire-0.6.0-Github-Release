@@ -16,8 +16,12 @@ set_technology = {
 
 set_convoys = 20
 
+set_research_slots = 1
+
 add_ideas = {
 	tribal_centralization_0
+
+	# Laws and Religion
 	totemism
 	all_adults_serve
 }
@@ -26,10 +30,7 @@ set_politics = {
 	ruling_party = neutrality
 	elections_allowed = no
 }
+
 set_popularities = {
-	neutrality = 30
-	aristocracy = 35
-	fascism = 15
-	communism = 5
-	democratic = 15
+	neutrality = 100
 }

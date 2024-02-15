@@ -1,4 +1,3 @@
-
 state={
 	id=964
 	name="STATE_964"
@@ -17,24 +16,24 @@ state={
 		buildings = {
 			infrastructure = 2
 			1381 = {
-				naval_base = 1
+				naval_base = 3
 			}
 			12180 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
-		victory_points = {
-			1381 1 
+		victory_points = { # Nagapatnam
+			1381 5 
 		}
-		victory_points = {
-			12180 1 
+		victory_points = { # Pulicat
+			12180 5 
 		}
 	}
 
 	provinces={
 		1381 12180 13267 13268 
 	}
-	manpower=1254876
+	manpower=230450
 	buildings_max_level_factor=1.000
 	state_category=rural
 	local_supplies=0.000

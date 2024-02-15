@@ -1,0 +1,185 @@
+focus_tree = {
+	id = Russia_focus_Ekaterina_Alekseevna
+	
+	country = {
+		factor = 0
+		modifier = {
+			add = 15
+			original_tag = SOV
+		}
+	}
+	default = no
+	#continuous_focus_position = { x = 100 y = 2000 }
+	#initial_show_position = {
+		#x = 36
+		#y = 0
+	#}
+	
+#	focus = {
+#		id = RUS_
+#		icon = GFX_
+#		prerequisite = { focus = }
+#		mutually_exclusive = { focus =  }
+#		x = -3
+#		y = 0
+#		relative_position_id = 
+#
+#		cost = 10
+#
+#		ai_will_do = {
+#			factor = 1
+#		}
+#
+#		available = {
+#
+#		}
+#		
+#		bypass = {
+#
+#		}
+#
+#		cancel_if_invalid = yes
+#		continue_if_invalid = no
+#		available_if_capitulated = no
+#
+#		complete_tooltip = {
+#
+#		}
+#
+#		completion_reward = {
+#
+#		}
+#	}
+
+
+############################################################################
+############################################################################
+############################################################################
+
+ #     #                                                              
+ #     #  #   ####   #####   ####   #####   #   ####     ##    #      
+ #     #  #  #         #    #    #  #    #  #  #    #   #  #   #      
+ #######  #   ####     #    #    #  #    #  #  #       #    #  #      
+ #     #  #       #    #    #    #  #####   #  #       ######  #      
+ #     #  #  #    #    #    #    #  #   #   #  #    #  #    #  #      
+ #     #  #   ####     #     ####   #    #  #   ####   #    #  ###### 
+                                                                      
+############################################################################
+############################################################################
+############################################################################
+
+    focus = {
+		id = RUS_creation_of_supreme_privy_council  
+		icon = GFX_focus_rom_royal_dictatorship
+		x = 15
+		y = 0
+		cost = 1.6 
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		available = {
+			
+		}
+	
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY } 
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+            if = {
+				limit = {
+					has_idea = governing_senate_1
+				}
+				swap_ideas = {
+					remove_idea = governing_senate_1
+					add_idea = RUS_supreme_privy_council
+				}
+			}
+			#else = {
+			    #limit = {
+					#has_idea = zemsky_sobor
+				#}
+				#swap_ideas = {
+					#remove_idea = zemsky_sobor
+					#add_idea = RUS_supreme_privy_council
+				#}
+			#}
+			#else = {
+				#add_ideas = { RUS_supreme_privy_council }
+			#}			
+		}
+	}
+	focus = {
+		id = RUS_reduce_poll_taxation
+		icon = GFX_money
+		prerequisite = { focus = RUS_creation_of_supreme_privy_council }
+		x = 13
+		y = 1
+		cost = 5
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		available = {
+			
+		}
+	
+		search_filters = { FOCUS_FILTER_STABILITY } 
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+            add_stability = 0.05
+            add_political_power = -50 	
+			#Future Poll Tax Idea should be changed by the focus		
+		}
+	
+	}
+	focus = { 
+		id = RUS_launch_kamchatka_expedition
+		icon = GFX_Kamchatka
+		prerequisite = { focus = RUS_creation_of_supreme_privy_council }
+		x = 17
+		y = 1
+		cost = 2
+	
+		ai_will_do = {
+			factor = 10
+		}
+	
+		available = {
+			
+		}
+	
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+		
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+            
+		}
+
+		completion_reward = {
+            custom_effect_tooltip = RUS_kamchatka_expedition_tooltip	
+			#TODO
+		}
+	
+	}
+}

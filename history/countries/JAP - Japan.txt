@@ -17,7 +17,7 @@ add_ideas = {
 	shinto
 	kingdom
 	closed_economy
-	extensive_conscription
+	limited_conscription
 }
 
 set_research_slots = 2

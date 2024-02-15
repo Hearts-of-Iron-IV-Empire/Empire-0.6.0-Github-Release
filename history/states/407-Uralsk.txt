@@ -1,21 +1,25 @@
 state={
-	id = 407
-	name = STATE_407
-    manpower = 25000
-    state_category = rural
-
-	history = {
-		owner = KHL 
+	id=407
+	name="STATE_407"
+	history={
+		owner = KHL
 		add_core_of = KHL
 		buildings = {
 			infrastructure = 1
 		}
-		victory_points = { 11523 50 } #Pokrovskaya Sloboda 
-		1771.10.1 = { owner = SOV }
+		victory_points = { # Pokrovskaya Sloboda
+			11523 50 
+		}
+		1771.10.1 = {
+			owner = SOV
+		}
 	}
 
-	provinces = { 
-		365 410 452 470 497 499 566 3404 3406 3467 3486 3490 3503 3517 3551 6424 6430 6473 6479 6502 6541 6551 6574 6575 6601 9432 9445 9447 9473 9487 9530 9549 9577 11321 11395 11421 11458 11460 11473 11484 11523 11537 11538 }
-
-	local_supplies = 5
+	provinces={
+		365 410 452 468 470 477 497 499 520 545 615 618 3404 3406 3435 3459 3467 3486 3490 3503 3515 3517 3538 3551 3622 6430 6473 6479 6486 6498 6502 6514 6516 6523 6525 6541 6564 6574 6575 6588 6601 9432 9445 9447 9455 9473 9487 9513 9530 9549 9577 11321 11395 11421 11429 11457 11458 11460 11472 11474 11482 11484 11523 11538 11578 
+	}
+	manpower=25000
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=5.000
 }

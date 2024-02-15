@@ -1,7 +1,7 @@
 ﻿capital = 65
 
 oob = "SAX_1699"
-set_research_slots = 3
+set_research_slots = 2
 
 set_country_flag = SAX
 set_country_flag = HRE_imperial_subject
@@ -32,10 +32,12 @@ set_technology = {
 }
 
 add_ideas = {
-	protestant
 	PRS_status_elector
 	SAX_high_developed_region
 	SAX_polish_leash_dog
+
+	# Laws and Religion
+	protestant
 }
 
 set_convoys = 0
@@ -45,10 +47,11 @@ give_guarantee = IFC
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1699.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 6
 	fascism = 8

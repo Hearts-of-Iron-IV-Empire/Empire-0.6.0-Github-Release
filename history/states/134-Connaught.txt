@@ -1,19 +1,16 @@
-
-state=
-{
+state={
 	id=134
 	name="STATE_134"
 	manpower = 467100
 	
-	state_category = town
+	state_category = rural
 
-	history=
-	{
+	history={
 		owner = ENG
-		buildings = {
-			infrastructure = 3
-		}
 		add_core_of = IRE
+		buildings = {
+			infrastructure = 2
+		}
 	}
 
 	provinces=

@@ -3,7 +3,7 @@ RUS_dont_call_in_zap_to_gtw = { # Prevents Russia from calling in Zaparozhia to 
 		original_tag = SOV
 	}
 	enable = {
-	    country_exists = ZAP 
+	    country_exists = ZAP
 		has_country_flag = dont_call_in_zap_to_gtw
 	}
 	abort = {
@@ -17,6 +17,21 @@ RUS_dont_call_in_zap_to_gtw = { # Prevents Russia from calling in Zaparozhia to 
 		value = -20000
 		target = call_allies
 	}
+}
+
+RUS_dont_call_in_khl_to_gtw = { # Prevents Russia from calling in Kalmykia to the Great Turkish War for historical reasons
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		country_exists = KHL
+		has_country_flag = dont_call_in_khl_to_gtw
+	}
+	abort = {
+		NOT = {
+			has_country_flag = dont_call_in_khl_to_gtw
+		}
+	}
 	ai_strategy = {
 		type = diplo_action_desire
 		id = KHL
@@ -24,13 +39,15 @@ RUS_dont_call_in_zap_to_gtw = { # Prevents Russia from calling in Zaparozhia to 
 		target = call_allies
 	}
 }
+
 RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Swedish border as preparations before escalating the Great Northern War 
 	allowed = {
 		original_tag = SOV
 	}
 	enable = {
 	    country_exists = SWE
-	    date > 1700.8.1
+	#    date > 1700.9.12
+		has_completed_focus = RUS_treaty_of_preobrazhenskoye
 	}
 	abort = {
 		NOT = {
@@ -49,6 +66,46 @@ RUS_preparing_for_great_northern_war = { #Russia masses it's army towards the Sw
 		value = 100
 	}
 }
+RUS_do_not_engage_sweden_yet = { #Will not make Russia go to war with Sweden until certain circumstances are met
+	allowed = {
+		original_tag = SOV
+	}
+	enable = {
+		country_exists = SWE
+	}
+	abort = {
+		NOT = {
+		    OR = {
+				has_completed_focus = RUS_narva_campaign
+				country_exists = SWE
+			}
+		}
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = DEN
+		value = 200
+		target_country = SOV
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = POL
+		value = 200
+		target_country = SOV
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = SAX
+		value = 200
+		target_country = SOV
+	}
+	ai_strategy = {
+		type = dont_join_wars_with
+		id = LAT
+		value = 200
+		target_country = SOV
+	}
+}
 RUS_narva_campaign = { #Will make Russia solely focus on it's Narva Campaign against Sweden during the Great Northern War
 	allowed = {
 		original_tag = SOV
@@ -56,11 +113,14 @@ RUS_narva_campaign = { #Will make Russia solely focus on it's Narva Campaign aga
 	enable = {
 		country_exists = SWE
 		has_war_with = SWE
+		has_completed_focus = RUS_narva_campaign
 	}
 	abort = {
 		NOT = {
 			country_exists = SWE
 		}
+		has_completed_focus = RUS_defeat_at_narva
+	    has_completed_focus = RUS_victory_at_narva2
 	}
 	ai_strategy = {
 	    target_country = SWE
@@ -109,6 +169,7 @@ RUS_baltic_campaign = { #Will make Russia also include the Baltic Campaign again
 	enable = {
 		country_exists = SWE
 		has_war_with = SWE
+		has_completed_focus = RUS_novgorod_operations
 	}
 	abort = {
 		NOT = {
@@ -129,6 +190,34 @@ RUS_baltic_campaign = { #Will make Russia also include the Baltic Campaign again
 		manual_attack = yes
 	}
 }
+#RUS_early_vyborg_campaign = { #Will make Russia also include the Early Vyborg Campaign against Sweden during the Great Northern War
+#	allowed = {
+#		original_tag = SOV
+#	}
+#	enable = {
+#		country_exists = SWE
+#		has_war_with = SWE
+#		has_completed_focus = RUS_early_push_towards_vyborg
+#	}
+#	abort = {
+#		NOT = {
+#			country_exists = SWE
+#		}
+#		#TODO
+#	}
+#	ai_strategy = {
+#	    target_country = SWE
+#		type = front_control
+#		state = 146
+#		strategic_region = 13
+ #       priority = 4
+  #      #ratio = 0.0 #TODO
+   #     ordertype = front
+	#	execution_type = balanced #TODO
+     #   execute_order = yes
+	#	manual_attack = yes
+	#}
+#}
 RUS_do_not_help_allies = { #Will not make Russia put it's army into Allied territory during the Great Nothern War to better help concentrate in it's campaign
 	allowed = {
 		original_tag = SOV

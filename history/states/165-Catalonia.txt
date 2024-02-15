@@ -7,7 +7,9 @@ state={
 
 	history={
 		owner = SPR
-		victory_points = {
+		add_core_of = SPR
+		add_core_of = ARA
+		victory_points = { # Barcelona
 			9764 30
 		}
 		victory_points = {
@@ -17,15 +19,13 @@ state={
 			6927 1
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			arms_factory = 2
 			industrial_complex = 2
 			9764 = {
 				naval_base = 4
 			}
 		}
-		add_core_of = SPR
-		add_core_of = ARA
 		1812.1.1 = {
 			owner = FRA
 		}

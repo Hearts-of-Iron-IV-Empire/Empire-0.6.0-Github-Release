@@ -1,25 +1,20 @@
-
 state={
 	id=228
 	name="STATE_228"
 
 	history={
 		owner = SOV
-		victory_points = {
-			9461 1 
-		}
+		add_core_of = SOV
 		buildings = {
 			infrastructure = 2
-
 		}
-		add_core_of = SOV
-
 	}
 
 	provinces={
-		523 547 570 3479 6432 6474 6505 6519 9461 9476 11487 
+		523 570 6432 6519 11487 
 	}
 	manpower=367411
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

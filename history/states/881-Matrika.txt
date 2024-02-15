@@ -7,6 +7,8 @@ state={
 
 	history={
 		owner = TUR
+		add_core_of = TUR
+		add_claim_by = SOV
 		victory_points = {
 			9680 1 
 		}
@@ -14,11 +16,9 @@ state={
 		infrastructure = 2
 		9680 = {
 			naval_base = 1
-			coastal_bunker = 1
+				coastal_bunker = 1
 			}
 		}
-		add_core_of = TUR
-		add_claim_by = SOV
 		1789.1.1 = {
 			owner = SOV
 		}

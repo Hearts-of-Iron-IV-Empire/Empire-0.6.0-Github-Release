@@ -12,21 +12,23 @@ focus_tree = {
 
 	continuous_focus_position = { x = 50 y = 1500 }
 
-
-#TREE FOR INTERNAL AFFAIRS
-#Focus for Solidify Internal Power
+#############################
+# TREE FOR INTERNAL AFFAIRS #
+#############################
 	focus = { 
 		id = PRS_solidifyinternalpower
 		icon = GFX_goal_tripartite_pact
 		x = 12
 		y = 0
+
 		cost = 10
-		available_if_capitulated = yes 
+
+		completion_reward = { 
+			add_political_power= 100
+		}
+
 		ai_will_do = { 
 			factor = 1
-		} 
-		completion_reward = { 
-			add_political_power= 150
 		} 
 	} 
 
@@ -242,6 +244,10 @@ focus = {
 		add_victory_points = {
 			province = 6521
 			value = 25
+		}
+		annex_country = {
+			target = BRR
+			transfer_troops = yes
 		}
 		add_ideas = kingdom
 		news_event = mod.12
@@ -600,45 +606,49 @@ focus = {
 focus = { 
 	id = PRS_liberatesaxony
 	icon = GFX_focus_generic_strike_at_democracy3
-	relative_position_id = PRS_supportsweden
 	x = 0
 	y = 1
-	cost = 5
-	available_if_capitulated = yes 
+	relative_position_id = PRS_supportsweden
 	prerequisite = { focus = PRS_supportsweden } 
-	ai_will_do = { 
-		factor = 1
- 	} 
+
+	cost = 5
+
 	completion_reward = { 
 	    add_war_support = 0.05
 		add_state_claim = 65
- 	} 
+ 	}
+	 
+	ai_will_do = { 
+		factor = 1
+	} 
 } 
 
 #Focus for Send Ultimatum to Saxony
 focus = { 
 	id = PRS_sendultimatumtosaxony
 	icon = GFX_goal_generic_forceful_treaty
-	relative_position_id = PRS_liberatesaxony
 	x = -1
 	y = 1
-	cost = 5
-	available_if_capitulated = yes 
+	relative_position_id = PRS_liberatesaxony
+	prerequisite = { focus = PRS_liberatesaxony } 
+	mutually_exclusive = { focus = PRS_enterthegreatnortherenwarforsweden } 
+
 	available = {
 		SWE = {
 			has_war_with = SAX
 		}
 	}
-	prerequisite = { focus = PRS_liberatesaxony } 
-	mutually_exclusive = { focus = PRS_enterthegreatnortherenwarforsweden } 
-	ai_will_do = { 
-		factor = 1
-	} 
+
+	cost = 5
 	completion_reward = {
 		SAX = {
 			country_event = { id = ultimatum.1 }
 		}
 	}	
+	
+	ai_will_do = { 
+		factor = 1
+	} 
 } 
 
 #Focus for Enter the Great Northeren War for Sweden
@@ -1562,68 +1572,82 @@ focus = {
 focus = { 
 	id = PRS_austherity
 	icon = GFX_goal_generic_national_unity
-	relative_position_id = PRS_teutonic_legacy
 	x = -2
 	y = 5
-	cost = 5
+	relative_position_id = PRS_teutonic_legacy
 	prerequisite = { focus = PRS_latin_bibles } 
-	ai_will_do = { 
- 		factor = 1
- 	} 
+
+	cost = 5
+
 	completion_reward = {
 	    add_war_support = 0.05
 		add_ideas = GER_fransiscan_austherity
 	} 
+
+	ai_will_do = { 
+ 		factor = 1
+ 	} 
 }
 
 focus = { 
 	id = PRS_install_monastic_order
 	icon = GFX_focus_generic_catholic_dominion
-	relative_position_id = PRS_teutonic_legacy
 	x = 1
 	y = 2
-	cost = 8
-	available_if_capitulated = yes
+	relative_position_id = PRS_teutonic_legacy
 	prerequisite = { focus = PRS_invite_catholic_cardinal } 
 	prerequisite = { focus = PRS_clergy_administration } 
-	ai_will_do = { 
- 		factor = 1
- 	} 
+
  	available = {
  		fascism > 0.50
  	}
+
+	cost = 8
+
 	completion_reward = { 
 		set_politics = {
 			ruling_party = fascism
 		}
-		add_political_power = 150
+		add_political_power = 100
  	} 
+
+	ai_will_do = { 
+		factor = 1
+	} 
 }
 
 focus = { 
 	id = PRS_proclaim_catholic_kingdom
 	icon = GFX_goal_catholic_corporativism
-	relative_position_id = PRS_teutonic_legacy
 	x = -2
 	y = 3
-	cost = 10
+	relative_position_id = PRS_teutonic_legacy
 	prerequisite = { focus = PRS_reinstate_catholicism }
+
  	available = {
  		fascism > 0.75
  	}
+
+	cost = 10
+
 	completion_reward = { 
 		set_cosmetic_tag = PRS_TEU 
 		set_capital = {
 		  state = 64 
-		  remember_old_capital = yes
+		  remember_old_capital = no
 		}
 		add_victory_points = {
 			province = 6521
 			value = 25
 		}
+		annex_country = {
+			target = BRR
+			transfer_troops = yes
+		}
 		add_ideas = kingdom
 		news_event = mod.34
- 	} 	
+ 	} 
+
 	ai_will_do = { 
 		factor = 1
 	} 
@@ -2054,20 +2078,16 @@ focus = {
  	} 
 }
 
-#Focus for Cavalry
-
 focus = { 
 	id = PRS_cavalry
-	icon = GFX_goal_generic_army_doctrines
-	relative_position_id = PRS_drillcamp
+	icon = GFX_french_cavalryman
 	x = 2
 	y = 1
-	cost = 5
-	available_if_capitulated = yes 
+	relative_position_id = PRS_drillcamp
 	prerequisite = { focus = PRS_drillcamp } 
-	ai_will_do = { 
- 		factor = 1
- 	} 
+
+	cost = 5
+
  	completion_reward = {
 		add_tech_bonus = {
 			name = armor_bonus
@@ -2075,6 +2095,10 @@ focus = {
 			uses = 1
 			category = armor
 		}
+	} 
+
+	ai_will_do = { 
+		factor = 1
 	} 
 }
 

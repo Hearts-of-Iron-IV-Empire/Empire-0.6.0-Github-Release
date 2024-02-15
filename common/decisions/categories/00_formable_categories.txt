@@ -187,3 +187,10 @@ form_greater_german_reich_category = {
 		has_dlc = "Waking the Tiger"
 	}
 }
+
+form_mongol_empire_category = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_form_mongol_empires
+}

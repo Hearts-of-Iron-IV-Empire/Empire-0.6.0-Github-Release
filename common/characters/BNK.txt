@@ -1,0 +1,14 @@
+characters = {
+    BNK_Sa_dun_bin_Muhammad = {
+        name = "Sa'dun bin Muhammad"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_muslim_leader_9"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

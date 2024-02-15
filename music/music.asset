@@ -5,7 +5,7 @@ music = {
 	volume = 0.65
 }
 
-# General Peace:
+# General Peices:
 music = {
 	name = "French Anthem"
 	file = "French_anthem_496-1791.ogg"
@@ -157,11 +157,6 @@ music = {
 	volume = 0.65
 }
 music = {
-	name = "Fridericus Rex Grenadiermarsch"
-	file = "Fridericus_Rex_Grenadiermarsch.ogg"
-	volume = 0.65
-}
-music = {
 	name = "La Marseillaise"
 	file = "La_Marseillaise.ogg"
 	volume = 0.65
@@ -282,12 +277,7 @@ music = {
 	volume = 0.65
 }
 music = {
-	name = "Im Ganzen Vaterland"
-	file = "im-ganzen-vaterland.ogg"
-	volume = 0.65
-}
-music = {
-	name = "On the hills of Manchuria"
+	name = "On the Hills of Manchuria"
 	file = "on-the-hills-of-manchuria.ogg"
 	volume = 0.65
 }
@@ -326,3 +316,16 @@ music = {
 	file = "pas-de-deux.ogg"
 	volume = 0.65
 }
+
+# Removed Pieces:
+
+#music = {
+#	name = "Im Ganzen Vaterland"
+#	file = "im-ganzen-vaterland.ogg"
+#	volume = 0.65
+#}
+#music = {
+#	name = "Fridericus Rex Grenadiermarsch"
+#	file = "Fridericus_Rex_Grenadiermarsch.ogg"
+#	volume = 0.65
+#}

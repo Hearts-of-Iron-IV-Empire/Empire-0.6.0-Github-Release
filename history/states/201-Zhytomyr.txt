@@ -7,12 +7,12 @@ state={
 	}
 
 	history={
-		victory_points = {
-			6593 3 
-		}
 		owner = POL
 		add_core_of = POL
 		add_core_of = UKR
+		victory_points = {
+			6593 3 
+		}
 		buildings = {
 			infrastructure = 3
 		}
@@ -22,9 +22,10 @@ state={
 	}
 
 	provinces={
-		441 3470 3543 3570 6593 9466 9493 9568 11477 
+		441 550 3470 3507 3543 3570 6593 9466 9493 9533 9568 11453 11464 11477 11514 
 	}
 	manpower=158917
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

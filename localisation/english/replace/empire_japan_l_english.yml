@@ -60,8 +60,8 @@
  JAP_a_military_authority_no_longer_desc:0 "We can begin relaxing some of our rules, as we are no longer a strict military government."
  JAP_repair_relations_with_the_emperor:0 "Repair Relations with the Emperor"
  JAP_repair_relations_with_the_emperor_desc:0 "The Emperor is a heavenly figure within Japan, and we must make sure that he is on our side."
- JAP_end_cruel_and_unusual_punishments:0 "End Cruel and Unusual Punishments"
- JAP_end_cruel_and_unusual_punishments_desc:0 "The previous Shogun and many others enacted cruel and unusual punishments for little reason. To reconcile with the populace, these punishments must be abolished."
+ JAP_end_cruel_punishments:0 "End Cruel Punishments"
+ JAP_end_cruel_punishments_desc:0 "The previous Shogun and many others enacted cruel and unusual punishments for little reason. To reconcile with the populace, these punishments must be abolished."
  JAP_review_the_navy:0 "Review the Navy"
  JAP_review_the_navy_desc:0 "The Japanese navy is far from perfect, and we must take many steps to bring it up to date."
  JAP_break_isolation:0 "Break Isolation"
@@ -168,6 +168,9 @@
  JAP_build_rice_farms_desc:0 "Rice farms are abundant in Japan, so much so that it is used as a form of currency. We should improve and expand existing rice farms and build new ones too."
  JAP_imperial_might:0 "Imperial Might"
  JAP_imperial_might_desc:0 "After rebuilding the country and consolidating our hold over Japan, we can now truly call our nation an Empire. We should take steps to promulgate this idea." 
+ JAP_construct_universities:0 "Construct Universities"
+ JAP_construct_universities_desc:0 "Institutes of higher education will prove extremely useful to the youth of our nation, and making them available in the capital itself will no doubt promote science and the pursuit of knowledge."
+
 
 
  # Ideas:

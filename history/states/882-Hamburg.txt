@@ -1,26 +1,23 @@
-
 state={
 	id=882
 	name="STATE_882"
 
 	history={
-		victory_points = {
-			9347 20 
+		owner = HAM
+		add_core_of = HAM
+		victory_points = { # Hamburg
+			9347 50
 		}
+		add_extra_state_shared_building_slots = 3
 		buildings = {
 			infrastructure = 4
 			arms_factory = 1
 			industrial_complex = 2
-			dockyard = 1
+			dockyard = 4
 			9347 = {
 				naval_base = 5
-
 			}
-
 		}
-		owner = HAM
-		add_core_of = HAM
-
 	}
 
 	provinces={

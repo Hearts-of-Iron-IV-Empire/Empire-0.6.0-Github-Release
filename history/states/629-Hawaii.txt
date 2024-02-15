@@ -1,12 +1,13 @@
-
 state={
 	id=629
 	name="STATE_629"
-	manpower = 368336
+	manpower = 96000
 	state_category = town
 	history={
-	owner = UNC
-
+		owner = UNC
+		buildings = {
+			infrastructure = 1
+		}
 	}
 
 	provinces={

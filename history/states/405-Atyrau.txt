@@ -5,39 +5,39 @@ state={
 	history={
 		owner = UZB
 		add_core_of = UZB
+		add_core_of = KAZ
 		victory_points = { # Tashkent
 			1459 20
 		}
-		victory_points = {
+		victory_points = { # Qaraköl
 			12161 5
 		}
 		victory_points = { # Bukhara
 			1573 50
 		}
-		victory_points = {
+		victory_points = { # Nurota
 			7775 5
 		}
 		victory_points = { # Samarkand
 			1216 20
 		}
-		victory_points = {
+		victory_points = { # Balkh
 			12239 5
 		}
-		victory_points = {
+		victory_points = { # Kerki
 			1632 4
 		}
-		victory_points = {
+		victory_points = { # Dushanbe
 			1384 3
 		}
-		victory_points = {
+		victory_points = { # Khujand
 			10187 5
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 2
 			arms_factory = 1
 		}
-		add_core_of = KAZ
 	}
 
 	provinces={

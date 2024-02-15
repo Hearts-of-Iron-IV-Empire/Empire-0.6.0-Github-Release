@@ -1,34 +1,48 @@
-
 state={
 	id=293
 	name="STATE_293"
 
 	history={
 		owner = YEM
+		add_core_of = YEM
+		victory_points = { # Sa'ada
+			1920 50 
+		}
+		victory_points = { # Say'un
+			4924 8
+		}
+		victory_points = { # Aden
+			5074 3 
+		}
+		victory_points = { # Mocha
+			10752 10
+		}
+		victory_points = { # Sana'a
+			10840 20 
+		}
+		victory_points = { # Al Mukalla
+			12821 5
+		}
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
 			10840 = {
-				naval_base = 1
-
+				naval_base = 2
 			}
-
+			10752 = {
+				naval_base = 2
+			}
+			5074 = {
+				naval_base = 2
+			}
 		}
-		victory_points = {
-			5074 1 
-		}
-		victory_points = {
-			10840 3 
-		}
-		add_core_of = YEM
-
 	}
 
 	provinces={
 		1920 1973 4924 5074 10752 10840 12821
 	}
-	manpower=289500
+	manpower=112039
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

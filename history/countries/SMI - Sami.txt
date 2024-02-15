@@ -1,4 +1,4 @@
-﻿capital = 148 #TODO_Manu: Other states in other countries?
+﻿capital = 148 
 
 #oob = ""
 

@@ -1,0 +1,21 @@
+state={
+	id=1046
+	name="STATE_1046"
+    resources = {
+		chromium = 20	
+	}
+
+	history = {
+		owner = UNC
+		1773.1.1 = {
+			add_core_of = PRU
+		}
+	}
+
+	provinces={
+		13083 
+	}
+	manpower=400
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

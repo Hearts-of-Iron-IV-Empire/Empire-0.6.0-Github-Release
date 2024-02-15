@@ -1,13 +1,12 @@
-state=
-{
+state={
 	id=327
 	name="STATE_327" # Luzon
 	manpower = 35486
 	
 	state_category = town
-	history=
-	{
+	history={
 		owner = PHI
+		add_core_of = PHI
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
@@ -16,13 +15,12 @@ state=
 				naval_base = 5
 			}
 		}
-		victory_points = {
-			10265 15 
+		victory_points = { # Manilla
+			10265 50 
 		}
 		victory_points = {
 			1221 1 
 		}
-		add_core_of = PHI
 	}
 
 	provinces={

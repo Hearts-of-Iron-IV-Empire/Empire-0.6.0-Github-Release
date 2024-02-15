@@ -5,11 +5,13 @@ state={
 
 	history={
 		owner = SWE
+		add_core_of = SWE
 		buildings = {
 			infrastructure = 2
-
 		}
-		add_core_of = SWE
+		victory_points = { # Falun
+			156 5
+		}
 	}
 
 	provinces={

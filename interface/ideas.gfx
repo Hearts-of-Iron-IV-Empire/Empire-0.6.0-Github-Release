@@ -34,17 +34,20 @@ spriteTypes = {
 		name = "GFX_idea_bureaucratic_gridlock"
 		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
 	}
+	
 	SpriteType = {
-		name = "GFX_idea_bureaucratic_gridlock"
-		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+		name = "GFX_idea_city_burning"
+		texturefile = "gfx/interface/ideas/idea_city_burning.dds" 
 	}
+	
 	SpriteType = {
-		name = "GFX_idea_bureaucratic_gridlock"
-		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+		name = "GFX_idea_sekban_rebellions"
+		texturefile = "gfx/interface/ideas/idea_sekban_rebellions.dds" 
 	}
+	
 	SpriteType = {
-		name = "GFX_idea_bureaucratic_gridlock"
-		texturefile = "gfx/interface/ideas/idea_bureaucratic_gridlock.dds" 
+		name = "GFX_idea_sweden_army"
+		texturefile = "gfx/interface/ideas/idea_sweden_army.dds" 
 	}
 	
 	SpriteType = {

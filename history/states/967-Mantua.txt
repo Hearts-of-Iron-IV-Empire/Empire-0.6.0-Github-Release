@@ -8,14 +8,13 @@ state={
 	history={
 		owner = MTU
 		add_core_of = MTU
-		victory_points = {
-			3776 5 
+		victory_points = { # Mantua
+			3776 50
 		}
 		buildings = {
-			infrastructure = 4
-			arms_factory = 1
-			industrial_complex = 1
-
+			infrastructure = 3
+			arms_factory = 2
+			industrial_complex = 2
 		}
 		1707.6.8 = {
 			owner = LOM

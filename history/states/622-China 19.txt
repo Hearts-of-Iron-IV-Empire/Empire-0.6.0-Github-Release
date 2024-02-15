@@ -18,19 +18,14 @@ state={
 			industrial_complex = 4
 			10733 = {
 				bunker = 2
-
 			}
 			12156 = {
 				bunker = 2
-
 			}
 			5007 = {
 				bunker = 2
-
 			}
-
 		}
-
 	}
 
 	provinces={

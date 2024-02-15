@@ -1,21 +1,19 @@
-
 state={
 	id=847
 	name="STATE_847"
 
 	history={
-		victory_points = {
-			12164 1 
-		}
-		buildings = {
-			infrastructure = 1
-			12164 = {
-				naval_base = 3
-			}
-		}
 		owner = DEN
 		add_core_of = RAJ
-
+		victory_points = {
+			12164 5 
+		}
+		buildings = {
+			infrastructure = 2
+			12164 = {
+				naval_base = 4
+			}
+		}
 	}
 
 	provinces={

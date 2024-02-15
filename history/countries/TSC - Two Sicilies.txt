@@ -1,8 +1,8 @@
 ﻿capital = 117
 
-oob = "TSC"
+oob = "TSC_1699"
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {

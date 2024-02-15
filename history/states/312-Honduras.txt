@@ -1,5 +1,4 @@
-state=
-{
+state={
 	id=312
 	name="STATE_312"
 	manpower=140978
@@ -8,9 +7,9 @@ state=
 	}
 	
 	state_category = town
-	history=
-	{
+	history={
 		owner = MEX
+		add_core_of = MEX
 		buildings = {
 			infrastructure = 1
 			12865 = {
@@ -20,7 +19,6 @@ state=
 				naval_base = 1
 			}
 		}
-		add_core_of = MEX
 		victory_points = {
 			12865 3 
 		}

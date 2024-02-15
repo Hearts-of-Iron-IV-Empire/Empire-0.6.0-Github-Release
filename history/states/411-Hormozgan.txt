@@ -19,8 +19,8 @@ state={
 			industrial_complex = 4
 			arms_factory = 2
 		}
-		victory_points = {
-			2026 20
+		victory_points = { # Isfahan
+			2026 50
 		}
 	}
 

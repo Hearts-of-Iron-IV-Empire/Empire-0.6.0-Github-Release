@@ -2,7 +2,11 @@
 
 oob = "GEO_1936"
 
-set_research_slots = 3
+set_research_slots = 2
+
+add_ideas = {
+	catholic
+}
 
 # Starting tech
 set_technology = {
@@ -11,10 +15,8 @@ set_technology = {
 	tech_recon = 1
 	tech_support = 1		
 	tech_engineers = 1
-	tech_military_police = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
-	fleet_in_being = 1
 }
 
 if = {
@@ -49,20 +51,13 @@ if = {
 }
 
 set_popularities = {
-	democratic = 25
-	communism = 75
+	democratic = 0
+	fascism = 0
+	communism = 0
+	neutrality = 90
+	aristocracy = 10
 }
 
-create_country_leader = {
-	name = "Noe Zhordania"
-	desc = ""
-	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
-	expire = "1953.3.1"
-	ideology = liberalism
-	traits = {
-		
-	}
-}
 
 
 #couldnt find anything else, the commies simply forced everyone else into exile

@@ -2,15 +2,17 @@
 
 oob = "Imperial_army"
 
-set_research_slots = 3
+set_research_slots = 2
 set_stability = 0.8
 set_war_support = 0.3 #we see what you are doing there Adolf
 
 add_ideas = {
-	disarmed_nation
-	catholic
 	closure_of_the_scheldt
 	barrier_treaty
+
+	# Laws and Religion
+	disarmed_nation
+	catholic
 }
 
 set_technology = {

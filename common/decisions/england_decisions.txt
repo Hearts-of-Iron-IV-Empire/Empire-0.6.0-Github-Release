@@ -5,11 +5,14 @@ political_actions = {
 		}
 		visible = {
 			has_completed_focus = eng_form_the_long_parliament
+			NOT = {
+				has_country_flag = ENG_rebellion_begun
+			}
 		}
 		cost = 50
 		is_good = yes
 		fire_only_once = no
-		days_re_enable = 5
+		days_re_enable = 50
 
 		complete_effect = {	
 			add_days_mission_timeout = {
@@ -118,6 +121,7 @@ political_actions = {
 				set_equipment_fraction = 0.7
 				set_stability = 0.9
 				set_war_support = 0.8
+				set_country_flag = ENG_rebellion_begun
 			}
 		}
 	}

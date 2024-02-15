@@ -4,23 +4,20 @@ state={
 
 	history={
 		owner = MEC
-		victory_points = {
+		add_core_of = MEC
+		victory_points = { # Rostock
 			321 5 
 		}
-		victory_points = {
-			11276 10
+		victory_points = { # Schwerin
+			11276 50
 		}
 		buildings = {
 			infrastructure = 3
 			arms_factory = 3
 			321 = {
 				naval_base = 6
-
 			}
-
 		}
-		add_core_of = MEC
-
 	}
 
 	provinces={

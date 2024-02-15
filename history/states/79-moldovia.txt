@@ -7,18 +7,21 @@ state={
 	
 	history={
 		owner = MOL
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-		}
-		victory_points = {
-			9716 10
-		}
-		victory_points = {
-			6706 5
-		}
 		add_core_of = ROM
 		add_core_of = MOL
+		add_extra_state_shared_building_slots = 2
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 3
+		}
+		victory_points = {
+			9716 50
+		}
+		victory_points = {
+			6706 20
+		}
 	}
-	provinces={ 723 744 3728 3741 6584 6706 6729 6747 6761 9701 9716 11534 11652 11655 11672 11689 	}
+	provinces={
+		723 744 3728 3741 6584 6706 6729 6747 6761 9701 9716 11534 11652 11655 11672 11689 
+	}
 }

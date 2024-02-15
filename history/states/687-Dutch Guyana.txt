@@ -1,0 +1,21 @@
+state={
+	id=687
+	name="STATE_687"
+	resources={
+		aluminium=64 # was: 112
+	}
+	manpower = 57000
+	
+	state_category = pastoral
+
+	history={
+		owner = HOL
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		4982 8107 12716 
+	}
+}

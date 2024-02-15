@@ -1,6 +1,8 @@
 capital = 838
 
-set_stability = 0.20
+set_research_slots = 1
+
+set_stability = 0.30
 set_war_support = 0.5
 # Starting tech
 set_technology = {
@@ -9,13 +11,14 @@ set_technology = {
 	tech_support = 1		
 	tech_engineers = 1
 	tech_recon = 1
-	transport = 1
 }
 
 set_convoys = 20
 
 add_ideas = {
 	tribal_centralization_0
+
+	# Laws and Religion
 	totemism
 }
 

@@ -1,15 +1,18 @@
-
 state={
 	id=892
 	name="STATE_892"
 
 	history={
+		owner = BSG
+		add_core_of = BSG
+		victory_points = { # Brunswick
+			425 50
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
+			arms_factory = 2
 		}
-		owner = BSG
-		add_core_of = BSG
 		1812.1.1 = {
 			owner = MUN
 			add_core_of = MUN

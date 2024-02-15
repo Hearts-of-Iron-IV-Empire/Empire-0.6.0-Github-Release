@@ -1,6 +1,6 @@
 characters = {
     POL_Frederick_Augustus = {
-        name = "Frederick Augustus"
+        name = "Augustus II"
         portraits = {
             civilian = {
                 large = "GFX_Frederick_Augustus"
@@ -12,7 +12,7 @@ characters = {
         country_leader = {
             expire = 1729.1.1
             ideology = despotism
-            traits = { disputed_reign }
+            traits = { disputed_reign absolutist_reformer }
             desc = POLITICS_FREDERICK_AUGUSTUS_DESC
         }
         field_marshal = {
@@ -98,7 +98,7 @@ characters = {
             }
         }
         corps_commander = {
-            traits = { armor_officer }
+            traits = { cavalry_expert }
             skill = 3
             attack_skill = 2
             defense_skill = 3

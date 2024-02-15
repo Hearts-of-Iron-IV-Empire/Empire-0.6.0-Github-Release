@@ -14,6 +14,10 @@ script_enum_advisor_slot_type = {
 	air_chief
 	politiscript_enum_equipment_bonus_typel_advisor
 	chief_diplomatic_advisor
+
+	# Mod
+	chief_economic_advisor
+	political_advisor
 	spymaster
 }
 

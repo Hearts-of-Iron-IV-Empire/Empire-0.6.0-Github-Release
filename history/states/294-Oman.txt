@@ -1,33 +1,37 @@
 state={
 	id=294
 	name="STATE_294"
-	resources={
-		oil=6.000
-	}
+	#resources={
+	#	oil=6.000
+	#}
 
 	history={
 		owner = OMA
+		add_extra_state_shared_building_slots = 10
 		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1
+			infrastructure = 3
+			arms_factory = 5
+			industrial_complex = 10
+			4993 = {
+				naval_base = 7
+				bunker = 2
+			}
 			10760 = {
-				naval_base = 3
+				naval_base = 4
 			}
 		}
-		victory_points = {
-			10760 50 
+		victory_points = { # Rustaq
+			4993 50 
 		}
-		victory_points = {
-			8020 20
+		victory_points = { # Muscat
+			10760 20 
 		}
-		victory_points = {
-			4993 10
+		victory_points = { # Sur
+			8020 15
 		}
-		victory_points = {
+		victory_points = { # Khasab
 			10904 5 
 		}
-
 	}
 
 	provinces={
@@ -35,6 +39,6 @@ state={
 	}
 	manpower=199000
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 	local_supplies=0.000
 }

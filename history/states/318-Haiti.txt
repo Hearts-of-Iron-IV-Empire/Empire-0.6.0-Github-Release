@@ -1,7 +1,7 @@
 state={
 	id=318
 	name="STATE_318"
-	manpower = 56078
+	manpower = 50000
 	
 	state_category = town
 	
@@ -9,9 +9,9 @@ state={
 		chromium=2 # was: 3
 	}
 	history = {
-		add_extra_state_shared_building_slots = 2
 		owner = FRA
-		add_core_of = HAI
+		#add_core_of = HAI
+		add_extra_state_shared_building_slots = 2
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1

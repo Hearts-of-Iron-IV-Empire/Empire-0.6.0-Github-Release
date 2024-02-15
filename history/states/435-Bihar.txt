@@ -6,14 +6,11 @@ state={
 		owner = RAJ
 		add_core_of = BAN
 		add_extra_state_shared_building_slots = 5
-		victory_points = {
-			1569 5
-		}
-		victory_points = {
+		victory_points = { # Patna
 			4516 20 
 		}
-		victory_points = {
-			10471 5 
+		victory_points = { # Bodh Gaya
+			12307 10 
 		}
 		buildings = {
 			infrastructure = 2

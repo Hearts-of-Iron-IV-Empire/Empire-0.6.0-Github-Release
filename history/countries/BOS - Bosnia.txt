@@ -1,6 +1,6 @@
 ﻿capital = 104
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 # clone of Yugoslavia
@@ -39,5 +39,8 @@ if = {
 	}
 }
 
-set_popularities = {	fascism = 33	neutrality = 33	communism = 34
+set_popularities = {
+	fascism = 33
+	neutrality = 33
+	communism = 34
 }

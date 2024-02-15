@@ -1,0 +1,975 @@
+focus_tree = {
+	id = SCO_focus_tree 
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = SCO
+		}
+	}
+
+	focus = {
+		id = SCO_the_scottish_nation
+		icon = GFX_goal_unknown
+		x = 15
+		y = 0
+
+		cost = 5 
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_glory_to_the_rightful_king
+		icon = GFX_goal_unknown
+		x = -5
+		y = 1
+		relative_position_id = SCO_the_scottish_nation
+		prerequisite = { focus = SCO_the_scottish_nation }
+		mutually_exclusive = { focus = SCO_accept_william_as_the_king }
+
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = {
+		id = SCO_act_of_security
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_glory_to_the_rightful_king
+		prerequisite = { focus = SCO_glory_to_the_rightful_king }
+
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_the_old_pretender
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_act_of_security
+		prerequisite = { focus = SCO_act_of_security }
+
+		cost = 5
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		completion_reward = {
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	focus = {
+		id = SCO_support_from_the_catholics
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = SCO_the_old_pretender
+		prerequisite = { focus = SCO_the_old_pretender }
+		mutually_exclusive = { focus = SCO_support_from_the_highlands }
+		search_filters = { FOCUS_FILTER_MEX_CHURCH_AUTHORITY } 
+
+		cost = 10
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_support_from_the_highlands
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = SCO_the_old_pretender
+		prerequisite = { focus = SCO_the_old_pretender }
+		mutually_exclusive = { focus = SCO_support_from_the_catholics }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = 25
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_god_save_the_king
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = SCO_support_from_the_highlands
+		prerequisite = { focus = SCO_support_from_the_catholics }
+		prerequisite = { focus = SCO_support_from_the_highlands }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_scotland_independent_and_free
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_god_save_the_king
+		prerequisite = { focus = SCO_god_save_the_king }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		
+		cost = 10
+		
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_the_scottishirish_agreement
+		icon = GFX_goal_unknown
+		x = -3
+		y = 1
+		relative_position_id = SCO_scotland_independent_and_free
+		prerequisite = { focus = SCO_scotland_independent_and_free }
+		mutually_exclusive = { focus = SCO_join_the_bourbon_alliance }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		
+		cost = 10
+
+		available = {
+			country_exists = IRE
+		}
+		
+		completion_reward = {
+			create_faction = "Anti-English Coalition"
+			add_to_faction = IRE
+			add_political_power = 50
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_join_the_bourbon_alliance
+		icon = GFX_goal_unknown
+		x = 3
+		y = 1
+		relative_position_id = SCO_scotland_independent_and_free
+		prerequisite = { focus = SCO_scotland_independent_and_free }
+		mutually_exclusive = { focus = SCO_the_scottishirish_agreement }
+
+		available = {
+			is_puppet = no
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			FRA = { add_to_faction = SCO }
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_claims_on_england
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = SCO_scotland_independent_and_free
+		prerequisite = { focus = SCO_the_scottishirish_agreement focus = SCO_join_the_bourbon_alliance }
+
+		cost = 5
+
+		completion_reward = {
+			add_state_claim = 131
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_celtic_kingdom
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = SCO_the_scottishirish_agreement
+		prerequisite = { focus = SCO_the_scottishirish_agreement }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			add_stability = 0.15
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_strike_at_the_english
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_claims_on_england
+		prerequisite = { focus = SCO_claims_on_england }
+
+		bypass = {
+			ENG = { exists = no }
+		}
+
+		available = {
+			country_exists = ENG
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		cost = 10
+				
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = ENG 
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	
+	focus = {
+		id = SCO_the_united_kingdom_of_great_britain
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_strike_at_the_english
+		prerequisite = { focus = SCO_strike_at_the_english }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_integrate_ireland
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_the_united_kingdom_of_great_britain
+		prerequisite = { focus = SCO_the_united_kingdom_of_great_britain }
+		
+		available = {
+			country_exists = IRE
+			has_war = no
+		}
+
+		cost = 10
+
+		completion_reward = {
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_demand_brittany
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_integrate_ireland
+		prerequisite = { focus = SCO_integrate_ireland }
+
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		cost = 10
+		
+		completion_reward = {
+			
+		}
+		 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_expand_our_influence
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = SCO_integrate_ireland
+		prerequisite = { focus = SCO_integrate_ireland }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = 0.5
+		}
+	}
+
+	focus = {
+		id = SCO_demand_nova_scotia
+		icon = GFX_nova_scotia
+		x = 2
+		y = 1
+		relative_position_id = SCO_integrate_ireland
+		prerequisite = { focus = SCO_integrate_ireland }
+
+		bypass = {
+			SCO = { owns_state = 464 }
+		}
+
+		available = {
+			FRA = { owns_state = 464 }
+		}
+
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		cost = 10
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_finish_france
+		icon = GFX_kill_france
+		x = 0
+		y = 1
+		relative_position_id = SCO_demand_brittany
+		prerequisite = { focus = SCO_demand_nova_scotia }
+		prerequisite = { focus = SCO_expand_our_influence }
+		prerequisite = { focus = SCO_demand_brittany }
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		cost = 10
+
+		completion_reward = {
+			create_wargoal = { 
+				type = annex_everything 
+				target = FRA 
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+##################################
+###### Irish Revolt Branch  ######
+##################################
+
+	focus = {
+		id = SCO_the_irish_revolt
+		icon = GFX_goal_unknown
+		x = 0
+		y = 2
+		relative_position_id = SCO_the_scottish_nation
+
+		available = {
+			IRE = { has_war_with = ENG }
+		}
+
+		cost = 1
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_support_the_irish_cause
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_the_irish_revolt
+		prerequisite = { focus = SCO_the_irish_revolt }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_send_the_volunteers
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_support_the_irish_cause
+		prerequisite = { focus = SCO_support_the_irish_cause }
+		search_filters = { FOCUS_FILTER_MANPOWER } 
+
+		available = {
+			IRE = { has_war_with = ENG }
+		}
+
+		cost = 10
+
+		completion_reward = {
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+
+	#Focus for economy focus
+	focus = {
+		id = SCO_economy_focus
+		icon = GFX_goal_unknown
+		x = 32
+		y = 0
+		cost = 10
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Exploit the lands
+	focus = {
+		id = SCO_exploit_the_lands
+		icon = GFX_goal_unknown
+		x = 31
+		y = 1
+		cost = 10
+		prerequisite = { focus = SCO_economy_focus }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Build up the military
+	focus = {
+		id = SCO_build_up_the_military
+		icon = GFX_goal_unknown
+		x = 33
+		y = 1
+		cost = 10
+		prerequisite = { focus = SCO_economy_focus }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Scottish roads
+	focus = {
+		id = SCO_scottish_roads
+		icon = GFX_goal_unknown
+		x = 31
+		y = 2
+		cost = 10
+		prerequisite = { focus = SCO_exploit_the_lands }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Civilian appreciation
+	focus = {
+		id = SCO_civilian_appreciation
+		icon = GFX_goal_unknown
+		x = 30
+		y = 3
+		cost = 10
+		prerequisite = { focus = SCO_scottish_roads }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Industrial Reforms
+	focus = {
+		id = SCO_industrial_reforms
+		icon = GFX_goal_unknown
+		x = 33
+		y = 2
+		cost = 10
+		prerequisite = { focus = SCO_build_up_the_military }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Striving military
+	focus = {
+		id = SCO_striving_military
+		icon = GFX_goal_unknown
+		x = 34
+		y = 3
+		cost = 10
+		prerequisite = { focus = SCO_industrial_reforms }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Research focus
+	focus = {
+		id = SCO_research_focus
+		icon = GFX_goal_unknown
+		x = 32
+		y = 4
+		cost = 10
+		prerequisite = { 
+			focus = SCO_civilian_appreciation 
+		}
+		prerequisite = { 
+			focus = SCO_striving_military 
+		}
+		search_filters = { FOCUS_FILTER_RESEARCH } 
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	
+#####################################
+######## King William Branch ########
+#####################################
+
+	focus = {
+		id = SCO_accept_william_as_the_king
+		icon = GFX_goal_unknown
+		x = 4
+		y = 1
+		relative_position_id = SCO_the_scottish_nation
+		prerequisite = { focus = SCO_the_scottish_nation }
+		mutually_exclusive = { focus = SCO_glory_to_the_rightful_king }
+		
+		cost = 10
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+	}
+	
+
+	focus = {
+		id = SCO_the_great_british_union
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_accept_william_as_the_king
+		prerequisite = { focus = SCO_accept_william_as_the_king }
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		cost = 10
+
+		completion_reward = {
+			ENG = {
+				annex_country = {
+					target = ROOT
+				}
+			}		
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+##########################
+###### Army Branch  ######
+##########################
+
+	focus = {
+		id = SCO_army_focus
+		icon = GFX_goal_unknown
+		x = -5
+		y = 0
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT	} 
+
+		cost = 5
+
+		completion_reward = {
+			add_war_support = 0.1
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_familiar_terrain
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_army_focus
+		prerequisite = { focus = SCO_army_focus }
+
+		search_filters = { FOCUS_FILTER_ARMY_XP	} 
+
+		cost = 10
+
+		completion_reward = {
+			army_experience = 25
+		}
+		
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_offensive_warfare
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = SCO_familiar_terrain
+		prerequisite = { focus = SCO_familiar_terrain }
+		mutually_exclusive = { focus = SCO_defensive_warfare }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+
+		cost = 10
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+				category = cat_superior_firepower
+			}
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_defensive_warfare
+		icon = GFX_goal_unknown
+		x = -2
+		y = 1
+		relative_position_id = SCO_familiar_terrain
+		prerequisite = { focus = SCO_familiar_terrain }
+		mutually_exclusive = { focus = SCO_offensive_warfare }
+
+		cost = 10
+
+		completion_reward = {
+			add_doctrine_cost_reduction = {
+				name = land_doc_bonus
+				cost_reduction = 0.5
+				uses = 1
+			category = cat_grand_battle_plan
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_rebuild_the_roman_walls
+		icon = GFX_goal_unknown
+		x = 0
+		y = 1
+		relative_position_id = SCO_defensive_warfare
+		prerequisite = { focus = SCO_defensive_warfare }
+
+		available = {
+			121 = {
+				is_owned_and_controlled_by = ROOT
+			}
+			133 = {
+				is_owned_and_controlled_by = ROOT
+			}
+		}
+
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		
+		cost = 10
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = {
+					121
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11378
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 9314
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					133
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11218
+				}
+			}
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_kingdom_of_the_mountains
+		icon = GFX_focus_GRE_a_land_of_mountains
+		x = 0
+		y = 1
+		relative_position_id = SCO_rebuild_the_roman_walls
+		prerequisite = { focus = SCO_offensive_warfare }
+
+		cost = 10
+
+		completion_reward = {
+			add_ideas = SCO_kingdom_of_the_mountains_idea
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	focus = {
+		id = SCO_antienglish_sentiment
+		icon = GFX_goal_unknown
+		x = 2
+		y = 1
+		relative_position_id = SCO_kingdom_of_the_mountains
+		prerequisite = { focus = SCO_kingdom_of_the_mountains }
+		
+		cost = 10
+
+		completion_reward = {
+			
+		}
+
+		ai_will_do = {
+			factor = 25
+		}
+	}
+
+	#Focus for Naval Effort
+	focus = {
+		id = SCO_naval_effort
+		icon = GFX_goal_unknown
+		x = 27
+		y = 4
+		cost = 10
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+		completion_reward = {
+			navy_experience = 15
+		}
+	}
+	#Focus for Merchant Navy
+	focus = {
+		id = SCO_merchant_navy
+		icon = GFX_goal_unknown
+		x = 26
+		y = 5
+		cost = 10
+		prerequisite = { focus = SCO_naval_effort }
+		mutually_exclusive = { focus = SCO_fleet_in_being }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Privateering Effort
+	focus = {
+		id = SCO_privateering_effort
+		icon = GFX_goal_unknown
+		x = 25
+		y = 6
+		cost = 10
+		prerequisite = { focus = SCO_merchant_navy }
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Fleet in being
+	focus = {
+		id = SCO_fleet_in_being
+		icon = GFX_goal_unknown
+		x = 28
+		y = 5
+		cost = 10
+		prerequisite = { focus = SCO_naval_effort }
+		mutually_exclusive = { focus = SCO_merchant_navy }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Destroyer Effort
+	focus = {
+		id = SCO_destroyer_effort
+		icon = GFX_goal_unknown
+		x = 25
+		y = 7
+		cost = 10
+		prerequisite = { focus = SCO_privateering_effort }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Frigate Effort
+	focus = {
+		id = SCO_frigate_effort
+		icon = GFX_goal_unknown
+		x = 27
+		y = 6
+		cost = 10
+		prerequisite = { 
+			focus = SCO_fleet_in_being 
+			focus = SCO_merchant_navy 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Conquest of Paradise
+	focus = {
+		id = SCO_conquest_of_paradise
+		icon = GFX_goal_unknown
+		x = 27
+		y = 7
+		cost = 10
+		prerequisite = { focus = SCO_frigate_effort }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Man-of-War Effort
+	focus = {
+		id = SCO_manofwar_effort
+		icon = GFX_goal_unknown
+		x = 29
+		y = 6
+		cost = 10
+		prerequisite = { focus = SCO_fleet_in_being }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+	#Focus for Ship of The Line Models
+	focus = {
+		id = SCO_ship_of_the_line_models
+		icon = GFX_goal_unknown
+		x = 29
+		y = 7
+		cost = 10
+		prerequisite = { focus = SCO_manofwar_effort }
+		ai_will_do = {
+			factor = 25
+		}
+	}
+#End of focuses 
+ }

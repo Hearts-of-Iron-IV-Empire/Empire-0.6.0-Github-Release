@@ -1,4 +1,3 @@
-
 state={
 	id=125
 	name="STATE_125"
@@ -8,18 +7,24 @@ state={
 
 	history={
 		owner = ENG
-		victory_points = { 271 20 }
-		victory_points = { 221 15 }
-		victory_points = { 296 10 }
+		add_core_of = ENG
+		victory_points = { # Norwich
+			271 20 
+		}
+		victory_points = { # Ipswich
+			221 15 
+		}
+		victory_points = { 
+			296 10 
+		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 2
 			271 = {
 				naval_base = 3
 			}
 		}
-		add_core_of = ENG
 	}
 
 	provinces={

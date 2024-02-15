@@ -3,28 +3,31 @@ state={
 	name="STATE_95"
 
 	history={
-		victory_points = {
-			9304 1
-		}
 		owner = POL
-		buildings = {
-			infrastructure = 3
-
-		}
 		add_core_of = POL
 		add_core_of = BLR
+		victory_points = { # Baranowicze
+			9304 1 
+		}
+		victory_points = { # Salihorsk
+			11313 1 
+		}
+		buildings = {
+			infrastructure = 3
+		}
 		1798.1.1 = {
 			owner = SOV
 		}
 		1812.1.1 = {
 			controller = FRA
 		}
-	}	
+	}
 
 	provinces={
-		318 3281 3366 3393 6359 6413 9236 9304 9359 11341 13206 
+		304 318 360 3281 3366 3759 6359 6413 9236 9304 9359 11313 11341 
 	}
 	manpower=398900
 	buildings_max_level_factor=1.000
 	state_category=rural
+	local_supplies=0.000
 }

@@ -736,7 +736,7 @@ upgrade_intelligence_agency_as_spy_master = {
 	}
 }
 
-addintelligence_agency_normal_upgrade_prio = {
+add_intelligence_agency_normal_upgrade_prio = {
 	enable = {
 		always = yes
 	}

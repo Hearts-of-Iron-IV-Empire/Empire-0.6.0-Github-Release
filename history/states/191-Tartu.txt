@@ -1,11 +1,13 @@
 state={
 	id=191
-	name="STATE_191"
+	name="STATE_191" # Pernau
 	
 	state_category = rural
 
 	history={
 		owner = SWE
+		add_core_of = EST
+		add_claim_by = POL
 		victory_points = {
 			9221 1 
 		}
@@ -18,7 +20,6 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = EST
 		1712.1.1 = {
 			owner = SWE
 			controller = SOV

@@ -4,17 +4,18 @@ set_oob = "ENG_1699"
 set_convoys = 120
 set_naval_oob = "ENG_1936_Naval"
 
-
 set_research_slots = 3
 
 set_stability = 0.6
 set_war_support = 0.2
 
 add_ideas = {
-	protestant
-	kingdom
 	ENG_Irish_opposition
 	ENG_legacy
+
+	# Laws and Religion
+	protestant
+	kingdom
 }
 
 if = {
@@ -31,8 +32,14 @@ if = {
 		freedom_level = 0.4
 	}
 
+	set_autonomy = {
+		target = SCO
+		autonomous_state = autonomy_puppet
+	}
+
 	else = {
 		puppet = USA
+		puppet = SCO
 	}
 }
 
@@ -263,19 +270,6 @@ add_to_faction = HOL
 	}
 }
 
-# DIPLOMACY
-if = {
-	limit = {
-		OR = {
-			has_dlc = "Together for Victory"
-			has_dlc = "Man the Guns"
-		}
-	}
-	set_autonomy = {
-		target = SCO
-		autonomous_state = autonomy_puppet
-	}
-}
 
 set_politics = {
 	ruling_party = neutrality
@@ -305,7 +299,7 @@ recruit_character = ENG_James_Mordaunt # General
 recruit_character = ENG_John_Richard_Webb # General
 
 if = {
-	limit = { not = { has_dlc = "Man the Guns" } }
+	limit = { NOT = { has_dlc = "Man the Guns" } }
 	### Variants ###
 	# Submarines #
 	create_equipment_variant = {

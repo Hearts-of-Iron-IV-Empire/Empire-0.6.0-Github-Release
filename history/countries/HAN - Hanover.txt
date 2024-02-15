@@ -1,16 +1,16 @@
 ﻿capital = 59
 
-load_oob = Imperial_army
+set_research_slots = 2
 set_country_flag = HRE_imperial_subject
-
-set_research_slots = 3
+load_oob = "Imperial_army"
 
 set_convoys = 30
 
-
 add_ideas = {
-	protestant
 	PRS_status_elector
+	
+	# Laws and Religion
+	protestant
 }
 
 give_military_access = AUS

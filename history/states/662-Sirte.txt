@@ -1,15 +1,15 @@
-
 state={
 	id=662
 	name="STATE_662"
 
 	history={
-		owner = UNC
+		owner = ETH
+		victory_points = { # Asmara
+			5017 5
+		}
 		buildings = {
 			infrastructure = 1
-
 		}
-
 	}
 
 	provinces={

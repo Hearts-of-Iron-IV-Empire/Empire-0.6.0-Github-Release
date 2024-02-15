@@ -84,14 +84,14 @@ bookmarks = {
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = neutrality	
 			ideas = {
-			    RUS_russians_fleeing_serfdom
+			    RUS_boyar_duma
 				russian_orthodox_church
-				RUS_streltsy_purge_5
+				RUS_outdated_military
 			}
 			focuses = {
-				RUS_icon_of_christ_pancreator
-				RUS_crush_sweden
-				RUS_colonize_alaska
+				RUS_treaty_of_preobrazhenskoye 
+				RUS_formulate_governing_senate
+				RUS_imperial_russian_army
 			}
 		}
 
@@ -328,16 +328,19 @@ bookmarks = {
 			history = ""
 			ideology = neutrality
 		}
-
-		"ZAP"={
+		
+        "ZAP"={
 			minor = yes
 			history = "ZAP_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-				
+				RUS_influx_of_russian_refugees
+				ZAP_decentralized_cossack_army
 			}
 			focuses = {
-				
+				ZAP_proclaim_cossack_hetmanate
+				ZAP_side_with_right_bank_cossacks
+				ZAP_switch_capital_to_poltava
 			}
 		}
 		

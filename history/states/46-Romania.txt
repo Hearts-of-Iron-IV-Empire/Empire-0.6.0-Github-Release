@@ -7,19 +7,18 @@ state={
 
 	history={
 		owner = ROM
-		victory_points = {
-			9617 20 
+		add_core_of = ROM
+		victory_points = { # Bucharest
+			9617 50 
 		}
-		victory_points = {
+		victory_points = { # Ploiesti
 			3663 5 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			arms_factory = 4
 			industrial_complex = 1
 		}
-		add_core_of = ROM
-
 	}
 
 	provinces={

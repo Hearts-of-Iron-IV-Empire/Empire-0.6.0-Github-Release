@@ -8,8 +8,8 @@ state={
 	history = {
 		owner = SIK
 		add_core_of = SIK
-		victory_points = {
-			1910 50
+		victory_points = { # Srinagar
+			1910 20
 		}
 		victory_points = {
 			2084 5

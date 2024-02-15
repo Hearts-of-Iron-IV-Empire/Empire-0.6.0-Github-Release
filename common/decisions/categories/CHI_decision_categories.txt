@@ -10,12 +10,12 @@ CHI_border_clashes = {
 	picture = generic_border_conflicts
 	icon = border_conflicts
 	allowed = {
-		is_literally_china = yes
+		always = no
 	}	
 }
 
 CHI_warlord_in_opposition = {
 	allowed = {
-		is_literally_china = yes
+		always = no
 	}	
 }

@@ -1,6 +1,6 @@
 set_research_slots = 3
 capital = 968
-load_oob = Imperial_army
+load_oob = "Imperial_army"
 
 # Starting tech
 set_technology = {

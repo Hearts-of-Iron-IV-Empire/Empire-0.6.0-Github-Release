@@ -1,0 +1,25 @@
+state={
+	id=1053
+	name="STATE_1053"
+	manpower = 2000
+	state_category = town
+
+	history={
+		owner = POL
+		add_core_of = POL
+		add_claim_by = PRS
+		victory_points = { # Elbląg
+			3380 15
+		}
+		buildings = {
+			infrastructure = 2
+			3380 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	provinces={
+		3380
+	}
+}

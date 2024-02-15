@@ -1,0 +1,18 @@
+state={
+	id=1045
+	name="STATE_1045"
+
+    history = {
+		owner = UNC
+		buildings = {
+			infrastructure = 1      
+		}
+	}
+
+	provinces={
+		12825 
+	}
+	manpower=250
+	buildings_max_level_factor=1.000
+    state_category=pastoral
+}

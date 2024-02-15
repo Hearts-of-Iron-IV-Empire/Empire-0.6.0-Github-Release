@@ -8,8 +8,11 @@ state={
 	history={
 		owner = POL
 		add_core_of = POL
-		victory_points = {
+		victory_points = { # Poznań
 			6558 15 
+		}
+		victory_points = { # Gniezno
+			17 5
 		}
 		buildings = {
 			infrastructure = 3

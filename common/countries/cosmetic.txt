@@ -8,6 +8,11 @@ SONGHAI_formable = {
 	color_ui = rgb { 147 33 13 }
 }
 
+MONGOL_formable= {
+	color = rgb { 0 163 233 }
+	color_ui = rgb { 0 163 233 }
+}
+
 ITA_sardinia_piedmont = {
 	color = rgb { 104 209 206 }
 	color_ui = rgb { 104 209 206 }

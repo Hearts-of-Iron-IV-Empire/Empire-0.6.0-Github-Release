@@ -8,6 +8,7 @@ state={
 
 	history={
 		owner = PRS
+		add_core_of = PRS
 		victory_points = {
 			11372 3 
 		}
@@ -16,13 +17,8 @@ state={
 			industrial_complex = 1
 			11372 = {
 				naval_base = 1
-
 			}
-
-
 		}
-		add_core_of = PRS
-
 	}
 
 	provinces={

@@ -34,15 +34,6 @@ FRA_religious_troubles = {
 	}
 }
 
-TUR_janissar_revolt_category = {
-	icon = power_struggle
-	allowed = {
-		original_tag = TUR
-	}
-
-	picture = GFX_decision_cat_generic_ottoman_empire
-}
-
 USA_moving_the_frontier = {
 	icon = decision_category_border_conflicts
 	visible = {
@@ -101,7 +92,11 @@ SPR_colonial_management = {
 
 RUS_great_northern_war = {
 	allowed = {
-		original_tag = SOV
+		OR = {
+			original_tag = SOV
+			tag = SWE
+			tag = POL
+		}	
 	}
 }
 
@@ -342,8 +337,34 @@ MUG_economic_decisions = {
 	}
 }
 
+TUR_janissar_revolt_category = {
+	icon = power_struggle
+	allowed = {
+		original_tag = TUR
+	}
+
+	picture = GFX_decision_cat_generic_ottoman_empire
+}
+
 TUR_negotiating_peace = {
 	icon = generic_political_actions
+
+	allowed = { 
+		original_tag = TUR
+	}
+}
+
+TUR_balkans = {
+	icon = generic_building
+	allowed = { 
+		original_tag = TUR
+	}
+
+	picture = GFX_decision_category_balkans
+}
+
+TUR_african_expansion = {
+	icon = generic_building
 
 	allowed = { 
 		original_tag = TUR

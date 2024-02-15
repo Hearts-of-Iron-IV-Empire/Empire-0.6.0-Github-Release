@@ -12,7 +12,7 @@ characters = {
         }
     }
     SAX_Frederick_Augustus = {
-        name = "Frederick Augustus"
+        name = "Augustus II"
         portraits = {
             civilian = {
                 large = "GFX_Frederick_Augustus"

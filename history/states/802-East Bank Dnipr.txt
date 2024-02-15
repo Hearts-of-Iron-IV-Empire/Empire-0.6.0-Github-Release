@@ -1,30 +1,26 @@
-
 state={
 	id=802
 	name="STATE_802"
 
 	history={
 		owner = ZAP
-		victory_points = {
+		add_core_of = ZAP
+		victory_points = { # Alexandrovsk
 			11405 1 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 2
 			arms_factory = 2
 			industrial_complex = 1
-
 		}
-		add_core_of = ZAP
 		1711.5.1 = {
 			owner = SOV
 			controller = SOV
-
 		}
-
 	}
 
 	provinces={
-		453 472 486 502 3399 3466 3508 6530 9463 11405 11452 11461 
+		453 472 486 502 588 3399 3466 3479 3508 6474 6493 6505 9463 11405 11452 11461 
 	}
 	manpower=21324
 	buildings_max_level_factor=1.000

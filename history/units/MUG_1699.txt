@@ -46,8 +46,6 @@ division_template = {
 	}
 
 	support = {
-		artillery = { x = 0 y = 0 }
-		engineer = { x = 0 y = 1 }
 		logistics_company = { x = 0 y = 2 }
 	}
 }
@@ -231,30 +229,6 @@ units = {
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 12142
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 12142
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 4072
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 4072
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
 	division= {	# "Near Surat"
 		name = "Sowars"
 		location = 7150
@@ -270,18 +244,6 @@ units = {
 
 	##### End of Maratha Front #####
 
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 8087
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
-	division= {	# "Hyderabad"
-		name = "Sowars"
-		location = 8087
-		division_template = "Sowars"
-		start_experience_factor = 0.8
-	}
 	division= {	# "Aurangabad"
 		name = "Sowars"
 		location = 10019

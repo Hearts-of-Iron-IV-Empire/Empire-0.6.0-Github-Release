@@ -111,6 +111,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_german_borderclashes
 		}
+		
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -155,6 +156,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_german_borderclashes
 		}
+
 		complete_effect = {
 			start_border_war = {
 			change_state_after_war = no
@@ -198,6 +200,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_german_borderclashes
 		}
+
 		complete_effect = {
 			start_border_war = {
 			change_state_after_war = no
@@ -241,6 +244,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_claim_silezia
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -284,6 +288,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_claim_silezia
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -324,6 +329,7 @@ PRS_expansion = {
 			}
 			has_completed_focus = PRS_claim_silezia
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -370,6 +376,7 @@ PRS_TEU_expansion = {
 				owns_state = 189
 			}
 		}
+
 		complete_effect = {
 			start_border_war = {
 			change_state_after_war = no
@@ -410,6 +417,7 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_recovering_baltic_territories
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -451,6 +459,7 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_recovering_baltic_territories
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -492,6 +501,7 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_recovering_baltic_territories
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
@@ -533,6 +543,7 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_recovering_baltic_territories
 		}
+
 		complete_effect = {
 			start_border_war = {
 			change_state_after_war = no
@@ -573,6 +584,7 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_recovering_baltic_territories
 		}
+
 		complete_effect = {
 			start_border_war = {
 			change_state_after_war = no
@@ -596,8 +608,9 @@ PRS_TEU_expansion = {
 		icon = border_war
 		days_re_enable = 70
 		cost = 50
+
 		available = {
-			owns_state = 191
+			owns_state = 12
 		}
 		
 		highlight_states = {
@@ -613,11 +626,12 @@ PRS_TEU_expansion = {
 			}
 			has_completed_focus = PRS_avenge_the_battle_of_lake_peipus
 		}
+
 		complete_effect = {
 			start_border_war = {
 				change_state_after_war = no
 			    attacker = {
-			        state = 191
+			        state = 12
 			        num_provinces = 1
 			        on_win = wtt_border_conflict_won_attacker.1
        				on_lose = wtt_border_conflict_lost_attacker.1

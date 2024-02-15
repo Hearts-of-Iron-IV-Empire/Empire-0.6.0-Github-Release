@@ -122,7 +122,7 @@ POL_foreign_influence = {
 			factor = 5
 			modifier = {
 			    factor = 10
-			    has_completed_focus = swedish_politics_13
+			    has_completed_focus = SWE_infiltrate_the_commonwealth
 			}
 		}
 		available = {
@@ -150,7 +150,7 @@ POL_foreign_influence = {
             	limit = {
             		original_tag = SWE
             	}
-            	SWE = { has_completed_focus = swedish_politics_13 }
+            	SWE = { has_completed_focus = SWE_infiltrate_the_commonwealth }
             	NOT = { POL = { has_completed_focus = POL_expell_swedish_ambassadors }}
             }
         }

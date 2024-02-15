@@ -70,36 +70,47 @@ focus_tree = {
 	focus = {
 		id = FRA_the_english_king_in_exile
 		icon = GFX_england_crown
-		prerequisite = { focus = FRA_storm_over_europe }
 		x = -13
 		y = 1
 		cost = 5
 		relative_position_id = FRA_storm_over_europe
+		prerequisite = { focus = FRA_storm_over_europe }
 
 		available = {
-			NOT = { is_in_faction_with = ENG }
-		}
-
-		ai_will_do = {
-			factor = 40
+			NOT = { 
+				is_in_faction_with = ENG
+				ENG = {
+					has_completed_focus = eng_restore_the_old_pretender
+				}
+			}
 		}
 
 		completion_reward = {
 			add_ideas = HOL_english_king_in_exile
+		}
+
+		
+		ai_will_do = {
+			factor = 40
 		}
 	}
 
 	focus = {
 		id = FRA_support_james_iii
 		icon = GFX_focus_restore_aulde_pretender
-		prerequisite = { focus = FRA_the_english_king_in_exile}
 		x = 0
 		y = 1
 		cost = 5
 		relative_position_id = FRA_the_english_king_in_exile
+		prerequisite = { focus = FRA_the_english_king_in_exile }
 
 		available = {
-			NOT = { is_in_faction_with = ENG }
+			NOT = { 
+				is_in_faction_with = ENG
+				ENG = {
+					has_completed_focus = eng_restore_the_old_pretender
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -123,14 +134,19 @@ focus_tree = {
 	focus = {
 		id = FRA_attract_english_catholics
 		icon = GFX_focus_por_concordat
-		prerequisite = { focus = FRA_support_james_iii}
+		prerequisite = { focus = FRA_support_james_iii }
 		x = -1
 		y = 1
 		cost = 5
 		relative_position_id = FRA_support_james_iii
 
 		available = {
-			NOT = { is_in_faction_with = ENG }
+			NOT = { 
+				is_in_faction_with = ENG
+				ENG = {
+					has_completed_focus = eng_restore_the_old_pretender
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -145,7 +161,7 @@ focus_tree = {
 	focus = {
 		id = FRA_prepare_the_great_liberation
 		icon = GFX_tanegashima
-		prerequisite = { focus = FRA_attract_english_catholics}
+		prerequisite = { focus = FRA_attract_english_catholics }
 		x = 0
 		y = 1
 		cost = 5
@@ -153,7 +169,12 @@ focus_tree = {
 
 		available = { 
 			has_war_with = ENG
-			NOT = { is_in_faction_with = ENG } 
+			NOT = { 
+				is_in_faction_with = ENG
+				ENG = {
+					has_completed_focus = eng_restore_the_old_pretender
+				}
+			}
 		}
 
 		ai_will_do = {
@@ -169,7 +190,7 @@ focus_tree = {
 	focus = {
 		id = FRA_the_landing_at_firth_of_forth
 		icon = GFX_focus_generic_coastal_fort
-		prerequisite = { focus = FRA_prepare_the_great_liberation}
+		prerequisite = { focus = FRA_prepare_the_great_liberation }
 		x = 0
 		y = 1
 		cost = 5
@@ -178,7 +199,12 @@ focus_tree = {
 		available = { 
 			alliance_naval_strength_ratio > 0.5 
 			has_war_with = ENG
-			NOT = { is_in_faction_with = ENG }
+			NOT = { 
+				is_in_faction_with = ENG
+				ENG = {
+					has_completed_focus = eng_restore_the_old_pretender
+				}
+			}
 		}
 
 		ai_will_do = {

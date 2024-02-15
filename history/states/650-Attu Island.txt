@@ -1,5 +1,4 @@
-state=
-{
+state={
 	id=650
 	name="STATE_650"
 	manpower=20
@@ -8,7 +7,7 @@ state=
 	history={
 	owner = UNC
 	}
-	provinces=
-	{
-13067 	}
+	provinces={
+		13067 	
+	}
 }

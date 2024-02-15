@@ -7,16 +7,21 @@ state={
 
 	history={
 		owner = TUR
+		add_core_of = TUR
+		add_dynamic_modifier = {
+			modifier = devastated_by_war
+		}
+		#add_core_of = BUL
 		buildings = {
 			infrastructure = 2
-			industrial_complex = 1
-
+			industrial_complex = 2
 		}
-		victory_points = {
-			3882 5
+		victory_points = { # Skopje/Uskup
+			3882 10
 		}
-		add_core_of = TUR
-		#add_core_of = BUL
+		victory_points = { # Bitola
+			974 10
+		}
 	}
 
 	provinces={

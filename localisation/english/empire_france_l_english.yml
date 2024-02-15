@@ -273,6 +273,7 @@ france.23.d:0 "Leopold I has ultimately refused our proposal. Even though he had
  FRA_hunt_down_centre_sud_rebels_tt:0 "Your divisions will keep the peace and supress the rebellion in the province."
  FRA_hunt_down_auvergne_rebels_tt:0 "Your divisions will keep the peace and supress the rebellion in the province."
  FRA_hunt_down_huguenots_limousin_tt:0 "Your divisions will keep the peace and supress the rebellion in the province."
+ hungarian_states_occupied_by_austria:0 "§YHungary must be occupied by Austria in order to choose this focus.§!"
  
  # Decisions:
  FRA_religious_troubles:0 "Religious Unrest"

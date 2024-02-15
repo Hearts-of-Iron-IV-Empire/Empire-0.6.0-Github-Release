@@ -42,10 +42,7 @@ ideas = {
 
 			available = {
 				NOT = {
-					OR = {
-						has_idea = duchy
-						has_idea = empire
-					}
+					has_idea = empire
 				}
 			}
 

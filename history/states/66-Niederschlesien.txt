@@ -1,4 +1,3 @@
-
 state={
 	id=66
 	name="STATE_66"
@@ -12,8 +11,13 @@ state={
 
 	history={
 		owner = AUS
-		victory_points = {
+		add_core_of = AUS
+		add_core_of = SIL
+		victory_points = { # Breslau
 			9570 10 
+		}
+		victory_points = { # Wschowa
+			9470 5
 		}
 		#victory_points = {
 		#	552 1
@@ -25,8 +29,6 @@ state={
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		add_core_of = AUS
-		add_core_of = SIL
 
 		1755.1.1 = {
 			owner = PRS

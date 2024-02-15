@@ -1,7 +1,7 @@
 state={
 	id=186
 	name="STATE_186"
-	manpower=90000
+	manpower=30000
 	
 	state_category = town
 
@@ -25,13 +25,10 @@ state={
 			industrial_complex = 1
 			11965 = {
 				naval_base = 1
-
 			}
 			7211 = {
 				naval_base = 2
-
 			}
-
 		}
 		1717.5.1 = {
 			owner = TUR

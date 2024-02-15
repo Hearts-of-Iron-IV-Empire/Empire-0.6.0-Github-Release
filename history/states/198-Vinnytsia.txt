@@ -14,7 +14,14 @@ state={
 			476 3 
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
+		}
+		1699.1.1 = {
+			POL = {
+				set_province_controller = 9435
+				set_province_controller = 9423
+				set_province_controller = 476
+			}
 		}
 		1700.1.1 = {
 			owner = POL
@@ -27,9 +34,10 @@ state={
 	}
 
 	provinces={
-		434 476 6455 6480 6597 9423 9435 9451 9481 9576 11409 11424 
+		476 9423 9435 9576 
 	}
 	manpower=493391
 	buildings_max_level_factor=1.000
 	state_category=large_town
+	local_supplies=0.000
 }

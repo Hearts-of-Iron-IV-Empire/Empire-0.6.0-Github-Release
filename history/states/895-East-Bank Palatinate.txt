@@ -1,19 +1,17 @@
-
 state={
 	id=895
 	name="STATE_895"
 
 	history={
+		owner = RPA
+		add_core_of = RPA
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		victory_points = {
-			6568  10 
+		victory_points = { # Heidelberg
+			6568  50 
 		}
-		owner = RPA
-		add_core_of = RPA
-
 	}
 
 	provinces={

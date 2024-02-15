@@ -2380,3 +2380,48 @@ form_greater_german_reich_category = {
 		}
 	}
 }
+
+form_mongol_empire_category = {
+
+	form_mongol_empire = {
+
+		icon = generic_form_nation
+
+		allowed = {
+			original_tag = TUR
+		}
+
+		available = {
+			is_subject = no
+			has_full_control_of_state = 195
+			has_full_control_of_state = 217
+			all_owned_state = {
+				is_fully_controlled_by = ROOT
+			}
+		}
+
+		visible = {
+			AND = {
+				original_tag = TUR
+				has_completed_focus = TUR_restore_the_mongols
+			}
+			NOT = { has_global_flag = form_mongol_empire_flag }
+		}
+
+		complete_effect = {
+			set_cosmetic_tag = MONGOL_formable
+			hidden_effect = {
+				set_global_flag = form_mongol_empire_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 200
+			modifier = {
+				factor = 0
+				is_historical_focus_on = yes
+			}
+		}
+	}
+}
+

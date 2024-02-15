@@ -106,7 +106,7 @@ units = {
 		start_experience_factor = 0.3
 	}
 
-	#Ostpreussen
+	# Ostpreussen
 
 	division= {
 		name = "Infanterie Division"

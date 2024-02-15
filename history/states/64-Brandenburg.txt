@@ -1,10 +1,11 @@
-
 state={
 	id=64
 	name="STATE_64"
 
 	history={
-		owner = PRS
+		owner = BRR
+		add_core_of = PRS
+		add_core_of = BRR
 		victory_points = {
 			6521 25 
 		}
@@ -15,10 +16,7 @@ state={
 			infrastructure = 3
 			arms_factory = 5
 			industrial_complex = 4
-
 		}
-		add_core_of = PRS
-
 	}
 
 	provinces={

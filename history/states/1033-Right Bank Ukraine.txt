@@ -10,7 +10,7 @@ state={
 		add_core_of = POL
 		add_core_of = UKR
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 		}
 		1798.1.1 = {
 			owner = SOV
@@ -18,9 +18,10 @@ state={
 	}
 
 	provinces={
-		9533 11514 11464 550 11490 
+		434 6480 6597 9451 9481 11409 11424 
 	}
 	manpower=158917
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

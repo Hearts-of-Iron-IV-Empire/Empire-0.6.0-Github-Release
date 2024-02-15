@@ -1,8 +1,8 @@
 set_country_flag = HRE_imperial_subject
 
-set_research_slots = 3
+set_research_slots = 2
 capital = 6
-load_oob = Imperial_army
+load_oob = "Imperial_army"
 
 # Starting tech
 set_technology = {
@@ -15,19 +15,21 @@ set_technology = {
 }
 
 add_ideas = {
+
+	# Laws and Religion
 	catholic
 }
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1699.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
 	democratic = 15
 	fascism = 15
-	communism = 10
-	neutrality = 30
+	communism = 0
+	neutrality = 40
 	aristocracy = 30
 }

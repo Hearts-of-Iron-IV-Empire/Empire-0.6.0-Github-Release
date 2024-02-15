@@ -1001,9 +1001,6 @@ focus_tree = {
 			owns_state = 965
 		}
 
-		bypass = {
-		}
-
 		cost = 10
 		
 		completion_reward = {
@@ -1067,12 +1064,9 @@ focus_tree = {
 		relative_position_id = MUG_root_out_resistance
 
 		available = {
-			977 = {
+			424 = {
 				is_owned_by = RAJ
 			}
-		}
-
-		bypass = {
 		}
 
 		cost = 8.6
@@ -1084,7 +1078,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				prioritize = {
-					977
+					424
 				}
 				add_extra_state_shared_building_slots = 2
 					add_building_construction = {
@@ -1270,9 +1264,6 @@ focus_tree = {
 			owns_state = 427
 			owns_state = 429
 			owns_state = 960
-		}
-
-		bypass = {
 		}
 
 		cost = 10
@@ -6321,14 +6312,8 @@ focus_tree = {
 		icon = GFX_goal_generic_position_armies
 		x = -2
 		y = 1
-		prerequisite = { focus = MUG_central_command }
 		relative_position_id = MUG_central_command
-
-		available = {
-		}
-
-		bypass = {
-		}
+		prerequisite = { focus = MUG_central_command }
 
 		cost = 7.2
 		
@@ -6351,14 +6336,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		x = 0
 		y = 1
-		prerequisite = { focus = MUG_support_battalions }
 		relative_position_id = MUG_support_battalions
-
-		available = {
-		}
-
-		bypass = {
-		}
+		prerequisite = { focus = MUG_support_battalions }
 
 		cost = 10
 		
@@ -6378,12 +6357,6 @@ focus_tree = {
 		y = 1
 		prerequisite = { focus = MUG_mass_rifle_production }
 		relative_position_id = MUG_mass_rifle_production
-
-		available = {
-		}
-
-		bypass = {
-		}
 
 		cost = 10
 		
@@ -6406,7 +6379,7 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = arms_factory
-					level = 1
+					level = 2
 					instant_build = yes
 				}
 			}

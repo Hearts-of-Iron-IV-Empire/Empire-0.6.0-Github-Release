@@ -58,13 +58,12 @@ set_politics = {
 	elections_allowed = no
 }
 
-set_convoys = 25
+set_convoys = 70
 set_popularities = {
-	democratic = 77
-	neutrality = 12
-	fascism = 11
+	democratic = 90
+	neutrality = 10
+	fascism = 0
 }
-
 
 create_country_leader = {
 	name = "Willem van Outhoorn"
@@ -92,5 +91,3 @@ if = {
 		logistics_skill = 3
 	}
 }
-
-set_cosmetic_tag = INS_HOL # Netherlands East Indies

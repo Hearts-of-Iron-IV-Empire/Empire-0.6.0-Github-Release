@@ -7,13 +7,21 @@ state={
 
 	history={
 		owner = POL
+		add_core_of = POL
+		add_core_of = LIT
+		victory_points = { # Suwałki
+			3254 1 
+		}
+		victory_points = { # Kaunas
+			6296 5 
+		}
+		victory_points = { # Troki
+			327 10
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
-
 		}
-		add_core_of = POL
-		add_core_of = LIT
 		1797.1.1 = {
 			owner = PRS
 		}
@@ -23,9 +31,10 @@ state={
 	}
 
 	provinces={
-		3272 6281 6407 11312 
+		327 347 400 530 3254 3272 3393 6281 6296 9274 9357 11312 13206 
 	}
 	manpower=77563
 	buildings_max_level_factor=1.000
 	state_category=rural
+	local_supplies=0.000
 }

@@ -11,12 +11,19 @@
 @chief_experience_gain_high = 0.40
 
 leader_traits = {
+	sultan_of_rum = {
+		random = no
+		war_support_factor = 0.05
+		stability_factor = 0.05
+		army_core_attack_factor = 0.05
+	}
 	shia_scholars = {
 		random = no
 		political_power_factor = 0.05
 		drift_defence_factor = 0.2
 	}
 	carolus_rex = {
+		random = no
 		war_support_factor = 0.05
 		stability_factor = 0.05
 		army_core_attack_factor = 0.15
@@ -176,16 +183,6 @@ leader_traits = {
 			id = "SOV"			
 			value = 200
 		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	cardinal_in_administration = {
-		random = yes
-		sprite = 13
-		political_power_factor = 0.20
-		fascism_drift = 0.01
 		
 		ai_will_do = {
 			factor = 1
@@ -423,157 +420,26 @@ leader_traits = {
 		stability_factor = -0.50
 	}
 
-	
-#ai_focus_defense_factor
-#ai_focus_aggressive_factor
-#ai_focus_production_factor
-#ai_focus_military_advancements_factor
-#ai_focus_peaceful_factor
-#ai_focus_naval_factor
-#ai_focus_naval_air_factor
-#ai_focus_aviation_factor 
-
-	### IDEA TRAITS ###
-	
-	# drift is a percent applied weekly
-	
-	
-	backroom_backstabber = {
+	# Random traits
+	cardinal_in_administration = {
+		random = yes
 		sprite = 13
-		political_power_factor = 0.05
-		drift_defence_factor = 0.15
+		political_power_factor = 0.20
+		fascism_drift = 0.01
 		
 		ai_will_do = {
 			factor = 1
 		}
 	}
-	
-	quartermaster_general = {
-		sprite = 10
-		random = yes
-		production_speed_naval_base_factor = 0.15	
-		ai_will_do = {
-			factor = 0.2
-		}
-	}
-
 	enlightened_thinker = {
-		sprite = 14
 		random = yes
+		sprite = 14
 		research_speed_factor = 0.08	
 		ai_will_do = {
 			factor = 1
 		}
 	}
 
-	### BRITISH TRADE UNION MINISTER TRAITS ###
-
-	propaganda_bungler = {
-		sprite = 13
-		war_support_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	silent_mule = {
-		random = yes
-		sprite = 13
-		political_power_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	compassionate_commoner = {
-		random = yes
-		sprite = 13
-		opinion_gain_monthly_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	smooth_talking_con_man = {
-		random = yes
-		sprite = 13
-		trade_opinion_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	ideological_groupie = {
-		random = yes
-		sprite = 13
-		opinion_gain_monthly_same_ideology_factor = 0.05
-		
-		ai_will_do = {
-			factor = 0.2
-		}
-	}
-	
-	fortification_armchair_general = {
-		sprite = 10
-		random = yes
-		production_speed_bunker_factor = 0.1
-		production_speed_coastal_bunker_factor = 0.1
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	war_profiteer = {
-		sprite = 10
-		random = yes
-		production_speed_arms_factory_factor = 0.05
-		production_speed_dockyard_factor = 0.05
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	
-	lieutenant_of_industry = {
-		sprite = 10
-		random = yes
-		production_speed_industrial_complex_factor = 0.05
-		production_speed_infrastructure_factor = 0.05
-		production_speed_synthetic_refinery_factor = 0.05
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	finance_graduate = {
-		sprite = 10
-		random = yes
-		consumer_goods_factor = -0.02
-		
-		ai_will_do = {
-			factor = 2
-		}
-	}
-	
-	armaments_aficionado = {
-		sprite = 10
-		random = yes
-		conversion_cost_civ_to_mil_factor= -0.1
-		# civ_to_mil_industry_conversion_rate = -1
-		
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	### END BRITISH TRADE UNION MINISTER TRAITS ###
-	
 	### Military Minister Traits
 	
 	# 1 is worst, 3 is best

@@ -5,18 +5,17 @@ state={
 	
 	state_category = rural
 	
-	history=
-	{
+	history={
+		owner = MOL
+		add_core_of = ROM
+		add_core_of = MOL
 		victory_points = {
 			577 1 
 		}
-		owner = MOL
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			arms_factory = 1
 		}
-		add_core_of = ROM
-		add_core_of = MOL
 		1795.1.1 = {
 			owner = AUS
 		}

@@ -11,7 +11,7 @@ state={
 
 	history={
 		owner = SPR
-		add_core_of = DOM
+		#add_core_of = DOM
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 1
@@ -19,10 +19,10 @@ state={
 				naval_base = 2
 			}
 		}
-		victory_points = {
+		victory_points = { # Santo Domingo
 			7660 5 
 		}
-		victory_points = {
+		victory_points = { # Santiago de los Caballeros (?)
 			4598 1 
 		}
 		add_dynamic_modifier = {

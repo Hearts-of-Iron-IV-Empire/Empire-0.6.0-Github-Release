@@ -1,0 +1,51 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_autonomy_protectorate_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_tributary_state_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_imperial_associate.dds"
+	}
+
+	spriteType = {
+		name = "GFX_autonomy_viceroyalty_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_dominion_icon.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_autonomy_personal_union_icon"
+		textureFile = "gfx/interface/autonomy/autonomy_personal_union_puppet.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_high_command"
+		textureFile = "gfx/interface/idea_slot_high_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_air_chief"
+		textureFile = "gfx/interface/idea_slot_air_chief.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_navy_chief"
+		textureFile = "gfx/interface/idea_slot_navy_chief.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_army_chief"
+		textureFile = "gfx/interface/idea_slot_army_chief.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_theorist"
+		textureFile = "gfx/interface/idea_slot_theorist.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_political_advisor"
+		textureFile = "gfx/interface/idea_slot_political_advisor.dds"
+	}
+}

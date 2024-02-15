@@ -1,16 +1,17 @@
-
 state={
 	id=440
 	name="STATE_440"
 
 	history={
-		victory_points = {
+		owner = RAJ
+		victory_points = { # Amristar
+			12754 20 
+		}
+		victory_points = { # Lahore
 			10887 20 
 		}
-		owner = RAJ
 		buildings = {
 			infrastructure = 3
-
 		}
 
 	}

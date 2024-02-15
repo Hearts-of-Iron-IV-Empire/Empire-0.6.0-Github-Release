@@ -10,9 +10,9 @@ state={
 			9821 1 
 		}
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
 			9821 = {
-				naval_base = 1
+				naval_base = 3
 			}
 		}
 		1798.1.1 = {
@@ -23,7 +23,7 @@ state={
 	provinces={
 		9821
 	}
-	manpower=20000
+	manpower=5000
 	buildings_max_level_factor=1.000
 	state_category=rural
 }

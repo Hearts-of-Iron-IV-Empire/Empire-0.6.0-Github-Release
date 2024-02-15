@@ -1,4 +1,3 @@
-
 state={
 	id=903
 	name="STATE_903"
@@ -6,8 +5,8 @@ state={
 	history={
 		owner = LUI
 		add_core_of = LUI
-		victory_points = {
-			11519 10 
+		victory_points = { # Liege
+			11519 50 
 		}
 		buildings = {
 			infrastructure = 3

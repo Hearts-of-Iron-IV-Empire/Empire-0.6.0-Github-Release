@@ -3,7 +3,7 @@
 oob = "PRS_1699"
 set_war_support = 0.32
 set_country_flag = HRE_imperial_subject
-set_research_slots = 3
+set_research_slots = 2
 
 give_military_access = AUS
 give_military_access = SAX
@@ -19,8 +19,8 @@ give_guarantee = IFC
 	add_ideas = kingdom
 	set_cosmetic_tag = PRS_KNG
 	set_capital = {
-	  state = 64 
-	  remember_old_capital = no
+		state = 64 
+	    remember_old_capital = no
 	}
 	unlock_national_focus = PRS_solidifyinternalpower
 	unlock_national_focus = PRS_kurfurstentum
@@ -87,9 +87,11 @@ give_guarantee = IFC
 }
 
 add_ideas = {
+	POL_influence_over_poland_1
+
+	# Laws and Religion
 	protestant
 	extensive_conscription
-	POL_influence_over_poland_1
 }
 
 # Starting tech
@@ -115,7 +117,7 @@ set_technology = {
 	early_battlecruiser = 1
 }
 
-set_convoys = 100
+set_convoys = 30
 
 if = {
 	limit = {
@@ -159,11 +161,12 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 5
 	fascism = 11
-	communism = 1
-	neutrality = 48
+	communism = 0
+	neutrality = 49
 	aristocracy = 35
 }
 

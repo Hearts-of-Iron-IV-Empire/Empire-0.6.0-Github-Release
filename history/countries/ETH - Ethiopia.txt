@@ -1,59 +1,29 @@
 ﻿capital = 271
 
-oob = "ETH_1936"
+oob = "ETH_1699"
 
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
 	tech_mountaineers = 1
+	basic_cavalry = 1
 }
 
-set_convoys = 5
+set_convoys = 0
 
 add_ideas = {
 	orthodox
 }
 
-# A colony of Italy in 1939, however if independent it would have the same politics as in 1936
+recruit_character = ETH_Iyasu_I
+
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1699.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	neutrality = 100
-}
-
-create_country_leader = {
-	name = "Tekle Haymanot I"
-	desc = "POLITICS_HAILE_SELASSIE_DESC"
-	picture = "ethiopia_leader.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
-}
-
-create_country_leader = {
-	name = "Fitawrari Yeebio Woldai"
-	desc = "POLITICS_YEEBIO_WOLDAI_DESC"
-	picture = "Portrait_Ethiopia_Haile_Selassie.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
-
-create_corps_commander = {
-	name = "Seyoum Mengesha"
-	portrait_path = "gfx/leaders/Africa/Portrait_Africa_Generic_land_3.dds"
-	traits = {  desert_fox }
-	skill = 2
-	attack_skill = 2
-	defense_skill = 2
-	planning_skill = 2
-	logistics_skill = 1
 }

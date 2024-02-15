@@ -14,7 +14,7 @@ set_technology = {
 	improved_light_tank = 1
 }
 
-set_research_slots = 3
+set_research_slots = 2
 
 set_politics = {
 	ruling_party = neutrality

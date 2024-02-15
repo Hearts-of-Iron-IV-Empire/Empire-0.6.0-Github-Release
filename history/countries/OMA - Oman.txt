@@ -2,36 +2,32 @@
 
 oob = "OMA_1936"
 
+set_stability = 0.8
+set_war_support = 0.4
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
+	infantry_weapons1 = 1
+	basic_cavalry = 1
 }
 
-add_ideas = {
+add_ideas = { 
 	shiite
+	empire # Was an Empire since 1696, ever since the siege of Fort Jesus
 }
 
-set_convoys = 10
-set_war_support = 0.1
-set_stability = 0.8
+set_convoys = 200
+
+recruit_character = OMA_Saif_bin_Sultan # Country Leader (1692-1711)
 
 set_politics = {
 	ruling_party = neutrality
-	last_election = "1936.1.1"
+	last_election = "1699.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	neutrality = 100
-}
-
-create_country_leader = {
-	name = "Saif bin Sultan"
-	desc = "POLITICS_SAID_BIN_TAIMUR_DESC"
-	picture = "gfx/leaders/Muslim/portrait_muslim_leader_1.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
 }

@@ -50,8 +50,4 @@ create_country_leader = {
 	picture = "calliere_governor.dds"
 	expire = "1965.1.1"
 	ideology = despotism
-	traits = {
-		#
-	}
-
 }

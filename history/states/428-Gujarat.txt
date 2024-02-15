@@ -1,4 +1,3 @@
-
 state={
 	id=428
 	name="STATE_428"
@@ -8,16 +7,19 @@ state={
 
 	history={
 		owner = RAJ
-		victory_points = {
+		victory_points = { # Ahmedabad
 			1103 15 
 		}
-		victory_points = {
+		victory_points = { # Dwarka
+			7020 10
+		}
+		victory_points = { # Jamnagar
 			10118 5 
 		}
-		victory_points = {
+		victory_points = { # Cambay
 			9975 5 
 		}
-		victory_points = {
+		victory_points = { # Baroda
 			11952 5 
 		}
 		buildings = {
@@ -25,17 +27,13 @@ state={
 			arms_factory = 1
 			9975 = {
 				naval_base = 2
-
 			}
-
 		}
-		1730.5.1 = {
+		1770.5.1 = {
 			owner = MAR
 			controller = MAR
 			add_core_of = MAR
-
 		}
-
 	}
 
 	provinces={

@@ -276,7 +276,7 @@ PRS_seize_alsace_desc:0 "It is time for a final showdown with the Archenemy. Els
  PRS_demand_emden:0 "Demand Emden"
  PRS_demand_emden_desc:0 "Emden is rightfully ours. We will take it back from the Dutch and beat them back to their own lands."
 
- # PRS cosmetic tags
+ # PRS cosmetic tag:
  PRS_KNG_neutrality:0 "Prussia"
  PRS_KNG_neutrality_DEF:0 "Prussia"
  PRS_KNG_neutrality_ADJ:0 "Prussian"
@@ -316,17 +316,17 @@ PRS_seize_alsace_desc:0 "It is time for a final showdown with the Archenemy. Els
  PRS_GER_communism_DEF:0 "German Empire"
  PRS_GER_communism_ADJ:0 "German"
  
- PRS_TEU_neutrality:0 "Teutonic Kingdom"
- PRS_TEU_neutrality_DEF:0 "The Teutonic Kingdom"
+ PRS_TEU_neutrality:0 "Teutonic Order"
+ PRS_TEU_neutrality_DEF:0 "the Teutonic Order"
  PRS_TEU_neutrality_ADJ:0 "Teuton"
  PRS_TEU_democratic:0 "Teutonic Republic"
- PRS_TEU_democratic_DEF:0 "The Teutonic Republic"
+ PRS_TEU_democratic_DEF:0 "the Teutonic Republic"
  PRS_TEU_democratic_ADJ:0 "Teuton"
  PRS_TEU_fascism:0 "Teutonic Order"
- PRS_TEU_fascism_DEF:0 "The Teutonic Order"
+ PRS_TEU_fascism_DEF:0 "the Teutonic Order"
  PRS_TEU_fascism_ADJ:0 "Teuton"
- PRS_TEU_communism:0 "Teutonic Commune"
- PRS_TEU_communism_DEF:0 "The Teutonic Commune"
+ PRS_TEU_communism:0 "Teutonic Order"
+ PRS_TEU_communism_DEF:0 "the Teutonic Order"
  PRS_TEU_communism_ADJ:0 "Teuton"
 
 # Events

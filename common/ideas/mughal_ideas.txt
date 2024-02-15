@@ -1430,7 +1430,7 @@ ideas = {
 			name = MUG_traditional_army
 
 			modifier = {
-				army_core_defence_factor = 0.05
+				army_core_defence_factor = 0.10
 				consumer_goods_factor = 0.05
 				minimum_training_level = -0.10
 				training_time_factor = -0.10
@@ -1446,7 +1446,7 @@ ideas = {
 			name = MUG_traditional_army
 
 			modifier = {
-				army_core_defence_factor = 0.10
+				army_core_defence_factor = 0.15
 				army_morale_factor = 0.10
 				consumer_goods_factor = 0.10
 				minimum_training_level = -0.15

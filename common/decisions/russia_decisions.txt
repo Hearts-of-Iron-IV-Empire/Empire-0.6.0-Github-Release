@@ -1,737 +1,1142 @@
-RUS_army_reform = {
-	RUS_army_reform = {
-
-		icon = generic_prepare_civil_war
-
-		available = {
-			has_army_experience > 49
-			has_completed_focus = RUS_great_reforms_military_reform
+RUS_treaty_of_constantinople_decision_category = {
+	RUS_signature_of_the_treaty_of_constantinople = {
+	
+		allowed = { 
+			tag = SOV 
 		}
-
-		cost = 0
+	
+		icon = POL_looming_peasants_strike
+	
+		available = {
+			hidden_trigger = { always = no }
+		}
+	
+		days_mission_timeout = 310
+		days_remove = 5
+		is_good = no
+		fire_only_once = yes
+	
+		cancel_trigger = {
+			OR = {
+				has_country_flag = RUS_treaty_of_constantinople_signed
+				has_country_flag = RUS_turkiyealt			
+			}	
+		}
+		
+		activation = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_war_with = TUR
+			}
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_war_with = TUR
+			}	
+			has_completed_focus = RUS_negotiate_with_the_ottomans 
+		}
+		
+		cancel_effect = {
+		
+		}
+	
+		timeout_effect = {
+			TUR = {
+				country_event = russia_new.7 
+			}
+		}
+	
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	RUS_recognition_of_azov = {
+	
+		icon = generic_prepare_civil_war
+	
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_azov
+				has_war_with = TUR
+			}
+		}
+	
+		days_re_enable = 14
+	
+		days_remove = 5
+	
+		cost = 25
+	
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.1
+			}			
+		}		
+	
 		ai_will_do = {
 			factor = 500
 		}
-		days_remove = 90
-
+	}
+	#TODO SHOULD MAKE AN IDEA WHICH MAKES THAT RUSSIA DOES NOT HAVE TO PAY ANNUAL TRIBUTE TO CRIMEA (TODO FOR FUTURE)
+	RUS_demand_demilitarization_of_kherson = {
+	
+		icon = generic_prepare_civil_war
+	
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+		}
+	
 		visible = {
 			OR = {
-				has_idea = RUS_streltsy_purge_1
-				has_idea = RUS_streltsy_purge_2
-				has_idea = RUS_streltsy_purge_3
-				has_idea = RUS_streltsy_purge_4
-				has_idea = RUS_streltsy_purge_5
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+				has_war_with = TUR
 			}
 		}
-		remove_effect = {
-			RUS_lower_purge_effects = yes
-		}
-		complete_effect = {
-			army_experience = -50						
-		}		
-	}
-}
-
-#nobility_estate = {
-#	RUS_challenge_swedish_supremacy = {
-#
-#		icon = generic_prepare_civil_war
-#
-#		available = {
-#			OR = {
-#				has_war_with = SWE
-#				neutrality > 0.50
-#			}
-#		}	
-#
-#		activation = {
-#			original_tag = SOV
-#		}
-#
-#		days_mission_timeout = 365
-#
-#		timeout_effect = {
-#			add_popularity = {
-#			    ideology = aristocracy
-#			    popularity = 0.2
-#			}
-#			add_stability = -0.2
-##			add_war_support = -0.2
-#		}	
-#	}
-#}
-
-political_actions = {
-	RUS_negotiate_swedish_surrender = {
-
-		icon = generic_decisison
-
-		days_re_enable = 60 
-
+	
+		days_re_enable = 14
+	
+		days_remove = 5
+	
 		cost = 25
-
-		ai_will_do = {
-			factor = 100
-		}
-
-		visible = {
-			has_war_with = SWE
-			original_tag = SOV
-			NOT = { SWE = { has_country_flag = SWE_defeated_by_russia }}
-		}
-
-		available = {
-			SWE = { surrender_progress > 0.50 }
-			is_faction_leader = yes
-		}	
-
+	
 		complete_effect = {
-			country_event = sweden.1
-		}	
+			TUR = {
+				country_event = russia_new.4
+			}			
+		}		
+	
+		ai_will_do = {
+			factor = 500
+		}
+	}
+	RUS_quickly_affirm_peace_treaty = {
+		icon = generic_prepare_civil_war
+	
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			original_tag = SOV
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_war_with = TUR
+			}
+		}
+	
+		days_re_enable = 14
+	
+		days_remove = 5
+	
+		cost = 25
+	
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}			
+			set_country_flag = RUS_abandoned_claim_on_kaffa_1
+		}		
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_demand_recognition_of_matrika = {
+	
+		icon = generic_prepare_civil_war
+	
+		available = {
+			original_tag = SOV
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}		
+			}	
+			not = {
+				has_completed_focus = RUS_defy_the_tsar
+				has_country_flag = RUS_ottoman_accepts_ownership_of_matrika
+				has_war_with = TUR
+				has_country_flag = RUS_abandoned_claim_on_kaffa_1				
+			}
+		}
+	
+		days_re_enable = 60
+	
+		days_remove = 5
+	
+		cost = 50
+	
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.5
+			}			
+		}		
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_quickly_affirm_peace_treaty_1 = {
+		icon = generic_prepare_civil_war
+	
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			has_country_flag = RUS_demand_recognition_of_matrika
+			original_tag = SOV
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}
+			}
+			not = {
+				has_war_with = TUR
+				has_completed_focus = RUS_defy_the_tsar
+			}
+		}
+	
+		days_re_enable = 14
+	
+		days_remove = 5
+	
+		cost = 25
+	
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}
+			set_country_flag = RUS_abandoned_claim_on_kaffa_1	
+		}		
+	
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	RUS_quickly_affirm_peace_treaty_2 = {
+		icon = generic_prepare_civil_war
+	
+		available = {
+			has_country_flag = RUS_ottoman_accepts_demilitarization_of_kherson 
+			has_country_flag = RUS_ottoman_accepts_azov
+			has_country_flag = RUS_ottoman_accepts_ownership_of_matrika
+			has_completed_focus = RUS_negotiate_with_the_ottomans
+			original_tag = SOV
+		}
+	
+		visible = {
+			OR = {
+				not = {
+					has_country_flag = RUS_treaty_of_constantinople_signed
+				}
+				not = {
+					has_country_flag = RUS_turkiyealt
+				}
+			}
+			not = {
+				has_war_with = TUR
+				has_completed_focus = RUS_defy_the_tsar
+			}
+		}
+	
+		days_re_enable = 14
+	
+		days_remove = 5
+	
+		cost = 25
+	
+		complete_effect = {
+			TUR = {
+				country_event = russia_new.7
+			}
+			set_country_flag = RUS_abandoned_claim_on_kaffa_2		
+		}		
+	
+		ai_will_do = {
+			factor = 0
+		}
 	}
 }
-
+	
 political_actions = {
 	RUS_negotiate_polish_surrender = {
-
+	
 		icon = generic_decisison
-
+	
 		days_re_enable = 60 
-
+	
 		cost = 25
-
+	
 		ai_will_do = {
 			factor = 100
 		}
-
+	
 		visible = {
 			has_war_with = POL
 			original_tag = SOV
 			NOT = { POL = { has_country_flag = POL_defeated_by_russia }}
 		}
-
+	
 		available = {
 			POL = { surrender_progress > 0.25 }
 			is_faction_leader = yes
 		}	
-
+	
 		complete_effect = {
 			country_event = poland.42
 		}	
 	}
+	
+	RUS_negotiate_swedish_surrender = {
+	
+		icon = generic_decisison
+	
+		days_re_enable = 60 
+	
+		cost = 25
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		visible = {
+			has_war_with = SWE
+			original_tag = SOV
+			NOT = { SWE = { has_country_flag = SWE_defeated_by_russia }}
+		}
+	
+		available = {
+			SWE = { surrender_progress > 0.50 }
+			is_faction_leader = yes
+		}	
+	
+		complete_effect = {
+			country_event = sweden.1
+		}	
+	}
+	
+	RUS_negotiate_persian_surrender = {
+	
+		icon = generic_decisison
+	
+		days_re_enable = 60 
+	
+		cost = 25
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		visible = {
+			has_war_with = PER
+			original_tag = SOV
+			#todo requirement boomersssssssssssssssss
+		}
+	
+		available = {
+			PER = { surrender_progress > 0.50 }
+			is_faction_leader = yes
+		}	
+	
+		complete_effect = {
+			PER = {
+				country_event = russia_new.16
+			}
+		}	
+	}
 }
-
-RUS_great_northern_war = {
-
-	RUS_scorched_earth = {
-
-		icon = generic_scorched_earth
-
+	
+RUS_great_northern_war = { 
+	RUS_impending_bashkir_rebellion = {
+	
+		allowed = { 
+			tag = SOV 
+		}
+		
+		icon = POL_looming_peasants_strike
+		
 		available = {
-			has_completed_focus = RUS_scorched_earth
+			hidden_trigger = { always = no }
 		}
-
-		cost = 50
+		
+		days_mission_timeout = 300
+		days_remove = 15
+		is_good = no
 		fire_only_once = yes
+		
+		cancel_trigger = {
+			#OR = {
+			#			
+			#}	
+		}
+			
+		activation = {
+			has_country_flag = BASHKIR_REBELLION
+			#FOR DEBUG
+			#always = yes
+		}
+		
 		visible = {
-			has_war = yes
-			any_enemy_country = {
-				is_major = yes
-			}
-			surrender_progress > 0
+			has_country_flag = BASHKIR_REBELLION
+			#FOR DEBUG
+			#always_yes
 		}
-
-		complete_effect = {
-			set_country_flag = SOV_scorched_earth
-			unlock_decision_tooltip = RUS_scorched_earth_novgorod
-			unlock_decision_tooltip = RUS_scorched_earth_pskov
-			unlock_decision_tooltip = RUS_scorched_earth_rzhev
-			unlock_decision_tooltip = RUS_scorched_earth_moscow
-			unlock_decision_tooltip = RUS_scorched_earth_nizhny_novogorod
-			#unlock_decision_tooltip = RUS_scorched_earth_ukraine
-			unlock_decision_tooltip = RUS_scorched_earth_caucasus
-			unlock_decision_tooltip = RUS_scorched_earth_tsaritsyn
+		
+		timeout_effect = {
+			country_event = russia_new.20	 
 		}
-
+		
 		ai_will_do = {
-			factor = 1
+			factor = 200
 		}
 	}
+	
+	RUS_defeat_bashkir_rebellion = {
 
-	RUS_scorched_earth_tsaritsyn = {
-
-		icon = generic_scorched_earth
-
+		allowed = { 
+			tag = SOV
+		}
+		
+		icon = POL_looming_peasants_strike
+		
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			hidden_trigger = { always = no }
 		}
-
-		cost = 50
+		
+		days_mission_timeout = 120
+		days_remove = 15
+		is_good = no
 		fire_only_once = yes
+			
+		activation = {
+			BSK = { exists = yes }
+			has_country_flag = BASHKIR_REBELLION
+			#FOR DEBUG
+			#always = yes
+		}
+		
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 217
-				controls_state = 245
-				controls_state = 265
-				controls_state = 239
-			}
-			has_country_flag = SOV_scorched_earth
+			BSK = { exists = yes }
+			has_country_flag = BASHKIR_REBELLION
+			#FOR DEBUG
+			#always_yes
 		}
-
-		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
+		
+		timeout_effect = {
 			if = {
 				limit = {
-					controls_state = 217
-				}
-				217 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
+					OR = {
+						BSK = { has_capitulated = no }
+						BSK = { exists = yes }
 					}
 				}
+				white_peace = BSK
+				651 = { remove_core_of = SOV }
+				582 = { remove_core_of = SOV }
+				572 = { remove_core_of = SOV }
+				651 = { add_core_of = BSK }
+				582 = { add_core_of = BSK }
+				572 = { add_core_of = BSK }
+				country_event = russia_new.21
 			}
-			if = {
-				limit = {
-					controls_state = 245
-				}
-				245 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 265
-				}
-				265 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 239
-				}
-				239 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
+			else = {
+				add_stability = 0.15
+				add_war_support = 0.05
+				country_event = russia_new.22 
+				651 = { remove_core_of = BSK }
+				582 = { remove_core_of = BSK }
+				572 = { remove_core_of = BSK }
+				651 = { add_core_of = SOV }
+				582 = { add_core_of = SOV }
+				572 = { add_core_of = SOV }
 			}
 		}
-
+		
 		ai_will_do = {
-			factor = 1
+			factor = 200
 		}
 	}
-
-	RUS_scorched_earth_caucasus = {
-
-		icon = generic_scorched_earth
-
+	
+		RUS_defeat_bashkir_rebellion_civilwar = {
+	
+			allowed = { 
+				tag = SOV
+			}
+		
+			icon = POL_looming_peasants_strike
+		
+			available = {
+				hidden_trigger = { always = no }
+			}
+		
+			days_mission_timeout = 60
+			days_remove = 15
+			is_good = no
+			fire_only_once = yes
+		
+			cancel_trigger = {
+				#OR = {
+				#			
+				#}	
+			}
+			
+			activation = {
+				has_country_flag = RUS_bashkir_civil_war
+				#FOR DEBUG
+				#always = yes
+			}
+		
+			visible = {
+				has_country_flag = RUS_bashkir_civil_war
+				#FOR DEBUG
+				#always_yes
+			}
+			
+			cancel_effect = {
+			
+			}
+		
+			timeout_effect = {
+				if = {
+					limit = {
+						OR = {
+							BSK = { has_capitulated = no }
+							BSK = { exists = yes }
+						}
+					}
+					white_peace = BSK
+					651 = { remove_core_of = SOV }
+					582 = { remove_core_of = SOV }
+					572 = { remove_core_of = SOV }
+					651 = { add_core_of = BSK }
+					582 = { add_core_of = BSK }
+					572 = { add_core_of = BSK }
+					country_event = russia_new.21 
+					country_event = sweden.19
+				}
+				else = {
+					add_stability = 0.15
+					add_war_support = 0.05
+					country_event = russia_new.22 
+				}
+			}
+		
+			ai_will_do = {
+				factor = 200
+			}
+		}
+	
+	RUS_narva_campaign_decision = {
+	
+		allowed = { tag = SOV }
+	
+		icon = generic_prepare_civil_war 
+	
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			hidden_trigger = { always = no }
 		}
-
-		cost = 50
+	
+		days_mission_timeout = 10
+		days_remove = 5
+		is_good = no
 		fire_only_once = yes
+	
+		cancel_trigger = {
+			NOT = {
+				has_war_with = SWE
+			}
+		}
+		
+		activation = {
+			has_completed_focus = RUS_narva_campaign
+		}
+	
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 235
-				controls_state = 237
-				controls_state = 236
-				controls_state = 234
-				controls_state = 803
-				controls_state = 912
-			}
-			has_country_flag = SOV_scorched_earth
+			has_completed_focus = RUS_narva_campaign			
+			has_war_with = SWE			
 		}
-
-		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 235
-				}
-				235 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 237
-				}
-				237 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 236
-				}
-				236 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 234
-				}
-				234 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 803
-				}
-				803 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 912
-				}
-				912 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}	
+		
+		cancel_effect = {
+		
 		}
-
+	
+		timeout_effect = {
+			custom_effect_tooltip = RUS_narva_campaign_decision_tooltip
+			if = {
+				limit = {	
+					controls_province = 4640			
+				}
+				unlock_national_focus = RUS_victory_at_narvaa
+			}
+			else = {
+				unlock_national_focus = RUS_defeat_at_narva
+			}
+		}
+	
 		ai_will_do = {
-			factor = 1
+			factor = 200
 		}
 	}
-
-	RUS_scorched_earth_nizhny_novogorod = {
-
-		icon = generic_scorched_earth
-
+	
+	RUS_ingermenland_campaign_decision = {
+	
+		icon = hol_draw_up_staff_plans
+	
+		allowed = {
+			original_tag = SOV
+		}
+	
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			NOT = { has_full_control_of_state = 195 }
+			date > 1702.10.1
+			has_full_control_of_state = 244
 		}
-
-		cost = 50
+	
+		highlight_states = {
+			highlight_state_targets = { state = 195 } 
+			highlight_color_before_active = 3
+			highlight_color_while_active = 2
+		}
+	
+		cost = 0
+	
 		fire_only_once = yes
+	
+		days_remove = 14
+	
+		modifier = {
+			
+		}
+	
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 252
-				controls_state = 400
-				controls_state = 256
-				controls_state = 255
-				controls_state = 250
-			}
-			has_country_flag = SOV_scorched_earth
+			original_tag = SOV
+			date > 1702.8.1
 		}
-
+	
 		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 252
-				}
-				252 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 400
-				}
-				400 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 256
-				}
-				256 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 255
-				}
-				255 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 250
-				}
-				250 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
+			195 = {
+				SOV = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
 					}
 				}
 			}
 		}
-
+	
+		remove_effect = {
+			195 = {
+				SOV = {
+					remove_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+		}
+	
 		ai_will_do = {
-			factor = 1
+			base = 10
 		}
 	}
-
-	RUS_scorched_earth_moscow = {
-
-		icon = generic_scorched_earth
-
-		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
-		}
-
-		cost = 50
-		fire_only_once = yes
-		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 219
-				controls_state = 242
-				controls_state = 205
-				controls_state = 223
-				controls_state = 253
-				controls_state = 254
-			}
-			has_country_flag = SOV_scorched_earth
-		}
-
-		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 223
-				}
-				223 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 253
-				}
-				253 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 254
-				}
-				254 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 219
-				}
-				219 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 242
-				}
-				242 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-			if = {
-				limit = {
-					controls_state = 205
-				}
-				205 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
-				}
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
+	
+	RUS_scorch_baturyn = { 
+	
+	cost = 25
+	
+	fire_only_once = yes
+	
+	icon = GFX_decision_aristocratic_coup
+	
+	visible = {
+		tag = SOV
+		SOV = { has_country_flag = RUS_GNW_MAZEPA_BETRAYAL_GRAHHH }
+		SOV = { has_war_with = ZAP }
+		SOV = { has_war_with = SWE }
+		date < 1721.1.1 
 	}
-
+	
+	ai_will_do = {
+		factor = 200
+	}
+	
+	available = {
+		tag = SOV
+		SOV = { has_country_flag = RUS_GNW_MAZEPA_BETRAYAL_GRAHHH }
+		SOV = { has_war_with = ZAP }
+		SOV = { has_war_with = SWE }
+		SOV = { controls_province = 6508 }
+		date < 1721.1.1 
+	}
+	
+	complete_effect = {
+		custom_effect_tooltip = GNW_interrengum_criteria_tooltip #LOCALISATION TODO
+		add_political_power = -75
+		if = {
+			limit = {
+				has_country_flag = GNW_RUS_won_wschowa #TODO
+				has_country_flag = GNW_RUS_won_kalisz #TODO
+			}
+			SOV = { country_event = greatnorthernwars.5 }
+		}
+		else = {
+			SOV = { country_event = greatnorthernwars.4 }
+		}
+		SOV = { POL_increase_foreign_influence = yes }
+	}
+	}
+	
 	RUS_scorched_earth_novgorod = {
-
 		icon = generic_scorched_earth
-
+	
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			has_completed_focus = RUS_scorched_earth_tactics
+			tag = SOV
 		}
-
-		cost = 50
+	
+		days_remove = 60
+	
+		highlight_states = {
+		   highlight_state_targets = { state = 263 } 
+		   highlight_color_before_active = 3
+		   highlight_color_while_active = 2
+		}
+	
+		cost = 15
 		fire_only_once = yes
+	
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 263
-				controls_state = 244
-				controls_state = 264
-			}
-			has_country_flag = SOV_scorched_earth
+			tag = SOV
+			has_war_with = SWE
+			has_completed_focus = RUS_scorched_earth_tactics
 		}
-
+	
 		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 263
-				}
-				263 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			263 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 244
-				}
-				244 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			244 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 264
-				}
-				264 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			209 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
 		}
-
+	
+		remove_effect = {
+			add_stability = -0.125
+			263 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			244 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			209 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+	
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				NOT = {
+					263 = { is_controlled_by = SOV }
+					controls_province = 117
+				}
+				factor = 10
+			}
 		}
 	}
-	RUS_scorched_earth_pskov = {
-
+	
+	RUS_scorched_earth_moskva = {
 		icon = generic_scorched_earth
-
+	
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			has_completed_focus = RUS_scorched_earth_tactics
+			tag = SOV
 		}
-
-		cost = 50
+	
+		days_remove = 60
+	
+		highlight_states = {
+		   highlight_state_targets = { state = 219 } 
+		   highlight_color_before_active = 3
+		   highlight_color_while_active = 2
+		}
+	
+		cost = 15
 		fire_only_once = yes
+	
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 209
-				controls_state = 210
-			}
-			has_country_flag = SOV_scorched_earth
+			tag = SOV
+			has_war_with = SWE
+			has_completed_focus = RUS_scorched_earth_tactics
 		}
-
+	
 		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 209
-				}
-				209 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			219 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 210
+			242 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
-				210 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			}
+			246 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			247 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
 		}
-
+	
+		remove_effect = {
+			add_stability = -0.125
+			219 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			242 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			246 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			247 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+	
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				NOT = {
+					219 = { is_controlled_by = SOV }
+				}
+				factor = 10
+			}
 		}
 	}
-	RUS_scorched_earth_rzhev = {
-
+	
+	RUS_scorched_earth_orel = {
 		icon = generic_scorched_earth
-
+	
 		available = {
-			has_war = yes
-			has_country_flag = SOV_scorched_earth
-			has_equipment = {
-				support_equipment > 24
-			}
+			has_completed_focus = RUS_scorched_earth_tactics
+			tag = SOV
 		}
-
-		cost = 50
+	
+		days_remove = 60
+	
+		highlight_states = {
+		   highlight_state_targets = { state = 222 } 
+		   highlight_color_before_active = 3
+		   highlight_color_while_active = 2
+		}
+	
+		cost = 15
 		fire_only_once = yes
+	
 		visible = {
-			has_war = yes
-			OR = {
-				controls_state = 246
-				controls_state = 247
-				controls_state = 248
-			}
-			has_country_flag = SOV_scorched_earth
+			tag = SOV
+			has_war_with = SWE
+			has_completed_focus = RUS_scorched_earth_tactics
 		}
-
+	
 		complete_effect = {
-			add_equipment_to_stockpile = {
-				type = support_equipment_1
-				amount = -25
-			}
-			if = {
-				limit = {
-					controls_state = 246
-				}
-				246 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			222 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 247
-				}
-				247 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			205 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
-			if = {
-				limit = {
-					controls_state = 248
+			243 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
-				248 = {
-					damage_building = {
-						type = infrastructure
-						damage = 3
-					}
+			}
+			223 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			224 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			258 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			220 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
 				}
 			}
 		}
-
+	
+		remove_effect = {
+			add_stability = -0.125
+			222 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			205 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			243 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			223 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			224 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			258 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			220 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+	
 		ai_will_do = {
-			factor = 1
+			factor = 0
+			modifier = {
+				NOT = {
+					222 = { is_controlled_by = SOV }
+				}
+				factor = 10
+			}
 		}
 	}
-}
+	
+	RUS_scorched_earth_tsaritsyn = {
+		icon = generic_scorched_earth
+	
+		available = {
+			has_completed_focus = RUS_scorched_earth_tactics
+			tag = SOV
+		}
+	
+		days_remove = 60
+	
+		highlight_states = {
+		   highlight_state_targets = { state = 222 } 
+		   highlight_color_before_active = 3
+		   highlight_color_while_active = 2
+		}
+	
+		cost = 15
+		fire_only_once = yes
+	
+		visible = {
+			tag = SOV
+			has_war_with = SWE
+			has_completed_focus = RUS_scorched_earth_tactics
+		}
+	
+		complete_effect = {
+			217 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			239 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			236 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			237 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			1030 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			265 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			238 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			245 = {
+				add_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+	
+		remove_effect = {
+			add_stability = -0.125
+			217 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			239 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			236 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			237 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			1030 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			265 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			238 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+			245 = {
+				remove_dynamic_modifier = {
+					modifier = GNW_scorched_earth
+				}
+			}
+		}
+	
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				NOT = {
+					217 = { is_controlled_by = SOV }
+				}
+				factor = 10
+			}
+		}
+	}
+	}

@@ -3,14 +3,22 @@ state={
 	name="STATE_1032"
 
 	history={
-		owner = POL
+		owner = TUR
 		add_core_of = POL
+		add_core_of = TUR
 		add_core_of = UKR
 		buildings = {
 			infrastructure = 2
 		}
 		victory_points = {
-			3457 10
+			3457 10 
+		}
+		1699.1.1 = {
+			POL = {
+				set_province_controller = 3457
+				set_province_controller = 3562
+				set_province_controller = 462
+			}
 		}
 		1798.1.1 = {
 			owner = SOV
@@ -18,9 +26,10 @@ state={
 	}
 
 	provinces={
-		462 3430 3457 6429
+		462 3430 3457 3562 6429 6455 
 	}
 	manpower=162011
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

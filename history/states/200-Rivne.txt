@@ -7,23 +7,23 @@ state={
 
 	history={
 		owner = CRI
+		add_core_of = CRI
 		buildings = {
 			infrastructure = 3
 			9571 = {
 				naval_base = 1
 			}
 		}
-		add_core_of = CRI
 		1789.1.1 = {
 			owner = SOV
 		}
-
 	}
 
 	provinces={
-		429 588 3767 6596 9571 9729 11700 
+		767 3573 3767 6596 9571 9729 11700 
 	}
 	manpower=394082
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

@@ -1,0 +1,348 @@
+add_namespace = greatnorthernwars
+add_namespace = news_greatnorthernwars
+
+country_event = { #Krzystof Biallozor, Canon of Wilno, asks military suport from us. #LOCALISATION TODO
+	id = greatnorthernwars.1
+	title = greatnorthernwars.1.t
+	desc = greatnorthernwars.1.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #Sure! Prepare proper arrangements.
+		name = greatnorthernwars.1.a
+		set_country_flag = GNW_lithuanian_arrangement_flag
+		unlock_decision_tooltip = RUS_proper_arrangements_with_lithuanians
+	}
+}
+
+country_event = { #The Second Treaty of Narva #LOCALISATION TODO #TRIGGER TODO
+	id = greatnorthernwars.2
+	title = greatnorthernwars.2.t
+	desc = greatnorthernwars.2.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #A toast to our new allies!
+		name = greatnorthernwars.2.a
+		set_country_flag = GNW_second_narva_treaty_flag #Livonia will be given to Poland if war ends without Poland breaking the Treaty alongside the Zaporozhians immediately being forced to crush the Cossack Rebellion. (Depending on their country path)
+		POL = {
+			add_timed_idea = {
+				idea = RUS_narva_military_support
+				days = 365
+			}
+			add_manpower = 50000
+		}
+		SOV = {
+			add_timed_idea = {
+				idea = RUS_narva_military_support_opposite
+				days = 365
+			}
+			add_manpower = -50000
+		}
+		ZAP = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = small_decrease
+			}
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = ZAP
+				modifier = small_decrease
+			}
+		}
+		SOV = { POL_decrease_foreign_influence = yes }
+	}
+}
+
+country_event = { #Abdication of Augustus II and reannouncement of the Second Treaty of Narva #LOCALISATION TODO #TRIGGER TODO
+	id = greatnorthernwars.3
+	title = greatnorthernwars.3.t
+	desc = greatnorthernwars.3.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #We will crush the rebellion together, my friend!
+		name = greatnorthernwars.3.a
+		clr_country_flag = GNW_second_narva_treaty_flag #RIP
+		191 = { remove_claim_by = POL } #Tartu
+  		12 = { remove_claim_by = POL } #Livland
+		add_state_claim = 191 #Tartu
+		add_state_claim = 12 #Livland
+		POL = {
+			set_politics = { ruling_party = neutrality }
+			create_country_leader = {
+				name = "The Sejm"
+				desc = ""
+				picture = "sejm.dds"
+				expire = "1800.1.1"
+				ideology = despotism
+			}
+		}
+		SOV = {
+			set_autonomy = {
+				target = POL
+				autonomous_state = autonomy_protectorate
+			}
+		}
+		SOV = {
+			add_opinion_modifier = {
+				target = SAX
+				modifier = medium_decrease
+			}
+		}
+		SOV = { POL_increase_foreign_influence = yes }
+		hidden_effect = {
+			POL = {
+				add_stability = -0.15
+			}
+		}
+	}
+}
+
+country_event = { #Russia unable to choose puppet leader on the throne of the Crown of Poland #LOCALISATION TODO 
+	id = greatnorthernwars.4
+	title = greatnorthernwars.4.t
+	desc = greatnorthernwars.4.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #Damned Swedes!
+		name = greatnorthernwars.4.a
+		add_political_power = -25
+		set_country_flag = GNW_augustus_probably_returns
+		hidden_effect = {
+			POL = {
+				add_stability = -0.05
+			}
+			SOV = {
+				add_opinion_modifier = {
+					target = SAX
+					modifier = medium_increase
+				}
+			}
+			SOV = { POL_decrease_foreign_influence = yes }
+		}
+	}
+}
+
+country_event = { #Russia to choose puppet leader on the throne of the Crown of Poland #LOCALISATION TODO 
+	id = greatnorthernwars.5
+	title = greatnorthernwars.5.t
+	desc = greatnorthernwars.5.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #Ferenc Rakoczi, Prince of Transylvania, shall suceed the throne.
+		name = greatnorthernwars.5.a
+		#TODO
+		AUS = {
+			add_opinion_modifier = {
+				target = SOV
+				modifier = medium_decrease
+			}
+		}
+		hidden_effect = {
+			POL = { add_stability = 0.10 }
+		}
+	}
+	option = { #Adam Sieniawski, Great Crown Hetman of Poland, shall suceed the throne.
+		name = greatnorthernwars.5.b
+		#TODO
+		hidden_effect = {
+			POL = { add_stability = 0.15 }
+		}
+	}
+}
+
+country_event = { #Augustus II returns to the throne of Poland-Lithuania through the Sejm. #LOCALISATION TODO
+	id = greatnorthernwars.6
+	title = greatnorthernwars.6.t
+	desc = greatnorthernwars.6.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	trigger = {
+		tag = POL
+		date > 1710.2.1 #IDK WHEN EXACTLY, JUST KNOW SOMEWHERE THIS MONTH AND YEAR
+		SOV = {
+			has_country_flag = GNW_augustus_probably_returns
+			has_country_flag = GNW_RUS_victory_at_poltava #TODO
+		}
+	}
+
+    option = { 
+		name = greatnorthernwar.6.a
+		SOV = {
+			set_autonomy = {
+				target = POL
+				autonomy_state = autonomy_free
+			}
+			add_to_faction = POL
+			country_event = greatnorthernwars.7
+		}	
+		POL = {
+			set_politics = { ruling_party = neutrality }
+			create_country_leader = {
+				name = "Frederick Augustus"
+				desc = "POLITICS_FREDERICK_AUGUSTUS_DESC"
+				traits = { disputed_reign }
+				picture = "Saxony_leader.dds"
+				expire = "1800.1.1"
+				ideology = despotism
+			}
+			add_stability = 0.05
+		}
+	}
+}
+
+country_event = { #Augustus II returns to the throne of Poland-Lithuania through the Sejm & ratifies all previous treaties made with Russia. (Notification for Russia) #LOCALISATION TODO
+	id = greatnorthernwars.7
+	title = greatnorthernwars.7.t
+	desc = greatnorthernwars.7.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #Okay...
+		name = greatnorthernwar.7.a
+		hidden_effect = {
+			SOV = { POL_decrease_foreign_influence = yes }
+		}
+	}
+}
+
+country_event = { #Treaty of Altranstedt
+	id = greatnorthernwars.8
+	title = greatnorthernwars.8.t
+	desc = greatnorthernwars.8.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #How am I supposed to tell Peter?
+		name = greatnorthernwar.7.a
+		
+	}
+}
+
+#TODO CHURCH FLAVOUR EVENTS & TSAR FUCKING GDANSK TRADE (DECISIONS TOO)
+
+############################################################################ GNW EVENTS - POST-1708
+
+country_event = { #Martial Law in Moscow
+	id = greatnorthernwars.50
+	title = greatnorthernwars.50.t
+	desc = greatnorthernwars.50.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #Panik
+		name = greatnorthernwar.50.a
+		add_ideas = RUS_martial_law_idea
+	}
+}
+
+########################################################################### YES
+
+country_event = { #Moscow Campaign - Russian Victory
+	id = greatnorthernwars.60
+	title = greatnorthernwars.60.t
+	desc = greatnorthernwars.60.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { # W Russia
+		name = greatnorthernwar.60.a
+		news_event = {
+			id = news_greatnorthernwars.1
+			days = 2
+			random = 3
+		}
+		#TODO
+		trigger = { tag = SOV }
+	}
+	option = { # L Sweden
+		name = greatnorthernwar.60.b
+		trigger = { tag = SWE }
+	}
+}
+
+country_event = { #Moscow Campaign - Swedish Victory
+	id = greatnorthernwars.61
+	title = greatnorthernwars.61.t
+	desc = greatnorthernwars.61.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { # W Sweden
+		name = greatnorthernwar.61.a
+        news_event = {
+			id = news_greatnorthernwars.2
+			days = 2
+			random = 3
+		}
+		#TODO
+		trigger = { tag = SWE }
+	}
+	option = { # L Russia
+		name = greatnorthernwar.61.b
+		trigger = { tag = SOV }
+	}
+}
+
+news_event = {
+	id = news_greatnorthernwars.1
+	title = news_greatnorthernwars.1.t
+	desc = news_greatnorthernwars.1.d
+	picture = GFX_news_event_army
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news_greatnorthernwars.1.a
+	}
+}
+
+news_event = {
+	id = news_greatnorthernwars.2
+	title = news_greatnorthernwars.2.t
+	desc = news_greatnorthernwars.2.d
+	picture = GFX_news_event_fall_of_moscow
+
+	major = yes
+
+	is_triggered_only = yes
+
+	option = {
+		name = news_greatnorthernwars.2.a
+	}
+}
+
+############################################################################ GNW EVENTS - ALTERNATIVE CONTENT
+
+country_event = { # Destabilise Pro-Swedish Poland Localisation TODO
+	id = greatnorthernwars.100
+	title = greatnorthernwars.100.t
+	desc = greatnorthernwars.100.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #TODO
+		name = greatnorthernwar.100.a
+		
+	}
+}
+
+country_event = { # Destabilise Pro-Swedish Denmark Localisation TODO
+	id = greatnorthernwars.101
+	title = greatnorthernwars.101.t
+	desc = greatnorthernwars.101.d
+	fire_only_once = yes
+	is_triggered_only = yes
+
+    option = { #TODO
+		name = greatnorthernwar.101a
+		
+	}
+}

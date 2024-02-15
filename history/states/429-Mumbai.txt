@@ -1,4 +1,3 @@
-
 state={
 	id=429
 	name="STATE_429"
@@ -13,7 +12,9 @@ state={
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 3
-
+		}
+		victory_points = { # Ahmednagar
+			13298 10
 		}
 		1699.1.1 = {
 			MAR = {
@@ -26,9 +27,7 @@ state={
 		1707.5.1 = {
 			owner = MAR
 			controller = MAR
-
 		}
-
 	}
 
 	provinces={

@@ -1448,19 +1448,19 @@ focus_tree = {
 		cost = 7.2
 
 		available = {
-			647 = {
+			684 = {
 				is_owned_and_controlled_by = UNC
 			}
-			684 = {
+			13024 = {
 				is_owned_and_controlled_by = UNC
 			}
 		}
 
 		completion_reward = {
-			647 = {
+			684 = {
 				transfer_state_to = PHI
 			}
-			684 = {
+			13024 = {
 				transfer_state_to = PHI
 			}
 			add_political_power = -70
@@ -1579,7 +1579,7 @@ focus_tree = {
 			remove_ideas = cardinal_portocarrero
 			create_country_leader = {
 				name = "Philip V"
-				picture = "spain_philip.dds"
+				picture = "Philip_V.dds"
 				expire = "1965.1.1"
 				ideology = despotism
 			}
@@ -1648,7 +1648,7 @@ focus_tree = {
 			kill_country_leader = yes
 			create_country_leader = {
 				name = "Philip V"
-				picture = "spain_philip.dds"
+				picture = "Philip_V.dds"
 				expire = "1965.1.1"
 				ideology = despotism
 			}

@@ -1,0 +1,50 @@
+﻿#Unused shit: (By order in Localisation)
+1_english:
+
+#PRS_sendultimatum:0 "Send Ultimatum"
+#PRS_sendultimatum_desc:0 "We'll give Denmark a chance to avoid war. If they refuse, we'll show them the might of the Germans."
+
+#PRS_annexsoutherngermanstates:0 "Annex Southern-German states"
+#PRS_annexsoutherngermanstates_desc:0 "The German states should be united!"
+
+#PRS_annexbavaria:0 "Annex Bavaria"
+#PRS_annexbavaria_desc:0 "The German states should be united!"
+
+#PRS_annexnortherngermanstates:0 "Annex Northern-German states"
+#PRS_annexnortherngermanstates_desc:0 "The German states should be united!"
+
+#PRS_annexmecklenburg:0 "Annex Mecklenburg"
+#PRS_annexmecklenburg_desc:0 "The German states should be united!"
+
+#PRS_strengthenimperialpower:0 "Strengthen Imperial Power"
+#PRS_strengthenimperialpower_desc:0 "The princes have had too much autonomy under the Habsburg Emperors. We need to take this power back."
+
+#PRS_militaryscientificschool:0 "Military Scientific School"
+#PRS_militaryscientificschool_desc:0 "We need a new school for military development."
+
+#PRS_takeschleswig:0 "Take Schleswig"
+#PRS_takeschleswig_desc:0 "Schleswig is part of the HRE, so it is ours by right."
+
+#PRS_proclaimholyromanempire:0 "Proclaim Holy Roman Empire"
+#PRS_proclaimholyromanempire_desc:0 "The Holy Roman Empire is united at last! All German princes have subjugated to you and now you are the supreme ruler."
+
+#PRS_usurpimperialtitle:0 "Usurp Imperial title"
+#PRS_usurpimperialtitle_desc:0 "Now the old Emperor has stepped down, it's time we shall take the Imperial crown."
+
+#PRS_seeksupportofgermanprinces:0 "Seek support of German Princes"
+#PRS_seeksupportofgermanprinces_desc:0 "The German princes are not blind; they too can see the flaws of Leopold. We should all unite to oppose him"
+
+#PRS_germancooperation:0 "German cooperation"
+#PRS_germancooperation_desc:0 "All German princes should cooperate with each other. Only then we can achieve greatness."
+
+#PRS_claimschleswig:0 "Claim Schleswig"
+#PRS_claimschleswig_desc:0 "Although formally part of the HRE, it's under firm Danish control. It's time to liberate this German people from Danish yoke."
+
+#PRS_takeaustria:0 "Take Austria"
+#PRS_takeaustria_desc:0 "Austria is part of the HRE, so it's ours by right."
+
+PRS_marry_hannoverian_princess:0 "Marry a Hanoverian princess"
+PRS_marry_hannoverian_princess_desc:0 "In order to strengthen our bonds with the German princes we can marry into another noble German house. Sophie Charlotte of Hannover seems an excellent candidate."
+
+PRS_diplomatic_cooperation:0 "Diplomatic cooperation"
+PRS_diplomatic_cooperation_desc:0 "We have to establish better diplomatic cooperation between the German states. We will all be better off with this. It is of course the question if we should strengthen our neighbours."

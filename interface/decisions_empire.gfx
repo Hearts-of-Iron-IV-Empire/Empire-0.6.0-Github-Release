@@ -1,0 +1,172 @@
+spriteTypes = {	
+	
+	### Armin GFX ### 
+
+	spriteType = {
+		name = "GFX_persia_concept"
+		texturefile = "gfx/interface/decisions/persia_concept.png"
+	} # Temp
+
+	### Emperor GFX ###
+	
+	spriteType = {
+		name = "GFX_decision_category_balkans"
+		texturefile = "gfx/interface/decisions/decision_category_balkans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_generic_building"
+		texturefile = "gfx/interface/decisions/decision_category_generic_building.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_form_mongol_empire"
+		texturefile = "gfx/interface/decisions/decision_category_form_mongol_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_generic_political_actions2"
+		texturefile = "gfx/interface/decisions/decision_category_generic_political_actions2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_new_world"
+		texturefile = "gfx/interface/decisions/new_world.dds"
+	}
+
+	spriteType = {
+		name = "GFX_spanish_overseas_colonies"
+		texturefile = "gfx/interface/decisions/spanish_overseas_colonies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mughal_qing_war"
+		texturefile = "gfx/interface/decisions/decision_mughal_qing_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_coins"
+		texturefile = "gfx/interface/decisions/decision_coins.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_mughal_maratha_war"
+		texturefile = "gfx/interface/decisions/decision_mughal_maratha_war.dds"
+	}
+	
+	#################
+	#### Mod gfx ####
+	#################
+
+	spriteType = {
+		name = "GFX_decision_nobility"
+		texturefile = "gfx/interface/decisions/decision_nobility.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_clergy"
+		texturefile = "gfx/interface/decisions/decision_clergy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_burghers"
+		texturefile = "gfx/interface/decisions/decision_burghers.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_totem"
+		texturefile = "gfx/interface/decisions/decision_totem.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_totemism"
+		texturefile = "gfx/interface/decisions/decision_category_totemism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_spanish_crisis"
+		texturefile = "gfx/interface/decisions/decision_cat_spanish_crisis.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_germany"
+		texturefile = "gfx/interface/decisions/decision_cat_germany.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_mali_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_mali_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_cat_songhai_empire"
+		texturefile = "gfx/interface/decisions/decision_cat_songhai_empire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_burgher_coup"
+		texturefile = "gfx/interface/decisions/decision_burgher_coup.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_clergy_coup"
+		texturefile = "gfx/interface/decisions/decision_clergy_coup.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_aristocratic_coup"
+		texturefile = "gfx/interface/decisions/decision_aristocratic_coup.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_patriarchy"
+		texturefile = "gfx/interface/decisions/decision_patriarchy.dds"
+	}
+
+	### category pictures ###
+
+	spriteType = {
+		name = "GFX_decision_category_patriarchy"
+		texturefile = "gfx/interface/decisions/decision_category_patriarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_clergy"
+		texturefile = "gfx/interface/decisions/decision_category_clergy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_nobility"
+		texturefile = "gfx/interface/decisions/decision_category_nobility.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_category_burghers"
+		texturefile = "gfx/interface/decisions/decision_category_burghers.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_generic_anchor"
+		texturefile = "gfx/interface/decisions/decision_generic_anchor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_boot"
+		texturefile = "gfx/interface/decisions/decision_generic_boot.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_intelligence_operation"
+		texturefile = "gfx/interface/decisions/decision_generic_intelligence_operation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_decision_recruit_operative"
+		texturefile = "gfx/interface/decisions/decision_recruit_operative.dds"
+	}
+
+	spriteType = {
+		name = "GFX_decision_generic_military"
+		texturefile = "gfx/interface/decisions/decision_generic_military.dds"
+	}	
+}

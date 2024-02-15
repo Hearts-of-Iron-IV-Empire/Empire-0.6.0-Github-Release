@@ -1,9 +1,7 @@
-
 state={
 	id=104
 	name="STATE_104"
-	manpower =657400
-	
+	manpower = 200000
 	
 	state_category = town
 	
@@ -13,18 +11,20 @@ state={
 
 	history={
 		owner = TUR
-		victory_points = {
-			11899 5 
+		add_core_of = TUR
+		add_dynamic_modifier = {
+			modifier = devastated_by_war
 		}
-		victory_points = {
+		victory_points = { # Sarajevo
+			11899 10 
+		}
+		victory_points = { # Banja Luka
 			6983 3
 		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 1
 		}
-		add_core_of = TUR
-		add_core_of = BOS
 	}
 
 	provinces={

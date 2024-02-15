@@ -43,111 +43,6 @@ ideas = {
 				war_support_factor = 0.3
 			}
 		}
-		RUS_streltsy_purge_5 = {
-
-			picture = chi_army_corruption
-
-			name = RUS_streltsy_purge
-		
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.15
-				army_attack_factor = -0.15
-				army_defence_factor = -0.15
-				mobilization_speed = -0.15
-				training_time_factor = 0.15
-			}
-		}
-
-		RUS_streltsy_purge_4 = {
-
-			picture = chi_army_corruption
-
-			name = RUS_streltsy_purge
-		
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.10
-				army_attack_factor = -0.10
-				army_defence_factor = -0.10
-				mobilization_speed = -0.10
-				training_time_factor = 0.10
-			}
-		}
-
-		RUS_streltsy_purge_3 = {
-
-			picture = chi_army_corruption
-
-			name = RUS_streltsy_purge
-		
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.05
-				army_attack_factor = -0.05
-				army_defence_factor = -0.05
-				mobilization_speed = -0.05
-				training_time_factor = 0.05
-			}
-		}
-
-		RUS_streltsy_purge_2 = {
-
-			picture = chi_army_corruption
-
-			name = RUS_streltsy_purge
-		
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.03
-				army_attack_factor = -0.03
-				army_defence_factor = -0.03
-				mobilization_speed = -0.03
-				training_time_factor = 0.03
-			}
-		}
-
-		RUS_streltsy_purge_1 = {
-
-			picture = chi_army_corruption
-
-			name = RUS_streltsy_purge
-		
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-			
-			modifier = {
-				army_org_factor = -0.01
-				army_attack_factor = -0.01
-				army_defence_factor = -0.01
-				mobilization_speed = -0.01
-				training_time_factor = 0.01
-			}
-		}
-
 		russia_standardized_equipment = {
 			
 			allowed = {
@@ -208,7 +103,6 @@ ideas = {
 			training_time_factor = -0.2
 			}
 		}
-	
 		russia_mass_mobilization = {
 			
 			allowed = {
@@ -222,7 +116,6 @@ ideas = {
 			conscription = 0.03
 			}
 		}
-
 		russia_army_of_offense = {
 			
 			allowed = {
@@ -236,7 +129,6 @@ ideas = {
 			army_infantry_attack_factor = 0.1
 			}
 		}
-
 		RUS_proper_military_regulations = {
 			
 			allowed = {
@@ -252,7 +144,6 @@ ideas = {
 			training_time_factor = -0.15
 			}
 		}
-
 		russia_army_of_defense = {
 			
 			allowed = {
@@ -267,7 +158,6 @@ ideas = {
 			army_infantry_defence_factor = 0.1
 			}
 		}
-
 		russia_infrastructural_reforms = {
 			
 			allowed = {
@@ -282,7 +172,6 @@ ideas = {
 			production_speed_infrastructure_factor = 0.1
 			}
 		}
-
 		russia_land_reforms = {
 			
 			allowed = {
@@ -427,21 +316,6 @@ ideas = {
 			}
 		}
 
-		boyar_duma = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			picture = generic_pp_unity_bonus
-
-			modifier = { 
-				political_power_factor = -0.15
-				aristocracy_drift = 0.01
-			}
-		}
-
 		absolutist_centralization = {
 			allowed = {
 				always = no
@@ -471,7 +345,6 @@ ideas = {
 				research_speed_factor = 0.05
 			}
 		}
-		
 		governing_senate = {
 			allowed = {
 				always = no
@@ -486,11 +359,8 @@ ideas = {
 				democratic_drift = 0.01
 				production_factory_max_efficiency_factor = 0.1
 				production_speed_buildings_factor = 0.1
-				offensive_war_stability_factor = 0.1
-				defensive_war_stability_factor = 0.1
 			}
 		}
-
 		zemsky_sobor = {
 			allowed = {
 				always = no
@@ -510,7 +380,6 @@ ideas = {
 				production_speed_buildings_factor = 0.15
 			}
 		}
-
 		governing_senate_1 = {
 			allowed = {
 				always = no
@@ -525,12 +394,8 @@ ideas = {
 				aristocracy_drift = 0.01
 				production_factory_max_efficiency_factor = -0.05
 				production_speed_buildings_factor = -0.05
-				max_surrender_limit_offset = 0.20
-				offensive_war_stability_factor = 0.2
-				defensive_war_stability_factor = 0.2
 			}
 		}
-
 		beard_tax = {
 			allowed = {
 				always = no
@@ -545,7 +410,6 @@ ideas = {
 				consumer_goods_factor = -0.02
 			}
 		}
-
 		church_property_taxes= {
 			allowed = {
 				always = no
@@ -805,6 +669,1248 @@ ideas = {
 				ai_join_ally_desire_factor = -1000 
 				war_support_factor = -0.30
 				experience_gain_army = 0.05
+			}
+		}
+		# Ideas for Peter I
+		RUS_governing_senate_0 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			allowed_civil_war = {
+				has_government = neutrality
+			}
+
+			picture = generic_pp_unity_bonus 
+
+			modifier = { 
+				political_power_factor = 0.01
+				aristocracy_drift = 0.01
+			}
+		}
+
+        RUS_governing_senate_1 = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_pp_unity_bonus 
+
+			modifier = { 
+				stability_factor = 0.15
+				political_power_factor = 0.05
+				party_popularity_stability_factor = 0.05
+				drift_defence_factor = 0.2
+				aristocracy_drift = 0.02
+				max_surrender_limit_offset = 0.20
+				offensive_war_stability_factor = 0.2
+				defensive_war_stability_factor = 0.2
+			}
+		}
+
+		RUS_deal_with_bashkirs_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_war_preparation #PLACEHOLDER
+
+			modifier = { 
+				consumer_goods_factor = 0.05
+				stability_factor = 0.10
+			}
+		}
+		
+		RUS_boyar_duma = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				political_power_factor = -0.05
+				democratic_drift = 0.01
+			}
+		}
+
+		RUS_boyar_duma_curtailed = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				political_power_factor = -0.01
+			}
+		}
+
+		RUS_boyar_duma_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				political_power_factor = -0.08
+				democratic_drift = 0.03
+				aristocracy_drift = 0.01
+				fascism_drift = 0.01
+			}
+		}
+		RUS_boyar_duma_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				political_power_factor = -0.10
+				democratic_drift = 0.05
+				aristocracy_drift = 0.02
+				fascism_drift = 0.01
+			}
+		}
+		RUS_boyar_duma_3 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				stability_factor = 0.05
+				political_power_factor = -0.08
+				democratic_drift = 0.05
+				aristocracy_drift = 0.03
+				fascism_drift = 0.02
+			}
+		}
+		RUS_boyar_duma_4 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				stability_factor = 0.10
+				political_power_factor = -0.05
+				consumer_goods_factor = -0.05
+				democratic_drift = 0.08
+				aristocracy_drift = 0.05
+				fascism_drift = 0.03
+			}
+		}
+		RUS_zemsky_sobor = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				stability_factor = 0.05
+				political_power_factor = 0.05
+				democratic_drift = 0.08
+				aristocracy_drift = 0.1
+				fascism_drift = 0.01
+			}
+		}
+		RUS_compensation_to_the_boyars = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = cash_flow_negative 
+
+			modifier = { 
+				political_power_factor = -0.05
+				consumer_goods_factor = 0.05
+			}
+		}
+		RUS_angered_the_boyars = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				consumer_goods_factor = 0.10
+			}
+		}
+		RUS_purging_conservative_elements = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_purge 
+
+			modifier = { 
+				stability_factor = 0.05
+				political_power_factor = -0.05
+			}
+		}
+		RUS_oprichnina = {
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_oppression 
+			
+			modifier = {
+				army_org_factor = 0.05
+				mobilization_speed = 0.05
+				training_time_factor = 0.05
+			}
+		}
+		RUS_oprichnina_1 = {
+		
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_oppression 
+			
+			modifier = {
+				army_org_factor = 0.05
+				army_attack_factor = 0.03
+				army_defence_factor = 0.03
+				mobilization_speed = 0.08
+				training_time_factor = -0.05
+			}
+		}
+		RUS_embrace_republicanism = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				stability_factor = 0.05
+				democratic_drift = 0.05
+				consumer_goods_factor = -0.15
+			}
+		}
+		RUS_dutch_republicanism = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_neutrality_drift_bonus 
+
+			modifier = { 
+				stability_factor = 0.10
+				political_power_factor = 0.05
+				consumer_goods_factor = -0.05
+				industrial_capacity_dockyard = 0.15
+			}
+		}
+		RUS_absolutist_purge = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_purge 
+
+			modifier = { 
+				political_power_factor = -0.05
+				neutrality_drift = -0.02
+				aristocracy_drift = -0.02
+				fascism_drift = -0.02
+			}
+		}
+		RUS_firm_support_from_the_duma = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				political_power_factor = 0.15
+			}
+		}
+		RUS_economic_compensation = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = cash_flow_negative 
+
+			modifier = { 
+				consumer_goods_factor = -25
+			}
+		}
+		RUS_economic_compensation_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = taxes 
+
+			modifier = { 
+				consumer_goods_factor = 25
+				political_power_gain = -0.05
+			}
+		}
+		RUS_bread_and_alms = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = RUS_boyar_duma 
+
+			modifier = { 
+				consumer_goods_factor = -0.05
+				political_power_gain = -0.02
+			}
+		}
+		RUS_root_out_swedes_poland_idea = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+			picture = generic_army_problems
+
+			modifier = {
+				army_org = 15
+				army_attack_factor = 0.15
+				army_core_attack_factor = 0.05
+				army_defence_factor	= 0.10
+				army_core_defence_factor = 0.05
+				cavalry_attack_factor = 0.05
+				army_strength_factor = 0.05
+				army_speed_factor = 0.05
+			}
+		}
+		RUS_outdated_military = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_army_problems
+
+			modifier = {
+				army_org = -20
+				army_attack_factor = -0.15
+				army_core_attack_factor = 0.05
+				army_defence_factor	= -0.10		
+				coordination_bonus = -0.05
+				training_time_army_factor = 0.25
+				army_core_defence_factor = 0.10
+				cavalry_attack_factor = -0.10
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.05
+				experience_gain_army = 0.02
+				tactic_ambush_preferred_weight_factor = -0.1
+				army_morale_factor = -0.1
+			}
+
+		}
+		
+		RUS_decaying_army_new_recruitment = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+            name = RUS_outdated_military
+
+			picture = generic_army_problems
+
+			modifier = {
+				army_org = -20
+				army_attack_factor = -0.15
+				army_core_attack_factor = 0.05
+				army_defence_factor	= -0.10		
+				coordination_bonus = -0.05
+				training_time_army_factor = -0.15
+				army_core_defence_factor = 0.10
+				cavalry_attack_factor = -0.10
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.05
+				experience_gain_army = 0.02
+				tactic_ambush_preferred_weight_factor = -0.1
+				army_morale_factor = -0.1
+			}
+
+		}
+		
+		RUS_outdated_military_1 = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			name = RUS_outdated_military
+
+			picture = generic_army_problems
+
+			modifier = {
+				army_org = -18
+				army_attack_factor = -0.15
+				army_core_attack_factor = 0.03
+				army_defence_factor	= -0.10		
+				coordination_bonus = -0.03
+				training_time_army_factor = 0.15
+				army_core_defence_factor = 0.05
+				#cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+				experience_gain_army = 0.02
+			}
+
+		}
+		RUS_outdated_military_victory_narva = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes	
+			}
+
+			name = RUS_outdated_military
+			picture = army
+
+			modifier = {
+				army_org = -15
+				army_attack_factor = -0.13
+				army_core_attack_factor = 0.03
+				army_defence_factor	= -0.08	
+				coordination_bonus = 0.02
+				training_time_army_factor = 0.10
+				army_core_defence_factor = 0.05
+				#cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+				experience_gain_army = 0.02
+			}
+		}
+		RUS_outdated_military_victory_narva_1 = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			name = RUS_outdated_military
+
+			picture = army
+
+			modifier = {
+				army_org = -13
+				army_attack_factor = -0.10
+				army_core_attack_factor = 0.03
+				army_defence_factor	= -0.08	
+				coordination_bonus = 0.05
+				training_time_army_factor = 0.08
+				army_core_defence_factor = 0.05
+				#cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+				experience_gain_army = 0.03
+			}
+		}
+		RUS_outdated_military_failure_narva = {
+
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes	
+			}
+
+			name = RUS_outdated_military
+
+			picture = army
+
+			modifier = {
+				army_org = -23
+				army_attack_factor = -0.15
+				army_core_attack_factor = 0.05
+				army_defence_factor	= -0.10		
+				coordination_bonus = -0.08
+				training_time_army_factor = 0.20
+				army_core_defence_factor = 0.10
+				#cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+				experience_gain_army = 0.03
+			}
+
+		}
+		RUS_outdated_military_failure_narva_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes	
+			}
+
+			name = RUS_outdated_military
+
+			picture = army
+
+			modifier = {
+				army_org = -20
+				army_attack_factor = -0.13
+				army_core_attack_factor = 0.05
+				army_defence_factor	= -0.10	
+				coordination_bonus = -0.05
+				training_time_army_factor = 0.15
+				army_core_defence_factor = 0.15
+				#cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+				experience_gain_army = 0.04
+			}
+		}
+
+		RUS_outdated_military_reform = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes	
+			}
+
+			name = RUS_outdated_military
+			picture = army
+
+			modifier = {
+				army_org = -10
+				army_attack_factor = -0.08
+				army_core_attack_factor = 0.05
+				army_defence_factor	= -0.05
+				coordination_bonus = 0.05
+				training_time_army_factor = 0.08
+				army_core_defence_factor = 0.15
+				cavalry_attack_factor = 0.02
+				#army_strength_factor = -0.05
+				acclimatization_cold_climate_gain_factor = 0.10
+			}
+		}
+		
+		RUS_outdated_military_reform_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				army_core_attack_factor = 0.20
+				army_defence_factor	= 0.05
+				army_core_defence_factor = 0.20
+				cavalry_attack_factor = 0.10
+				army_strength_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.20
+			}
+		}
+		RUS_legacy_of_ivan_the_terrible_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = chi_army_corruption2
+
+			modifier = {
+				resistance_growth_on_our_occupied_states = 0.25
+				resistance_target_on_our_occupied_states = 0.25
+				army_attack_factor = 0.05
+				army_core_attack_factor = 0.20
+				army_core_defence_factor = 0.20
+				cavalry_attack_factor = 0.20
+				army_speed_factor = 0.075
+				acclimatization_cold_climate_gain_factor = 0.25
+			}
+		}
+
+		RUS_logistical_planning = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				supply_consumption_factor = -0.10
+			}
+		}
+ 
+		RUS_idea_offensive_with_limited_purpose = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				army_org = 5
+				army_attack_factor = 0.05
+				army_defence_factor	= 0.05
+			}
+		}
+		RUS_foreign_craftsman = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = generic_production_bonus
+
+			modifier = {
+				industrial_capacity_factory	= 0.10
+				industry_repair_factor = 0.05
+			}
+		}
+		RUS_monetary_reform = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				consumer_goods_factor = -0.03
+				political_power_gain = 0.01
+			}
+		}
+		RUS_poll_taxes = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = cash_flow_positive
+
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = -0.15
+			}
+		}
+		RUS_serfdom = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				always = yes	
+			}
+
+			picture = prc_low_popular_support2
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.15
+				research_speed_factor = -0.10
+				aristocracy_drift = 0.02
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.10
+				production_speed_arms_factory_factor = -0.05
+			}
+		}
+		RUS_enforced_serfdom = {
+			allowed = {
+				always = no 
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = -0.15
+				political_power_gain = -0.08
+			}
+		}
+		RUS_abolished_serfdom = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = 0.15
+			}
+		}
+		RUS_berg_privilege = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+				OR = {
+					has_government = aristocracy
+				    has_government = communism
+				    has_government = fascism
+				    has_government = democratic
+				    has_government = neutrality
+				}		
+			}
+
+			picture = army
+
+			modifier = {
+				local_resources_factor = 0.10
+				consumer_goods_factor = 0.02
+			}
+		}
+
+		# Ideas for Great Northern War
+		RUS_lithuanian_military_support = { #LOCALISATION TODO
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    consumer_goods_factor = -0.05
+			}
+		}
+		RUS_lithuanian_military_support_opposite = { #LOCALISATION TODO
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    consumer_goods_factor = 0.05
+			}
+		}
+		RUS_narva_military_support = { #LOCALISATION TODO
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    consumer_goods_factor = -0.05
+			}
+		}
+		RUS_narva_military_support_opposite = { #LOCALISATION TODO
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    consumer_goods_factor = 0.05
+			}
+		}
+		RUS_mass_emergency_fort_construction = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    consumer_goods_factor = 0.25
+				local_resources_factor = -0.10
+				stability_factor = -0.20
+				production_factory_max_efficiency_factor = -0.20
+				industrial_capacity_factory = -0.15
+				production_speed_arms_factory_factor = -0.10
+			}
+		}
+		RUS_towards_poltava_idea = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    army_speed_factor = 0.20
+			}
+		}
+		RUS_staggered_defense_idea = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    army_core_defence_factor = 0.30
+			}
+		}
+		RUS_martial_law_idea = { 
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = { 
+			    stability_factor = -0.10
+			    production_speed_arms_factory_factor = 0.15
+			}
+		}
+		# Ideas for Catherine I
+	    RUS_supreme_privy_council = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = RUS_supreme_privy_council
+
+			modifier = { 
+			    stability_factor = 0.05
+				political_power_factor = -0.05
+				aristocracy_drift = 0.01
+			}
+		}
+		RUS_poll_taxes_lowered = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			picture = army
+
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 	}

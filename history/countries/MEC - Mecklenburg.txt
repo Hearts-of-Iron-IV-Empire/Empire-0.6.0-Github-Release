@@ -1,10 +1,10 @@
 ﻿capital = 61
 
-oob = "MEC_1936"
+oob = "MEC_1699"
 set_country_flag = HRE_imperial_subject
-load_oob = Imperial_army
+load_oob = "Imperial_army"
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {
@@ -34,8 +34,8 @@ set_politics = {
 set_popularities = {
 	democratic = 10
 	fascism = 20
-	communism = 10
-	neutrality = 30
+	communism = 0
+	neutrality = 40
 	aristocracy = 30
 }
 create_country_leader = {

@@ -1,20 +1,23 @@
 state={
 	id=107
 	name="STATE_107"
+	manpower = 78000
 
 	history={
 		owner = TUR
+		add_core_of = TUR
+		add_core_of = SER
+		add_dynamic_modifier = {
+			modifier = devastated_by_war
+		}
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
-
 		}
-		victory_points = {
+		victory_points = { # Belgrade
 			11586 20 
 		}
-		add_core_of = TUR
-		add_core_of = SER
 		1718.1.1 = {
 			owner = AUS
 			controller = AUS
@@ -28,7 +31,6 @@ state={
 	provinces={
 		797 3609 6634 9599 11583 11586 
 	}
-	manpower=379121
 	buildings_max_level_factor=1.000
 	state_category=large_city
 }

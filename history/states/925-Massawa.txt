@@ -1,26 +1,27 @@
-
 state={
 	id=925
 	name="STATE_925"
 
 	history={
 		owner = TUR
+		add_core_of = TUR
+		add_core_of = ETH
+		add_claim_by = SUD
+		victory_points = { # Massawa
+			12766 10
+		}
 		buildings = {
 			infrastructure = 1
 			12766 = {
-				naval_base = 1
-
+				naval_base = 2
 			}
-
 		}
-		add_core_of = TUR
-
 	}
 
 	provinces={
-		5091 8043 12766 
+		12766 
 	}
-	manpower=8521
+	manpower=4251
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=rural
 }

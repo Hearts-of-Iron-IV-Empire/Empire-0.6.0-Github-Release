@@ -1,4 +1,3 @@
-
 state={
 	id=765
 	name="STATE_765"
@@ -6,7 +5,13 @@ state={
 	state_category = pastoral
 
 	history={
-	owner = UNC
+		owner = BNK
+		victory_points = { # Al-Bidda
+			8051 20
+		}
+		buildings = {
+			infrastructure = 1
+		}
 	}
 
 	provinces={

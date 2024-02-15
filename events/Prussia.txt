@@ -10,20 +10,20 @@ country_event = { #Krontraktak
 
 	option = { # Austria Accepts
 		name = prussia.1.a
-			ai_chance = { 
-				factor = 80
-			}
 		PRS = {
 			country_event = { id = prussia.2 }	
 		}	
 		add_manpower = 8000	
+		ai_chance = { 
+			base = 80
+		}
 	}
 
 	option = { #Austria refuses
 		name = prussia.1.b
-			ai_chance = { 
-				factor = 20
-			}
+		ai_chance = { 
+			base = 20
+		}
 	}
 }
 
@@ -246,7 +246,7 @@ country_event = { #prussia proposes confederation
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 		}
 	}
 	option = {
@@ -261,16 +261,16 @@ country_event = { #prussia proposes confederation
 			}
 		}
 		ai_chance = {
-			factor = 10
+			base = 10
 			modifier = {
-				factor = 2
+				add = 2
 				has_opinion = {
 					target = PRS
 					value > 99
 				}
 			}
 			modifier = {
-				factor = 2
+				add = 2
 				strength_ratio = {
 				    tag = PRS
 				    ratio < 0.5

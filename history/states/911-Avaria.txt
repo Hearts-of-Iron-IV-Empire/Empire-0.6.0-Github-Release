@@ -1,7 +1,7 @@
 state = {
     id = 911 #Avaria
     name = STATE_911
-    manpower = 100000
+    manpower = 20000
     state_category = rural
     
     history = {
@@ -9,6 +9,9 @@ state = {
         add_core_of = AVA
         buildings = {
             infrastructure = 1
+        }
+        victory_points = { # Khunzakh
+            1455 50
         }
     }
     

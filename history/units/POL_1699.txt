@@ -40,28 +40,28 @@ units = {
 
 	division= {
 		name = "Dywizja Piechoty"
-		location = 3430
+		location = 3562
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 3430
+		location = 3562
 		division_template = "Brygada Kawalerii"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 6429
+		location = 462
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 6429
+		location = 462
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
@@ -82,56 +82,28 @@ units = {
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 9533
+		location = 476
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 9533
+		location = 476
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 11464
+		location = 9435
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 11464
-		division_template = "Dywizja Piechoty"
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-	}
-	division= {
-		name = "Dywizja Piechoty"
-		location = 11490
-		division_template = "Dywizja Piechoty"
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-	}
-	division= {
-		name = "Dywizja Piechoty"
-		location = 11490
-		division_template = "Dywizja Piechoty"
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-	}
-	division= {
-		name = "Dywizja Piechoty"
-		location = 6497
-		division_template = "Dywizja Piechoty"
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-	}
-	division= {
-		name = "Dywizja Piechoty"
-		location = 6497
+		location = 11409
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
@@ -145,7 +117,7 @@ units = {
 	}
 	division= {
 		name = "Dywizja Piechoty"
-		location = 11438
+		location = 6597
 		division_template = "Dywizja Piechoty"
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8

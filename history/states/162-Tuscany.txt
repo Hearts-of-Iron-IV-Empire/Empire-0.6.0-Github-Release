@@ -1,7 +1,7 @@
 state = {
     id = 162
     name = STATE_162
-    manpower = 750000
+    manpower = 55000
     state_category = city
     
     history = {
@@ -15,11 +15,21 @@ state = {
                 naval_base = 1
             }
         }
-        victory_points = { 9907 20 }
-        victory_points = { 11833 10 }
-		victory_points = { 6946 5 }
-		victory_points = { 910 10 }
-		victory_points = { 9879 3 }
+        victory_points = { # Florence
+            9907 50 
+        }
+        victory_points = { 
+            11833 10 
+        }
+		victory_points = { 
+            6946 5 
+        }
+		victory_points = { 
+            910 10 
+        }
+		victory_points = { 
+            9879 3 
+        }
         1812.1.1 = {
             owner = FRA
         }

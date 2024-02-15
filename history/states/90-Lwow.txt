@@ -1,4 +1,3 @@
-
 state={
 	id=90
 	name="STATE_90"
@@ -7,18 +6,17 @@ state={
 	}
 
 	history={
+		owner = POL
+		add_core_of = POL
 		victory_points = {
 			11430 5 
 		}
 		victory_points = {
 			3458 5 
 		}
-		owner = POL
 		buildings = {
 			infrastructure = 3
-
 		}
-		add_core_of = POL
 		1798.1.1 = {
 			owner = AUS
 		}
@@ -28,9 +26,10 @@ state={
 	}
 
 	provinces={
-		467 562 3458 3482 3497 6416 6511 11430 11532 
+		467 562 3458 3482 3497 6416 9400 11430 11492 11532 
 	}
 	manpower=475700
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

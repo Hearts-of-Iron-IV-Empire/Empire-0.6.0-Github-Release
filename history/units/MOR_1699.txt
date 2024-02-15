@@ -80,7 +80,7 @@ units = {
 		start_experience_factor = 0.8
 	}
 	division= {
-		location = 7713
+		location = 7173
 		division_template = "Black Guard"
 		start_experience_factor = 0.8
 	}

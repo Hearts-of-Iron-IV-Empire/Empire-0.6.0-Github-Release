@@ -1,18 +1,26 @@
-
 state={
 	id=271
 	name="STATE_271"
 	resources={
+		steel = 7
 		rubber=2.000
+		chromium = 3
 	}
 
 	history={
 		owner = ETH
-		victory_points = {
-			1984 5 
+		add_extra_state_shared_building_slots = 6
+		buildings = {
+			infrastructure = 2
+			arms_factory = 5
+			industrial_complex = 6
+			1984 = {
+				bunker = 2
+			}
 		}
-
-
+		victory_points = { # Gondar
+			1984 50
+		}
 	}
 
 	provinces={
@@ -20,5 +28,5 @@ state={
 	}
 	manpower=1641544
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=city
 }

@@ -98,36 +98,45 @@
  artillery_equipment_2_desc:0 "New artillery designs, taking advantage of new hydraulic recoil devices and longer barrels."
  artillery_equipment_3:0 "Advanced Field Artillery"
  artillery_equipment_3_desc:0 "Light-weight artillery capable of being broken down for transport, making it possible to bring artillery support to areas previously difficult to reach."
- motorized_rocket_equipment:0 "Motorized Rocket Artillery"
- motorized_rocket_equipment_short:0 "Mot. R. Artillery"
- motorized_rocket_equipment_desc:0 "Multiple rocket launchers such as these deliver explosives to a target area more quickly than conventional artillery, but with lower accuracy and requiring a longer time to reload. Being mounted on trucks, this version is able to launch attacks and change positions before the enemy can return fire."
- motorized_rocket_equipment_1:0 "Motorized Rocket Artillery"
- motorized_rocket_equipment_1_short:0 "Mot. R. Artillery"
- motorized_rocket_equipment_1_desc:0 "Multiple rocket launchers such as these deliver explosives to a target area more quickly than conventional artillery, but with lower accuracy and requiring a longer time to reload. Being mounted on trucks, this version is able to launch attacks and change positions before the enemy can return fire."
- rocket_artillery_equipment:0 "Towed Mortars"
+ motorized_rocket_equipment:0 "Towed Mortars"
+ motorized_rocket_equipment_short:0 "Towed Mortars"
+ motorized_rocket_equipment_desc:0 "Multiple mortars drawn by horses, affording them an increase in mobility."
+ motorized_rocket_equipment_1:0 "Towed Mortars"
+ motorized_rocket_equipment_1_short:0 "Towed Mortars"
+ motorized_rocket_equipment_1_desc:0 "Multiple mortars drawn by horses, affording them an increase in mobility."
+ rocket_artillery_equipment:0 "Mortars"
  rocket_artillery_equipment_short:0 "Mortars"
  rocket_artillery_equipment_desc:0 "Mortars are less accurate and have a much lower sustained rate of fire than batteries of traditional artillery guns. However, they have the capability of simultaneously hitting a target with multiple shells with devastating effect."
- rocket_artillery_equipment_1:0 "Towed Mortars"
+ rocket_artillery_equipment_1:0 "Mortars"
  rocket_artillery_equipment_1_short:0 "Mortars"
  rocket_artillery_equipment_1_desc:0 "Mortars are less accurate and have a much lower sustained rate of fire than batteries of traditional artillery guns. However, they have the capability of simultaneously hitting a target with multiple shells with devastating effect."
- rocket_artillery_equipment_2:0 "Advanced Rocket Artillery"
- rocket_artillery_equipment_2_desc:0 "Spin-stabilized rockets, increasing the range of lighter artillery batteries."
+ rocket_artillery_equipment_2:0 "Advanced Mortars"
+ rocket_artillery_equipment_2_desc:0 "Advanced in military technology can be adapted to mortars, increasing their firepower and the devastation they cause."
  howitzer_1:0 "Howitzer I"
  howitzer_1_desc:0 "Howitzers are essentially more expensive versions of artillery, however, their cost is justified by their better overall performance in the battlefield."
  howitzer_2:0 "Howitzer II"
- howitzer_2_desc:0 "An improved version of the howitzer, with modern technology such as iron ramrods."
+ howitzer_2_desc:0 "An improved version of the howitzer, with modern technology such as iron ramrods to speed up reload times."
  howitzer_3:0 "Howitzer III"
- howitzer_3_desc:0 "Further improvements in the field of artillery has allowed howitzers to become even more powerful, while only need a few more components."
+ howitzer_3_desc:0 "Further improvements in the field of artillery has allowed howitzers to become even more powerful, while only needing a few more components."
  howitzer_equipment:0 "Howitzer"
  howitzer_equipment_short:0 "Howitzer Eq."
  howitzer_brigade:0 "Howitzer"
  howitzer:0 "Support Howitzer"
  grenadiers:0 "Grenadiers"
- grenadiers_desc:0 "Grenadiers are the elite forces of our army. They are larger, stronger, and more well equipped than regular soldiers."
+ grenadiers_desc:0 "Grenadiers are the elite forces of our army. They are larger, stronger, better trained, and more well equipped than regular soldiers."
  siege_artillery_1:0 "Siege Artillery I"
  siege_artillery_2:0 "Siege Artillery II"
  train_equipment_1:0 "Supply Convoy (Train)"
 
+
+ #anti-tank
+ 
+ anti_tank_equipment:0 "Anti-Cavalry"
+ anti_tank_equipment_short:0 "Anti-Cavalry"
+ anti_tank_equipment_desc:0 "Equipment specifically used in countering enemy cavalry. Also useful in encounters against Infantry."
+
+ tank_at_upgrade:0 "Anti-Cavalry Armament"
+ tank_at_upgrade_desc:0 "Ensure that our anti-cavalry equipment can destroy the heaviest and strongest cavalry armor."
  ######################################################################################################################################################################################################################################################################################
 
 
@@ -584,17 +593,12 @@
  anti_air_equipment:0 "Towed Anti-Air"
  anti_air_equipment_short:0 "Anti-Air"
  anti_air_equipment_desc:0 "Anti-air artillery is primarily designed to shoot down hostile planes, although the rapid fire cannons can also be effective against ground targets."
- anti_tank_equipment:0 "Towed Anti-Tank"
- anti_tank_equipment_short:0 "Anti-Tank"
- anti_tank_equipment_desc:0 "Equipment specifically used in countering enemy cavalry. Also useful in encounters against Infantry."
 
  #anti-air
 
  anti_air_equipment_1:0 "Towed Anti-Air"
  anti_air_equipment_1_short:0 "Anti-Air"
  anti_air_equipment_1_desc:0 "Anti-air artillery is primarily designed to shoot down hostile planes, although the rapid fire cannons can also be effective against ground targets."
- 
- #anti-tank
  
  #artillery
  
@@ -607,8 +611,6 @@
  tank_gun_upgrade_desc:0 "It's important to have a gun that keep up with enemy armor strength and can penetrate."
  tank_aa_upgrade:0 "Anti-Air Armament"
  tank_aa_upgrade_desc:0 "Ensure that our Anti-Air Armament is able to shoot down the latest planes."
- tank_at_upgrade:0 "Anti-Tank Armament"
- tank_at_upgrade_desc:0 "Ensure that our tank destroyers can defeat the latest enemy tanks."
  tank_art_upgrade:0 "Artillery Armament"
  tank_art_upgrade_desc:1 "Ensure that our self propelled artillery have massive firepower that will tear through any unarmored enemies."
  tank_reliability_upgrade:0 "Reliability"

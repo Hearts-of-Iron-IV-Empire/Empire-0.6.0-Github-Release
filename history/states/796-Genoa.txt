@@ -1,15 +1,15 @@
-
 state={
 	id=796
 	name="STATE_796"
 
 	history={
 		owner = GEN
-		victory_points = {
-			11891 1 
+		add_core_of = GEN
+		victory_points = { # Genoa
+			6788 50 
 		}
 		victory_points = {
-			6788 10 
+			11891 1 
 		}
 		buildings = {
 			infrastructure = 4
@@ -18,15 +18,11 @@ state={
 			dockyard = 2
 			6788 = {
 				naval_base = 8
-
 			}
-
 		}
-		add_core_of = GEN
 		1812.1.1 = {
 			owner = FRA
 		}
-
 	}
 
 	provinces={

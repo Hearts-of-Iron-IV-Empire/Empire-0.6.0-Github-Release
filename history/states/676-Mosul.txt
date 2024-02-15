@@ -1,23 +1,22 @@
-
 state={
 	id=676
 	name="STATE_676"
-	resources={
-		oil=3.000
-	}
+	#resources={
+	#	oil=3.000
+	#}
 
 	history={
 		owner = TUR
+		add_core_of = TUR
+		victory_points = { # Mosul
+			10106 5 
+		}
 		buildings = {
 			infrastructure = 2
-
+			10106 = {
+				bunker = 2
+			}
 		}
-		victory_points = {
-			10106 1 
-		}
-		add_core_of = TUR
-		add_core_of = IRQ
-
 	}
 
 	provinces={

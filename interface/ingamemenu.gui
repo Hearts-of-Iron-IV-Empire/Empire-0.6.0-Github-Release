@@ -118,6 +118,7 @@ guiTypes = {
 			clicksound = click_default
 			pdx_tooltip = "MENU_HOMEPAGE"
 		}
+
 		ButtonType = {
 			name = "forum_button"
 			position = { x = 99 y = 349 }
@@ -126,29 +127,30 @@ guiTypes = {
 			pdx_tooltip = "MENU_FORUM"
 			web_link = "https://forum.paradoxplaza.com/forum/index.php?forums/hearts-of-iron-iv.844/"
 		}
+
 		ButtonType = {
-			name = "facebook_button"
+			name = "Steam"
 			position = { x = 139 y = 349 }
 			quadTextureSprite ="facebook"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FACEBOOK"
-			web_link = "https://www.facebook.com/Heartsofiron"
+			web_link = "https://steamcommunity.com/sharedfiles/filedetails/?id=2888042563"
 		}			
 		
 		ButtonType = {
-			name = "twitter_button"
+			name = "Discord"
 			position = { x = 179 y = 349 }
 			quadTextureSprite ="twitter"
-			#clicksound = click_default
-			pdx_tooltip = "MENU_TWITTER"
-			web_link = "https://twitter.com/hoi_game"
+			clicksound = click_default
+			pdx_tooltip = "MENU_DISCORD"
+			web_link = "https://discord.gg/GQRpSnsSqW"
 		}
 		
 		ButtonType = {
 			name = "privacy_policy_button"
 			position = { x = 219 y = 349 }
 			quadTextureSprite ="privacy"
-			#clicksound = click_default
+			clicksound = click_default
 			pdx_tooltip = "MENU_PRIVACY_POLICY"
 		}
 

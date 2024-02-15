@@ -1,23 +1,24 @@
-
 state={
 	id=926
 	name="STATE_926"
 
 	history={
-		victory_points = {
-			5037 20 
-		}
-		victory_points = {
-			7934 3 
-		}
-		owner = SAU
-		buildings = {
-			infrastructure = 1
-
-		}
+		owner = TUR
+		add_core_of = TUR
 		add_core_of = SAU
 		add_core_of = MCA
-
+		victory_points = { # Mecca
+			5037 50 
+		}
+		victory_points = { # Medina
+			7934 15 
+		}
+		buildings = {
+			infrastructure = 1
+			7934 = {
+				bunker = 4
+			}
+		}
 	}
 
 	provinces={

@@ -1,0 +1,40 @@
+﻿l_english:
+
+ # Decisions:
+ RUS_proper_arrangements_with_lithuanians:0 "Proper Arrangements with Lithuanians"
+ RUS_formalize_permanent_alliance_lithuania:0 "Formalize Permanent Alliance"
+ RUS_pay_lithuanian_soldiers:0 "Pay Lithuanian Soldiers"
+ RUS_separate_lithuanian_crown:0 "Separate Lithuanian Crown"
+
+ # Missions:
+ SWE_moscow_campaign_mission:0 "Charles Moscow Campaign"
+ SWE_moscow_campaign_mission_desc:0 "Charles of Sweden has decided to launch a campaign with the intentions of capturing Moscow which has the ultimate effect of deciding the fate of the war; if Charles occupies Moscow, he has the ability to dethrone and cause the collapse of the Russian nation. Tsarevich Peter must circumvent this threat and crush the Swedish army once and for all!"
+ 
+ # Events:
+ greatnorthernwars.1.t:0 "Krzysztof Białłozor Approaches"
+ greatnorthernwars.1.d:0 "Krzysztof Białłozor, canon of Wilno and the representative of Michał Serwacy Wiśniowiecki has arrived in Russia to request our military support. This will be a good opportunity to support Poland-Lithuania and help them develop their army further, while also increasing our influence in their country."
+ greatnorthernwars.1.a:0 "Send him back with our approval."
+ greatnorthernwars.2.t:0 "Treaty of Narva"
+ greatnorthernwars.2.d:0 "The Treaty of Narva is to be signed between the Tsardom of Russia and Poland-Lithuania, and will represent a greater commitment between our two nations to the war with Sweden, and will bolster Poland-Lithuania with troops and funds from the Tsardom."
+ greatnorthernwars.60.t:0 "Russians crush the Swedish Army at Moscow"
+ greatnorthernwars.60.d:0 "After brutal urban fighting within the city of Moscow, the Russians have gotten the upperhand over the Swedes by obliterating their army near Moscow and forcing the King of Sweden, Charles, to flee towards the Ottoman Empire after narrowly escaping through Polish-Lithuania."
+ greatnorthernwars.60.a:0 "Slava Rodina!"
+ greatnorthernwars.60.b:0 "This is a disaster!"
+ greatnorthernwars.61.t:0 "Swedes crush the Russian Army at Moscow"
+ greatnorthernwars.61.d:0 "The Swedes have successfully entered Moscow after a long siege which plagued both armies with famine and diseases. The Russian Army is completely shattered without their Tsar, who has been captured by the Swedes. The future of Russia now lays in the hands of Charles XII."
+ greatnorthernwars.61.b:0 "Forgive me, Motherland..."
+ greatnorthernwars.61.a:0 "The Russian Bear has finally been tamed!"
+ news_greatnorthernwars.1.t:0 "Swedes crushed at the Battle of Moscow"
+ news_greatnorthernwars.1.d:0 "Unexpected news arrives from Tsar Peter of Russia, announcing his victory over Sweden after practically destroying their army at Moscow, which came as a massive shock as many people regarded the Swedes as invicible and many beleived the Swedes would simply march into the Russia capital without any serious opposition. Charles of Sweden has fled towards the Ottoman Empire after the utter destruction and surrender of the Swedish Army at Moscow."
+ news_greatnorthernwars.1.a:0 "What is the future for Sweden now?"
+ news_greatnorthernwars.2.t:0 "Swedes enter Moscow"
+ news_greatnorthernwars.2.d:0 "Charles the Great of Sweden has announced his ultimate victory over Russia after having entered the capital following a brutal siege, Tsar Peter of Russia is being held captive by the Swedes. This news does not come as a surprise as the Swedes once again prove their invicibity against all armies. The future for Russia now lays in the hands of Charles XII..."
+ news_greatnorthernwars.2.a:0 "The Russians didn't stand a chance."
+ 
+ # Tooltips:
+ SWE_moscow_campaign_mission_swedish_victory_tooltip:0 "The Swedes have the Upper Advantage over the Russians by sieging Moscow."
+ SWE_moscow_campaign_mission_russian_victory_tooltip:0 "The Russians have the Upper Advantage over the Swedes by preventing their entry into Moscow."
+ 
+ # Country/Global Flags:
+ SWE_moscow_campaign_mission_cflag:0 "Karl's Moscow Campaign has ended"
+ POL_civil_war_gnw:0 "Poland is in a civl war"

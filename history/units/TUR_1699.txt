@@ -42,6 +42,7 @@ division_template = {
 }
 division_template = {
 	name = "Dag Tugayi" 				# Mountain Brigade
+	is_locked = yes
 
 	regiments = {
 		mountaineers = { x = 0 y = 0 }
@@ -391,56 +392,63 @@ units = {
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 476
+		location = 6455
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 476
+		location = 6429
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 9481
+		location = 3430
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 6480
+		location = 3430
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 9451
+		location = 6429
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Piyade Tümeni"
+		location = 9576
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.8
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Piyade Tümeni"
+		location = 3757
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Janissary Tümeni"
-		location = 9451
+		location = 3757
 		division_template = "Janissary Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
-		name = "Piyade Tümeni"
-		location = 11424
-		division_template = "Piyade Tümeni" 
-		start_experience_factor = 0.8
-		start_equipment_factor = 0.8
-	}
-	division = {
 		name = "Janissary Tümeni"
-		location = 11424
+		location = 3575
 		division_template = "Janissary Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
@@ -450,14 +458,14 @@ units = {
 
 	division = {
 		name = "Piyade Tümeni"
-		location = 3755
+		location = 11546
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Janissary Tümeni"
-		location = 574
+		location = 11546
 		division_template = "Janissary Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8
@@ -467,14 +475,21 @@ units = {
 
 	division = {
 		name = "Piyade Tümeni"
-		location = 9712
+		location = 737
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 767
+		location = 721
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Piyade Tümeni"
+		location = 3573
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
@@ -488,49 +503,28 @@ units = {
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 429
+		location = 765
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 3449
+		location = 6783
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 6776
+		location = 6783
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 6445
-		division_template = "Piyade Tümeni" 
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Piyade Tümeni"
-		location = 13259
-		division_template = "Piyade Tümeni" 
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Piyade Tümeni"
-		location = 13260
-		division_template = "Piyade Tümeni" 
-		start_experience_factor = 0.4
-		start_equipment_factor = 0.8
-	}
-	division = {
-		name = "Piyade Tümeni"
-		location = 585
+		location = 3765
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
@@ -544,21 +538,21 @@ units = {
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 426
+		location = 3587
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 426
+		location = 3587
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 13260
+		location = 765
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
@@ -579,14 +573,42 @@ units = {
 	}
 	division = {
 		name = "Piyade Tümeni"
-		location = 588
+		location = 9742
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}	
+	division = {
+		name = "Piyade Tümeni"
+		location = 9742
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Piyade Tümeni"
+		location = 9726
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}	
+	division = {
+		name = "Piyade Tümeni"
+		location = 9726
+		division_template = "Piyade Tümeni" 
+		start_experience_factor = 0.4
+		start_equipment_factor = 0.8
+	}
+	division = {
+		name = "Piyade Tümeni"
+		location = 9571
 		division_template = "Piyade Tümeni" 
 		start_experience_factor = 0.4
 		start_equipment_factor = 0.8
 	}
 	division = {
 		name = "Janissary Tümeni"
-		location = 585
+		location = 3765
 		division_template = "Janissary Tümeni" 
 		start_experience_factor = 0.8
 		start_equipment_factor = 0.8

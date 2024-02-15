@@ -89,8 +89,6 @@ TUR_janissar_revolt_category = {
 
 		fire_only_once = no
 
-		is_good = no
-
 		#remove_effect = {
 		#	set_global_flag = flag_second_mexican_civil_war
 		#	country_event = {
@@ -369,6 +367,288 @@ TUR_negotiating_peace = {
 
 		complete_effect = {
 			set_country_flag = demanded_russian_war_reps
+		}
+	}
+}
+
+TUR_balkans = {
+	TUR_bandit_raid = {
+
+		priority = 2
+
+		icon = revolt
+
+		fire_only_once = no
+
+		days_mission_timeout = 100
+
+		available = {
+			NOT = { has_idea = TUR_sekban_rebellions }
+		}
+
+		activation = {
+			has_idea = TUR_sekban_rebellions
+		}
+
+		fixed_random_seed = no
+
+		is_good = no
+
+		timeout_effect = {
+			random_list = {	
+				60 = { # Infra dmg
+					hidden_effect = {
+						random_owned_controlled_state = {
+							limit = {
+								has_dynamic_modifier = {
+									modifier = devastated_by_war
+								}
+							}
+							state_event = {
+								id = ottomans.25
+								trigger_for = ROOT
+							}			
+							save_global_event_target_as = TUR_bandit_event_target
+						}
+					}
+					custom_effect_tooltip = bandits_damage_infrastructure
+				}
+				40 = { # Factory dmg
+					country_event = {
+						id = ottomans.26
+					}
+				}
+			}
+		}
+	}
+	TUR_hunt_down_bandits = {
+		icon = generic_boot
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 40
+
+		available = {
+			divisions_in_state = { # Macedonia
+				type = infantry
+				size > 3
+				state = 106
+			}
+			divisions_in_state = { # Belgrade
+				type = infantry
+				size > 3
+				state = 107
+			}
+			divisions_in_state = { # Morava
+				type = infantry
+				size > 3
+				state = 108
+			}
+			divisions_in_state = { # Sofia
+				type = infantry
+				size > 3
+				state = 48
+			}
+			divisions_in_state = { # Plovdiv
+				type = infantry
+				size > 3
+				state = 212
+			}
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			remove_ideas = TUR_sekban_rebellions
+		}
+	}
+	TUR_bribe_bandits = {
+		icon = coins
+
+		visible = {
+			has_decision = TUR_bandit_raid
+		}
+
+		fire_only_once = no
+
+		cost = 30
+
+		complete_effect = {
+			add_days_mission_timeout = {
+				mission = TUR_bandit_raid
+				days = 70
+			}
+		}
+	}
+	TUR_rebuild_uskup = {
+		icon = eng_trade_unions_support
+
+		fire_only_once = yes
+
+		cost = 75
+
+		days_remove = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		available = {
+			106 = {
+				is_owned_and_controlled_by = TUR
+			}
+			has_completed_focus = TUR_the_balkans
+		}
+
+		remove_effect = {
+			add_victory_points = {
+				province = 3882
+				value = 10
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					106
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				remove_dynamic_modifier = {
+					modifier = devastated_by_war
+				}
+			}
+		}
+	}
+	TUR_rebuild_belgrade = {
+		icon = eng_trade_unions_support
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 50
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		available = {
+			107 = {
+				is_owned_and_controlled_by = TUR
+			}
+			has_completed_focus = TUR_the_balkans
+		}
+
+		remove_effect = {
+			random_owned_controlled_state = {
+				prioritize = {
+					107
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				remove_dynamic_modifier = {
+					modifier = devastated_by_war
+				}
+			}
+		}
+	}
+	TUR_food_relief_in_banat = {
+		icon = burghers
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 100
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		available = {
+			82 = {
+				is_owned_and_controlled_by = TUR
+			}
+			764 = {
+				is_owned_and_controlled_by = TUR
+			}
+			has_completed_focus = TUR_the_balkans
+		}
+
+		remove_effect = {
+			add_stability = 0.05
+			random_owned_controlled_state = {
+				prioritize = {
+					82
+				}
+				remove_dynamic_modifier = {
+					modifier = devastated_by_war
+				}
+			}
+			random_owned_controlled_state = {
+				prioritize = {
+					764
+				}
+				remove_dynamic_modifier = {
+					modifier = devastated_by_war
+				}
+			}
+		}
+	}
+	TUR_fortifications_in_morava = {
+		icon = hol_draw_up_staff_plans
+
+		fire_only_once = yes
+
+		cost = 50
+
+		days_remove = 70
+
+		modifier = {
+			consumer_goods_factor = 0.05
+		}
+
+		available = {
+			108 = {
+				is_owned_and_controlled_by = TUR
+			}
+			has_completed_focus = TUR_the_balkans
+		}
+
+		remove_effect = {
+			add_war_support = 0.05
+			random_owned_controlled_state = {
+				prioritize = {
+					108
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 3922
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9602
+					instant_build = yes
+				}
+				remove_dynamic_modifier = {
+					modifier = devastated_by_war
+				}
+			}
 		}
 	}
 }

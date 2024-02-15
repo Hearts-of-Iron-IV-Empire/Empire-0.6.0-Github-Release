@@ -1,0 +1,14 @@
+characters = {
+    ETH_Iyasu_I = {
+        name = "Iyasu I"
+        portraits = {
+            civilian = {
+                large = "GFX_Iyasu_I"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

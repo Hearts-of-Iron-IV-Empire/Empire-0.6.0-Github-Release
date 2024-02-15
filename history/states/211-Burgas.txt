@@ -1,10 +1,10 @@
-
 state={
 	id=211
 	name="STATE_211"
 
 	history={
 		owner = TUR
+		#add_core_of = TUR
 		victory_points = {
 			9783 5 
 		}
@@ -21,8 +21,7 @@ state={
 				naval_base = 1
 			}
 		}
-		add_core_of = BUL
-		#add_core_of = TUR
+		#add_core_of = BUL
 	}
 
 	provinces={

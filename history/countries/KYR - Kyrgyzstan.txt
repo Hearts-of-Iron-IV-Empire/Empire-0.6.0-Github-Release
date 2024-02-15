@@ -2,6 +2,8 @@
 
 oob = "KYR"
 
+set_research_slots = 1
+
 # Starting tech
 set_technology = {
 	infantry_weapons = 1
@@ -21,8 +23,10 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 20
-	communism = 10
+	communism = 0
 	neutrality = 70
+	aristocracy = 10
 }

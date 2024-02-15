@@ -1,23 +1,20 @@
-
 state={
 	id=92
 	name="STATE_92"
-
 	resources={
 		oil=16.000
 	}
 
 	history={
-		victory_points = {
+		owner = POL
+		add_core_of = POL
+		victory_points = { # Lublin
 			11399 20 
 		}
-		owner = POL
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-
 		}
-		add_core_of = POL
 		1798.1.1 = {
 			owner = AUS
 		}
@@ -27,9 +24,10 @@ state={
 	}
 
 	provinces={
-		402 524 3521 3559 6484 6580 9452 9521 9544 11399 11466 12562 
+		3521 3559 6484 9521 11399 
 	}
 	manpower=524600
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

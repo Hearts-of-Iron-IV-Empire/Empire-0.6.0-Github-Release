@@ -1,0 +1,19 @@
+state={
+	id=1050
+	name="STATE_1050"
+	manpower = 4102
+	
+	state_category = rural
+
+	history={
+		owner = TUR
+		add_claim_by = ETH
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		2003 5091 8043 
+	}
+}

@@ -17,7 +17,7 @@ country_event = { #ultimatum to Den
 			transfer_state = 58
 		}
 		ai_chance = { 
-			factor = 30
+			base = 30
 		}	
 	}
 
@@ -27,7 +27,7 @@ country_event = { #ultimatum to Den
 			country_event = { id = ultimatum.51 }
 		}
 		ai_chance = { 
-			factor = 70
+			base = 70
 		}	
 	}
 }
@@ -43,7 +43,7 @@ country_event = { #Den refuses
 	option = { # Called our bluff
 		name = ultimatum.51.a
 			ai_chance = { 
-				factor = 20
+				base = 20
 			}
 		PRS = {
 			add_political_power = -50
@@ -56,7 +56,7 @@ country_event = { #Den refuses
 	option = { #Go to war
 		name = ultimatum.51.b
 			ai_chance = { 
-				factor = 80
+				base = 80
 			}
 		PRS = {
 			declare_war_on = {
@@ -79,7 +79,7 @@ country_event = { #PRS bluff
 	option = { # Called our bluff
 		name = ultimatum.52.a
 			ai_chance = { 
-				factor = 50
+				base = 50
 			}
 		DEN = {
 			add_political_power = 100
@@ -100,24 +100,27 @@ country_event = { #Ultimatum to Saxony
 
 	option = { # Saxony accepts
 		name = ultimatum.1.a
-			ai_chance = { 
-				factor = 20
-			}
 		PRS = {
 			country_event = { id = ultimatum.11 }
 		}
 		PRS = {
-			transfer_state = 65
-		}		
+			annex_country = {
+				target = SAX
+				transfer_troops = no
+			}
+		}	
+		ai_chance = { 
+			base = 20
+		}	
 	}
 
 	option = { #Saxony refuses
 		name = ultimatum.1.b
-			ai_chance = { 
-				factor = 80
-			}
 		PRS = {
 			country_event = { id = ultimatum.12	}	
+		}
+		ai_chance = { 
+			base = 80
 		}
 	}
 }
@@ -133,7 +136,7 @@ country_event = { #Saxony accepts ultiatum
 	option = { #Make a big show
 		name = ultimatum.11.a
 		ai_chance = { 
-			factor = 50
+			base = 50
 		}
 		PRS = {
 			add_political_power = 50
@@ -149,7 +152,7 @@ country_event = { #Saxony accepts ultiatum
 	option = { #Do nothing
 		name = ultimatum.11.b
 		ai_chance = { 
-			factor = 50
+			base = 50
 		}
 	}
 }
@@ -165,7 +168,7 @@ country_event = { #Saxony declines ultiatum
 	option = { #Declare war
 		name = ultimatum.12.a
 		ai_chance = { 
-			factor = 75
+			base = 75
 		}
 		PRS = {	
 			declare_war_on = {
@@ -179,7 +182,7 @@ country_event = { #Saxony declines ultiatum
 option = { #Stand down
 		name = ultimatum.12.b
 		ai_chance = { 
-			factor = 25
+			base = 25
 		}
 		PRS = {
 			add_political_power = -25
@@ -202,7 +205,7 @@ country_event = { #Ultimatum to Sweden
 	option = { # Sweden accepts
 		name = ultimatum.2.a
 			ai_chance = { 
-				factor = 20
+				base = 20
 			}
 		PRS = {
 			country_event = { id = ultimatum.5	}	
@@ -216,7 +219,7 @@ country_event = { #Ultimatum to Sweden
 	option = { #Sweden refuses
 		name = ultimatum.2.b
 			ai_chance = { 
-				factor = 80
+				base = 80
 			}
 			
 		PRS = {
@@ -236,7 +239,7 @@ country_event = { #Sweden declines
 	option = { # Press claims
 		name = "We shall press the claims!"
 			ai_chance = { 
-				factor = 80
+				base = 80
 			}
 
 		PRS = {
@@ -250,7 +253,7 @@ country_event = { #Sweden declines
 	option = { # Stand down
 		name = "It's not worth it."
 			ai_chance = { 
-				factor = 20
+				base = 20
 			}
 
 		PRS = {
@@ -272,7 +275,7 @@ country_event = { #Demand Pommerania
 	option = { # Sweden accepts
 		name = ultimatum.3.a
 			ai_chance = { 
-				factor = 20
+				base = 20
 			}
 		PRS = {
 			country_event = { id = ultimatum.31 }	
@@ -286,7 +289,7 @@ country_event = { #Demand Pommerania
 	option = { # Sweden accepts partly
 		name = ultimatum.3.b
 			ai_chance = { 
-				factor = 40
+				base = 40
 			}
 		PRS = {
 			country_event = { id = ultimatum.32 }	
@@ -299,7 +302,7 @@ country_event = { #Demand Pommerania
 	option = { #Sweden refuses
 		name = ultimatum.3.c
 			ai_chance = { 
-				factor = 40
+				base = 40
 			}
 		PRS = {
 			country_event = { id = ultimatum.33 }	
@@ -318,7 +321,7 @@ country_event = { #Sweden accepts our demands
 	option = { # Sweden accepts
 		name = "Huzzah!"
 			ai_chance = { 
-				factor = 50
+				base = 50
 			}
 		PRS = {
 			add_opinion_modifier = {
@@ -340,7 +343,7 @@ country_event = { #Sweden accepts our demands partially
 	option = { # We thank them
 		name = "We are most grateful."
 			ai_chance = { 
-				factor = 50
+				base = 50
 			}
 		PRS = {
 			add_opinion_modifier = {
@@ -352,7 +355,7 @@ country_event = { #Sweden accepts our demands partially
 	option = { # We don't thank them
 		name = "This is less than what we agreed upon..."
 			ai_chance = { 
-				factor = 50
+				base = 50
 			}
 		PRS = {
 			add_opinion_modifier = {
@@ -374,7 +377,7 @@ country_event = { #Sweden declines our demands
 	option = { # Sweden accepts
 		name = ultimatum.33.a
 			ai_chance = { 
-				factor = 50
+				base = 50
 			}
 		PRS = {
 			add_opinion_modifier = {
@@ -405,7 +408,7 @@ country_event = { # Demand Saxony from Poland
 			}
 		}
 		ai_chance = { 
-			factor = 70
+			base = 70
 		}	
 	}
 
@@ -415,7 +418,7 @@ country_event = { # Demand Saxony from Poland
 			country_event = { id = ultimatum.41	}	
 		}
 		ai_chance = { 
-			factor = 30
+			base = 30
 		}
 	}
 }
@@ -468,7 +471,7 @@ country_event = { # Demand Emden/Ostfrieland
 
 	option = { # Accept
 		name = prussia.16.a
-		ai_chance = { factor = 30 }
+		ai_chance = { base = 30 }
 		PRS = {
 			transfer_state = 867
 			867 = { set_state_name = "Emden" }
@@ -478,7 +481,7 @@ country_event = { # Demand Emden/Ostfrieland
 	
 	option = { # Refuse
 		name = prussia.16.b
-		ai_chance = { factor = 70 }
+		ai_chance = { base = 70 }
 		PRS = {
 			country_event = { id = prussia.17 }
 		}

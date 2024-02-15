@@ -1,8 +1,9 @@
 ﻿capital = 608
 
-oob = "CHI_1936"
+oob = "CHI_1699"
 
 set_country_flag = absolutist_state
+set_research_slots = 3
 
 add_ideas = {
 	isolationism_idea
@@ -20,7 +21,7 @@ add_ideas = {
 create_faction = "Qing Sphere"
 
 set_stability = 0.6
-set_war_support = 0.5
+set_war_support = 0.3
 
 # Starting tech
 set_technology = {

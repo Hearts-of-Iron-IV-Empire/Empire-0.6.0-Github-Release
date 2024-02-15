@@ -1,4 +1,3 @@
-
 state={
 	id=598
 	name="STATE_598"
@@ -10,11 +9,6 @@ state={
 		add_core_of = CHI
 		buildings = {
 			infrastructure = 2
-
-		}
-
-		1938.10.25 = {
-			controller = JAP
 		}
 	}
 

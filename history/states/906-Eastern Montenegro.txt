@@ -6,18 +6,16 @@ state={
 		owner = TUR
 		add_core_of = MNT
 		add_core_of = TUR
-		victory_points = {
-			9809 3
+		victory_points = { # Podgorica
+			9809 5
 		}
 		buildings = {
 			infrastructure = 2
 			9809 = {
 				naval_base = 1
-
+				bunker = 2 # The Ottomans built the city into the main military city of the state
 			}
-
 		}
-
 	}
 
 	provinces={

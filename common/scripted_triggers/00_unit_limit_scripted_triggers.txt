@@ -1,0 +1,7 @@
+is_exempt_from_division_limit = {
+	OR = {
+	    threat > 0.74
+	    is_major = yes
+	    has_war = yes
+	}
+}

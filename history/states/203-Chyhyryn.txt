@@ -7,26 +7,26 @@ state={
 
 	history={
 		owner = ZAP
-		victory_points = {
-			3468 10
-		}
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 1
-		}
 		add_core_of = ZAP
 		add_core_of = UKR
+		victory_points = { # Chyhyryn
+			3468 10 
+		}
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
 		1711.5.1 = {
 			owner = SOV
 			controller = SOV
 		}
-
 	}
 
 	provinces={
-		409 458 3403 3452 3468 6451 6478 9573 
+		458 3452 3468 
 	}
 	manpower=505190
 	buildings_max_level_factor=1.000
 	state_category=large_town
+	local_supplies=0.000
 }

@@ -5,14 +5,17 @@ state={
 	history={
 		owner = KOL
 		add_core_of = KOL
+		add_extra_state_shared_building_slots = 3
 		buildings = {
-			infrastructure = 1
+			infrastructure = 2
+			industrial_complex = 3
+			arms_factory = 2
 			4278 = {
 				naval_base = 2
 			}
 		}
-		victory_points = {
-			13301 10
+		victory_points = { # Ikkeri
+			13301 50
 		}
 	}
 

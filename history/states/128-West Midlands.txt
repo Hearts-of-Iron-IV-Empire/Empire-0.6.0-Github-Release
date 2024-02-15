@@ -1,18 +1,19 @@
-
 state={
 	id=128
 	name="STATE_128"
 	manpower = 685235
 	
-	state_category = metropolis
+	state_category = city
+
 	resources={
-		steel=27 # was: 48
+		steel=12 # was: 27
 	}
 
 	history={
 		owner = ENG
+		add_core_of = ENG
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 2
 		}
@@ -21,12 +22,6 @@ state={
 		}
 		victory_points = { # Worcester
 			9297 10
-		}
-		add_core_of = ENG
-		1707.5.1 = {
-			owner = ENG
-			controller = ENG
-			add_core_of = ENG
 		}
 	}
 

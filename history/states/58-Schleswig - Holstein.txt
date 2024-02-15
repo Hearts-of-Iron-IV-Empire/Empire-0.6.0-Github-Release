@@ -3,13 +3,15 @@ state={
 	name="STATE_58"
 
 	history={
-		victory_points = {
-			6389 5 
+		owner = SHL
+		add_core_of = SHL
+		add_claim_by = DEN
+		victory_points = { # Kiel
+			6389 50
 		}
 		victory_points = {
 			11251 1 
 		}
-		owner = SHL
 		buildings = {
 			infrastructure = 3
 			arms_factory = 2
@@ -21,10 +23,7 @@ state={
 			6389 = {
 				naval_base = 2
 			}
-
 		}
-		add_core_of = SHL
-		add_claim_by = DEN
 		1707.5.1 = {
 			owner = DEN
 			add_core_of = DEN

@@ -9,8 +9,11 @@ state={
 		add_core_of = TUR
 		add_core_of = SER
 		add_core_of = HUN
+		add_dynamic_modifier = {
+			modifier = devastated_by_war
+		}
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 		}
 		1718.1.1 = {
 			owner = AUS

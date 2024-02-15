@@ -1,0 +1,39 @@
+characters = {
+    BRR_Frederick_I = {
+        name = "Frederick I"
+        portraits = {
+            army = {
+                large = "GFX_Frederick_I"
+            }
+            civilian = {
+                large = "GFX_Frederick_I"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = despotism
+            traits = {}
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = nobility
+            traits = {}
+        }
+    }
+    BRR_Hochmeister_Franz_Ludwig_von_der_pfaltz = {
+        name = "Hochmeister Franz Ludwig von der Pfaltz"
+        portraits = {
+            army = {
+                large = "GFX_Franz_Ludwig"
+            }
+            civilian = {
+                large = "GFX_Franz_Ludwig"
+            }
+        }
+        country_leader = {
+            expire = 1713.1.1
+            ideology = nazism
+            traits = {}
+        }
+    }
+}

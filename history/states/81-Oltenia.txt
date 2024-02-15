@@ -3,20 +3,19 @@ state={
 	name="STATE_81"
 	manpower=719300
 	
-	
 	state_category = rural
 	
 	history={
+		owner = ROM
+		add_core_of = ROM
 		add_extra_state_shared_building_slots = 5
 		victory_points = {
-			6652 1
+			6652 10
 		}
-		owner = ROM
 		buildings = {
-			infrastructure = 3
+			infrastructure = 2
 			industrial_complex = 2
 		}
-		add_core_of = ROM
 		1718.1.1 = {
 			owner = AUS
 			controller = AUS

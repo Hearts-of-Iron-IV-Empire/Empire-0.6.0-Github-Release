@@ -46,8 +46,9 @@ SWE_cossack_aid = {
 		cost = 25
 		days_re_enable = 60
 		fire_only_once = no
+
 		visible = {
-			has_completed_focus = swedish_politics_14
+			has_completed_focus = SWE_seek_zaporozhian_support
 		}
 
 		complete_effect = {	
@@ -67,9 +68,8 @@ SWE_cossack_aid = {
 		fire_only_once = no
 
 		visible = {
-			has_completed_focus = swedish_politics_14
+			has_completed_focus = SWE_seek_zaporozhian_support
 		}
-
 
 		complete_effect = {	
 			ZAP = { country_event = cossack.2 }	
@@ -85,8 +85,9 @@ SWE_cossack_aid = {
 
 		cost = 50
 		fire_only_once = yes
+
 		visible = {
-			has_completed_focus = swedish_politics_14
+			has_completed_focus = SWE_seek_zaporozhian_support
 		}
 
 		complete_effect = {	
@@ -105,7 +106,7 @@ SWE_cossack_aid = {
 		fire_only_once = yes
 
 		visible = {
-			has_completed_focus = swedish_politics_14
+			has_completed_focus = SWE_seek_zaporozhian_support
 		}
 
 		complete_effect = {	
@@ -128,7 +129,7 @@ SWE_cossack_aid = {
 		fire_only_once = yes
 
 		visible = {
-			has_completed_focus = swedish_politics_14
+			has_completed_focus = SWE_seek_zaporozhian_support
 		}
 
 		complete_effect = {	
@@ -151,7 +152,7 @@ SWE_ottoman_aid = {
 		fire_only_once = no
 
 		visible = {
-			has_completed_focus = swedish_politics_12
+			has_completed_focus = SWE_seek_ottoman_support
 		}
 
 		fixed_random_seed = no
@@ -195,7 +196,7 @@ SWE_ottoman_aid = {
 		icon = generic_prepare_civil_war
 
 		visible = {
-			has_completed_focus = swedish_politics_12
+			has_completed_focus = SWE_seek_ottoman_support
 		}
 
 		cost = 25
@@ -235,12 +236,8 @@ SWE_ottoman_aid = {
 		days_re_enable = 60
 		fire_only_once = no
 
-		available = {
-			has_completed_focus = swedish_politics_12
-		}
-
 		visible = {
-			has_completed_focus = swedish_politics_12
+			has_completed_focus = SWE_seek_ottoman_support
 		}
 
 		ai_will_do = {

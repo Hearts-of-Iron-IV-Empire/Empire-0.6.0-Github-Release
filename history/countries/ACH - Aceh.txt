@@ -2,7 +2,15 @@ capital = 849
 
 set_research_slots = 2
 
-load_oob = ACH_1699
+load_oob = "ACH_1699"
+
+TUR = {	
+	set_autonomy = {
+		target = ACH
+		autonomous_state = autonomy_protectorate
+		freedom_level = 0.8
+	}
+}
 
 # Starting tech
 set_technology = {

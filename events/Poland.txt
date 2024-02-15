@@ -100,15 +100,15 @@ country_event = {
 		}
 
 		PPR = { 
-		transfer_state = 189
-		transfer_state = 11
-		transfer_state = 784
-		transfer_state = 97
-		transfer_state = 98
-		transfer_state = 10
-		transfer_state = 92
-		transfer_state = 90
-		transfer_state = 87
+			transfer_state = 189
+			transfer_state = 11
+			transfer_state = 784
+			transfer_state = 97
+			transfer_state = 98
+			transfer_state = 10
+			transfer_state = 92
+			transfer_state = 90
+			transfer_state = 87
 		}
 
 		declare_war_on = {
@@ -292,7 +292,7 @@ country_event = { #bill vetoed
 	}
 }
 
-#request Silezia
+# Purchase Katowice and Zalozie
 
 country_event = {
 	id = poland.11
@@ -302,10 +302,11 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = {
+	option = { # Yes
+		name = poland.11.a
 		POL = {
-			transfer_state = 762
 			transfer_state = 72
+			transfer_state = 762
 			add_opinion_modifier = {
 			    target = AUS
 			    modifier = large_increase
@@ -315,6 +316,10 @@ country_event = {
 				id = AUS
 				value = 200
 			}
+			country_event = { 
+				id = poland.12 
+				days = 3 
+			}
 		}
 		add_offsite_building = { type = industrial_complex level = 2 }
 		add_opinion_modifier = {
@@ -323,7 +328,6 @@ country_event = {
 		}
 		ai_chance = {
 		  	factor = 10
-
 		  	modifier = {
 				factor = 2
 				has_opinion = {
@@ -339,15 +343,8 @@ country_event = {
 				}  
 			}
 		}
-		name = poland.11.a
-		POL = { 
-			country_event = { 
-				id = poland.12 
-				days = 5 
-			}
-		}
 	}
-	option = {
+	option = { # No
 		name = poland.11.b
 		add_opinion_modifier = {
 		    target = POL
@@ -384,13 +381,13 @@ country_event = {
 		POL = {
 			country_event = { 
 				id = poland.13 
-				days = 5 
+				days = 3
 			}
 		}
 	}
 }
 
-#accepted
+# Austria said yes
 country_event = {
 	id = poland.12
 	title = poland.12.t
@@ -407,7 +404,8 @@ country_event = {
 		}
 	}
 }
-#refused
+
+# Austria said no
 country_event = {
 	id = poland.13
 	title = poland.13.t

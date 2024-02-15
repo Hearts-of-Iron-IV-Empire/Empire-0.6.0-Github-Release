@@ -6,21 +6,13 @@ state={
 	}
 
 	history={
+		owner = CRI
+		add_core_of = CRI
 		victory_points = {
 			721 1 
 		}
-		owner = CRI
 		buildings = {
 			infrastructure = 3
-
-		}
-		add_core_of = CRI
-		1699.1.1 = {
-			SOV = {
-				set_province_controller = 3573
-				set_province_controller = 737
-				set_province_controller = 568
-			}
 		}
 		1789.1.1 = {
 			owner = SOV
@@ -28,9 +20,10 @@ state={
 	}
 
 	provinces={
-		568 721 737 767 3573 6771 9712 
+		568 721 737 6771 9712 
 	}
 	manpower=188363
 	buildings_max_level_factor=1.000
 	state_category=rural
+	local_supplies=0.000
 }

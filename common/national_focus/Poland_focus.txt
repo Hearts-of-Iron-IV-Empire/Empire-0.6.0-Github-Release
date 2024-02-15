@@ -478,16 +478,24 @@ focus_tree = {
 		cost = 10
 		relative_position_id = POL_seek_austrian_support
 		prerequisite = { focus = POL_austrian_commwonwealth_trade_agreement }
-
-		ai_will_do = { 
-			factor = 1
+		
+		available = {
+			72 = { # Zalozie
+				is_owned_and_controlled_by = AUS
+			}
+			762 = { # Katowice
+				is_owned_and_controlled_by = AUS
+			}
 		}
 		
 		completion_reward = {
 			AUS = {
 				country_event = poland.11
 			}
-
+		}
+		
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 

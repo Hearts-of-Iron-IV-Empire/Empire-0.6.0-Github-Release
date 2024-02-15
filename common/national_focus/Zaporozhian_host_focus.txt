@@ -1,0 +1,776 @@
+#Focus tree for Zaporozhian Host
+
+focus_tree = {
+    id = Zaporozhian_host_focus
+	country = {
+	factor = 0
+	modifier = {
+		add = 0
+		tag = ZAP 
+	}
+}
+
+#Alignement Branches
+
+focus = { #Continue the Reign of Ivan Mazepa
+    id = ZAP_reign_of_ivan_mazepa
+	icon = GFX_focus_rus_guns #Placeholder
+	x = 10
+	y = 0
+	cost = 5
+	mutually_exclusive = { focus = ZAP_side_with_right_bank_cossacks }
+	ai_will_do = {
+	    factor = 0
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_political_power = 100
+		add_autonomy_score = {
+			value = 25
+		}
+		POL = {add_opinion_modifier = {target = ZAP modifier = small_decrease}}
+		SWE = {add_opinion_modifier = {target = ZAP modifier = small_decrease}}
+	}
+}
+
+focus = { #Strengthen the Right Bank Cossacks (Against Polish Rule)
+    id = ZAP_side_with_right_bank_cossacks
+	icon = GFX_goal_flag_ottoman #Placeholder
+	x = 25
+	y = 0
+	cost = 5
+	mutually_exclusive = { focus = ZAP_reign_of_ivan_mazepa }
+	ai_will_do = {
+	    factor = 100
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		custom_effect_tooltip = upcoming_0.6.5_tooltip
+	}
+}
+
+#Align with Russia Branch
+
+#Align with Russia Political Subbranch
+
+focus = { #Revise the Treaty of Pereislav with the Tsardom of Russia
+    id = ZAP_revise_pereiaslav_agreement
+	icon = GFX_goal_cossacks2
+	x = -1
+	y = 1
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_reign_of_ivan_mazepa}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY}
+	completion_reward = {
+	    add_stability = 0.15
+		add_political_power = 100
+		792 = {remove_core_of = SOV}
+		259 = {remove_core_of = SOV}
+		193 = {remove_core_of = SOV}
+		
+	}
+}
+
+focus = { #Demand Sloboda Ukraine from the Tsardom of Russia
+    id = ZAP_demand_sloboda_ukraine
+	icon = GFX_goal_generic_position_armies
+	x = -1
+	y = 2
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_revise_pereiaslav_agreement}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_political_power = -25
+		SOV = {
+		    country_event = russia.21
+		}
+	}
+}
+
+focus = { #Exert control over cossacks elsewhere
+    id = ZAP_exert_influence_over_cossacks
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 3
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_demand_sloboda_ukraine}
+	prerequisite = {focus = ZAP_switch_capital_to_kiev focus = ZAP_switch_capital_to_poltava}
+	mutually_exclusive = {focus = ZAP_honor_the_pereislav_agreement}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_political_power = 100
+		ZAP = {
+		    add_ideas = ZAP_major_cossack_army_mobolization
+		}
+	}
+}
+
+focus = { #Break ties with Russia
+    id = ZAP_break_ties_with_russia
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 4
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_exert_influence_over_cossacks}
+	ai_will_do = {
+	    factor = 100
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+	    add_stability = -0.15
+		add_war_support = 0.15
+		SOV = {
+			set_autonomy = {
+			    target = ZAP
+			    autonomy_state = autonomy_free
+			}
+		}
+		leave_faction = yes
+		SOV = {add_opinion_modifier = {target = ZAP modifier = small_decrease}}
+	}
+}
+
+focus = { #Incite Cossack Rebellion on the Don and Asthrakhan
+    id = ZAP_incite_cossack_rebellion
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 5
+	cost = 5
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_break_ties_with_russia}
+	ai_will_do = {
+	    factor = 100
+	}
+	available = {
+		date > 1700.07.01
+		is_subject = no
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_war_support = 0.15
+		SOV = {
+		    country_event = russia.24
+		}
+	}
+}
+
+focus = { #Join the fight with the rebelling Cossacks against the Tsardom of Russia
+    id = ZAP_join_the_fight_against_russia
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 6
+	cost = 5
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_incite_cossack_rebellion}
+	ai_will_do = {
+	    factor = 100
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		ZAP = {
+			puppet = eastern_cossack
+		}
+		declare_war_on = {
+    		target = SOV
+    		type = take_claimed_state
+		}	
+	    random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"4. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"5. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"6. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"7. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"8. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"9. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}	
+	}
+}
+
+focus = { #Proclaim the Cossack Hetmanate
+    id = ZAP_proclaim_cossack_hetmanate
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 7
+	cost = 5
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_join_the_fight_against_russia}
+	ai_will_do = {
+	    factor = 100
+	}
+	available = {
+	    has_war = no
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_war_support = 0.15
+		set_cosmetic_tag = ZAP_cossack
+		ZAP = {
+		   add_ideas = ZAP_restored_cossack_pride
+		   remove_ideas = ZAP_major_cossack_army_mobolization
+		}
+	}
+}
+
+focus = { #Invade Poland
+    id = ZAP_invade_poland
+	icon = GFX_goal_cossacks
+	x = -3
+	y = 8
+	cost = 5
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_proclaim_cossack_hetmanate}
+	ai_will_do = {
+	    factor = 100
+	}
+	available = {
+	    has_war = no
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+	    add_war_support = 0.05
+		declare_war_on = {
+    		target = POL
+    		type = take_claimed_state
+		}
+	}
+}
+
+focus = { #Respect the Pereislav Agreement
+    id = ZAP_honor_the_pereislav_agreement
+	icon = GFX_goal_generic_dangerous_deal
+	x = -1
+	y = 3
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_demand_sloboda_ukraine}
+	prerequisite = {focus = ZAP_switch_capital_to_kiev focus = ZAP_switch_capital_to_poltava}
+	mutually_exclusive = {focus = ZAP_exert_influence_over_cossacks}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+		add_stability = 0.15
+		add_political_power = 100
+		if = {
+			limit = {
+				ZAP = {owns_state = 225}
+			}
+			transfer_state = 228
+		}
+		228 = {remove_core_of = SOV}
+	}
+}
+
+focus = { #Return to Democracy
+    id = ZAP_reconvene_the_cossack_rada
+	icon = GFX_goal_cossacks
+	x = -1
+	y = 8
+	cost = 5
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_proclaim_cossack_hetmanate}
+	ai_will_do = {
+	    factor = 100
+	}
+	available = {
+	    has_war = no
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL}
+	completion_reward = {
+	    add_war_support = 0.05
+		declare_war_on = {
+    		target = POL
+    		type = take_claimed_state
+		}
+	}
+}
+
+focus = { #Switch capital to Kyiv
+    id = ZAP_switch_capital_to_kiev
+	icon = GFX_shift_capital_to_kyiv
+	x = -3
+	y = 2
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_revise_pereiaslav_agreement}
+	mutually_exclusive = {focus = ZAP_switch_capital_to_poltava}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.05
+		add_political_power = -25
+		ZAP = {
+			add_autonomy_score = {
+			    value = -25
+			    localization = ZAP_switch_capital_to_poltava
+			}
+		}
+		set_capital = {
+			state = 792
+			remember_old_capital = yes
+		}
+		792 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Switch capital to Poltava
+    id = ZAP_switch_capital_to_poltava
+	icon = GFX_shift_capital_to_poltava
+	x = -5
+	y = 2
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	mutually_exclusive = {focus = ZAP_switch_capital_to_kiev}
+	prerequisite = {focus = ZAP_revise_pereiaslav_agreement}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_POLITICAL FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = -0.05
+		add_political_power = -50
+		ZAP = {
+			add_autonomy_score = {
+			    value = 50
+			    localization = ZAP_switch_capital_to_poltava
+			}
+		}
+		set_capital = {
+			state = 259
+			remember_old_capital = yes
+		}
+		259 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+#Align with Russia Military Subbranch
+
+focus = { #Raise Cossack Regiments
+    id = ZAP_raise_cossack_regiments
+	icon = GFX_goal_cossacks
+	x = 1
+	y = 1
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_reign_of_ivan_mazepa}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_ARMY_XP}
+	completion_reward = {
+		add_command_power = 25
+		ZAP = {
+			add_autonomy_score = {
+			    value = 50
+			    localization = ZAP_raise_cossack_regiments
+			}
+		}
+	    random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"1. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"2. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}
+		random_owned_controlled_state = {
+			limit = { ROOT = { has_full_control_of_state = PREV } }
+			prioritize = { 100 }
+			create_unit = {
+				division = "name = \"3. Kozatsky Polki\" division_template = \"Cossacks\" start_experience_factor = 1.0" 
+				owner = ZAP
+			}
+		}	
+	}
+}
+
+focus = { #Begin partial centralizing army programme (reform)
+    id = ZAP_begin_partially_centralizing_the_army
+	icon = GFX_goal_generic_small_arms
+	x = 1
+	y = 2
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_raise_cossack_regiments}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_command_power = -5
+		add_stability = -0.10
+		ZAP = {
+			add_autonomy_score = {
+			    value = -15
+			    localization = ZAP_begin_partially_centralizing_the_army
+			}
+		}
+		ZAP = {
+			remove_ideas = ZAP_decentralized_cossack_army
+			add_ideas = ZAP_cossack_army_reform_2
+		}
+	}
+}
+
+focus = { #Continue partial centralizing army programme (reform)
+    id = ZAP_continue_partially_centralizing_the_army
+	icon = GFX_goal_generic_wolf_pack
+	x = 1
+	y = 3
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_begin_partially_centralizing_the_army}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_command_power = -5
+		add_stability = -0.05
+		ZAP = {
+			add_autonomy_score = {
+			    value = -10
+			    localization = ZAP_continue_partially_centralizing_the_army
+			}
+		}
+		ZAP = {
+			remove_ideas = ZAP_cossack_army_reform_2
+			add_ideas = ZAP_cossack_army_reform_1
+		}
+	}
+}
+
+focus = { #Finish partial centralizing army programme (reform)
+    id = ZAP_finish_partially_centralizing_the_army
+	icon = GFX_goal_generic_wolf_pack
+	x = 1
+	y = 4
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_continue_partially_centralizing_the_army}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_ARMY_XP FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_command_power = -5
+		add_stability = 0.05
+		ZAP = {
+			add_autonomy_score = {
+			    value = -5
+			    localization = ZAP_finish_partially_centralizing_the_army
+			}
+		}
+		ZAP = {
+			remove_ideas = ZAP_cossack_army_reform_1
+            add_ideas = ZAP_cossack_army_reform
+		}
+	}
+}
+
+focus = { #Begin manufacturation with help of the Tsardom of Russia
+    id = ZAP_begin_manufacturing
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 2
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_raise_cossack_regiments}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = -0.05
+		add_tech_bonus = {
+			name = industrial_bonus
+			bonus = 1.0
+			uses = 2
+			category = industry
+		}
+		792 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		221 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Begin adaption of Russian Architecture on buildings, etc
+    id = ZAP_adapt_russian_architecture
+	icon = GFX_focus_SOV_third_rome
+	x = 3
+	y = 3
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_begin_manufacturing}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = -0.05
+		203 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Manufacturing Revolution
+    id = ZAP_continue_manufacturing
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 4
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_adapt_russian_architecture}
+	ai_will_do = {
+	    factor = 25
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.05
+		203 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Expand Arms Industry
+    id = ZAP_focus_on_arms_industry
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 5
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_continue_manufacturing}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.05
+		203 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = arms_factory
+				level = 2
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Return to Ukrainian Architecture
+    id = ZAP_return_to_ukrainian_architecture
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 6
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_focus_on_arms_industry}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.05
+		203 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_Complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Expand Ukrainian Language
+    id = ZAP_expand_ukrainian_cultural_identity
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 7
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_return_to_ukrainian_architecture}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.05
+		203 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_Complex
+				level = 1
+				instant_build = yes
+			}
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 2
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+
+focus = { #Expand education
+    id = ZAP_begin_building_schools
+	icon = GFX_goal_generic_construct_mil_factory
+	x = 3
+	y = 8
+	cost = 10
+	relative_position_id = ZAP_reign_of_ivan_mazepa
+	prerequisite = {focus = ZAP_expand_ukrainian_cultural_identity}
+	ai_will_do = {
+	    factor = 50
+	}
+	search_filters = {FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY}
+	completion_reward = {
+		add_stability = 0.10
+		203 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		193 = {
+			add_extra_state_shared_building_slots = 1
+		}
+		add_research_slot = 1
+	}
+}
+
+}

@@ -1,18 +1,17 @@
 state={
 	id=340
 	name="STATE_340"
-	manpower = 256527
+	manpower = 75000
 
-	state_category = town
+	state_category = city
 
 	history={
 		owner = TUR
 		buildings = {
-			infrastructure = 2
+			infrastructure = 3
 			industrial_complex = 1
 		}
-		
-		victory_points = {
+		victory_points = { # Bursa
 			947 20 
 		}
 		add_core_of = TUR

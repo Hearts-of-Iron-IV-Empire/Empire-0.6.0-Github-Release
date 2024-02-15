@@ -59,14 +59,14 @@ set_politics = {
 }
 
 set_popularities = {
-	neutrality = 50
-	aristocracy = 40
-	fascism = 5
+	neutrality = 60
+	aristocracy = 20
+	fascism = 20
 	communism = 0
-	democratic = 5
+	democratic = 0
 }
 
-# Resistance
+# Resistance and Compliance
 424 = { # Madras
 	start_resistance = yes
 	set_compliance = 20

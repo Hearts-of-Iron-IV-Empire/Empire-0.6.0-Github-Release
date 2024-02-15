@@ -10,8 +10,8 @@ state={
 
 
 	history={
-		add_core_of = COL
 		owner = SPR
+		#add_core_of = COL
 		victory_points = {
 			3284 1
 		}

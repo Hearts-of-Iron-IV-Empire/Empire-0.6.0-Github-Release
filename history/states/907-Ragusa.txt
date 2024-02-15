@@ -1,33 +1,29 @@
-
 state={
 	id=907
 	name="STATE_907"
 
 	history={
 		owner = CRO
-		victory_points = {
-			6889 5 
-		}
-		buildings = {
-			infrastructure = 2
-			6889 = {
-				naval_base = 1
-			}
-
-		}
 		add_claim_by = VNC
 		add_core_of = CRO
-		add_claim_by = TUR
+		victory_points = { # Ragusa
+			6889 50
+		}
+		buildings = {
+			infrastructure = 3
+			6889 = {
+				naval_base = 5
+			}
+		}
 		1798.1.1 = {
 			owner = TUR
 		}
-
 	}
 
 	provinces={
-		6889 
+		3868 6889 
 	}
-	manpower=124500
+	manpower=100200
 	buildings_max_level_factor=1.000
 	state_category=pastoral
 }

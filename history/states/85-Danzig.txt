@@ -1,17 +1,18 @@
-
 state={
 	id=85
 	name="STATE_85"
 
 	history={
 		owner = POL
-		victory_points = {
+		add_core_of = POL
+		add_claim_by = PRS
+		victory_points = { # Gdansk
 			362 20 
 		}
-		victory_points = {
+		victory_points = { # Toru
 			3295 15 
 		}
-		victory_points = {
+		victory_points = { # Bydgoszcz
 			279 1 
 		}
 		buildings = {
@@ -21,19 +22,13 @@ state={
 			dockyard = 1
 			362 = {
 				naval_base = 5
-
 			}
-
 		}
-		add_core_of = POL
-		add_claim_by = PRS
 		1772.1.1 = {
 			owner = PRS
 			add_core_of = PRS
 			controller = PRS
-
 		}
-
 	}
 
 	provinces={

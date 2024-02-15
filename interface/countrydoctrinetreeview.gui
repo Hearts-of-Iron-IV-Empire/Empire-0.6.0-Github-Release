@@ -765,7 +765,6 @@ guiTypes = {
 				size = { width = 2100 height = 100% }
 			}
 	
-	
 			iconType = {
 				name ="mountaineers_bg"
 				spriteType = "GFX_mountaineers_bg"
@@ -945,7 +944,7 @@ guiTypes = {
 				clicksound = ui_doctrine_tab_naval
 			}
 			instantTextBoxType = {
-				name = "navy_doctrine_title"
+				name = "navy_doctrine_folder_title"
 				text = "naval_doctrine"
 				position = { x=60 y=18}
 				font = "hoi_20bs"
@@ -962,7 +961,7 @@ guiTypes = {
 				clicksound = ui_doctrine_tab_air
 			}
 			instantTextBoxType = {
-				name = "air_doctrine_title"
+				name = "air_doctrine_folder_title"
 				text = "air_doctrine"
 				position = { x=10000 y=18}
 				font = "hoi_20bs"
@@ -1088,42 +1087,6 @@ guiTypes = {
 		iconType = {
 			name = "Icon"
 			position = { x=3 y=3 }
-			spriteType = "GFX_technology_medium"
-			alwaystransparent = yes
-		}
-		iconType = {
-			name = "bonus_icon"
-			position = { x=-1 y=-22 }
-			spriteType = "GFX_tech_bonus"
-		}
-		
-		instantTextBoxType = {
-			name = "bonus"
-			position = { x = -1 y = -22 }
-			textureFile = ""
-			font = "hoi_16mbs"
-			borderSize = {x = 4 y = 4}
-			text = "lol boat"
-			maxWidth = 80
-			maxHeight = 20
-			format = center
-		}
-	}
-
-	containerWindowType = {
-		name = "techtree_special_forces_doctrine_folder_item"
-		position = { x=0 y=5 }
-		size = { width = 72 height = 72 }
-		clipping = no
-
-		background = {
-			name = "Background"
-			quadTextureSprite ="GFX_technology_unavailable_item_bg"
-		}
-
-		iconType = {
-			name = "Icon"
-			position = { x=0 y=3 }
 			spriteType = "GFX_technology_medium"
 			alwaystransparent = yes
 		}

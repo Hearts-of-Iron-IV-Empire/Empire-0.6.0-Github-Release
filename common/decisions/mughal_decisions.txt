@@ -631,7 +631,7 @@ MUG_tribal_raids = {
 			}
 		}
 
-		cost = 70
+		cost = 40
 
 		highlight_states = {
 			highlight_state_targets = {
@@ -647,14 +647,7 @@ MUG_tribal_raids = {
 		fire_only_once = yes
 
 		ai_will_do = {
-			factor = 0
-			modifier = {
-				add = 200
-				divisions_in_state = {
-					state = 415
-					size < 6
-				}
-			}
+			factor = 100
 		}
 
 		complete_effect = {
@@ -669,7 +662,7 @@ MUG_tribal_raids = {
 			always = no
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		activation = {
 			always = no # Triggered from effect
@@ -715,7 +708,7 @@ MUG_tribal_raids = {
 			}
 		}
 
-		cost = 70
+		cost = 40
 
 		highlight_states = {
 			highlight_state_targets = {
@@ -753,7 +746,7 @@ MUG_tribal_raids = {
 			always = no
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		activation = {
 			always = no # Triggered from effect
@@ -799,7 +792,7 @@ MUG_tribal_raids = {
 			}
 		}
 
-		cost = 70
+		cost = 40
 
 		highlight_states = {
 			highlight_state_targets = {
@@ -837,7 +830,7 @@ MUG_tribal_raids = {
 			always = no
 		}
 
-		days_mission_timeout = 200
+		days_mission_timeout = 100
 
 		activation = {
 			always = no # Triggered from effect

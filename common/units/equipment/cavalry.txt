@@ -8,6 +8,7 @@ equipments = {
 		is_buildable = no
 		interface_category = interface_category_land
 		type = infantry
+		group_by = archetype
 
 		priority = 5
 		visual_level = 0

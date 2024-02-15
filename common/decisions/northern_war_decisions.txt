@@ -1,0 +1,737 @@
+#TODO CHURCH FLAVOUR EVENTS & TSAR FUCKING GDANSK TRADE (DECISIONS TOO)
+
+POL_foreign_influence = {
+	#RUSSIAN SECTION
+	RUS_proper_arrangements_with_lithuanians = { #LOCALISATION TODO
+
+		cost = 15
+
+		fire_only_once = yes
+
+		icon = GFX_decision_nobility
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+			SOV = { has_completed_focus = RUS_coordinate_with_lithuanians }
+		    date < 1721.1.1 
+			SOV = { has_war_with = SWE }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 200
+				date > 1702.4.3
+			}
+		}
+
+		available = {
+			tag = SOV
+            POL = { exists = yes }
+			SOV = { has_country_flag = GNW_lithuanian_arrangement_flag }
+			SOV = { has_war_with = SWE }
+        }
+
+		complete_effect = {
+            add_political_power = -50
+			SOV = { POL_increase_foreign_influence = yes }
+			POL = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support
+					days = 365
+				}
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support_opposite
+					days = 365
+				}
+				set_country_flag = GNW_lithuanian_arrangement_1_flag 
+			}
+		}
+	}
+	RUS_formalize_permanent_alliance_lithuania = { #LOCALISATION TODO
+
+		cost = 15
+
+		fire_only_once = yes
+
+		icon = GFX_decision_generic_military
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+			SOV = { has_completed_focus = RUS_coordinate_with_lithuanians }
+		    date < 1721.1.1 
+			SOV = { has_war_with = SWE }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 200
+				date > 1703.7.9
+			}
+		}
+
+		available = {
+			tag = SOV
+            POL = { exists = yes }
+			SOV = { has_country_flag = GNW_lithuanian_arrangement_1_flag }
+			SOV = { has_war_with = SWE }
+        }
+
+		complete_effect = {
+			add_political_power = -50
+            custom_effect_tooltip = GNW_lithuanian_independence_tooltip #LOCALISATION TODO
+			set_country_flag = GNW_lithuanian_arrangement_2_flag
+		}
+	}
+	RUS_ratify_rights_of_nobility = { #LOCALISATION TODO
+
+		cost = 15
+
+		fire_only_once = yes
+
+		icon = GFX_decision_nobility
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+            POL = { is_subject_of = SOV }
+		    date < 1721.1.1 
+			SOV = { has_war_with = SWE }
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 200
+				date > 1706.1.1 #IDK when this happened
+			}
+		}
+
+		available = {
+			tag = SOV
+            POL = { has_capitulated = no }
+			POL = { is_subject_of = SOV }
+			SOV = { has_war_with = SWE }
+			date > 1706.1.1
+        }
+
+		complete_effect = {
+			custom_effect_tooltip = GNW_able_todo_intterregnum_tooltip #LOCALISATION TODO
+			set_country_flag = RUS_announce_interregnum_flag
+			add_political_power = -75
+			POL = {
+				add_autonomy_score = {
+					value = 50
+				}
+				add_opinion_modifier = { target = SOV modifier = small_increase }
+			}
+			SOV = { POL_increase_foreign_influence = yes }
+			hidden_effect = {
+				POL = {
+					add_stability = 0.05
+				}
+			}
+		}
+	}
+	RUS_announce_interregnum = { #LOCALISATION TODO
+
+		cost = 50
+
+		fire_only_once = yes
+
+		icon = GFX_decision_aristocratic_coup
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+            SOV = { has_country_flag = RUS_announce_interregnum_flag }
+			SOV = { has_war_with = SWE }
+		    date < 1721.1.1 
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 200
+				date > 1707.1.1 #IDK when this happened
+			}
+		}
+
+		available = {
+			tag = SOV
+			SOV = { has_country_flag = RUS_announce_interregnum_flag }
+            POL = { has_capitulated = no }
+			POL = { is_subject_of = SOV }
+			SOV = { has_war_with = SWE }
+        }
+
+		complete_effect = {
+			custom_effect_tooltip = GNW_interrengum_criteria_tooltip #LOCALISATION TODO
+			add_political_power = -75
+			if = {
+				limit = {
+					OR = {
+						87 = { is_controlled_by = SOV }
+						87 = { is_controlled_by = POL }
+					}
+				}
+				SOV = { country_event = greatnorthernwars.5 }
+			}
+			else = {
+				SOV = { country_event = greatnorthernwars.4 }
+			}
+			SOV = { POL_increase_foreign_influence = yes }
+		}
+	}
+
+	#GENERIC / SEMI-GENERIC DECISIONS
+
+    RUS_pay_lithuanian_soldiers = { #LOCALISATION TODO
+
+		cost = 50
+
+		days_remove = 60
+
+		fire_only_once = no
+
+		icon = GFX_decision_coins
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+			SOV = { has_war_with = SWE }
+			POL = { has_war_with = SWE }
+		    date < 1721.1.1 
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				date > 1704.1.1
+				date < 1707.1.1 
+			}
+		}
+
+		available = {
+			tag = SOV
+			SOV = { has_war_with = SWE }
+			SOV = { has_completed_focus = RUS_coordinate_with_lithuanians }
+			POL = { has_war_with = SWE }
+			SOV = { NOT = { has_idea = RUS_lithuanian_military_support_opposite } }
+            POL = { has_capitulated = no }
+        }
+
+		complete_effect = {
+			POL = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support
+					days = 60
+				}
+				add_manpower = 2500
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support
+					days = 60
+				}
+				add_manpower = -2500
+			}
+			SOV = { POL_increase_foreign_influence = yes }
+		}
+
+	}
+
+	RUS_raise_two_regiment_divisions = { #LOCALISATION TODO
+
+		cost = 75
+
+		days_remove = 60
+
+		fire_only_once = no
+
+		icon = GFX_decision_generic_military
+
+		visible = {
+			OR = {
+				tag = SOV
+				tag = POL
+			}	
+			SOV = { has_war_with = SWE }
+			POL = { has_war_with = SWE }
+		    date < 1721.1.1 
+		}
+
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				factor = 20
+				date > 1706.1.1
+				date < 1707.1.1 
+			}
+		}
+
+		available = {
+			tag = SOV
+			SOV = { has_war_with = SWE }
+			POL = { has_war_with = SWE }
+			SOV = { NOT = { has_idea = RUS_lithuanian_military_support_opposite } }
+            POL = { has_capitulated = no }
+        }
+
+		complete_effect = {
+			POL = {
+				random_owned_controlled_state = {
+					limit = { POL = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Polish Militias\" division_template = \"Dywizja Piechoty\" start_experience_factor = 2.0" 
+						owner = POL
+					}
+				}
+				random_owned_controlled_state = {
+					limit = { POL = { has_full_control_of_state = PREV } }
+					create_unit = {
+						division = "name = \"Polish Militias\" division_template = \"Dywizja Piechoty\" start_experience_factor = 2.0" 
+						owner = POL
+					}
+				}
+
+			}
+			POL = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support
+					days = 60
+				}
+			}
+			SOV = {
+				add_timed_idea = {
+					idea = RUS_lithuanian_military_support_opposite
+					days = 60
+				}
+			}
+		}
+	}
+
+	RUS_separate_lithuanian_crown = {
+		cost = 50
+		fire_only_once = yes
+		icon = GFX_decision_border_war
+		visible = {
+			or = {
+				tag = SOV
+				tag = POL
+			}	
+			SOV = { has_completed_focus = RUS_coordinate_with_lithuanians }
+		    date < 1721.1.1 
+		}
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			tag = SOV
+            POL = { exists = yes }
+			SOV = { has_country_flag = POL_lithuanian_seperatism_3 }
+			SOV = { has_idea = POL_influence_over_poland_6 }
+		    SOV = { has_war_with = POL }
+        }
+		fixed_random_seed = no
+		remove_effect = {
+            POL = { release = LIT }
+		    POL = { set_cosmetic_tag = POL_no_lithuania }
+		    POL = { set_country_flag = is_poland }
+			SOV = {
+				set_autonomy = {
+					target = LIT
+					autonomous_state = autonomy_protectorate
+				}
+			}
+		}
+	}
+	#SWEDISH SECTION
+}
+RUS_great_northern_war = {
+
+	# RUSSIAN SECTION
+
+	# POLISH SECTION
+
+	SWE_siege_of_riga_mission = {
+
+		allowed = {
+			OR = {
+				tag = SWE
+				tag = POL
+			}
+		}
+	
+		icon = generic_prepare_civil_war 
+	
+		available = {
+			hidden_trigger = { always = no }
+		    
+		}
+	
+		days_mission_timeout = 225
+		days_remove = 15
+		is_good = no
+		fire_only_once = yes
+	
+		cancel_trigger = {
+			NOT = {
+				has_war_with = SWE
+			}
+			#OR = {
+			#	POL = {
+			#		controls_state = 191
+			#		controls_province = 9340
+			#	}
+			#	SWE = {
+			#		controls_state = 190
+			#		controls_province = 9340
+			#	}
+			#}
+		}
+		
+		activation = {
+			12 = { is_fully_controlled_by = POL }
+			SWE = { has_war_with = POL }
+			NOT = { has_global_flag = POL_tallin_conclusion_cflag }
+		}
+	
+		visible = {
+			SWE = { has_war_with = POL }
+			OR = {
+				tag = SWE
+				tag = POL
+			}
+			NOT = { has_global_flag = POL_tallin_conclusion_cflag }
+		}
+		
+		cancel_effect = {
+		
+		}
+
+		complete_effect = {
+			191 = {
+				POL = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+			13 = {
+				POL = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+		}
+	
+		timeout_effect = {
+			191 = {
+				POL = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+			13 = {
+				POL = {
+					add_dynamic_modifier = {
+						modifier = GNW_planned_offensive
+					}
+				}
+			}
+			if = {
+				limit = {
+					POL = { controls_province = 3152 }
+				}
+                #TODO
+			}
+			else = {
+				13 = {
+					SWE = {
+						add_dynamic_modifier = {
+							modifier = GNW_planned_offensive
+							days = 60
+						}
+					}
+				}
+				191 = {
+					SWE = {
+						add_dynamic_modifier = {
+							modifier = GNW_planned_offensive
+							days = 60
+						}
+					}
+				}
+				12 = {
+					SWE = {
+						add_dynamic_modifier = {
+							modifier = GNW_planned_offensive
+							days = 60
+						}
+					}
+				}
+			}
+			
+			set_global_flag = POL_tallin_conclusion_cflag
+			#TODO
+		}
+	
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	SWE_estonian_invasion_won_riga_mission = {
+
+		allowed = {
+			OR = {
+				tag = SWE
+				tag = POL
+			}
+		}
+	
+		icon = generic_prepare_civil_war 
+	
+		available = {
+			hidden_trigger = { always = no }	    
+		}
+	
+		days_mission_timeout = 225
+		days_remove = 15
+		is_good = no
+		fire_only_once = yes
+	
+		cancel_trigger = {
+			NOT = {
+				has_war_with = SWE
+			}
+			OR = {
+				POL = {
+					controls_state = 191
+					controls_province = 9340
+				}
+				SWE = {
+					controls_state = 190
+					controls_province = 9340
+				}
+			}
+		}
+		
+		activation = {
+			12 = { is_controlled_by = POL }
+			SWE = { has_war_with = POL }
+			POL = {
+				has_country_flag = POL_can_invade_pernau_flag
+			}
+		}
+	
+		visible = {
+			SWE = { has_war_with = POL }
+			OR = {
+				tag = SWE
+				tag = POL
+			}
+			NOT = { has_global_flag = POL_siege_of_riga_conclusion_cflag }
+		}
+	
+		timeout_effect = {
+			if = {
+				limit = {
+					POL = { controls_province = 9340 }
+				}
+		        POL = {
+					set_country_flag = POL_can_invade_pernau_flag			
+				}
+			}
+			else = {
+				SWE = {
+
+				}
+			}
+			
+			set_global_flag = POL_siege_of_riga_conclusion_cflag
+			#TODO
+		}
+
+		complete_effect = {
+			
+		}
+	
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	# SWEDISH SECTION
+
+	SWE_begin_lithuanian_operations = {
+
+		icon = GFX_decision_generic_ignite_civil_war
+	
+	#	days_re_enable = 60 
+
+	    fire_only_once = yes
+	
+		cost = 5
+	
+		ai_will_do = {
+			factor = 200
+		}
+	
+		visible = {
+			tag = SWE
+			SWE = { has_completed_focus = SWE_war_is_upon_us }
+		    has_war_with = POL
+			has_war_with = SOV
+			date < 1705.1.1
+		}
+	
+		available = {
+			tag = SWE
+		    has_war_with = POL
+			has_war_with = SOV
+			NOT = { has_war_with = DEN }
+		    date > 1699.4.1
+			date < 1705.1.1
+		}	
+	
+		complete_effect = {
+			if = {
+				limit = {
+					SWE = { is_ai = yes }
+				}
+				SWE = {
+					add_timed_idea = {
+						idea = SWE_lithuanian_offensives
+						days = 730
+					}
+					set_country_flag = SWE_lithuania_offensives
+				}
+			}
+			else = {
+				SWE = {
+					add_timed_idea = {
+						idea = 	SWE_lithuanian_offensives_hooman
+						days = 365
+					}
+				}
+			}
+		}	
+	}
+
+    SWE_moscow_campaign_mission = {
+
+		allowed = { tag = SOV }
+	
+		icon = generic_prepare_civil_war 
+	
+		available = {
+			hidden_trigger = { always = no }
+		}
+	
+		days_mission_timeout = 30
+		days_remove = 5
+		is_good = no
+		fire_only_once = yes
+	
+		cancel_trigger = {
+			NOT = {
+				has_war_with = SWE
+			}
+		}
+		
+		activation = {
+		#	219 = { is_controlled_by = SWE }
+			SWE = { has_war_with = SOV }
+		#	NOT = { has_global_flag = SWE_moscow_campaign_mission_cflag }
+		}
+	
+		visible = {
+		#	219 = { is_controlled_by = SWE }
+			SWE = { has_war_with = SOV }
+			OR = {
+				tag = SWE
+				tag = SOV
+			}
+		#	NOT = { has_global_flag = SWE_moscow_campaign_mission_cflag }
+		}
+		
+		cancel_effect = {
+		
+		}
+	
+		timeout_effect = {
+			if = {
+				limit = {
+					SWE = { controls_province = 6380 }
+				}
+				custom_effect_tooltip = SWE_moscow_campaign_mission_swedish_victory_tooltip
+				SOV = { country_event = greatnorthernwars.61 }
+				SWE = { country_event = greatnorthernwars.61 }
+			}
+			else = {
+				custom_effect_tooltip = SWE_moscow_campaign_mission_russian_victory_tooltip
+                SOV = { country_event = greatnorthernwars.60 }
+				SWE = { country_event = greatnorthernwars.60 }
+			}
+			
+			set_global_flag = SWE_moscow_campaign_mission_cflag
+			#TODO
+		}
+	
+		ai_will_do = {
+			factor = 200
+		}
+	}
+
+	SWE_dethrone_peter_the_great = {
+
+		icon = generic_decisison
+	
+	#	days_re_enable = 60 
+	
+		cost = 15
+	
+		ai_will_do = {
+			factor = 100
+		}
+	
+		visible = {
+			tag = SWE
+		    has_war_with = SOV
+		}
+	
+		available = {
+			tag = SWE
+		    has_war_with = SOV
+		    SOV = { surrender_progress > 0.5 }
+		    controls_province = 6380
+		    controls_province = 117
+		}	
+	
+		complete_effect = {
+			SWE = {
+				country_event = sweden.131
+			}
+		}	
+	}
+}

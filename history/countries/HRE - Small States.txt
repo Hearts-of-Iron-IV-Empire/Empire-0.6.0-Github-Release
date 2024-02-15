@@ -4,7 +4,7 @@ oob = "HRE_1936"
 
 set_country_flag = HRE_imperial_subject
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {

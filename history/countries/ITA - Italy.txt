@@ -7,11 +7,13 @@ set_stability = 0.3
 set_war_support = 0.05
 
 add_ideas = {
+	SAV_economic_depression
+	SAV_fallout_of_plague
+
+	# Laws and Religion
 	volunteer_only
 	catholic
 	limited_exports
-	SAV_economic_depression
-	SAV_fallout_of_plague
 }
 
 1714.8.1 = {

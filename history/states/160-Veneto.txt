@@ -10,8 +10,9 @@ state={
 
 	history={
 		owner = VNC
-		victory_points = {
-			11584 30
+		add_core_of = VNC
+		victory_points = { # Venice
+			11584 50
 		}
 		victory_points = {
 			603 3 
@@ -25,12 +26,9 @@ state={
 			industrial_complex = 4
 			dockyard = 1
 			11584 = {
-				naval_base = 6
-
+				naval_base = 10
 			}
-
 		}
-		add_core_of = VNC
 		1798.1.1 = {
 			owner = AUS
 		}
@@ -42,6 +40,6 @@ state={
 	provinces={
 		603 628 3604 3657 6656 9582 9613 11584 
 	}
-	manpower=1405747
+	manpower=82000
 	buildings_max_level_factor=1.000
 }

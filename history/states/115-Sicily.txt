@@ -4,10 +4,11 @@ state={
 	manpower = 712000
 	
 	state_category = city
+	
 	history={
 		owner = SPR
-		victory_points = {
-			10074 15 
+		victory_points = { # Palermo
+			10074 20 
 		}
 		victory_points = {
 			4159 10 

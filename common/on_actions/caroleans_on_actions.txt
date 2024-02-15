@@ -1,0 +1,14 @@
+
+on_actions = {
+	on_startup = {# Better to add the tech here so I don't have to edit the entire SWE history file
+		effect = {
+			SWE = {
+				hidden_effect = {
+					set_technology = {
+						bicycle_infantry = 1
+					}
+				}
+			}
+		}	
+	}
+}# END ON_ACTIONS CAT

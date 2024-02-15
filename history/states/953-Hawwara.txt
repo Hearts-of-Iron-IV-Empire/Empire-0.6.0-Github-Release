@@ -3,8 +3,10 @@ state={
 	name="STATE_953"
 
 	history={
-		owner = UNC
-
+		owner = SUD
+		buildings = {
+			infrastructure = 1
+		}
 	}
 
 	provinces={

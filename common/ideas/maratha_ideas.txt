@@ -33,7 +33,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.1
 				army_org_factor = -0.05
-				consumer_goods_factor = 0.1
+				consumer_goods_factor = 0.05
 			}
 		}
 		MAR_traitors_everywhere_2 = {
@@ -50,7 +50,7 @@ ideas = {
 			modifier = {
 				political_power_gain = -0.15
 				army_org_factor = -0.07
-				consumer_goods_factor = 0.15
+				consumer_goods_factor = 0.10
 			}
 		}
 		MAR_maratha_army = {
@@ -65,7 +65,7 @@ ideas = {
 			picture = maratha_soldier
 
 			modifier = {
-				army_org_factor = -0.05
+				#army_org_factor = -0.05
 				army_attack_factor = 0.10
 				army_speed_factor = 0.1
 				supply_consumption_factor = -0.15

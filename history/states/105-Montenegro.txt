@@ -2,21 +2,22 @@ state={
 	id=105
 	name="STATE_105"
 	resources={
-		chromium=20.000
-		aluminium=70.000
+		chromium=15
+		aluminium=18
 	}
 
 	history={
 		owner = MNT
 		add_core_of = MNT
-		victory_points = {
-			937 20
+		add_extra_state_shared_building_slots = 2
+		victory_points = { # Cetinje
+			11858 50
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
+			industrial_complex = 2
+			arms_factory = 2
 		}
-
 	}
 
 	provinces={

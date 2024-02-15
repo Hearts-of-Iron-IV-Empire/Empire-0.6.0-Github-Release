@@ -1,20 +1,31 @@
-
 state={
 	id=550
 	name="STATE_550"
 
 	history={
-		owner = UNC
+		owner = DAN
+		victory_points = { # Dankali
+			4985 50
+		}
+		victory_points = { # Djibouti
+			8124 3
+		}
+		victory_points = { # Baylul
+			13355 5
+		}
 		buildings = {
 			infrastructure = 1
 			8124 = {
+				naval_base = 1
+			}
+			13355 = {
 				naval_base = 1
 			}
 		}
 	}
 
 	provinces={
-		4985 5041 8124
+		4985 5041 8124 13355
 	}
 	manpower=600600
 	buildings_max_level_factor=1.000

@@ -1,12 +1,16 @@
 state={
 	id=801
 	name="STATE_801"
-	provinces={
-		2196 5210 8183 10976 12941 13250
-	}
+	manpower=1340201
+	buildings_max_level_factor=1.000
+	state_category = city
 
 	history={
 		owner = OMA
+		add_core_of = OMA
+		victory_points = { # Mombasa
+			5210 10
+		}
 		buildings = {
 			infrastructure = 2
 			5210 = {
@@ -19,10 +23,9 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = OMA
 	}
 
-	manpower=1340201
-	buildings_max_level_factor=1.000
-	state_category =large_city
+	provinces={
+		2196 5210 8183 10976 12941 13250
+	}
 }

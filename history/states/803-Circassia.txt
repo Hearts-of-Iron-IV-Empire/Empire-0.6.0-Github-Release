@@ -1,21 +1,18 @@
-
 state={
 	id=803
 	name="STATE_803"
 
 	history={
 		owner = CIR
+		add_core_of = CIR
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
 			industrial_complex = 1
-
 		}
-		add_core_of = CIR
-		victory_points = {
-			9674 5 
+		victory_points = { # Adyche
+			9674 50
 		}
-
 	}
 
 	provinces={

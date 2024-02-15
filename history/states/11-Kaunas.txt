@@ -1,4 +1,3 @@
-
 state={
 	id=11
 	name="STATE_11"
@@ -8,17 +7,13 @@ state={
 
 	history={
 		owner = POL
-		victory_points = {
-			6296 20 
-		}
+		add_core_of = POL
+		add_core_of = LIT
 		buildings = {
 			infrastructure = 3
 			arms_factory = 1
 			industrial_complex = 2
-
 		}
-		add_core_of = POL
-		add_core_of = LIT
 		1798.1.1 = {
 			owner = SOV
 		}
@@ -28,9 +23,10 @@ state={
 	}
 
 	provinces={
-		327 6296 9246 9357 9374 9404 9438 11226 11498 
+		9246 9295 9374 9404 9438 11226 11342 11498 
 	}
 	manpower=210672
 	buildings_max_level_factor=1.000
 	state_category=town
+	local_supplies=0.000
 }

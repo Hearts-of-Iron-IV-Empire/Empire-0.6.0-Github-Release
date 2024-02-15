@@ -1,4 +1,3 @@
-
 state={
 	id=161
 	name="Emilia"
@@ -8,16 +7,15 @@ state={
 
 	history={
 		owner = PRM
-		victory_points = {
-			6790 1 
+		add_core_of = PRM
+		victory_points = { # Parma
+			6790 50
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			industrial_complex = 2
 			arms_factory = 1
-
 		}
-		add_core_of = PRM
 		1812.1.1 = {
 			owner = FRA
 		}

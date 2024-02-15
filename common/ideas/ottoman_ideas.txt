@@ -1,100 +1,6 @@
 ideas = {
 	country = {
-		TUR_janissary_loyalty_1 = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-           		always = yes
-      		}
-
-			picture = janissary
-			
-			modifier = {
-				army_org_factor = 0.12
-				consumer_goods_factor = 0.10
-				stability_factor = 0.10
-			}
-		}
-		TUR_janissary_loyalty_2 = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-           		always = yes
-      		}
-
-			picture = janissary
-			
-			modifier = {
-				army_org_factor = 0.08
-				consumer_goods_factor = 0.05
-				stability_factor = 0.05
-			}
-		}
-		TUR_janissary_loyalty_3 = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-           		always = yes
-      		}
-
-			picture = janissary
-			
-			modifier = {
-				army_org_factor = 0.04
-				consumer_goods_factor = 0.02
-			}
-		}
-		TUR_janissary_loyalty_4 = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-           		always = yes
-      		}
-
-			picture = janissary
-			
-			modifier = {
-				stability_factor = -0.05
-				consumer_goods_factor = -0.02
-			}
-		}
-		TUR_janissary_loyalty_5 = {
-			allowed = {
-				always = no
-			}
-
-			removal_cost = -1
-
-			allowed_civil_war = {
-           		always = yes
-      		}
-
-			name = TUR_janissary_loyalty_5
-
-			picture = janissary
-			
-			modifier = {
-				stability_factor = -0.10
-				consumer_goods_factor = -0.05
-			}
-		}
-		TUR_sick_man_of_europe_1 = {
+		TUR_sick_man_of_europe_1 = { # Add at start
 			allowed = {
 				always = no
 			}
@@ -180,6 +86,118 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 				stability_weekly = -0.001
 				political_power_factor = -0.1
+			}
+		}
+		TUR_sekban_rebellions = {
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = sekban_rebellions
+			
+			modifier = {
+				stability_factor = -0.10
+				war_support_factor = -0.05
+				required_garrison_factor = 0.1
+				resistance_growth_on_our_occupied_states = 0.3
+			}
+		}
+		TUR_janissary_loyalty_1 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = janissary
+			
+			modifier = {
+				army_org_factor = 0.12
+				consumer_goods_factor = 0.10
+				stability_factor = 0.10
+			}
+		}
+		TUR_janissary_loyalty_2 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = janissary
+			
+			modifier = {
+				army_org_factor = 0.08
+				consumer_goods_factor = 0.05
+				stability_factor = 0.05
+			}
+		}
+		TUR_janissary_loyalty_3 = { # Add at start
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = janissary
+			
+			modifier = {
+				army_org_factor = 0.04
+				consumer_goods_factor = 0.02
+			}
+		}
+		TUR_janissary_loyalty_4 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = janissary
+			
+			modifier = {
+				stability_factor = -0.05
+				consumer_goods_factor = -0.02
+			}
+		}
+		TUR_janissary_loyalty_5 = {
+			allowed = {
+				always = no
+			}
+
+			removal_cost = -1
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			name = TUR_janissary_loyalty_5
+
+			picture = janissary
+			
+			modifier = {
+				stability_factor = -0.10
+				consumer_goods_factor = -0.05
 			}
 		}
 		TUR_military_restructuring = {

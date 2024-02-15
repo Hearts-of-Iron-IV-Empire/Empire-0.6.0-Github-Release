@@ -5,20 +5,24 @@ state={
 	
 	state_category = city
 	resources={
-		steel=100 
+		steel=20 
 	}
 
 	history={
 		owner = FRA
+		add_core_of = FRA
 		#victory_points = { 6529 1 }
 		#victory_points = { 549 1 }
-		victory_points = { 678 5 }
-		victory_points = { 9503 5 }
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 3
+		victory_points = { 
+			678 5 
 		}
-		add_core_of = FRA
+		victory_points = { # Strasbourg
+			9503 20 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+		}
 	}
 
 	provinces={

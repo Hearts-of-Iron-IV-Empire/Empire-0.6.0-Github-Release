@@ -1,8 +1,8 @@
 capital = 908
 set_country_flag = HRE_imperial_subject
-load_oob = Imperial_army
+load_oob = "Imperial_army"
 
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {

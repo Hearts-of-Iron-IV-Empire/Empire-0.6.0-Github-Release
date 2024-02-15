@@ -12,6 +12,27 @@ catholic_curia_power_gain = {
 	experience_gain_air = ROOT.opinion@PAP
 }
 
+GNW_planned_offensive = { # 0.6.5 Buster! - Glow Berries Replying to Kodexu about Swedish Focus Tree Rework, 7:20 PM EST 2023-03-30 in #Tester-Channel
+    icon = GFX_idea_chi_war_of_resistance2
+
+	army_attack_factor = 0.5
+	army_speed_factor = 0.25
+	ground_attack_factor = 0.30
+	local_org_regain = 0.2
+}
+
+GNW_scorched_earth = { 
+    icon = GFX_idea_chi_war_of_resistance2
+	
+	out_of_supply_factor = 0.5
+	attrition = 0.5
+	army_attack_factor = -0.25
+	army_defence_factor = -0.25
+	army_speed_factor = -0.30
+	ground_attack_factor = -0.50
+	local_org_regain = -0.5
+}
+
 slave_state = {
 	icon = GFX_idea_bul_tobacco_exports
 	
@@ -84,9 +105,20 @@ mismanaged = {
 }
 
 depopulated = {
-	icon = GFX_idea_generic_oppression
+	icon = GFX_idea_the_war_to_end_all_wars
 	
 	local_manpower = -0.50
 	state_production_speed_buildings_factor = -0.30
 	compliance_gain = -0.05
+}
+
+# Ottoman stuff
+
+devastated_by_war = {
+	icon = GFX_idea_city_burning
+
+	monthly_population = -0.1
+	local_manpower = -0.70
+	state_production_speed_buildings_factor = -0.50
+	local_resources_factor = -0.25
 }

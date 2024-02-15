@@ -19,7 +19,6 @@ sub_units = {
 			category_army
 		}
 
-	
 		combat_width = 0
 	
 		#Size Definitions
@@ -46,6 +45,5 @@ sub_units = {
 			support_equipment = 10
 			infantry_equipment = 40
 		}
-
 	}
 }

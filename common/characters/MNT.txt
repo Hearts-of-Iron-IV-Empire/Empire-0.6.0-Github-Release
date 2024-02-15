@@ -1,0 +1,14 @@
+characters = {
+    MNT_Danilo_I = {
+        name = "Danilo I"
+        portraits = {
+            civilian = {
+                large = "GFX_Danilo_I"
+            }
+        }
+        country_leader = {
+            ideology = nazism
+            traits = {}
+        }
+    }
+}

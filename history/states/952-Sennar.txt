@@ -3,13 +3,16 @@ state={
 	name="STATE_952"
 	history={
 		owner = SUD
-		buildings = {
-			infrastructure = 1
-		}
 		add_core_of = SUD
+		add_extra_state_shared_building_slots = 6
+		buildings = {
+			infrastructure = 2
+			arms_factory = 3
+			industrial_complex = 4
+		}
 
-		victory_points = {
-			1914 10 
+		victory_points = { # Sennar
+			1914 50 
 		}
 	}
 	provinces={

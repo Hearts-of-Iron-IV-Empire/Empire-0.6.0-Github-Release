@@ -2,10 +2,11 @@
 
 oob = "FIN_1936"
 
-
-set_research_slots = 3
+set_research_slots = 2
 
 add_ideas = {
+
+	# Laws and Religion
 	limited_conscription
 	protestant
 	kingdom

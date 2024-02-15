@@ -160,7 +160,7 @@ country_event = {
 	}
 }
 
-# Ottomans demand morea
+# Ottomans demand Morea
 
 country_event = {
 	id = ottomans.11
@@ -169,27 +169,38 @@ country_event = {
 
 	is_triggered_only = yes
 
-	option = {
+	option = { # NO
 		name = ottomans.11.a
+		add_war_support = 0.10
+		add_political_power = 70
 		TUR = {
 			country_event = {
 				id = ottomans.12
 				days = 5
 			}
 		}
+		ai_chance = {
+			base = 80
+		}
 	}
-	option = {
+
+	option = { # Yes...
 		name = ottomans.11.b
+		add_stability = -0.10
+		add_political_power = -100
 		TUR = {
 			country_event = {
 				id = ottomans.13
 				days = 5
 			}
 		}
+		ai_chance = {
+			base = 20
+		}
 	}
 }
 
-#NOPE VENICE
+# NOPE VENICE
 country_event = {
 	id = ottomans.12
 	title = ottomans.12.t
@@ -206,7 +217,8 @@ country_event = {
 		}
 	}
 }
-#YES VENICE
+
+# YES VENICE
 country_event = {
 	id = ottomans.13
 	title = ottomans.13.t
@@ -219,7 +231,8 @@ country_event = {
 		transfer_state = 186
 	}
 }
-#OTTOMANS SEND EQUIPMENT TO SWEDEN
+
+# OTTOMANS SEND EQUIPMENT TO SWEDEN
 country_event = {
 	id = ottomans.14
 	title = ottomans.14.t
@@ -232,8 +245,7 @@ country_event = {
 	}
 }
 
-#georgian uprising
-
+# Georgian uprising
 country_event = {
 	id = ottomans.15
 	title = ottomans.15.t
@@ -281,8 +293,7 @@ country_event = {
 	}
 }
 
-#remove revolt name
-
+# Remove revolt name
 country_event = {
 	id = ottomans.17
 	title = ottomans.17.t
@@ -340,5 +351,195 @@ country_event = {
 		add_stability = 0.07
 		add_war_support = 0.07
 		add_political_power = 60
+	}
+}
+
+# Ottomans retake Basra
+country_event = {
+	id = ottomans.20
+	title = ottomans.20.t
+	desc = ottomans.20.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = {
+		name = ottomans.20.a
+		add_stability = 0.02
+		add_war_support = 0.02
+		add_political_power = 20
+		transfer_state = 675
+	}
+}
+
+# Ultimatum to become puppet
+country_event = {
+	id = ottomans.21
+	title = ottomans.21.t
+	desc = ottomans.21.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Ok...
+		name = ottomans.21.a
+		add_stability = -0.20
+		add_war_support = -0.20
+		add_political_power = -120
+		TUR = {
+			country_event = {
+				id = ottomans.22
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = { # NO!
+		name = ottomans.21.b
+		add_political_power = 20
+		TUR = {
+			country_event = {
+				id = ottomans.23
+				days = 2
+			}
+		}
+		ai_chance = {
+			base = 70
+		}
+	}
+}
+
+# They say yes
+country_event = {
+	id = ottomans.22
+	title = ottomans.22.t
+	desc = ottomans.22.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Excellent.
+		name = ottomans.22.a
+		add_stability = 0.05
+		add_war_support = 0.05
+		add_political_power = 50
+		TUR = {
+			puppet = OMA
+		}
+	}
+}
+
+# They say no
+country_event = {
+	id = ottomans.23
+	title = ottomans.23.t
+	desc = ottomans.23.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Leave it...
+		name = ottomans.23.a
+		add_stability = -0.05
+		add_war_support = -0.10
+		add_political_power = -75
+		OMA = {
+			country_event = {
+				id = ottomans.24
+				days = 2
+			}
+		}
+	}
+
+	option = { # WE DECLARE WAR
+		name = ottomans.23.b
+		add_war_support = 0.05
+		add_political_power = 40
+		create_wargoal = {
+			type = annex_everything
+			target = OMA
+		}
+	}
+}
+
+# Ottomans back down
+country_event = {
+	id = ottomans.24
+	title = ottomans.24.t
+	desc = ottomans.24.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Lesgo
+		name = ottomans.24.a
+		add_stability = 0.05
+		add_war_support = 0.10
+		add_political_power = 75
+	}
+}
+
+# Bandits damage infrastructure
+state_event = {
+	id = ottomans.25
+	title = ottomans.25.t
+	desc = ottomans.25.d
+	
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = ottomans.25.a
+		TUR = {
+			add_stability = -0.01
+		}
+		damage_building = {
+			type = infrastructure
+			damage = 0.5
+		}
+		set_variable = {
+			var = mystate
+		}
+	}
+}
+
+# Bandits destroy villages
+country_event = {
+	id = ottomans.26
+	title = ottomans.26.t
+	desc = ottomans.26.d
+	
+	is_triggered_only = yes
+
+	option = { # ;-;
+		name = ottomans.25.a
+		add_stability = -0.02
+		add_political_power = -30
+	}
+}
+
+# Intervention in the Maghreb
+country_event = {
+	id = ottomans.27
+	title = ottomans.27.t
+	desc = ottomans.27.d
+	
+	is_triggered_only = yes
+
+	option = { # Support Algiers
+		name = ottomans.27.a
+		unlock_national_focus = TUR_support_algiers
+	}
+
+	option = { # Support Tunis
+		name = ottomans.27.b
+		unlock_national_focus = TUR_support_tunis
+	}
+
+	option = { # Take it all
+		name = ottomans.27.c
+		unlock_national_focus = TUR_destroy_them_all
 	}
 }

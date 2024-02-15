@@ -1,19 +1,18 @@
-
 state={
 	id=112
 	name="STATE_112"
-	manpower = 1069100
+	manpower = 180100
 	resources={
 		tungsten=32
 		rubber = 10
 	}
 	
-	state_category = city
+	state_category = large_city
 
 	history={
 		owner = POR
-		victory_points = {
-			11805 20
+		victory_points = { # Lisbon
+			11805 50
 		}
 		victory_points = {
 			3798 1

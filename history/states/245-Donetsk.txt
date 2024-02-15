@@ -1,25 +1,26 @@
-
 state={
 	id=245
 	name="STATE_245"
 
 	history={
 		owner = SOV
+		add_core_of = SOV
 		buildings = {
 			infrastructure = 2
-
 		}
-		add_core_of = SOV
-		victory_points = {
-			11476 1 
+		victory_points = { # Kamianyi Brid
+			9461 3 
 		}
-
+		victory_points = { # Millerovo
+			11476 3 
+		}
 	}
 
 	provinces={
-		449 484 500 509 533 3478 3489 3505 3519 3540 6417 6493 6544 6566 9446 9488 9516 9540 9565 11418 11434 11450 11459 11476 11501 
+		449 484 500 509 533 547 3478 3489 3505 3519 3540 3777 6417 6544 6566 9446 9461 9476 9488 9516 9540 9565 11418 11434 11450 11459 11476 11501 
 	}
 	manpower=111769
 	buildings_max_level_factor=1.000
 	state_category=rural
+	local_supplies=0.000
 }

@@ -1,19 +1,16 @@
 state={
 	id=763
 	name="STATE_763"
-	manpower = 440234
-	state_category = city
-
 	resources={
-		steel = 5
+		steel=5.000
 	}
 
 	history={
 		owner = PRS
 		add_core_of = PRS
 		add_claim_by = POL
-		victory_points = {
-			6332 10 
+		victory_points = { # Königsberg
+			6332 30 
 		}
 		buildings = {
 			infrastructure = 3
@@ -28,6 +25,10 @@ state={
 	}
 
 	provinces={
-		281 348 395 3384 6332 11265
+		395 6332 11265 
 	}
+	manpower=440234
+	buildings_max_level_factor=1.000
+	state_category=city
+	local_supplies=0.000
 }

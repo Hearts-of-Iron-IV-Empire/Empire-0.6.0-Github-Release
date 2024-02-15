@@ -447,15 +447,15 @@ country_event = {
 		custom_effect_tooltip = increases_influence_by_5_all
 		add_to_variable = {
 			var = HOL_influence
-			amount = 5
+			value = 5
 		}
 		add_to_variable = {
 			var = POR_influence
-			amount = 5
+			value = 5
 		}
 		add_to_variable = {
 			var = SPR_influence
-			amount = 5
+			value = 5
 		}
 		hidden_effect = {
 			country_event = {
@@ -482,7 +482,7 @@ country_event = {
 		custom_effect_tooltip = increases_por_influence_by_5
 		add_to_variable = {
 			var = POR_influence
-			amount = 5
+			value = 5
 		}
 	}
 
@@ -493,7 +493,7 @@ country_event = {
 		custom_effect_tooltip = increases_hol_influence_by_5
 		add_to_variable = {
 			var = HOL_influence
-			amount = 5
+			value = 5
 		}
 	}
 
@@ -504,7 +504,7 @@ country_event = {
 		custom_effect_tooltip = increases_spr_influence_by_5
 		add_to_variable = {
 			var = SPR_influence
-			amount = 5
+			value = 5
 		}
 	}
 
@@ -537,15 +537,15 @@ country_event = {
 		custom_effect_tooltip = increases_influence_by_10_all
 		add_to_variable = {
 			var = HOL_influence
-			amount = 10
+			value = 10
 		}
 		add_to_variable = {
 			var = POR_influence
-			amount = 10
+			value = 10
 		}
 		add_to_variable = {
 			var = SPR_influence
-			amount = 10
+			value = 10
 		}
 		hidden_effect = {
 			country_event = {

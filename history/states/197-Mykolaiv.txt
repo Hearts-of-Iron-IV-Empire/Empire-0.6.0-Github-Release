@@ -1,24 +1,25 @@
-
 state={
 	id=197
 	name="STATE_197"
 
 	history={
-		victory_points = {
-			11683 3 
-		}
 		owner = TUR
-		buildings = {
-			infrastructure = 3
-			dockyard = 1
-
-		}
 		add_core_of = CRI
 		add_core_of = TUR
 		add_core_of = ZAP
+		victory_points = {
+			11683 3 
+		}
+		buildings = {
+			infrastructure = 3
+			dockyard = 1
+		}
 		1699.1.1 = {
 			SOV = {
 				set_province_controller = 11715
+				set_province_controller = 574
+				set_province_controller = 3755
+				set_province_controller = 11683
 			}
 		}
 		1789.1.1 = {

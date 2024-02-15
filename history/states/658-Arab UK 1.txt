@@ -5,8 +5,9 @@ state={
 	history={
 		owner = OMA
 		add_core_of = OMA
-		add_core_of = UAE
-
+		buildings = {
+			infrastructure = 1
+		}
 	}
 
 	provinces={

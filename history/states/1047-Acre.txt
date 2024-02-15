@@ -1,0 +1,24 @@
+state={
+	id=1047
+	name="STATE_1047"
+    resources={
+		oil = 30
+	}
+
+	history = {
+		owner = UNC
+		1773.1.1 = {
+			owner = PRU
+			add_core_of = BRA
+            add_core_of = PRU
+		}
+
+	}
+
+	provinces = {
+		5216 10960
+	}
+	manpower=150
+	buildings_max_level_factor=1.000
+    state_category=pastoral
+}

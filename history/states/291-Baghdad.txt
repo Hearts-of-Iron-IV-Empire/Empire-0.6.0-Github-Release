@@ -1,0 +1,28 @@
+state={
+	id=291
+	name="STATE_291"
+	resources={
+		oil=4.000
+	}
+
+	history={
+		owner = TUR
+		add_core_of = TUR
+		victory_points = { # Baghdad
+			2097 20 
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 1
+			industrial_complex = 2
+		}
+	}
+
+	provinces={
+		2097 7977 7994 10744 10876 12046 12839 12855 
+	}
+	manpower=444165
+	buildings_max_level_factor=1.000
+	state_category=town
+	local_supplies=0.000
+}

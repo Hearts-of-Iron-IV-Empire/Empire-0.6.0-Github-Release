@@ -2,7 +2,7 @@
 
 oob = "ARA_revolt"
 
-set_research_slots = 3
+set_research_slots = 2
 
 add_ideas = {
 	SPR_the_aragonese_revolt

@@ -2,8 +2,7 @@
 
 oob = "BAV_1699"
 set_country_flag = HRE_imperial_subject
-
-set_research_slots = 3
+set_research_slots = 2
 
 # Starting tech
 set_technology = {
@@ -33,9 +32,11 @@ give_guarantee = IFC
 	retire_character = BAV_Maximilian_II_Emanuel # Dead
 }
 add_ideas = {
-	catholic
 	BAV_joseph_ferdinand
 	PRS_status_elector
+	
+	# Laws and Religion
+	catholic
 }
 
 set_convoys = 0

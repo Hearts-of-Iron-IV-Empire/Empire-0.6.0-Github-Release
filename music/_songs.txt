@@ -177,7 +177,7 @@ music = {
 }
 
 music = {
-	song = "On the hills of Manchuria"
+	song = "On the Hills of Manchuria"
 	
 	chance = {
 		modifier = {
@@ -244,6 +244,8 @@ music = {
 
 # Country Specific Music # 
 
+# German Music
+
 music = {
 	song = "March of the Templars"
 	
@@ -256,21 +258,6 @@ music = {
 			factor = 2
 			original_tag = PRS
 			original_tag = AUS
-		}
-	}	
-}
-
-music = {
-	song = "Im Ganzen Vaterland"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}
-		modifier = {
-			factor = 2
-			original_tag = PRS
 		}
 	}	
 }
@@ -323,20 +310,7 @@ music = {
 	}	
 }
 
-music = {
-	song = "Fridericus Rex Grenadiermarsch"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}
-		modifier = {
-			factor = 2
-			original_tag = PRS
-		}	
-	}	
-}
+# Russian Music
 
 music = {
 	song = "God Save the Tsar"
@@ -383,6 +357,8 @@ music = {
 	}	
 }
 
+# Tchaikovsky
+ 
 music = {
 	song = "Tchaikovsky's 1812 Overture"
 	
@@ -427,6 +403,8 @@ music = {
 		}
 	}	
 }
+
+# Ottoman Music
 
 music = {
 	song = "Ottoman Empire Imperial Anthem"
@@ -533,6 +511,8 @@ music = {
 	}	
 }
 
+# British Music
+
 music = {
 	song = "The British Grenadiers March"
 	
@@ -578,6 +558,8 @@ music = {
 	}	
 }
 
+# Portuguese Music
+
 music = {
 	song = "Hino Da Carta: Hymn of Portugal"
 	
@@ -592,6 +574,73 @@ music = {
 		}
 	}	
 }
+
+# Spanish Music
+
+music = {
+	song = "Royal Anthem of Spain: Marcha Real"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = SPR
+		}	
+	}	
+}
+
+music = {
+	song = "Hymn De Los Tercios"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}	
+		modifier = {
+			factor = 2
+			original_tag = SPR
+		}	
+	}	
+}
+
+# Swedish Music
+
+music = {
+	song = "Carolus Rex Marsj"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SWE
+		}
+	}	
+}
+
+music = {
+	song = "Jääkärimarssi"
+	
+	chance = {
+		modifier = {
+			factor = 1
+			has_war = no
+		}
+		modifier = {
+			factor = 2
+			original_tag = SWE
+			original_tag = FIN
+		}
+	}	
+}
+
+# Dutch Music
 
 music = {
 	song = "The Wilhelmus: Hymn of the Netherlands"
@@ -638,35 +687,7 @@ music = {
 	}	
 }
 
-music = {
-	song = "Royal Anthem of Spain: Marcha Real"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}	
-		modifier = {
-			factor = 2
-			original_tag = SPR
-		}	
-	}	
-}
-
-music = {
-	song = "Hymn De Los Tercios"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}	
-		modifier = {
-			factor = 2
-			original_tag = SPR
-		}	
-	}	
-}
+# Italian Music
 
 music = {
 	song = "Inno Nasionale Veneto: Anthem of the Republic of Venice"
@@ -699,6 +720,8 @@ music = {
 	}	
 }
 
+# French Music
+
 music = {
 	song = "Marche du Royal Soissonais"
 	
@@ -706,7 +729,11 @@ music = {
 		modifier = {
 			factor = 1
 			has_war = no
-		}		
+		}
+		modifier = {
+			factor = 2
+			original_tag = FRA
+		}
 	}	
 }
 
@@ -816,37 +843,7 @@ music = {
 	}	
 }
 
-music = {
-	song = "Carolus Rex Marsj"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}
-		modifier = {
-			factor = 2
-			original_tag = SWE
-		}
-	}	
-}
-
-music = {
-	song = "Jääkärimarssi"
-	
-	chance = {
-		modifier = {
-			factor = 1
-			has_war = no
-		}
-		modifier = {
-			factor = 2
-			original_tag = SWE
-			original_tag = FIN
-		}
-	}	
-}
-
+# American Music
 
 music = {
 	song = "Sharpe's Theme"

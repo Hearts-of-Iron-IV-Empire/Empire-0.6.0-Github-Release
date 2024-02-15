@@ -8,7 +8,8 @@ set_war_support = 0.6
 
 give_guarantee = ZAP
 give_guarantee = DEN
-set_country_flag = dont_call_in_zap_to_gtw
+set_country_flag = dont_call_in_zap_to_gtw # So that ZAP does not get called in
+set_country_flag = dont_call_in_khl_to_gtw
 
 set_autonomy = {
 	target = KHL
@@ -205,18 +206,18 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-    neutrality = 45
+    neutrality = 50
 	aristocracy = 25
 	fascism = 15
 	democratic = 10
-	communism = 5
+	communism = 0
 }
 
 add_ideas = {
-	boyar_duma
+	RUS_boyar_duma
     russian_orthodox_church
-	RUS_streltsy_purge_5
-	RUS_russians_fleeing_serfdom
+	RUS_outdated_military
+	RUS_serfdom
 	POL_influence_over_poland_3
 	great_turkish_war
 
@@ -236,7 +237,6 @@ recruit_character = SOV_Matvei_Zmayevich # General
 recruit_character = SOV_Jacob_Bruce # General
 recruit_character = SOV_Anikita_Reppin # General
 recruit_character = SOV_Mikhail_Golitsyn # General
-
 
 ### VARIANTS ###
 # 1936 Start #

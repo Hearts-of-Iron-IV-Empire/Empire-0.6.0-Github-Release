@@ -139,7 +139,7 @@ political_actions = {
 		available = {
 			TUR = { surrender_progress > 0.60 }
 			is_faction_leader = yes
-			has_country_flag = ottomansussybakaa
+			has_country_flag = ottomansussybaka2
 		}	
 
 		complete_effect = {

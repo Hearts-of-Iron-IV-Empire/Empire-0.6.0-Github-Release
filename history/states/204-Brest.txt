@@ -1,34 +1,30 @@
-
 state={
 	id=204
 	name="STATE_204" # Bobruysk
-	manpower = 241084
-	
-	state_category = rural
-
 	resources={
 		oil=14.000
 	}
 
 	history={
-		victory_points = {
-			3350 3
-		}
-		victory_points = {
-			11313 1
-		}
 		owner = POL
+		add_core_of = POL
+		add_core_of = BLR
+		victory_points = { # Bobruysk
+			3350 3 
+		}
 		buildings = {
 			infrastructure = 3
 		}
-		add_core_of = POL
-		add_core_of = BLR
 		1798.1.1 = {
 			owner = SOV
 		}
 	}
 
 	provinces={
-		304 331 360 386 3350 3759 6373 11313 
+		331 386 3350 6373 
 	}
+	manpower=241084
+	buildings_max_level_factor=1.000
+	state_category=rural
+	local_supplies=0.000
 }

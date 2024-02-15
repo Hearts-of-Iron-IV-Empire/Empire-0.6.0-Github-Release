@@ -1,21 +1,20 @@
 state={
 	id=868
 	name="STATE_868"
-	provinces={
-		3380 6402 11245 
-	}
+	manpower = 136200
+	state_category = town
+
 	history={
-		victory_points = {
-			11245  3 
-		}
 		owner = POL
 		controller = POL
-		buildings = {
-			infrastructure = 3
-
-		}
 		add_core_of = PRS
 		add_core_of = POL
+		victory_points = { # Olsztyn
+			11245 3 
+		}
+		buildings = {
+			infrastructure = 3
+		}
 		1772.1.1 = {
 			owner = PRS
 			add_core_of = PRS
@@ -23,8 +22,7 @@ state={
 		}
 	}
 
-
-	manpower=136200
-	buildings_max_level_factor=1.000
-	state_category=town
+	provinces={
+		6402 11245 
+	}
 }
