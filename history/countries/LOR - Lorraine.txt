@@ -21,25 +21,17 @@ add_ideas = {
 give_military_access = AUS
 give_military_access = FRA
 
+recruit_character = LOR_Leopold_the_Good
+
 set_politics = {
 	ruling_party = neutrality
 	elections_allowed = no
 }
+
 set_popularities = {
 	democratic = 10
 	fascism = 18
-	communism = 4
-	neutrality = 42
+	communism = 0
+	neutrality = 46
 	aristocracy = 26
-}
-
-create_country_leader = {
-	name = "Leopold I"
-	desc = "POLITICS_KURT_SCHUSCHNIGG_DESC"
-	picture = "lorraine_leader.dds"
-	expire = "1965.1.1"
-	ideology = despotism
-	traits = {
-		#
-	}
 }

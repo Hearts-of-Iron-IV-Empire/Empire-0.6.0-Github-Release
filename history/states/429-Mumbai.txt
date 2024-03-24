@@ -2,7 +2,7 @@ state={
 	id=429
 	name="STATE_429"
 	resources={
-		tungsten=19.000
+		tungsten=9.000
 	}
 
 	history={
@@ -15,6 +15,9 @@ state={
 		}
 		victory_points = { # Ahmednagar
 			13298 10
+		}
+		victory_points = { # Kalyan
+			13264 10
 		}
 		1699.1.1 = {
 			MAR = {

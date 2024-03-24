@@ -34,19 +34,19 @@ units = {
 		start_equipment_factor = 1
 	}
 	division= {
-		location = 12775
-		division_template = "Central African Warriors"
-		start_experience_factor = 0.3
-		start_equipment_factor = 1
-	}
-	division= {
-		location = 4128
+		location = 12945
 		division_template = "Central African Warriors"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1
 	}
 	division= {
 		location = 12945
+		division_template = "Central African Warriors"
+		start_experience_factor = 0.3
+		start_equipment_factor = 1
+	}
+	division= {
+		location = 12925
 		division_template = "Central African Warriors"
 		start_experience_factor = 0.3
 		start_equipment_factor = 1

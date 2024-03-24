@@ -1,0 +1,14 @@
+characters = {
+    KYR_Shah_Niyaz_Khan = {
+        name = "Shah Niyaz Khan"
+        portraits = {
+            civilian = {
+                large = "GFX_Shah_Niyaz_Khan"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

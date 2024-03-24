@@ -102,17 +102,14 @@ focus_tree = {
 
 	focus = {
 		id = POL_seek_swedish_support
-		icon = GFX_sweden_flag
-		prerequisite = { focus = POL_foreign_affairs }
-		mutually_exclusive = { focus = POL_seek_russian_support }
+		icon = GFX_soldier_swedish
 		x = -8
 		y = 1
-		cost = 10
 		relative_position_id = POL_foreign_affairs
+		prerequisite = { focus = POL_foreign_affairs }
+		mutually_exclusive = { focus = POL_seek_russian_support }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 10
 		
 		available = {
 			SWE = {
@@ -124,6 +121,9 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_political_power = 50
+			POL_increase_meddling = yes
+			SWE = { POL_increase_foreign_influence = yes }
 			add_opinion_modifier = {
 				target = SWE
 				modifier = large_increase
@@ -134,9 +134,10 @@ focus_tree = {
 				modifier = large_increase
 				}
 			}
-			add_politicaL_power = 50
-			POL_increase_meddling = yes
-			SWE = { POL_increase_foreign_influence = yes }
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -215,9 +216,8 @@ focus_tree = {
 		icon = GFX_carolus_rex
 		x = 0
 		y = 2
-		cost = 5
-		prerequisite = {  focus = POL_strenghten_swedish_ties}
 		relative_position_id = POL_strenghten_swedish_ties
+		prerequisite = {  focus = POL_strenghten_swedish_ties }
 
 		available = {
 			SWE = {
@@ -228,11 +228,13 @@ focus_tree = {
 			}
 		}
 
+		cost = 5
+
 		completion_reward = {
 			add_stability = 0.10
+			add_political_power = 25
 			POL_increase_meddling = yes
 			SWE = { POL_increase_foreign_influence = yes }	
-			add_political_power = 25
 		}
 	}
 
@@ -241,10 +243,9 @@ focus_tree = {
 		icon = GFX_russia_burning
 		x = 1
 		y = 3
-		cost = 5
+		relative_position_id = POL_strenghten_swedish_ties
 		prerequisite = {  focus = POL_carolean_support_in_domestic_affairs }
 		prerequisite = {  focus = POL_attract_swedish_arms_industry }
-		relative_position_id = POL_strenghten_swedish_ties
 
 		available = {
 			NOT = {
@@ -257,13 +258,16 @@ focus_tree = {
 			has_war_with = SOV
 		}
 
+		cost = 5
+
+		will_lead_to_war_with = SOV
+
 		completion_reward = {
 			declare_war_on = {
 				target = SOV
 				type = annex_everything
 			}
 		}
-		will_lead_to_war_with = SOV
 	}
 
 	focus = {
@@ -271,12 +275,10 @@ focus_tree = {
 		icon = GFX_focus_generic_military_academy
 		x = 1
 		y = 1
-		cost = 5
-		prerequisite = { focus = POL_seek_russian_support focus = POL_seek_swedish_support }
 		relative_position_id = POL_seek_swedish_support
+		prerequisite = { focus = POL_seek_russian_support focus = POL_seek_swedish_support }
 
-		available = {
-		}
+		cost = 5
 
 		completion_reward = {
 			POL_increase_meddling = yes
@@ -308,6 +310,8 @@ focus_tree = {
 		}
 		
 		completion_reward = {
+			add_political_power = 100
+			POL_increase_meddling = yes
 			add_opinion_modifier = {
 				target = SOV
 				modifier = large_increase
@@ -318,8 +322,6 @@ focus_tree = {
 				modifier = large_increase
 				}
 			}
-			add_politicaL_power = 100
-			POL_increase_meddling = yes
 			SOV = { POL_increase_foreign_influence = yes }
 		}
 	}
@@ -381,14 +383,12 @@ focus_tree = {
 
 	focus = {
 		id = POL_attack_sweden_test
-		icon = GFX_attack_sweden
+		icon = GFX_attack_the_swedes
 		x = 0
 		y = 2
-		cost = 5
+		relative_position_id = POL_claims_in_the_baltic
 		prerequisite = { focus = POL_claims_in_the_baltic }
 		prerequisite = { focus = POL_treaty_of_prebrazhnskoya }
-		
-		relative_position_id = POL_claims_in_the_baltic
 
 		available = {
 			date > 1700.02.01
@@ -397,6 +397,8 @@ focus_tree = {
 			}
 			is_subject = no
 		}
+
+		cost = 5
 
 		bypass = {
 			has_war_with = SWE
@@ -418,10 +420,9 @@ focus_tree = {
 
 	focus = {
 		id = POL_seek_austrian_support
-		icon = GFX_goal_flag_austria
+		icon = GFX_agree_austria
 		x = 1
 		y = 1
-		cost = 5
 		prerequisite = { focus = POL_foreign_affairs }
 		relative_position_id = POL_foreign_affairs
 
@@ -434,8 +435,10 @@ focus_tree = {
 			}
 		}
 		
+		cost = 5
+		
 		completion_reward = {
-			add_politicaL_power = 50
+			add_political_power = 50
 			POL_increase_meddling = yes
 			AUS = { POL_increase_foreign_influence = yes }
 		}
@@ -450,34 +453,37 @@ focus_tree = {
 		cost = 5
 		relative_position_id = POL_seek_austrian_support
 
-		available = { NOT = { has_completed_focus = POL_support_philips_claim } }
-
-		ai_will_do = { 
-			factor = 1
+		available = { 
+			NOT = { 
+				has_completed_focus = POL_support_philips_claim 
+			} 
 		}
 		
 		completion_reward = {
-			add_politicaL_power = 50
+			add_political_power = 50
 			add_threat = 2
+			add_war_support = 0.05
 			AUS = {
 				add_opinion_modifier = {
 				target = POL
 				modifier = large_increase
 				}
 			}
-			add_war_support = 0.05
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_purchase_katowice_and_zaolzie
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = POL_support_charles }
 		x = 2
 		y = 3
-		cost = 10
 		relative_position_id = POL_seek_austrian_support
 		prerequisite = { focus = POL_austrian_commwonwealth_trade_agreement }
+		prerequisite = { focus = POL_support_charles }
 		
 		available = {
 			72 = { # Zalozie
@@ -487,6 +493,8 @@ focus_tree = {
 				is_owned_and_controlled_by = AUS
 			}
 		}
+
+		cost = 10
 		
 		completion_reward = {
 			AUS = {
@@ -502,15 +510,12 @@ focus_tree = {
 	focus = {
 		id = POL_condemn_kurucs
 		icon = GFX_focus_YUG_banovina_of_croatia
-		prerequisite = { focus = POL_seek_austrian_support }
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = POL_seek_austrian_support
+		prerequisite = { focus = POL_seek_austrian_support }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 5
 		
 		completion_reward = {
 			reverse_add_opinion_modifier = {
@@ -519,20 +524,19 @@ focus_tree = {
 			}
 			add_stability = 0.05
 		}
+		ai_will_do = { 
+			factor = 1
+		}
 	}
 
 	focus = {
 		id = POL_austrian_commwonwealth_trade_agreement
-		icon = GFX_agree_austria
-		prerequisite = { focus = POL_seek_austrian_support }
+		icon = GFX_austrian_polish_agreement
 		x = 1
 		y = 2
 		cost = 10
 		relative_position_id = POL_seek_austrian_support
-
-		ai_will_do = { 
-			factor = 1
-		}
+		prerequisite = { focus = POL_seek_austrian_support }
 		
 		completion_reward = {
 			add_tech_bonus = {
@@ -549,7 +553,10 @@ focus_tree = {
 					category = industry
 				}
 			}
-			navy_experience = 25
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -592,8 +599,8 @@ focus_tree = {
 			}
 			SAX = {
 				add_opinion_modifier = {
-				target = POL
-				modifier = medium_increase
+					target = POL
+					modifier = medium_increase
 				}
 			}
 		}
@@ -602,14 +609,12 @@ focus_tree = {
 	focus = {
 		id = POL_cooperate_with_prussia
 		icon = GFX_agree_prussia
-		prerequisite = { focus = POL_saxon_ties }
 		x = 0
 		y = 1
-		cost = 5
 		relative_position_id = POL_saxon_ties
+		prerequisite = { focus = POL_saxon_ties }
 
-		available = {
-		}
+		cost = 5
 
 		completion_reward = {
 			give_military_access = PRS
@@ -735,10 +740,12 @@ focus_tree = {
 		relative_position_id = POL_saxon_ties
 
 		available = {
-			SAX = { is_subject_of = POL }
+			SAX = { 
+				is_subject_of = POL 
+				has_capitulated = no 
+				is_ai = yes 
+			}
 			has_capitulated = yes
-			SAX = { has_capitulated = no }
-			SAX = { is_ai = yes }
 		}
 
 		completion_reward = {
@@ -755,15 +762,10 @@ focus_tree = {
 	focus = {
 		id = POL_seek_english_support
 		icon = GFX_agree_england
-		prerequisite = { focus = POL_foreign_affairs }
 		x = 6
 		y = 1
-		cost = 5
 		relative_position_id = POL_foreign_affairs
-
-		ai_will_do = { 
-			factor = 1
-		}
+		prerequisite = { focus = POL_foreign_affairs }
 
 		available = {
 			ENG = {
@@ -773,25 +775,26 @@ focus_tree = {
 				}
 			}
 		}
+
+		cost = 5
 		
 		completion_reward = {
-			add_politicaL_power = 50
+			add_political_power = 50
 			POL_increase_meddling = yes
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_seek_french_support
-		icon = GFX_goal_fleur_de_lys
-		prerequisite = { focus = POL_foreign_affairs }
+		icon = GFX_agree_france
 		x = 8
 		y = 1
-		cost = 5
 		relative_position_id = POL_foreign_affairs
-
-		ai_will_do = { 
-			factor = 1
-		}
+		prerequisite = { focus = POL_foreign_affairs }
 
 		available = {
 			FRA = {
@@ -802,9 +805,15 @@ focus_tree = {
 			}
 		}
 		
+		cost = 5
+
 		completion_reward = {
-			add_politicaL_power = 50
+			add_political_power = 50
 			POL_increase_meddling = yes
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -933,56 +942,15 @@ focus_tree = {
 	}
 
 	focus = {
-		id = POL_english_ship_sale
-		icon = GFX_goal_tripartite_pact
-		prerequisite = { focus = POL_embargo_france }
-		prerequisite = { focus = POL_large_navy }
-		x = 0
-		y = 2
-		cost = 5
-		relative_position_id = POL_embargo_france
-
-		ai_will_do = { 
-			factor = 1
-		}
-
-		available = {
-			ENG = {
-				has_opinion = {
-					target = POL
-					value > 49
-				}
-			}
-		}
-		
-		completion_reward = {
-			ENG = {
-				transfer_ship = {
-					type = destroyer
-					prefer_name = "HMS Campbell"
-					target = POL
-				}
-			}
-			give_resource_rights = { receiver = ENG state = 204 }
-		}
-	}
-
-	focus = {
 		id = POL_naval_investment
 		icon = GFX_goal_generic_construct_naval_dockyard
-		prerequisite = { focus = POL_seek_french_support focus = POL_seek_english_support }
 		x = -1
 		y = 1
-		cost = 10
 		relative_position_id = POL_seek_french_support
-
-		ai_will_do = { 
-			factor = 1
-		}
-
-		available = {
-		}
+		prerequisite = { focus = POL_seek_french_support focus = POL_seek_english_support }
 		
+		cost = 8
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {									
@@ -992,33 +960,64 @@ focus_tree = {
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 2
+				add_extra_state_shared_building_slots = 3
 				add_building_construction = {
 					type = dockyard
-					level = 2
+					level = 3
 					instant_build = yes
 				}
 			}
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_train_polish_marines
 		icon = GFX_goal_generic_amphibious_assault
-		prerequisite = { focus = POL_naval_investment }
 		x = 0
 		y = 2
-		cost = 5
 		relative_position_id = POL_naval_investment
+		prerequisite = { focus = POL_naval_investment }
+
+		available = {
+			85 = {
+				is_owned_by = POL
+			}
+		}
+
+		cost = 5
+
+		completion_reward = {
+			division_template = {
+				name = "Marine Division"
+				regiments = {
+					marine = { x = 0 y = 0 }
+					marine = { x = 0 y = 1 }
+					marine = { x = 0 y = 2 }	
+					marine = { x = 1 y = 0 }
+					marine = { x = 1 y = 1 }
+					marine = { x = 1 y = 2 }	
+				}
+			
+				support = {
+					engineer = { x = 0 y = 0 }
+				}
+			}
+			85 = {
+				create_unit = {
+					division = "name = \"Marine Division\" division_template = \"Marine Division\" 
+					start_equipment_factor = 1"
+					owner = POL
+					count = 2
+				}
+			}
+		}
 
 		ai_will_do = { 
 			factor = 1
-		}
-
-		available = {
-		}
-		
-		completion_reward = {
 		}
 	}
 
@@ -1575,7 +1574,7 @@ focus_tree = {
 
 	focus = {
 		id = POL_i_am_the_king
-		icon = GFX_focus_generic_monarchy_1
+		icon = GFX_generic_crown_icon
 		x = 0
 		y = 1
 		relative_position_id = POL_abolish_sejm
@@ -2157,41 +2156,38 @@ focus_tree = {
 				name = "The Sejm"
 				desc = ""
 				picture = "sejm.dds"
-				expire = "1965.1.1"
 				ideology = despotism
 			}
 			create_country_leader = {
 				name = "The Sejm"
 				desc = ""
 				picture = "sejm.dds"
-				expire = "1965.1.1"
 				ideology = nobility
 			}
 			create_country_leader = {
 				name = "The Sejm"
 				desc = ""
 				picture = "sejm.dds"
-				expire = "1965.1.1"
 				ideology = nazism
 			}
 			create_country_leader = {
 				name = "The Sejm"
 				desc = ""
 				picture = "sejm.dds"
-				expire = "1965.1.1"
 				ideology = conservatism
 			}
 			hidden_effect = {
 				add_ideas = {
 					POL_liberum_veto
 					POL_dominance_of_nobles
-					catholic
-					limited_exports
 					POL_sejm
-					kingdom
 					POL_rural_society
 					POL_conscription_crisis
 					POL_foreign_meddling_4
+					
+					catholic
+					limited_exports
+					kingdom
 				}
 				random_other_country = {
 					limit = {
@@ -2240,26 +2236,22 @@ focus_tree = {
 	focus = {
 		id = POL_stabilize_the_country
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = { focus = POL_depose_august }
-		relative_position_id = POL_depose_august
 		x = 0
 		y = 1
-		cost = 5
+		relative_position_id = POL_depose_august
+		prerequisite = { focus = POL_depose_august }
 
 		available = {
 			has_civil_war = no
 		}
 
-		bypass = {
-		}
-
-		ai_will_do = { 
-			factor = 1
-		}
-		
+		cost = 5
 
 		completion_reward = {
-			add_stability = 0.05
+			add_stability = 0.10
+		}
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -2292,43 +2284,33 @@ focus_tree = {
 	focus = {
 		id = POL_elect_new_king
 		icon = GFX_focus_generic_monarchy_2
-		prerequisite = { focus = POL_stabilize_the_country }
-		relative_position_id = POL_depose_august
 		#mutually_exclusive = { focus = POL_the_end_of_kings}
 		x = 0
 		y = 2
+		prerequisite = { focus = POL_stabilize_the_country }
+		relative_position_id = POL_depose_august
+
 		cost = 0
 
-		available = {
-		}
-
-		bypass = {
+		completion_reward = {
+			set_cosmetic_tag = POL
 		}
 
 		ai_will_do = { 
 			factor = 1
-		}
-		
-
-		completion_reward = {
-			set_cosmetic_tag = POL
 		}
 	}
 
 	focus = {
 		id = POL_habsburg_candidate
 		icon = GFX_focus_POL_habsburg
+		x = 0
+		y = 1
+		relative_position_id = POL_elect_new_king
 		prerequisite = { focus = POL_elect_new_king }
 		mutually_exclusive = { focus = POL_french_candidate }
 		mutually_exclusive = { focus = POL_polish_candidate }
-		x = 0
-		y = 1
-		cost = 5
-		relative_position_id = POL_elect_new_king
 
-		ai_will_do = { 
-			factor = 1
-		}
 		available = {
 			NOT = {
 				has_country_leader = {
@@ -2337,6 +2319,9 @@ focus_tree = {
 				}
 			}
 		}
+
+		cost = 5
+
 		completion_reward = {
 			set_major = yes
 			create_country_leader = {
@@ -2361,6 +2346,10 @@ focus_tree = {
 				modifier = dynastic_ties
 				}
 			}
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -2435,9 +2424,13 @@ focus_tree = {
 		relative_position_id = POL_dynastic_succession
 
 		completion_reward = {
-			10 = { create_unit = {
-				division = "name = \"Sobieski's 1st Veteran Regiment\" division_template = \"Winged Hussars\" start_experience_factor = 0.5 start_equipment_factor = 1"
-				owner = POL
+			10 = { 
+				create_unit = {
+					division = "name = \"Sobieski's 1st Veteran Regiment\" 
+					division_template = \"Winged Hussars\" 
+					start_experience_factor = 0.5 
+					start_equipment_factor = 1"
+					owner = POL
 				}
 			}
 			division_template = {
@@ -3053,6 +3046,7 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_political_power = 50
 			add_opinion_modifier = {
 				target = FRA
 				modifier = dynastic_ties
@@ -3063,7 +3057,6 @@ focus_tree = {
 				modifier = dynastic_ties
 				}
 			}
-			add_politicaL_power = 50
 			add_threat = 2
 			add_war_support = 0.05
 		}
@@ -3300,59 +3293,61 @@ focus_tree = {
 	focus = {
 		id = POL_the_kings_new_regalia
 		icon = GFX_focus_hun_elect_a_king
-		prerequisite = { focus = POL_align_magnates }
-		prerequisite = { focus = POL_root_out_conti_supporters }
 		x = -1
 		y = 1
-		cost = 10
 		relative_position_id = POL_align_magnates
+		prerequisite = { focus = POL_align_magnates }
+		prerequisite = { focus = POL_root_out_conti_supporters }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 10
 
 		completion_reward = {
-			add_ideas = POL_align_magnates
+			#add_ideas = POL_align_magnates
 			add_timed_idea = {
 				idea = POL_compensated_nobles
 				days = 180
 			}
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_guarantee_religious_freedoms
 		icon = GFX_generic_support_church
-		prerequisite = { focus = POL_the_kings_new_regalia }
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = POL_the_kings_new_regalia
+		prerequisite = { focus = POL_the_kings_new_regalia }
 
-		ai_will_do = { 
-			factor = 1
-		}
+		cost = 10
 
 		completion_reward = {
 			add_stability = 0.10
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_the_white_eagle_rises
 		icon = GFX_POL_regency_council_focus
-		prerequisite = { focus = POL_guarantee_religious_freedoms focus = POL_reintegrate_eastern_territories focus = POL_the_latvia_transaction}
 		x = 2
 		y = 1
 		cost = 10
 		relative_position_id = POL_guarantee_religious_freedoms
-
-		ai_will_do = { 
-			factor = 1
-		}
+		prerequisite = { focus = POL_guarantee_religious_freedoms focus = POL_reintegrate_eastern_territories focus = POL_the_latvia_transaction }
 
 		completion_reward = {
 			add_war_support = 0.15
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -3404,34 +3399,33 @@ focus_tree = {
 				target = SWE
 				modifier = rivalry
 			}
-			SWE = {
-				remove_opinion_modifier = {
-				target = POL
-				modifier = rivalry
-				}
-			}
 			add_opinion_modifier = {
 				target = SOV
 				modifier = rivalry
 			}
+			SWE = {
+				remove_opinion_modifier = {
+					target = POL
+					modifier = rivalry
+				}
+			}
 			SOV = {
 				add_opinion_modifier = {
-				target = POL
-				modifier = rivalry
+					target = POL
+					modifier = rivalry
 				}
 			}
 		}
-
 	}
 
 	focus = {
 		id = POL_align_sweden
 		icon =  GFX_sweden_flag
-		prerequisite = { focus = POL_russia_is_the_greater_threat }
 		x = 1
 		y = 2
 		cost = 5
 		relative_position_id = POL_polish_candidate
+		prerequisite = { focus = POL_russia_is_the_greater_threat }
 
 		ai_will_do = { 
 			factor = 1
@@ -3473,39 +3467,37 @@ focus_tree = {
 	focus = {
 		id = POL_the_latvia_transaction
 		icon = GFX_goal_generic_national_unity
-		prerequisite = { focus = POL_align_sweden }
-		prerequisite = { focus = POL_align_magnates }
 		x = -1
 		y = 1
 		cost = 10
 		relative_position_id = POL_align_sweden
+		prerequisite = { focus = POL_align_sweden }
+		prerequisite = { focus = POL_align_magnates }
 
-		ai_will_do = { 
-			factor = 1
-		}
 		available = {	
 			NOT = {
 				has_war_with = SWE
 			}	
 			SWE = { owns_state = 12 }
 		}
+
 		completion_reward = {
 			SWE = { country_event = poland.37 }
+		}
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = POL_reintegrate_eastern_territories
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = POL_that_what_is_ours }
 		x = 0
 		y = 1
-		cost = 20
 		relative_position_id = POL_that_what_is_ours
+		prerequisite = { focus = POL_that_what_is_ours }
 
-		ai_will_do = { 
-			factor = 1
-		}
 		available = {
 			controls_state = 205
 			controls_state = 221
@@ -3519,6 +3511,9 @@ focus_tree = {
 			controls_state = 225
 			controls_state = 210
 		}
+
+		cost = 20
+
 		completion_reward = {
 			add_state_core = 221
 			add_state_core = 205
@@ -3533,6 +3528,11 @@ focus_tree = {
 			add_state_core = 225
 			add_state_core = 207
 			add_political_power = -300
+		}
+		
+
+		ai_will_do = { 
+			factor = 1
 		}
 	}
 
@@ -3715,9 +3715,10 @@ focus_tree = {
 	focus = {
 		id = POL_rural_economy
 		icon = GFX_economic_stuff
-		prerequisite = { focus = POL_economic_modernization_effort }
 		x = 12
 		y = 11
+		prerequisite = { focus = POL_economic_modernization_effort }
+
 		cost = 10
 
 		completion_reward = {
@@ -4123,24 +4124,35 @@ focus_tree = {
 	focus = {
 		id = POL_military_economy
 		icon = GFX_soldiers_marching
+		x = 3
+		y = 1
+		relative_position_id = POL_economic_modernization_effort
 		prerequisite = { focus = POL_economic_modernization_effort }
-		x = 18
-		y = 11
+
 		cost = 5
 
 		completion_reward = {
 			add_war_support = 0.10
+			random_owned_controlled_state = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = POL_war_measures
 		icon = GFX_tanegashima
-		prerequisite = { focus = POL_military_economy }
 		x = -1
 		y = 1
-		cost = 10
 		relative_position_id = POL_military_economy
+		prerequisite = { focus = POL_military_economy }
+
+		cost = 5
 
 		completion_reward = {
 			add_ideas = partial_economic_mobilisation
@@ -4150,11 +4162,12 @@ focus_tree = {
 	focus = {
 		id = POL_military_conversion
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = POL_war_measures }
 		x = -1
 		y = 2
-		cost = 10
 		relative_position_id = POL_military_economy
+		prerequisite = { focus = POL_war_measures }
+
+		cost = 10
 
 		completion_reward = {
 			random_owned_controlled_state = {

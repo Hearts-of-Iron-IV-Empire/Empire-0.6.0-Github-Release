@@ -103,7 +103,7 @@ ideas = {
 				stability_factor = -0.10
 				war_support_factor = -0.05
 				required_garrison_factor = 0.1
-				resistance_growth_on_our_occupied_states = 0.3
+				resistance_target = 0.3
 			}
 		}
 		TUR_janissary_loyalty_1 = {
@@ -643,8 +643,6 @@ ideas = {
            		always = yes
       		}
 
-			removal_cost = -1
-
 			picture = great_turkish_war
 			
 			modifier = {
@@ -656,19 +654,30 @@ ideas = {
 				has_civil_war = yes
 			}
 
-			cancel = { has_civil_war = no }
-
 			allowed_civil_war = {
            		always = yes
       		}
-
-			removal_cost = -1
 
 			picture = dhimmi_tolerance
 			
 			modifier = {
 				political_power_gain = 0.10
 				consumer_goods_factor = 0.02
+			}
+		}
+		TUR_yemeni_coffee_idea = {
+			allowed = {
+				has_civil_war = yes
+			}
+
+			allowed_civil_war = {
+           		always = yes
+      		}
+
+			picture = cash_flow_positive
+			
+			modifier = {
+				consumer_goods_factor = -0.05
 			}
 		}
 	}

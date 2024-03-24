@@ -2,6 +2,7 @@ autonomy_state = {
 	id = autonomy_tributary_state # New kind of autonomous states for Qing 'vassals'
 	
 	min_freedom_level = 0.70
+	use_overlord_color = no
 	
 	manpower_influence = 0.5
 	

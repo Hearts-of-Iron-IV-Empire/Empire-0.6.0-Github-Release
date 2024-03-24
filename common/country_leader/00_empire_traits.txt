@@ -11,6 +11,12 @@
 @chief_experience_gain_high = 0.40
 
 leader_traits = {
+	reformer = {
+		random = no
+		stability_factor = 0.05
+		research_speed_factor = 0.03
+		political_power_gain = 0.05
+	}
 	sultan_of_rum = {
 		random = no
 		war_support_factor = 0.05

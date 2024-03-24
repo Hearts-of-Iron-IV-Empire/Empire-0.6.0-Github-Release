@@ -286,21 +286,13 @@ austria.22.a:0 "We shall crush them with ease."
  austria.30.t:0 "The Papal States Reply"
  austria.30.d:0 "The Pope has refused our ultimatum. It seems that war is the only option we have left if we wish to subjugate the Papal States."
  austria.30.a:0 "War it is then."
+ austria.31.t:0 "Death of Leopold I"
+ austria.31.d:0 "Our beloved Emperor, Leopold I is dead. His eldest son, Joseph I, now inherits the crown and the lands of Austria and Bohemia. May God bless his soul!"
+ austria.31.a:0 "Long live the new Emperor!"
  austria.70.t:0 "Austria demands our capitulation"
  austria.70.d:0 "We have suffered defeat beyond recognition and our army has been wiped out almost completely. We have no choice but to concede."
  austria.71.t:0 "Ottomans demand our capitulation"
  austria.71.d:0 "Our hopeless situation forces us to make peace with the Ottomans despite our hatred for them. This is a severe blow to the Habsburg Dynasty, and Ottoman domination of Europe is all but assured now..."
-
-# Hungarian Events:
-hungary.1.t:0 "Rákóczi's War of Independence"
-hungary.1.d:0 "The Hungarian prince Francis II Rákóczi has declared the independence of the kingdom of Hungary. He has rallied 'Kurucs' or anti-Habsburg rebels from all over the nation to fight against the Habsburg Emperor."
-hungary.1.a:0 "Crush the traitors! (Stand with Austria)"
-hungary.1.b:0 "Cum Deo pro Patria et Libertate! (Stand with Hungary)"
-hungary.3.t:0 "Rákóczi's War of Independence"
-hungary.3.d:0 "The Hungarian prince Francis II Rákóczi has declared the independence of the kingdom of Hungary. He has rallied 'Kurucs' or anti-Habsburg rebels from all over the nation to fight against the Habsburg Emperor."
-hungary.3.a:0 "Crush the traitors! (Stand with Austria)"
-hungary.3.b:0 "Cum Deo pro Patria et Libertate! (Stand with Hungary)"
-
 
  # Decisions:
  AUS_invest_in_FROM:0 "Invest in [From.GetName]"
@@ -347,6 +339,9 @@ hungary.3.b:0 "Cum Deo pro Patria et Libertate! (Stand with Hungary)"
  BEL_AUS:0 "Austrian Netherlands"
  BEL_AUS_DEF:0 "The Austrian Netherlands"
  BEL_AUS_ADJ:0 "Austrian"
+
+ # Traits:
+ reformer:0 "Reformer"
 
  # Hungary:
  HUN_rakoczis_rebellion:0 "Rákóczi's War Of Independence"

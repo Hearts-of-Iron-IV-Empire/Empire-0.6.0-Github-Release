@@ -4372,7 +4372,7 @@ generic_medium_aircraft_organization = {
 
 		equipment_bonus = {
 			air_ground_attack = 0.05
-			air_bombing = 0.05 #TODO_Manu: Not working
+			air_bombing = 0.05 # _Manu: Not working
 		}
 	}
 
@@ -5574,7 +5574,7 @@ generic_multi_role_aircraft_organization = {
 		equipment_bonus = {
 			air_ground_attack = 0.05
 			naval_strike_attack = 0.05
-			air_bombing = 0.05 #TODO_Manu: NOT WORKING
+			air_bombing = 0.05 # _Manu: NOT WORKING
 		}
 	}
 

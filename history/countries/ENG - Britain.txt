@@ -1,8 +1,8 @@
 ﻿capital = 126
 
 set_oob = "ENG_1699"
+set_naval_oob = "ENG_1699_naval"
 set_convoys = 120
-set_naval_oob = "ENG_1936_Naval"
 
 set_research_slots = 3
 
@@ -59,15 +59,6 @@ set_technology = {
 	american_colonisation = 1
 	asian_trade_companies = 1
 	interwar_antitank = 1
-
-	# Ship stuff
-	early_submarine = 1
-	early_destroyer = 1
-	basic_destroyer = 1
-	early_light_cruiser = 1
-	early_heavy_cruiser = 1
-	early_battleship = 1
-	early_battlecruiser = 1
 }
 
 if = {

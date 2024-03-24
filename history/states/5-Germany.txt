@@ -8,14 +8,17 @@ state={
 
 	history={
 		owner = PRS
-		controller = PRS
-		buildings = {
-			infrastructure = 3
-
-		}
 		add_core_of = PRS
 		add_claim_by = POL
-
+		add_extra_state_shared_building_slots = 4
+		victory_points = { # Lębork
+			3351 5
+		}
+		buildings = {
+			infrastructure = 3
+			arms_factory = 3
+			industrial_complex = 5
+		}
 	}
 
 	provinces={

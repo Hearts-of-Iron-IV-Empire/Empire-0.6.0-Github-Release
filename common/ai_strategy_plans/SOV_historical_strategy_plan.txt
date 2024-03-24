@@ -25,17 +25,17 @@ SOV_historical_plan = {
 	}
 
 	ai_national_focuses = {
-		RUS_continue_the_truce
+		RUS_negotiate_with_the_ottomans
 		RUS_conscription_of_1699
-		RUS_recruit_foreign_officers
+		#RUS_recruit_foreign_officers
 		RUS_form_new_infantry_regiments
 		RUS_introduce_new_uniforms
 		RUS_treaty_of_preobrazhenskoye #gets completed too early, in may (should be november 1699)
 		RUS_organise_the_near_chancellery
 		RUS_narva_campaign
 		RUS_defeat_at_narva
-		RUS_urgent_military_reform
-		RUS_offensive_with_limited_purpose
+		#RUS_urgent_military_reform
+		#RUS_offensive_with_limited_purpose
 		#TODO
 	}
 

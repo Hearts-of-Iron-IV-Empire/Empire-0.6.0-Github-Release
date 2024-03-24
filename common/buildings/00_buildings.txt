@@ -4,7 +4,6 @@ buildings = {
 	#    if provincial = yes, then show_on_map = X is amount per each province
 	#    if provincial = no, then show_on_map = X is amount per state
 
-
 	infrastructure = {
 		base_cost = 6000
 		icon_frame = 3
@@ -19,22 +18,10 @@ buildings = {
 		infrastructure_construction_effect = yes
 	}
 
-	air_base = {
-		show_on_map = 1
-		base_cost = 1250
-		icon_frame = 5
-		air_base = yes
-		max_level = 10
-		value = 1
-		damage_factor = 0.5
-		allied_build = yes
-		infrastructure_construction_effect = yes
-	}
-
 	arms_factory = {
 		show_on_map = 6
-		base_cost = 10000
-		base_cost_conversion = 5000
+		base_cost = 7200
+		base_cost_conversion = 4000
 		military_production = 1
 		icon_frame = 2
 		max_level = 20
@@ -45,13 +32,25 @@ buildings = {
 
 	industrial_complex = {
 		show_on_map = 6
-		base_cost = 15000
-		base_cost_conversion = 10000
+		base_cost = 10800
+		base_cost_conversion = 9000
 		general_production = 1
 		icon_frame = 1
 		max_level = 20
 		shares_slots = yes
 		value = 5
+		infrastructure_construction_effect = yes
+	}
+
+	air_base = {
+		show_on_map = 1
+		base_cost = 1250
+		icon_frame = 5
+		air_base = yes
+		max_level = 10
+		value = 1
+		damage_factor = 0.5
+		allied_build = yes
 		infrastructure_construction_effect = yes
 	}
 
@@ -72,7 +71,7 @@ buildings = {
 		base_cost = 7200
 		provincial = yes
 		disabled_in_dmz = yes
-		icon_frame = 15
+		icon_frame = 16
 		max_level = 1
 		centered = yes
 		supply_node = yes
@@ -136,13 +135,16 @@ buildings = {
 		show_on_map = 1
 		show_on_map_meshes = 3
 		always_shown = yes
-		base_cost = 3000
+		base_cost = 5000
+		per_level_extra_cost = 1000
 		provincial = yes
 		only_costal = yes
 		is_port = yes
 		icon_frame = 6
 		max_level = 10
 		value = 1
+		allied_build = yes
+		infrastructure_construction_effect = yes
 	}
 
 	bunker = {
@@ -156,6 +158,7 @@ buildings = {
 		land_fort = 1
 		max_level = 10
 		value = 1
+		infrastructure_construction_effect = yes
 	}
 
 	coastal_bunker = {
@@ -170,12 +173,13 @@ buildings = {
 		naval_fort = 1
 		max_level = 10
 		value = 1
+		infrastructure_construction_effect = yes
 	}
 
 	dockyard = {
 		show_on_map = 1
 		show_on_map_meshes = 3
-		base_cost = 8000
+		base_cost = 6400
 		only_costal = yes
 		naval_production = 1
 		icon_frame = 4
@@ -261,5 +265,4 @@ buildings = {
 		value = 1
 		infrastructure_construction_effect = yes
 	}
-
 }

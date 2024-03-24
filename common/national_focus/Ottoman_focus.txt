@@ -12,9 +12,9 @@ focus_tree = {
 	
 	default = no
 
-###############################################
-####### Economy/Civilian Branch ###############
-###############################################
+############################################
+####### Economy/Civilian Branch ############
+############################################
 
 	focus = {
 		id = TUR_the_state
@@ -22,10 +22,6 @@ focus_tree = {
 		x = -27
 		y = 0
 		cost = 8
-
-		allow_branch = {
-			always = no
-		}
 
 		completion_reward = {
 			add_political_power = 80
@@ -202,53 +198,54 @@ focus_tree = {
 		icon = GFX_goal_construct_road
 		x = 1
 		y = 2
-		cost = 8
-		mutually_exclusive = { focus = TUR_the_tools }
-		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
 		relative_position_id = TUR_look_to_the_economy
+		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
+		mutually_exclusive = { focus = TUR_the_tools }
 
-			completion_reward = {
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						OR = {
-							is_in_home_area = yes
-							NOT = {
-								owner = {
-									any_owned_state = {
-										free_building_slots = {
-											building = industrial_complex
-											size > 1
-											include_locked = yes
-										}
-										is_in_home_area = yes
+		cost = 8
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 1
+										include_locked = yes
 									}
+									is_in_home_area = yes
 								}
 							}
 						}
 					}
-					add_extra_state_shared_building_slots = 2
-					add_building_construction = {
-						type = industrial_complex
-						level = 2
-						instant_build = yes
-					}
+				}
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
 				}
 			}
 		}
+	}
 
 	focus = {
 		id = TUR_the_tools
 		icon = GFX_economic_stuff
 		x = -1
 		y = 2
-		mutually_exclusive = { focus = TUR_the_means }
-		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
 		relative_position_id = TUR_look_to_the_economy
+		prerequisite = { focus = TUR_develop_anatolia focus = TUR_develop_levantine_eyalets }
+		mutually_exclusive = { focus = TUR_the_means }
 
 		cost = 10
 
@@ -486,10 +483,9 @@ focus_tree = {
 		}
 	}
 
-
-################################################
-####### Reorganize Sultanate Branch ############
-###############################################
+############################################
+####### Reorganize Sultanate Branch ########
+############################################
 
 
 	focus = {
@@ -569,9 +565,9 @@ focus_tree = {
 		}
 	}
 
-################################################
-####### Reinforce Eyalets Branch ###############
-###############################################
+############################################
+####### Reinforce Eyalets Branch ###########
+############################################
 
 	focus = {
 		id = TUR_reinforce_eyalets
@@ -730,10 +726,6 @@ focus_tree = {
 
 		available = {
 			has_global_flag = treaty_of_karlowitz
-		}
-
-		allow_branch = {
-			always = no
 		}
 
 		completion_reward = {
@@ -2106,7 +2098,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = TUR_reinforce_eyalet_of_rumelia
+		id = TUR_reinforce_rumelia_eyalet
 		icon = GFX_rumelia_eyalet
 		x = 0
 		y = 1
@@ -2184,7 +2176,6 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			unlock_decision_tooltip = TUR_hunt_down_bandits
 		}
 	}
 	
@@ -2248,8 +2239,20 @@ focus_tree = {
 		icon = GFX_goal_into_europe
 		x = 0
 		y = 1
-		prerequisite = { focus = TUR_war_with_venice focus = TUR_reinforce_eyalet_of_rumelia focus = TUR_annex_ragusa }
-		relative_position_id = TUR_reinforce_eyalet_of_rumelia
+		prerequisite = { focus = TUR_war_with_venice focus = TUR_reinforce_rumelia_eyalet focus = TUR_annex_ragusa }
+		relative_position_id = TUR_reinforce_rumelia_eyalet
+
+		available = {
+			NOT = {
+				has_idea = TUR_sekban_rebellions
+				has_war = yes
+				any_owned_state = {
+					has_dynamic_modifier = {
+						modifier = devastated_by_war
+					}
+				}
+			}
+		}
 
 		cost = 5
 
@@ -3299,17 +3302,9 @@ focus_tree = {
 		cost = 5
 
 		completion_reward = {
-			custom_effect_tooltip = will_send_an_army_to_retake_basra
-			add_command_power = -25
-			add_manpower = -1200
-			add_equipment_to_stockpile = {
-				type = infantry_equipment
-				amount = -1000
-			}
-			hidden_effect = {
+			PER = {
 				country_event = {
 					id = ottomans.20
-					days = 15
 				}
 			}
 		}
@@ -3423,8 +3418,8 @@ focus_tree = {
 		prerequisite = { focus = TUR_begin_the_campaign }
 
 		available = {
-			411 = {
-				is_owned_and_controlled_by = TUR
+			411 = { # Isfahan
+				is_owned_by = TUR
 			}
 		}
 		
@@ -3432,7 +3427,7 @@ focus_tree = {
 
 		completion_reward = {
 			country_event = {
-				id = ottomans.28
+				id = ottomans.31
 			}
 		}
 	}

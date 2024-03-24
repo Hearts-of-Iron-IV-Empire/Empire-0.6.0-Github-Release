@@ -1,0 +1,14 @@
+characters = {
+    UZB_Subhan_Quli_Khan = {
+        name = "Subhan Quli Khan"
+        portraits = {
+            civilian = {
+                large = "GFX_Subhan_Quli_Khan" # Im using a previous Khan's photo because there isn't any for Quli
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

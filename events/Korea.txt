@@ -11,111 +11,109 @@ country_event = {
 	
 	is_triggered_only = yes
 	
-	option = { #Buy food from Qing and provide substantial food aid till May
+	option = { # Buy food from Qing and provide substantial food aid till May
 		name = korea.1.a
 		add_political_power = -60
 		add_stability = 0.05
-		add_trait = { #Hirohito plz fix (i really dont know why the fuck it isnt working)
-            character = KOR_Sukjong
-			ideology = despotism
-            trait = KOR_vulnerable_king
-        }
 		add_opinion_modifier = {
 			target = CHI
 			modifier = abandoned_czechs
 		}
 		ai_chance = {
-			factor = 33 
+			base = 80 
 		}
 	}
+
 	option = { #Provide some spare food in January, but refrain from giving further aid
 		name = korea.1.b
 		add_political_power = -30
 		add_stability = 0.02
 		ai_chance = {
-			factor = 33
+			base = 15
 		}
 	}
-	option = { #We don't have anything left to provide
+
+	option = { # We don't have anything left to provide
 		name = korea.1.c
-		add_stability = -0.02
+		add_stability = -0.05
 		ai_chance = {
-			factor = 33
+			base = 5
 		}
 	}
 }
 
 country_event = {
-	id = korea.2 #The Matter of National Rituals
+	id = korea.2 # The Matter of National Rituals
 	title = korea.2.t
 	desc = korea.2.d
 	
 	is_triggered_only = yes
 	
-	option = { #Hold multiple rituals for rain and memorial rites for the dead. Also, release petty criminals to pray for the Sky's blessings
+	option = { # Hold multiple rituals for rain and memorial rites for the dead. Also, release petty criminals to pray for the Sky's blessings
 		name = korea.2.a
 		add_political_power = -30
 		add_stability = 0.02
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
-	option = { #Needless actions.
+	option = { # Needless actions.
 		name = korea.2.b
 		add_stability = -0.02
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
 }
 
 country_event = {
-	id = korea.3 #The Matter of Taxation Issues
+	id = korea.3 # The Matter of Taxation Issues
 	title = korea.3.t
 	desc = korea.3.d
 	
 	is_triggered_only = yes
 	
-	option = { #Enact the Tax Cuts
+	option = { # Enact the Tax Cuts
 		name = korea.3.a
 		add_political_power = 30
 		add_stability = 0.02
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
-	option = { #Roll Back the Tax Cuts
+	option = { # Roll Back the Tax Cuts
 		name = korea.3.b
 		add_stability = -0.02
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
 }
 
 country_event = {
-	id = korea.4 #Rumors of Madam Jang's Misbehavior towards the Queen
+	id = korea.4 # Rumors of Madam Jang's misbehavior towards the Queen
 	title = korea.4.t
 	desc = korea.4.d
 	
+	fire_only_once = yes
 	is_triggered_only = yes
 	
-	option = { #Conclude that the rumors are true and Madam Jang should be executed
+	option = { # Conclude that the rumors are true and Madam Jang should be executed
 		name = korea.4.a
 		add_political_power = -100
 		add_stability = -0.05
-		unlock_national_focus = KOR_purge_the_southerner_faction 
+		complete_national_focus = KOR_purge_the_southerner_faction 
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
-	option = { #Conclude that this is no more than just a rumor
+	option = { # Conclude that this is no more than just a rumor
 		name = korea.4.b
 		add_political_power = 30
 		add_stability = 0.02
-		unlock_national_focus = KOR_we_have_had_enough_of_purges
+		complete_national_focus = KOR_we_have_had_enough_of_purges
 		ai_chance = {
-			factor = 50
+			base = 50
 		}
 	}
 }

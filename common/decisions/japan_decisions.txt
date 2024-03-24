@@ -84,7 +84,7 @@ JAP_foreign_influence = {
 		remove_effect = {
 			add_to_variable = {
 				var = HOL_influence
-				amount = 10
+				value = 10
 			}
 			clamp_variable = { 
 				var = HOL_influence 
@@ -141,7 +141,7 @@ JAP_foreign_influence = {
 		remove_effect = {
 			add_to_variable = {
 				var = SPR_influence
-				amount = 10
+				value = 10
 			}
 			clamp_variable = { 
 				var = SPR_influence 
@@ -198,7 +198,7 @@ JAP_foreign_influence = {
 		remove_effect = {
 			add_to_variable = {
 				var = POR_influence
-				amount = 10
+				value = 10
 			}
 			clamp_variable = { 
 				var = POR_influence 

@@ -5,15 +5,15 @@ state={
 		11305 
 	}
 	history={
+		owner = LUB
+		add_core_of = LUB
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		victory_points = {
-			11305 15 
+		victory_points = { # Lubeck
+			11305 50 
 		}
-		owner = LUB
-		add_core_of = LUB
 	}
 	
 	manpower=34897

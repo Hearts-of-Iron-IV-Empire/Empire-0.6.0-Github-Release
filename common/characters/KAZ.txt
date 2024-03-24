@@ -1,0 +1,14 @@
+characters = {
+    KAZ_Tauke_Khan = {
+        name = "Tauke Khan"
+        portraits = {
+            civilian = {
+                large = "GFX_Tauke_Khan"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

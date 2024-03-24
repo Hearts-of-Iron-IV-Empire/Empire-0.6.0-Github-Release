@@ -1,6 +1,19 @@
 on_actions = {
     on_startup = {
         effect = {
+            # Killing off country leaders
+            AUS = {
+                if = {
+                    limit = {
+                        has_start_date < 1699.1.02
+                        has_country_leader = {
+                            character = AUS_Leopold_I
+                            ruling_only = yes
+                        }
+                    }
+                    country_event = { id = austria.31 days = 2306 }
+                }
+            }
             ENG = { 
                 if = {
                     limit = {

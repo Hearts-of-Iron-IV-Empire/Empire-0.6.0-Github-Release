@@ -4,7 +4,7 @@ leader_traits = {
 ##################################
 # Common Traits
 ##################################
-	ETH_hero_of_ethiopia = { #TODO_TA fix name 
+	ETH_hero_of_ethiopia = { 
 		type = all
 		trait_type = personality_trait
 		gain_xp = {

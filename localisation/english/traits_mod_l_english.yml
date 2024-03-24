@@ -1,3 +1,8 @@
 ﻿l_english:
  freemason:0 "Freemason"
  popular_ruler:0 "Popular Ruler"
+
+ panzer_leader:0 "Cavalry Leader"
+ panzer_leader_desc:0 "§LA natural with Cavalry and Mounted forces.§!"
+ panzer_expert:0 "Cavalry Expert"
+ panzer_expert_desc:1 "§LExperience and training makes this leader an expert at commanding mounted units.§!"

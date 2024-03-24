@@ -130,9 +130,13 @@
 
 
  tech_recon:0 "Scouts I"
+ tech_recon_desc:0 "Employing the use of scouts within our regiments will be very useful for reconaissance purposes."
  tech_recon2:0 "Scouts II"
+ tech_recon_desc:0 "Lighter equipment will make our scouts faster, enabling us to garner even more information on the enemy."
  tech_recon3:0 "Scouts III"
+ tech_recon3_desc:0 "Introducing new tactics and dispersing troops across the field will improve the quality of our scouting parties."
  tech_recon4:0 "Scouts IV"
+ tech_recon4_desc:0 "Carefully selecting and appraising recruits will ensur we have the best possible men out there on the field."
 
 
  # Doctrine Stuff:

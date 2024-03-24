@@ -10,18 +10,22 @@ state={
 		add_claim_by = PRS
 		buildings = {
 			infrastructure = 3
-			fuel_silo = 1
 			9388 = {
 			    coastal_bunker = 3
 				naval_base = 5
-
 			}
 			6282 = {
 				naval_base = 3
 			}
+			6282 = { # Fortress of Stettin
+				bunker = 3
+			}
 		}
-		victory_points = {
+		victory_points = { # Stralsund
 			9388 10
+		}
+		victory_points = { # Stettin
+			6282 10
 		}
 		1720.1.21 = {
             owner = PRS
@@ -29,7 +33,8 @@ state={
         }
 	}
 
-	provinces = { 349 3340 6282 9388 }
-	
-	local_supplies = 0.2
+	provinces = { 
+		349 3340 6282 9388 	
+	}
+local_supplies = 0.2
 }

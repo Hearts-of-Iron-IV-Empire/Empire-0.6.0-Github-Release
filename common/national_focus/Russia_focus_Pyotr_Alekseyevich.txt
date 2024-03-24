@@ -32,7 +32,7 @@ focus_tree = {
 	}
 
 	default = no
-	continuous_focus_position = { x = 10 y = 1300 }
+	continuous_focus_position = { x = 10 y = 1500 }
 	#initial_show_position = {
 		#x = 36
 		#y = 0
@@ -1443,7 +1443,7 @@ focus_tree = {
 
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			swap_ideas = {
@@ -1514,8 +1514,6 @@ focus_tree = {
 
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_MANPOWER }  
-
 		completion_reward = {
 			if = {
 				limit = {
@@ -1549,7 +1547,7 @@ focus_tree = {
 
 		cost = 7.2
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_ARMY_XP }
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			army_experience = 10
@@ -1610,8 +1608,6 @@ focus_tree = {
 		prerequisite = { focus = RUS_procure_weapons focus = RUS_invite_foreign_officers focus = RUS_school_of_mathematical_sciences }
 
 		cost = 8
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			219 = {
@@ -1759,8 +1755,6 @@ focus_tree = {
 
 		cost = 8
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
-
 		completion_reward = {
 			add_ideas = russia_standardized_equipment
 		}
@@ -1801,8 +1795,6 @@ focus_tree = {
 
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
-
 		completion_reward = {
 			add_doctrine_cost_reduction = {
 				cost_reduction = 0.5
@@ -1827,8 +1819,6 @@ focus_tree = {
 		mutually_exclusive = { focus = RUS_encourage_modern_tactics }
 
 		cost = 5
-
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -1880,16 +1870,16 @@ focus_tree = {
 
 		cost = 5
 
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_ARMY_XP }
-
-		ai_will_do = {
-			factor = 33
-		}
+		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		completion_reward = {
 			add_stability = 0.05
 			add_political_power = 100
 			add_ideas = russia_mass_mobilization
+		}
+
+		ai_will_do = {
+			factor = 33
 		}
 	}
 	

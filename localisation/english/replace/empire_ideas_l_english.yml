@@ -30,7 +30,6 @@
  war_reparations_payer:0 "War Reparations Payer"
  war_reparations_payer_desc:0 "This country is paying war reparations to another country."
  
-
  idea_peasants_war:0 "Peasants War"
  Spanish_crisis:0 "Spanish Succession Crisis"
  Spanish_crisis_desc:0 "The last Spanish Habsburg monarch has passed away and has left an enormous empire to Philip V, grandson of Louis XIV. Not everyone in Europe is pleased with this development. The crisis shall continue until a diplomatic solution can be found. but beware, should tensions grow too high, war will be inevitable..."
@@ -81,3 +80,7 @@
  coercive_diplomat:0 "Coercive Diplomat"
  war_propagandist:0 "War Propagandist"
  technology_thief:0 "Technology Thief"
+
+ # NSB ideas:
+ mobile_warfare_academy_spirit_tt:0 "New Officers: Gain a chance to begin with the trait §Y\"Cavalry Officer\"§!."
+ mobile_warfare_academy_spirit_desc:0 "Wherever future battles are fought, cavlary troops will play a decisive role."

@@ -13,8 +13,11 @@ state={
 				naval_base = 1
 			}
 		}
+		victory_points = { # Mitau 
+			6342 50
+		}
 		victory_points = { # Libau
-			9262 50 
+			9262 10
 		}
 		1798.1.1 = {
 			owner = SOV
@@ -22,10 +25,9 @@ state={
 	}
 
 	provinces={
-		265 3194 3255 3296 3319 3525 6222 6342 9262 11358 
+		265 3194 3296 3319 3525 6222 6342 9262 
 	}
-	manpower=379500
+	manpower=150000
 	buildings_max_level_factor=1.000
 	state_category=rural
-	local_supplies=0.000
 }

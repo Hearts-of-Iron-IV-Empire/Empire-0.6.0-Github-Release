@@ -1,0 +1,14 @@
+characters = {
+    AVA_Dugry_II = {
+        name = "Dugry II"
+        portraits = {
+            civilian = {
+                large = "GFX_Dugry_II"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

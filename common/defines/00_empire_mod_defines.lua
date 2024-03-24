@@ -18,6 +18,7 @@ NDefines.NPolitics.ARMY_LEADER_COST = 2				-- Vanilla = 5
 NDefines.NPolitics.NAVY_LEADER_COST = 2				-- Vanilla = 5
 NDefines.NPolitics.ARMY_LEADER_MAX_COST = 70		-- Vanilla = 100
 NDefines.NPolitics.NAVY_LEADER_MAX_COST = 70		-- Vanilla = 100
+NDefines.NPolitics.BASE_POLITICAL_POWER_INCREASE = 1.5	-- Weekly increase of PP.
 
 -- Military:
 NDefines.NMilitary.CORPS_COMMANDER_DIVISIONS_CAP = 20	-- Vanilla = 24

@@ -45,9 +45,9 @@ bookmarks = {
 				ENG_Irish_opposition
 			}
 			focuses = {
-				eng_proclaim_great_britain
-				eng_restore_the_old_pretender
+				eng_queen_annes_revenge
 				eng_cromwellian_restoration
+				eng_proclaim_angevin_empire
 			}
 		}
 		
@@ -71,6 +71,7 @@ bookmarks = {
 			ideology = neutrality
 			ideas = {
 				SWE_perceived_encirclement
+				SWE_disciplined_army
 			}
 			focuses = {
 				SWE_carolus_rex
@@ -80,7 +81,6 @@ bookmarks = {
 		}
 
 		"SOV"={
-			
 			history = "SOV_GATHERING_STORM_DESC"
 			ideology = neutrality	
 			ideas = {
@@ -89,8 +89,8 @@ bookmarks = {
 				RUS_outdated_military
 			}
 			focuses = {
-				RUS_treaty_of_preobrazhenskoye 
-				RUS_formulate_governing_senate
+				RUS_enact_boyar_duma
+				RUS_reform_orthodox_church
 				RUS_imperial_russian_army
 			}
 		}
@@ -235,15 +235,15 @@ bookmarks = {
 				KOR_endemic_regional_corruption
 			}
 			focuses = {
-				KOR_purge_the_southerner_faction
-				KOR_we_have_had_enough_of_purges
+				KOR_the_ulbyeong_famine
+				KOR_stop_the_purges
 				KOR_beginnings_of_peasant_rebellion
 			}
 		}
 
 		"MAR"={
 			minor = yes
-			history = "MAR_GATHERING_STORM"
+			history = "MAR_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				MAR_maratha_army
@@ -258,7 +258,7 @@ bookmarks = {
 
 		"USA"={
 			minor = yes
-			history = "USA_GATHERING_STORM"
+			history = "USA_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
 				USA_largely_male_population
@@ -268,21 +268,6 @@ bookmarks = {
 				USA_queen_annes_war
 				USA_east_of_the_mississipi
 				USA_plantation_economies
-			}
-		}
-
-		"BAV"={
-			minor = yes
-			history = "BAV_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				BAV_joseph_ferdinand
-				PRS_status_elector
-			}
-			focuses = {
-				GER_cuius_regio_eius_religio
-				GER_join_austria
-				GER_join_france
 			}
 		}
 
@@ -321,12 +306,28 @@ bookmarks = {
 			minor = yes
 			history = ""
 			ideology = neutrality
+			ideas = {
+				great_turkish_war
+				VNC_reliance_on_mercenaries
+				venetian_industry
+			}
+			focuses = {
+				
+			}
 		}
 
 		"PAP"={
 			minor = yes
 			history = ""
 			ideology = neutrality
+			ideas = {
+				PAP_the_holy_state
+				PAP_volunteer_army
+				PAP_decreasing_influence
+			}
+			focuses = {
+				
+			}
 		}
 		
         "ZAP"={

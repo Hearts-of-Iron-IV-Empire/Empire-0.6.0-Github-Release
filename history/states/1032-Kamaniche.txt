@@ -10,8 +10,11 @@ state={
 		buildings = {
 			infrastructure = 2
 		}
-		victory_points = {
+		victory_points = { # Khmelnytskyi
 			3457 10 
+		}
+		victory_points = { # Kamieniec Podolski
+			3430 10 
 		}
 		1699.1.1 = {
 			POL = {

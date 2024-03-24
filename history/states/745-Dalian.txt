@@ -4,9 +4,8 @@ state={
 	provinces={
 		1150 6851 
 	}
-	state_category = large_town
-	history=
-	{
+	state_category = town
+	history={
 		owner = CHI
 		add_core_of = CHI
 		victory_points = {
@@ -14,15 +13,8 @@ state={
 		}
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			1150 = {
-				naval_base = 5
-				coastal_bunker = 1
-			}
 		}
-
-	
 	}
-	manpower=500000
+	manpower=20000
 	buildings_max_level_factor=1.000
 }

@@ -6,21 +6,47 @@ state={
 	state_category = town
 	history={
 		owner = KOR
+		add_core_of = KOR
+		add_extra_state_shared_building_slots = 6
 		buildings = {
 			infrastructure = 2
-			arms_factory = 1
-			dockyard = 1
+			arms_factory = 3
+			dockyard = 2
+			industrial_complex = 5
 			4056 = {
 				naval_base = 3
 			}
+			7125 = {
+				naval_base = 4
+			}
 		}
-		victory_points = {
+		victory_points = { # Sejong
+			1100 10
+		}
+		victory_points = { # Jeju
+			1177 5
+		}
+		victory_points = { # Pusan
 			4056 10
 		}
-		victory_points = {
+		victory_points = { # Gwangju
+			4126 5
+		}
+		victory_points = { # Hanseong
 			7125 50 
 		}
-		add_core_of = KOR
+		victory_points = { # Wonju
+			9936 20
+		}
+		victory_points = { # Daejon
+			10115 2
+		}
+		victory_points = { # Jeonju
+			11977 5
+		}
+		victory_points = { # Daegu
+			12089 15
+		}
 	}
 	provinces={
 		1054 1081 1100 1148 1177 4004 4056 4086 4103 4126 7021 7121 7125 7175 7204 7221 9936 10036 10085 10110 10115 11912 11948 11958 11977 11992 12011 12060 12085 12089 

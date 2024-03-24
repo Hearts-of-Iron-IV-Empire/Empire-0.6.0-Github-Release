@@ -5,7 +5,7 @@ estate_interactions = {
 }
 
 royal_decrees = {
-	icon = generic_propaganda
+	icon = generic_monarchism
 }
 
 SPR_war_of_the_quadruple_alliance = {

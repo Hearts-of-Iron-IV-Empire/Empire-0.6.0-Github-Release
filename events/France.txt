@@ -313,7 +313,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { # Creating Aragonese puppet state
 	id = france.14
 	title = france.14.t
 	desc = france.14.d
@@ -328,22 +328,27 @@ country_event = {
 		166 = {
 			add_core_of = ARA
 		}
+		167 = {
+			add_core_of = ARA
+		}
 		177 = {
 			add_core_of = ARA
 		}
-		167 = {
+		878 = {
 			add_core_of = ARA
 		}
 
 		ARA = { 
-		transfer_state = 165
-		transfer_state = 167
-		transfer_state = 177
-		transfer_state = 166
+			transfer_state = 165
+			transfer_state = 166
+			transfer_state = 167
+			transfer_state = 177
+			transfer_state = 878
 		}
 
 		puppet = ARA
 	}
+
 	option = {
 		name = france.14.b
 	}

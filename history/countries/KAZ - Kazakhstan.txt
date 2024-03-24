@@ -5,8 +5,10 @@ oob = "KAZ_1699"
 set_research_slots = 2
 
 add_ideas = {
-	sunni
 	nomadic_society
+
+	# Laws and Religion
+	sunni
 }
 
 # Starting tech
@@ -20,6 +22,8 @@ set_technology = {
 	motorised_infantry = 1
 }
 
+recruit_character = KAZ_Tauke_Khan
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1698.1.1"
@@ -28,29 +32,8 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 20
-	communism = 10
-	neutrality = 70
+	aristocracy = 20
+	communism = 0
+	neutrality = 80
 }
 
-create_country_leader = {
-	name = "Nikolay Aleksandrovich Skvortsov"
-	desc = ""
-	picture = "Portrait_KAZ_Nikolay_Skvortsov.dds"
-	expire = "1953.3.1"
-	ideology = stalinism
-	traits = {
-		
-	}
-}
-
-create_country_leader = {
-	name = "Ilyas Zhansugurov"
-	desc = ""
-	picture = "Portrait_KAZ_Ilyas_Zhansugurov.dds"
-	expire = "1953.3.1"
-	ideology = conservatism
-	traits = {
-		
-	}
-}

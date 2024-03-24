@@ -34,9 +34,13 @@
 
  JAP_GATHERING_STORM_DESC:0 "Japan has been in isolation ever since the Sakoku Edict, which has effectively stopped the influence of foreign nations. However, cracks have been showing in the absolute power of the Shogunate. Rebellions, dissent from Daimyos, natural disasters, and a lingering presence of foreign powers plagues Japan to this day. The government has choices to make - either they place their faith in isolation, or they open up to the world and conquer it for the Emperor and for Japan. Anything is possible."
  
+ KOR_GATHERING_STORM_DESC:0 "The Kingdom of Great Joseon, or the Hermit Kingdom, has a rich cultural history and a long history of struggling against foreign occupation. First by the Mongols, and then by the Manchus. However, it seems that Korean independence is secure for now, although danger always lurks around the corner. The kingdom is a vassal state of the Qing, and the Manchus might wish to reconsider their current stance on Korea. Furthermore, to the South lies Japan, and many Japanese still hold dreams of Korean conquest and remember the Imjin war, where Korea was almost conquered by Japan..."
+
  OTHER_GATHERING_STORM_DESC:0 "The nations of the world, great and small, are not all content to hold their breath awaiting the outbreak of another global conflict. From major powers on the brink of civil war to the many nations formed and transformed by the Great War, all will have to make difficult decisions and balance ideals with pragmatism to have an impact on the future of the world."
 
  ###########################################################################################################################################
+ ######################################################## QUADRUPLE ALLIANCE ###############################################################
+############################################################################################################################################
 
  WAR_OF_THE_QUADRUPLE_ALLIANCE_DESC:0 "It has been five years since the treaty of Utrecht brought an end to the war of the Spanish Succession. In the treaty, it was agreed that Philip V could remain king of Spain, but a clause has prevented Spain and France from ever merging. Philip also had to cede large parts of Spain’s European possessions to Austria, except for Spain itself. In the years that followed the treaty, Louis XIV has passed away, and France has now entered an alliance with England, Austria and the Netherlands called the ‘Quadruple Alliance’, aimed at containing a revanchist Spain. Spain has since reconquered Sardinia from the Austrians, and has now landed an army in Sicily making war look inevitable."
 

@@ -1,0 +1,23 @@
+state={
+	id=1054
+	name="STATE_1054"
+
+	history={
+		owner = LAT
+		add_core_of = LAT
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+		1798.1.1 = {
+			owner = SOV
+		}
+	}
+
+	provinces={
+		3255 11358 
+	}
+	manpower=50000
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

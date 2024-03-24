@@ -1,0 +1,14 @@
+characters = {
+    OMA_Saif_bin_Sultan = {
+        name = "Saif bin Sultan"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_muslim_leader_1"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

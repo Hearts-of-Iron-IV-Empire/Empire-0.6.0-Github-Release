@@ -1,4 +1,8 @@
 ﻿l_english:
+ air_base:0 "Air Base"
+ air_base_desc:0 "§RYou should not be able to build this!§!"
+ AIR_BASE_LEVEL:0 "$NAME|H$: $VAL|Y$"
+ AIR_BASE_LEVEL_UNKNOWN:0 "$NAME|H$"
  fuel_silo:0 "Grain Silo"
  fuel_silo_plural:0 "Grain Silos"
  fuel_silo_desc:0 "A §Ygrain silo§! provides your nation with more room for stockpiling §HGrain§!."
@@ -48,3 +52,5 @@
  synthetic_refinery_desc:0 "A §Gfarm§! provides the state with grain, a vital resource required for supplying our troops."
  synthetic_refinery_amount:0 "$VALUE|Y0=$"
  synthetic_refinery_resource:0 "£resources_strip|$FRAME$"
+ rail_way:0 "Roads"
+ rail_way_desc:2 "Roads are used to connect Supply Hubs together to allow drawing of supply far from your capital."

@@ -164,27 +164,13 @@ objectTypes = {
 		name = "SWE_infantry_weapon_mg_M45_mesh"
 		file = "gfx/models/units/small_arms/weapon_SWE_mg_M45.mesh"
 	}
-
-
-
-
-
-
-
-
 	pdxmesh = {
 		name = "SWE_unit_antitank_mesh"
 		file = "gfx/models/units/artillery/SWE_antitank.mesh"
-		
 		animation = { id = "idle"  			type = "artillery_idle_animation" }
 		animation = { id = "move"  			type = "artillery_moving_animation" }
 		animation = { id = "attack"  		type = "artillery_attack_animation" }
 	}
-
-
-
-
-
 } 	# END
 
 

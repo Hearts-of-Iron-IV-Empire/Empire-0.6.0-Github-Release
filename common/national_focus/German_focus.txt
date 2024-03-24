@@ -2150,16 +2150,11 @@ focus_tree = {
 				is_in_faction = yes
 				has_war_with = AUS
 			}
-		}
-
-		available = {
 			OR = {
-			AUS = { is_faction_leader = yes }
-			AUS = { is_in_faction_with = ENG }
+				AUS = { is_faction_leader = yes }
+				AUS = { is_in_faction_with = ENG }
 			}
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			AUS = { country_event = generic.2 }

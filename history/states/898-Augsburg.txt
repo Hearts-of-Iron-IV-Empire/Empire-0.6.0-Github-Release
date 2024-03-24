@@ -5,14 +5,14 @@ state={
 		708 9666 11638 
 	}
 	history={
+		owner = AUG
+		add_core_of = AUG
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		owner = AUG
-		add_core_of = AUG
-		victory_points = {
-			9666 3 
+		victory_points = { # Augsburg
+			9666 50 
 		}
 		1812.1.1 = {
 			owner = BAV

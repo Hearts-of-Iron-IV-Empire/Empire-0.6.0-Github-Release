@@ -1,30 +1,178 @@
 ﻿division_template = {
-	name = "Daehanminguk Yuk-gun"				
+	name = "Geumgun" # was Daehanminguk Yuk-gun, these are Royal Guards
+	priority = 2
 	regiments = {
-		infantry = { x = 0 y = 0 }	# Modelled on Chinese divisions
+		infantry = { x = 0 y = 0 }
 		infantry = { x = 0 y = 1 }
-		infantry = { x = 1 y = 0 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
 		infantry = { x = 1 y = 1 }
-		infantry = { x = 2 y = 0 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
 		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+		recon = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Gyeonggapsa" # Also Royal Guards
+	priority = 2
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+        infantry = { x = 2 y = 0 }
+		infantry = { x = 2 y = 1 }
+		infantry = { x = 2 y = 2 }
+	}
+	
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+division_template = {
+	name = "Yanggyegapsa" # Border region fellows
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+        infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+}
+division_template = { 
+	name = "Gigapsa" # Cavalry fellows
+	regiments = {
+		cavalry = { x = 0 y = 0 }
+		cavalry = { x = 0 y = 1 }
+		cavalry = { x = 1 y = 0 }
+		cavalry = { x = 1 y = 1 }
+		cavalry = { x = 2 y = 0 }
+		cavalry = { x = 2 y = 1 }
+		cavalry = { x = 2 y = 2 }
+		cavalry = { x = 0 y = 2 }
+		cavalry = { x = 1 y = 2 }
+	}
+
+	support = {
+		recon = { x = 0 y = 1 }
 	}
 }
 
-
 ### OOB ###
 units = {
-	#Releaseable only
+	division = { # Hanseong
+		location = 7125
+		division_template = "Geumgun"		
+		start_experience_factor = 0.6
+	}
+	division = { # Hanseong
+		location = 7125
+		division_template = "Gyeonggapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Hanseong
+		location = 7125
+		division_template = "Gyeonggapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Hanseong
+		location = 7125
+		division_template = "Gigapsa"
+		start_experience_factor = 0.3
+	}
+	division = { # Pyongyang
+		location = 4025
+		division_template = "Yanggyegapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Near Pyongyang
+		location = 9790
+		division_template = "Yanggyegapsa"	
+		start_experience_factor = 0.3	
+	}
+	division = { # Chinese border
+		location = 9918
+		division_template = "Yanggyegapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Chinese border
+		location = 9795
+		division_template = "Yanggyegapsa"	
+		start_experience_factor = 0.3	
+	}
+	division = { # Chinese border
+		location = 11828
+		division_template = "Yanggyegapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Hamhung
+		location = 6928
+		division_template = "Yanggyegapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Chinese border
+		location = 3860
+		division_template = "Yanggyegapsa"	
+		start_experience_factor = 0.3	
+	}
+	division = { # Sejong
+		location = 1100
+		division_template = "Gigapsa"		
+		start_experience_factor = 0.3
+	}
+	division = { # Gwangju
+		location = 4126
+		division_template = "Gigapsa"	
+		start_experience_factor = 0.3	
+	}
+	division = { # Gwangju
+		location = 4126
+		division_template = "Gigapsa"	
+		start_experience_factor = 0.3	
+	}
+	division = { # Pusan
+		location = 4056
+		division_template = "Gigapsa"	
+		start_experience_factor = 0.3	
+	}
 }
 
 ### STARTING PRODUCTION ###
 instant_effect = {
 	add_equipment_production = {
 		equipment = {
-			type = infantry_equipment_0
+			type = infantry_equipment_1
 			creator = "KOR"
 		}
-		requested_factories = 1
+		requested_factories = 2
 		progress = 0.79
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = artillery_equipment_1
+			creator = "KOR"
+		}
+		requested_factories = 2
+		progress = 0.50
+		efficiency = 100
+	}
+	add_equipment_production = {
+		equipment = {
+			type = support_equipment_1
+			creator = "KOR"
+		}
+		requested_factories = 2
+		progress = 0.50
 		efficiency = 100
 	}
 }

@@ -604,7 +604,12 @@ technologies = {
 		}
 	}
 
+	# Hidden
 	tech_maintenance_company = {
+
+		allow_branch = {
+			always = no
+		}
 
 		enable_subunits = {
 			maintenance_company
@@ -1135,7 +1140,7 @@ technologies = {
 		}
 	}
 
-
+	# Hidden
 	tech_signal_company = {
 
 		allow_branch = {

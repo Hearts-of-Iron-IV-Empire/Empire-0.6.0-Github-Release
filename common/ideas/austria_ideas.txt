@@ -51,9 +51,9 @@ ideas = {
 				war_support_factor = 0.30
 				stability_weekly = -0.01
 				war_support_weekly = -0.01
-				mobilization_laws_cost_factor = 0.25
+				mobilization_laws_cost_factor = -0.25
 				army_attack_factor = -0.1
-				army_defence_factor = 0.1
+				army_defence_factor = -0.1
 			}
 		}
 
@@ -70,14 +70,13 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				war_support_factor = 0.40
-				stability_weekly = -0.015
-				war_support_weekly = -0.015
-				mobilization_laws_cost_factor = 0.50
-				consumer_goods_factor = 0.15
-				army_org_factor = -0.05
-				army_attack_factor = -0.15
-				army_defence_factor = 0.15
+				stability_weekly = -0.020
+				war_support_weekly = -0.020
+				mobilization_laws_cost_factor = -0.50
+				consumer_goods_factor = 0.30
+				army_org_factor = -0.20
+				army_attack_factor = -0.20
+				army_defence_factor = 0.20
 			}
 		}
 
@@ -314,7 +313,7 @@ ideas = {
 
 		hungarian_noble_council = {
 
-			picture = Hungarian_Monarchy
+			picture = bra_monarchist_uprising
 
 			name = hungarian_noble_council
 		
@@ -337,7 +336,7 @@ ideas = {
 
 		hungarian_noble_council_2 = {
 
-			picture = Hungarian_Monarchy
+			picture = bra_monarchist_uprising
 
 			name = hungarian_noble_council
 		
@@ -360,7 +359,7 @@ ideas = {
 
 		AUS_suppressing_hungary = {
 
-			picture = Hungarian_Monarchy
+			picture = generic_oppression
 
 			name = AUS_suppressing_hungary
 		
@@ -381,7 +380,7 @@ ideas = {
 
 		AUS_stabilizing_hungary = {
 
-			picture = Hungarian_Monarchy
+			picture = ARG_social_welfare_fund_ns
 
 			name = AUS_stabilizing_hungary
 		

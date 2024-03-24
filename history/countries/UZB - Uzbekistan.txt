@@ -16,6 +16,8 @@ set_technology = {
 	infantry_weapons1 = 1
 }
 
+recruit_character = UZB_Subhan_Quli_Khan
+
 set_popularities = {
 	fascism = 25
 	neutrality = 75

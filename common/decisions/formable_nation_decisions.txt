@@ -58,7 +58,6 @@ restore_songhai_empire_category = {
 			set_cosmetic_tag = SONGHAI_formable
 		}
 	}
-
 }
 
 form_scandinavia_category = {

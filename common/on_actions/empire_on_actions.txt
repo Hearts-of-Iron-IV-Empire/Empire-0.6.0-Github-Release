@@ -9,19 +9,19 @@ on_actions  = {
 					}
 				}
 			}
-			every_country = {
-				if = {
-					limit = {
-						NOT = {
-							has_game_rule = {
-								rule = allow_force_limit
-								option = FORCE_LIMIT_OFF
-							}
-						}
-					}
-				}
-				unit_limit_by_industry = yes
-			}
+			#every_country = {
+			#	if = {
+			#		limit = {
+			#			NOT = {
+			#				has_game_rule = {
+			#					rule = allow_force_limit
+			#					option = FORCE_LIMIT_OFF
+			#				}
+			#			}
+			#		}
+			#	}
+			#	unit_limit_by_industry = yes
+			#}
 			if = {
 				limit = {
 					date > 1717.1.1
@@ -29,13 +29,13 @@ on_actions  = {
 				#SPR = { country_event = spain.81 }
 				SWE = { country_event = sweden.44 }
 			}
-			if = {
-				limit = {
-					SOV = { has_completed_focus = RUS_impose_harsh_taxes_bashkirs }
-					date > 1706.6.1
-				}
-				SOV = { country_event = russia_new.19 }
-			}
+			#if = {
+			#	limit = {
+			#		SOV = { has_completed_focus = RUS_impose_harsh_taxes_bashkirs }
+			#		date > 1706.6.1
+			#	}
+			#	SOV = { country_event = russia_new.19 }
+			#}
 			if = {
 				limit = {
 					date > 1812.1.1
@@ -188,6 +188,44 @@ on_actions  = {
 			}
 		}
 	}
+	on_state_control_changed = { # For continuation of the Great Turkish War, Austrian win
+		effect = {
+			if = {
+				limit = {
+					tag = AUS
+					has_war_with = TUR
+					FROM = { tag = TUR }
+					FROM.FROM = { # Constantinople
+						state = 341
+					}
+				}
+				TUR = {
+					country_event = {
+						id = austria.70
+					}
+				}
+			}
+		}
+	}
+	on_state_control_changed = { # For continuation of the Great Turkish War, Turkish win
+		effect = {
+			if = {
+				limit = {
+					tag = TUR
+					has_war_with = AUS
+					FROM = { tag = AUS }
+					FROM.FROM = { # Vienna
+						state = 4
+					}
+				}
+				AUS = {
+					country_event = {
+						id = austria.71
+					}
+				}
+			}
+		}
+	}
 	#on_state_control_changed = {
 		#effect = {
 		#	if = {
@@ -237,63 +275,6 @@ on_actions  = {
 						id = mughal.43
 						days = 10
 					} 
-				}
-			}
-		}
-	}
-	on_capitulation_immediate = { #If Poland doesnt cap 
-		effect = {
-			every_country = {
-				limit = {
-					has_war_with = SWE
-				}
-				white_peace = SWE
-	        }
-			if = { 
-				limit = {
-					OR = {
-						FROM = { tag = SOV }
-						FROM = { tag = POL }
-						FROM = { tag = DEN }
-						FROM = { tag = PRS }
-					}
-					ROOT = { tag = SWE }
-				}
-				SOV = {
-					transfer_state = 13
-			        transfer_state = 195
-			        transfer_state = 146
-			        transfer_state = 111
-			        transfer_state = 147
-			        transfer_state = 150
-			        transfer_state = 149
-			        transfer_state = 148
-			        transfer_state = 145
-					#Finnish Puppet State?
-				}
-				POL = {
-					transfer_state = 191
-					transfer_state = 12 
-				}
-				if = {
-					limit = {
-						DEN = { has_war_with = SWE }
-						#TODO future conditions if denmark does not pull out of the war early
-					}
-					DEN = { transfer_state = 138 }
-					DEN = { transfer_state = 934 }
-					DEN = { transfer_state = 935 }
-					DEN = { transfer_state = 58 }
-					DEN = { transfer_state = 1018 }
-					DEN = { transfer_state = 38 }
-					#TODO small southern swedish puppet states for Denmark if they do not pull out of the war early
-				}
-				if = {
-					limit = {
-						PRS = { has_war_with = SWE }
-					}
-					PRS = { transfer_state = 62 }
-					PRS = { transfer_state = 794 }
 				}
 			}
 		}

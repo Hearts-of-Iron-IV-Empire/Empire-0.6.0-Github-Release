@@ -348,13 +348,13 @@ country_event = {
 
 	option = {
 		name = ottomans.19.a
-		add_stability = 0.07
-		add_war_support = 0.07
+		add_stability = 0.05
+		add_war_support = 0.05
 		add_political_power = 60
 	}
 }
 
-# Ottomans retake Basra
+# Ottomans want Basra
 country_event = {
 	id = ottomans.20
 	title = ottomans.20.t
@@ -363,16 +363,34 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = {
+	option = { # Ok
 		name = ottomans.20.a
-		add_stability = 0.02
-		add_war_support = 0.02
-		add_political_power = 20
-		transfer_state = 675
+		TUR = {
+			country_event = {
+				id = ottomans.21
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = { # No
+		name = ottomans.20.a
+		TUR = {
+			country_event = {
+				id = ottomans.22
+				days = 3
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
 	}
 }
 
-# Ultimatum to become puppet
+# Persians said yes
 country_event = {
 	id = ottomans.21
 	title = ottomans.21.t
@@ -381,14 +399,74 @@ country_event = {
 	fire_only_once = yes
 	is_triggered_only = yes
 
-	option = { # Ok...
+	option = { # Yep
 		name = ottomans.21.a
+		custom_effect_tooltip = will_send_an_army_to_retake_basra
+		add_command_power = -25
+		add_manpower = -1200
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = -1000
+		}
+		hidden_effect = {
+			TUR = {
+				country_event = {
+					id = ottomans.23
+					days = 10
+				}
+			}
+		}
+
+	}
+}
+
+# Persians say no (only for player Persia)
+country_event = {
+	id = ottomans.22
+	title = ottomans.22.t
+	desc = ottomans.22.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Bruh momento
+		name = ottomans.22.a
+	}
+}
+
+# Army retakes Basra
+country_event = {
+	id = ottomans.23
+	title = ottomans.23.t
+	desc = ottomans.23.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Bruh momento
+		name = ottomans.22.a
+		add_war_support = 0.02
+		transfer_state = 675 # Basra
+	}
+}
+
+# Ultimatum to become puppet
+country_event = {
+	id = ottomans.24
+	title = ottomans.24.t
+	desc = ottomans.24.d
+	
+	fire_only_once = yes
+	is_triggered_only = yes
+
+	option = { # Ok...
+		name = ottomans.24.a
 		add_stability = -0.20
 		add_war_support = -0.20
 		add_political_power = -120
 		TUR = {
 			country_event = {
-				id = ottomans.22
+				id = ottomans.25
 				days = 2
 			}
 		}
@@ -398,11 +476,11 @@ country_event = {
 	}
 
 	option = { # NO!
-		name = ottomans.21.b
+		name = ottomans.24.b
 		add_political_power = 20
 		TUR = {
 			country_event = {
-				id = ottomans.23
+				id = ottomans.26
 				days = 2
 			}
 		}
@@ -414,15 +492,15 @@ country_event = {
 
 # They say yes
 country_event = {
-	id = ottomans.22
-	title = ottomans.22.t
-	desc = ottomans.22.d
+	id = ottomans.25
+	title = ottomans.25.t
+	desc = ottomans.25.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # Excellent.
-		name = ottomans.22.a
+		name = ottomans.25.a
 		add_stability = 0.05
 		add_war_support = 0.05
 		add_political_power = 50
@@ -434,28 +512,28 @@ country_event = {
 
 # They say no
 country_event = {
-	id = ottomans.23
-	title = ottomans.23.t
-	desc = ottomans.23.d
+	id = ottomans.26
+	title = ottomans.26.t
+	desc = ottomans.26.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # Leave it...
-		name = ottomans.23.a
+		name = ottomans.26.a
 		add_stability = -0.05
 		add_war_support = -0.10
 		add_political_power = -75
 		OMA = {
 			country_event = {
-				id = ottomans.24
+				id = ottomans.27
 				days = 2
 			}
 		}
 	}
 
 	option = { # WE DECLARE WAR
-		name = ottomans.23.b
+		name = ottomans.26.b
 		add_war_support = 0.05
 		add_political_power = 40
 		create_wargoal = {
@@ -467,15 +545,15 @@ country_event = {
 
 # Ottomans back down
 country_event = {
-	id = ottomans.24
-	title = ottomans.24.t
-	desc = ottomans.24.d
+	id = ottomans.27
+	title = ottomans.27.t
+	desc = ottomans.27.d
 	
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = { # Lesgo
-		name = ottomans.24.a
+		name = ottomans.27.a
 		add_stability = 0.05
 		add_war_support = 0.10
 		add_political_power = 75
@@ -484,14 +562,14 @@ country_event = {
 
 # Bandits damage infrastructure
 state_event = {
-	id = ottomans.25
-	title = ottomans.25.t
-	desc = ottomans.25.d
+	id = ottomans.28
+	title = ottomans.28.t
+	desc = ottomans.28.d
 	
 	is_triggered_only = yes
 
 	option = { # ;-;
-		name = ottomans.25.a
+		name = ottomans.28.a
 		TUR = {
 			add_stability = -0.01
 		}
@@ -507,14 +585,14 @@ state_event = {
 
 # Bandits destroy villages
 country_event = {
-	id = ottomans.26
-	title = ottomans.26.t
-	desc = ottomans.26.d
+	id = ottomans.29
+	title = ottomans.29.t
+	desc = ottomans.29.d
 	
 	is_triggered_only = yes
 
 	option = { # ;-;
-		name = ottomans.25.a
+		name = ottomans.29.a
 		add_stability = -0.02
 		add_political_power = -30
 	}
@@ -522,24 +600,78 @@ country_event = {
 
 # Intervention in the Maghreb
 country_event = {
-	id = ottomans.27
-	title = ottomans.27.t
-	desc = ottomans.27.d
+	id = ottomans.30
+	title = ottomans.30.t
+	desc = ottomans.30.d
 	
 	is_triggered_only = yes
 
 	option = { # Support Algiers
-		name = ottomans.27.a
-		unlock_national_focus = TUR_support_algiers
+		name = ottomans.30.a
+		complete_national_focus = TUR_support_algiers
 	}
 
 	option = { # Support Tunis
-		name = ottomans.27.b
-		unlock_national_focus = TUR_support_tunis
+		name = ottomans.30.b
+		complete_national_focus = TUR_support_tunis
 	}
 
 	option = { # Take it all
-		name = ottomans.27.c
-		unlock_national_focus = TUR_destroy_them_all
+		name = ottomans.30.c
+		complete_national_focus = TUR_destroy_them_all
+	}
+}
+
+# Fate of Persia
+country_event = {
+	id = ottomans.31
+	title = ottomans.31.t
+	desc = ottomans.31.d
+	
+	is_triggered_only = yes
+
+	option = { # Seize border provinces
+		name = ottomans.31.a
+		transfer_state = 229 # Shirvan
+		transfer_state = 230 # Armenia
+		transfer_state = 232 # Tarki
+		transfer_state = 413 # Khuzestan
+		transfer_state = 419 # Tabriz
+		transfer_state = 421 # Kurdistan
+		transfer_state = 910 # Dagestan
+		add_stability = 0.10
+		set_country_flag = persia_gone
+	}
+
+	option = { # Puppet them
+		name = ottomans.31.b
+		puppet = PER
+		add_stability = 0.05
+		set_country_flag = persia_gone
+	}
+
+	option = { # Take it all
+		name = ottomans.31.c
+		annex_country = {
+			target = PER
+		}
+		add_stability = -0.10
+		add_war_support = -0.10
+		add_political_power = -100
+		set_country_flag = persia_gone
+	}
+}
+
+# Tell Austria we're gonna fight 
+country_event = {
+	id = ottomans.32
+	title = ottomans.32.t
+	desc = ottomans.32.d
+	
+	is_triggered_only = yes
+
+	option = { # Ya serious boi?
+		name = ottomans.31.a
+		custom_effect_tooltip = take_constantinople_win
 	}
 }

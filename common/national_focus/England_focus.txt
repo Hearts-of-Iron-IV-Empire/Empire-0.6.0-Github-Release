@@ -1,3 +1,25 @@
+### search_filters = { FOCUS_FILTER_POLITICAL }
+### search_filters = { FOCUS_FILTER_RESEARCH }
+### search_filters = { FOCUS_FILTER_INDUSTRY }
+### search_filters = { FOCUS_FILTER_STABILITY }
+### search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+### search_filters = { FOCUS_FILTER_MANPOWER }
+### search_filters = { FOCUS_FILTER_ANNEXATION }
+### search_filters = { FOCUS_FILTER_ARMY_XP }
+### search_filters = { FOCUS_FILTER_NAVY_XP }
+### search_filters = { FOCUS_FILTER_TFV_AUTONOMY } # Autonomy
+### search_filters = { FOCUS_FILTER_INTERNAL_AFFAIRS } # Internal Affairs
+### search_filters = { FOCUS_FILTER_FRA_POLITICAL_VIOLENCE } # Political Violence
+### search_filters = { FOCUS_FILTER_FRA_OCCUPATION_COST } # Occupation Costs
+### search_filters = { FOCUS_FILTER_CHI_INFLATION } # Inflation
+### search_filters = { FOCUS_FILTER_BALANCE_OF_POWER } # Balance of Power
+### search_filters = { FOCUS_FILTER_SWI_MILITARY_READINESS } # Military Readiness
+### search_filters = { FOCUS_FILTER_USA_CONGRESS } # Congress
+### search_filters = { FOCUS_FILTER_MEX_CHURCH_AUTHORITY } # Church Authority
+### search_filters = { FOCUS_FILTER_TUR_KURDISTAN } # Kurdistan
+### search_filters = { FOCUS_FILTER_TUR_TRADITIONALISM } # Traditionalism
+### search_filters = { FOCUS_FILTER_GRE_DEBT_TO_IFC } # Debt to the IFC
+
 focus_tree = {
 	id = england_focus
 	
@@ -19,78 +41,73 @@ focus_tree = {
 		icon = GFX_focus_generic_home_defense
 		x = 20
 		y = 0
+
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 10
-		}
-
 		completion_reward = {
 			add_political_power = 150
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 	}
 
 	focus = {
 		id = eng_go_with_the_whigs
 		icon = GFX_goal_generic_neutrality_focus
-		prerequisite = {focus = eng_rearrange_parliament }
-		mutually_exclusive = { focus = eng_go_with_the_tories }
-		mutually_exclusive = { focus = eng_go_with_radical_republicans}
-		relative_position_id = eng_rearrange_parliament
 		x = 0
 		y = 1
+		relative_position_id = eng_rearrange_parliament
+		prerequisite = {focus = eng_rearrange_parliament }
+		mutually_exclusive = { focus = eng_go_with_the_tories }
+		mutually_exclusive = { focus = eng_down_with_the_king }
+
 		cost = 5
 
 		search_filters = { FOCUS_FILTER_STABILITY }
 
-		ai_will_do = {
-			factor = 100
-		}
-
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_stability = 0.05
+		}
+
+		ai_will_do = {
+			factor = 100
 		}
 	}
 
 	focus = {
-		id = eng_strenghten_monarchy
+		id = eng_strengthen_dynastic_claim
 		icon = GFX_england_crown
-		prerequisite = {focus = eng_go_with_the_whigs }
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = eng_go_with_the_whigs 
+		prerequisite = {focus = eng_go_with_the_whigs }
 
-		search_filters = { FOCUS_FILTER_STABILITY }
+		cost = 10
 
-		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.10
+		}
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		completion_reward = {
-			add_stability = 0.10
 		}
 	}
 
 	focus = {
 		id = eng_strenghten_church_of_england
 		icon = GFX_build_churches
-		prerequisite = { focus = eng_strenghten_monarchy }
+		prerequisite = { focus = eng_strengthen_dynastic_claim }
 		x = 0
 		y = 3
 		cost = 10
 		relative_position_id = eng_go_with_the_whigs
-
-		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 10
@@ -104,17 +121,16 @@ focus_tree = {
 	focus = {
 		id = eng_act_of_settlement
 		icon = GFX_sign_papers
-		prerequisite = {focus = eng_strenghten_church_of_england }
 		x = 0
 		y = 5
-		cost = 10
 		relative_position_id = eng_go_with_the_whigs
+		prerequisite = {focus = eng_strenghten_church_of_england }
 
 		available = {
 			has_idea = ENG_legacy
 		}
 
-		available_if_capitulated = yes
+		cost = 10
 
 		completion_reward = {
 			remove_ideas = ENG_legacy
@@ -122,15 +138,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = eng_industrial_effort
+		id = eng_industrial_development
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = eng_go_with_the_whigs }
-		x = -5
+		x = -6
 		y = 1
-		cost = 10
 		relative_position_id = eng_go_with_the_whigs 
+		prerequisite = { focus = eng_go_with_the_whigs }
 
-		available_if_capitulated = yes
+		cost = 10
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -165,19 +180,17 @@ focus_tree = {
 			}
 		}
 	}
-##
 
-focus = {
+	focus = {
 		id = eng_armament_effort
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = eng_industrial_effort }
-		x = -5
-		y = 2
+		x = 0
+		y = 1
+		relative_position_id = eng_industrial_development 
+		prerequisite = { focus = eng_industrial_development }
+
 		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
-
-		available_if_capitulated = yes
-
+		
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
@@ -211,16 +224,74 @@ focus = {
 			}
 		}
 	}
-##
 
-focus = {
+	focus = {
+		id = eng_scottish_self_government
+		icon = GFX_scotland_forever
+		x = 0
+		y = 1
+		relative_position_id = eng_armament_effort 
+		prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
+		mutually_exclusive = { focus = eng_integrate_scotland }
+
+		cost = 10
+
+		completion_reward = {
+			SCO = { add_ideas = ENG_release_scotland }
+		}
+
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	focus = {
+		id = eng_crush_irish_catholics
+		icon = GFX_focus_abolish_metropolitans
+		x = 0
+		y = 1
+		relative_position_id = eng_scottish_self_government 
+		prerequisite = { focus = eng_integrate_scotland focus = eng_scottish_self_government }
+		mutually_exclusive = { focus = eng_allow_irish_self_governance }
+
+		cost = 10
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = ENG_Irish_opposition
+				add_idea = ENG_idea_catholics_suppressed
+			}
+		}
+	}
+
+	focus = {
+		id = eng_integrate_ireland
+		icon = GFX_integrate_ireland
+		x = -1
+		y = 1
+		relative_position_id = eng_crush_irish_catholics 
+		prerequisite = { focus = eng_crush_irish_catholics }
+
+		cost = 10
+
+		completion_reward = {
+			add_political_power = -100
+			add_state_core = 113
+			add_state_core = 119
+			add_state_core = 134
+			add_state_core = 135
+		}
+	}
+
+	focus = {
 		id = eng_industrial_effort_scotland
 		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = eng_go_with_the_whigs }
-		x = -3
+		x = -4
 		y = 1
-		cost = 10
 		relative_position_id = eng_go_with_the_whigs 
+		prerequisite = { focus = eng_go_with_the_whigs }
+
+		cost = 10
 
 		completion_reward = {
 			SCO = {
@@ -240,15 +311,16 @@ focus = {
 			}
 		}
 	}
-##
-focus = {
+
+	focus = {
 		id = eng_armament_effort_scotland
 		icon = GFX_goal_generic_construct_mil_factory
+		x = 0
+		y = 1
+		relative_position_id = eng_industrial_effort_scotland 
 		prerequisite = { focus = eng_industrial_effort_scotland }
-		x = -3
-		y = 2
+
 		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
 
 		completion_reward = {
 			SCO = {
@@ -270,71 +342,31 @@ focus = {
 	}
 
 	focus = {
-		id = eng_scottish_self_government
-		icon = GFX_scotland_forever
-		prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
-		mutually_exclusive = { focus = eng_reduce_scottish_autonomy }
-		x = -5
-		y = 3
-		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
-
-		ai_will_do = {
-			factor = 0
-		}
-
-		completion_reward = {
-			SCO = { add_ideas = ENG_release_scotland }
-		}
-	}
-
-	focus = {
-		id = eng_reduce_scottish_autonomy
+		id = eng_integrate_scotland
 		icon = GFX_integrate_scotland
+		x = 0
+		y = 1
+		relative_position_id = eng_armament_effort_scotland 
 		prerequisite = { focus = eng_armament_effort_scotland focus = eng_armament_effort }
 		mutually_exclusive = { focus = eng_scottish_self_government }
-		x = -3
-		y = 3
+
 		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
 
 		completion_reward = {
 			SCO = { add_ideas = ENG_integrate_scotland }
 		}
-
 	}
-
-	focus = {
-		id = eng_crush_irish_catholics
-		icon = GFX_focus_abolish_metropolitans
-		prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government }
-		mutually_exclusive = { focus = eng_allow_irish_self_governance }
-		x = -5
-		y = 4
-		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
-
-		completion_reward = {
-			swap_ideas = {
-					remove_idea = ENG_Irish_opposition
-					add_idea = ENG_idea_catholics_suppressed
-				}
-			}
-		}
 
 	focus = {
 		id = eng_allow_irish_self_governance
 		icon = GFX_goal_tfv_sever_ties_with_uk
-		prerequisite = { focus = eng_reduce_scottish_autonomy focus = eng_scottish_self_government}
+		x = 0
+		y = 1
+		relative_position_id = eng_integrate_scotland 
+		prerequisite = { focus = eng_integrate_scotland focus = eng_scottish_self_government }
 		mutually_exclusive = { focus = eng_crush_irish_catholics }
-		x = -3
-		y = 4
-		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
 
-		ai_will_do = {
-			factor = 0
-		}
+		cost = 10
 
 		completion_reward = {
 
@@ -371,25 +403,25 @@ focus = {
 				transfer_state = 134
 				transfer_state = 135
 			}
-
 			puppet = IRE
 		}
 
+		ai_will_do = {
+			factor = 0
+		}
 	}
 
 	focus = {
 		id = eng_proclaim_great_britain
 		icon = GFX_focus_eng_the_sun_never_sets
-		prerequisite = { focus = eng_allow_irish_self_governance focus = eng_crush_irish_catholics}
-		x = -4
-		y = 5
-		cost = 10
-		relative_position_id = eng_go_with_the_whigs 
+		x = 1
+		y = 1
+		relative_position_id = eng_crush_irish_catholics 
+		prerequisite = { focus = eng_allow_irish_self_governance focus = eng_crush_irish_catholics }
 
 		available = {
 			owns_state = 119 
 			owns_state = 126 
-
 			OR = {
 				AND = { owns_state = 121
 					NOT = { country_exists = SCO }
@@ -403,6 +435,8 @@ focus = {
 				}
 			}
 		}
+
+		cost = 10
 
 		completion_reward = {
 			set_cosmetic_tag = ENG_unified
@@ -425,7 +459,7 @@ focus = {
 		icon = GFX_goal_tories
 		prerequisite = {focus = eng_rearrange_parliament}
 		mutually_exclusive = { focus = eng_go_with_the_whigs}
-		mutually_exclusive = { focus = eng_go_with_radical_republicans}
+		mutually_exclusive = { focus = eng_down_with_the_king}
 		relative_position_id = eng_rearrange_parliament
 		x = 14
 		y = 1
@@ -744,8 +778,6 @@ focus = {
 			has_stability > 0.5
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			swap_ideas = {
 				remove_idea = protestant
@@ -762,8 +794,6 @@ focus = {
 		x = -2
 		y = 6
 		cost = 10
-
-		available_if_capitulated = yes
 
 		available = {
 			has_stability > 0.60
@@ -792,8 +822,6 @@ focus = {
 			}
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			FRA = { country_event = generic.2 }
 		}
@@ -807,8 +835,6 @@ focus = {
 		x = 0
 		y = 5
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			FRA = { transfer_state = 331 }
@@ -834,8 +860,6 @@ focus = {
 		x = 0
 		y = 7
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_opinion_modifier = {
@@ -866,8 +890,6 @@ focus = {
 		x = 2
 		y = 7
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_opinion_modifier = {
@@ -902,8 +924,6 @@ focus = {
 		y = 7
 		cost = 10
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_state_claim = 118
 			add_state_claim = 797
@@ -919,7 +939,6 @@ focus = {
 	#	y = 8
 	#	cost = 10
 #
-#		available_if_capitulated = yes
 #
 #		completion_reward = {
 #			remove_from_faction = FRA
@@ -934,8 +953,6 @@ focus = {
 		x = 2
 		y = 9
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			create_wargoal = {
@@ -954,8 +971,6 @@ focus = {
 		y = 6
 		cost = 10
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			give_guarantee = SOV
 			FRA = { give_guarantee = SOV }
@@ -967,35 +982,34 @@ focus = {
 	}
 
 	focus = {
-		id = eng_go_with_radical_republicans
+		id = eng_down_with_the_king
 		icon = GFX_focus_rom_abdicate
-		prerequisite = {focus = eng_rearrange_parliament }
-		mutually_exclusive = { focus = eng_go_with_the_whigs}
-		mutually_exclusive = { focus = eng_go_with_the_tories}
-		relative_position_id = eng_rearrange_parliament
-		x = -14
+		x = -18
 		y = 1
+		relative_position_id = eng_rearrange_parliament
+		prerequisite = { focus = eng_rearrange_parliament }
+		mutually_exclusive = { focus = eng_go_with_the_whigs }
+		mutually_exclusive = { focus = eng_go_with_the_tories }
+
 		cost = 10
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
-		ai_will_do = {
-			factor = 0
-		}
-
-		available_if_capitulated = no
-
 		completion_reward = {
 			add_ideas = ENG_republicanism
 			remove_ideas = ENG_legacy
+		}
+
+		ai_will_do = {
+			factor = 0
 		}
 	}
 
 	focus = {
 		id = eng_form_the_long_parliament
 		icon = GFX_focus_eng_concessions_to_the_trade_unions
-		prerequisite = {focus = eng_go_with_radical_republicans }
-		relative_position_id = eng_go_with_radical_republicans
+		prerequisite = {focus = eng_down_with_the_king }
+		relative_position_id = eng_down_with_the_king
 		x = 0
 		y = 1
 		cost = 10
@@ -1006,15 +1020,11 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = no
-
 		completion_reward = {
+			custom_effect_tooltip = ENG_king_will_dissolve_parliament
 			add_ideas = ENG_civil_unrest
 			activate_mission = English_civil_war_is_coming
-			custom_effect_tooltip = ENG_king_will_dissolve_parliament
-
 			country_event = england.14
-
 			unlock_decision_tooltip = ENG_lower_tenison
 
 			set_politics = {
@@ -1037,50 +1047,45 @@ focus = {
 	focus = {
 		id = eng_rally_the_people
 		icon = GFX_focus_YUG_pan_slavic_congress
-		prerequisite = {focus = eng_form_the_long_parliament }
-		relative_position_id = eng_go_with_radical_republicans
-		mutually_exclusive = { focus = eng_rally_the_army }
 		x = -1
 		y = 2
-		cost = 10
+		relative_position_id = eng_down_with_the_king
+		prerequisite = { focus = eng_form_the_long_parliament }
+		mutually_exclusive = { focus = eng_rally_the_army }
+
+		cost = 5
 
 		bypass = {
 			has_civil_war = yes
 		}
 
+		completion_reward = {
+			custom_effect_tooltip = ENG_chose_the_army
+		}
+
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = no
-
-		completion_reward = {
-			custom_effect_tooltip = ENG_chose_the_army
-			army_experience = 5
-		}
-
-		
 	}
 
 	focus = {
 		id = eng_rally_the_army
 		icon = GFX_focus_generic_little_entente
-		prerequisite = {focus = eng_form_the_long_parliament }
-		relative_position_id = eng_go_with_radical_republicans
-		mutually_exclusive = { focus = eng_rally_the_people }
 		x = 1
 		y = 2
-		cost = 10
+		relative_position_id = eng_down_with_the_king
+		prerequisite = { focus = eng_form_the_long_parliament }
+		mutually_exclusive = { focus = eng_rally_the_people }
 
 		bypass = {
 			has_civil_war = yes
 		}
 
+		cost = 10
+
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = no
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_chose_the_people
@@ -1090,15 +1095,16 @@ focus = {
 	focus = {
 		id = eng_secure_london
 		icon = GFX_focus_spa_save_the_alcazar
-		prerequisite = {focus = eng_rally_the_army focus = eng_rally_the_people}
-		relative_position_id = eng_go_with_radical_republicans
 		x = 0
 		y = 3
-		cost = 10
+		relative_position_id = eng_down_with_the_king
+		prerequisite = { focus = eng_rally_the_army focus = eng_rally_the_people }
 
 		bypass = {
 			has_civil_war = yes
 		}
+
+		cost = 7.2
 
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
@@ -1106,10 +1112,8 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = no
-
 		completion_reward = {
-			add_political_power = 100
+			add_political_power = 50
 			add_manpower = -500
 			custom_effect_tooltip = ENG_london_secured
 		}
@@ -1118,10 +1122,11 @@ focus = {
 	focus = {
 		id = eng_seize_national_stockpile
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = {focus = eng_secure_london }
-		relative_position_id = eng_go_with_radical_republicans
 		x = 0
 		y = 4
+		prerequisite = { focus = eng_secure_london }
+		relative_position_id = eng_down_with_the_king
+
 		cost = 10
 
 		bypass = {
@@ -1132,59 +1137,67 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = no
-
 		completion_reward = {
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_1
+				amount = 2000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 100
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 150
+			}
 		}
 	}
 
 	focus = {
 		id = eng_irish_resistance_contacts
-		icon = GFX_goal_tripartite_pact
-		prerequisite = {focus = eng_secure_london }
-		relative_position_id = eng_go_with_radical_republicans
+		icon = GFX_agree_ireland
 		x = -2
 		y = 4
-		cost = 10
+		relative_position_id = eng_down_with_the_king
+		prerequisite = { focus = eng_secure_london }
 
 		bypass = {
 			has_civil_war = yes
 		}
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = no
+		
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_irish_rebellion_vassal
 			set_country_flag = ENG_irish_rebellion_vassal
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
 	focus = {
 		id = eng_align_scotland
 		icon = GFX_agree_scotland
-		prerequisite = {focus = eng_secure_london }
-		relative_position_id = eng_go_with_radical_republicans
 		x = 2
 		y = 4
-		cost = 10
+		relative_position_id = eng_down_with_the_king
+		prerequisite = {focus = eng_secure_london }
 
 		bypass = {
 			has_civil_war = yes
 		}
 
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = no
+		cost = 5
 
 		completion_reward = {
 			custom_effect_tooltip = ENG_scotland_sides_with_parliament
 			set_country_flag = ENG_scotland_sides_with_parliament
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -1192,7 +1205,7 @@ focus = {
 		id = eng_fourth_english_civil_war
 		icon = GFX_focus_spr_masters_of_our_own_fate
 		prerequisite = {focus = eng_align_scotland focus = eng_irish_resistance_contacts focus = eng_seize_national_stockpile }
-		relative_position_id = eng_go_with_radical_republicans
+		relative_position_id = eng_down_with_the_king
 		x = 0
 		y = 5
 		cost = 10
@@ -1204,8 +1217,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = no
 
 		completion_reward = {
 			dismantle_faction = yes
@@ -1223,21 +1234,18 @@ focus = {
 			#hidden_effect = {
 				end_puppet = USA
 				USA = { leave_faction = yes }
-				remove_state_core = 113
-				remove_state_core = 119
+				
 				IRE = {
 					transfer_state = 134
 					transfer_state = 135
 					transfer_state = 113
 					transfer_state = 119
-					
-					declare_war_on = { 
-						target = d01
-						type = annex_everything
+					hidden_effect = {
+						load_oob = "IRE_revolt"
 					}
-					load_oob = "IRE_revolt"
 				}
 
+				# IRE declares war if not a puppet based on earlier decisions
 				if = {
 					limit = { 
 						NOT = { 
@@ -1289,7 +1297,7 @@ focus = {
 		id = eng_rally_behind_mores_ideals
 		icon = GFX_goal_support_communism
 		prerequisite = {focus = eng_fourth_english_civil_war }
-		relative_position_id = eng_go_with_radical_republicans
+		relative_position_id = eng_down_with_the_king
 		mutually_exclusive = { focus = eng_rally_behind_roundhead_forces }
 		mutually_exclusive = { focus = eng_we_the_people }
 		x = -8
@@ -1299,10 +1307,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_STABILITY }
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			swap_ideas = {
@@ -1325,8 +1329,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = ENG_collectivized_society
 		}
@@ -1344,8 +1346,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1367,8 +1367,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1418,8 +1416,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_stability = 0.05
 		}
@@ -1438,8 +1434,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			news_event =  mod.15
@@ -1464,8 +1458,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -1483,8 +1475,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -1505,8 +1495,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_war_support = 0.05
@@ -1557,8 +1545,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			every_country = {
 				limit = {
@@ -1603,8 +1589,6 @@ focus = {
 
 		search_filters = { FOCUS_FILTER_MANPOWER }
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = ENG_armed_peasants
 		}
@@ -1625,8 +1609,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_war_support = 0.10
 		}
@@ -1646,8 +1628,6 @@ focus = {
 		}
 
 		search_filters = { FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_tech_bonus = {
@@ -1675,8 +1655,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_tech_bonus = {
 				name = armor_bonus
@@ -1701,9 +1679,7 @@ focus = {
 			factor = 10
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT}
-
-		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_WAR_SUPPORT }
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
@@ -1722,7 +1698,7 @@ focus = {
 		prerequisite = {focus = eng_fourth_english_civil_war }
 		mutually_exclusive = { focus = eng_rally_behind_roundhead_forces}
 		mutually_exclusive = { focus = eng_rally_behind_mores_ideals}
-		relative_position_id = eng_go_with_radical_republicans
+		relative_position_id = eng_down_with_the_king
 		x = 0
 		y = 6
 		cost = 5
@@ -1732,8 +1708,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = 0.1
@@ -1754,8 +1728,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			replace_civ_with_arms_factories = yes
@@ -1779,8 +1751,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		bypass = {
 			custom_trigger_tooltip = {
@@ -1859,8 +1829,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_popularity = {
 				ideology = democratic
@@ -1878,7 +1846,7 @@ focus = {
 	focus = {
 		id = eng_rebuild_the_nation
 		icon = GFX_goal_generic_construction2
-		prerequisite = {focus = eng_establish_free_elections }
+		prerequisite = { focus = eng_establish_free_elections }
 		relative_position_id = eng_we_the_people
 		x = -1
 		y = 4
@@ -1889,8 +1857,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_timed_idea = {
@@ -1903,8 +1869,8 @@ focus = {
 	focus = {
 		id = eng_arsenal_of_democracy
 		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = {focus = eng_establish_free_elections }
-		prerequisite = {focus = eng_soldiers_of_liberty }
+		prerequisite = { focus = eng_establish_free_elections }
+		prerequisite = { focus = eng_soldiers_of_liberty }
 		relative_position_id = eng_we_the_people
 		x = -2
 		y = 5
@@ -1915,8 +1881,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -1997,8 +1961,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_stability = 0.05
 		}
@@ -2016,8 +1978,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 		}
@@ -2046,8 +2006,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			HOL = { country_event = generic.5 }
 		}
@@ -2067,8 +2025,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			FRA = {
@@ -2215,8 +2171,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = { 	
 			every_country = {
 				limit = {
@@ -2249,8 +2203,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -2271,8 +2223,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = ENG_armed_citizenry
 		}
@@ -2290,8 +2240,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			remove_ideas = ENG_civil_unrest
@@ -2317,8 +2265,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_offsite_building = { type = industrial_complex level = 2 }
 			add_popularity = {
@@ -2341,8 +2287,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			puppet = USA
 		}
@@ -2353,7 +2297,7 @@ focus = {
 		icon = GFX_soldiers_marching
 		prerequisite = {focus = eng_fourth_english_civil_war }
 		mutually_exclusive = { focus = eng_we_the_people }
-		relative_position_id = eng_go_with_radical_republicans
+		relative_position_id = eng_down_with_the_king
 		mutually_exclusive = { focus = eng_rally_behind_mores_ideals }
 		x = 8
 		y = 6
@@ -2364,8 +2308,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_war_support = 0.1
@@ -2390,8 +2332,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = ENG_military_mobilization
 			add_stability = 0.02
@@ -2413,8 +2353,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = ENG_new_model_army
 		}
@@ -2432,8 +2370,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -2483,8 +2419,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = { 
 			army_experience= 10
 			add_doctrine_cost_reduction = {
@@ -2508,8 +2442,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			
@@ -2547,8 +2479,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_research_slot = 1
 		}
@@ -2566,8 +2496,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = ENG_good_old_cause
@@ -2587,8 +2515,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			swap_ruler_traits = { remove = long_parliament add = rump_parliament }
 		}
@@ -2607,7 +2533,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
 
 		completion_reward = {
 			remove_ideas = ENG_civil_unrest
@@ -2617,18 +2542,12 @@ focus = {
 
 	focus = {
 		id = eng_align_aristocrats
-		icon = GFX_focus_eng_the_kings_party
-		prerequisite = {focus = eng_purge_parliament }
-		relative_position_id = eng_rally_behind_roundhead_forces
+		icon = GFX_noble_icon
 		x = 2
 		y = 2
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = {focus = eng_purge_parliament }
 		cost = 5
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = ENG_align_aristocrats 
@@ -2663,6 +2582,10 @@ focus = {
 				}
 			}
 		}
+
+		ai_will_do = {
+			factor = 10
+		}
 	}
 
 	focus = {
@@ -2677,8 +2600,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		bypass = {
 			SCO = { exists = no 
@@ -2719,8 +2640,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		bypass = {
 			IRE = { exists = no 
 				is_ai = no
@@ -2760,8 +2679,6 @@ focus = {
 			factor = 10
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			set_politics = {
 				ruling_party = aristocracy
@@ -2772,18 +2689,13 @@ focus = {
 
 	focus = {
 		id = eng_cromwellian_restoration
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = { focus = eng_proclaim_commonwealth }
+		icon = GFX_richard_cromwell_icon
 		x = -1
 		y = 5
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = { focus = eng_proclaim_commonwealth }
+
 		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			set_politics = {
@@ -2800,67 +2712,64 @@ focus = {
 				}
 			}
 		}
-	}
-
-	focus = {
-		id = eng_absolute_dictatorship
-		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = {focus = eng_cromwellian_restoration }
-		x = -1
-		y = 6
-		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
+	}
 
-		available_if_capitulated = yes
+	focus = {
+		id = eng_absolute_dictatorship
+		icon = GFX_generic_noble
+		x = -1
+		y = 6
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = {focus = eng_cromwellian_restoration }
+
+		cost = 10
 
 		completion_reward = {
 			add_ideas = ENG_guidance_of_the_lord_protector
 			add_political_power = 150
 		}
-	}
-
-	focus = {
-		id = eng_tackle_the_archenemy
-		icon = GFX_focus_focus_fra_orleans_restoration
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = {focus = eng_cromwellian_restoration focus = eng_hobbes_ideals  }
-		x = 1
-		y = 6
-		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
+	}
 
-		available_if_capitulated = yes
+	focus = {
+		id = eng_tackle_the_archenemy
+		icon = GFX_kill_france
+		x = 1
+		y = 6
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = {focus = eng_cromwellian_restoration focus = eng_hobbes_ideals }
+
+		cost = 10
 
 		completion_reward = {
 			create_wargoal = {
-		    type = annex_everything
-		    target = FRA
+				type = annex_everything
+				target = FRA
 			}
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
 	focus = {
 		id = eng_a_new_sphere
 		icon = GFX_goal_generic_alliance
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = {focus = eng_cromwellian_restoration focus = eng_hobbes_ideals  }
-		mutually_exclusive = { focus = eng_join_sweden}
 		x = 0
 		y = 7
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = {focus = eng_cromwellian_restoration focus = eng_hobbes_ideals }
+		mutually_exclusive = { focus = eng_join_sweden }
+
 		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			set_rule = {
@@ -2868,46 +2777,48 @@ focus = {
 			}
 			create_faction = "Anglosphere"
 		}
-	}
-
-	focus = {
-		id = eng_join_sweden
-		icon = GFX_sweden_flag
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = {focus = eng_cromwellian_restoration focus = eng_hobbes_ideals  }
-		mutually_exclusive = { focus = eng_a_new_sphere}
-		x = 2
-		y = 7
-		cost = 10
 
 		ai_will_do = {
 			factor = 10
 		}
+	}
 
-		available_if_capitulated = yes
+	focus = {
+		id = eng_join_sweden
+		icon = GFX_agree_sweden
+		x = 2
+		y = 7
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = { focus = eng_cromwellian_restoration focus = eng_hobbes_ideals  }
+		mutually_exclusive = { focus = eng_a_new_sphere }
+
+		cost = 10
 
 		completion_reward = {
 			SWE = { country_event = generic.2 }
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
 	focus = {
 		id = eng_hobbes_ideals
 		icon = GFX_goal_tfv_strengthen_commonwealth_ties
-		relative_position_id = eng_rally_behind_roundhead_forces
-		prerequisite = {focus = eng_proclaim_commonwealth }
 		x = 3
 		y = 5
+		relative_position_id = eng_rally_behind_roundhead_forces
+		prerequisite = {focus = eng_proclaim_commonwealth }
+
 		cost = 10
-
-		ai_will_do = {
-			factor = 10
-		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = ENG_leviathan
+		}
+
+		ai_will_do = {
+			factor = 10
 		}
 	}
 
@@ -2923,8 +2834,6 @@ focus = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 		}
@@ -2945,9 +2854,6 @@ focus = {
 		ai_will_do = {
 			base = 10
 		}
-
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_ideas = { ENG_appease_parliament }
 		}
@@ -2957,42 +2863,32 @@ focus = {
 	focus = {
 		id = eng_limit_parliament
 		icon = GFX_goal_generic_political_pressure
-		prerequisite = {focus = eng_go_with_the_whigs focus = eng_go_with_the_tories }
-		mutually_exclusive = { focus = eng_appease_parliament}
-		relative_position_id = eng_rearrange_parliament
 		x = 9
 		y = 2
+		relative_position_id = eng_rearrange_parliament
+		prerequisite = { focus = eng_go_with_the_whigs focus = eng_go_with_the_tories }
+		mutually_exclusive = { focus = eng_appease_parliament }
+
 		cost = 10
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = { ENG_limit_parliament }
 		}
 
+		ai_will_do = {
+			factor = 2
+		}
 	}
 
-### 
-
-
-
-
-###
-
-focus = {
+	focus = {
 		id = eng_indoctrination
 		icon = GFX_goal_martyrs
-		prerequisite = {focus = eng_limit_parliament }
-		relative_position_id = eng_limit_parliament
 		x = -1
 		y = 1
-		cost = 10
+		relative_position_id = eng_limit_parliament
+		prerequisite = { focus = eng_limit_parliament }
 
-		available_if_capitulated = yes
+		cost = 10
 
 		completion_reward = {
 			add_ideas = indoctrination_focus
@@ -3011,8 +2907,6 @@ focus = {
 		y = 1
 		cost = 10
 
-		available_if_capitulated = yes
-
 		completion_reward = {			
 			add_ideas = military_youth_focus
 			army_experience = 20
@@ -3030,8 +2924,6 @@ focus = {
 		x = 0
 		y = 2
 		cost = 10
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = why_we_fight_focus
@@ -3060,8 +2952,6 @@ focus = {
 		y = 3
 		cost = 10
 
-		available_if_capitulated = yes
-
 		available = {
 			neutrality > 0.49
 			has_government = neutrality
@@ -3085,11 +2975,6 @@ focus = {
 		y = 11
 		cost = 10
 
-		available_if_capitulated = yes
-
-		available = {
-		}
-
 		completion_reward = {
 			add_state_claim = 15
 			add_state_claim = 19
@@ -3107,8 +2992,6 @@ focus = {
 		x = 29
 		y = 12
 		cost = 10
-
-		available_if_capitulated = yes
 
 		available = {
 			controls_state = 16
@@ -3241,43 +3124,45 @@ focus = {
 	focus = {
 		id = eng_legitimize_queen_anne
 		icon = GFX_goal_generic_balance
-		relative_position_id = eng_go_with_the_whigs
 		x = -2
 		y = 5
 		cost = 10
 		prerequisite = { focus = eng_strenghten_church_of_england }
-
-		ai_will_do = {
-			factor = 10
-		}
+		relative_position_id = eng_go_with_the_whigs
 
 		available = {
 			has_country_leader = {
-			    name = "Queen Anne"
-			    ruling_only = yes
+				character = ENG_Queen_Anne
+				ruling_only = yes
 			}
 		}
 		
-		available_if_capitulated = yes
-
 		completion_reward = {
 			add_political_power = 100
 			add_stability = 0.15
 		}
-	}
 
-###
+		ai_will_do = {
+			factor = 10
+		}
+	}
 
 	focus = {
 		id = eng_queen_annes_revenge
 		icon = GFX_anne_gaming_banana
+		x = 0
+		y = 1
+		relative_position_id = eng_legitimize_queen_anne
 		prerequisite = { focus = eng_legitimize_queen_anne }
-		relative_position_id = eng_go_with_the_whigs
-		x = -2
-		y = 6
-		cost = 10
 
-		available_if_capitulated = yes
+		available = {
+			has_country_leader = {
+				character = ENG_Queen_Anne
+				ruling_only = yes
+			}
+		}
+
+		cost = 10
 
 		completion_reward = {
 			swap_ruler_traits = { remove = inexperienced_monarch add = queen_of_the_people }
@@ -3288,7 +3173,7 @@ focus = {
 #FOREIGN POLICY TREE#
 #####################
 
-focus = {
+	focus = {
 		id = eng_foreign_policy
 		icon = GFX_focus_eng_global_defense
 		x = 6
@@ -3296,8 +3181,6 @@ focus = {
 		cost = 10
 		relative_position_id = eng_go_with_the_whigs
 		prerequisite = { focus = eng_limit_parliament focus = eng_appease_parliament }
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 50
@@ -3316,8 +3199,6 @@ focus = {
 		y = 3
 		cost = 5
 		relative_position_id = eng_go_with_the_whigs
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 10
@@ -3383,9 +3264,7 @@ focus = {
 		}
 	}
 
-##
-
-focus = {
+	focus = {
 		id = eng_spanish_succession_crisis
 		icon = GFX_focus_spa_unify_the_nationalist_front
 		prerequisite = { focus = eng_strenghten_church_of_england }
@@ -3402,16 +3281,12 @@ focus = {
 		    }
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			country_event = england.6
 		}
 	}
 
-##
-
-focus = {
+	focus = {
 		id = eng_gather_war_support
 		icon = GFX_officer
 		x = -1
@@ -3439,8 +3314,6 @@ focus = {
 		y = 1
 		cost = 5
 		relative_position_id = eng_gather_war_support
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 20
@@ -3474,8 +3347,6 @@ focus = {
 		cost = 5
 		relative_position_id = eng_gather_war_support
 
-		available_if_capitulated = yes
-
 		ai_will_do = {
 			factor = 20
 		}
@@ -3504,8 +3375,6 @@ focus = {
 		y = 1
 		cost = 5
 		relative_position_id = eng_spanish_succession_crisis
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			add_ideas = extensive_conscription
@@ -3565,143 +3434,133 @@ focus = {
 		}
 	}
 
-##
+	focus = {
+		id = eng_anglo_frech_military_cooperation
+		icon = GFX_goal_anglo_french_military_pact
+		prerequisite = { focus = eng_prevent_habsburg_hegemony }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = eng_prevent_habsburg_hegemony
 
-focus = {
-	id = eng_anglo_frech_military_cooperation
-	icon = GFX_goal_anglo_french_military_pact
-	prerequisite = { focus = eng_prevent_habsburg_hegemony }
-	x = 0
-	y = 1
-	cost = 5
-	relative_position_id = eng_prevent_habsburg_hegemony
-
-	available_if_capitulated = yes
-
-	ai_will_do = {
-		factor = 20
-		modifier = {
-	        add = 80
-	        date > 1701.01.01
-	    }
-	}
-
-	completion_reward = {
-		FRA = { country_event = england.16 }
-	}
-}
-
-focus = {
-	id = eng_enforce_treaty_of_london
-	icon = GFX_goal_generic_major_war
-	prerequisite = { focus = eng_anglo_frech_military_cooperation }
-	x = 0
-	y = 1
-	cost = 5
-	relative_position_id = eng_anglo_frech_military_cooperation
-
-	available_if_capitulated = yes
-
-	ai_will_do = {
-		factor = 20
-		modifier = {
-	        add = 80
-	        date > 1701.01.01
-	    }
-	}
-
-	bypass = {
-		has_war_with = AUS
-	}
-
-	completion_reward = {
-		create_wargoal = {
-			target = AUS
-			type = annex_everything
-		}
-		add_ai_strategy = {
-	    	type = declare_war
-	    	id = AUS
-	    	value = 200
-		}
-	}
-}
-
-focus = {
-	id = eng_balance_of_power_achieved
-	icon = GFX_goal_generic_neutrality_focus
-	prerequisite = { focus = eng_enforce_treaty_of_london }
-	mutually_exclusive = { focus = eng_ultimatum_to_france }
-	x = 0
-	y = 1
-	cost = 5
-	relative_position_id = eng_enforce_treaty_of_london
-
-	available = {
-		NOT = { has_war_with = AUS }
-		NOT = { has_war_with = FRA }
-		has_global_flag = habsburg_alliance_defeated_flag
-	}
-
-	available_if_capitulated = yes
-
-	ai_will_do = {
-		factor = 20
-		modifier = {
-	        add = 80
-	        date > 1701.01.01
-	    }
-	}
-
-	completion_reward = {
-	}
-}
-
-focus = {
-	id = eng_quadruple_alliance
-	icon = GFX_goal_quadruple_alliance
-	prerequisite = { focus = eng_balance_of_power_achieved focus = eng_ultimatum_to_france }
-	x = 0
-	y = 1
-	cost = 5
-	relative_position_id = eng_balance_of_power_achieved
-
-	available = {
-		NOT = { has_war_with = AUS }
-		NOT = { has_war_with = FRA }
-		NOT = { has_war_with = HOL }
-		OR = {
-			has_completed_focus  = eng_balance_of_power_achieved
-			has_global_flag = FRA_defeated_flag
-		}
-	}
-
-	available_if_capitulated = yes
-
-	ai_will_do = {
-		factor = 20
-		modifier = {
-	        add = 80
-	        date > 1701.01.01
-	    }
-	}
-
-	completion_reward = {
-		if = {
-			limit = {
-				ENG = { is_faction_leader = yes }
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 80
+				date > 1701.01.01
 			}
-			dismantle_faction = yes
 		}
-		create_faction = "Quadruple Alliance"
-		AUS = { country_event = england.19 }
-		HOL = { country_event = england.19 }
-		FRA = { country_event = england.19 }
-		give_guarantee = ITA
-	}
-}
 
-focus = {
+		completion_reward = {
+			FRA = { country_event = england.16 }
+		}
+	}
+
+	focus = {
+		id = eng_enforce_treaty_of_london
+		icon = GFX_goal_generic_major_war
+		prerequisite = { focus = eng_anglo_frech_military_cooperation }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = eng_anglo_frech_military_cooperation
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 80
+				date > 1701.01.01
+			}
+		}
+
+		bypass = {
+			has_war_with = AUS
+		}
+
+		completion_reward = {
+			create_wargoal = {
+				target = AUS
+				type = annex_everything
+			}
+			add_ai_strategy = {
+				type = declare_war
+				id = AUS
+				value = 200
+			}
+		}
+	}
+
+	focus = {
+		id = eng_balance_of_power_achieved
+		icon = GFX_goal_generic_neutrality_focus
+		prerequisite = { focus = eng_enforce_treaty_of_london }
+		mutually_exclusive = { focus = eng_ultimatum_to_france }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = eng_enforce_treaty_of_london
+
+		available = {
+			NOT = { has_war_with = AUS }
+			NOT = { has_war_with = FRA }
+			has_global_flag = habsburg_alliance_defeated_flag
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 80
+				date > 1701.01.01
+			}
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = eng_quadruple_alliance
+		icon = GFX_goal_quadruple_alliance
+		prerequisite = { focus = eng_balance_of_power_achieved focus = eng_ultimatum_to_france }
+		x = 0
+		y = 1
+		cost = 5
+		relative_position_id = eng_balance_of_power_achieved
+
+		available = {
+			NOT = { has_war_with = AUS }
+			NOT = { has_war_with = FRA }
+			NOT = { has_war_with = HOL }
+			OR = {
+				has_completed_focus  = eng_balance_of_power_achieved
+				has_global_flag = FRA_defeated_flag
+			}
+		}
+
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				add = 80
+				date > 1701.01.01
+			}
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					ENG = { is_faction_leader = yes }
+				}
+				dismantle_faction = yes
+			}
+			create_faction = "Quadruple Alliance"
+			AUS = { country_event = england.19 }
+			HOL = { country_event = england.19 }
+			FRA = { country_event = england.19 }
+			give_guarantee = ITA
+		}
+	}
+
+	focus = {
 		id = eng_seek_dutch_support
 		icon = GFX_focus_hol_oranje_boven
 		prerequisite = { focus = eng_embargo_france focus = eng_prevent_habsburg_hegemony }
@@ -3709,8 +3568,6 @@ focus = {
 		y = 1
 		cost = 5
 		relative_position_id = eng_embargo_france
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 20
@@ -3728,9 +3585,7 @@ focus = {
 		}
 	}
 
-##
-
-focus = {
+	focus = {
 		id = eng_seek_austrian_support
 		icon = GFX_focus_ger_revive_kaiserreich
 		prerequisite = { focus = eng_embargo_france}
@@ -3738,8 +3593,6 @@ focus = {
 		y = 1
 		cost = 5
 		relative_position_id = eng_embargo_france
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 20
@@ -3757,19 +3610,15 @@ focus = {
 		}
 	}
 
-##
-
-focus = {
+	focus = {
 		id = eng_reiinstate_grand_alliance
 		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = eng_seek_austrian_support}
-		prerequisite = { focus = eng_seek_dutch_support}
+		prerequisite = { focus = eng_seek_austrian_support }
+		prerequisite = { focus = eng_seek_dutch_support }
 		x = -1
 		y = 2
 		cost = 5
 		relative_position_id = eng_embargo_france
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 20
@@ -3792,9 +3641,7 @@ focus = {
 		}		
 	}
 
-##
-
-focus = {
+	focus = {
 		id = eng_ultimatum_to_france
 		icon = GFX_focus_ger_break_anglo_french_colonial_hegemony
 		prerequisite = { focus = eng_reiinstate_grand_alliance focus = eng_enforce_treaty_of_london }
@@ -3809,7 +3656,6 @@ focus = {
 			date > 1701.04.01
 		}
 
-		available_if_capitulated = yes
 		bypass = {
 			has_war_with = FRA
 		}
@@ -3855,12 +3701,11 @@ focus = {
 		}
 		will_lead_to_war_with = FRA
 	}
-##
 
-focus = {
+	focus = {
 		id = eng_invite_portugal
 		icon = GFX_agree_portugal
-		prerequisite = { focus = eng_ultimatum_to_france}
+		prerequisite = { focus = eng_ultimatum_to_france }
 		x = 0
 		y = 2
 		cost = 10
@@ -3883,42 +3728,36 @@ focus = {
 			}
 		}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			POR = { country_event = generic.5 }
 		}
 	}
 
-###
-
-focus = {
+	focus = {
 		id = eng_alliance_prussia
 		icon = GFX_agree_prussia
-		prerequisite = { focus = eng_ultimatum_to_france}
+		prerequisite = { focus = eng_ultimatum_to_france }
 		x = 1
 		y = 1
 		cost = 10
 		relative_position_id = eng_ultimatum_to_france
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			PRS = { country_event = generic.5 }
 		}
 	}
 
-focus = {
+	focus = {
 		id = eng_befriend_savoy
 		icon = GFX_goal_savoie
-		prerequisite = { focus = eng_ultimatum_to_france}
+		prerequisite = { focus = eng_ultimatum_to_france }
 		x = -1
 		y = 1
 		cost = 10
 		relative_position_id = eng_ultimatum_to_france
 
 		bypass = {
-			ITA = { is_in_faction_with = ENG}
+			ITA = { is_in_faction_with = ENG }
 		}
 
 		available = {
@@ -3930,7 +3769,6 @@ focus = {
 			ITA = { country_event = england.11 }
 		}
 	}
-###
 
 #focus = {
 #		id = eng_ignite_queen_annes_war
@@ -3940,9 +3778,7 @@ focus = {
 #		y = 0
 #		cost = 10
 #		relative_position_id = eng_ultimatum_to_france
-#
-#		available_if_capitulated = yes
-#
+
 #		available = {
 #			has_war_with = FRA
 #		}
@@ -3952,9 +3788,9 @@ focus = {
 #	}
 
 
-##########
-#DOMESTIC POLICY
-#########
+#####################
+## DOMESTIC POLICY ##
+#####################
 
 ###NAVY###
 
@@ -4091,9 +3927,6 @@ focus = {
 		relative_position_id = eng_naval_effort
 		cost = 10
 
-		available_if_capitulated = yes
-
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -4108,7 +3941,7 @@ focus = {
 		}
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 20
 			add_tech_bonus = {
 				name = sub_op_bonus
 				bonus = 1.0
@@ -4132,9 +3965,6 @@ focus = {
 		relative_position_id = eng_naval_effort
 		cost = 10
 
-		available_if_capitulated = yes
-
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -4149,7 +3979,7 @@ focus = {
 		}
 
 		completion_reward = {
-			navy_experience = 25
+			navy_experience = 20
 			add_tech_bonus = {
 				name = fleet_in_being_bonus
 				bonus = 1.0
@@ -4167,9 +3997,6 @@ focus = {
 		y = 1
 		relative_position_id = eng_flexible_navy
 		cost = 10
-
-		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 1
@@ -4203,9 +4030,6 @@ focus = {
 		y = 1
 		relative_position_id = eng_large_navy
 		cost = 10
-
-		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 1
@@ -4241,9 +4065,6 @@ focus = {
 		relative_position_id = eng_submarine_effort
 		cost = 10
 
-		available_if_capitulated = yes
-
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -4277,9 +4098,6 @@ focus = {
 		relative_position_id = eng_cruiser_effort
 		cost = 5
 
-		available_if_capitulated = yes
-
-
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -4303,6 +4121,7 @@ focus = {
 			}
 		}
 	}
+
 	focus = {
 		id = eng_battleship_effort
 		icon = GFX_goal_generic_navy_battleship
@@ -4311,9 +4130,6 @@ focus = {
 		y = 1
 		relative_position_id = eng_large_navy
 		cost = 10
-
-		available_if_capitulated = yes
-
 
 		ai_will_do = {
 			factor = 1
@@ -4339,6 +4155,7 @@ focus = {
 			}
 		}
 	}
+
 	focus = {
 		id = eng_naval_exercises
 		icon = GFX_goal_generic_navy_carrier
@@ -4347,8 +4164,6 @@ focus = {
 		y = 1
 		relative_position_id = eng_battleship_effort
 		cost = 10
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			factor = 1
@@ -4367,6 +4182,7 @@ focus = {
 			navy_experience = 30
 		}
 	}
+
 	focus = {
 		id = eng_britannia_rule_the_waves
 		icon = GFX_focus_eng_the_sun_never_sets
@@ -4375,9 +4191,6 @@ focus = {
 		y = 4
 		relative_position_id = eng_naval_effort
 		cost = 10
-
-		available_if_capitulated = yes
-
 
 		available = {
 			any_state = {
@@ -4411,11 +4224,10 @@ focus = {
 	focus = {
 		id = eng_the_anglo_dutch_union
 		icon = GFX_goal_anglo_dutch_union
-		prerequisite = { focus = eng_go_with_the_whigs }
-		x = -9
+		x = -12
 		y = 1
-		cost = 8
 		relative_position_id = eng_go_with_the_whigs 
+		prerequisite = { focus = eng_go_with_the_whigs }
 
 		available = {
 			OR = {
@@ -4435,9 +4247,10 @@ focus = {
 					}
 				}
 				HOL = { is_subject_of = ENG }	
-			}
-			
+			}	
 		}
+
+		cost = 5
 
 		completion_reward = {
 			add_stability = 0.05
@@ -4590,8 +4403,6 @@ focus = {
 		cost = 10
 		relative_position_id = eng_master_of_india 
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			create_wargoal = {
 			    type = annex_everything
@@ -4608,8 +4419,6 @@ focus = {
 		y = 1
 		cost = 10
 		relative_position_id = eng_master_of_india 
-
-		available_if_capitulated = yes
 
 		completion_reward = {
 			create_wargoal = {
@@ -4636,8 +4445,6 @@ focus = {
 			date > 1773.12.16
 		}
 
-		available_if_capitulated = yes
-
 		ai_will_do = {
 			base = 4000
 		}
@@ -4660,8 +4467,6 @@ focus = {
 		available = {
 			date > 1773.12.16
 		}
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			base = 4000
@@ -4699,8 +4504,6 @@ focus = {
 			date > 1773.12.16
 		}
 
-		available_if_capitulated = yes
-
 		ai_will_do = {
 			base = 4000
 		}
@@ -4737,8 +4540,6 @@ focus = {
 			date > 1773.12.16
 		}
 
-		available_if_capitulated = yes
-
 		ai_will_do = {
 			base = 4000
 		}
@@ -4769,8 +4570,6 @@ focus = {
 		available = {
 			date > 1773.12.16
 		}
-
-		available_if_capitulated = yes
 
 		ai_will_do = {
 			base = 4000
@@ -4806,8 +4605,6 @@ focus = {
 			date > 1775.4.1
 		}
 
-		available_if_capitulated = yes
-
 		ai_will_do = {
 			factor = 10
 		}
@@ -4816,5 +4613,4 @@ focus = {
 			USA = { country_event = usa.1 }
 		}
 	}
-
 }

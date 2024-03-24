@@ -17,6 +17,8 @@ add_ideas = {
 
 set_convoys = 5
 
+recruit_character = KYR_Shah_Niyaz_Khan
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1698.1.1"
@@ -25,8 +27,8 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 20
+	democratic = 0
 	communism = 0
 	neutrality = 70
-	aristocracy = 10
+	aristocracy = 30
 }

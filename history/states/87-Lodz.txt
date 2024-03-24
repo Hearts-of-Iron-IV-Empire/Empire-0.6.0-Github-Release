@@ -13,7 +13,7 @@ state={
 			9508 1 
 		}
 		victory_points = { # Kalisz
-			9439 20
+			9546 20
 		}
 		1798.1.1 = {
 			owner = PRS

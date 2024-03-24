@@ -4,6 +4,17 @@ oob = "PAP_1699"
 
 set_research_slots = 2
 
+add_ideas = {
+	PAP_the_holy_state
+	PAP_volunteer_army
+	PAP_decreasing_influence
+	
+	# Laws and Religion
+	catholic
+	kingdom
+	great_turkish_war
+	partial_economic_mobilisation
+}
 
 # Starting tech
 set_technology = {
@@ -51,18 +62,6 @@ set_autonomy = {
 	target = PRM
 	autonomous_state = autonomy_puppet
 	freedom_level = 0.4
-}
-
-add_ideas = {
-	PAP_the_holy_state
-	PAP_volunteer_army
-	PAP_decreasing_influence
-	
-	# Laws and Religion
-	catholic
-	kingdom
-	great_turkish_war
-	partial_economic_mobilisation
 }
 
 set_convoys = 30

@@ -1,11 +1,11 @@
 state={
 	id=1053
 	name="STATE_1053"
-	manpower = 2000
+	manpower = 13000
 	state_category = town
 
 	history={
-		owner = POL
+		owner = PRS
 		add_core_of = POL
 		add_claim_by = PRS
 		victory_points = { # Elbląg
@@ -13,9 +13,6 @@ state={
 		}
 		buildings = {
 			infrastructure = 2
-			3380 = {
-				naval_base = 1
-			}
 		}
 	}
 

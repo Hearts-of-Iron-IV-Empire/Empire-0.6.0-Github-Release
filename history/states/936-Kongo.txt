@@ -11,17 +11,17 @@ state={
 	history={
 		owner = COG
 		add_core_of = COG
-		victory_points = {
-			12925 10 
+		victory_points = { # M'Banza Kongo
+			12925 50
 		}
-		victory_points = {
+		victory_points = { # Pemba
 			10025 1 
 		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			arms_factory = 1
 		}
-
 	}
 
 	provinces={

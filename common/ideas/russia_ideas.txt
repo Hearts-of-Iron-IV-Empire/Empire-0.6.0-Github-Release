@@ -1318,7 +1318,6 @@ ideas = {
 			}
 
 		}
-		
 		RUS_outdated_military_1 = {
 
 			allowed = {
@@ -1544,8 +1543,6 @@ ideas = {
 			picture = chi_army_corruption2
 
 			modifier = {
-				resistance_growth_on_our_occupied_states = 0.25
-				resistance_target_on_our_occupied_states = 0.25
 				army_attack_factor = 0.05
 				army_core_attack_factor = 0.20
 				army_core_defence_factor = 0.20

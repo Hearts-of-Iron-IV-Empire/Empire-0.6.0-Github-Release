@@ -16,9 +16,6 @@ state={
 		victory_points = { # Breslau
 			9570 10 
 		}
-		victory_points = { # Wschowa
-			9470 5
-		}
 		#victory_points = {
 		#	552 1
 		#}

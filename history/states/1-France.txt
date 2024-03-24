@@ -7,6 +7,8 @@ state={
 
 	history={
 		owner = GEN
+		add_core_of = GEN
+		add_core_of = COR
 		victory_points = { 3838 1 }
 		buildings = {
 			infrastructure = 2
@@ -15,8 +17,6 @@ state={
 				naval_base = 3
 			}
 		}
-		add_core_of = GEN
-		add_core_of = COR
 		1765.1.1 = {
 			owner = FRA
 			add_core_of = FRA

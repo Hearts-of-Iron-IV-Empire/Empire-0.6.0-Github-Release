@@ -405,7 +405,7 @@ TUR_balkans = {
 								}
 							}
 							state_event = {
-								id = ottomans.25
+								id = ottomans.28
 								trigger_for = ROOT
 							}			
 							save_global_event_target_as = TUR_bandit_event_target
@@ -415,7 +415,7 @@ TUR_balkans = {
 				}
 				40 = { # Factory dmg
 					country_event = {
-						id = ottomans.26
+						id = ottomans.29
 					}
 				}
 			}

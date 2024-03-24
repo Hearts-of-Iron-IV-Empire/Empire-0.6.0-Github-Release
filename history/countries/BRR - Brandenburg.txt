@@ -43,7 +43,7 @@ set_technology = {
 PRS = {
 	set_autonomy = {
 		target = BRR
-		autonomous_state = autonomy_personal_union
+		autonomous_state = autonomy_empire_personal_union
 	}
 }
 

@@ -61,8 +61,8 @@ set_politics = {
 	ruling_party = neutrality
 }
 set_popularities = {
-	democratic = 35
-	fascism = 15
-	communism = 15
-	neutrality = 35
+	aristocracy = 35
+	fascism = 0
+	communism = 0
+	neutrality = 65
 }

@@ -2290,19 +2290,6 @@ focus_tree = {
 		completion_reward = {
 			every_other_country = {
 				limit = {
-					any_state = {
-						is_owned_by = PREV
-						is_on_continent = europe
-					}
-					OR = {
-						has_government = neutrality
-						has_government = aristocracy
-					}
-				}
-				add_ideas = SWE_revolutionary_sentiment_export
-			}
-			every_other_country = {
-				limit = {
 					is_major = yes
 					any_state = {
 						is_owned_by = PREV

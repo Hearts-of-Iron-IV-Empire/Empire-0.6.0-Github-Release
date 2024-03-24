@@ -1,30 +1,20 @@
-﻿###########################
-# Hungary Events
-###########################
+﻿########################
+#### Hungary Events ####
+########################
 
 add_namespace = hungary
 
-#Rákóczi's War of Independence
+# Rákóczi's War of Independence
 
-#
-country_event = { # Stand with Austria
+country_event = { # Triggered by France only
 	id = hungary.1
 	title = hungary.1.t
 	desc = hungary.1.d
 
+	is_triggered_only = yes
 	fire_only_once = yes
-	trigger = {
-		tag = AUS
-		has_war_with = FRA
-		NOT = { has_global_flag = HUN_has_rebelled }
-		NOT = { has_global_flag = AUS_dual_monarchy }
-		NOT = { HUN = { is_puppet = yes } }
-	}
-	mean_time_to_happen = {
-    	days = 365
-	}
 
-	option = {
+	option = { # Let Hungary go
 		name = hungary.1.a
 
 		create_wargoal = {
@@ -61,6 +51,20 @@ country_event = { # Stand with Austria
 
 		hidden_effect = { news_event = { id = mod.7 days = 1 } }
 
+		43 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		45 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
 		70 = {
 			if = {
 				limit = { is_owned_by = AUS }
@@ -75,28 +79,14 @@ country_event = { # Stand with Austria
 				remove_core_of = AUS
 			}
 		}
-		664 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = HUN
-				remove_core_of = AUS
-			}
-		}
-		43 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = HUN
-				remove_core_of = AUS
-			}
-		}
-		154 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = HUN
-				remove_core_of = AUS
-			}
-		}
 		76 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
+		82 = {
 			if = {
 				limit = { is_owned_by = AUS }
 				add_core_of = HUN
@@ -117,6 +107,13 @@ country_event = { # Stand with Austria
 				remove_core_of = AUS
 			}
 		}
+		154 = {
+			if = {
+				limit = { is_owned_by = AUS }
+				add_core_of = HUN
+				remove_core_of = AUS
+			}
+		}
 		155 = {
 			if = {
 				limit = { is_owned_by = AUS }
@@ -130,7 +127,7 @@ country_event = { # Stand with Austria
 				remove_core_of = AUS
 			}
 		}
-		45 = {
+		664 = {
 			if = {
 				limit = { is_owned_by = AUS }
 				add_core_of = HUN
@@ -138,13 +135,6 @@ country_event = { # Stand with Austria
 			}
 		}
 		764 = {
-			if = {
-				limit = { is_owned_by = AUS }
-				add_core_of = HUN
-				remove_core_of = AUS
-			}
-		}
-		82 = {
 			if = {
 				limit = { is_owned_by = AUS }
 				add_core_of = HUN
@@ -160,12 +150,12 @@ country_event = { # Stand with Austria
 			transfer_state = 43
 			transfer_state = 70
 			transfer_state = 71
-			transfer_state = 664
-			transfer_state = 154
+			transfer_state = 73
 			transfer_state = 76
 			transfer_state = 83
 			transfer_state = 84
-			transfer_state = 73
+			transfer_state = 154
+			transfer_state = 664
 		}
 
 		HUN = {
@@ -210,7 +200,8 @@ country_event = { # Stand with Austria
 			}
 		}
 
-		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		hidden_effect = { 
+			news_event = { id = mod.7 days = 1 }
 		}
 
 		70 = {
@@ -326,19 +317,22 @@ country_event = { # Stand with Austria
 	}
 }
 
-# All out confrontation
-
+# All out confrontation, triggered in Austrian focus tree
 country_event = {
 	id = hungary.3
 	title = hungary.3.t
 	desc = hungary.3.d	
+
 	fire_only_once = yes
 	is_triggered_only = yes
 
 	option = {
 		name = hungary.3.a
 
-		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		hidden_effect = { 
+			news_event = { 
+				id = mod.7 days = 1 
+			}
 		}
 
 		create_wargoal = {
@@ -524,7 +518,10 @@ country_event = {
 			}
 		}
 
-		hidden_effect = { news_event = { id = mod.7 days = 1 }
+		hidden_effect = { 
+			news_event = { 
+				id = mod.7 days = 1 
+			}
 		}
 
 		70 = {
@@ -640,8 +637,7 @@ country_event = {
 	}
 }
 
-# Hungary sue for peace with austria 
-
+# Hungary sues for peace with austria 
 country_event = {
 	id = hungary.5
 	title = hungary.5.t
@@ -663,9 +659,10 @@ country_event = {
 			transfer_state = 45
 		}
 		ai_chance = {
-			factor = 75
+			base = 75
 		}
 	}
+
 	option = {
 		name = "We will never surrender!"
 		HUN = {
@@ -675,12 +672,12 @@ country_event = {
 			}
 		}
 		ai_chance = {
-			factor = 25
+			base = 25
 		}
 	}
 }
 
-country_event = {
+country_event = { # Austria lets Hungary go
 	id = hungary.6
 	title = hungary.6.t
 	desc = hungary.6.d
@@ -696,7 +693,7 @@ country_event = {
 	}
 }
 
-country_event = {
+country_event = { # Austria does not let Hungary go
 	id = hungary.7
 	title = hungary.7.t
 	desc = hungary.7.d

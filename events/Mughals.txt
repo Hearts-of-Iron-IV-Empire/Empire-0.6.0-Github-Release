@@ -728,7 +728,6 @@ country_event = {
 		name = mughal.14.a
 		RAJ = {
 			transfer_state = 961 # Mumbai
-			transfer_state = 1036 # Surat
 			transfer_state = 1038 # Madras
 			transfer_state = 1040 # English Bengal
 			transfer_state = 1041 # Karwar
@@ -748,6 +747,7 @@ country_event = {
 		RAJ = {	
 			declare_war_on = {
 				target = ENG
+				type = take_claimed_state
 			}
 			country_event = {
 				id = mughal.15
@@ -850,7 +850,6 @@ country_event = {
 		}
 		RAJ = {
 			transfer_state = 961 # Mumbai
-			transfer_state = 1036 # Surat
 			transfer_state = 1038 # Madras
 			transfer_state = 1040 # English Bengal
 			transfer_state = 1041 # Karwar
@@ -872,7 +871,6 @@ country_event = {
 		add_political_power = -80
 		RAJ = {
 			transfer_state = 961 # Mumbai
-			transfer_state = 1036 # Surat
 			transfer_state = 1038 # Madras
 			transfer_state = 1040 # English Bengal
 			transfer_state = 1041 # Karwar
@@ -926,6 +924,7 @@ country_event = {
 		add_political_power = 80
 		declare_war_on = {
 			target = ENG
+			type = take_claimed_state
 		}
 		ENG = {
 			country_event = {
@@ -1005,7 +1004,6 @@ country_event = {
 				days = 200
 			}
 			transfer_state = 961 # Mumbai
-			transfer_state = 1036 # Surat
 			transfer_state = 1038 # Madras
 			transfer_state = 1040 # English Bengal
 			transfer_state = 1041 # Karwar

@@ -115,7 +115,7 @@ country_event = {
 	}
 }
 
-# Queen Anne's Ascention
+# Queen Anne's Ascension
 country_event = {
 	id = england.3
 	title = england.3.t
@@ -130,23 +130,16 @@ country_event = {
 
 	option = {
 		name = england.3.a
-		if = {
-			limit = {
-				has_country_leader = {
-					character = ENG_William_III
-					ruling_only = yes
-				}
+		kill_country_leader = yes
+		hidden_effect = {
+			set_politics = {
+				ruling_party = neutrality
+				elections_allowed = no
 			}
-			kill_country_leader = yes
-			hidden_effect = {
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-			}
-			add_stability = -0.05
-			promote_character = ENG_Queen_Anne
 		}
+		add_stability = -0.05
+		add_political_power = -70
+		promote_character = ENG_Queen_Anne
 		hidden_effect = {
 			FRA = {
 				country_event = france.1
@@ -340,7 +333,7 @@ country_event = {
 
 	trigger = {
 		has_civil_war = yes
-		has_completed_focus = eng_go_with_radical_republicans
+		has_completed_focus = eng_down_with_the_king
 	}
 
 	option = {

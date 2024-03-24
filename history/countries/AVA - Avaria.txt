@@ -2,6 +2,10 @@ capital = 911
 
 oob = "Caucasian_minor_1699"
 
+add_ideas = {
+	sunni
+}
+
 set_technology = {
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -11,14 +15,32 @@ set_technology = {
 	tech_mountaineers = 1
 }
 
-add_ideas = {
-	sunni
+if = {
+	limit = {
+		OR = {
+			has_dlc = "Together for Victory"
+			has_dlc = "Man the Guns"
+		}
+	}
+	CAU = {
+		set_autonomy = {
+			target = AVA
+			autonomous_state = autonomy_colony
+			freedom_level = 0.4
+		}
+	}
+	else = {
+		puppet = AVA
+	}
 }
+
+recruit_character = AVA_Dugry_II
 
 set_politics = {
 	ruling_party = neutrality
 	elections_allowed = no
 }
+
 set_popularities = {
 	neutrality = 32
 	aristocracy = 68

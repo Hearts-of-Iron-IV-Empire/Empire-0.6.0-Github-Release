@@ -6,16 +6,14 @@ state={
 		owner = BRR
 		add_core_of = PRS
 		add_core_of = BRR
-		victory_points = {
+		victory_points = { # Berlin
 			6521 25 
 		}
-		victory_points = {
+		victory_points = { # Magdeburg
 			3522 5 
 		}
 		buildings = {
 			infrastructure = 3
-			arms_factory = 5
-			industrial_complex = 4
 		}
 	}
 

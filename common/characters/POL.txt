@@ -66,7 +66,7 @@ characters = {
         name = "Stanisław Leszczyński"
         portraits = {
             civilian = {
-                large = "GFX_Stanislaw"
+                large = "GFX_Stanisław_Leszczyński"
             }
         }
         country_leader = {
@@ -74,6 +74,11 @@ characters = {
             traits = { }
         }
     }
+
+################
+### Generals ###
+################
+
     POL_Adam_Mikołaj_Sieniawski = {
         name = "Adam Mikołaj Sieniawski"
         portraits = {
@@ -87,6 +92,54 @@ characters = {
             attack_skill = 2
             defense_skill = 3
             planning_skill = 3
+            logistics_skill = 2
+        }
+    }
+    POL_Stanisław_Rzewuski = {
+        name = "Stanisław Rzewuski"
+        portraits = {
+            army = {
+                large = "GFX_Stanisław_Rzewuski"
+            }
+        }
+        corps_commander = {
+            traits = { infantry_leader }
+            skill = 2
+            attack_skill = 2
+            defense_skill = 2
+            planning_skill = 2
+            logistics_skill = 2
+        }
+    }
+    POL_Marcin_Kątski = {
+        name = "Marcin Kątski"
+        portraits = {
+            army = {
+                large = "GFX_Marcin_Kątski"
+            }
+        }
+        corps_commander = {
+            traits = { skilled_staffer organizer }
+            skill = 3
+            attack_skill = 2
+            defense_skill = 3
+            planning_skill = 2
+            logistics_skill = 4
+        }
+    }
+    POL_Ludwik_Pociej = {
+        name = "Ludwik Pociej"
+        portraits = {
+            army = {
+                large = "GFX_Ludwik_Pociej"
+            }
+        }
+        corps_commander = {
+            traits = { cavalry_leader }
+            skill = 2
+            attack_skill = 3
+            defense_skill = 1
+            planning_skill = 2
             logistics_skill = 2
         }
     }
@@ -154,6 +207,11 @@ characters = {
             logistics_skill = 1
         }
     }
+    
+################
+### Advisors ###
+################
+
     POL_Berend_Lehmann = {
         name = "Berend Lehmann"
         portraits = {

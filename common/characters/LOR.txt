@@ -1,0 +1,14 @@
+characters = {
+    LOR_Leopold_the_Good = {
+        name = "Leopold the Good"
+        portraits = {
+            civilian = {
+                large = "GFX_Leopold_the_Good"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

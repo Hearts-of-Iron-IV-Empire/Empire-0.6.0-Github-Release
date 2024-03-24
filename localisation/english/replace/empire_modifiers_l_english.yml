@@ -41,7 +41,7 @@
  MODIFIER_ARMOR:0 "Cavalry"
  MODIFIER_LICENSE_ARMOR_PURCHASE_COST:0 "Cavalry license purchase cost"
  modifier_unit_cavalry_design_cost_factor:0 "Cavalry Unit Design Cost"
- modifier_unit_recon_design_cost_factor:0 "Cavalry Recon Detachment Unit Design Cost"
+ modifier_unit_recon_design_cost_factor:0 "Scout Unit Design Cost"
  modifier_army_sub_unit_cavalry_attack_factor:0 "Cavalry Attack"
  modifier_army_sub_unit_cavalry_defence_factor:0 "Cavalry Defence"
  modifier_army_sub_unit_cavalry_speed_factor:0 "Cavalry Speed"

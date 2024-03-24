@@ -7,8 +7,14 @@ state={
 
 	history={
 		owner = POR
+		victory_points = { # Quelimane
+			12971 5
+		}
 		buildings = {
 			infrastructure = 1
+			12971 = {
+				naval_base = 1
+			}
 		}
 	}
 

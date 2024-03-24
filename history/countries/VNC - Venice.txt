@@ -4,6 +4,19 @@ oob = "VNC_1699"
 
 set_research_slots = 3
 
+add_ideas = {
+	great_turkish_war
+	VNC_reliance_on_mercenaries
+	venetian_industry
+
+	# Laws and Religion
+	limited_conscription
+	export_focus
+	catholic
+	partial_economic_mobilisation
+}
+
+
 1700.03.03 = {
 	remove_ideas = great_turkish_war
 
@@ -42,19 +55,7 @@ if = {
 	}
 }
 
-set_convoys = 900
-
-add_ideas = {
-	great_turkish_war
-	VNC_reliance_on_mercenaries
-	venetian_industry
-
-	# Laws and Religion
-	limited_conscription
-	export_focus
-	catholic
-	partial_economic_mobilisation
-}
+set_convoys = 400
 
 VNC = {
 	add_opinion_modifier = { target = TUR modifier = Rivalry }

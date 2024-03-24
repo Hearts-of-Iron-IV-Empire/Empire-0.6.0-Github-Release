@@ -63,6 +63,8 @@ add_ideas = {
 	partial_economic_mobilisation
 }
 
+recruit_character = ALG_Umar_Pasha
+
 set_politics = {
 	ruling_party = neutrality
 	last_election = "1936.1.1"
@@ -76,11 +78,4 @@ set_popularities = {
 	communism = 0
 	neutrality = 60
 	aristocracy = 40
-}
-
-create_country_leader = {
-	name = "Umar Pasha"
-	desc = ""
-	picture = "gfx/leaders/Muslim/portrait_muslim_leader_4.dds"
-	ideology = despotism
 }

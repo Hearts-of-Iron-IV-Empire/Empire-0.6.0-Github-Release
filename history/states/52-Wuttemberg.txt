@@ -1,4 +1,3 @@
-
 state={
 	id=52
 	name="STATE_52"
@@ -9,21 +8,18 @@ state={
 
 	history={
 		owner = BAV
-		victory_points = {
-			692 20 
+		add_core_of = BAV
+		victory_points = { # Munich
+			692 50 
 		}
 		buildings = {
-			infrastructure = 4
+			infrastructure = 3
 			arms_factory = 2
-			industrial_complex = 1
+			industrial_complex = 2
 			692 = {
 				bunker = 4
-
 			}
-
 		}
-		add_core_of = BAV
-
 	}
 
 	provinces={

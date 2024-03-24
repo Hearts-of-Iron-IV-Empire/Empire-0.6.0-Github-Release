@@ -522,6 +522,9 @@ estate_interactions = {
 }
 royal_decrees = {
 	summon_the_estates = {
+
+		icon = generic_political_discourse
+
 		allowed = {
 			always = yes
 		}
@@ -554,6 +557,9 @@ royal_decrees = {
 		}
 	}
 	royal_decree_war_support = {
+
+		icon = generic_nationalism 
+
 		allowed = {
 			always = yes
 		}
@@ -586,7 +592,7 @@ royal_decrees = {
 	}
 	war_building_slot = {
 
-    	icon = generic_construction
+    	icon = nobility
 
         allowed = {
             always = yes
@@ -639,7 +645,7 @@ royal_decrees = {
     }
     lower_tax_burdens = {
 
-		icon = generic_industry
+		icon = POL_looming_peasants_strike
 
 		available = {
 			has_stability < 1.0
@@ -680,7 +686,7 @@ royal_decrees = {
 	}
 	confiscate_livestock = {
 
-		icon = generic_industry
+		icon = generic_cavalry
 
 		available = {
 			has_war = yes
@@ -719,10 +725,9 @@ royal_decrees = {
 	}
 	centralization_decree = {
 
-		icon = generic_industry
+		icon = generic_monarchy
 
 		available = {
-			has_war = yes
 			neutrality > 0.5
 		}
 

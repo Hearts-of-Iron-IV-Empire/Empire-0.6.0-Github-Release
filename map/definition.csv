@@ -3378,7 +3378,7 @@
 3377;43;186;133;land;false;hills;1
 3378;43;189;48;land;false;marsh;1
 3379;43;189;198;land;true;urban;1
-3380;43;192;13;land;true;plains;1
+3380;43;192;13;land;false;plains;1
 3381;43;192;218;land;false;plains;1
 3382;43;195;78;land;false;forest;6
 3383;43;195;128;land;false;plains;6

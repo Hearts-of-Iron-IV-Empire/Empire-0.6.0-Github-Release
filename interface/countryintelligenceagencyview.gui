@@ -492,7 +492,6 @@ guiTypes = {
 				spriteType ="GFX_tiled_paper_bg"
 			}
 			##made this window as a container for the zero-state of the operations list
-			##TODO put in text and polish, hook in code
 			containerWindowType = {
 				name = "no_operations_container"
 				position = { x = 0 y = 0 }

@@ -1,5 +1,9 @@
 characters = {
-    ############# Country Leaders #############
+
+###########################################
+############# Country Leaders #############
+########################################### 
+
     AUS_Leopold_I = { # 1658 - 1705
         name = "Leopold I"
         portraits = {
@@ -11,7 +15,7 @@ characters = {
             }
         }
         country_leader = {
-            expire = 1713.1.1
+            expire = 1705.1.1
             ideology = despotism
             traits = {}
         }
@@ -22,6 +26,21 @@ characters = {
             defense_skill = 2
             planning_skill = 1
             logistics_skill = 2
+        }
+    }
+    AUS_Joseph_I = { # 1705 - 1711
+        name = "Joseph I"
+        portraits = {
+            civilian = {
+                large = "GFX_Joseph_I"
+            }
+        }
+        country_leader = {
+            expire = 1711.1.1
+            ideology = despotism
+            traits = { 
+                reformer 
+            }
         }
     }
     AUS_Charles_VI = { # 1711 - 1740
@@ -73,7 +92,11 @@ characters = {
             traits = {}
         }
     }
-    ############# Field Marshals and Generals #############
+
+#######################################################
+############# Field Marshals and Generals #############
+#######################################################
+
     AUS_Eugene_of_Savoy = {
         name = "Eugene of Savoy"
         portraits = {

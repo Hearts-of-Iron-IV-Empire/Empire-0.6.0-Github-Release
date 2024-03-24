@@ -228,10 +228,10 @@ RUS_do_not_help_allies = { #Will not make Russia put it's army into Allied terri
 		#has_war_with = SWE
 		#}
 		POL = {
-		has_war_with = SWE
+			has_war_with = SWE
 		}
 		SAX = {
-		has_war_with = SWE
+			has_war_with = SWE
 		}
 	}
 	abort = {

@@ -1,9 +1,9 @@
-
 state={
 	id=468
 	name="STATE_468"
 	history={
 		owner = QUE
+		add_core_of = QUE
 		buildings = {
 			infrastructure = 2
 			arms_factory = 1
@@ -17,14 +17,12 @@ state={
 			10320 = {
 				bunker = 1
 			}
-
 		}
-		add_core_of = QUE
+		victory_points = { # Quebec
+			12149 50 
+		}
 		victory_points = {
 			4345 5 
-		}
-		victory_points = {
-			12149 15 
 		}
 		victory_points = {
 			7291 3 
@@ -35,7 +33,6 @@ state={
 		victory_points = {
 			10320 1 
 		}
-
 	}
 
 	provinces={

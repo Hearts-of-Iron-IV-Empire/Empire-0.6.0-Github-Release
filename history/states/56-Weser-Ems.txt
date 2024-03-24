@@ -4,18 +4,17 @@ state={
 
 	history={
 		owner = MUN
+		add_core_of = MUN
 		victory_points = {
 			247 1 
 		}
-		victory_points = {
-			11388 5 
+		victory_points = { # Munster
+			11388 50 
 		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2
-
 		}
-		add_core_of = MUN
 		1812.1.1 = {
 			owner = FRA
 		}

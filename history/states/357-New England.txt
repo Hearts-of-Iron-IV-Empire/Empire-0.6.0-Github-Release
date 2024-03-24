@@ -1,4 +1,3 @@
-
 state={
 	id=357
 	name="STATE_357"
@@ -16,12 +15,10 @@ state={
 			dockyard = 1
 			6732 = {
 				naval_base = 8
-
 			}
-			
 		}
-		victory_points = {
-			6732 20 
+		victory_points = { # Boston
+			6732 50 
 		}
 		victory_points = {
 			905 1 

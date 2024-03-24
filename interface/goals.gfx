@@ -612,53 +612,65 @@ spriteTypes = {
 		name = "GFX_ripped_flag_sweden"
 		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_betray_japan"
+		texturefile = "gfx/interface/goals/betray_japan.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_austrian_polish_agreement"
+		texturefile = "gfx/interface/goals/austrian_polish_agreement.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_lady_justice_icon"
+		texturefile = "gfx/interface/goals/lady_justice_icon.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_soldier_swedish"
+		texturefile = "gfx/interface/goals/soldier_swedish.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_queen_inchyeon"
+		texturefile = "gfx/interface/goals/goal_queen_inchyeon.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_korea_sign_document"
+		texturefile = "gfx/interface/goals/goal_korea_sign_document.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_famine"
+		texturefile = "gfx/interface/goals/goal_famine.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_korea_flag"
+		texturefile = "gfx/interface/goals/goal_korea_flag.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_goal_ming_flag"
+		texturefile = "gfx/interface/goals/goal_ming_flag.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_generic_lets_go_korea"
+		texturefile = "gfx/interface/goals/generic_lets_go_korea.dds"
 	}
+
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_richard_cromwell_icon"
+		texturefile = "gfx/interface/goals/richard_cromwell_icon.dds"
 	}
+	
 	SpriteType = {
-		name = "GFX_ripped_flag_sweden"
-		texturefile = "gfx/interface/goals/ripped_flag_sweden.dds"
+		name = "GFX_integrate_ireland"
+		texturefile = "gfx/interface/goals/integrate_ireland.dds"
 	}
 
 	SpriteType = {

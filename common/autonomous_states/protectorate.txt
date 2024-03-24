@@ -1,14 +1,15 @@
 autonomy_state = {
-	id = autonomy_protectorate #Dependent territory that enjoys autonomy over most of its internal affairs
+	id = autonomy_protectorate # Dependent territory that enjoys autonomy over most of its internal affairs
 	
-	min_freedom_level = 0.65
+	min_freedom_level = 0.80
+	use_overlord_color = no
 		
 	manpower_influence = 0.5
 	
 	rule = {
 		desc = "RULE_DESC_IS_A_SUBJECT"
 		
-		can_not_declare_war = yes
+		can_not_declare_war = no
 		can_decline_call_to_war = yes
 		can_be_spymaster = no
 		contributes_operatives = no

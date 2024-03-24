@@ -1032,8 +1032,6 @@ focus_tree = {
 		#search_filters = {
 		#}
 
-		available_if_capitulated = yes
-
 		completion_reward = {
 			declare_war_on = {
 				target = TUR
@@ -1044,6 +1042,7 @@ focus_tree = {
 				type = annex_everything
 			}
 		}
+		
 		ai_will_do = {
 			modifier = {
 				has_war = yes

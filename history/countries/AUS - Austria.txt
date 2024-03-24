@@ -202,6 +202,7 @@ if = {
 		basic_ship_hull_cruiser = 1
 		early_ship_hull_heavy = 1
 		coastal_defense_ships = 1
+		mtg_transport = 1
 	}
 }
 
@@ -316,7 +317,8 @@ AUS = {
 	add_opinion_modifier = { target = TUR modifier = Rivalry }
 }
 
-recruit_character = AUS_Leopold_I # Country Leader, Field Marhsal
+recruit_character = AUS_Leopold_I # Country leader (1685-1705), Field Marhsal
+recruit_character = AUS_Joseph_I # Country leader (1705-1711)
 recruit_character = AUS_Eugene_of_Savoy # Field Marshal
 recruit_character = AUS_Karl_von_Habsburg # Field Marshal
 recruit_character = AUS_Joseph_von_Habsburg # Field Marshal

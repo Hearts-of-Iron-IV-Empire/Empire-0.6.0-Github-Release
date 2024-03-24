@@ -690,28 +690,25 @@ focus_tree = {
 
 	focus = {
 		id = FRA_align_tuscany
-		icon = GFX_goal_generic_alliance
-		prerequisite = { focus = FRA_occupy_genoa focus = FRA_respect_genoa_neutrality focus = FRA_align_genoa }
 		x = -2
 		y = 1
-		cost = 5
 		relative_position_id = FRA_respect_genoa_neutrality
+		icon = GFX_goal_generic_alliance
+		prerequisite = { focus = FRA_occupy_genoa focus = FRA_respect_genoa_neutrality focus = FRA_align_genoa }
 		mutually_exclusive = { focus = FRA_respect_tuscany_neutrality focus = FRA_occupy_tuscany }
 
+		cost = 5
+
+		completion_reward = {
+			TUS = { country_event = generic.5 }
+		}
+		
 		ai_will_do = {
 			factor = 10
 			modifier = {
 				NOT = { FRA = { has_war_with = AUS } }
 				factor = 0
 			}
-		}
-
-		bypass = {
-
-		}
-
-		completion_reward = {
-			MTU = { country_event = generic.5 }
 		}
 	}
 
@@ -1272,14 +1269,92 @@ focus_tree = {
 	focus = {
 		id = FRA_secret_correspondence_hungary
 		icon = GFX_hungary
-		prerequisite = { focus = FRA_march_to_vienna}
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = FRA_march_to_vienna
+		prerequisite = { focus = FRA_march_to_vienna }
 
-		available = { has_war_with = AUS }
+		available = { 
+			has_war_with = AUS 
+			date > 1703.6.15
+			NOT = { 
+				has_global_flag = HUN_has_rebelled 
+				has_global_flag = AUS_dual_monarchy 
+				HUN = {
+					is_puppet_of = AUS
+				}
+			}
+			custom_trigger_tooltip = {
+				tooltip = hungarian_states_occupied_by_austria
+				43 = {
+					is_owned_and_controlled_by = AUS
+				}
+				70 = {
+					is_owned_and_controlled_by = AUS
+				}
+				71 = {
+					is_owned_and_controlled_by = AUS
+				}
+				73 = {
+					is_owned_and_controlled_by = AUS
+				}
+				76 = {
+					is_owned_and_controlled_by = AUS
+				}
+				83 = {
+					is_owned_and_controlled_by = AUS
+				}
+				154 = {
+					is_owned_and_controlled_by = AUS
+				}
+				664 = {
+					is_owned_and_controlled_by = AUS
+				}
+			}
+		}
 
+		cost = 10
+
+		bypass = {
+			OR = { 
+				country_exists = HUN
+				AUS = { has_global_flag = AUS_dual_monarchy }
+				AUS = { has_global_flag = AUS_dual_monarchy }
+			}
+			NOT = {
+				43 = {
+					is_owned_and_controlled_by = AUS
+				}
+				70 = {
+					is_owned_and_controlled_by = AUS
+				}
+				71 = {
+					is_owned_and_controlled_by = AUS
+				}
+				73 = {
+					is_owned_and_controlled_by = AUS
+				}
+				76 = {
+					is_owned_and_controlled_by = AUS
+				}
+				83 = {
+					is_owned_and_controlled_by = AUS
+				}
+				154 = {
+					is_owned_and_controlled_by = AUS
+				}
+				664 = {
+					is_owned_and_controlled_by = AUS
+				}
+			}
+		}
+
+		completion_reward = {
+			AUS = {
+				country_event = hungary.1
+			}
+		}
+		
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1289,21 +1364,6 @@ focus_tree = {
 			modifier = {
 				date > 1703.1.1
 				factor = 10
-			}
-		}
-
-
-		bypass = {
-			OR = { 
-				country_exists = HUN
-				AUS = { has_global_flag = AUS_dual_monarchy }
-				AUS = { has_global_flag = AUS_dual_monarchy }
-			}
-		}
-
-		completion_reward = {
-			AUS = {
-				country_event = hungary.1
 			}
 		}
 	}
@@ -1781,11 +1841,10 @@ focus_tree = {
 	focus = {
 		id = FRA_set_up_aragon
 		icon = GFX_goal_generic_dangerous_deal
-		prerequisite = { focus = FRA_crush_spain_now }
 		x = 0
 		y = 1
-		cost = 10
 		relative_position_id = FRA_crush_spain_now
+		prerequisite = { focus = FRA_crush_spain_now }
 
 		available = {
 			AND = {
@@ -1801,8 +1860,13 @@ focus_tree = {
 				177 = {
 				    is_controlled_by = FRA
 				}
+				878 = {
+					is_controlled_by = FRA
+				}
 			}
 		}
+
+		cost = 10
 
 		completion_reward = {	
 			country_event = france.14

@@ -1,0 +1,14 @@
+characters = {
+    ALG_Umar_Pasha = {
+        name = "Umar Pasha"
+        portraits = {
+            civilian = {
+                large = "GFX_portrait_muslim_leader_4"
+            }
+        }
+        country_leader = {
+            ideology = despotism
+            traits = {}
+        }
+    }
+}

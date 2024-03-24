@@ -5,17 +5,17 @@ state={
 		9557 9572 11529 
 	}
 	history={
+		owner = ANS
+		add_core_of = ANS
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		owner = ANS
-		add_core_of = ANS
-		victory_points = {
-			11529 1
+		victory_points = { # Rothenburg
+			9557 50
 		}
 		victory_points = {
-			9557 3
+			11529 1
 		}
 		1812.1.1 = {
 			owner = BAV

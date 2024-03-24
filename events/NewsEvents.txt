@@ -11573,57 +11573,59 @@ news_event = {
 }
 
 # Mexico occupies Texas - Remember the Alamo
-news_event = {
-	id = news.336
-	title = news.336.title
-	desc = news.336.desc
-	picture = GFX_news_event_047
+#news_event = {
+#	id = news.336
+#	title = news.336.title
+#	desc = news.336.desc
+#	picture = GFX_news_event_047
+#	
+#	major = yes
+#	
+#	is_triggered_only = yes
+#
+#	#trigger = {
+#	#	375 = { is_fully_controlled_by = MEX }
+#	#	MEX = { has_war_with = USA }
+#	#	NOT = { has_global_flag = remember_the_alamo }
+#	#}
+#	
+#	immediate = {
+#		set_global_flag = remember_the_alamo
+#	}
+#	
+#	mean_time_to_happen = {
+#		days = 2
+#	}
 	
-	major = yes
-	
-	trigger = {
-		375 = { is_fully_controlled_by = MEX }
-		MEX = { has_war_with = USA }
-		NOT = { has_global_flag = remember_the_alamo }
-	}
-	
-	immediate = {
-		set_global_flag = remember_the_alamo
-	}
-	
-	mean_time_to_happen = {
-		days = 2
-	}
-	
-	option = {
-		name = news.336.a
-		trigger = {
-			OR = {
-				TAG = MEX
-				is_in_faction_with = MEX
-			}
-		}
-	}
-	option = {
-		name = news.336.b
-		trigger = {
-			OR = {
-				TAG = USA
-				is_in_faction_with = USA
-			}
-		}
-	}
-	option = {
-		name = news.336.c
-		trigger = {
-			NOT = {
-				OR = {
-					TAG = MEX
-					is_in_faction_with = MEX
-					TAG = USA
-					is_in_faction_with = USA
-				}
-			}
-		}
-	}
-}
+#	option = {
+#		name = news.336.a
+#		trigger = {
+#			OR = {
+#				TAG = MEX
+#				is_in_faction_with = MEX
+#			}
+#		}
+#	}
+#	option = {
+#		name = news.336.b
+#		trigger = {
+#			OR = {
+#				TAG = USA
+#				is_in_faction_with = USA
+#			}
+#		}
+#	}
+#	option = {
+#		name = news.336.c
+#		trigger = {
+#			NOT = {
+#				OR = {
+#					TAG = MEX
+#					is_in_faction_with = MEX
+#					TAG = USA
+#					is_in_faction_with = USA
+#				}
+#			}
+#		}
+#}
+#}

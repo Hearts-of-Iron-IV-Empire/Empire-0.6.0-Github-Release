@@ -41,19 +41,21 @@ add_ideas = {
 
 set_convoys = 0
 
-set_politics = {
-	ruling_party = neutrality
-	last_election = "1936.1.1"
-	election_frequency = 48
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 5
-	fascism = 12
-	communism = 1
-	neutrality = 54
-	aristocracy = 28
-}
 recruit_character = BAV_Maximilian_II_Emanuel # Country Leader, Field Marshal
 recruit_character = BAV_Alessandro_Maffei # General Comments left by Leander: his actual name was "Alessandro Ferdinando Francesco Marchese di Maffei" but that is just to long, # his portraits was a 2824x3536 so one of the few portraits with a VERY high resolution. fun fact his portrait was so big I had to download it.
 recruit_character = BAV_Johann_Baptist_von_Arco
+
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1699.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+
+set_popularities = {
+	democratic = 5
+	fascism = 12
+	communism = 0
+	neutrality = 54
+	aristocracy = 29
+}

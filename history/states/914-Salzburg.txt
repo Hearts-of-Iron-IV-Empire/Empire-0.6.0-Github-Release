@@ -1,4 +1,3 @@
-
 state={
 	id=914
 	name="STATE_914"
@@ -6,11 +5,10 @@ state={
 	history={
 		owner = SAL
 		buildings = {
-			infrastructure = 2
-
+			infrastructure = 3
 		}
-		victory_points = {
-			688 10 
+		victory_points = { # Salzburg
+			688 50 
 		}
 		add_core_of = SAL
 		1812.1.1 = {

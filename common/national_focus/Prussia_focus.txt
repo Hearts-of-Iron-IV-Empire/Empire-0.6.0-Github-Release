@@ -239,7 +239,6 @@ focus = {
 		set_cosmetic_tag = PRS_KNG
 		set_capital = {
 		  state = 64 
-		  remember_old_capital = no
 		}
 		add_victory_points = {
 			province = 6521
@@ -430,12 +429,32 @@ focus = {
 	relative_position_id = PRS_supportaustrianclaim
 	prerequisite = { focus = PRS_aidaustria focus = PRS_aidtheunitedprovinces focus = PRS_aidengland } 
 
-	available = { has_war = no }
-	
+	available = {
+		NOT = {
+			is_in_faction = yes
+			has_war_with = AUS
+		}
+		OR = {
+			AUS = { is_faction_leader = yes }
+			AUS = { is_in_faction_with = ENG }
+		}
+	}
+
+	bypass = {
+		is_in_faction_with = AUS
+	}
+
 	cost = 5
 
 	completion_reward = {
-		AUS = { country_event = generic.2 } 
+		AUS = { country_event = generic.2 }
+		if = {
+			limit = {
+				AUS = { is_in_faction_with = ENG }
+				ENG = { is_faction_leader = yes }
+			}   
+			ENG = { country_event = generic.2 }
+		}
 	}
 
 	ai_will_do = { 

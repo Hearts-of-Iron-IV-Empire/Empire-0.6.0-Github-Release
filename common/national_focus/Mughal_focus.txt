@@ -1444,13 +1444,23 @@ focus_tree = {
 			}
 		}
 
-		bypass = {
-		}
-
 		cost = 2.9
 		
 		completion_reward = {
 			add_war_support = 0.03
+			add_state_claim = 320 # French India
+			add_state_claim = 321 # Goa
+			add_state_claim = 847 # Tranquebar
+			add_state_claim = 864 # Diu
+			add_state_claim = 961 # Bombay
+			add_state_claim = 964 # South Coromandel
+			add_state_claim = 1027 # Daman
+			add_state_claim = 1034 # French Bengal
+			add_state_claim = 1037 # North Coromandel
+			add_state_claim = 1038 # Madras
+			add_state_claim = 1039 # Dutch Bengal
+			add_state_claim = 1040 # English Bengal
+			add_state_claim = 1041 # Karwar
 			custom_effect_tooltip = will_lock_open_the_country_focus_tt
 		}
 		
@@ -1844,7 +1854,6 @@ focus_tree = {
 
 			effect_tooltip = {
 				transfer_state = 961 # Mumbai
-				transfer_state = 1036 # Surat
 				transfer_state = 1038 # Madras
 				transfer_state = 1040 # English Bengal
 				transfer_state = 1041 # Karwar

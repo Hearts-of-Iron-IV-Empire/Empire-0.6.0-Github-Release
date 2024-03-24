@@ -588,12 +588,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_betray_japan_shine"
+		texturefile = "gfx/interface/goals/betray_japan.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/betray_japan.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -606,7 +607,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/betray_japan.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -619,12 +620,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_austrian_polish_agreement_shine"
+		texturefile = "gfx/interface/goals/austrian_polish_agreement.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/austrian_polish_agreement.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -637,7 +639,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/austrian_polish_agreement.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -650,12 +652,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_lady_justice_icon_shine"
+		texturefile = "gfx/interface/goals/lady_justice_icon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/lady_justice_icon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -668,7 +671,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/lady_justice_icon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -681,12 +684,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_soldier_swedish_shine"
+		texturefile = "gfx/interface/goals/soldier_swedish.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/soldier_swedish.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -699,7 +703,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/soldier_swedish.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -712,12 +716,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_goal_queen_inchyeon_shine"
+		texturefile = "gfx/interface/goals/goal_queen_inchyeon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_queen_inchyeon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -730,7 +735,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_queen_inchyeon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -743,12 +748,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_goal_korea_sign_document_shine"
+		texturefile = "gfx/interface/goals/goal_korea_sign_document.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_korea_sign_document.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -761,7 +767,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_korea_sign_document.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -774,12 +780,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_goal_famine_shine"
+		texturefile = "gfx/interface/goals/goal_famine.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_famine.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -792,7 +799,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_famine.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -805,12 +812,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_goal_korea_flag_shine"
+		texturefile = "gfx/interface/goals/goal_korea_flag.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_korea_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -823,7 +831,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_korea_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -836,12 +844,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_goal_ming_flag_shine"
+		texturefile = "gfx/interface/goals/goal_ming_flag.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_ming_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -854,7 +863,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/goal_ming_flag.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -867,12 +876,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_generic_lets_go_korea_shine"
+		texturefile = "gfx/interface/goals/generic_lets_go_korea.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/generic_lets_go_korea.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -885,7 +895,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/generic_lets_go_korea.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -898,12 +908,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_richard_cromwell_icon_shine"
+		texturefile = "gfx/interface/goals/richard_cromwell_icon.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/richard_cromwell_icon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -916,7 +927,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/richard_cromwell_icon.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -929,12 +940,13 @@ spriteTypes = {
 		}
 		legacy_lazy_load = no
 	}
+	
 	SpriteType = {
-		name = "GFX_step_on_flag_ethiopia_shine"
-		texturefile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+		name = "GFX_integrate_ireland_shine"
+		texturefile = "gfx/interface/goals/integrate_ireland.dds"
 		effectFile = "gfx/FX/buttonstate.lua"
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/integrate_ireland.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = -90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)
@@ -947,7 +959,7 @@ spriteTypes = {
 		}
 
 		animation = {
-			animationmaskfile = "gfx/interface/goals/step_on_flag_ethiopia.dds"
+			animationmaskfile = "gfx/interface/goals/integrate_ireland.dds"
 			animationtexturefile = "gfx/interface/goals/shine_overlay.dds" 	# <- the animated file
 			animationrotation = 90.0		# -90 clockwise 90 counterclockwise(by default)
 			animationlooping = no			# yes or no ;)

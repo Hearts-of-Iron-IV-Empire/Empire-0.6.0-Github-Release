@@ -4,6 +4,7 @@
 
 add_namespace = venice
 
+# Nicolò Cassana dies
 country_event = {
 	id = venice.1
 	title = venice.1.t

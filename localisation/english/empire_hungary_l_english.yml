@@ -1,5 +1,14 @@
 ﻿l_english:
 
+ # Hungarian Events:
+ hungary.1.t:0 "Rákóczi's War of Independence"
+ hungary.1.d:0 "The Hungarian prince Francis II Rákóczi has declared the independence of the kingdom of Hungary. He has rallied 'Kurucs' or anti-Habsburg rebels from all over the nation to fight against the Habsburg Emperor."
+ hungary.1.a:0 "Crush the traitors! (Stand with Austria)"
+ hungary.1.b:0 "Cum Deo pro Patria et Libertate! (Stand with Hungary)"
+ hungary.3.t:0 "Rákóczi's War of Independence"
+ hungary.3.d:0 "The Hungarian prince Francis II Rákóczi has declared the independence of the kingdom of Hungary. He has rallied 'Kurucs' or anti-Habsburg rebels from all over the nation to fight against the Habsburg Emperor."
+ hungary.3.a:0 "Crush the traitors! (Stand with Austria)"
+ hungary.3.b:0 "Cum Deo pro Patria et Libertate! (Stand with Hungary)"
  hungary.5.t:0 "Hungary offers white peace"
  hungary.5.d:0 "As the war is developing not necessarily to our advantage, Hungary has proposed a peace deal. If we agree to hand over all Hungarian states, along with the kingdom of Croatia, they will promise to lay down their arms and cease their support to France effective immediately. While admitting defeat is difficult, it is clear that a peace treaty is our only hope at winning the war against France..."
  hungary.6.t:0 "Austria Accepts Peace Terms"

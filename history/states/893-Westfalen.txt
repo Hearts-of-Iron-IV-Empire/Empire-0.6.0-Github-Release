@@ -1,18 +1,16 @@
-
 state={
 	id=893
 	name="STATE_893"
 
 	history={
+		owner = HES
+		add_core_of = HES
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
-
 		}
-		owner = HES
-		add_core_of = HES
-		victory_points = {
-			564 3 
+		victory_points = { # Kassel
+			564 50 
 		}
 		1812.1.1 = {
 			owner = MUN

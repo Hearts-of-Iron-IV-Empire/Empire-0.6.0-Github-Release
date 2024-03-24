@@ -6,18 +6,17 @@ state={
 	}
 
 	history={
+		owner = ULM
+		add_core_of = IFC
+		add_core_of = ULM
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 			arms_factory = 1
-
 		}
-		victory_points = {
-			3690 3 
+		victory_points = { # Ulm
+			3690 50
 		}
-		owner = ULM
-		add_core_of = IFC
-		add_core_of = ULM
 		1812.1.1 = {
 			owner = WUR
 			add_core_of = WUR

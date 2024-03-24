@@ -1,7 +1,35 @@
 spriteTypes = {
 
 	########## MOD Leaders ############
-	
+
+	### Lorraine ###
+
+	spriteType = {
+		name = "GFX_Leopold_the_Good"
+		textureFile = "gfx/leaders/LOR/Leopold_the_Good.dds"
+	}
+
+	### Kyrgystan ###
+
+	spriteType = {
+		name = "GFX_Shah_Niyaz_Khan"
+		textureFile = "gfx/leaders/KYR/Shah_Niyaz_Khan.dds"
+	}
+
+	### Kazakhstan ###
+
+	spriteType = {
+		name = "GFX_Tauke_Khan"
+		textureFile = "gfx/leaders/KAZ/Tauke_Khan.dds"
+	}
+
+	### Avaria ###
+
+	spriteType = {
+		name = "GFX_Dugry_II"
+		textureFile = "gfx/leaders/AVA/Dugry_II.dds"
+	}
+
 	### Montenegro ###
 
 	spriteType = {
@@ -1570,6 +1598,26 @@ spriteTypes = {
 	#### Poland ####
 
 	spriteType = {
+		name = "GFX_Ludwik_Pociej"
+		texturefile = "gfx/leaders/POL/Ludwik_Pociej.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_Stanisław_Rzewuski"
+		texturefile = "gfx/leaders/POL/Stanisław_Rzewuski.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Marcin_Kątski"
+		texturefile = "gfx/leaders/POL/Marcin_Kątski.dds"
+	}
+
+	spriteType = {
+		name = "GFX_Ludwik_Pociej"
+		texturefile = "gfx/leaders/POL/Ludwik_Pociej.dds"
+	}
+
+	spriteType = {
 		name = "GFX_Frederick_Augustus"
 		texturefile = "gfx/leaders/POL/Frederick_Augustus.dds"
 	}
@@ -1580,8 +1628,8 @@ spriteTypes = {
 	}
 
 	spriteType = {
-		name = "GFX_Stanislaw"
-		texturefile = "gfx/leaders/POL/Stanislaw.dds"
+		name = "GFX_Stanisław_Leszczyński"
+		texturefile = "gfx/leaders/POL/Stanisław_Leszczyński.dds"
 	}
 	
 	spriteType = {

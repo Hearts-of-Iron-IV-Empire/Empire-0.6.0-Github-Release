@@ -5,15 +5,15 @@ state={
 		6487 9560 
 	}
 	history={
-		victory_points = {
-			6487 2
+		owner = ANH
+		add_core_of = ANH
+		victory_points = { # Bernburg
+			6487 50
 		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 1
 		}
-		owner = ANH
-		add_core_of = ANH
 	}
 	manpower=120000
 	buildings_max_level_factor=1.000

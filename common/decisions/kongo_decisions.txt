@@ -1,10 +1,12 @@
 political_actions = {
-	COG_reunite_the_kongo ={
+	COG_reunite_the_kongo = {
+		
 		available = {
-			owns_state = 936
-			owns_state = 540
-			owns_state = 941
+			owns_state = 540 # Ndongo
+			owns_state = 936 # Kongo
+			owns_state = 941 # Demo Abuila
 		}
+
 		visible = {
 			OR = {
 				original_tag = COG
@@ -12,33 +14,16 @@ political_actions = {
 				original_tag = ANG
 			}		
 		}
-		ai_will_do = {
-			factor = 4000
-		}
-		is_good = yes
+
 		fire_only_once = yes
 
 		complete_effect = {	
 			set_global_flag = COG_civil_war_over
 			set_cosmetic_tag = COG
-			if = {
-				limit = {
-					NOT = { 936 = { is_core_of = ROOT }}
-				}
-				936 = { add_core_of = ROOT }
-			}
-			if = {
-				limit = {
-					NOT = { 540 = { is_core_of = ROOT }}
-				}
-				540 = { add_core_of = ROOT }
-			}
-			if = {
-				limit = {
-					NOT = { 941 = { is_core_of = ROOT }}
-				}
-				941 = { add_core_of = ROOT }
-			}
+		}
+		
+		ai_will_do = {
+			factor = 4000
 		}
 	}
 }

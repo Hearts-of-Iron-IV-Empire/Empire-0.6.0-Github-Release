@@ -5,6 +5,9 @@ state={
 		victory_points = { # Luneberg
 			6218 50
 		}
+		victory_points = { # Verden
+			6263 10
+		}
 		buildings = {
 			infrastructure = 3
 			industrial_complex = 2

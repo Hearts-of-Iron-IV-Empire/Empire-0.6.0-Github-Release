@@ -1,6 +1,6 @@
 ideas = {	
 	country = {
-		KOR_ulbyeong_famine = {		
+		KOR_ulbyeong_famine = { # Add at start
 			allowed = {
 				always = no
 			}
@@ -13,21 +13,8 @@ ideas = {
 				stability_factor = -0.20
 				monthly_population = -0.1
 			}
-		}		
-		KOR_path_of_neo_confucianism = {		
-			allowed = {
-				always = no
-			}
-
-			picture = confucianism 
-			
-			removal_cost = -1
-
-			modifier = {
-			   neutrality_drift = 0.03
-			}
-		}	
-		KOR_factionalism_within_the_court = {		
+		}
+		KOR_factionalism_within_the_court = { # Add at start		
 			allowed = {
 				always = no
 			}
@@ -41,22 +28,22 @@ ideas = {
 				war_support_factor = -0.10
 				aristocracy_drift = 0.02
 			}
-		}		
-		KOR_righteous_army = {		
+		}
+		KOR_suppress_factionalism = {		
 			allowed = {
 				always = no
 			}
 
-			picture = generic_infantry_bonus
+			picture = generic_oppression
 			
 			removal_cost = -1
 
 			modifier = {
-			   army_core_defence_factor = 0.10
-			   army_core_attack_factor = 0.10
+				war_support_factor = -0.05
+				neutrality_drift = 0.02
 			}
 		}	
-		KOR_endemic_regional_corruption = {		
+		KOR_endemic_regional_corruption = { # Add at start		
 			allowed = {
 				always = no
 			}
@@ -71,7 +58,7 @@ ideas = {
 				political_power_gain = -0.10
 			}
 		}
-		KOR_inefficiency_of_current_tax_system = {		
+		KOR_inefficiency_of_current_tax_system = { # Add at start		
 			allowed = {
 				always = no
 			}
@@ -84,8 +71,47 @@ ideas = {
 				industrial_capacity_factory = -0.05
 				consumer_goods_factor = 0.15
 			}
+		}
+		KOR_righteous_army = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_infantry_bonus
+			
+			removal_cost = -1
+
+			modifier = {
+			   army_core_defence_factor = 0.05
+			   army_core_attack_factor = 0.05
+			}
 		}		
-		KOR_buddhist_warrior_monks = { #For Peasant Branch	
+		KOR_path_of_neo_confucianism = {
+			allowed = {
+				always = no
+			}
+
+			picture = confucianism 
+			
+			removal_cost = -1
+
+			modifier = {
+			   neutrality_drift = 0.03
+			}
+		}
+		KOR_reformed_civil_service = {
+			allowed = {
+				always = no
+			}
+
+			picture = generic_pp_unity_bonus
+
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.05
+			}
+		}
+		KOR_buddhist_warrior_monks = { # For Peasant Branch	
 			allowed = {
 				always = no
 			}
@@ -99,7 +125,7 @@ ideas = {
 				army_core_defence_factor = 0.10
 			}
 		}
-		KOR_extensive_trade_with_qing = { #For Peasant Branch	
+		KOR_extensive_trade_with_qing = { # For Peasant Branch	
 			allowed = {
 				always = no
 			}

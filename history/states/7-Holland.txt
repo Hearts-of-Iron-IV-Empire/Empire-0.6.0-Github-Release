@@ -10,13 +10,13 @@ state={
 	history={
 		owner = HOL
 		add_core_of = HOL
-		victory_points = {
+		victory_points = { # Amsterdam
 			391 20 
 		}
-		victory_points = {
+		victory_points = { # 's Gravenhage
 			3211 25 
 		}
-		victory_points = {
+		victory_points = { # Rotterdam
 			68 10 
 		}
 		buildings = {
@@ -26,7 +26,6 @@ state={
 			dockyard = 3
 			3314 = {
 				naval_base = 5
-
 			}
 			3211 = {
 				naval_base = 10
@@ -35,7 +34,6 @@ state={
 		1812.1.1 = {
 			owner = FRA
 		}
-
 	}
 
 	provinces={

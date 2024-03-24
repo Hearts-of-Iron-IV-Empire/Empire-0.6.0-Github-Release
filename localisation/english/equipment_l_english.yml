@@ -137,6 +137,9 @@
 
  tank_at_upgrade:0 "Anti-Cavalry Armament"
  tank_at_upgrade_desc:0 "Ensure that our anti-cavalry equipment can destroy the heaviest and strongest cavalry armor."
+
+ EQUIPMENT_DESCRIPTION:0 "$NAME$"
+
  ######################################################################################################################################################################################################################################################################################
 
 
